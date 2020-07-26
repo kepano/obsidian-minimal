@@ -84,6 +84,8 @@ body,.cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   font-size:20px;
   font-weight:500;
 }
+
+.empty-state-title,
 .markdown-preview-view h1,
 .HyperMD-header-1,
 .cm-header-1 {
@@ -104,6 +106,36 @@ body,.cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   letter-spacing:-0em;
   font-weight:500 !important;
   font-size:18px !important;
+}
+.markdown-preview-view h4,
+.HyperMD-header-4,
+.cm-header-4 {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing:0.05em;
+  color:var(--text-normal);
+  font-weight:400 !important;
+  font-size:18px !important;
+}
+.markdown-preview-view h5,
+.HyperMD-header-5,
+.cm-header-5 {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing:0.05em;
+  color:var(--text-normal);
+  font-weight:300 !important;
+  font-size:16px !important;
+}
+.markdown-preview-view h6,
+.HyperMD-header-6,
+.cm-header-6 {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing:0.1em;
+  color:var(--text-muted);
+  font-weight:300 !important;
+  font-size:14px !important;
 }
 
 
