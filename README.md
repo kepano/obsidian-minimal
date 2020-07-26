@@ -10,7 +10,7 @@ This theme aims to create a focused editing experience and bring the app closer 
 - Nicer checklists similar to Apple Notes
 - Pill-style tags
 
-![](dark-simple.png)
 ![](dark-complex.png)
+![](dark-simple.png)
 ![](light-simple.png)
 ![](light-focus.png)
