@@ -1,3 +1,5 @@
+# Minimal Obsidian
+
 This theme aims to create a focused editing experience and bring the app closer to [Mac OS HIG conventions](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
 
 - Use native fonts, more consistent font sizes, and smaller font sizes in the side panels
