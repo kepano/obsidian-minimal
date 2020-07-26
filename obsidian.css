@@ -129,6 +129,29 @@ body,.cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   opacity:0.8;
   transition:opacity 0 ease-in-out;
 }
+
+/* --------------- */
+/* Focus mode */
+/* When the left sidebar is collapsed */
+
+.workspace-ribbon.mod-left {
+  transition:border-color 0 ease-in-out;
+}
+.workspace-ribbon.mod-left.is-collapsed {
+  border-color:transparent;
+  transition:border-color 0.25s ease-in-out;
+}
+.workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
+.workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
+  opacity:0;
+  transition:opacity 0.25s ease-in-out;
+}
+.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
+.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
+  opacity:1;
+  transition:opacity 0s ease-in-out;
+}
+
 /* --------------- */
 /* Tags */
 
