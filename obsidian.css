@@ -16,6 +16,7 @@
   --background-modifier-border:#333;
   --background-modifier-border-hover :#555;
   --quote-opening-modifier:rgb(255, 255, 255, 0.1);
+  --text-faint:#444;
   --text-normal:#dedcde;
   --text-accent: #94a8b3;
   --text-accent-hover:#83959e;
@@ -33,7 +34,7 @@
   --background-modifier-border:#e6e6e6;
   --background-modifier-border-hover :#ddd;
   --quote-opening-modifier:rgb(0, 0, 0, 0.1);
-  --text-faint:#bbb;
+  --text-faint:#ccc;
   --text-accent: #6b8c9c;
   --text-accent-hover:#81a7b9;
   --interactive-accent:#6b8c9c;
@@ -66,11 +67,13 @@ body,.cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   color:var(--text-faint) !important;
   font-weight:400 !important;}
 
+.file-embed-title,
 .markdown-embed-title {
   letter-spacing:-0.02em;
   text-align:left;
   font-size:20px;
   font-weight:500;}
+
 
 .markdown-preview-view h1,
 .HyperMD-header-1,
@@ -640,9 +643,26 @@ iframe {
   margin-block-end:30px;*/
 }
 
+/* --------------- */
+/* Lists */
+
 ul {
-    padding-inline-start:30px;
+  padding-inline-start:30px;
+  list-style: none; /* Remove default bullets */
 }
+
+ul li:not(.task-list-item)::before {
+  content: "\2022";
+  color: var(--text-faint);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* --------------- */
+/* Popover */
+
 
 /* --------------- */
 /* Graphs */
