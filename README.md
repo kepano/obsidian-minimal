@@ -1,13 +1,16 @@
-This theme aims to be as minimalistic as possible.
+This theme aims to create a focused editing experience and bring the app closer to [Mac OS HIG conventions](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
 
-- Bring the app closer to [Mac OS HIG conventions](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
-- Use native fonts
+- Use native fonts, more consistent font sizes, and smaller font sizes in the side panels
 - Use the default arrow cursor for UI elements unless they are links within a file
-- More consistent font sizes
-- Use smaller font sizes in the side panels
-- File names are on a single line and trimmed with ellipsis to fit
-- Nicer checkboxes similar to Apple Notes
+- Long file names are  trimmed with ellipses to fit on a single line
+
+### Features
+- Several features are disabled by default but can easily be re-enabled. These include scrollbars, tooltips, status bar, file matches and the root folder name
+- [[Focus Mode]], hides all borders and extra icons when sidebars are collapsed
+- Nicer checklists similar to Apple Notes
 - Pill-style tags
 
-![](dark.png)
-![](light.png)
+![](dark-simple.png)
+![](dark-complex.png)
+![](light-simple.png)
+![](light-focus.png)
