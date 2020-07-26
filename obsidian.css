@@ -28,10 +28,12 @@
   --background-secondary-alt:#262626;
   --background-primary:#262626;
   --background-secondary:#262626;
+  --background-secondary-alt:#262626;
   --background-tertiary:#2e2e2e;
   --background-modifier-accent:#94a8b328;
   --background-modifier-border:#333;
-  --background-modifier-border-hover :#555;
+  --background-modifier-border-hover:#444;
+  --background-modifier-border-focus:#555;
   --quote-opening-modifier:rgb(255, 255, 255, 0.1);
   --text-faint:#444;
   --text-normal:#dedcde;
@@ -40,6 +42,8 @@
   --interactive-accent:#94a8b3;
   --interactive-accent-rgb:66, 66, 66;
   --interactive-accent-hover:#83959e;
+  --text-highlight-bg:rgba(168, 220, 250, 0.33);
+  --text-selection:rgba(46, 46, 46, 1);
 }
 .theme-light {
   --background-primary:#f8f8f8;
@@ -48,14 +52,16 @@
   --background-tertiary:#ededed;
   --background-modifier-accent:#6b8c9c1e;
   --background-modifier-border:#e6e6e6;
-  --background-modifier-border-hover :#ddd;
-  --quote-opening-modifier:rgb(0, 0, 0, 0.1);
+  --background-modifier-border-hover:#ddd;
+  --background-modifier-border-focus:#ccc;
+  --quote-opening-modifier:rgba(0, 0, 0, 0.1);
   --text-faint:#ccc;
   --text-accent: #6b8c9c;
   --text-accent-hover:#81a7b9;
   --interactive-accent:#6b8c9c;
   --interactive-accent-hover:#6b8c9c;
-  --interactive-accent-rgb:230, 230, 230;
+  --interactive-accent-rgb:rgba(152, 208, 226, 0.4);
+  --text-selection:rgba(237, 237, 237, 1);
 }
 
 
@@ -65,7 +71,7 @@
 h1,h2,h3,h4,h5,strong {font-weight:500;}
 h1,h2,h3,h4 {letter-spacing:-0.02em;} 
 
-body,.cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
+body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   font-family:-apple-system,BlinkMacSystemFont,sans-serif !important;
   letter-spacing:0.02rem;
   -webkit-font-smoothing:subpixel-antialiased !important;
@@ -361,6 +367,51 @@ input.prompt-input, input.prompt-input:hover {
 }
 
 /* --------------- */
+/* Internal search */
+
+.document-search-container.mod-replace-mode {
+  height:90px;
+}
+.document-search-container {
+  padding-top:10px;
+  height:50px;
+  background-color:var(--background-primary);
+  border-top:1px solid var(--background-modifier-border);
+}
+input.document-search-input, input.document-replace-input {
+  font-size:var(--font-small) !important;
+  border:1px solid var(--background-modifier-border);
+  border-radius:14px;
+  background:var(--background-primary);
+  transition:border-color 0.1s ease-in-out;
+}
+input.document-search-input:hover,
+input.document-replace-input:hover {
+  border:1px solid var(--background-modifier-border-hover);
+  background:var(--background-primary);
+  transition:border-color 0.1s ease-in-out;
+}
+input.document-search-input:focus,
+input.document-replace-input:focus {
+  border:1px solid var(--background-modifier-border-focus);
+  background:var(--background-tertiary);
+  transition:all 0.25s ease-in-out;
+}
+.document-search-button {
+  font-size:var(--font-small);
+}
+
+/* --------------- */
+/* Inputs */
+
+button {
+  background-color:transparent;
+}
+button:hover {
+  background-color:var(--background-tertiary);
+}
+
+/* --------------- */
 /* Checkboxes */
 
 input[type=checkbox] {
@@ -488,7 +539,7 @@ input[type=checkbox]:checked {
   width:500px;
 }
 input.search-input:focus {
-  border-color:var(--text-accent);
+  border-color:var(--background-modifier-border);
 }
 .workspace-leaf-content[data-type='search'] .search-result-file-matches {
   border-left:0;
@@ -534,14 +585,20 @@ input.search-input:focus {
 .workspace-leaf-content .search-input:hover,
 .workspace-leaf-content .search-input:focus {
   font-size:var(--font-small);
-  border:0px;
   padding:7px 10px;
   border-radius:20px;
   background:var(--background-primary);
   border:1px solid var(--background-modifier-border);
+  transition:border-color 0.1s ease-in-out;
+}
+.workspace-leaf-content .search-input:hover {
+  border-color:var(--background-modifier-border-hover);
+  transition:border-color 0.1s ease-in-out;
 }
 .workspace-leaf-content .search-input:focus {
-  border-color:var(--text-muted);
+  background:var(--background-tertiary);
+  border-color:var(--background-modifier-border-focus);
+  transition:all 0.25s ease-in-out;
 }
 .workspace-leaf-content .search-input::placeholder {
   color:var(--text-faint);
@@ -703,5 +760,3 @@ ul li:not(.task-list-item)::before {
 .graph-view.color-line-highlight {
   color:var(--interactive-accent);
 }
-
-
