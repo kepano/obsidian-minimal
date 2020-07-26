@@ -6,7 +6,7 @@ This theme aims to create a focused editing experience and bring the app closer 
 
 ### Features
 - Several features are disabled by default but can easily be re-enabled. These include scrollbars, tooltips, status bar, file matches and the root folder name
-- [[Focus Mode]], hides all borders and extra icons when sidebars are collapsed
+- Focus Mode, hides all borders and extra icons when sidebars are collapsed
 - Nicer checklists similar to Apple Notes
 - Pill-style tags
 
