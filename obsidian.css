@@ -12,15 +12,18 @@
   display:none !important;
 }
 
+.workspace-leaf-content[data-type=starred] .nav-header {
+}
+
 /* --------------- */
-/* Custom colors */
+/* Colors and options */
 
 :root {
   --font-normal:14px;
   --font-small:13px;
   --font-smaller:11px;
+  --cursor:default;       /* Switch "default" to "pointer" if you like the normal style better */ 
 }
-
 .theme-dark {
   --background-secondary-alt:#262626;
   --background-primary:#262626;
@@ -38,7 +41,6 @@
   --interactive-accent-rgb:66, 66, 66;
   --interactive-accent-hover:#83959e;
 }
-
 .theme-light {
   --background-primary:#f8f8f8;
   --background-secondary:#f8f8f8;
@@ -104,15 +106,6 @@ body,.cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   font-size:18px !important;
 }
 
-/* --------------- */
-/* Cursors */
-
-.search-result-file-title {
-  cursor:default !important;
-}
-
-/* --------------- */
-/* Tooltips */
 
 /* --------------- */
 /* Icons */
@@ -125,7 +118,7 @@ body,.cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   color:var(--text-muted);
   opacity:0.3;
   transition:opacity 0 ease-in-out;
-  cursor:default;
+  cursor:var(--cursor);
 }
 .view-header-icon:hover,
 .nav-action-button:hover,
@@ -207,7 +200,13 @@ input.prompt-input, input.prompt-input:hover {
 /* --------------- */
 /* Workspace */
 
-
+/* Bigger margins when single pane */
+.mod-single-child .CodeMirror-sizer {
+  margin:0px 10% !important;
+}
+.mod-single-child .markdown-preview-section {
+  margin:0px 10% !important;
+}
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   height:1px;
   background:var(--background-modifier-border);
@@ -257,7 +256,6 @@ input.prompt-input, input.prompt-input:hover {
 /* --------------- */
 /* Title Bar */
 
-
 .view-header-title {
   font-weight:500;
   padding-left:calc(50% - 22.6rem);
@@ -270,13 +268,11 @@ input.prompt-input, input.prompt-input:hover {
   display:none;
 }
 
-
 /* --------------- */
 /* Editor */
 
-
 .cm-s-obsidian .CodeMirror-code {
-    padding-right:0;
+  padding-right:0;
 }
 .CodeMirror-lines {
   padding-bottom:170px;
@@ -299,10 +295,6 @@ input.prompt-input, input.prompt-input:hover {
   max-width:50rem;
   width:90%;
 }
-/* Markdown syntax highlighting */
-/* Headers */
-
-
 
 /* Lists */
 .cm-formatting-list {
@@ -312,6 +304,7 @@ input.prompt-input, input.prompt-input:hover {
 .cm-formatting-quote {
   color:var(--text-faint) !important;
 }
+
 /* --------------- */
 /* Checkboxes */
 
@@ -334,7 +327,6 @@ input[type=checkbox]:checked {
   background-repeat:no-repeat;
   background-image:url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
 }
-
 .markdown-preview-view .task-list-item-checkbox {
   width:18px;
   height:18px;
@@ -354,9 +346,6 @@ input[type=checkbox]:checked {
 /* --------------- */
 /* Files */
 
-.workspace-leaf-content[data-type=starred] .nav-header {
-}
-
 .nav-header {
   padding:0;
 }
@@ -375,7 +364,7 @@ input[type=checkbox]:checked {
 .nav-folder-title {
   margin:0px;
   padding:0 10px 0 24px;
-  cursor:default;
+  cursor:var(--cursor);
 }
 .nav-file {
   margin-left:12px;
@@ -386,7 +375,7 @@ input[type=checkbox]:checked {
   border-width:0;
   border-color:var(--background-secondary);
   border-radius:6px;
-  cursor:default;
+  cursor:var(--cursor);
 }
 .nav-file-title-content {
   width:100%;
@@ -395,7 +384,7 @@ input[type=checkbox]:checked {
   text-overflow:ellipsis;
   padding:0 5px;
   vertical-align:middle;
-  cursor:default;
+  cursor:var(--cursor);
 }
 .nav-file-title, .nav-folder-title, 
 .search-result-file-title, 
@@ -403,20 +392,17 @@ input[type=checkbox]:checked {
   font-size:var(--font-small) !important;
   color:var(--text-muted);
 }
-
 .side-dock-collapsible-section-header {
   font-size:15px;
   color:var(--text-muted);
-  cursor:default;
+  cursor:var(--cursor);
 }
-
 .search-result-file-title:hover .search-result-collapse-indicator,
 .side-dock-collapsible-section-header-indicator:hover,
 .side-dock-collapsible-section-header:hover,
 .side-dock-collapsible-section-header:hover .side-dock-collapsible-section-header-indicator {
   color:var(--text-normal);
 }
-
 .search-result-collapse-indicator,
 .nav-folder-collapse-indicator,
 .side-dock-collapsible-section-header-indicator,
@@ -432,7 +418,7 @@ input[type=checkbox]:checked {
   color:var(--text-faint);
 }
 .outline .pane-clickable-item {
-  cursor:default;
+  cursor:var(--cursor);
   line-height:1.4;
   margin-bottom:4px;
   font-size:var(--font-small);
@@ -465,14 +451,13 @@ input.search-input:focus {
     padding:5px 0px 5px 25px;
 }
 .search-result-file-title {
-  font-size:var(--font-normal);
   line-height:1.3;
   padding:5px 10px 5px 24px;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
   vertical-align:middle;
-  cursor:default;
+  cursor:var(--cursor)!important;
 }
 .search-result-collapse-indicator {
   left:5px;
@@ -526,14 +511,13 @@ input.search-input:focus {
 /* --------------- */
 /* Tags */
 
-
 .tag-pane-tag-count {
   padding:0;
   color:var(--text-faint);
 }
 .tag-pane-tag {
   padding:0 10px;
-  cursor:default;
+  cursor:var(--cursor);
 }
 .nav-file.is-active .nav-file-title:hover {
   background:var(--background-tertiary) !important;
@@ -544,7 +528,6 @@ input.search-input:focus {
 
 /* --------------- */
 /* Side docks collapsing */
-
 
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   background:var(--background-modifier-border);
@@ -573,23 +556,19 @@ input.search-input:focus {
 /* --------------- */
 /* Sidedock icons */
 
-
 .workspace-ribbon-collapse-btn {
   margin-top:0;
   padding-top:7px;
 }
-
 .workspace-ribbon-collapse-btn,
 .view-action,
 .side-dock-ribbon-tab, .side-dock-ribbon-action {
-  cursor:default;
+  cursor:var(--cursor);
 }
-
 .workspace-ribbon {
   border-color:var(--background-modifier-border);
   background:var(--background-secondary);
 }
-
 .workspace-ribbon.mod-right {
   right:0;
   position:absolute;
@@ -599,35 +578,21 @@ input.search-input:focus {
 .mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split {
   margin-right:0;
 }
-
 .side-dock-ribbon-action {
   padding:6px 0;
 }
-
 .side-dock-settings {
-  margin-bottom:20px;
+  margin-bottom:5px;
 }
-
 .side-dock-ribbon {
   border-left:0;
 }
 
-
 /* --------------- */
 /* iframes */
 
-
 iframe {
   border:0;
-}
-
-
-/* Bigger margins when single pane */
-.mod-single-child .CodeMirror-sizer {
-  margin:0px 10% !important;
-}
-.mod-single-child .markdown-preview-section {
-  margin:0px 10% !important;
 }
 
 /* Markdown preview styling */
@@ -639,10 +604,6 @@ iframe {
   background-color:transparent;
   color:var(--text-muted);
   padding:0 0 0 10px;
-  /*margin-inline-end:0;
-  margin-inline-start:20px;
-  margin-block-start:30px;
-  margin-block-end:30px;*/
 }
 
 /* --------------- */
