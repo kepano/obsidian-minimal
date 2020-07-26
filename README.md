@@ -8,3 +8,6 @@ This theme aims to be as minimalistic as possible.
 - File names are on a single line and trimmed with ellipsis to fit
 - Nicer checkboxes similar to Apple Notes
 - Pill-style tags
+
+![](dark.png)
+![](light.png)
