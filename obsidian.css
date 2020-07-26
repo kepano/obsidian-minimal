@@ -53,7 +53,7 @@
   --background-modifier-accent:#6b8c9c1e;
   --background-modifier-border:#e6e6e6;
   --background-modifier-border-hover:#ddd;
-  --background-modifier-border-focus:#ccc;
+  --background-modifier-border-focus:#bababa;
   --quote-opening-modifier:rgba(0, 0, 0, 0.1);
   --text-faint:#ccc;
   --text-accent: #6b8c9c;
@@ -394,8 +394,8 @@ input.document-replace-input:hover {
 input.document-search-input:focus,
 input.document-replace-input:focus {
   border:1px solid var(--background-modifier-border-focus);
-  background:var(--background-tertiary);
-  transition:all 0.25s ease-in-out;
+  background:var(--background-primary);
+  transition:all 0.1s ease-in-out;
 }
 .document-search-button {
   font-size:var(--font-small);
@@ -596,9 +596,9 @@ input.search-input:focus {
   transition:border-color 0.1s ease-in-out;
 }
 .workspace-leaf-content .search-input:focus {
-  background:var(--background-tertiary);
+  background:var(--background-primary);
   border-color:var(--background-modifier-border-focus);
-  transition:all 0.25s ease-in-out;
+  transition:all 0.1s ease-in-out;
 }
 .workspace-leaf-content .search-input::placeholder {
   color:var(--text-faint);
