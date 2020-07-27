@@ -522,6 +522,7 @@ input[type=checkbox]:checked {
 .outline .pane-empty {
   font-size:var(--font-small);
   color:var(--text-faint);
+  margin:0 0 0 15px;
 }
 .outline .pane-clickable-item {
   cursor:var(--cursor);
