@@ -739,21 +739,30 @@ iframe {
 }
 
 /* --------------- */
-/* Lists */
+/* Lists
 
 ul {
-  padding-inline-start:30px;
-  list-style: none; /* Remove default bullets */
+  list-style: none;
 }
 
-ul li:not(.task-list-item)::before {
+ul > li:not(.task-list-item)::before {
   content: "\2022";
   color: var(--text-faint);
   font-weight: bold;
   display: inline-block;
   width: 1em;
-  margin-left: -1em;
 }
+
+ul > li:not(.task-list-item) {
+  background-image:url('data:image/svg+xml; utf8,<svg height="10" width="10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="4" cy="4" r="3" fill="rgb(180,180,180)" /></svg>');
+  padding-left:15px;
+  margin-left:-20px;
+  background-repeat:no-repeat;
+  background-position:left 0.5em;
+}
+
+ */
+
 
 /* --------------- */
 /* Popover */
