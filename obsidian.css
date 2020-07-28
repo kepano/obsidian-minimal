@@ -24,6 +24,8 @@ Remove each line if you want to re-activate the feature */
   --font-normal:16px;
   --font-small:13px;
   --font-smaller:11px;
+  --normal-weight:400;    /* Switch to 300 if you want thinner default text */
+  --bold-weight:500;      /* Switch to 600 or 700 if you want thicker bold text */
   --cursor:default;       /* Switch "default" to "pointer" if you like the normal style better */ 
   --line-width:50rem;     /* I recommend turning off "Readable line length" */
 }
@@ -71,28 +73,29 @@ Remove each line if you want to re-activate the feature */
 /* --------------- */
 /* Fonts */
 
-h1,h2,h3,h4,h5,strong {font-weight:500;}
+h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
 h1,h2,h3,h4 {letter-spacing:-0.02em;} 
 
 body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   font-family:-apple-system,BlinkMacSystemFont,sans-serif !important;
   letter-spacing:0.02rem;
   font-size:var(--font-normal);
+  font-weight:var(--normal-weight);
   -webkit-font-smoothing:subpixel-antialiased !important;
 }
 .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {
-  font-weight:500;
+  font-weight:var(--bold-weight);
 }
 .cm-formatting-header {
   color:var(--text-faint) !important;
-  font-weight:400 !important;
+  font-weight:var(--normal-weight) !important;
 }
 .file-embed-title,
 .markdown-embed-title {
   letter-spacing:-0.02em;
   text-align:left;
   font-size:20px;
-  font-weight:500;
+  font-weight:var(--bold-weight);
 }
 
 .empty-state-title,
@@ -101,20 +104,20 @@ body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
 .cm-header-1 {
   letter-spacing:-0.02em;
   font-size:28px !important;
-  font-weight:500 !important;
+  font-weight:var(--bold-weight) !important;
 }
 .markdown-preview-view h2,
 .HyperMD-header-2,
 .cm-header-2 {
   letter-spacing:-0.02em;
   font-size:22px !important;
-  font-weight:500 !important;
+  font-weight:var(--bold-weight) !important;
 }
 .markdown-preview-view h3,
 .HyperMD-header-3,
 .cm-header-3 {
   letter-spacing:-0em;
-  font-weight:500 !important;
+  font-weight:var(--bold-weight) !important;
   font-size:18px !important;
 }
 .markdown-preview-view h4,
@@ -124,7 +127,7 @@ body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   text-transform: lowercase;
   letter-spacing:0.05em;
   color:var(--text-normal);
-  font-weight:400 !important;
+  font-weight:var(--normal-weight) !important;
   font-size:18px !important;
 }
 .markdown-preview-view h5,
@@ -322,7 +325,7 @@ input.prompt-input, input.prompt-input:hover {
 /* Title Bar */
 
 .view-header-title {
-  font-weight:500;
+  font-weight:var(--bold-weight);
   padding-left:calc(50% - var(--line-width)/2 + 40px);
 }
 .workspace-leaf-header, .view-header {
@@ -556,7 +559,7 @@ input[type=checkbox]:checked {
 .search-input {
   max-width:calc(100% - 20px);
   margin-left:10px;
-  width:500px;
+  width:var(--bold-weight)px;
 }
 input.search-input:focus {
   border-color:var(--background-modifier-border);
