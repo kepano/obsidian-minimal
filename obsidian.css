@@ -367,8 +367,13 @@ input.prompt-input, input.prompt-input:hover {
 }
 .cm-s-obsidian pre.HyperMD-header,
 .CodeMirror-line {
-  padding-left:0 !important;
-  padding-right:0 !important;
+
+}
+
+.CodeMirror-linenumber {
+  font-size:var(--font-small) !important;
+  font-feature-settings: 'tnum';
+  padding-top:6px;
 }
 
 /* Lists */
