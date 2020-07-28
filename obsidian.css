@@ -1,7 +1,9 @@
+
 /* --------------- */
-/* Disabled features */
-/* These features are hidden in pursuit of a more focused editing experience */
-/* Remove each line if you want to re-activate the feature */
+/* Disabled features
+
+These features are hidden in pursuit of a more focused editing experience
+Remove each line if you want to re-activate the feature */
 
 .status-bar,                                    /* Status bar */
 ::-webkit-scrollbar,                            /* Scroll bars */
@@ -19,10 +21,11 @@
 /* Colors and options */
 
 :root {
-  --font-normal:14px;
+  --font-normal:16px;
   --font-small:13px;
   --font-smaller:11px;
   --cursor:default;       /* Switch "default" to "pointer" if you like the normal style better */ 
+  --line-width:50rem;     /* I recommend turning off "Readable line length" */
 }
 .theme-dark {
   --background-secondary-alt:#262626;
@@ -74,6 +77,7 @@ h1,h2,h3,h4 {letter-spacing:-0.02em;}
 body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
   font-family:-apple-system,BlinkMacSystemFont,sans-serif !important;
   letter-spacing:0.02rem;
+  font-size:var(--font-normal);
   -webkit-font-smoothing:subpixel-antialiased !important;
 }
 .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {
@@ -103,7 +107,7 @@ body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
 .HyperMD-header-2,
 .cm-header-2 {
   letter-spacing:-0.02em;
-  font-size:20px !important;
+  font-size:22px !important;
   font-weight:500 !important;
 }
 .markdown-preview-view h3,
@@ -319,11 +323,14 @@ input.prompt-input, input.prompt-input:hover {
 
 .view-header-title {
   font-weight:500;
-  padding-left:calc(50% - 22.6rem);
+  padding-left:calc(50% - var(--line-width)/2 + 40px);
 }
 .workspace-leaf-header, .view-header {
   background-color:var(--background-primary) !important;
   border:none !important;
+}
+.view-header-title-container {
+  padding-left:0;
 }
 .view-header-title-container:after {
   display:none;
@@ -350,11 +357,18 @@ input.prompt-input, input.prompt-input:hover {
 .markdown-preview-view .markdown-embed-content {
   max-height:none;
 }
-.CodeMirror-lines,
-.markdown-preview-section {
+
+.CodeMirror,
+.markdown-preview-section  {
+  padding-left:0;
+  padding-right:0;
   margin:0 auto 0 auto;
-  max-width:50rem;
-  width:90%;
+  max-width:var(--line-width);
+}
+.cm-s-obsidian pre.HyperMD-header,
+.CodeMirror-line {
+  padding-left:0 !important;
+  padding-right:0 !important;
 }
 
 /* Lists */
@@ -499,7 +513,7 @@ input[type=checkbox]:checked {
   color:var(--text-muted);
 }
 .side-dock-collapsible-section-header {
-  font-size:15px;
+  font-size:var(--font-normal);
   color:var(--text-muted);
   cursor:var(--cursor);
 }
