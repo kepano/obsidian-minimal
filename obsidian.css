@@ -55,7 +55,7 @@ Remove each line if you want to re-activate the feature */
   --interactive-accent-rgb:66, 66, 66;
   --interactive-accent-hover:#83959e;
   --text-highlight-bg:rgba(168, 220, 250, 0.33);
-  --text-selection:hsl(var(--color),calc(var(--l) + 4%));
+  --text-selection:rgba(50, 50, 50, 1);
 }
 .theme-light {
   --background-primary:hsl(var(--color),calc(var(--l) - 0%));
