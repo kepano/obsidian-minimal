@@ -40,7 +40,7 @@ Remove each line if you want to re-activate the feature */
   --background-modifier-border-hover:#444;
   --background-modifier-border-focus:#555;
   --quote-opening-modifier:rgb(255, 255, 255, 0.1);
-  --text-faint:#444;
+  --text-faint:#555;
   --text-normal:#dedcde;
   --text-accent: #94a8b3;
   --text-accent-hover:#83959e;
@@ -60,7 +60,7 @@ Remove each line if you want to re-activate the feature */
   --background-modifier-border-hover:#ddd;
   --background-modifier-border-focus:#bababa;
   --quote-opening-modifier:rgba(0, 0, 0, 0.1);
-  --text-faint:#ccc;
+  --text-faint:#bbb;
   --text-accent: #6b8c9c;
   --text-accent-hover:#81a7b9;
   --interactive-accent:#6b8c9c;
@@ -464,7 +464,7 @@ input[type=checkbox]:checked {
   margin-left:-25px;
 }
 .markdown-preview-view .task-list-item {
-  padding-inline-start:25px;
+  padding-inline-start:10px;
 }
 .side-dock-plugin-panel-inner {
   padding-right:6px;
@@ -559,7 +559,7 @@ input[type=checkbox]:checked {
 .search-input {
   max-width:calc(100% - 20px);
   margin-left:10px;
-  width:var(--bold-weight)px;
+  width:500px;
 }
 input.search-input:focus {
   border-color:var(--background-modifier-border);
@@ -742,30 +742,41 @@ iframe {
 }
 
 /* --------------- */
-/* Lists
+/* Lists  */
 
 ul {
+  padding-inline-start:40px;
   list-style: none;
 }
 
 ul > li:not(.task-list-item)::before {
   content: "\2022";
   color: var(--text-faint);
-  font-weight: bold;
+  font-weight:600;
   display: inline-block;
   width: 1em;
-}
-
-ul > li:not(.task-list-item) {
-  background-image:url('data:image/svg+xml; utf8,<svg height="10" width="10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="4" cy="4" r="3" fill="rgb(180,180,180)" /></svg>');
-  padding-left:15px;
   margin-left:-20px;
-  background-repeat:no-repeat;
-  background-position:left 0.5em;
 }
 
- */
+ul li p, ol li p {
+  display:inline-block;
+}
 
+ol {
+  padding-inline-start:40px;
+  list-style: none;
+  counter-reset: counter;
+}
+ol > li {
+  margin-left:-20px;
+  counter-increment: counter;
+}
+ol > li::before {
+  content: counter(counter) ". ";
+  color: var(--text-faint);
+}
+
+*/
 
 /* --------------- */
 /* Popover */
