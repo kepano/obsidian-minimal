@@ -239,10 +239,15 @@ body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
 .nav-action-button:hover,
 .workspace-tab-header:hover,
 .workspace-tab-header.is-active,
+.workspace-leaf-content[data-type='search'] .nav-action-button.is-active,
 .side-dock-ribbon-tab:hover, .side-dock-ribbon-action:hover {
   color:var(--text-normal);
   opacity:0.8;
   transition:opacity 0 ease-in-out;
+}
+
+.workspace-leaf-content[data-type='search'] .nav-action-button.is-active {
+  background:transparent;
 }
 
 /* --------------- */
