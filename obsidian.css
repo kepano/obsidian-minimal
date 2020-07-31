@@ -571,8 +571,10 @@ input[type=checkbox]:checked {
 }
 .nav-file {
   margin-left:12px;
+  padding-right:4px;
 }
 .nav-file-title {
+  width:calc(100% - 30px);
   margin:0 8px 0 -4px;
   padding:2px 2px;
   border-width:0;
