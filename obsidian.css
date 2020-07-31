@@ -455,6 +455,16 @@ input.prompt-input, input.prompt-input:hover {
   padding-top:6px;
 }
 
+.cm-s-obsidian span.cm-url {
+  color:var(--text-accent);
+}
+.cm-s-obsidian span.cm-link {
+  color:var(--text-muted);
+}
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color:var(--text-accent);
+}
+
 /* Editor Mode Footnotes */
 
 .cm-s-obsidian span.cm-footref {
