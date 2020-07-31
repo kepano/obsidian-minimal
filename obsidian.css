@@ -110,7 +110,7 @@
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
 
-  --quote-opening-modifier:rgb(255, 255, 255, 0.1);
+  --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 15%));
   --interactive-accent-rgb:66, 66, 66;
   --text-highlight-bg:rgba(168, 220, 250, 0.33);
   --text-selection:rgba(50, 50, 50, 1);
@@ -142,6 +142,8 @@
 
 /* --------------- */
 /* Fonts */
+
+::selection { background:var(--text-selection); }
 
 h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
 h1,h2,h3,h4 {letter-spacing:-0.02em;} 
@@ -451,6 +453,16 @@ input.prompt-input, input.prompt-input:hover {
   font-size:var(--font-small) !important;
   font-feature-settings:'tnum';
   padding-top:6px;
+}
+
+/* Editor Mode Footnotes */
+
+.cm-s-obsidian span.cm-footref {
+  font-size:var(--font-normal);
+}
+.cm-s-obsidian pre.HyperMD-footnote {
+  font-size:var(--font-small);
+  padding-left:20px;
 }
 
 /* Editor Mode Lists */
@@ -806,6 +818,33 @@ iframe {
   border:0;
 }
 
+/* --------------- */
+/* Preview Mode  */
+
+.markdown-preview-view hr {
+  height:1px;
+}
+
+.footnotes-list {
+  margin-block-start:-10px;
+  padding-inline-start:20px;
+  font-size:var(--font-small);
+}
+
+.footnotes-list p {
+  display:inline;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.footnote-ref a {
+  text-decoration:none;
+}
+
+.footnote-backref {
+  color:var(--text-faint);
+}
+
 /* Markdown preview styling */
 /* Blockquotes */
 .markdown-preview-view blockquote {
@@ -833,7 +872,7 @@ ul > li:not(.task-list-item)::before {
   margin-left:-20px;
 }
 ul li p, ol li p {
-  display:inline-block;
+  display:inline;
 }
 ol {
   padding-inline-start:40px;
