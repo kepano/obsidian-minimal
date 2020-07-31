@@ -104,7 +104,7 @@
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
 
-  --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
+  --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
@@ -129,14 +129,13 @@
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 25%));
 
-  --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
+  --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
 
   --quote-opening-modifier:rgb(255, 255, 255, 0.1);
-  --background-modifier-accent:#6b8c9c1e;
   --interactive-accent-rgb:220, 220, 220;
   --text-selection:rgba(237, 237, 237, 1);
 }
@@ -523,8 +522,8 @@ input[type=checkbox]:focus,input[type=checkbox]:hover {
   border-color:var(--text-faint);
 }
 input[type=checkbox]:checked {
-  background-color:var(--text-accent-hover);
-  border:1px solid var(--text-accent-hover);
+  background-color:var(--background-modifier-accent);
+  border:1px solid var(--background-modifier-accent);
   background-position:center;
   background-size:70%;
   background-repeat:no-repeat;
