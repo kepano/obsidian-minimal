@@ -70,7 +70,8 @@
 
   FONTS */
 
-  --text:-apple-system,BlinkMacSystemFont,sans-serif;
+  --text:-apple-system,BlinkMacSystemFont,sans-serif;            /* Preview mode and UI */
+  --text-editor:-apple-system,BlinkMacSystemFont,sans-serif;     /* Editor mode */
 
   --font-normal:16px;
   --font-small:13px;
@@ -135,7 +136,7 @@
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
 
-  --quote-opening-modifier:rgb(255, 255, 255, 0.1);
+  --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 15%));
   --interactive-accent-rgb:220, 220, 220;
   --text-selection:rgba(237, 237, 237, 1);
 }
@@ -148,12 +149,18 @@
 h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
 h1,h2,h3,h4 {letter-spacing:-0.02em;} 
 
-body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
+body, input, button, 
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian {
   font-family:var(--text) !important;
-  letter-spacing:0.02rem;
+  letter-spacing:0.02rem; /* Remove this line if you need contextual alternates */
   font-size:var(--font-normal);
   font-weight:var(--normal-weight);
-  -webkit-font-smoothing:subpixel-antialiased !important;
+}
+.markdown-source-view,
+.cm-s-obsidian .cm-formatting-hashtag, 
+.cm-s-obsidian {
+  font-family:var(--text-editor) !important;
 }
 .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {
   font-weight:var(--bold-weight);
