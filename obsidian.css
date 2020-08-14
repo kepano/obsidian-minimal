@@ -80,7 +80,7 @@
   --font-smaller:11px;
 
   --normal-weight:400;  /* Switch to 300 if you want thinner default text */
-  --bold-weight:500;    /* Switch to 600 or 700 if you want thicker bold text */
+  --bold-weight:600;    /* Switch to 600 or 700 if you want thicker bold text */
   --line-width:50rem;   /* I recommend turning off "Readable line length" in Obsidian Settings */
 
   /*----------------------------------------------------------------
@@ -160,10 +160,12 @@ body, input, button,
   letter-spacing:0.02rem; /* Remove this line if you need contextual alternates */
   font-size:var(--font-normal);
   font-weight:var(--normal-weight);
+  -webkit-font-smoothing:subpixel-antialiased;
 }
 .markdown-source-view,
 .cm-s-obsidian .cm-formatting-hashtag, 
 .cm-s-obsidian {
+  line-height:1.3;
   font-family:var(--text-editor) !important;
 }
 .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {
