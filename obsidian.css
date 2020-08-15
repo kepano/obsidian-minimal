@@ -107,7 +107,7 @@
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
 
-  --background-match-highlight:hsla(var(--accent-h), 27%, 62%, 0.4);
+  --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
@@ -133,7 +133,7 @@
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 25%));
 
-  --background-match-highlight:hsla(var(--accent-h), 27%, 62%, 0.4);
+  --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
@@ -772,8 +772,8 @@ input.search-input:focus {
 }
 .side-dock-collapsible-section-header {
 	padding-left:15px;
+  margin-right:15px;
 }
-
 .backlink-pane .search-result-container {
   padding:5px 0px 5px 10px;
 	margin-left:0;
