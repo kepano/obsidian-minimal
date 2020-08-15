@@ -759,12 +759,12 @@ input.search-input:focus {
   margin-bottom:8px;
   padding:0 0 6px 0;
   color:var(--text-muted);
-  border-bottom:1px solid var(--text-normal);
+  border-bottom:1px solid var(--background-modifier-border-focus);
 }
 .search-info-more-matches {
   font-size:var(--font-smaller);
   padding-top:4px;
-  padding-bottom:0px;
+  padding-bottom:4px;
   color:var(--text-normal);
 }
 .side-dock-collapsible-section-header-indicator {
