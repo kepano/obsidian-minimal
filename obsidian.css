@@ -459,7 +459,8 @@ input.prompt-input, input.prompt-input:hover {
   padding-left:0;
   padding-right:0;
   margin:0 auto 0 auto;
-  max-width:var(--line-width);
+  width:var(--line-width);
+  max-width:90%;
 }
 .cm-s-obsidian pre.HyperMD-header,
 .CodeMirror-line {
@@ -646,6 +647,7 @@ input[type=checkbox]:checked {
   font-size:var(--font-normal);
   color:var(--text-muted);
   cursor:var(--cursor);
+  margin-right:0;
 }
 .side-dock-collapsible-section-header:not(.is-collapsed) {
   color:var(--text-normal);
@@ -772,7 +774,6 @@ input.search-input:focus {
 }
 .side-dock-collapsible-section-header {
 	padding-left:15px;
-  margin-right:15px;
 }
 .backlink-pane .search-result-container {
   padding:5px 0px 5px 10px;
@@ -783,6 +784,9 @@ input.search-input:focus {
 }
 .list-item-ending-flair {
   right:0;
+}
+.backlink-pane .list-item-ending-flair {
+  right:12px;
 }
 .list-item:hover .list-item-ending-flair {
 	background:transparent;
