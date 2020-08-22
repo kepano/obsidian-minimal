@@ -74,6 +74,8 @@
   --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 	/* Editor mode */
   --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  /* Code */
+  --font-monospace:Menlo,Monaco,Consolas,"Courier New",monospace;
 
   --font-normal:16px;
   --font-small:13px;
@@ -122,7 +124,7 @@
 
 .theme-light {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
-  --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 7%));
+  --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 3%));
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 5%));
@@ -284,8 +286,9 @@ body, input, button,
   opacity:0;
   transition:opacity 0.25s ease-in-out;
 }
+
 .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
-.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
+.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings{
   opacity:1;
   transition:opacity 0s ease-in-out;
 }
@@ -574,11 +577,12 @@ input[type=checkbox]:checked {
   height:18px;
   position:relative;
   top:6px;
-  line-height:1;
-  margin-left:-25px;
+  line-height:0;
+  margin-left:-1.5em;
+  margin-right:6px;
 }
 .markdown-preview-view .task-list-item {
-  padding-inline-start:10px;
+  padding-inline-start:1.5em;
 }
 .side-dock-plugin-panel-inner {
   padding-right:6px;
@@ -775,6 +779,9 @@ input.search-input:focus {
 .side-dock-collapsible-section-header {
 	padding-left:15px;
 }
+.backlink-pane {
+  padding-bottom:30px;
+}
 .backlink-pane .search-result-container {
   padding:5px 0px 5px 10px;
 	margin-left:0;
@@ -831,7 +838,7 @@ input.search-input:focus {
   padding-top:10px;
 }
 .workspace-split.mod-right-split .view-content {
-  padding:0 0 30px 0;
+  padding:0 0 0 0;
 }
 
 /* --------------- */
@@ -967,7 +974,7 @@ iframe {
 /* Preview Mode Lists  */
 
 ul {
-  padding-inline-start:40px;
+  padding-inline-start:2em;
   list-style:none;
 }
 ul > li:not(.task-list-item)::before {
@@ -976,23 +983,55 @@ ul > li:not(.task-list-item)::before {
   font-weight:600;
   display:inline-block;
   width:1em;
-  margin-left:-20px;
+  margin-left:-1em;
 }
 ul li p, ol li p {
   display:inline;
 }
 ol {
-  padding-inline-start:40px;
+  padding-inline-start:1em;
+  margin-left:1em;
   list-style:none;
   counter-reset:counter;
+  position:relative;
 }
 ol > li {
-  margin-left:-20px;
-  counter-increment:counter;
-}
+  margin-left:0em;
+  counter-increment:counter;}
 ol > li::before {
   content:counter(counter) ". ";
   color:var(--text-faint);
+  position:absolute;
+  left:0;
+}
+
+/* --------------- */
+/* Code */
+
+.theme-light :not(pre) > code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  background-color:var(--background-primary-alt);
+}
+
+.theme-light code[class*="language-"], .theme-light pre[class*="language-"] {
+  text-shadow:none;
+}
+
+.cm-s-obsidian .hmd-fold-html-stub,
+.cm-s-obsidian .hmd-fold-code-stub,
+.cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian .cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock,
+.cm-s-obsidian .HyperMD-hr,
+.cm-s-obsidian .cm-hmd-frontmatter,
+.cm-s-obsidian .cm-hmd-orgmode-markup,
+.cm-s-obsidian .cm-formatting-code,
+.cm-s-obsidian .cm-math, .cm-s-obsidian span.hmd-fold-math-placeholder,
+.cm-s-obsidian .CodeMirror-linewidget kbd,
+.cm-s-obsidian .hmd-fold-html kbd
+.CodeMirror-code {
+  font-family:var(--font-monospace);
 }
 
 /* --------------- */
