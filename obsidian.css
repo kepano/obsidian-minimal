@@ -646,6 +646,7 @@ input[type=checkbox]:checked {
 .search-result-file-title {
   font-size:var(--font-small) !important;
   color:var(--text-normal);
+  font-weight:var(--font-normal);
 }
 .side-dock-collapsible-section-header {
   font-size:var(--font-normal);
