@@ -30,11 +30,19 @@
     display:none !important;
   }
 
+  /* Remove this if you re-enable status bar */
+  .app-container,
+  .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+  .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  	height:100%;
+  }
+
   .search-result-file-matches,                    /* File matches in search */
   .backlink-pane .search-result-file-matches,     /* File matches in backlinks */
   .workspace-leaf-content[data-type=starred] .nav-header {  /* Starred section header */
     
   }
+
 
 :root {
 
@@ -83,7 +91,7 @@
 
   --normal-weight:400;  /* Switch to 300 if you want thinner default text */
   --bold-weight:600;    /* Switch to 600 or 700 if you want thicker bold text */
-  --line-width:50rem;   /* I recommend turning off "Readable line length" in Obsidian Settings */
+  --line-width:45rem;   /* I recommend turning off "Readable line length" in Obsidian Settings */
 
   /*----------------------------------------------------------------
 
@@ -105,10 +113,13 @@
   --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 5%));
   --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
+  --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
   --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 70%));
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
 
+  --text-selection:rgba(50, 50, 50, 1);
+  --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-d),0.85);
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
@@ -119,7 +130,6 @@
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 15%));
   --interactive-accent-rgb:66, 66, 66;
   --text-highlight-bg:rgba(168, 220, 250, 0.33);
-  --text-selection:rgba(50, 50, 50, 1);
 }
 
 .theme-light {
@@ -135,6 +145,7 @@
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 25%));
 
+  --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-l),0.85);
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
@@ -145,6 +156,7 @@
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 15%));
   --interactive-accent-rgb:220, 220, 220;
   --text-selection:rgba(237, 237, 237, 1);
+
 }
 
 /* --------------- */
@@ -423,6 +435,7 @@ input.prompt-input, input.prompt-input:hover {
 .view-header-title {
   font-weight:var(--bold-weight);
   padding-left:calc(50% - var(--line-width)/2 + 40px);
+  letter-spacing:-0.02em;
 }
 .workspace-leaf-header, .view-header {
   background-color:var(--background-primary) !important;
@@ -504,6 +517,41 @@ input.prompt-input, input.prompt-input:hover {
 .cm-formatting-quote {
   color:var(--text-faint) !important;
 }
+
+
+/* --------------- */
+/* Image zoom 
+
+.markdown-preview-view .internal-embed:active {
+	z-index:100;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height:100%;
+    background:var(--background-translucent);
+    padding:0;
+    margin:0;
+    text-align:center;
+    display:block;
+}
+
+.markdown-preview-view .internal-embed:active img {
+	display:block;
+	position:absolute;
+    max-height:100%;
+    max-width:95%;
+    margin:0 auto;
+    text-align:center;
+    top: 50%;
+  	transform: translateY(-50%);
+    padding:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:black;
+}*/
 
 /* --------------- */
 /* Internal search */
@@ -1038,8 +1086,15 @@ ol > li::before {
 /* --------------- */
 /* Popover */
 
+.popover {
+  box-shadow: 0 20px 40px var(--background-modifier-box-shadow);
+  pointer-events: auto !important;
+}
 .popover.hover-popover {
   max-height:40vh;}
+.popover .markdown-embed-link {
+  display:none;
+}
 
 /* --------------- */
 /* Graphs */
