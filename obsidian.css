@@ -520,28 +520,17 @@ input.prompt-input, input.prompt-input:hover {
 
 
 /* --------------- */
-/* Image zoom 
+/* Image zoom  */
 
-.markdown-preview-view .internal-embed:active {
-	z-index:100;
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    height:100%;
-    background:var(--background-translucent);
-    padding:0;
-    margin:0;
-    text-align:center;
-    display:block;
-}
-
-.markdown-preview-view .internal-embed:active img {
+.markdown-preview-view .internal-embed img:active {
 	display:block;
-	position:absolute;
+	z-index:100;
+	position:fixed;
     max-height:100%;
-    max-width:95%;
+    max-width:100%;
+    height:100%;
+    width:100%;
+    object-fit: contain;
     margin:0 auto;
     text-align:center;
     top: 50%;
@@ -550,8 +539,8 @@ input.prompt-input, input.prompt-input:hover {
     left:0;
     right:0;
     bottom:0;
-    background:black;
-}*/
+    background:var(--background-translucent);
+}
 
 /* --------------- */
 /* Internal search */
