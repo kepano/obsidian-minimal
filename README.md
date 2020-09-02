@@ -16,6 +16,7 @@ This theme aims to create a focused editing experience and bring the app closer 
 - Focus Mode, hides all borders and extra icons when sidebars are collapsed
 - Nicer checklists similar to Apple Notes
 - Pill-style tags
+- Click to zoom on images
 
 ![](dark-complex.png)
 ![](dark-simple.png)
