@@ -34,7 +34,7 @@
   .app-container,
   .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
   .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  	height:100%;
+    height:100%;
   }
 
   .search-result-file-matches,                    /* File matches in search */
@@ -80,7 +80,7 @@
 
   /* Preview mode and UI */
   --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-	/* Editor mode */
+  /* Editor mode */
   --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   /* Code */
   --font-monospace:Menlo,Monaco,Consolas,"Courier New",monospace;
@@ -258,7 +258,7 @@ body, input, button,
 .nav-action-button,
 .side-dock-ribbon-tab, .side-dock-ribbon-action,
 .view-header:not(:hover) .view-actions {
-	background:transparent;
+  background:transparent;
   color:var(--text-muted);
   opacity:0.3;
   transition:opacity 0 ease-in-out;
@@ -272,7 +272,7 @@ body, input, button,
 .workspace-tab-header.is-active,
 .workspace-leaf-content[data-type='search'] .nav-action-button.is-active,
 .side-dock-ribbon-tab:hover, .side-dock-ribbon-action:hover {
-	background:transparent;
+  background:transparent;
   color:var(--text-normal);
   opacity:0.8;
   transition:opacity 0 ease-in-out;
@@ -523,13 +523,13 @@ input.prompt-input, input.prompt-input:hover {
 /* Image zoom  */
 
 .markdown-preview-view .internal-embed img {
-	cursor:zoom-in;}
+  cursor:zoom-in;}
 
 .markdown-preview-view .internal-embed img:active {
-	cursor:zoom-out;
-	display:block;
-	z-index:100;
-	position:fixed;
+  cursor:zoom-out;
+  display:block;
+  z-index:100;
+  position:fixed;
     max-height:calc(100% + 1px);
     max-width:calc(100% - 20px);
     height:calc(100% + 1px);
@@ -538,7 +538,7 @@ input.prompt-input, input.prompt-input:hover {
     margin:-0.5px auto 0;
     text-align:center;
     top: 50%;
-  	transform: translateY(-50%);
+    transform: translateY(-50%);
     padding:0;
     left:0;
     right:0;
@@ -715,7 +715,7 @@ input[type=checkbox]:checked {
 /* Outline */
 
 .outline {
-	padding-top:10px;
+  padding-top:10px;
 }
 .outline .pane-empty {
   font-size:var(--font-small);
@@ -764,7 +764,7 @@ input[type=checkbox]:checked {
   padding-bottom:5px;
 }
 .search-result-file-matched-text {
-	background-color:var(--background-match-highlight);
+  background-color:var(--background-match-highlight);
 }
 .search-input {
   max-width:calc(100% - 20px);
@@ -816,17 +816,17 @@ input.search-input:focus {
   color:var(--text-normal);
 }
 .side-dock-collapsible-section-header-indicator {
-	display:none;
+  display:none;
 }
 .side-dock-collapsible-section-header {
-	padding-left:15px;
+  padding-left:15px;
 }
 .backlink-pane {
   padding-bottom:30px;
 }
 .backlink-pane .search-result-container {
   padding:5px 0px 5px 10px;
-	margin-left:0;
+  margin-left:0;
 }
 .backlink-pane .search-result-file-title {
   padding-left:25px;
@@ -838,8 +838,8 @@ input.search-input:focus {
   right:12px;
 }
 .list-item:hover .list-item-ending-flair {
-	background:transparent;
-	color:var(--text-faint);
+  background:transparent;
+  color:var(--text-faint);
 }
 .search-result-file-title:hover {
   color:var(--text-normal);
@@ -1044,7 +1044,9 @@ ol > li::before {
   content:counter(counter) ". ";
   color:var(--text-faint);
   position:absolute;
-  left:0;
+  left: -1.25em;
+  text-align: right;
+  width: 2em;
 }
 
 /* --------------- */
