@@ -32,7 +32,6 @@
   }
 
   /* Remove this if you re-enable status bar */
-  .app-container,
   .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
   .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
     height:100%;
@@ -257,7 +256,8 @@ body, input, button,
   padding-top:0 !important;
 }
 
-.titlebar {
+.titlebar,
+.titlebar-inner {
   background:transparent;
   border:0;
   height:15px !important;
@@ -268,10 +268,6 @@ body, input, button,
 .is-fullscreen .titlebar,
 .is-fullscreen .titlebar-inner {
   -webkit-app-region:no-drag;
-}
-
-.titlebar-inner {
-  width:100px;
 }
 
 .titlebar-button,
@@ -287,9 +283,6 @@ body, input, button,
 }
 .workspace-tabs {
   border-top:0px solid var(--background-modifier-border);
-}
-
-.side-dock-ribbon {
 }
 
 .workspace-ribbon.mod-left {
