@@ -93,7 +93,7 @@
   --normal-weight:400;  /* Switch to 300 if you want thinner default text */
   --bold-weight:600;    /* Switch to 600 or 700 if you want thicker bold text */
   --line-width:40rem;   /* I recommend turning off "Readable line length" in Obsidian Settings */
-  --max-width:80%;
+  --max-width:80%;      /* Maximum width inside file panels */
 
   /*----------------------------------------------------------------
 
@@ -118,8 +118,9 @@
   --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 70%));
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
-
   --text-selection:rgba(50, 50, 50, 1);
+
+  --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-d),0);
   --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-d),0.85);
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
@@ -145,6 +146,7 @@
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 25%));
 
+  --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-l),0);
   --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-l),0.85);
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 10%));
@@ -165,7 +167,7 @@
 .titlebar, .titlebar-inner {
   position:fixed;
   top:0;
-  height:15px;
+  height:12px;
 }
 .titlebar,
 .titlebar-inner {
@@ -179,7 +181,7 @@
 }
 .workspace-split.mod-right-split,
 .workspace-split.mod-root .view-header {
-  padding-top:2px;
+  padding-top:4px;
 }
 .workspace-split.mod-left-split {
   padding-top:18px;
@@ -371,7 +373,7 @@ body, input, button,
 .view-action {
   background:transparent;
   color:var(--text-muted);
-  opacity:0.34;
+  opacity:0.4;
   transition:opacity 0.1s ease-in-out;
   cursor:var(--cursor);
 }
@@ -580,9 +582,8 @@ input.prompt-input, input.prompt-input:hover {
 .mod-horizontal .workspace-leaf {
   border-bottom:0px;
 }
-.workspace-leaf:not(.mod-active) {
-  opacity:0.8;
-}
+.workspace-leaf:not(.mod-active) {} /* Effects on non-active panels */
+
 .workspace-tab-container-inner {
   background:transparent;
   border-bottom:1px solid var(--background-modifier-border);
@@ -613,8 +614,23 @@ input.prompt-input, input.prompt-input:hover {
 /* --------------- */
 /* Title Bar */
 
+.view-actions {
+  z-index:15;
+  background:var(--background-primary);
+}
 .view-header-title {
-
+  padding-right:60px;
+}
+.view-header-title:before {
+  background:linear-gradient(90deg, var(--background-transparent) 0%, var(--background-primary) 80%);
+  width:60px;
+  content:" ";
+  height:30px;
+  display:inline-block;
+  vertical-align:bottom;
+  position:absolute;
+  right:0;
+  pointer-events:none;
 }
 .workspace-leaf-header, .view-header {
   background-color:var(--background-primary) !important;
@@ -622,6 +638,7 @@ input.prompt-input, input.prompt-input:hover {
 }
 .view-header-title-container {
   padding-left:0;
+  padding-right:0px;
   position:absolute;
   width:var(--line-width);
   max-width:var(--max-width);
@@ -655,11 +672,19 @@ input.prompt-input, input.prompt-input:hover {
   padding-right:48px;
 } */
 
+.markdown-source-view {
+  padding:0;
+}
 .cm-s-obsidian .CodeMirror-code {
   padding-right:0;
 }
 .CodeMirror-lines {
   padding-bottom:170px;
+}
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like {
+  padding-left:0;
+  padding-right:0;
 }
 .markdown-preview-view {
   padding-top:10px;
