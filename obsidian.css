@@ -27,9 +27,13 @@
   ::-webkit-scrollbar,                            /* Scroll bars */
   .tooltip,                                       /* Tooltips */
   .titlebar-button-container,                     /* Titlebar buttons */
-  .list-item-ending-flair,                        /* Search counts */
-  .nav-folder.mod-root > .nav-folder-title {      /* Root name */                  
+  .list-item-ending-flair {                       /* Search counts */
     display:none !important;
+  }
+
+  /* Hides the name of the root folder */
+  .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+    display:none;
   }
 
   /* Remove this if you re-enable status bar */
@@ -463,9 +467,6 @@ body, input, button,
 .workspace-ribbon.mod-right.is-collapsed {
   display:none;
 }
-.workspace-ribbon-collapse-btn {
-  display:none;
-}
 
 /* --------------- */
 /* Tags */
@@ -544,13 +545,12 @@ input.prompt-input, input.prompt-input:hover {
 /* --------------- */
 /* Workspace */
 
-/* Bigger margins when single pane */
-.mod-single-child .CodeMirror-sizer {
-  margin:0px 10% !important;
+.workspace-split:not(.mod-root) .workspace-leaf-content {
+  height:calc(100% - 6px);
 }
-.mod-single-child .markdown-preview-section {
-  margin:0px 10% !important;
+.workspace-split.mod-root .workspace-leaf-content {
 }
+
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   height:5px;
   background:transparent;
@@ -565,7 +565,7 @@ input.prompt-input, input.prompt-input:hover {
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   background:transparent;
   border-right:1px solid var(--background-modifier-border);
-  width:5px !important;
+  width:3px !important;
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active,
@@ -617,6 +617,9 @@ input.prompt-input, input.prompt-input:hover {
 .view-actions {
   z-index:15;
   background:var(--background-primary);
+}
+.view-header {
+  height:40px;
 }
 .view-header-title {
   padding-right:60px;
@@ -687,15 +690,13 @@ input.prompt-input, input.prompt-input:hover {
   padding-right:0;
 }
 .markdown-preview-view {
-  padding-top:10px;
-  padding-left:0;
-  padding-right:0;
+  padding:0;
 }
 .markdown-preview-view .markdown-embed {
   margin:0;
 }
 .markdown-preview-view {
-  padding-bottom:200px;
+  padding-bottom:5px;
 }
 .markdown-preview-view .markdown-embed-content {
   max-height:none;
@@ -807,6 +808,22 @@ input.document-replace-input:focus {
 .document-search-button {
   font-size:var(--font-small);
 }
+
+/* --------------- */
+/* Sidebar documents */
+
+.workspace-split:not(.mod-root) .CodeMirror,
+.workspace-split:not(.mod-root) .markdown-preview-view {
+  font-size:var(--font-small);
+  line-height:1.2;
+}
+
+.workspace-split:not(.mod-root) .CodeMirror, 
+.workspace-split:not(.mod-root) .markdown-preview-section {
+  max-width:100%;
+  padding:0 15px;
+}
+
 
 /* --------------- */
 /* Inputs */
@@ -1174,7 +1191,7 @@ input.search-input:focus {
 /* Sidedock icons */
 
 .workspace-ribbon-collapse-btn {
-  margin-top:0;
+  margin-top:2px;
   padding-top:7px;
 }
 .workspace-ribbon-collapse-btn,
@@ -1217,6 +1234,7 @@ iframe {
 
 .markdown-preview-view hr {
   height:1px;
+  border-width:2px 0 0 0;
 }
 .external-link {
   text-decoration:underline;
@@ -1332,13 +1350,12 @@ ol > li::before {
 
 input[type=range] {
   background-color:rgba(0,0,0,0.15);
-  height:20px;
-  padding:10px 10px 0 10px;
+  height:16px;
+  padding:9px 7px 0 7px;
   -webkit-appearance:none;
   cursor:default;
   margin:0;
   border-radius:50px;
-
 }
 input[type=range]:focus {
 
@@ -1346,13 +1363,13 @@ input[type=range]:focus {
 input[type=range]::-webkit-slider-runnable-track {
   background:var(--text-muted);
   height:1px;
-  margin-top:-10px;
+  margin-top:-9px;
 }
 input[type=range]::-webkit-slider-thumb {
   background:var(--text-muted);
-  height:9px;
+  height:7px;
   width:20px;
-  margin-top:-1px;
+  margin-top:0px;
   cursor:default;
 }
 input[type=range]::-webkit-slider-thumb:hover,
@@ -1404,3 +1421,23 @@ input[type=range]::-webkit-slider-thumb:active {
 .graph-view.color-line-highlight {
   color:var(--interactive-accent);
 }
+
+/* --------------- */
+/* Scroll bars */
+
+::-webkit-scrollbar {
+  width:7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color:var(--background-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  border-width:0px 4px 6px 0px;
+  border-style:solid;
+  border-radius:0 !important;
+  border-color:var(--background-primary);
+  min-height:40px;
+}
+
