@@ -44,6 +44,5 @@ Theme colors are driven by a few HSL values that you can customize. The backgrou
 ### Screenshots
 
 ![](dark-complex.png)
-![](dark-simple.png)
 ![](light-simple.png)
 ![](light-focus.png)
