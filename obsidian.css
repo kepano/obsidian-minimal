@@ -27,7 +27,8 @@
   ::-webkit-scrollbar,                            /* Scroll bars */
   .tooltip,                                       /* Tooltips */
   .titlebar-button-container,                     /* Titlebar buttons */
-  .list-item-ending-flair {                       /* Search counts */
+  .list-item-ending-flair,                        /* Search counts */
+  .workspace-ribbon-collapse-btn {                /* Sidebar collapse */
     display:none !important;
   }
 
@@ -264,10 +265,23 @@
   transition:opacity 0.25s ease-in-out;
 }
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  display:none;
+  border-top:1px solid var(--background-modifier-border);
 }
 .workspace-split.mod-left-split {
   margin:0;
+}
+.workspace-ribbon.mod-right {
+  opacity:1;
+  height:40px;
+  position:fixed;
+  top:auto;
+  right:5px;
+  bottom:0;
+  z-index:999;
+}
+.workspace-ribbon-collapse-btn {
+  margin:0;
+  padding-top:8px;
 }
 
 /* --------------- */
@@ -367,6 +381,9 @@ body, input, button,
 .nav-action-button svg {
   width:15px;
 }
+.workspace-ribbon-collapse-btn svg path {
+  stroke-width:3px;
+}
 .nav-action-button svg path {
   stroke-width:2px;
 }
@@ -437,7 +454,7 @@ body, input, button,
   transition:opacity 0.25s ease-in-out;
 }
 .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
-.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings{
+.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
   opacity:1;
   transition:opacity 0s ease-in-out;
 }
@@ -450,6 +467,12 @@ body, input, button,
   margin-left:auto;
   transition:opacity 0.25s ease-in-out;
 }
+.view-actions .view-action {
+  margin-right:4px;
+}
+.view-actions .view-action:last-child  {
+  margin-left:2px;
+}
 .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-actions {
   opacity:1;
   transition:opacity 0.25s ease-in-out;
@@ -458,15 +481,7 @@ body, input, button,
   opacity:1;
   transition:opacity 0.25s ease-in-out;
 }
-.view-actions .view-action {
-  margin-right:4px;
-}
-.view-actions .view-action:last-child  {
-  margin-left:2px;
-}
-.workspace-ribbon.mod-right.is-collapsed {
-  display:none;
-}
+
 
 /* --------------- */
 /* Tags */
@@ -513,6 +528,8 @@ body, input, button,
   padding-right:8px;
 }
 
+
+
 /* --------------- */
 /* Modals */
 
@@ -535,37 +552,41 @@ input.prompt-input, input.prompt-input:hover {
   background:var(--background-tertiary);
 }
 
-/* --------------- */
-/* Modals */
 
-.mod-drag {
+/* --------------- */
+/* Drag ghost */
+
+.workspace-drop-overlay:before,
+.mod-drag,
+.drag-ghost {
+  opacity:0.8;
   border-radius:0 !important;} 
 
 
 /* --------------- */
 /* Workspace */
 
-.workspace-split:not(.mod-root) .workspace-leaf-content {
+.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content {
   height:calc(100% - 6px);
 }
 .workspace-split.mod-root .workspace-leaf-content {
 }
 
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
-  height:5px;
+  height:0px;
   background:transparent;
   border-bottom:1px solid var(--background-modifier-border);
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   background:transparent;
   border-left:1px solid var(--background-modifier-border);
-  width:5px !important;
+  width:0px !important;
 }  
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   background:transparent;
   border-right:1px solid var(--background-modifier-border);
-  width:3px !important;
+  width:0px !important;
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active,
@@ -812,14 +833,14 @@ input.document-replace-input:focus {
 /* --------------- */
 /* Sidebar documents */
 
-.workspace-split:not(.mod-root) .CodeMirror,
-.workspace-split:not(.mod-root) .markdown-preview-view {
+.workspace > .workspace-split:not(.mod-root) .CodeMirror,
+.workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
   font-size:var(--font-small);
   line-height:1.2;
 }
 
-.workspace-split:not(.mod-root) .CodeMirror, 
-.workspace-split:not(.mod-root) .markdown-preview-section {
+.workspace > .workspace-split:not(.mod-root) .CodeMirror, 
+.workspace > .workspace-split:not(.mod-root) .markdown-preview-section {
   max-width:100%;
   padding:0 15px;
 }
@@ -1190,10 +1211,6 @@ input.search-input:focus {
 /* --------------- */
 /* Sidedock icons */
 
-.workspace-ribbon-collapse-btn {
-  margin-top:2px;
-  padding-top:7px;
-}
 .workspace-ribbon-collapse-btn,
 .view-action,
 .side-dock-ribbon-tab, .side-dock-ribbon-action {
