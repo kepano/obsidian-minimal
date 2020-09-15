@@ -167,7 +167,7 @@
 }
 
 /* --------------- */
-/* Window mode */
+/* Frameless mode */
 
 .titlebar, .titlebar-inner {
   position:fixed;
@@ -176,7 +176,7 @@
 }
 .titlebar,
 .titlebar-inner {
-  background:var(--background-primary);
+  background:transparent;
 }
 .titlebar-text {
   display:none;
@@ -184,45 +184,20 @@
 .is-frameless {
   padding-top:0px !important;
 }
-.workspace-split.mod-right-split,
+.workspace-split.mod-right-split > .workspace-tabs,
 .workspace-split.mod-root .view-header {
   padding-top:4px;
 }
-.workspace-split.mod-left-split {
+.workspace-split.mod-left-split > .workspace-tabs {
   padding-top:18px;
 }
-.is-fullscreen .workspace-split,
-.is-fullscreen .workspace-split.mod-root .view-header {
+.workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
+.workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
   padding-top:0px;
 }
-
-/* --------------- */
-/* Frameless mode
-
-.titlebar,
-.titlebar-inner {
-  background:transparent;
-  border:0;
-  height:15px !important;
-  padding:0 !important;
-  -webkit-app-region:drag;
-}
-.is-fullscreen .titlebar,
-.is-fullscreen .titlebar-inner {
-  -webkit-app-region:no-drag;
-}
-.titlebar-button,
-.titlebar-text {
-  display:none;
-}
-.mod-left-split {
-  padding-top:20px;
-}
-.is-fullscreen .mod-left-split {
-  padding-top:0;
-}
-.is-frameless {
-  padding-top:0 !important;
+.is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
+.is-fullscreen .workspace-split.mod-root .view-header {
+  padding-top:0px;
 }
 
 /* --------------- */
