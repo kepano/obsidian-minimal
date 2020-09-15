@@ -998,14 +998,14 @@ input[type=checkbox]:checked {
 .search-result-file-title:hover .search-result-collapse-indicator,
 .side-dock-collapsible-section-header-indicator:hover,
 .side-dock-collapsible-section-header:hover .side-dock-collapsible-section-header-indicator {
-  color:var(--background-modifier-border-focus);
+  color:var(--background-modifier-border-hover);
 }
 .tree-view-item-collapse,
 .is-collapsed .search-result-collapse-indicator,
 .nav-folder-collapse-indicator,
 .side-dock-collapsible-section-header-indicator,
 .is-collapsed .side-dock-collapsible-section-header-indicator {
-  color:var(--background-modifier-border);
+  color:var(--background-modifier-border-hover);
 }
 
 /* --------------- */
