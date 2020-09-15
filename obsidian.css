@@ -934,8 +934,18 @@ input[type=checkbox]:checked {
   padding:0 10px 0 24px;
   cursor:var(--cursor);
 }
+.nav-folder-title.is-being-dragged-over {
+  background-color:var(--background-modifier-accent);
+  border-color:var(--background-modifier-accent);
+  border-radius:0;
+  border-left:1px solid transparent;
+  border-right:1px solid transparent;
+}
 .nav-folder-title-content {
   padding:1px 4px;
+}
+.nav-folder-collapse-indicator {
+  top:1px;
 }
 .nav-file {
   margin-left:12px;
