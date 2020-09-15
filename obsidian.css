@@ -327,14 +327,14 @@ body, input, button,
 .HyperMD-header-1,
 .cm-header-1 {
   letter-spacing:-0.02em;
-  font-size:22px !important;
+  font-size:24px !important;
   font-weight:var(--bold-weight) !important;
 }
 .markdown-preview-view h2,
 .HyperMD-header-2,
 .cm-header-2 {
   letter-spacing:-0.02em;
-  font-size:20px !important;
+  font-size:18px !important;
   font-weight:var(--bold-weight) !important;
 }
 .markdown-preview-view h3,
@@ -1029,7 +1029,7 @@ input[type=checkbox]:checked {
 .tree-view-item-collapse {
   opacity:1;
 }
-.outline > .tree-view-item:first-child > .tree-view-item-self .right-triangle {
+.outline > .tree-view-item > .tree-view-item-self .right-triangle {
   opacity:0;
 }
 
@@ -1309,7 +1309,7 @@ ul {
   padding-inline-start:2em;
   list-style:none;
 }
-ul ul, ol ul {
+ul ul, ol ul, ol ol ul, ol ul ul, ul ol ul, ul ul ul {
   list-style:none;
 }
 ul > li:not(.task-list-item)::before {
