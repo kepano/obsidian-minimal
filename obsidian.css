@@ -26,8 +26,8 @@
   .status-bar,                                      /* Status bar */
   ::-webkit-scrollbar,                              /* Scroll bars */
   .tooltip,                                         /* Tooltips */
-  .titlebar-button-container,                       /* Titlebar buttons */
-  .list-item-ending-flair:not(.tag-pane-tag-count), /* Search counts */
+  .titlebar-button-container,
+  .pane-list-item-ending-flair:not(.tag-pane-tag-count), /* Search counts */
   .workspace-ribbon-collapse-btn {                  /* Sidebar collapse */
     display:none !important;
   }
@@ -1070,11 +1070,13 @@ input.search-input:focus {
 }
 .search-result-file-title {
   line-height:1.3;
-  padding:2px 4px 2px 24px;
+  padding:4px 4px 4px 24px;
   vertical-align:middle;
   cursor:var(--cursor)!important;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
-.search-result-file-title span:not(.search-result-collapse-indicator):not(.search-result-count) {
+.search-result-file-title > span:not(.search-result-collapse-indicator):not(.search-result-count) {
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
