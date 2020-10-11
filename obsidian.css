@@ -706,6 +706,13 @@ input.prompt-input, input.prompt-input:hover {
   width:var(--line-width);
   max-width:var(--max-width);
 }
+.markdown-preview-view .markdown-embed {
+  padding:2% 4%;
+}
+.markdown-embed-title,
+.internal-embed .markdown-preview-section {
+  max-width:100%;
+}
 .cm-s-obsidian pre.HyperMD-header,
 .CodeMirror-line {
 
@@ -1381,6 +1388,7 @@ ol > li::before {
 .popover {
   box-shadow:0 20px 40px var(--background-modifier-box-shadow);
   pointer-events:auto !important;
+  margin-left:30px;
 }
 .popover.hover-popover {
   max-height:40vh;}
