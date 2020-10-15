@@ -709,6 +709,7 @@ input.prompt-input, input.prompt-input:hover {
 .markdown-preview-view .markdown-embed {
   padding:2% 4%;
 }
+
 .markdown-embed-title,
 .internal-embed .markdown-preview-section {
   max-width:100%;
@@ -730,6 +731,20 @@ input.prompt-input, input.prompt-input:hover {
 }
 .cm-s-obsidian span.cm-hmd-internal-link {
   color:var(--text-accent);
+}
+
+/* Transcluded notes embeds */
+
+.markdown-preview-sizer {
+  min-height:auto !important;
+}
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+  max-height:auto;}
+.markdown-embed .markdown-preview-view {
+  padding:0;}
+.internal-embed .markdown-embed {
+  border:1px solid var(--background-modifier-border);
+  border-radius:6px;
 }
 
 /* Editor Mode Footnotes */
@@ -1260,7 +1275,7 @@ iframe {
 
 .markdown-preview-view hr {
   height:1px;
-  border-width:2px 0 0 0;
+  border-width:1px 0 0 0;
 }
 .external-link {
   text-decoration:underline;
@@ -1388,7 +1403,6 @@ ol > li::before {
 .popover {
   box-shadow:0 20px 40px var(--background-modifier-box-shadow);
   pointer-events:auto !important;
-  margin-left:30px;
 }
 .popover.hover-popover {
   max-height:40vh;}
