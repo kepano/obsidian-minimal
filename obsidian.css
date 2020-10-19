@@ -134,7 +134,7 @@
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
 
-  --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 15%));
+  --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --interactive-accent-rgb:66, 66, 66;
   --text-highlight-bg:rgba(168, 220, 250, 0.33);
 }
@@ -160,7 +160,7 @@
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
 
-  --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 15%));
+  --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 10%));
   --interactive-accent-rgb:220, 220, 220;
   --text-selection:rgba(237, 237, 237, 1);
 
@@ -706,9 +706,6 @@ input.prompt-input, input.prompt-input:hover {
   width:var(--line-width);
   max-width:var(--max-width);
 }
-.markdown-preview-view .markdown-embed {
-  padding:2% 4%;
-}
 
 .markdown-embed-title,
 .internal-embed .markdown-preview-section {
@@ -735,16 +732,36 @@ input.prompt-input, input.prompt-input:hover {
 
 /* Transcluded notes embeds */
 
+.markdown-preview-view .markdown-embed {
+  margin-top:2.5%;
+  padding:0 1.5% 0 5%;
+}
+.markdown-embed-title {
+  line-height:18px;
+  height:24px;
+}
+.markdown-embed-link, .file-embed-link {
+  top:0;
+  right:0;
+  left:0;
+  width:100%;
+  text-align:right;
+}
+.file-embed-link svg,
+.markdown-embed-link svg {
+  width:16px;
+}
 .markdown-preview-sizer {
   min-height:auto !important;
 }
 .markdown-preview-view .markdown-embed-content > .markdown-preview-view {
-  max-height:auto;}
+  max-height:none !important;}
 .markdown-embed .markdown-preview-view {
   padding:0;}
 .internal-embed .markdown-embed {
-  border:1px solid var(--background-modifier-border);
-  border-radius:6px;
+  border:0;
+  border-left:1px solid var(--quote-opening-modifier);
+  border-radius:0;
 }
 
 /* Editor Mode Footnotes */
