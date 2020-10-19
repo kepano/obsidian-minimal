@@ -750,6 +750,12 @@ input.prompt-input, input.prompt-input:hover {
 .file-embed-link svg,
 .markdown-embed-link svg {
   width:16px;
+  opacity:0.7; 
+}
+.markdown-embed:hover .file-embed-link svg,
+.markdown-embed:hover .markdown-embed-link svg {
+  opacity:1;
+  transition:opacity 0.2s linear;
 }
 .markdown-preview-sizer {
   min-height:auto !important;
