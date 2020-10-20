@@ -95,10 +95,11 @@
   --font-small:13px;
   --font-smaller:11px;
 
-  --normal-weight:400;  /* Switch to 300 if you want thinner default text */
-  --bold-weight:600;    /* Switch to 600 or 700 if you want thicker bold text */
-  --line-width:40rem;   /* I recommend turning off "Readable line length" in Obsidian Settings */
-  --max-width:80%;      /* Maximum width inside file panels */
+  --normal-weight:400;   /* Switch to 300 if you want thinner default text */
+  --bold-weight:600;     /* Switch to 600 or 700 if you want thicker bold text */
+  --line-width:40rem;    /* I recommend turning off "Readable line length" in Obsidian Settings */
+  --max-width:80%;       /* Maximum width inside file panels */
+  --nested-padding:3.5%; /* Amount of padding for quotes and transclusions */
 
   /*----------------------------------------------------------------
 
@@ -136,7 +137,7 @@
 
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --interactive-accent-rgb:66, 66, 66;
-  --text-highlight-bg:rgba(168, 220, 250, 0.33);
+  --text-highlight-bg:rgba(168, 220, 250, 0.2);
 }
 .theme-light {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
@@ -163,7 +164,7 @@
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 10%));
   --interactive-accent-rgb:220, 220, 220;
   --text-selection:rgba(237, 237, 237, 1);
-
+  --text-highlight-bg:rgba(168, 220, 250, 0.2);
 }
 
 /* --------------- */
@@ -229,7 +230,7 @@
   background:var(--background-primary);
   padding-right:100vw;
   content:" ";
-  pointer-events: none;
+  pointer-events:none;
 }
 .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display:inline-block;
@@ -733,29 +734,38 @@ input.prompt-input, input.prompt-input:hover {
 /* Transcluded notes embeds */
 
 .markdown-preview-view .markdown-embed {
-  margin-top:2.5%;
-  padding:0 1.5% 0 5%;
+  margin-top:var(--nested-padding);
+  padding:0 calc(var(--nested-padding) / 2) 0 var(--nested-padding);
 }
 .markdown-embed-title {
   line-height:18px;
   height:24px;
 }
-.markdown-embed-link, .file-embed-link {
-  top:0;
-  right:0;
+.markdown-embed .markdown-preview-sizer:first-child ul {
+  margin-block-start:2px;
+}
+.markdown-embed .markdown-preview-section:last-child p,
+.markdown-embed .markdown-preview-section:last-child ul {
+  margin-block-end:2px;
+}
+
+.markdown-embed-title ~ .markdown-embed-link {
   left:0;
   width:100%;
+}
+.markdown-embed-link, .file-embed-link {
+  top:0px;
+  right:0;
   text-align:right;
 }
 .file-embed-link svg,
 .markdown-embed-link svg {
   width:16px;
-  opacity:0.7; 
+  opacity:0; 
 }
 .markdown-embed:hover .file-embed-link svg,
 .markdown-embed:hover .markdown-embed-link svg {
   opacity:1;
-  transition:opacity 0.2s linear;
 }
 .markdown-preview-sizer {
   min-height:auto !important;
@@ -1328,7 +1338,8 @@ iframe {
   border-width:0px 0px 0px 1px;
   background-color:transparent;
   color:var(--text-muted);
-  padding:0 0 0 10px;
+  padding:0 0 0 calc(var(--nested-padding) / 2);
+  margin-inline-start:var(--nested-padding);
 }
 
 /* --------------- */
@@ -1336,7 +1347,7 @@ iframe {
 
 .markdown-preview-view th {
   font-weight:var(--bold-weight);
-  text-align: left;
+  text-align:left;
   border-top:none;
 }
 .markdown-preview-view th:last-child,
