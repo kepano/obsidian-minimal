@@ -137,7 +137,7 @@
 
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --interactive-accent-rgb:66, 66, 66;
-  --text-highlight-bg:rgba(168, 220, 250, 0.2);
+  --text-highlight-bg:rgba(168, 220, 250, 0.4);
 }
 .theme-light {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
@@ -164,7 +164,7 @@
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 10%));
   --interactive-accent-rgb:220, 220, 220;
   --text-selection:rgba(237, 237, 237, 1);
-  --text-highlight-bg:rgba(168, 220, 250, 0.2);
+  --text-highlight-bg:rgba(168, 220, 250, 0.4);
 }
 
 /* --------------- */
@@ -235,6 +235,9 @@
 .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display:inline-block;
   padding:9px 5px 0 12px;
+}
+.workspace-ribbon.mod-right {
+  display:none;
 }
 .workspace-ribbon.mod-left:hover {
   opacity:1;
@@ -956,9 +959,6 @@ input[type=checkbox]:checked {
   justify-content:flex-start;
   border:0;
 }
-.nav-folder.mod-root {
-  padding-top:2px;
-}
 .nav-files-container {
   overflow-x:hidden;
 }
@@ -1102,7 +1102,7 @@ input[type=checkbox]:checked {
   padding-bottom:5px;
 }
 .search-result-file-matched-text {
-  background-color:var(--background-match-highlight);
+  background-color:var(--text-highlight-bg);
 }
 .search-input {
   max-width:calc(100% - 20px);
