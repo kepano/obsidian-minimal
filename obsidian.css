@@ -928,6 +928,15 @@ input[type=checkbox]:checked {
   margin-right:6px;
   filter:none;
 }
+.markdown-preview-view ul > li.task-list-item .collapse-indicator {
+  margin-left:-30px;
+  margin-top:4px;
+  position:absolute;
+}
+.markdown-preview-view .collapse-indicator {
+  margin-left:-54px;
+  position:absolute;
+}
 .markdown-preview-view .task-list-item {
   padding-inline-start:1.5em;
 }
@@ -1030,15 +1039,15 @@ input[type=checkbox]:checked {
 .search-result-collapse-indicator,
 .search-result-file-title:hover .search-result-collapse-indicator,
 .side-dock-collapsible-section-header-indicator:hover,
-.side-dock-collapsible-section-header:hover .side-dock-collapsible-section-header-indicator {
-  color:var(--background-modifier-border-hover);
-}
+.side-dock-collapsible-section-header:hover .side-dock-collapsible-section-header-indicator,
+.markdown-preview-view .collapse-indicator,
 .tree-view-item-collapse,
 .is-collapsed .search-result-collapse-indicator,
 .nav-folder-collapse-indicator,
 .side-dock-collapsible-section-header-indicator,
 .is-collapsed .side-dock-collapsible-section-header-indicator {
-  color:var(--background-modifier-border-hover);
+  color:var(--text-faint);
+  cursor:var(--cursor);
 }
 
 /* --------------- */
