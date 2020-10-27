@@ -174,6 +174,9 @@
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
   box-shadow:var(--background-modifier-border) -1px -0px !important;
 }
+body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
+  box-shadow:none !important;
+}
 body.plugin-sliding-panes .workspace-leaf-content {
   padding-left:0;
 }
@@ -189,19 +192,23 @@ body.plugin-sliding-panes .view-header {
 body.plugin-sliding-panes .view-header-title-container {
   height:unset;
   padding-left:unset;
-  padding-top:24px;
+  padding-top:14px;
   position:static;
-}
-body.plugin-sliding-panes.is-fullscreen .view-header-title-container {
-  padding-top:10px;
 }
 body.plugin-sliding-panes .view-actions {
   padding:0 0 24px 0;
   margin-left:4px;
   bottom:0;
 }
+.plugin-sliding-panes .workspace-split.is-collapsed ~ .mod-root .view-header-icon,
 body.plugin-sliding-panes .view-header-icon {
-  display:none;
+  opacity:0.5;
+  padding-top:22px;
+  padding-bottom:0;
+}
+
+body.plugin-sliding-panes.is-fullscreen .view-header-icon {
+  padding-top:8px;
 }
 
 
@@ -275,7 +282,7 @@ body.plugin-sliding-panes .view-header-icon {
   padding:9px 5px 0 12px;
 }
 .workspace-ribbon.mod-right {
-  display:none;
+  pointer-events:none;
 }
 .workspace-ribbon.mod-left:hover {
   opacity:1;
@@ -622,6 +629,7 @@ input.prompt-input, input.prompt-input:hover {
 .mod-horizontal .workspace-leaf {
   border-bottom:0px;
   background-color:transparent;
+  box-shadow:none !important;
 }
 .workspace-leaf:not(.mod-active) {} /* Effects on non-active panels */
 
@@ -878,7 +886,7 @@ input.prompt-input, input.prompt-input:hover {
   height:50px;
   background-color:var(--background-primary);
   border-top:1px solid var(--background-modifier-border);
-  width: calc(100% - 1px);
+  width:calc(100% - 1px);
 }
 input.document-search-input, input.document-replace-input {
   font-size:var(--font-small) !important;
@@ -916,6 +924,7 @@ input.document-replace-input:focus {
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-section {
   max-width:100%;
   padding:0 15px;
+  width:auto;
 }
 
 
