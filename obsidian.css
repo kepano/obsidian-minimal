@@ -699,9 +699,6 @@ input.prompt-input, input.prompt-input:hover {
 .markdown-preview-view .markdown-embed {
   margin:0;
 }
-.markdown-preview-view {
-  padding-bottom:5px;
-}
 .markdown-preview-view .markdown-embed-content {
   max-height:none;
 }
