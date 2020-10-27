@@ -1007,6 +1007,7 @@ input[type=checkbox]:checked {
 }
 .nav-files-container {
   overflow-x:hidden;
+  padding-bottom:50px;
 }
 .nav-folder-title {
   margin:0px;
