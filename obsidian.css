@@ -168,6 +168,44 @@
 }
 
 /* --------------- */
+/* Andy Mode Sliding Panes
+   Designed for use with death_au's plugin */
+   
+body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
+  box-shadow:var(--background-modifier-border) -1px -0px !important;
+}
+body.plugin-sliding-panes .workspace-leaf-content {
+  padding-left:0;
+}
+body.plugin-sliding-panes .workspace-split.mod-root .view-header {
+  padding-top:0;
+}
+body.plugin-sliding-panes .view-header-title:before {
+  background:none;
+}
+body.plugin-sliding-panes .view-header {
+  background:none;
+}
+body.plugin-sliding-panes .view-header-title-container {
+  height:unset;
+  padding-left:unset;
+  padding-top:24px;
+  position:static;
+}
+body.plugin-sliding-panes.is-fullscreen .view-header-title-container {
+  padding-top:10px;
+}
+body.plugin-sliding-panes .view-actions {
+  padding:0 0 24px 0;
+  margin-left:4px;
+  bottom:0;
+}
+body.plugin-sliding-panes .view-header-icon {
+  display:none;
+}
+
+
+/* --------------- */
 /* Frameless mode */
 
 .titlebar, .titlebar-inner {
@@ -554,20 +592,20 @@ input.prompt-input, input.prompt-input:hover {
 }
 
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
-  height:0px;
+  height:2px;
   background:transparent;
   border-bottom:1px solid var(--background-modifier-border);
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   background:transparent;
   border-left:1px solid var(--background-modifier-border);
-  width:0px !important;
+  width:2px !important;
 }  
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   background:transparent;
   border-right:1px solid var(--background-modifier-border);
-  width:0px !important;
+  width:2px !important;
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active,
@@ -835,10 +873,12 @@ input.prompt-input, input.prompt-input:hover {
   height:90px;
 }
 .document-search-container {
+  position:fixed;
   padding-top:10px;
   height:50px;
   background-color:var(--background-primary);
   border-top:1px solid var(--background-modifier-border);
+  width: calc(100% - 1px);
 }
 input.document-search-input, input.document-replace-input {
   font-size:var(--font-small) !important;
