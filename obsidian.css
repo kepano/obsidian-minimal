@@ -1,60 +1,107 @@
 /* 
 
-  Minimal Obsidian by @kepano
+Minimal Obsidian by @kepano
 
-  This theme is provided "as is", and is focused on my personal use
-  of Obsidian. As such I have neither optimized nor tested it with 
-  all the features of Obsidian that I don't frequently use.
+This theme is provided "as is", and is focused on my personal use
+of Obsidian. As such I have neither optimized nor tested it with 
+all the features of Obsidian that I don't frequently use.
 
-  Since this theme modifies significant parts of the Obsidian interface,
-  it might break with future updates. 
+Since this theme modifies significant parts of the Obsidian interface,
+it might break with future updates. 
 
-  It also may be incompatible with other bits of custom CSS you have.
-  The file is organized in such a way that you can remove or comment
-  out sections that may be causing conflicts.
+It also may be incompatible with other bits of custom CSS you have.
+The file is organized in such a way that you can remove or comment
+out sections that may be causing conflicts.
 
 
-  OPTIONS
+----------------------------------------------------------------
 
-  ----------------------------------------------------------------
+TOC
+
+Options
+
+  Disabled features
+  Colors
+  Font styles
+  Cursor
+
+Theme
+
+Special Features
+
+  Frameless mode
+  Andy mode for use with Sliding Panes plugin
+  App ribbon removed
+  Focus mode
+  Image zoom
+
+Minimal Styling
+
+  Headings and fonts
+  Icons
+  Tags
+  Modals
+  Drag ghost
+  Workspace
+  Window frame
+  Title bar
+  Editor mode
+  Internal search
+  Sidebar documents
+  Toggle switches
+  File browser
+  Outline
+  Search
+  Tag pane
+  Status bar
+  Sidedock icons
+  Preview mode
+  Code
+  Popovers
+  Graphs
+  Scrollbars
+
+
+----------------------------------------------------------------
+
+OPTIONS
+
+Disabled features
+
+These features are hidden in pursuit of a more focused editing 
+experience. Remove each line if you want to re-activate the feature */
+
+.status-bar,                                      /* Status bar */
+::-webkit-scrollbar,                              /* Scroll bars */
+.tooltip,                                         /* Tooltips */
+.pane-list-item-ending-flair:not(.tag-pane-tag-count), /* Search counts */
+.workspace-ribbon-collapse-btn {                  /* Sidebar collapse */
+  display:none !important;
+}
+
+/* Hides the name of the root folder */
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  display:none;
+}
+
+/* Remove this if you re-enable status bar */
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  height:100%;
+}
+
+.search-result-file-matches,                    /* File matches in search */
+.backlink-pane .search-result-file-matches,     /* File matches in backlinks */
+.workspace-leaf-content[data-type=starred] .nav-header {  /* Starred section header */
   
-  DISABLED FEATURES
-
-  These features are hidden in pursuit of a more focused editing 
-  experience. Remove each line if you want to re-activate the feature */
-
-  .status-bar,                                      /* Status bar */
-  ::-webkit-scrollbar,                              /* Scroll bars */
-  .tooltip,                                         /* Tooltips */
-  .titlebar-button-container,
-  .pane-list-item-ending-flair:not(.tag-pane-tag-count), /* Search counts */
-  .workspace-ribbon-collapse-btn {                  /* Sidebar collapse */
-    display:none !important;
-  }
-
-  /* Hides the name of the root folder */
-  .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
-    display:none;
-  }
-
-  /* Remove this if you re-enable status bar */
-  .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-  .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-    height:100%;
-  }
-
-  .search-result-file-matches,                    /* File matches in search */
-  .backlink-pane .search-result-file-matches,     /* File matches in backlinks */
-  .workspace-leaf-content[data-type=starred] .nav-header {  /* Starred section header */
-    
-  }
+}
 
 
 :root {
 
   /*----------------------------------------------------------------
 
-  COLORS
+  Colors
 
   Most colors in this theme are driven from the following values,
   meaning that the backgrounds, borders, and various shades are 
@@ -82,19 +129,25 @@
 
   /*----------------------------------------------------------------
 
-  FONTS */
+  Font styles
 
-  /* Preview mode and UI */
+  Preview mode and UI */
+
   --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  
   /* Editor mode */
+
   --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  
   /* Code */
+
   --font-monospace:Menlo,Monaco,Consolas,"Courier New",monospace;
+
+  /* Sizes, weights, padding */
 
   --font-normal:16px;
   --font-small:13px;
   --font-smaller:11px;
-
   --normal-weight:400;   /* Switch to 300 if you want thinner default text */
   --bold-weight:600;     /* Switch to 600 or 700 if you want thicker bold text */
   --line-width:40rem;    /* Maximum characters per line. Turn off "Readable line length" in Obsidian Settings */
@@ -103,14 +156,21 @@
 
   /*----------------------------------------------------------------
 
-  CURSOR
+  Cursor
 
   Change this to "pointer" if you like the normal style better */
 
   --cursor:default;   
 
-  /*----------------------------------------------------------------*/
 }
+
+/*----------------------------------------------------------------
+
+  THEME
+
+  These values are mostly driven by the options above */
+
+
 .theme-dark {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-d));
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 3%));
@@ -125,7 +185,6 @@
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
   --text-selection:rgba(50, 50, 50, 1);
-
   --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-d),0);
   --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-d),0.85);
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
@@ -134,11 +193,11 @@
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
-
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --interactive-accent-rgb:66, 66, 66;
   --text-highlight-bg:rgba(168, 220, 250, 0.4);
 }
+
 .theme-light {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 2%));
@@ -151,7 +210,6 @@
   --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 80%));
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 25%));
-
   --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-l),0);
   --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-l),0.85);
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
@@ -160,11 +218,50 @@
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
-
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 10%));
   --interactive-accent-rgb:220, 220, 220;
   --text-selection:rgba(237, 237, 237, 1);
   --text-highlight-bg:rgba(168, 220, 250, 0.4);
+}
+
+/*----------------------------------------------------------------
+
+SPECIAL FEATURES
+
+Frameless mode */
+
+.titlebar-button-container {
+  display:none !important;
+}
+.titlebar, .titlebar-inner {
+  position:fixed;
+  top:0;
+  height:12px;
+}
+.titlebar,
+.titlebar-inner {
+  background:transparent;
+}
+.titlebar-text {
+  display:none;
+}
+.is-frameless {
+  padding-top:0px !important;
+}
+.workspace-split.mod-right-split > .workspace-tabs,
+.workspace-split.mod-root .view-header {
+  padding-top:4px;
+}
+.workspace-split.mod-left-split > .workspace-tabs {
+  padding-top:18px;
+}
+.workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
+.workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
+  padding-top:0px;
+}
+.is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
+.is-fullscreen .workspace-split.mod-root .view-header {
+  padding-top:0px;
 }
 
 /* --------------- */
@@ -210,40 +307,9 @@ body.plugin-sliding-panes .view-header-icon {
 body.plugin-sliding-panes.is-fullscreen .view-header-icon {
   padding-top:8px;
 }
-
-
-/* --------------- */
-/* Frameless mode */
-
-.titlebar, .titlebar-inner {
-  position:fixed;
-  top:0;
-  height:12px;
-}
-.titlebar,
-.titlebar-inner {
-  background:transparent;
-}
-.titlebar-text {
-  display:none;
-}
-.is-frameless {
-  padding-top:0px !important;
-}
-.workspace-split.mod-right-split > .workspace-tabs,
-.workspace-split.mod-root .view-header {
-  padding-top:4px;
-}
-.workspace-split.mod-left-split > .workspace-tabs {
-  padding-top:18px;
-}
-.workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
-.workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
-  padding-top:0px;
-}
-.is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
-.is-fullscreen .workspace-split.mod-root .view-header {
-  padding-top:0px;
+body.plugin-sliding-panes .graph-controls {
+  top:20px;
+  left:30px;
 }
 
 /* --------------- */
@@ -309,7 +375,84 @@ body.plugin-sliding-panes.is-fullscreen .view-header-icon {
 }
 
 /* --------------- */
-/* Fonts */
+/* Focus mode */
+/* When the left sidebar is collapsed */
+
+.workspace-split.is-collapsed ~ .mod-root .view-header-icon {
+  opacity:0;
+}
+.workspace-ribbon.mod-left {
+  transition:border-color 0 ease-in-out;
+}
+.workspace-ribbon.mod-left.is-collapsed {
+  border-color:transparent;
+  transition:border-color 0.25s ease-in-out;
+}
+.workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
+.workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
+  opacity:0;
+  transition:opacity 0.25s ease-in-out;
+}
+.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
+.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
+  opacity:1;
+  transition:opacity 0s ease-in-out;
+}
+.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+  margin-right:0px;
+}
+.view-actions {
+  opacity:0;
+  margin-right:0px;
+  margin-left:auto;
+  transition:opacity 0.25s ease-in-out;
+}
+.view-actions .view-action {
+  margin-right:4px;
+}
+.view-actions .view-action:last-child  {
+  margin-left:2px;
+}
+.workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-actions {
+  opacity:1;
+  transition:opacity 0.25s ease-in-out;
+}
+.mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions {
+  opacity:1;
+  transition:opacity 0.25s ease-in-out;
+}
+
+/* --------------- */
+/* Image zoom  */
+
+.view-content img {
+  cursor:zoom-in;}
+.view-content img:active {
+  cursor:zoom-out;
+  display:block;
+  z-index:100;
+  position:fixed;
+    max-height:calc(100% + 1px);
+    max-width:calc(100% - 20px);
+    height:calc(100% + 1px);
+    width:100%;
+    object-fit:contain;
+    margin:-0.5px auto 0;
+    text-align:center;
+    top:50%;
+    transform:translateY(-50%);
+    padding:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:var(--background-translucent);
+}
+
+/*----------------------------------------------------------------
+
+MINIMAL STYLING */
+
+/* Headings and fonts */
 
 ::selection { background:var(--text-selection); }
 
@@ -458,54 +601,6 @@ body, input, button,
 }
 .workspace-tab-header-inner {
   padding:3px 3px 3px 10px;
-}
-
-/* --------------- */
-/* Focus mode */
-/* When the left sidebar is collapsed */
-
-.workspace-split.is-collapsed ~ .mod-root .view-header-icon {
-  opacity:0;
-}
-.workspace-ribbon.mod-left {
-  transition:border-color 0 ease-in-out;
-}
-.workspace-ribbon.mod-left.is-collapsed {
-  border-color:transparent;
-  transition:border-color 0.25s ease-in-out;
-}
-.workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
-.workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
-  opacity:0;
-  transition:opacity 0.25s ease-in-out;
-}
-.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
-.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
-  opacity:1;
-  transition:opacity 0s ease-in-out;
-}
-.is-right-sidedock-collapsed .workspace-split.mod-right-split {
-  margin-right:0px;
-}
-.view-actions {
-  opacity:0;
-  margin-right:0px;
-  margin-left:auto;
-  transition:opacity 0.25s ease-in-out;
-}
-.view-actions .view-action {
-  margin-right:4px;
-}
-.view-actions .view-action:last-child  {
-  margin-left:2px;
-}
-.workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-actions {
-  opacity:1;
-  transition:opacity 0.25s ease-in-out;
-}
-.mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions {
-  opacity:1;
-  transition:opacity 0.25s ease-in-out;
 }
 
 
@@ -662,6 +757,29 @@ input.prompt-input, input.prompt-input:hover {
 }
 
 /* --------------- */
+/* Window frame */
+
+.titlebar {
+  background:var(--background-tertiary);
+  border-bottom:1px solid var(--background-modifier-border);
+}
+.titlebar-text {
+  display:none;
+}
+.titlebar-button {
+  opacity:1;
+  cursor:var(--cursor);
+}
+.titlebar-button svg path {
+  fill:var(--text-muted) !important;
+  stroke:var(--text-muted) !important;
+}
+.titlebar-button:hover svg path {
+  fill:var(--text-normal) !important;
+  stroke:var(--text-normal) !important;
+}
+
+/* --------------- */
 /* Title Bar */
 
 .view-actions {
@@ -704,26 +822,7 @@ input.prompt-input, input.prompt-input:hover {
 }
 
 /* --------------- */
-/* Editor */
-
-/* Moving hash marks into gutter 
-
-.cm-formatting-header {
-  left:calc(-60px + 0.2em);
-  position:absolute;
-  text-align:right;
-  width:60px;
-}
-.CodeMirror-gutter-elt {
-  top:15px;
-}
-.cm-s-obsidian .CodeMirror-gutters {
-  left:0px !important;
-}
-.CodeMirror-scroll {
-  padding-left:48px;
-  padding-right:48px;
-} */
+/* Editor mode */
 
 .markdown-source-view {
   padding:0;
@@ -845,33 +944,6 @@ input.prompt-input, input.prompt-input:hover {
 /* Editor Mode Quotes */
 .cm-formatting-quote {
   color:var(--text-faint) !important;
-}
-
-
-/* --------------- */
-/* Image zoom  */
-
-.view-content img {
-  cursor:zoom-in;}
-.view-content img:active {
-  cursor:zoom-out;
-  display:block;
-  z-index:100;
-  position:fixed;
-    max-height:calc(100% + 1px);
-    max-width:calc(100% - 20px);
-    height:calc(100% + 1px);
-    width:100%;
-    object-fit:contain;
-    margin:-0.5px auto 0;
-    text-align:center;
-    top:50%;
-    transform:translateY(-50%);
-    padding:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:var(--background-translucent);
 }
 
 /* --------------- */
@@ -1003,7 +1075,7 @@ input[type=checkbox]:checked {
 }
 
 /* --------------- */
-/* Files */
+/* File browser */
 
 .nav-header {
   padding:0;
@@ -1287,7 +1359,7 @@ input.search-input:focus {
 }
 
 /* --------------- */
-/* Tags */
+/* Tag pane */
 
 .tag-pane-tag-count {
   padding:0;
@@ -1355,14 +1427,7 @@ input.search-input:focus {
 }
 
 /* --------------- */
-/* iframes */
-
-iframe {
-  border:0;
-}
-
-/* --------------- */
-/* Preview Mode  */
+/* Preview mode  */
 
 .markdown-preview-view hr {
   height:1px;
@@ -1387,9 +1452,12 @@ iframe {
 .footnote-backref {
   color:var(--text-faint);
 }
+iframe {
+  border:0;
+}
 
-/* Markdown preview styling */
 /* Blockquotes */
+
 .markdown-preview-view blockquote {
   border-radius:0;
   border:solid var(--quote-opening-modifier);
@@ -1400,7 +1468,6 @@ iframe {
   margin-inline-start:var(--nested-padding);
 }
 
-/* --------------- */
 /* Tables */
 
 .markdown-preview-view th {
@@ -1421,8 +1488,6 @@ iframe {
   border-bottom:none;
 }
 
-
-/* --------------- */
 /* Preview Mode Lists  */
 
 ul {
@@ -1462,7 +1527,6 @@ ol > li::before {
   width:2em;
 }
 
-/* --------------- */
 /* Code */
 
 .theme-light :not(pre) > code[class*="language-"],
@@ -1490,7 +1554,7 @@ ol > li::before {
 }
 
 /* --------------- */
-/* Popover */
+/* Popovers */
 
 .popover {
   box-shadow:0 20px 40px var(--background-modifier-box-shadow);
