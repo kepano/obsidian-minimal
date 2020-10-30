@@ -1,5 +1,7 @@
 Minimal is an opinionated Obsidian theme designed to create a focused editing experience and more Mac-like interface.
 
+![](dark-complex.png)
+
 ### Disclaimer
 
 This theme is provided as is, and is focused on my personal use of Obsidian on Mac OS. As such it is not thoroughly tested across all operating systems and features of Obsidian. 
@@ -43,6 +45,6 @@ Theme colors are driven by a few HSL values that you can customize. The backgrou
 
 ### Screenshots
 
-![](dark-complex.png)
 ![](light-simple.png)
 ![](light-focus.png)
+![](dark-complex.png)
