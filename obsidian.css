@@ -1410,7 +1410,7 @@ input.search-input:focus {
   background:transparent;
 }
 .tag-pane-tag {
-  padding:2px 10px;
+  padding:0px 10px;
   cursor:var(--cursor);
 }
 .workspace-leaf-content[data-type='tag'] {
