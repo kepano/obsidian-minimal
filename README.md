@@ -2,6 +2,10 @@ Minimal is an opinionated Obsidian theme designed to create a focused editing ex
 
 ![](dark-complex.png)
 
+### Note: accessing app settings
+
+The app ribbon is hidden by default can be accessed by hovering in the bottom left corner of the app, or using the default shortcut `CMD + ,` — you can also re-enable the app ribbon by commenting out the "App Ribbon" section of code in the CSS.
+
 ### Disclaimer
 
 This theme is provided as is, and is focused on my personal use of Obsidian on Mac OS. As such it is not thoroughly tested across all operating systems and features of Obsidian. 
