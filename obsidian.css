@@ -454,6 +454,7 @@ body.plugin-sliding-panes .graph-controls {
   --color-text-title:var(--text-normal);
   --color-text-heading:var(--text-muted);
   --color-text-day:var(--text-normal);
+  --color-arrow: currentColor;
 }
 #calendar-container h2 {
   font-weight:400;
@@ -461,6 +462,12 @@ body.plugin-sliding-panes .graph-controls {
 }
 #calendar-container h2 .arrow {
   color:var(--text-faint);
+  cursor:var(--cursor);
+}
+#calendar-container h2 .arrow:hover,
+#calendar-container h2 .arrow:hover .arrow {
+  fill:var(--text-muted);
+  color:var(--text-muted);
 }
 #calendar-container h2 span {
   width:80%;
@@ -473,7 +480,8 @@ body.plugin-sliding-panes .graph-controls {
   padding:2px 0 8px;
   width:14.28%;
   border-right:3px solid var(--background-primary);
-  border-radius:10px;}
+  border-radius:10px;
+  cursor:var(--cursor);}
 #calendar-container tr {
   border:3px solid var(--background-primary);
 }
