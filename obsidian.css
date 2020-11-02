@@ -34,6 +34,7 @@ Special Features
   App ribbon removed
   Focus mode
   Image zoom
+  Calendar plugin
 
 Minimal Styling
 
@@ -88,12 +89,6 @@ experience. Remove each line if you want to re-activate the feature */
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   height:100%;
-}
-
-.search-result-file-matches,                    /* File matches in search */
-.backlink-pane .search-result-file-matches,     /* File matches in backlinks */
-.workspace-leaf-content[data-type=starred] .nav-header {  /* Starred section header */
-  
 }
 
 
@@ -446,6 +441,44 @@ body.plugin-sliding-panes .graph-controls {
     right:0;
     bottom:0;
     background:var(--background-translucent);
+}
+
+/* --------------- */
+/* Calendar Plugin */
+
+#calendar-container {
+  padding:0 10px;
+  --color-background-day-empty:var(--background-secondary-alt);
+  --color-background-day-active:var(--background-tertiary);
+  --color-dot:var(--text-faint);
+  --color-text-title:var(--text-normal);
+  --color-text-heading:var(--text-muted);
+  --color-text-day:var(--text-normal);
+}
+#calendar-container h2 {
+  font-weight:400;
+  font-size:16px;
+}
+#calendar-container h2 .arrow {
+  color:var(--text-faint);
+}
+#calendar-container h2 span {
+  width:80%;
+}
+#calendar-container tr th {
+  padding:4px 0;
+  font-weight:400;
+}
+#calendar-container tr td {
+  padding:2px 0 8px;
+  width:14.28%;
+  border-right:3px solid var(--background-primary);
+  border-radius:10px;}
+#calendar-container tr {
+  border:3px solid var(--background-primary);
+}
+#calendar-container tr td .dot {
+  margin:0;
 }
 
 /*----------------------------------------------------------------
@@ -1296,7 +1329,7 @@ input.search-input:focus {
   padding-bottom:30px;
 }
 .backlink-pane .search-result-container {
-  padding:5px 0px 5px 10px;
+  padding:5px 5px 5px 10px;
   margin-left:0;
 }
 .backlink-pane .search-result-file-title {
@@ -1364,6 +1397,9 @@ input.search-input:focus {
 .tag-pane-tag-count {
   padding:0;
   color:var(--text-faint);
+}
+.pane-list-item:hover .pane-list-item-ending-flair {
+  background:transparent;
 }
 .tag-pane-tag {
   padding:2px 10px;
