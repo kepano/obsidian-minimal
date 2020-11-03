@@ -459,6 +459,7 @@ body.plugin-sliding-panes .graph-controls {
   --color-text-title:var(--text-normal);
   --color-text-heading:var(--text-muted);
   --color-text-day:var(--text-normal);
+  --color-text-today: var(--text-accent);
   --color-arrow: currentColor;
 }
 #calendar-container h2 {
