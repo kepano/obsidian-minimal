@@ -223,39 +223,40 @@ experience. Remove each line if you want to re-activate the feature */
 
 SPECIAL FEATURES
 
-Frameless mode */
+Frameless mode on macOS only */
 
-.titlebar-button-container {
+.mod-macos .titlebar-button-container {
   display:none !important;
 }
-.titlebar, .titlebar-inner {
+.mod-macos .titlebar,
+.mod-macos .titlebar-inner {
   position:fixed;
   top:0;
   height:12px;
 }
-.titlebar,
-.titlebar-inner {
+.mod-macos .titlebar,
+.mod-macos .titlebar-inner {
   background:transparent;
 }
-.titlebar-text {
+.mod-macos .titlebar-text {
   display:none;
 }
-.is-frameless {
+.mod-macos.is-frameless {
   padding-top:0px !important;
 }
-.workspace-split.mod-right-split > .workspace-tabs,
-.workspace-split.mod-root .view-header {
+.mod-macos .workspace-split.mod-right-split > .workspace-tabs,
+.mod-macos .workspace-split.mod-root .view-header {
   padding-top:4px;
 }
-.workspace-split.mod-left-split > .workspace-tabs {
+.mod-macos .workspace-split.mod-left-split > .workspace-tabs {
   padding-top:18px;
 }
-.workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
-.workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
+.mod-macos .workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
+.mod-macos .workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
   padding-top:0px;
 }
-.is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
-.is-fullscreen .workspace-split.mod-root .view-header {
+.mod-macos .is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
+.mod-macos .is-fullscreen .workspace-split.mod-root .view-header {
   padding-top:0px;
 }
 
@@ -288,15 +289,19 @@ body.plugin-sliding-panes .view-header-title-container {
   position:static;
 }
 body.plugin-sliding-panes .view-actions {
-  padding:0 0 24px 0;
+  padding:0 0 40px 0;
   margin-left:4px;
   bottom:0;
 }
 .plugin-sliding-panes .workspace-split.is-collapsed ~ .mod-root .view-header-icon,
 body.plugin-sliding-panes .view-header-icon {
   opacity:0.5;
-  padding-top:22px;
+  padding-top:6px;
   padding-bottom:0;
+}
+.mod-macos.plugin-sliding-panes .workspace-split.is-collapsed ~ .mod-root .view-header-icon,
+body.mod-macos.plugin-sliding-panes .view-header-icon {
+  padding-top:22px;
 }
 
 body.plugin-sliding-panes.is-fullscreen .view-header-icon {
@@ -806,6 +811,8 @@ input.prompt-input, input.prompt-input:hover {
 }
 .titlebar-text {
   display:none;
+  color:var(--text-faint);
+  letter-spacing: inherit;
 }
 .titlebar-button {
   opacity:1;
