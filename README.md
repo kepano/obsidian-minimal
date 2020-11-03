@@ -27,6 +27,11 @@ This theme modifies significant parts of the Obsidian interface, so it might bre
 - Click to zoom on images
 - Easily customize base colors, and all the borders/fonts will automatically adjust
 
+### Plugin support
+
+- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) (aka Andy Mode)
+- [Calendar Widget](https://github.com/liamcain/obsidian-calendar-plugin)
+
 ### More native experience
 
 - System fonts
