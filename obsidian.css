@@ -255,8 +255,8 @@ Frameless mode on macOS only */
 .mod-macos .workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
   padding-top:0px;
 }
-.mod-macos .is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
-.mod-macos .is-fullscreen .workspace-split.mod-root .view-header {
+.mod-macos.is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
+.mod-macos.is-fullscreen .workspace-split.mod-root .view-header {
   padding-top:0px;
 }
 
