@@ -191,7 +191,7 @@ experience. Remove each line if you want to re-activate the feature */
   --interactive-accent-rgb:66, 66, 66;
   --text-selection:hsla(var(--accent-h),70%,40%,30%);
   --text-highlight-bg:rgba(255, 177, 80, 0.3);
-  --text-highlight-bg-active:rgba(255, 177, 80, 0.5);
+  --text-highlight-bg-active:rgba(255, 177, 80, 0.3);
 }
 
 .theme-light {
@@ -218,7 +218,7 @@ experience. Remove each line if you want to re-activate the feature */
   --interactive-accent-rgb:220, 220, 220;
   --text-selection:hsl(var(--accent-h),50%,91%);
   --text-highlight-bg:rgba(255, 224, 0, 0.5);
-  --text-highlight-bg-active:rgba(255, 224, 0, 1);
+  --text-highlight-bg-active:rgba(255, 224, 0, 0.5);
 }
 
 /*----------------------------------------------------------------
@@ -290,7 +290,7 @@ body.plugin-sliding-panes .view-header-title-container {
   padding-top:14px;
   position:static;
 }
-body.plugin-sliding-panes .view-actions {
+body.plugin-sliding-panes .mod-root .view-actions {
   padding:0 0 40px 0;
   margin-left:4px;
   bottom:0;
@@ -1005,7 +1005,7 @@ input.prompt-input, input.prompt-input:hover {
   background:transparent;
 }
 .markdown-preview-view .search-highlight > div {
-  opacity:0.6;
+  opacity:0.4;
 }
 
 .markdown-preview-view .search-highlight > div.is-active {
