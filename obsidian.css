@@ -176,10 +176,9 @@ experience. Remove each line if you want to re-activate the feature */
   --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
   --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
-  --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 70%));
+  --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 67%));
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
-  --text-selection:rgba(50, 50, 50, 1);
   --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-d),0);
   --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-d),0.85);
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
@@ -190,7 +189,9 @@ experience. Remove each line if you want to re-activate the feature */
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --interactive-accent-rgb:66, 66, 66;
-  --text-highlight-bg:rgba(168, 220, 250, 0.4);
+  --text-selection:hsla(var(--accent-h),70%,40%,30%);
+  --text-highlight-bg:rgba(255, 177, 80, 0.3);
+  --text-highlight-bg-active:rgba(255, 177, 80, 0.5);
 }
 
 .theme-light {
@@ -215,8 +216,9 @@ experience. Remove each line if you want to re-activate the feature */
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 10%));
   --interactive-accent-rgb:220, 220, 220;
-  --text-selection:rgba(237, 237, 237, 1);
-  --text-highlight-bg:rgba(168, 220, 250, 0.4);
+  --text-selection:hsl(var(--accent-h),50%,91%);
+  --text-highlight-bg:rgba(255, 224, 0, 0.5);
+  --text-highlight-bg-active:rgba(255, 224, 0, 1);
 }
 
 /*----------------------------------------------------------------
@@ -502,8 +504,6 @@ MINIMAL STYLING */
 
 /* Headings and fonts */
 
-::selection { background:var(--text-selection); }
-
 h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
 h1,h2,h3,h4 {letter-spacing:-0.02em;} 
 
@@ -696,7 +696,6 @@ body, input, button,
   border-bottom-right-radius:14px;
   padding-right:8px;
 }
-
 
 
 /* --------------- */
@@ -945,8 +944,8 @@ input.prompt-input, input.prompt-input:hover {
 .markdown-embed .markdown-preview-section:last-child ul {
   margin-block-end:2px;
 }
-
-.markdown-embed-title ~ .markdown-embed-link {
+.markdown-embed-title ~ .markdown-embed-link,
+.internal-embed[src*="#"] .markdown-embed-link {
   left:0;
   width:100%;
 }
@@ -998,6 +997,24 @@ input.prompt-input, input.prompt-input:hover {
 
 /* --------------- */
 /* Internal search */
+
+.cm-s-obsidian span.obsidian-search-match-highlight,
+.markdown-preview-view .search-highlight > div {
+  box-shadow:0 0 0px 2px var(--text-normal);
+  border-radius:2px;
+  background:transparent;
+}
+.markdown-preview-view .search-highlight > div {
+  opacity:0.6;
+}
+
+.markdown-preview-view .search-highlight > div.is-active {
+  background:transparent;
+  border-radius:2px;
+  opacity:1;
+  mix-blend-mode:normal;
+  box-shadow:0 0 0px 3px var(--text-accent);
+}
 
 .document-search-container.mod-replace-mode {
   height:90px;
@@ -1280,7 +1297,7 @@ input[type=checkbox]:checked {
   padding-bottom:5px;
 }
 .search-result-file-matched-text {
-  background-color:var(--text-highlight-bg);
+  background-color:var(--text-selection);
 }
 .search-input {
   max-width:calc(100% - 20px);
@@ -1507,6 +1524,11 @@ input.search-input:focus {
 }
 iframe {
   border:0;
+}
+.markdown-preview-view .mod-highlighted {
+  transition: background-color 0.3s ease;
+  background-color: var(--text-selection);
+  color: inherit;
 }
 
 /* Blockquotes */
