@@ -193,7 +193,6 @@ experience. Remove each line if you want to re-activate the feature */
   --text-highlight-bg:rgba(255, 177, 80, 0.3);
   --text-highlight-bg-active:rgba(255, 177, 80, 0.3);
 }
-
 .theme-light {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 2%));
@@ -461,8 +460,8 @@ body.plugin-sliding-panes .graph-controls {
   --color-text-title:var(--text-normal);
   --color-text-heading:var(--text-muted);
   --color-text-day:var(--text-normal);
-  --color-text-today: var(--text-normal);
-  --color-arrow: currentColor;
+  --color-text-today:var(--text-normal);
+  --color-arrow:currentColor;
 }
 #calendar-container h2 {
   font-weight:400;
@@ -521,7 +520,8 @@ body, input, button,
   line-height:1.4;
   font-family:var(--text-editor) !important;
 }
-.cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {
+.cm-s-obsidian .cm-header,
+.cm-s-obsidian .cm-strong {
   font-weight:var(--bold-weight);
 }
 .cm-formatting-header {
@@ -739,7 +739,6 @@ input.prompt-input, input.prompt-input:hover {
 }
 .workspace-split.mod-root .workspace-leaf-content {
 }
-
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   height:2px;
   background:transparent;
@@ -762,7 +761,8 @@ input.prompt-input, input.prompt-input:hover {
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active {
   border-color:var(--background-modifier-border-hover);
 }
-.workspace-tab-container-before, .workspace-tab-container-after{
+.workspace-tab-container-before,
+.workspace-tab-container-after{
   width:0;
 }
 .workspace-leaf {
@@ -813,7 +813,7 @@ input.prompt-input, input.prompt-input:hover {
 .titlebar-text {
   display:none;
   color:var(--text-faint);
-  letter-spacing: inherit;
+  letter-spacing:inherit;
 }
 .titlebar-button {
   opacity:1;
@@ -852,7 +852,8 @@ input.prompt-input, input.prompt-input:hover {
   right:0;
   pointer-events:none;
 }
-.workspace-leaf-header, .view-header {
+.workspace-leaf-header,
+.view-header {
   background-color:var(--background-primary) !important;
   border:none !important;
 }
@@ -904,7 +905,6 @@ input.prompt-input, input.prompt-input:hover {
   width:var(--line-width);
   max-width:var(--max-width);
 }
-
 .markdown-embed-title,
 .internal-embed .markdown-preview-section {
   max-width:100%;
@@ -949,7 +949,8 @@ input.prompt-input, input.prompt-input:hover {
   left:0;
   width:100%;
 }
-.markdown-embed-link, .file-embed-link {
+.markdown-embed-link,
+.file-embed-link {
   top:0px;
   right:0;
   text-align:right;
@@ -1007,7 +1008,6 @@ input.prompt-input, input.prompt-input:hover {
 .markdown-preview-view .search-highlight > div {
   opacity:0.4;
 }
-
 .markdown-preview-view .search-highlight > div.is-active {
   background:transparent;
   border-radius:2px;
@@ -1015,7 +1015,6 @@ input.prompt-input, input.prompt-input:hover {
   mix-blend-mode:normal;
   box-shadow:0 0 0px 3px var(--text-accent);
 }
-
 .document-search-container.mod-replace-mode {
   height:90px;
 }
@@ -1058,7 +1057,6 @@ input.document-replace-input:focus {
   font-size:var(--font-small);
   line-height:1.2;
 }
-
 .workspace > .workspace-split:not(.mod-root) .CodeMirror, 
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-section {
   max-width:100%;
@@ -1113,21 +1111,35 @@ input[type=checkbox]:checked {
   margin-right:6px;
   filter:none;
 }
-.markdown-preview-view ul > li.task-list-item .collapse-indicator {
-  margin-left:-30px;
-  margin-top:4px;
-  position:absolute;
-}
-.markdown-preview-view .collapse-indicator {
-  margin-left:-54px;
-  position:absolute;
-}
 .markdown-preview-view .task-list-item {
   padding-inline-start:1.5em;
 }
 .side-dock-plugin-panel-inner {
   padding-right:6px;
   padding-left:6px;
+}
+
+/* --------------- */
+/* Folding */
+
+.markdown-preview-view ul > li.task-list-item .collapse-indicator {
+  margin-left:-30px;
+  margin-top:4px;
+  position:absolute;
+}
+.markdown-preview-view .collapse-indicator {
+  margin-left:-57px;
+  position:absolute;
+}
+.markdown-preview-view .heading-collapse-indicator {
+  margin-left:-27px;
+  padding-top:7px;
+  padding-bottom:7px;
+}
+.markdown-preview-view h4 .heading-collapse-indicator,
+.markdown-preview-view h5 .heading-collapse-indicator,
+.markdown-preview-view h6 .heading-collapse-indicator {
+  margin-top:-7px;
 }
 
 /* --------------- */
@@ -1200,7 +1212,8 @@ input[type=checkbox]:checked {
 .workspace-leaf-content[data-type=starred] .nav-file-title-content {
   width:calc(100% - 15px);
 }
-.nav-file-title, .nav-folder-title, 
+.nav-file-title,
+.nav-folder-title, 
 .is-collapsed .search-result-file-title, 
 .tag-pane-tag {
   font-size:var(--font-small) !important;
@@ -1470,7 +1483,8 @@ input.search-input:focus {
 
 .workspace-ribbon-collapse-btn,
 .view-action,
-.side-dock-ribbon-tab, .side-dock-ribbon-action {
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action {
   cursor:var(--cursor);
 }
 .workspace-ribbon {
@@ -1526,9 +1540,9 @@ iframe {
   border:0;
 }
 .markdown-preview-view .mod-highlighted {
-  transition: background-color 0.3s ease;
-  background-color: var(--text-selection);
-  color: inherit;
+  transition:background-color 0.3s ease;
+  background-color:var(--text-selection);
+  color:inherit;
 }
 
 /* Blockquotes */
@@ -1608,7 +1622,8 @@ ol > li::before {
 .theme-light pre[class*="language-"] {
   background-color:var(--background-primary-alt);
 }
-.theme-light code[class*="language-"], .theme-light pre[class*="language-"] {
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
   text-shadow:none;
 }
 .cm-s-obsidian .hmd-fold-html-stub,
@@ -1621,7 +1636,8 @@ ol > li::before {
 .cm-s-obsidian .cm-hmd-frontmatter,
 .cm-s-obsidian .cm-hmd-orgmode-markup,
 .cm-s-obsidian .cm-formatting-code,
-.cm-s-obsidian .cm-math, .cm-s-obsidian span.hmd-fold-math-placeholder,
+.cm-s-obsidian .cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder,
 .cm-s-obsidian .CodeMirror-linewidget kbd,
 .cm-s-obsidian .hmd-fold-html kbd
 .CodeMirror-code {
