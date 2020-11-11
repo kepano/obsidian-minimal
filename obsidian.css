@@ -72,11 +72,12 @@ Disabled features
 These features are hidden in pursuit of a more focused editing 
 experience. Remove each line if you want to re-activate the feature */
 
-.status-bar,                                      /* Status bar */
-::-webkit-scrollbar,                              /* Scroll bars */
-.tooltip,                                         /* Tooltips */
+.status-bar,                                           /* Status bar */
+::-webkit-scrollbar,                                   /* Scroll bars */
+.tooltip,                                              /* Tooltips */
 .pane-list-item-ending-flair:not(.tag-pane-tag-count), /* Search counts */
-.workspace-ribbon-collapse-btn {                  /* Sidebar collapse */
+.workspace-ribbon-collapse-btn,                        /* Sidebar collapse */
+.prompt-instructions {                  
   display:none !important;
 }
 
@@ -115,7 +116,7 @@ experience. Remove each line if you want to re-activate the feature */
 
   --base-h:0;       /* Base hue */
   --base-s:0%;      /* Base saturation */
-  --base-d:15%;     /* Base lightness Dark Mode  - 0 is black */
+  --base-d:16%;     /* Base lightness Dark Mode  - 0 is black */
   --base-l:96%;     /* Base lightness Light Mode  - 100 is white */
   --accent-h:201;   /* Accent hue */
   --accent-s:17%;   /* Accent saturation */
@@ -264,7 +265,7 @@ Frameless mode on macOS only */
 /* --------------- */
 /* Andy Mode Sliding Panes
    Designed for use with death_au's plugin */
-   
+
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
   box-shadow:var(--background-modifier-border) -1px -0px !important;
 }
@@ -274,8 +275,13 @@ body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
 body.plugin-sliding-panes .workspace-leaf-content {
   padding-left:0;
 }
-body.plugin-sliding-panes .workspace-split.mod-root .view-header {
-  padding-top:0;
+/* body.plugin-sliding-panes .CodeMirror,
+body.plugin-sliding-panes .markdown-preview-section {
+  margin-left:35px;
+}*/
+body.plugin-sliding-panes:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
+  padding-top:14px;
+  transition:padding 0.1s ease;
 }
 body.plugin-sliding-panes .view-header-title:before {
   background:none;
@@ -283,28 +289,26 @@ body.plugin-sliding-panes .view-header-title:before {
 body.plugin-sliding-panes .view-header {
   background:none;
 }
-body.plugin-sliding-panes .view-header-title-container {
-  height:unset;
-  padding-left:unset;
-  padding-top:14px;
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container
+body.plugin-sliding-panes-rotate-header.plugin-sliding-panes-header-alt .workspace > .mod-root .view-header-title {
+  margin-top:0;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container {
+  margin-left:0;
+  padding-top:0;
+}
+body.plugin-sliding-panes-rotate-header .view-header-title-container {
   position:static;
 }
-body.plugin-sliding-panes .mod-root .view-actions {
-  padding:0 0 40px 0;
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-actions {
+  padding-left:0;
+  padding-bottom:40px;
   margin-left:4px;
   bottom:0;
 }
-.plugin-sliding-panes .workspace-split.is-collapsed ~ .mod-root .view-header-icon,
-body.plugin-sliding-panes .view-header-icon {
+body.plugin-sliding-panes-rotate-header .view-header-icon {
   opacity:0.5;
-  padding-top:6px;
-  padding-bottom:0;
 }
-.mod-macos.plugin-sliding-panes .workspace-split.is-collapsed ~ .mod-root .view-header-icon,
-body.mod-macos.plugin-sliding-panes .view-header-icon {
-  padding-top:22px;
-}
-
 body.plugin-sliding-panes.is-fullscreen .view-header-icon {
   padding-top:8px;
 }
@@ -379,9 +383,6 @@ body.plugin-sliding-panes .graph-controls {
 /* Focus mode */
 /* When the left sidebar is collapsed */
 
-.workspace-split.is-collapsed ~ .mod-root .view-header-icon {
-  opacity:0;
-}
 .workspace-ribbon.mod-left {
   transition:border-color 0 ease-in-out;
 }
@@ -427,6 +428,7 @@ body.plugin-sliding-panes .graph-controls {
 /* Image zoom  */
 
 .view-content img {
+  max-width:100%;
   cursor:zoom-in;}
 .view-content img:active {
   cursor:zoom-out;
@@ -701,8 +703,11 @@ body, input, button,
 /* --------------- */
 /* Modals */
 
+.modal {
+  border:none;
+}
 .modal.mod-settings .vertical-tab-content-container {
-  border:1px solid var(--background-modifier-border);
+  border-left:1px solid var(--background-modifier-border);
   padding-bottom:0;
   padding-right:0;
 }
@@ -719,7 +724,18 @@ input.prompt-input, input.prompt-input:hover {
 .menu-item:hover {
   background:var(--background-tertiary);
 }
-
+.suggestion-item, .suggestion-empty {
+  font-size:var(--font-normal);
+}
+.suggestion-container {
+  box-shadow:0 5px 30px rgba(0, 0, 0, 0.15);
+}
+.prompt-instructions {
+  color:var(--text-muted);
+}
+.prompt-instruction-command {
+  font-weight:600;
+}
 
 /* --------------- */
 /* Drag ghost */
@@ -987,6 +1003,12 @@ input.prompt-input, input.prompt-input:hover {
   padding-left:20px;
 }
 
+/* Editor Mode Tables */
+.CodeMirror pre.HyperMD-table-row {
+  font-family:var(--font-monospace);
+  font-size:calc(var(--font-normal) - 1px);
+}
+
 /* Editor Mode Lists */
 .cm-formatting-list {
   color:var(--text-faint) !important;
@@ -1055,14 +1077,24 @@ input.document-replace-input:focus {
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
   font-size:var(--font-small);
-  line-height:1.2;
+  line-height:1.2;}
+
+.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] {
+  padding:0 15px;
 }
 .workspace > .workspace-split:not(.mod-root) .CodeMirror, 
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-section {
   max-width:100%;
-  padding:0 15px;
+  padding:0;
   width:auto;
 }
+
+/* Hide embed styling for sidebar documents */
+.workspace > .workspace-split:not(.mod-root) .internal-embed .markdown-embed {
+  border:none;
+  padding:0;
+}
+
 
 
 /* --------------- */
@@ -1140,6 +1172,9 @@ input[type=checkbox]:checked {
 .markdown-preview-view h5 .heading-collapse-indicator,
 .markdown-preview-view h6 .heading-collapse-indicator {
   margin-top:-7px;
+}
+.CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded {
+  cursor:var(--cursor);
 }
 
 /* --------------- */
@@ -1312,9 +1347,15 @@ input[type=checkbox]:checked {
 .search-result-file-matched-text {
   background-color:var(--text-selection);
 }
+.search-input-container {
+  width:calc(100% - 20px);
+}
+.search-input-clear-button {
+  cursor:var(--cursor);
+}
 .search-input {
-  max-width:calc(100% - 20px);
-  margin-left:10px;
+  max-width:100%;
+  margin-left:0;
   width:500px;
 }
 input.search-input:focus {
@@ -1392,9 +1433,10 @@ input.search-input:focus {
 .tag-pane-tag .list-item-ending-flair {
   right:5px;
 }
+.pane-list-item:hover .pane-list-item-ending-flair,
 .list-item:hover .list-item-ending-flair {
   background:transparent;
-  color:var(--text-faint);
+  color:var(--text-muted);
 }
 .search-result-file-title:hover {
   color:var(--text-normal);
@@ -1538,6 +1580,12 @@ input.search-input:focus {
 }
 iframe {
   border:0;
+}
+
+.markdown-preview-view img:not([width]),
+.markdown-preview-view audio,
+.markdown-preview-view video {
+  width:100%;
 }
 .markdown-preview-view .mod-highlighted {
   transition:background-color 0.3s ease;
