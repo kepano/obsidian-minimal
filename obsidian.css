@@ -1143,8 +1143,11 @@ input[type=checkbox]:checked {
   margin-right:6px;
   filter:none;
 }
+.markdown-preview-view ul > li.task-list-item {
+  text-indent:0;
+}
 .markdown-preview-view .task-list-item {
-  padding-inline-start:1.5em;
+  padding-inline-start:0;
 }
 .side-dock-plugin-panel-inner {
   padding-right:6px;
