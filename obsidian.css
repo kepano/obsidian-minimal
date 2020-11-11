@@ -147,6 +147,7 @@ experience. Remove each line if you want to re-activate the feature */
   --normal-weight:400;   /* Switch to 300 if you want thinner default text */
   --bold-weight:600;     /* Switch to 600 or 700 if you want thicker bold text */
   --line-width:40rem;    /* Maximum characters per line. Turn off "Readable line length" in Obsidian Settings */
+  --line-height:1.5;
   --max-width:85%;       /* Amount of padding around the text, use 90% for narrower padding */
   --nested-padding:3.5%; /* Amount of padding for quotes and transclusions */
 
@@ -266,6 +267,9 @@ Frameless mode on macOS only */
 /* Andy Mode Sliding Panes
    Designed for use with death_au's plugin */
 
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
+    text-orientation: sideways;
+}
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
   box-shadow:var(--background-modifier-border) -1px -0px !important;
 }
@@ -275,13 +279,13 @@ body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
 body.plugin-sliding-panes .workspace-leaf-content {
   padding-left:0;
 }
+/* body.plugin-sliding-panes .CodeMirror,
+body.plugin-sliding-panes .markdown-preview-section {
+  margin-left:35px;
+}*/
 body.plugin-sliding-panes:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
   padding-top:14px;
   transition:padding 0.1s ease;
-}
-/* Emoji rotation */
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
-    text-orientation: sideways;
 }
 body.plugin-sliding-panes .view-header-title:before {
   background:none;
@@ -514,12 +518,13 @@ body, input, button,
   font-family:var(--text) !important;
   font-size:var(--font-normal);
   font-weight:var(--normal-weight);
+  line-height:var(--line-height);
   -webkit-font-smoothing:subpixel-antialiased;
 }
 .markdown-source-view,
 .cm-s-obsidian .cm-formatting-hashtag, 
 .cm-s-obsidian {
-  line-height:1.4;
+  line-height:var(--line-height);
   font-family:var(--text-editor) !important;
 }
 .cm-s-obsidian .cm-header,
@@ -1355,6 +1360,7 @@ input[type=checkbox]:checked {
 }
 .search-input-clear-button {
   cursor:var(--cursor);
+  top: -3px;
 }
 .search-input {
   max-width:100%;
@@ -1701,6 +1707,7 @@ ol > li::before {
 .popover {
   box-shadow:0 20px 40px var(--background-modifier-box-shadow);
   pointer-events:auto !important;
+  border:1px solid var(--background-modifier-border);
 }
 .popover.hover-popover {
   max-height:40vh;}
