@@ -275,13 +275,13 @@ body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
 body.plugin-sliding-panes .workspace-leaf-content {
   padding-left:0;
 }
-/* body.plugin-sliding-panes .CodeMirror,
-body.plugin-sliding-panes .markdown-preview-section {
-  margin-left:35px;
-}*/
 body.plugin-sliding-panes:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
   padding-top:14px;
   transition:padding 0.1s ease;
+}
+/* Emoji rotation */
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
+    text-orientation: sideways;
 }
 body.plugin-sliding-panes .view-header-title:before {
   background:none;
