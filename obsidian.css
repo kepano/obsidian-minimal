@@ -77,7 +77,7 @@ experience. Remove each line if you want to re-activate the feature */
 .tooltip,                                              /* Tooltips */
 .pane-list-item-ending-flair:not(.tag-pane-tag-count), /* Search counts */
 .workspace-ribbon-collapse-btn,                        /* Sidebar collapse */
-.prompt-instructions {                  
+.prompt-instructions {                                 /* Linking tips */
   display:none !important;
 }
 
