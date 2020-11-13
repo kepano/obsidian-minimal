@@ -316,7 +316,7 @@ body.plugin-sliding-panes-rotate-header .view-header-icon {
 body.plugin-sliding-panes.is-fullscreen .view-header-icon {
   padding-top:8px;
 }
-body.plugin-sliding-panes .graph-controls {
+body.plugin-sliding-panes .mod-root .graph-controls {
   top:20px;
   left:30px;
 }
@@ -1026,7 +1026,12 @@ input.prompt-input, input.prompt-input:hover {
 /* --------------- */
 /* Internal search */
 
-.cm-s-obsidian span.obsidian-search-match-highlight,
+
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  background:inherit;
+  border-radius:2px;
+  box-shadow:0 0 0px 2px var(--text-normal);
+}
 .markdown-preview-view .search-highlight > div {
   box-shadow:0 0 0px 2px var(--text-normal);
   border-radius:2px;
@@ -1044,6 +1049,10 @@ input.prompt-input, input.prompt-input:hover {
 }
 .document-search-container.mod-replace-mode {
   height:90px;
+}
+.document-search-button,
+.document-search-close-button {
+  cursor:var(--cursor);
 }
 .document-search-container {
   position:fixed;
@@ -1500,7 +1509,7 @@ input.search-input:focus {
   background:transparent;
 }
 .tag-pane-tag {
-  padding:0px 10px;
+  padding:2px 15px;
   cursor:var(--cursor);
 }
 .workspace-leaf-content[data-type='tag'] {
@@ -1804,6 +1813,26 @@ input[type=range]::-webkit-slider-thumb:active {
 .graph-view.color-line-highlight {
   color:var(--interactive-accent);
 }
+
+/* --------------- */
+/* Settings */
+
+.vertical-tab-header-group-title {
+  color:var(--text-normal);
+  font-size:12px;
+}
+.vertical-tab-nav-item {
+  font-size:var(--font-small);
+  padding:5px 10px 5px 17px;
+  color:var(--text-muted);
+  border:none;
+  cursor:var(--cursor);
+}
+.vertical-tab-nav-item:hover,
+.vertical-tab-nav-item.is-active {
+  color:var(--text-normal);
+}
+
 
 /* --------------- */
 /* Scroll bars */
