@@ -173,7 +173,7 @@ experience. Remove each line if you want to re-activate the feature */
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 3%));
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
   --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-d));
-  --background-tertiary:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
+  --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
   --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 5%));
   --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
@@ -187,8 +187,8 @@ experience. Remove each line if you want to re-activate the feature */
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
-  --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
-  --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
+  --interactive-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 30%));
+  --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 25%));
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --interactive-accent-rgb:66, 66, 66;
   --text-selection:hsla(var(--accent-h),70%,40%,30%);
@@ -663,44 +663,45 @@ body, input, button,
 /* Tags */
 
 .tag {
-  background-color:var(--background-tertiary);
-  border:none;
+  background-color:transparent;
+  border:1px solid var(--background-modifier-border);
   color:var(--text-muted);
   font-size:var(--font-small);
-  padding:1px 8px;
+  padding:2px 8px;
   text-align:center;
   text-decoration:none;
   display:inline-block;
-  margin:5px 0px 0px;
-  cursor:pointer;
+  margin:2px 0 0 0;
   border-radius:14px;
 }
 .tag:hover {
-  color:var(--text-muted);
-  background-color:var(--background-modifier-border);
+  color:var(--text-normal);
+  border-color:var(--background-modifier-border-hover);
 }
 .cm-s-obsidian span.cm-hashtag {
-  background-color:var(--background-tertiary);
-  border:none;
+  background-color:transparent;
+  border:1px solid var(--background-modifier-border);
   color:var(--text-muted);
   font-size:var(--font-small);
   text-align:center;
   text-decoration:none;
   display:inline-block;
-  margin:0;
+  margin:2px 0;
   vertical-align:middle;
-  padding-top:3px;
-  padding-bottom:4px;
+  padding-top:1px;
+  padding-bottom:2px;
   cursor:text;
 }
-.cm-hashtag-begin {
+span.cm-hashtag.cm-hashtag-begin {
   border-top-left-radius:14px;
   border-bottom-left-radius:14px;
   padding-left:8px;
+  border-right:none;
 }
-.cm-hashtag-end {
+span.cm-hashtag.cm-hashtag-end {
   border-top-right-radius:14px;
   border-bottom-right-radius:14px;
+  border-left:none;
   padding-right:8px;
 }
 
@@ -710,7 +711,12 @@ body, input, button,
 
 .modal {
   border:none;
+  background:var(--background-primary)
 }
+.horizontal-tab-content, .vertical-tab-content {
+  background:var(--background-primary)
+}
+
 .modal.mod-settings .vertical-tab-content-container {
   border-left:1px solid var(--background-modifier-border);
   padding-bottom:0;
@@ -755,10 +761,20 @@ input.prompt-input, input.prompt-input:hover {
 /* --------------- */
 /* Workspace */
 
-.workspace-tabs {
+.workspace-split.mod-vertical > .workspace-split {
+  padding:0;
+}
+.workspace-split .workspace-tabs {
+  background:var(--background-primary);
+}
+.workspace-split:not(.mod-right-split) .workspace-tabs {
   background:var(--background-secondary);
 }
-
+.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
+.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
 .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content {
   height:calc(100% - 6px);
 }
@@ -1035,6 +1051,8 @@ input.prompt-input, input.prompt-input:hover {
   background:inherit;
   border-radius:2px;
   box-shadow:0 0 0px 2px var(--text-normal);
+  padding-left:0;
+  padding-right:0;
 }
 .markdown-preview-view .search-highlight > div {
   box-shadow:0 0 0px 2px var(--text-normal);
@@ -1057,6 +1075,9 @@ input.prompt-input, input.prompt-input:hover {
 .document-search-button,
 .document-search-close-button {
   cursor:var(--cursor);
+}
+.document-search-close-button:before {
+  font-weight:200;
 }
 .document-search-container {
   position:fixed;
@@ -1202,8 +1223,14 @@ input[type=checkbox]:checked {
 /* Toggle switches */
 
 .checkbox-container {
-  background-color:var(--background-modifier-border);
-  border:1px solid var(--background-modifier-border);
+  background-color:var(--text-faint);
+  border:none;
+  box-shadow:none;
+  cursor:var(--cursor);
+}
+.checkbox-container:after {
+  background:white;
+  box-shadow:none;
 }
 .checkbox-container.is-enabled {
   border-color:var(--interactive-accent);
@@ -1390,7 +1417,7 @@ input[type=checkbox]:checked {
   color:var(--text-normal);
 }
 .search-input-clear-button:before {
-  font-size:22  px;
+  font-size:22px;
   font-weight:200;
 }
 .search-input {
