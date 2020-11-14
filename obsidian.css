@@ -173,7 +173,7 @@ experience. Remove each line if you want to re-activate the feature */
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 3%));
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
   --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-d));
-  --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
+  --background-tertiary:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
   --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 5%));
   --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
@@ -754,6 +754,10 @@ input.prompt-input, input.prompt-input:hover {
 
 /* --------------- */
 /* Workspace */
+
+.workspace-tabs {
+  background:var(--background-secondary);
+}
 
 .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content {
   height:calc(100% - 6px);
@@ -1369,7 +1373,25 @@ input[type=checkbox]:checked {
 }
 .search-input-clear-button {
   cursor:var(--cursor);
-  top: -3px;
+  top:0px;
+  bottom:0px;
+  border-radius:15px;
+  line-height:0px;
+  height:15px;
+  width:15px;
+  margin:auto;
+  padding:6px 0 0 0;
+  text-align:center;
+  vertical-align:middle;
+  align-items:center;
+  color:var(--text-faint);
+}
+.search-input-clear-button:hover {
+  color:var(--text-normal);
+}
+.search-input-clear-button:before {
+  font-size:22  px;
+  font-weight:200;
 }
 .search-input {
   max-width:100%;
@@ -1464,6 +1486,7 @@ input.search-input:focus {
 .workspace-leaf-content .search-input:focus {
   font-size:var(--font-small);
   padding:7px 10px;
+  height:28px;
   border-radius:20px;
   background:var(--background-primary);
   border:1px solid var(--background-modifier-border);
