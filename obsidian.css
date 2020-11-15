@@ -1,6 +1,11 @@
 /* 
 
-Minimal Obsidian by @kepano
+Minimal Obsidian 2.0 by @kepano
+
+This theme is designed to be used with the Minimal Theme Settings 
+plugin and the Hider plugin.
+
+DISCLAIMER
 
 This theme is provided "as is", and is focused on my personal use
 of Obsidian. As such I have neither optimized nor tested it with 
@@ -241,10 +246,10 @@ Frameless mode on macOS only */
 
 .hider-frameless .workspace-split.mod-right-split > .workspace-tabs,
 .hider-frameless .workspace-split.mod-root .view-header {
-  padding-top:4px;
+  padding-top:2px;
 }
 .hider-frameless .workspace-split.mod-left-split > .workspace-tabs {
-  padding-top:18px;
+  padding-top:24px;
 }
 .hider-frameless .workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
 .hider-frameless .workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
