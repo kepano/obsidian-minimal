@@ -169,6 +169,7 @@ experience. Remove each line if you want to re-activate the feature */
 
   These values are mostly driven by the options above */
 
+.theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
 .theme-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-light-contrast .status-bar,
 .theme-light.minimal-light-contrast .workspace-ribbon.mod-left,
@@ -230,7 +231,6 @@ experience. Remove each line if you want to re-activate the feature */
   --text-highlight-bg-active:rgba(255, 224, 0, 0.5);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-l) - 5%),0.7);
 }
-
 .theme-light.minimal-light-tonal {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 4%));
@@ -239,6 +239,15 @@ experience. Remove each line if you want to re-activate the feature */
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
   --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
 }
+.theme-dark.minimal-dark-black {
+  --base-d:0%;
+  --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 6%));
+  --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 8%));
+  --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 8%));
+  --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 14%));
+  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 6%),0.9);
+}
+
 
 /*----------------------------------------------------------------
 
@@ -469,6 +478,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   padding:0 10px;
   --color-background-day-empty:var(--background-secondary-alt);
   --color-background-day-active:var(--background-tertiary);
+  --color-background-day-hover:var(--background-tertiary);
   --color-dot:var(--text-faint);
   --color-text-title:var(--text-normal);
   --color-text-heading:var(--text-muted);
@@ -765,6 +775,9 @@ input.prompt-input, input.prompt-input:hover {
   opacity:0.8;
   border-radius:0 !important;} 
 
+.mod-drag {
+  opacity:1;
+  background-color:var(--text-selection);} 
 
 /* --------------- */
 /* Workspace */
@@ -792,14 +805,14 @@ input.prompt-input, input.prompt-input:hover {
 .workspace-split.mod-root .workspace-leaf-content {
 }
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
-  height:2px;
+  height:3px;
   background:transparent;
   border-bottom:1px solid var(--background-modifier-border);
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   background:transparent;
   border-left:1px solid var(--background-modifier-border);
-  width:2px !important;
+  width:3px !important;
 }  
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
@@ -812,6 +825,7 @@ input.prompt-input, input.prompt-input:hover {
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active {
   border-color:var(--background-modifier-border-hover);
+  border-width:2px;
 }
 .workspace-tab-container-before,
 .workspace-tab-container-after{
@@ -921,6 +935,7 @@ border-bottom:1px solid #999;
 /* Title Bar */
 
 .view-actions {
+  margin-right:1px;
   z-index:15;
   background:var(--background-primary);
 }
@@ -938,7 +953,7 @@ border-bottom:1px solid #999;
   display:inline-block;
   vertical-align:bottom;
   position:absolute;
-  right:0;
+  right:40px;
   pointer-events:none;
 }
 .workspace-leaf-header,
