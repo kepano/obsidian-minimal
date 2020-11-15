@@ -277,9 +277,6 @@ body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
 body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
   box-shadow:none !important;
 }
-body.plugin-sliding-panes .workspace-leaf-content {
-  padding-left:0;
-}
 /* body.plugin-sliding-panes .CodeMirror,
 body.plugin-sliding-panes .markdown-preview-section {
   margin-left:35px;
