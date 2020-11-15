@@ -1753,6 +1753,9 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
   height:1px;
   border-width:2px 0 0 0;
 }
+.markdown-preview-view .internal-link {
+  text-decoration:none;
+}
 .external-link {
   text-decoration:underline;
 }
