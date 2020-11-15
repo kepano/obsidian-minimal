@@ -1,6 +1,12 @@
 /* 
 
-Minimal Obsidian by @kepano
+Minimal Obsidian 2.0 by @kepano
+
+This theme is designed to be used with the Minimal Theme Settings 
+plugin and the Hider plugin.
+
+
+DISCLAIMER
 
 This theme is provided "as is", and is focused on my personal use
 of Obsidian. As such I have neither optimized nor tested it with 
@@ -72,9 +78,6 @@ Disabled features
 These features are hidden in pursuit of a more focused editing 
 experience. Remove each line if you want to re-activate the feature */
 
-.status-bar,                                           /* Status bar */
-::-webkit-scrollbar,                                   /* Scroll bars */
-.tooltip,                                              /* Tooltips */
 .pane-list-item-ending-flair:not(.tag-pane-tag-count), /* Search counts */
 .workspace-ribbon-collapse-btn,                        /* Sidebar collapse */
 .prompt-instructions {                                 /* Linking tips */
@@ -120,7 +123,7 @@ experience. Remove each line if you want to re-activate the feature */
   --base-l:96%;     /* Base lightness Light Mode  - 100 is white */
   --accent-h:201;   /* Accent hue */
   --accent-s:17%;   /* Accent saturation */
-  --accent-d:70%;   /* Accent lightness Dark Mode */
+  --accent-d:65%;   /* Accent lightness Dark Mode */
   --accent-l:50%;   /* Accent lightness Light Mode */
 
   /*----------------------------------------------------------------
@@ -167,14 +170,18 @@ experience. Remove each line if you want to re-activate the feature */
 
   These values are mostly driven by the options above */
 
-
+.theme-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-light-contrast .status-bar,
+.theme-light.minimal-light-contrast .workspace-ribbon.mod-left,
+.theme-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-light-contrast .modal.mod-settings .vertical-tab-header,
 .theme-dark {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-d));
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 3%));
-  --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
+  --background-secondary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
   --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-d));
-  --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
-  --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 5%));
+  --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 2%));
+  --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
   --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
   --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
@@ -195,13 +202,14 @@ experience. Remove each line if you want to re-activate the feature */
   --text-highlight-bg:rgba(255, 177, 80, 0.3);
   --text-highlight-bg-active:rgba(255, 177, 80, 0.3);
 }
+
 .theme-light {
-  --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
+  --background-primary:white;
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 2%));
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 5%));
-  --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 8%));
+  --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 6%));
   --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 12%));
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 20%));
   --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 80%));
@@ -220,6 +228,18 @@ experience. Remove each line if you want to re-activate the feature */
   --text-selection:hsl(var(--accent-h),50%,91%);
   --text-highlight-bg:rgba(255, 224, 0, 0.5);
   --text-highlight-bg-active:rgba(255, 224, 0, 0.5);
+  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-l) - 5%),0.6);
+}
+
+.theme-light.minimal-light-tonal {
+  --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
+}
+.theme-light.minimal-light-contrast {
+  --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
+}
+.theme-dark.minimal-dark-tonal {
+  --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
+  --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
 }
 
 /*----------------------------------------------------------------
@@ -228,38 +248,19 @@ SPECIAL FEATURES
 
 Frameless mode on macOS only */
 
-.mod-macos .titlebar-button-container {
-  display:none !important;
-}
-.mod-macos .titlebar,
-.mod-macos .titlebar-inner {
-  position:fixed;
-  top:0;
-  height:12px;
-}
-.mod-macos .titlebar,
-.mod-macos .titlebar-inner {
-  background:transparent;
-}
-.mod-macos .titlebar-text {
-  display:none;
-}
-.mod-macos.is-frameless {
-  padding-top:0px !important;
-}
-.mod-macos .workspace-split.mod-right-split > .workspace-tabs,
-.mod-macos .workspace-split.mod-root .view-header {
+.hider-frameless .workspace-split.mod-right-split > .workspace-tabs,
+.hider-frameless .workspace-split.mod-root .view-header {
   padding-top:4px;
 }
-.mod-macos .workspace-split.mod-left-split > .workspace-tabs {
+.hider-frameless .workspace-split.mod-left-split > .workspace-tabs {
   padding-top:18px;
 }
-.mod-macos .workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
-.mod-macos .workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
+.hider-frameless .workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
+.hider-frameless .workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
   padding-top:0px;
 }
-.mod-macos.is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
-.mod-macos.is-fullscreen .workspace-split.mod-root .view-header {
+.hider-frameless.is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
+.hider-frameless.is-fullscreen .workspace-split.mod-root .view-header {
   padding-top:0px;
 }
 
@@ -270,9 +271,11 @@ Frameless mode on macOS only */
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
     text-orientation: sideways;
 }
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
   box-shadow:var(--background-modifier-border) -1px -0px !important;
 }
+
 body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
   box-shadow:none !important;
 }
@@ -324,7 +327,10 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* --------------- */
 /* App Menu ribbon moved to the bottom edge */
 
-.workspace-ribbon.mod-left {
+.hider-ribbon .workspace-ribbon.mod-left {
+  display:flex; 
+}
+.hider-ribbon .workspace-ribbon.mod-left {
   position:fixed;
   border-right:0px;
   margin:0;
@@ -338,38 +344,38 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   opacity:0;
   transition:opacity 0.25s ease-in-out;
 }
-.side-dock-actions,
-.side-dock-settings {
+.hider-ribbon .side-dock-actions,
+.hider-ribbon .side-dock-settings {
   display:flex;
   border-top:1px solid var(--background-modifier-border);
   background:var(--background-primary);
   margin:0;
 }
-.workspace-ribbon.mod-left:after {
+.hider-ribbon .workspace-ribbon.mod-left:after {
   border-top:1px solid var(--background-modifier-border);
   background:var(--background-primary);
   padding-right:100vw;
   content:" ";
   pointer-events:none;
 }
-.workspace-ribbon.mod-left .side-dock-ribbon-action {
+.hider-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display:inline-block;
   padding:9px 5px 0 12px;
 }
-.workspace-ribbon.mod-right {
+.hider-ribbon .workspace-ribbon.mod-right {
   pointer-events:none;
 }
-.workspace-ribbon.mod-left:hover {
+.hider-ribbon .workspace-ribbon.mod-left:hover {
   opacity:1;
   transition:opacity 0.25s ease-in-out;
 }
-.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+.hider-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
   border-top:1px solid var(--background-modifier-border);
 }
-.workspace-split.mod-left-split {
+.hider-ribbon .workspace-split.mod-left-split {
   margin:0;
 }
-.workspace-ribbon.mod-right {
+.hider-ribbon .workspace-ribbon.mod-right {
   opacity:1;
   height:40px;
   position:fixed;
@@ -378,7 +384,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   bottom:0;
   z-index:999;
 }
-.workspace-ribbon-collapse-btn {
+.hider-ribbon .workspace-ribbon-collapse-btn {
   margin:0;
   padding-top:8px;
 }
@@ -388,11 +394,14 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* When the left sidebar is collapsed */
 
 .workspace-ribbon.mod-left {
-  transition:border-color 0 ease-in-out;
+  transition:border-color 0 ease-in-out 1s;
+  transition:background-color 0 ease-in-out 1s;
 }
 .workspace-ribbon.mod-left.is-collapsed {
   border-color:transparent;
-  transition:border-color 0.25s ease-in-out;
+  background-color:transparent;
+  transition:border-color 0s ease-in-out 0.1s;
+  transition:background-color 0s ease-in-out 0.2s;
 }
 .workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
 .workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
@@ -458,6 +467,9 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* --------------- */
 /* Calendar Plugin */
 
+.workspace-leaf-content[data-type='calendar'] .view-content {
+  padding:5px 0 0 0;
+}
 #calendar-container {
   padding:0 10px;
   --color-background-day-empty:var(--background-secondary-alt);
@@ -468,6 +480,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   --color-text-day:var(--text-normal);
   --color-text-today:var(--text-normal);
   --color-arrow:currentColor;
+  --color-background-day-empty:transparent;
 }
 #calendar-container h2 {
   font-weight:400;
@@ -484,16 +497,16 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 }
 #calendar-container tr th {
   padding:4px 0;
-  font-weight:400;
+  font-weight:500;
 }
 #calendar-container tr td {
   padding:2px 0 8px;
   width:14.28%;
-  border-right:3px solid var(--background-primary);
-  border-radius:10px;
+  border-right:3px solid transparent;
+  border-radius:4px;
   cursor:var(--cursor);}
 #calendar-container tr {
-  border:3px solid var(--background-primary);
+  border:3px solid transparent;
 }
 #calendar-container tr td .dot {
   margin:0;
@@ -713,10 +726,6 @@ span.cm-hashtag.cm-hashtag-end {
   border:none;
   background:var(--background-primary)
 }
-.horizontal-tab-content, .vertical-tab-content {
-  background:var(--background-primary)
-}
-
 .modal.mod-settings .vertical-tab-content-container {
   border-left:1px solid var(--background-modifier-border);
   padding-bottom:0;
@@ -726,6 +735,7 @@ span.cm-hashtag.cm-hashtag-end {
 input.prompt-input, input.prompt-input:hover {
   border:0;
   background:var(--background-primary);
+  padding-left:10px;
 }
 .modal-container .suggestion-item.is-selected {
   border-radius:6px;
@@ -738,6 +748,8 @@ input.prompt-input, input.prompt-input:hover {
 .suggestion-item, .suggestion-empty {
   font-size:var(--font-normal);
 }
+.modal,
+.prompt,
 .suggestion-container {
   box-shadow:0 5px 30px rgba(0, 0, 0, 0.15);
 }
@@ -761,6 +773,9 @@ input.prompt-input, input.prompt-input:hover {
 /* --------------- */
 /* Workspace */
 
+.empty-state {
+  background-color:var(--background-primary);
+}
 .workspace-split.mod-vertical > .workspace-split {
   padding:0;
 }
@@ -844,12 +859,49 @@ input.prompt-input, input.prompt-input:hover {
   background-color:transparent;
 }
 
+/* Testing
+.workspace-tab-container-inner {
+border:none;}
+
+.workspace-tab-header {
+  padding:4px 7px;
+  margin:1px 0px 1px 0px;
+}
+.workspace-tab-header-inner {
+  padding:0;
+  margin:0;
+}
+.workspace-tab-header.is-active,
+.workspace-tab-header:hover {
+  background:rgba(0,0,0,0.06);
+  border-radius:4px;
+}
+.workspace-tab-header-inner svg {
+  height:16px;
+} */
+
+
+/* Testing 2
+.workspace-tab-container-inner {
+
+padding-left:10px;}
+.workspace-tab-header-inner {
+padding:5px 7px 3px 7px;
+}
+.workspace-tab-header.is-active {
+margin-bottom:-1px;
+border-bottom:1px solid #999;
+} */
+
 /* --------------- */
 /* Window frame */
 
 .titlebar {
-  background:var(--background-tertiary);
+  background:var(--background-secondary);
   border-bottom:1px solid var(--background-modifier-border);
+}
+.hider-frameless .titlebar {
+  border-bottom:none;
 }
 .titlebar-text {
   display:none;
@@ -915,6 +967,12 @@ input.prompt-input, input.prompt-input:hover {
 /* --------------- */
 /* Editor mode */
 
+/* Fancy cursor */
+.fancy-cursor .CodeMirror-cursor {
+  border:none;
+  border-right:2px solid var(--text-accent);
+}
+
 .markdown-source-view {
   padding:0;
 }
@@ -928,6 +986,9 @@ input.prompt-input, input.prompt-input:hover {
 .CodeMirror pre.CodeMirror-line-like {
   padding-left:0;
   padding-right:0;
+}
+.cm-s-obsidian pre.HyperMD-list-line {
+  padding-top:0;
 }
 .markdown-preview-view {
   padding:0;
@@ -1173,6 +1234,10 @@ input[type=checkbox]:checked {
   background-repeat:no-repeat;
   background-image:url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
 }
+
+.markdown-preview-section > .contains-task-list {
+  padding-bottom:0.5em;
+}
 .markdown-preview-view ul > li.task-list-item.is-checked {
   text-decoration:none;
   color:var(--text-normal);
@@ -1189,6 +1254,7 @@ input[type=checkbox]:checked {
 }
 .markdown-preview-view ul > li.task-list-item {
   text-indent:0;
+  line-height:1.4;
 }
 .markdown-preview-view .task-list-item {
   padding-inline-start:0;
@@ -1275,6 +1341,31 @@ input[type=checkbox]:checked {
 .nav-folder-collapse-indicator {
   top:1px;
 }
+
+/* Disclosure icons
+
+.collapse-icon svg {
+  display:none;
+}
+.collapse-icon {
+  margin:0;
+  padding:0 0 0 5px;
+  top:auto;
+}
+.collapse-icon:after {
+  content:"\203A";
+  font-weight:200;
+  display:inline-block;
+  font-size:22px;
+  height:22px;
+  width:10px;
+  transition: transform 100ms ease-in-out;
+  transform:rotate(90deg);
+}
+.is-collapsed .collapse-icon:after {
+  transform:rotate(0deg);
+}*/
+
 .nav-file {
   margin-left:12px;
   padding-right:4px;
@@ -1300,6 +1391,10 @@ input[type=checkbox]:checked {
 .workspace-leaf-content[data-type=starred] .nav-file-title-content {
   width:calc(100% - 15px);
 }
+body:not(.is-grabbing) .nav-file-title:hover,
+body:not(.is-grabbing) .nav-folder-title:hover {
+  background:transparent;
+}
 .nav-file-title,
 .nav-folder-title, 
 .is-collapsed .search-result-file-title, 
@@ -1319,11 +1414,14 @@ input[type=checkbox]:checked {
   margin-right:0;
   margin-left:0;
 }
-.tree-view-item-self:hover .tree-view-item-collapse,
 .side-dock-collapsible-section-header:hover,
-.collapsible-item-self.is-clickable:hover,
 .side-dock-collapsible-section-header:not(.is-collapsed) {
-  color:var(--text-normal);
+  color:var(--text-muted);
+  background:transparent;
+}
+.tree-view-item-self:hover .tree-view-item-collapse,
+.collapsible-item-self.is-clickable:hover {
+  color:var(--text-muted);
   background:transparent;
 }
 .search-result-collapse-indicator,
@@ -1450,11 +1548,11 @@ input.search-input:focus {
 .search-empty-state {
   font-size:var(--font-small);
   color:var(--text-faint);
-  padding-left:0;
+  padding-left:5px;
   margin:0;
 }
 .search-result-container {
-  padding:0 10px 5px 5px;
+  padding:0 10px 5px 10px;
 }
 .search-result-file-title {
   line-height:1.3;
@@ -1494,12 +1592,19 @@ input.search-input:focus {
 }
 .side-dock-collapsible-section-header {
   padding-left:15px;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 10px;
+  font-weight: 500;
+  padding-top: 10px;
+  background: transparent;
 }
 .backlink-pane {
   padding-bottom:30px;
 }
 .backlink-pane .search-result-container {
-  padding:5px 5px 5px 15px;
+  padding:5px 5px 5px 10px;
   margin-left:0;
 }
 .backlink-pane .search-result-file-title {
@@ -1571,12 +1676,15 @@ input.search-input:focus {
   padding:0;
   color:var(--text-faint);
 }
-.pane-list-item:hover .pane-list-item-ending-flair {
+.pane-list-item-ending-flair {
   background:transparent;
 }
 .tag-pane-tag {
-  padding:2px 15px;
+  padding:2px 15px 2px 5px;
   cursor:var(--cursor);
+}
+.tag-pane-tag:hover {
+  background:transparent;
 }
 .workspace-leaf-content[data-type='tag'] {
   padding-top:10px;
@@ -1592,7 +1700,7 @@ input.search-input:focus {
 /* Status bar */
 
 .status-bar {
-  background-color:var(--background-primary);
+  background-color:var(--background-secondary);
   color:var(--text-faint);
   font-size:var(--font-smaller);
   padding:0;
@@ -1634,6 +1742,13 @@ input.search-input:focus {
 }
 .side-dock-ribbon {
   border-left:0;
+}
+
+body:not(.hider-ribbon) .side-dock-actions {
+  padding-top:20px;
+}
+body:not(.hider-ribbon) .side-dock-ribbon-action {
+  padding:6px 0 0 0;
 }
 
 /* --------------- */
@@ -1789,6 +1904,12 @@ ol > li::before {
 .popover .markdown-embed-link {
   display:none;
 }
+.popover .markdown-embed .markdown-preview-view {
+  padding-bottom:30px;
+}
+.popover.hover-popover .markdown-embed .markdown-embed-content {
+  max-height:none;
+}
 
 /* --------------- */
 /* Graphs */
@@ -1800,12 +1921,14 @@ ol > li::before {
   background:var(--background-primary);
   border:none;
   left:0;
-  top:0;
+  top:5px;
   margin-bottom:0;
   padding:0 20px 10px 10px;
   border-radius:0;
 }
-
+.mod-left-split .graph-controls {
+  background:var(--background-secondary);
+}
 input[type=range] {
   background-color:rgba(0,0,0,0.15);
   height:16px;
@@ -1883,22 +2006,56 @@ input[type=range]::-webkit-slider-thumb:active {
 /* --------------- */
 /* Settings */
 
+.modal-close-button {
+  top:0;
+  cursor:var(--cursor);
+}
+.modal-close-button:before {
+  font-weight:200;
+}
+.horizontal-tab-content, .vertical-tab-content {
+  background:var(--background-primary)
+}
+.modal.mod-settings .vertical-tab-header {
+  background:var(--background-secondary);
+  padding-top:5px;
+}
 .vertical-tab-header-group-title {
   color:var(--text-normal);
   font-size:12px;
+  letter-spacing:0.05em;
+  font-weight:500;
 }
 .vertical-tab-nav-item {
   font-size:var(--font-small);
   padding:5px 10px 5px 17px;
   color:var(--text-muted);
   border:none;
+  background:var(--background-secondary);
   cursor:var(--cursor);
 }
 .vertical-tab-nav-item:hover,
 .vertical-tab-nav-item.is-active {
   color:var(--text-normal);
 }
-
+.setting-hotkey {
+  background-color:var(--background-modifier-border);
+  padding: 3px 25px 3px 10px;
+}
+.setting-hotkey.mod-empty {
+  background:transparent;
+}
+.dropdown {
+  border-color:var(--background-modifier-border);
+  font-family:var(--text);
+  background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+}
+.theme-dark .dropdown {
+  background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+}
+.dropdown:focus {
+  border-color:var(--background-modifier-border-focus);
+}
 
 /* --------------- */
 /* Scroll bars */
@@ -1917,4 +2074,13 @@ input[type=range]::-webkit-slider-thumb:active {
   border-radius:0 !important;
   border-color:var(--background-primary);
   min-height:40px;
+}
+
+.vertical-tab-header::-webkit-scrollbar-track,
+.workspace-tabs ::-webkit-scrollbar-track {
+  background-color:var(--background-secondary);
+}
+.vertical-tab-header::-webkit-scrollbar-thumb,
+.workspace-tabs ::-webkit-scrollbar-thumb {
+  border-color:var(--background-secondary);
 }

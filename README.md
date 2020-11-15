@@ -1,10 +1,8 @@
 Minimal is an opinionated Obsidian theme designed to create a focused editing experience and more Mac-like interface.
 
+This theme is designed to be used with the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) and the [Hider plugin](https://github.com/kepano/obsidian-hider).
+
 ![](dark-complex.png)
-
-### Note: accessing app settings
-
-The app ribbon is hidden by default can be accessed by hovering in the bottom left corner of the app, or using the default shortcut `CMD + ,` — you can also re-enable the app ribbon by commenting out the "App Ribbon" section of code in the CSS.
 
 ### Disclaimer
 
