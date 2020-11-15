@@ -200,6 +200,7 @@ experience. Remove each line if you want to re-activate the feature */
   --text-selection:hsla(var(--accent-h),70%,40%,30%);
   --text-highlight-bg:rgba(255, 177, 80, 0.3);
   --text-highlight-bg-active:rgba(255, 177, 80, 0.3);
+  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.8);
 }
 
 .theme-light {
@@ -227,7 +228,7 @@ experience. Remove each line if you want to re-activate the feature */
   --text-selection:hsl(var(--accent-h),50%,91%);
   --text-highlight-bg:rgba(255, 224, 0, 0.5);
   --text-highlight-bg-active:rgba(255, 224, 0, 0.5);
-  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-l) - 5%),0.6);
+  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-l) - 5%),0.7);
 }
 
 .theme-light.minimal-light-tonal {
@@ -1754,7 +1755,7 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
   border-width:2px 0 0 0;
 }
 .markdown-preview-view .internal-link {
-  text-decoration:none;
+  text-decoration:underline;
 }
 .external-link {
   text-decoration:underline;
