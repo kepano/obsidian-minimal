@@ -139,7 +139,7 @@ experience. Remove each line if you want to re-activate the feature */
   
   /* Code */
 
-  --font-monospace:Menlo,Monaco,Consolas,"Courier New",monospace;
+  --font-monospace:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
 
   /* Sizes, weights, padding */
 
@@ -176,7 +176,7 @@ experience. Remove each line if you want to re-activate the feature */
 .theme-light.minimal-light-contrast .modal.mod-settings .vertical-tab-header,
 .theme-dark {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-d));
-  --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 3%));
+  --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
   --background-secondary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
   --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-d));
   --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 2%));
@@ -205,7 +205,7 @@ experience. Remove each line if you want to re-activate the feature */
 
 .theme-light {
   --background-primary:white;
-  --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 2%));
+  --background-primary-alt:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 5%));
@@ -233,6 +233,7 @@ experience. Remove each line if you want to re-activate the feature */
 
 .theme-light.minimal-light-tonal {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
+  --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 4%));
 }
 .theme-dark.minimal-dark-tonal {
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
@@ -721,7 +722,8 @@ span.cm-hashtag.cm-hashtag-end {
 
 .modal {
   border:none;
-  background:var(--background-primary)
+  background:var(--background-primary);
+  border-radius:10px;
 }
 .modal.mod-settings .vertical-tab-content-container {
   border-left:1px solid var(--background-modifier-border);
@@ -1872,6 +1874,11 @@ ol > li::before {
 .theme-light pre[class*="language-"] {
   text-shadow:none;
 }
+.markdown-preview-section .frontmatter code {
+  color:var(--text-muted);
+  font-szie:var(--font-small);
+}
+
 .cm-s-obsidian .hmd-fold-html-stub,
 .cm-s-obsidian .hmd-fold-code-stub,
 .cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code,
@@ -1888,6 +1895,11 @@ ol > li::before {
 .cm-s-obsidian .hmd-fold-html kbd
 .CodeMirror-code {
   font-family:var(--font-monospace);
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter {
+  font-size:var(--font-small);
+  color:var(--text-muted);
 }
 
 /* --------------- */
