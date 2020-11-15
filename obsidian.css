@@ -1,12 +1,6 @@
 /* 
 
-Minimal Obsidian 2.0 by @kepano
-
-This theme is designed to be used with the Minimal Theme Settings 
-plugin and the Hider plugin.
-
-
-DISCLAIMER
+Minimal Obsidian by @kepano
 
 This theme is provided "as is", and is focused on my personal use
 of Obsidian. As such I have neither optimized nor tested it with 
@@ -233,9 +227,6 @@ experience. Remove each line if you want to re-activate the feature */
 
 .theme-light.minimal-light-tonal {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
-}
-.theme-light.minimal-light-contrast {
-  --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
 }
 .theme-dark.minimal-dark-tonal {
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
@@ -1066,9 +1057,6 @@ border-bottom:1px solid #999;
 .markdown-embed:hover .markdown-embed-link svg {
   opacity:1;
 }
-.markdown-preview-sizer {
-  min-height:auto !important;
-}
 .markdown-preview-view .markdown-embed-content > .markdown-preview-view {
   max-height:none !important;}
 .markdown-embed .markdown-preview-view {
@@ -1391,6 +1379,8 @@ input[type=checkbox]:checked {
 .workspace-leaf-content[data-type=starred] .nav-file-title-content {
   width:calc(100% - 15px);
 }
+body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator, 
+body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator,
 body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
   background:transparent;
@@ -2076,11 +2066,19 @@ input[type=range]::-webkit-slider-thumb:active {
   min-height:40px;
 }
 
-.vertical-tab-header::-webkit-scrollbar-track,
-.workspace-tabs ::-webkit-scrollbar-track {
+.modal .vertical-tab-header::-webkit-scrollbar-track,
+.mod-left-split .workspace-tabs ::-webkit-scrollbar-track {
   background-color:var(--background-secondary);
 }
-.vertical-tab-header::-webkit-scrollbar-thumb,
-.workspace-tabs ::-webkit-scrollbar-thumb {
+.modal .vertical-tab-header::-webkit-scrollbar-thumb,
+.mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb {
   border-color:var(--background-secondary);
+}
+.theme-light.minimal-light-contrast .mod-left-split .vertical-tab-header::-webkit-scrollbar-thumb,
+.theme-light.minimal-light-contrast .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb {
+  background-color:var(--background-modifier-border-hover);
+}
+.theme-light.minimal-light-contrast .mod-left-split .vertical-tab-header::-webkit-scrollbar-track,
+.theme-light.minimal-light-contrast .mod-left-split .workspace-tabs ::-webkit-scrollbar-track {
+  border-color:var(--background-modifier-border-hover);
 }
