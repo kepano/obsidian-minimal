@@ -217,7 +217,7 @@ experience. Remove each line if you want to re-activate the feature */
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 25%));
   --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-l),0);
-  --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-l),0.85);
+  --background-translucent:rgba(255,255,255,0.85);
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
@@ -234,6 +234,7 @@ experience. Remove each line if you want to re-activate the feature */
 .theme-light.minimal-light-tonal {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 4%));
+  --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-l),0.85);
 }
 .theme-dark.minimal-dark-tonal {
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
