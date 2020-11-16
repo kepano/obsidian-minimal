@@ -1451,6 +1451,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   font-size:var(--font-small);
   color:var(--text-faint);
   padding:0 0 0 15px;
+  width:100%;
 }
 .outline .collapsible-item-self {
   cursor:var(--cursor);
