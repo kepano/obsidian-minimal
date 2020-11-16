@@ -389,8 +389,8 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* When the left sidebar is collapsed */
 
 .workspace-ribbon.mod-left {
-  transition:border-color 0 ease-in-out 1s;
-  transition:background-color 0 ease-in-out 1s;
+  transition:border-color 0 ease-in-out 0s;
+  transition:background-color 0 ease-in-out 0s;
 }
 .workspace-ribbon.mod-left.is-collapsed {
   border-color:transparent;
@@ -1704,7 +1704,7 @@ input.search-input:focus {
   background-color:var(--background-secondary);
   color:var(--text-faint);
   font-size:var(--font-smaller);
-  padding:0;
+  padding:0 5px 0;
 }
 .status-bar-item {
   padding:0 5px;
