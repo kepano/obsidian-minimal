@@ -389,14 +389,12 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* When the left sidebar is collapsed */
 
 .workspace-ribbon.mod-left {
-  transition:border-color 0 ease-in-out 0s;
-  transition:background-color 0 ease-in-out 0s;
+  transition:border-color 0s ease-in-out 0s, background-color 0s ease-in-out 0s;
 }
 .workspace-ribbon.mod-left.is-collapsed {
   border-color:transparent;
   background-color:transparent;
-  transition:border-color 0s ease-in-out 0.1s;
-  transition:background-color 0s ease-in-out 0.2s;
+  transition:border-color 0s ease-in-out 0.1s, background-color 0s ease-in-out 0.2s;
 }
 .workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
 .workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
