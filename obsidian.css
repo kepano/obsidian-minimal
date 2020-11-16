@@ -1450,7 +1450,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .outline .pane-empty {
   font-size:var(--font-small);
   color:var(--text-faint);
-  margin:0 0 0 15px;
+  padding:0 0 0 15px;
 }
 .outline .collapsible-item-self {
   cursor:var(--cursor);
