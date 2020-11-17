@@ -418,6 +418,10 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 .view-actions .view-action {
   margin-right:4px;
 }
+.view-action.is-active {
+  color:var(--text-faint);
+  opacity:1;
+}
 .view-actions .view-action:last-child  {
   margin-left:2px;
 }
@@ -966,10 +970,13 @@ border-bottom:1px solid #999;
 /* --------------- */
 /* Custom line width */
 
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  max-width:100%;
+  width:auto;
+}
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .CodeMirror,
-.markdown-preview-sizer {
+.markdown-preview-section {
   padding-left:0;
   padding-right:0;
   margin:0 auto 0 auto;
