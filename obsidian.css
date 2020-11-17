@@ -1201,7 +1201,8 @@ input.document-replace-input:focus {
   padding:0 15px;
 }
 .workspace > .workspace-split:not(.mod-root) .CodeMirror, 
-.workspace > .workspace-split:not(.mod-root) .markdown-preview-section {
+.workspace > .workspace-split:not(.mod-root) .markdown-preview-section,
+.workspace > .workspace-split:not(.mod-root) .markdown-preview-sizer {
   max-width:100%;
   padding:0;
   width:auto;
