@@ -858,17 +858,26 @@ input.prompt-input, input.prompt-input:hover {
   background-color:transparent;
 }
 
-/* Testing
-.workspace-tab-container-inner {
-border:none;}
+/* Testing tab icons next to traffic lights
 
+.hider-frameless.mod-macos .workspace-split.mod-left-split > .workspace-tabs {
+    padding: 0;}
+.hider-frameless.mod-macos .workspace-split.mod-left-split .workspace-tab-container-inner {
+    padding-left:62px;}
+.hider-frameless.mod-macos.is-fullscreen .workspace-split.mod-left-split .workspace-tab-container-inner {
+    padding-left:5px;}
+.workspace-tab-header-inner {
+    padding: 3px 2px 3px 10px;
+} */
+
+
+/* Testing Big Sur tab backgrounds
 .workspace-tab-header {
   padding:4px 7px;
-  margin:1px 0px 1px 0px;
+  margin:1px 0px 4px 0px;
 }
 .workspace-tab-header-inner {
   padding:0;
-  margin:0;
 }
 .workspace-tab-header.is-active,
 .workspace-tab-header:hover {
@@ -877,7 +886,7 @@ border:none;}
 }
 .workspace-tab-header-inner svg {
   height:16px;
-} */
+}*/
 
 
 /* Testing 2
@@ -950,6 +959,24 @@ border-bottom:1px solid #999;
   background-color:var(--background-primary) !important;
   border:none !important;
 }
+.view-header-title-container:after {
+  display:none;
+}
+
+/* --------------- */
+/* Custom line width */
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.markdown-source-view.is-readable-line-width .CodeMirror,
+.CodeMirror,
+.markdown-preview-sizer {
+  padding-left:0;
+  padding-right:0;
+  margin:0 auto 0 auto;
+  width:var(--line-width);
+  max-width:var(--max-width);
+}
+
 .view-header-title-container {
   padding-left:0;
   padding-right:0px;
@@ -959,9 +986,6 @@ border-bottom:1px solid #999;
   margin:0 auto;
   left:0;
   right:0;
-}
-.view-header-title-container:after {
-  display:none;
 }
 
 /* --------------- */
@@ -998,14 +1022,6 @@ border-bottom:1px solid #999;
 }
 .markdown-preview-view .markdown-embed-content {
   max-height:none;
-}
-.CodeMirror,
-.markdown-preview-section  {
-  padding-left:0;
-  padding-right:0;
-  margin:0 auto 0 auto;
-  width:var(--line-width);
-  max-width:var(--max-width);
 }
 .markdown-embed-title,
 .internal-embed .markdown-preview-section {
@@ -1780,9 +1796,17 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
   height:1px;
   border-width:2px 0 0 0;
 }
+
+.minimal-theme:not(.links-int-on) .markdown-preview-view .internal-link,
+.minimal-theme:not(.links-int-on) .external-link {
+  text-decoration:none;
+}
+
+.minimal-theme.links-int-on ..markdown-preview-view .internal-link,
 .markdown-preview-view .internal-link {
   text-decoration:underline;
 }
+.minimal-theme.links-ext-on .external-link,
 .external-link {
   text-decoration:underline;
 }
@@ -2127,3 +2151,4 @@ input[type=range]::-webkit-slider-thumb:active {
 .theme-light.minimal-light-contrast .mod-left-split .workspace-tabs ::-webkit-scrollbar-track {
   border-color:var(--background-modifier-border-hover);
 }
+
