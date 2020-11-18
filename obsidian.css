@@ -395,13 +395,8 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   background-color:transparent;
   transition:border-color 0s ease-in-out 0.1s, background-color 0s ease-in-out 0.2s;
 }
-.workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
-.workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
-  opacity:0;
-  transition:opacity 0.25s ease-in-out;
-}
-.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
-.workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
+.focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
+.focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
   opacity:1;
   transition:opacity 0s ease-in-out;
 }
@@ -409,7 +404,6 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   margin-right:0px;
 }
 .view-actions {
-  opacity:0;
   margin-right:0px;
   margin-left:auto;
   transition:opacity 0.25s ease-in-out;
@@ -424,12 +418,18 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 .view-actions .view-action:last-child  {
   margin-left:2px;
 }
-.workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-actions {
+.workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-actions,
+.workspace-ribbon.mod-left.is-collapsed ~ .mod-root .view-header:hover .view-actions,
+.mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions {
   opacity:1;
   transition:opacity 0.25s ease-in-out;
 }
-.mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions {
-  opacity:1;
+.focus-mode .view-actions,
+.focus-mode .workspace-ribbon.mod-right.is-collapsed ~ .mod-root .view-actions,
+.focus-mode .workspace-ribbon.mod-left.is-collapsed ~ .mod-root .view-actions,
+.focus-mode .workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
+.focus-mode .workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
+  opacity:0;
   transition:opacity 0.25s ease-in-out;
 }
 
@@ -1804,7 +1804,7 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
 .minimal-theme:not(.links-int-on) .external-link {
   text-decoration:none;
 }
-.minimal-theme.links-int-on ..markdown-preview-view .internal-link,
+.minimal-theme.links-int-on .markdown-preview-view .internal-link,
 .markdown-preview-view .internal-link {
   text-decoration:underline;
 }
