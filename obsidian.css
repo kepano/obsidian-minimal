@@ -1722,7 +1722,7 @@ input.search-input:focus {
 
 .status-bar {
   background-color:var(--background-secondary);
-  color:var(--text-faint);
+  color:var(--text-muted);
   font-size:var(--font-smaller);
   padding:0 5px 0;
 }
