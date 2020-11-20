@@ -2142,24 +2142,45 @@ input[type=range]::-webkit-slider-thumb:active {
   transition:opacity 0.2s linear;
 }
 
-/*.graph-view.color-fill {
-  color:var(--background-secondary);
+/* filled color for the circle when not hover*/
+.graph-view.color-fill {
+  color:var(--text-muted);
 }
-.graph-view.color-circle {
-  color:var(--text-normal);
-}
+/*  color for the connecting line when not hover  --background-modifier-border*/
 .graph-view.color-line {
   color:var(--background-modifier-border);
 }
+/* color for text */
 .graph-view.color-text {
   color:var(--text-normal);
 }
+/* filled color for the circle when hover*/
 .graph-view.color-fill-highlight {
-  color:var(--interactive-accent);
-}*/
-.graph-view.color-line-highlight {
-  color:var(--interactive-accent);
+  color:var(--text-accent);
 }
+/*  color for the connecting line when hover*/
+.graph-view.color-line-highlight {
+  color:var(--text-accent);
+  border:0;
+}
+/* color for the circle stroke */
+.graph-view.color-circle {
+  color:var(--text-accent);
+}
+.graph-view.color-fill-unresolved {
+  color:var(--text-faint);
+}
+
+/*
+.theme-dark .graph-view.color-arrow {
+color: #5cc863;
+}
+.theme-dark .graph-view.color-fill-tag {
+  color: #440154;
+}
+.theme-dark .graph-view.color-fill-attachment {
+  color: #277f8e;
+}*/
 
 /* --------------- */
 /* Settings */
