@@ -121,7 +121,7 @@ experience. Remove each line if you want to re-activate the feature */
   --base-l:96%;     /* Base lightness Light Mode  - 100 is white */
   --accent-h:201;   /* Accent hue */
   --accent-s:17%;   /* Accent saturation */
-  --accent-d:65%;   /* Accent lightness Dark Mode */
+  --accent-d:60%;   /* Accent lightness Dark Mode */
   --accent-l:50%;   /* Accent lightness Light Mode */
 
   /*----------------------------------------------------------------
@@ -149,8 +149,11 @@ experience. Remove each line if you want to re-activate the feature */
   --bold-weight:600;     /* Switch to 600 or 700 if you want thicker bold text */
   --line-width:40rem;    /* Maximum characters per line. Turn off "Readable line length" in Obsidian Settings */
   --line-height:1.5;
-  --max-width:85%;       /* Amount of padding around the text, use 90% for narrower padding */
+  --max-width:87%;       /* Amount of padding around the text, use 90% for narrower padding */
   --nested-padding:3.5%; /* Amount of padding for quotes and transclusions */
+  --icon-muted:0.4;
+  --border-width:1px;
+  --border-width-alt:1px;
 
   /*----------------------------------------------------------------
 
@@ -192,9 +195,10 @@ experience. Remove each line if you want to re-activate the feature */
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
-  --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
-  --interactive-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 30%));
-  --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 25%));
+  --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 12%));
+  --text-on-accent:white;
+  --interactive-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 20%));
+  --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 15%));
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --interactive-accent-rgb:66, 66, 66;
   --text-selection:hsla(var(--accent-h),70%,40%,30%);
@@ -220,6 +224,7 @@ experience. Remove each line if you want to re-activate the feature */
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 10%));
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
+  --text-on-accent:white;
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 10%));
@@ -243,11 +248,22 @@ experience. Remove each line if you want to re-activate the feature */
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 6%));
   --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 8%));
   --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 12%));
-  --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 14%));
+  --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 30%));
-  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 6%),0.9);
+  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
+  --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 75%));
+  --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 50%));
+  --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 25%));
+  --icon-muted:0.5;
 }
-
+.borders-low {
+  --border-width:0px;
+  --border-width-alt:1px;
+}
+.borders-none {
+  --border-width:0px;
+  --border-width-alt:0px;
+}
 
 /*----------------------------------------------------------------
 
@@ -357,12 +373,12 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 .hider-ribbon .side-dock-actions,
 .hider-ribbon .side-dock-settings {
   display:flex;
-  border-top:1px solid var(--background-modifier-border);
+  border-top:var(--border-width) solid var(--background-modifier-border);
   background:var(--background-primary);
   margin:0;
 }
 .hider-ribbon .workspace-ribbon.mod-left:after {
-  border-top:1px solid var(--background-modifier-border);
+  border-top:var(--border-width) solid var(--background-modifier-border);
   background:var(--background-primary);
   padding-right:100vw;
   content:" ";
@@ -419,6 +435,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   margin-left:2px;
 }
 .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-actions,
+.focus-mode .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-header:hover .view-actions,
 .workspace-ribbon.mod-left.is-collapsed ~ .mod-root .view-header:hover .view-actions,
 .mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions {
   opacity:1;
@@ -432,6 +449,8 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   opacity:0;
   transition:opacity 0.25s ease-in-out;
 }
+
+
 
 /* --------------- */
 /* Image zoom  */
@@ -467,7 +486,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   padding:5px 0 0 0;
 }
 #calendar-container {
-  padding:0 10px;
+  padding:5px 15px;
   --color-background-day-empty:var(--background-secondary-alt);
   --color-background-day-active:var(--background-tertiary);
   --color-background-day-hover:var(--background-tertiary);
@@ -476,12 +495,22 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   --color-text-heading:var(--text-muted);
   --color-text-day:var(--text-normal);
   --color-text-today:var(--text-normal);
-  --color-arrow:currentColor;
+  --color-arrow:var(--text-faint);
   --color-background-day-empty:transparent;
+}
+.table.svelte-1ocurao.svelte-1ocurao {
+  border-collapse:separate;
+  table-layout:fixed;
 }
 #calendar-container h2 {
   font-weight:400;
   font-size:16px;
+}
+.mod-root #calendar-container {
+  width:var(--line-width);
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0;
 }
 #calendar-container h2 .arrow {
   color:var(--text-faint);
@@ -497,20 +526,70 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   font-weight:500;
 }
 #calendar-container tr td {
-  padding:2px 0 8px;
-  width:14.28%;
-  border-right:3px solid transparent;
+  padding:4px 0 4px;
   border-radius:4px;
-  cursor:var(--cursor);}
-#calendar-container tr {
-  border:3px solid transparent;
+  cursor:var(--cursor);
+  border:2px solid transparent;
+  transition:none;
+}
+body .nav.svelte-1ocurao.svelte-1ocurao {
+  padding:0 0 0 5px;
+}
+body .mod-root .nav.svelte-1ocurao.svelte-1ocurao {
+  padding:0 0 0 0;
 }
 #calendar-container tr td .dot {
   margin:0;
 }
-#calendar-container tr td.today {
+body .arrow.svelte-1ocurao.svelte-1ocurao {
+  cursor:var(--cursor);
+}
+body .arrow.svelte-1ocurao:hover svg.svelte-1ocurao {
+  color:var(--text-muted);
+}
+body .reset-button.svelte-1ocurao.svelte-1ocurao {
+  font-size:var(--font-smaller);
+}
+body .reset-button.svelte-1ocurao.svelte-1ocurao:hover {
+  color:var(--text-normal);
+}
+body .mod-root .title.svelte-1ocurao.svelte-1ocurao {
+  font-size:18px;}
+
+body .month.svelte-1ocurao.svelte-1ocurao,
+body .title.svelte-1ocurao.svelte-1ocurao {
+  font-size:var(--font-normal);
+  font-weight:400;
+}
+#calendar-container tr td.today,
+body .today.svelte-1lgyrog.svelte-1lgyrog {
+  color:var(--text-accent);
   font-weight:600;
 }
+body #calendar-container tr td.today .dot.svelte-1lgyrog {
+  fill:var(--text-accent);
+}
+body .active.svelte-1lgyrog .task.svelte-1lgyrog {
+  stroke:var(--text-faint);
+}
+body .active.svelte-1lgyrog.svelte-1lgyrog {
+  color:var(--text-normal);
+}
+body .active.svelte-1lgyrog.svelte-1lgyrog,
+body .active.today.svelte-1lgyrog.svelte-1lgyrog,
+body .week-num.svelte-1ocurao.svelte-1ocurao:hover,
+body td.svelte-1lgyrog.svelte-1lgyrog:not(:empty):hover {
+  background-color:var(--color-background-day-active);
+}
+body .active.svelte-1lgyrog .dot.svelte-1lgyrog {
+  fill:var(--text-faint);}
+body .active.svelte-1lgyrog .task.svelte-1lgyrog {
+  stroke:var(--text-faint);
+}
+body .year.svelte-1ocurao.svelte-1ocurao {
+  color:var(--text-normal);
+}
+
 
 
 /*----------------------------------------------------------------
@@ -628,10 +707,11 @@ body, input, button,
 .view-action {
   background:transparent;
   color:var(--text-muted);
-  opacity:0.4;
+  opacity:var(--icon-muted);
   transition:opacity 0.1s ease-in-out;
   cursor:var(--cursor);
 }
+
 .view-header-icon {
   opacity:0;
 }
@@ -725,7 +805,7 @@ span.cm-hashtag.cm-hashtag-end {
   border-radius:10px;
 }
 .modal.mod-settings .vertical-tab-content-container {
-  border-left:1px solid var(--background-modifier-border);
+  border-left:var(--border-width) solid var(--background-modifier-border);
   padding-bottom:0;
   padding-right:0;
 }
@@ -796,24 +876,32 @@ input.prompt-input:hover {
 .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content {
   height:calc(100% - 6px);
 }
-.workspace-split.mod-root .workspace-leaf-content {
+.workspace-split.mod-root.mod-horizontal .workspace-leaf-resize-handle,
+.workspace-split.mod-root.mod-vertical .workspace-leaf-resize-handle {
+  border-width:1px;
 }
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   height:3px;
   background:transparent;
-  border-bottom:1px solid var(--background-modifier-border);
+  border-bottom:var(--border-width-alt) solid var(--background-modifier-border);
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   background:transparent;
-  border-left:1px solid var(--background-modifier-border);
+  border-left:var(--border-width-alt) solid var(--background-modifier-border);
   width:3px !important;
 }  
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   background:transparent;
-  border-right:1px solid var(--background-modifier-border);
+  border-right:var(--border-width) solid var(--background-modifier-border);
   width:2px !important;
 }
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover {
+}
+
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:active,
@@ -837,7 +925,7 @@ input.prompt-input:hover {
 
 .workspace-tab-container-inner {
   background:transparent;
-  border-bottom:1px solid var(--background-modifier-border);
+  border-bottom:var(--border-width) solid var(--background-modifier-border);
   border-radius:0;
   width:100%;
   max-width:100%;
@@ -1167,7 +1255,7 @@ border-bottom:1px solid #999;
   padding-top:10px;
   height:50px;
   background-color:var(--background-primary);
-  border-top:1px solid var(--background-modifier-border);
+  border-top:var(--border-width-alt) solid var(--background-modifier-border);
   width:100%;
 }
 input.document-search-input,
@@ -1331,6 +1419,16 @@ input[type=checkbox]:checked {
 .nav-header {
   padding:0;
 }
+/*
+.nav-header:after {
+  content:"";
+  pointer-events:none;
+  z-index:9;
+  background:linear-gradient(0deg,var(--background-transparent) 0%,var(--background-secondary) 100%);;
+  height:12px;
+  width:100%;
+  position:fixed;
+}*/
 .nav-buttons-container {
   padding:10px 5px 0px 5px;
   margin-bottom:0px !important;
@@ -1724,6 +1822,7 @@ input.search-input:focus {
   background-color:var(--background-secondary);
   color:var(--text-muted);
   font-size:var(--font-smaller);
+  border-width:var(--border-width-alt);
   padding:0 5px 0;
 }
 .status-bar-item {
@@ -1765,6 +1864,7 @@ input.search-input:focus {
   cursor:var(--cursor);
 }
 .workspace-ribbon {
+  border-width:var(--border-width-alt);
   border-color:var(--background-modifier-border);
   background:var(--background-secondary);
 }
@@ -1914,7 +2014,6 @@ ol > li::before {
 }
 
 /* Code */
-
 .theme-light :not(pre) > code[class*="language-"],
 .theme-light pre[class*="language-"] {
   background-color:var(--background-primary-alt);
@@ -1925,7 +2024,7 @@ ol > li::before {
 }
 .markdown-preview-section .frontmatter code {
   color:var(--text-muted);
-  font-szie:var(--font-small);
+  font-size:var(--font-small);
 }
 .cm-s-obsidian .hmd-fold-html-stub,
 .cm-s-obsidian .hmd-fold-code-stub,
