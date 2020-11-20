@@ -803,6 +803,7 @@ span.cm-hashtag.cm-hashtag-end {
   border:none;
   background:var(--background-primary);
   border-radius:10px;
+  overflow:hidden;
 }
 .modal.mod-settings .vertical-tab-content-container {
   border-left:var(--border-width) solid var(--background-modifier-border);
@@ -1108,13 +1109,13 @@ border-bottom:1px solid #999;
 .cm-s-obsidian pre.HyperMD-list-line {
   padding-top:0;
 }
-.markdown-preview-view {
+.workspace .markdown-preview-view {
   padding:0;
 }
-.markdown-preview-view .markdown-embed {
+.workspace .markdown-preview-view .markdown-embed {
   margin:0;
 }
-.markdown-preview-view .markdown-embed-content {
+.workspace .markdown-preview-view .markdown-embed-content {
   max-height:none;
 }
 .markdown-embed-title,
