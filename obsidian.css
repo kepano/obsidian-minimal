@@ -779,6 +779,8 @@ body, input, button,
   margin:2px 0;
   vertical-align:middle;
   padding-top:1px;
+  border-left:none;
+  border-right:none;
   padding-bottom:2px;
   cursor:text;
 }
@@ -787,12 +789,14 @@ span.cm-hashtag.cm-hashtag-begin {
   border-bottom-left-radius:14px;
   padding-left:8px;
   border-right:none;
+  border-left:1px solid var(--background-modifier-border);
 }
 span.cm-hashtag.cm-hashtag-end {
   border-top-right-radius:14px;
   border-bottom-right-radius:14px;
   border-left:none;
   padding-right:8px;
+  border-right:1px solid var(--background-modifier-border);
 }
 
 
@@ -1290,8 +1294,11 @@ input.document-replace-input:focus {
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
   font-size:var(--font-small);
   line-height:1.2;}
-.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] {
+.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .markdown-preview-view {
   padding:0 15px;
+}
+.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .markdown-embed .markdown-preview-view {
+  padding:0;
 }
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-section,
@@ -2072,14 +2079,64 @@ ol > li::before {
 /* --------------- */
 /* Graphs */
 
+.workspace-leaf-content[data-type='localgraph'] .view-header,
+.workspace-leaf-content[data-type='graph'] .view-header {
+  position:fixed;
+  background:transparent !important;
+  width:100%;}
+.workspace-leaf-content[data-type='localgraph'] .view-content,
+.workspace-leaf-content[data-type='graph'] .view-content {
+  height:100%;}
+.workspace-leaf-content[data-type='localgraph'] .view-header-title,
+.workspace-leaf-content[data-type='graph'] .view-header-title {
+  display:none;}
+.workspace-leaf-content[data-type='localgraph'] .view-actions,
+.workspace-leaf-content[data-type='graph'] .view-actions {
+  background:transparent;}
 
-.graph-control-section {
+.mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls,
+.mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
+  top:30px;}
+
+.graph-controls .setting-item-name,
+.graph-control-section-header {
+  font-weight:500;
+  color:var(--text-faint);
+  font-size:var(--font-smaller);
 }
+/*
+.mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
+  top:0px;
+  left:30px;
+  z-index:99;
+  flex-direction:row;
+  max-width:none;
+  background:transparent;
+  display:flex;
+  border:0;
+}
+.mod-root .collapsible-item.graph-control-section.mod-filter {
+
+}
+.mod-root .collapsible-item-self {
+  padding-top:10px;
+  background-color:var(--background-primary);
+  margin:0;
+}
+.mod-root .collapsible-item-children {
+  margin-top:0;
+  background-color:var(--background-primary);
+  padding:10px;
+  margin:0;
+  border:1px solid var(--background-modifier-border);
+
+}*/
+
 .graph-controls {
   background:var(--background-primary);
   border:none;
   left:0;
-  top:5px;
+  top:10px;
   margin-bottom:0;
   padding:0 20px 10px 10px;
   border-radius:0;
@@ -2171,7 +2228,7 @@ input[type=range]::-webkit-slider-thumb:active {
   color:var(--text-faint);
 }
 
-/*
+/* ---------------
 .theme-dark .graph-view.color-arrow {
 color: #5cc863;
 }
@@ -2180,7 +2237,10 @@ color: #5cc863;
 }
 .theme-dark .graph-view.color-fill-attachment {
   color: #277f8e;
-}*/
+}
+.theme-dark .graph-view.color-fill-unresolved {
+  color: #fde725; 
+} */
 
 /* --------------- */
 /* Settings */
