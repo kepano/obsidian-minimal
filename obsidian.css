@@ -1,23 +1,16 @@
 /* 
 
-Minimal Obsidian 2.4 by @kepano
+Minimal Obsidian 2.4.1 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
 
-DISCLAIMER
 
-This theme is provided "as is", and is focused on my personal use
-of Obsidian. As such I have neither optimized nor tested it with 
-all the features of Obsidian that I don't frequently use.
+Sponsor my work on Patreon:
+https://www.patreon.com/kepano
 
-Since this theme modifies significant parts of the Obsidian interface,
-it might break with future updates. 
-
-It also may be incompatible with other bits of custom CSS you have.
-The file is organized in such a way that you can remove or comment
-out sections that may be causing conflicts.
-
+Readme:;
+https://github.com/kepano/obsidian-minimal
 
 ----------------------------------------------------------------
 
@@ -72,14 +65,10 @@ Minimal Styling
 
 OPTIONS
 
-Disabled features
+Disabled features */
 
-These features are hidden in pursuit of a more focused editing 
-experience. Remove each line if you want to re-activate the feature */
-
-.pane-list-item-ending-flair:not(.tag-pane-tag-count), /* Search counts */
-.prompt-instructions {                                 /* Linking tips */
-  display:none !important;
+.pane-list-item-ending-flair:not(.tag-pane-tag-count) { /* Search counts */
+  display:none;
 }
 
 /* Hides the name of the root folder */
@@ -145,6 +134,7 @@ experience. Remove each line if you want to re-activate the feature */
   --font-normal:16px;
   --font-small:13px;
   --font-smaller:11px;
+  --font-smallest:10px;
   --normal-weight:400;   /* Switch to 300 if you want thinner default text */
   --bold-weight:600;     /* Switch to 700 if you want thicker bold text */
   --line-width:40rem;    /* Maximum characters per line */
@@ -170,7 +160,6 @@ experience. Remove each line if you want to re-activate the feature */
   THEME
 
   These values are mostly driven by the options above */
-
 
   .theme-light {
     --background-primary:white;
@@ -302,6 +291,9 @@ Frameless mode on macOS only */
 /* Andy Mode Sliding Panes
    Designed for use with death_au's plugin */
 
+body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+  background:none;
+}
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
     text-orientation:sideways;
 }
@@ -338,7 +330,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-titl
 body.plugin-sliding-panes-rotate-header .view-header-title-container {
   position:static;
 }
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-actions {
+body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
   padding-left:0;
   padding-bottom:40px;
   margin-left:4px;
@@ -365,16 +357,13 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   pointer-events:none;
 }
 .hider-ribbon .workspace-ribbon.mod-left {
-  display:flex; 
-}
-.hider-ribbon .workspace-ribbon.mod-left {
   position:fixed;
   border-right:0px;
   margin:0;
   height:40px;
   bottom:0;
   top:auto;
-  display:flex;
+  display:flex !important;
   flex-direction:row;
   background:var(--background-primary);
   z-index:17;
@@ -557,19 +546,15 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 #calendar-container .nav {
   padding:0;
 }
-
 #calendar-container tr td .dot {
   margin:0;
 }
-
 #calendar-container .arrow {
   cursor:var(--cursor);
 }
-
 #calendar-container .arrow:hover svg {
   color:var(--text-muted);
 }
-
 #calendar-container .reset-button {
   font-size:var(--font-smaller);
 }
@@ -611,7 +596,6 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 #calendar-container .year {
   color:var(--text-normal);
 }
-
 
 
 /*----------------------------------------------------------------
@@ -774,6 +758,7 @@ body, input, button,
 /* --------------- */
 /* Tags */
 
+.frontmatter-container .tag,
 .tag {
   background-color:transparent;
   border:1px solid var(--background-modifier-border);
@@ -825,6 +810,10 @@ span.cm-hashtag.cm-hashtag-end {
 /* --------------- */
 /* Modals */
 
+.progress-bar-message {
+  color:var(--text-faint);
+}
+
 .modal {
   border:none;
   background:var(--background-primary);
@@ -866,6 +855,43 @@ input.prompt-input:hover {
 .prompt-instruction-command {
   font-weight:600;
 }
+
+
+/* --------------- */
+/* Minimal modals 
+
+
+.modal-bg {
+  background-color:var(--background-primary);
+}
+.modal, .prompt, .suggestion-container {
+  box-shadow:none;
+}
+.prompt {
+  padding:0;
+  max-height:85vh;
+  top:15vh;
+}
+input.prompt-input {
+  font-size:18px;
+}
+
+.modal.mod-community-plugin,
+.modal.mod-settings {
+  width:100vw;
+  height:100vh;
+  max-height:100vh;
+  max-width:100vw;
+}
+.modal.mod-settings .vertical-tab-header,
+.modal.mod-settings .vertical-tab-content-container {
+  height:100vh;
+}
+
+.modal.mod-settings .vertical-tab-content-container {
+  max-width:1000px;
+}*/
+
 
 /* --------------- */
 /* Drag ghost */
@@ -1154,7 +1180,8 @@ border-bottom:1px solid #999;
 .CodeMirror-linenumber {
   font-size:var(--font-small) !important;
   font-feature-settings:'tnum';
-  padding-top:6px;
+  color:var(--text-faint);
+  padding-top:3px;
 }
 .cm-s-obsidian span.cm-url {
   color:var(--text-accent);
@@ -1339,6 +1366,9 @@ input.document-replace-input:focus {
   padding:0;
 }
 
+.workspace > .workspace-split:not(.mod-root) .CodeMirror-sizer {
+  padding-left:10px;
+}
 
 
 /* --------------- */
@@ -1368,8 +1398,9 @@ input[type=checkbox]:focus,input[type=checkbox]:hover {
   outline:0;
   border-color:var(--text-faint);
 }
+.is-flashing input[type=checkbox]:checked,
 input[type=checkbox]:checked {
-  background-color:var(--background-modifier-accent);
+  background-color:var(--background-modifier-accent) !important;
   border:1px solid var(--background-modifier-accent);
   background-position:center;
   background-size:70%;
@@ -1750,7 +1781,7 @@ input.search-input:focus {
   color:var(--text-faint);
   text-transform:uppercase;
   letter-spacing:0.05em;
-  font-size:10px;
+  font-size:var(--font-smallest);
   font-weight:500;
   padding-top:10px;
   background:transparent;
@@ -1840,9 +1871,6 @@ input.search-input:focus {
 }
 .tag-pane-tag:hover {
   background:transparent;
-}
-.workspace-leaf-content[data-type='tag'] {
-  padding-top:10px;
 }
 .nav-file.is-active .nav-file-title:hover {
   background:var(--background-tertiary) !important;
@@ -1936,6 +1964,13 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
   height:1px;
   border-width:2px 0 0 0;
 }
+a[href*="obsidian://search"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'%3E%3Cpath fill='black' stroke='black' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'%3E%3C/path%3E%3C/svg%3E");
+}
+.theme-dark a[href*="obsidian://search"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'%3E%3Cpath fill='white' stroke='white' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'%3E%3C/path%3E%3C/svg%3E");
+}
+.minimal-theme:not(.links-int-on) a[href*="obsidian://"],
 .minimal-theme:not(.links-int-on) .markdown-preview-view .internal-link,
 .minimal-theme:not(.links-int-on) .external-link {
   text-decoration:none;
@@ -1976,6 +2011,36 @@ iframe {
   transition:background-color 0.3s ease;
   background-color:var(--text-selection);
   color:inherit;
+}
+
+/* Metadata */
+
+.frontmatter-collapse-indicator.collapse-indicator {
+  display:none;
+}
+.frontmatter-container .tag {
+  font-size:var(--font-smaller);
+}
+.frontmatter-container .frontmatter-alias {
+  color:var(--text-muted);
+}
+.frontmatter-container {
+  color:var(--text-muted);
+  font-size:var(--font-small);
+  padding:10px 0;
+  background:transparent;
+  border-radius:0;
+  margin:0;
+  border:0;
+  border-bottom:1px solid var(--background-modifier-border);
+}
+.frontmatter-container .frontmatter-container-header {
+  padding:0;
+  font-weight:500;
+  border-bottom:0;
+  font-size:var(--font-small);
+}
+.frontmatter-container .frontmatter-container-header:before {
 }
 
 /* Blockquotes */
@@ -2093,6 +2158,7 @@ ol > li::before {
 
 .popover,
 .popover.hover-popover {
+  min-height:40px;
   box-shadow:0 20px 40px var(--background-modifier-box-shadow);
   pointer-events:auto !important;
   border:1px solid var(--background-modifier-border);
@@ -2107,6 +2173,10 @@ ol > li::before {
 }
 .popover.hover-popover .markdown-embed .markdown-embed-content {
   max-height:none;
+}
+.popover.mod-empty {
+  padding:20px 15px 20px 20px;
+  color:var(--text-muted);
 }
 
 /* --------------- */
