@@ -520,7 +520,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   --color-arrow:var(--text-faint);
   --color-background-day-empty:transparent;
 }
-.table.svelte-1ocurao.svelte-1ocurao {
+#calendar-container .table {
   border-collapse:separate;
   table-layout:fixed;
 }
@@ -554,61 +554,61 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   border:2px solid transparent;
   transition:none;
 }
-body .nav.svelte-1ocurao.svelte-1ocurao {
-  padding:0 0 0 5px;
+#calendar-container .nav {
+  padding:0;
 }
-body .mod-root .nav.svelte-1ocurao.svelte-1ocurao {
-  padding:0 0 0 0;
-}
+
 #calendar-container tr td .dot {
   margin:0;
 }
-body .arrow.svelte-1ocurao.svelte-1ocurao {
+
+#calendar-container .arrow {
   cursor:var(--cursor);
 }
-body .arrow.svelte-1ocurao:hover svg.svelte-1ocurao {
+
+#calendar-container .arrow:hover svg {
   color:var(--text-muted);
 }
-body .reset-button.svelte-1ocurao.svelte-1ocurao {
+
+#calendar-container .reset-button {
   font-size:var(--font-smaller);
 }
-body .reset-button.svelte-1ocurao.svelte-1ocurao:hover {
+#calendar-container .reset-button:hover {
   color:var(--text-normal);
 }
-body .mod-root .title.svelte-1ocurao.svelte-1ocurao {
+#calendar-container .title {
   font-size:18px;}
 
-body .month.svelte-1ocurao.svelte-1ocurao,
-body .title.svelte-1ocurao.svelte-1ocurao {
+#calendar-container .month,
+#calendar-container .title {
   font-size:var(--font-normal);
   font-weight:400;
 }
-#calendar-container tr td.today,
-body .today.svelte-1lgyrog.svelte-1lgyrog {
+#calendar-container .today {
   color:var(--text-accent);
   font-weight:600;
 }
-body #calendar-container tr td.today .dot.svelte-1lgyrog {
+#calendar-container .today .dot {
   fill:var(--text-accent);
 }
-body .active.svelte-1lgyrog .task.svelte-1lgyrog {
+#calendar-container .active .task {
   stroke:var(--text-faint);
 }
-body .active.svelte-1lgyrog.svelte-1lgyrog {
+#calendar-container .active {
   color:var(--text-normal);
 }
-body .active.svelte-1lgyrog.svelte-1lgyrog,
-body .active.today.svelte-1lgyrog.svelte-1lgyrog,
-body .week-num.svelte-1ocurao.svelte-1ocurao:hover,
-body td.svelte-1lgyrog.svelte-1lgyrog:not(:empty):hover {
+#calendar-container .active,
+#calendar-container .active.today,
+#calendar-container .week-num:hover,
+#calendar-container td:not(:empty):hover {
   background-color:var(--color-background-day-active);
 }
-body .active.svelte-1lgyrog .dot.svelte-1lgyrog {
+#calendar-container .active .dot {
   fill:var(--text-faint);}
-body .active.svelte-1lgyrog .task.svelte-1lgyrog {
+#calendar-container .active .task {
   stroke:var(--text-faint);
 }
-body .year.svelte-1ocurao.svelte-1ocurao {
+#calendar-container .year {
   color:var(--text-normal);
 }
 
