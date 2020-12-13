@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.4.2 by @kepano
+Minimal Obsidian 2.4.3 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1113,8 +1113,8 @@ border-bottom:1px solid #999;
 /* Custom line width */
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  max-width:100%;
-  width:auto;
+  max-width:var(--max-width);
+  width:var(--line-width);
 }
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .CodeMirror,
@@ -1374,6 +1374,14 @@ input.document-replace-input:focus {
 
 /* --------------- */
 /* Form inputs */
+
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+    font-size:var(--font-normal);
+}
 
 select:focus,
 input[type='text']:active,
@@ -1709,9 +1717,25 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .search-result-file-matched-text {
   background-color:var(--text-selection);
 }
+
+.search-input-container input {
+  font-size:var(--font-small);
+  padding:5px 10px
+}
 .search-input-container {
   width:calc(100% - 20px);
+  margin:0 10px;
 }
+
+.workspace-leaf-content .setting-item {
+  padding:5px 0;
+  border:none;
+}
+.workspace-leaf-content .setting-item-control {
+  flex-shrink:0;
+  flex:1;
+}
+
 .search-input-clear-button {
   cursor:var(--cursor);
   top:0px;
