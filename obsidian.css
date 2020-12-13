@@ -1195,6 +1195,14 @@ border-bottom:1px solid #999;
 
 /* Transcluded notes embeds */
 
+
+.markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
+  max-width:100%;
+  width:100%;
+}
+.markdown-embed h1:first-child {
+  margin-block-start: 0em;}
+
 .markdown-preview-view .markdown-embed {
   margin-top:var(--nested-padding);
   padding:0 calc(var(--nested-padding) / 2) 0 var(--nested-padding);
