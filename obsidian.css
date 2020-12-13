@@ -1717,10 +1717,12 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .search-result-file-matched-text {
   background-color:var(--text-selection);
 }
-
-.search-input-container input {
+.search-input-container input,
+.search-input-container input:hover,
+.search-input-container input:focus {
   font-size:var(--font-small);
-  padding:5px 10px
+  padding:5px 10px;
+  background-color:var(--background-secondary);
 }
 .search-input-container {
   width:calc(100% - 20px);
