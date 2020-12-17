@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.4.3 by @kepano
+Minimal Obsidian 2.4.4 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -361,6 +361,8 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   border-right:0px;
   margin:0;
   height:40px;
+  width:auto;
+  flex-basis:auto;
   bottom:0;
   top:auto;
   display:flex !important;
@@ -926,9 +928,6 @@ input.prompt-input {
     border-top-right-radius:0px;
     border-top-left-radius:0px;
 }
-.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content {
-  height:calc(100% - 6px);
-}
 .workspace-split.mod-root.mod-horizontal .workspace-leaf-resize-handle,
 .workspace-split.mod-root.mod-vertical .workspace-leaf-resize-handle {
   border-width:1px;
@@ -1195,11 +1194,11 @@ border-bottom:1px solid #999;
 
 /* Transcluded notes embeds */
 
-
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width:100%;
   width:100%;
 }
+
 .markdown-embed h1:first-child {
   margin-block-start: 0em;}
 
@@ -2218,6 +2217,7 @@ ol > li::before {
   display:none;
 }
 .popover .markdown-embed .markdown-preview-view {
+  padding-top:15px;
   padding-bottom:30px;
 }
 .popover.hover-popover .markdown-embed .markdown-embed-content {
