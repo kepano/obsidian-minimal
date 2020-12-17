@@ -361,8 +361,8 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   border-right:0px;
   margin:0;
   height:40px;
-  width:auto;
-  flex-basis:auto;
+  overflow:visible;
+  flex-basis:0;
   bottom:0;
   top:auto;
   display:flex !important;
