@@ -1592,6 +1592,12 @@ input[type=checkbox]:checked {
   border-radius:6px;
   cursor:var(--cursor);
 }
+.nav-file-title.is-being-dragged,
+.nav-file-title.is-active,
+body:not(.is-grabbing) .nav-file-title.is-active:hover {
+  background-color:var(--background-tertiary);
+  color:var(--text-normal);
+}
 .nav-file-title-content {
   width:100%;
   white-space:nowrap;
@@ -1600,6 +1606,14 @@ input[type=checkbox]:checked {
   padding:0 5px;
   vertical-align:middle;
   cursor:var(--cursor);
+}
+.drop-indicator {
+  border-width:1px;
+}
+.nav-file-icon {
+  margin:1px 0 0 0;
+  vertical-align:bottom;
+  padding:0 0 0 5px;
 }
 .workspace-leaf-content[data-type=starred] .nav-file-title-content {
   width:calc(100% - 15px);
@@ -1651,6 +1665,9 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .is-collapsed .side-dock-collapsible-section-header-indicator {
   color:var(--text-faint);
   cursor:var(--cursor);
+}
+.nav-folder-title.is-being-dragged-over .nav-folder-collapse-indicator {
+  color:var(--text-normal);
 }
 
 /* --------------- */
