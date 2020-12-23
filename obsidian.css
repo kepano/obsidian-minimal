@@ -1774,6 +1774,7 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   background:var(--text-faint);
   margin-right:10px;
   margin-top:0px;
+  margin-left:-1rem;
   display:inline-block;
   line-height:0;
   height:0.15em;
@@ -2308,17 +2309,11 @@ iframe {
 ul {
   padding-inline-start:2em;
   list-style:none;
+  list-style-type:none !important;
 }
 ul ul, ol ul, ol ol ul, ol ul ul, ul ol ul, ul ul ul {
   list-style:none;
-}
-ul > li:not(.task-list-item)::before {
-  content:"\2022";
-  color:var(--text-faint);
-  font-weight:600;
-  display:inline-block;
-  width:1em;
-  margin-left:-1em;
+  list-style-type:none !important;
 }
 ul li p, ol li p {
   display:inline;
