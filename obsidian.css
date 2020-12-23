@@ -2309,11 +2309,11 @@ iframe {
 ul {
   padding-inline-start:2em;
   list-style:none;
-  list-style-type:none !important;
+  list-style-type:none;
 }
 ul ul, ol ul, ol ol ul, ol ul ul, ul ol ul, ul ul ul {
   list-style:none;
-  list-style-type:none !important;
+  list-style-type:none;
 }
 ul li p, ol li p {
   display:inline;
