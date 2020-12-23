@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.4.4 by @kepano
+Minimal Obsidian 2.5.0 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -49,6 +49,8 @@ Minimal Styling
   Sidebar documents
   Toggle switches
   File browser
+  Relationship lines
+  Folding
   Outline
   Search
   Tag pane
@@ -58,7 +60,8 @@ Minimal Styling
   Code
   Popovers
   Graphs
-  Scrollbars
+  Settings
+  Scroll bars
 
 
 ----------------------------------------------------------------
@@ -135,6 +138,12 @@ Disabled features */
   --font-small:13px;
   --font-smaller:11px;
   --font-smallest:10px;
+  --h1:1.125em;
+  --h2:1em;
+  --h3:1em;
+  --h4:1em;
+  --h5:0.9735em;
+  --h6:0.875em;
   --normal-weight:400;   /* Switch to 300 if you want thinner default text */
   --bold-weight:600;     /* Switch to 700 if you want thicker bold text */
   --line-width:40rem;    /* Maximum characters per line */
@@ -517,7 +526,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 }
 #calendar-container h2 {
   font-weight:400;
-  font-size:16px;
+  font-size:var(--h2);
 }
 .mod-root #calendar-container {
   width:var(--line-width);
@@ -564,7 +573,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   color:var(--text-normal);
 }
 #calendar-container .title {
-  font-size:18px;}
+  font-size:var(--h1);}
 
 #calendar-container .month,
 #calendar-container .title {
@@ -637,7 +646,7 @@ body, input, button,
 .markdown-embed-title {
   letter-spacing:-0.02em;
   text-align:left;
-  font-size:1.125em;
+  font-size:var(--h1);
   font-weight:var(--bold-weight);
 }
 .empty-state-title,
@@ -645,7 +654,7 @@ body, input, button,
 .HyperMD-header-1,
 .cm-header-1 {
   letter-spacing:-0.02em;
-  font-size:1.125em;
+  font-size:var(--h1);
   line-height:1.3;
   font-weight:var(--bold-weight);
 }
@@ -653,7 +662,7 @@ body, input, button,
 .HyperMD-header-2,
 .cm-header-2 {
   letter-spacing:-0.02em;
-  font-size:1em;
+  font-size:var(--h2);
   line-height:1.3;
   font-weight:var(--bold-weight);
 }
@@ -662,7 +671,7 @@ body, input, button,
 .cm-header-3 {
   letter-spacing:-0em;
   font-weight:500;
-  font-size:1em;
+  font-size:var(--h3);
   line-height:1.4;
 }
 .markdown-preview-view h4,
@@ -673,7 +682,7 @@ body, input, button,
   letter-spacing:0.02em;
   color:var(--text-normal);
   font-weight:var(--normal-weight);
-  font-size:1.0625em;
+  font-size:var(--h4);
 }
 .markdown-preview-view h5,
 .HyperMD-header-5,
@@ -683,7 +692,7 @@ body, input, button,
   letter-spacing:0.05em;
   color:var(--text-normal);
   font-weight:300;
-  font-size:0.9735em;
+  font-size:var(--h5);
 }
 .markdown-preview-view h6,
 .HyperMD-header-6,
@@ -693,7 +702,7 @@ body, input, button,
   letter-spacing:0.1em;
   color:var(--text-muted);
   font-weight:300;
-  font-size:0.875em;
+  font-size:var(--h6);
 }
 
 /* --------------- */
@@ -1192,7 +1201,7 @@ border-bottom:1px solid #999;
   color:var(--text-accent);
 }
 
-/* Transcluded notes embeds */
+/* Transcluded notes and embeds */
 
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width:100%;
@@ -1244,6 +1253,24 @@ border-bottom:1px solid #999;
   border:0;
   border-left:1px solid var(--quote-opening-modifier);
   border-radius:0;
+}
+
+/* Embedded Searches */
+
+.markdown-preview-view .internal-query.is-embed {
+  border-top:none;
+  border-bottom:none;
+}
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
+  justify-content:start;
+}
+.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
+  font-weight:500;
+  color:var(--text-normal);
+  font-size:var(--h2);
+}
+.internal-query.is-embed .search-result-file-matches {
+  border-bottom:0;
 }
 
 /* Editor Mode Footnotes */
@@ -1467,33 +1494,6 @@ input[type=checkbox]:checked {
 }
 
 /* --------------- */
-/* Folding */
-
-.markdown-preview-view ul > li.task-list-item .collapse-indicator {
-  margin-left:-30px;
-  margin-top:4px;
-  position:absolute;
-}
-.markdown-preview-view .collapse-indicator {
-  margin-left:-57px;
-  position:absolute;
-}
-.markdown-preview-view .heading-collapse-indicator {
-  margin-left:-27px;
-  padding-top:7px;
-  padding-bottom:7px;
-}
-.markdown-preview-view h4 .heading-collapse-indicator,
-.markdown-preview-view h5 .heading-collapse-indicator,
-.markdown-preview-view h6 .heading-collapse-indicator {
-  margin-top:-7px;
-}
-.CodeMirror-foldgutter-open,
-.CodeMirror-foldgutter-folded {
-  cursor:var(--cursor);
-}
-
-/* --------------- */
 /* Toggle switches */
 
 .checkbox-container {
@@ -1670,6 +1670,166 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   color:var(--text-normal);
 }
 
+
+/* --------------- */
+/* Relationship lines */
+
+/* Relationship lines in Preview */
+
+body.minimal-rel-preview .markdown-preview-view ul ul {
+  position:relative;
+}
+body.minimal-rel-preview .markdown-preview-view ul ul::before {
+  content:'';
+  border-left:1px solid var(--background-modifier-border);
+  position:absolute;
+  left:-14px;
+  top:0;
+  bottom:0; 
+}
+body.minimal-rel-preview .markdown-preview-view ul.contains-task-list::before {
+  top:5px;
+}
+body.minimal-rel-preview .markdown-preview-view .task-list-item-checkbox {
+  margin-left:-21px;
+}
+
+/* Relationship lines in Edit mode  */
+
+body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab {
+  display:inline-block;
+}
+body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
+  content:" ";
+  display:block;
+  width:1px;
+  position:absolute;
+  top:1px;
+  border-right:1px solid var(--background-modifier-border);
+  height:100%;
+}
+
+/* --------------- */
+/* Folding */
+
+/* Add padding to account for gutter in Edit mode when folding is on */
+
+body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title,
+.minimal-folding .allow-fold-headings.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.minimal-folding .allow-fold-lists.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  padding-left:16px;
+}
+
+/* Folding icons in Preview */
+
+.markdown-preview-view .heading-collapse-indicator.collapse-indicator svg,
+.markdown-preview-view ol > li .collapse-indicator svg,
+.markdown-preview-view ul > li .collapse-indicator svg {
+  opacity:0;
+}
+
+h1:hover .heading-collapse-indicator.collapse-indicator svg,
+h2:hover .heading-collapse-indicator.collapse-indicator svg,
+h3:hover .heading-collapse-indicator.collapse-indicator svg,
+h4:hover .heading-collapse-indicator.collapse-indicator svg,
+h5:hover .heading-collapse-indicator.collapse-indicator svg,
+.markdown-preview-view .is-collapsed .collapse-indicator svg,
+.markdown-preview-view .collapse-indicator:hover svg {
+  opacity:1;
+}
+.markdown-preview-view .is-collapsed h1::after,
+.markdown-preview-view .is-collapsed h2::after,
+.markdown-preview-view .is-collapsed h3::after,
+.markdown-preview-view .is-collapsed h4::after,
+.markdown-preview-view .is-collapsed h5::after,
+.markdown-preview-view ol .is-collapsed::after,
+.markdown-preview-view ul .is-collapsed::after {
+  content:"...";
+  padding:5px;
+  color:var(--text-faint);
+}
+.markdown-preview-view ol > li.task-list-item .collapse-indicator,
+.markdown-preview-view ul > li.task-list-item .collapse-indicator {
+  margin-left:-42px;
+  margin-top:5px;
+  position:absolute;
+}
+.markdown-preview-view ol > li .collapse-indicator {
+  padding-right:20px;
+}
+.markdown-preview-view .heading-collapse-indicator.collapse-indicator {
+  margin-left:-25px;
+  padding-right:7px 8px 7px 0;
+}
+.markdown-preview-view .collapse-indicator {
+  position:absolute;
+  margin-left:-40px;
+  padding-bottom:10px;
+  padding-top:8px;}
+.markdown-preview-view ul > li:not(.task-list-item) .collapse-indicator {
+  padding-right:20px;}
+.markdown-preview-view ul > li:not(.task-list-item)::before {
+  content:'';
+  border-radius:50%;
+  background:var(--text-faint);
+  margin-right:10px;
+  margin-top:0px;
+  display:inline-block;
+  line-height:0;
+  height:0.15em;
+  width:0.15em;
+  border:1px solid var(--text-faint);
+  vertical-align:middle;
+  color:transparent
+}
+.markdown-preview-view ul > li:not(.task-list-item).is-collapsed::before {
+  box-shadow:0 0 0px 4px var(--background-modifier-border);
+}
+.list-collapse-indicator .collapse-indicator .collapse-icon {
+  opacity:0;
+}
+
+/* Folding icons in Edit mode */
+
+.CodeMirror-foldmarker {
+  color:var(--text-faint);
+  cursor:default;
+  margin-left:5px;
+}
+.CodeMirror-foldgutter-folded {
+  cursor:var(--cursor);
+  margin-top:-3px;
+  transform:rotate(-90deg);
+}
+.CodeMirror-foldgutter-open {
+  cursor:var(--cursor);
+  margin-top:-1px;
+  width:16px;
+  height:20px;
+}
+.CodeMirror-foldgutter-folded:after,
+.CodeMirror-foldgutter-open:after  {
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' class='right-triangle'%3E%3Cpath fill='currentColor' stroke='currentColor' d='M94.9,20.8c-1.4-2.5-4.1-4.1-7.1-4.1H12.2c-3,0-5.7,1.6-7.1,4.1c-1.3,2.4-1.2,5.2,0.2,7.6L43.1,88c1.5,2.3,4,3.7,6.9,3.7 s5.4-1.4,6.9-3.7l37.8-59.6C96.1,26,96.2,23.2,94.9,20.8L94.9,20.8z'%3E%3C/path%3E%3C/svg%3E");
+  color:transparent;
+}
+.theme-dark .CodeMirror-foldgutter-folded:after,
+.theme-dark .CodeMirror-foldgutter-open:after {
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' class='right-triangle'%3E%3Cpath fill='%23FFFFFF' stroke='%23FFFFFF' d='M94.9,20.8c-1.4-2.5-4.1-4.1-7.1-4.1H12.2c-3,0-5.7,1.6-7.1,4.1c-1.3,2.4-1.2,5.2,0.2,7.6L43.1,88c1.5,2.3,4,3.7,6.9,3.7 s5.4-1.4,6.9-3.7l37.8-59.6C96.1,26,96.2,23.2,94.9,20.8L94.9,20.8z'%3E%3C/path%3E%3C/svg%3E");
+}
+.CodeMirror-foldgutter-open:after {
+  opacity:0;
+}
+.CodeMirror-foldgutter-folded:after,
+.CodeMirror-code > div:hover .CodeMirror-foldgutter-open:after {
+  opacity:0.3;
+}
+.CodeMirror-code > div:hover .CodeMirror-foldgutter-open:hover:after,
+.CodeMirror-code > div:hover .CodeMirror-foldgutter-folded:hover:after {
+  opacity:1;
+}
+
 /* --------------- */
 /* Outline */
 
@@ -1695,6 +1855,9 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   opacity:1;
   left:-5px;
   color:var(--text-faint);
+}
+.outline .collapsible-item-inner:hover {
+  color:var(--text-normal);
 }
 .collapsible-item-self.is-clickable:hover .collapsible-item-collapse {
   color:var(--text-normal);
@@ -1750,7 +1913,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 .search-input-container {
   width:calc(100% - 20px);
-  margin:0 10px;
+  margin:0 10px 5px;
 }
 
 .workspace-leaf-content .setting-item {
@@ -1803,7 +1966,7 @@ input.search-input:focus {
   margin:0;
 }
 .search-result-container {
-  padding:0 10px 5px 10px;
+  padding:5px 10px 5px 10px;
 }
 .search-result-file-title {
   line-height:1.3;
@@ -2248,7 +2411,52 @@ ol > li::before {
 /* --------------- */
 /* Graphs */
 
-/* Full bleed */
+
+/* Fill color for nodes */
+.graph-view.color-fill {
+  color:var(--text-muted);
+}
+/* Fill color for nodes on hover */
+.graph-view.color-fill-highlight {
+  color:var(--text-accent);
+}
+/* Stroke color for nodes */
+.graph-view.color-circle {
+  color:var(--text-accent);
+}
+/* Line color */
+.graph-view.color-line {
+  color:var(--background-modifier-border);
+}
+/* Line color on hover */
+.graph-view.color-line-highlight {
+  color:var(--text-accent);
+  border:0;
+}
+/* Text color */
+.graph-view.color-text {
+  color:var(--text-normal);
+}
+.graph-view.color-fill-unresolved {
+  color:var(--text-faint);
+}
+
+/* ---------------
+.theme-dark .graph-view.color-arrow {
+color: #5cc863;
+}
+.theme-dark .graph-view.color-fill-tag {
+  color: #440154;
+}
+.theme-dark .graph-view.color-fill-attachment {
+  color: #277f8e;
+}
+.theme-dark .graph-view.color-fill-unresolved {
+  color: #fde725; 
+} */
+
+/* Full bleed (takes up full height) */
+
 body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-header,
 body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-header {
   position:fixed;
@@ -2270,40 +2478,9 @@ body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=
 .mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls,
 .mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
   top:30px;}
-/*
-.graph-controls .setting-item-name,
-.graph-control-section-header {
-  font-weight:500;
-  color:var(--text-faint);
-  font-size:var(--font-smaller);
-}
 
-.mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
-  top:0px;
-  left:30px;
-  z-index:99;
-  flex-direction:row;
-  max-width:none;
-  background:transparent;
-  display:flex;
-  border:0;
-}
-.mod-root .collapsible-item.graph-control-section.mod-filter {
 
-}
-.mod-root .collapsible-item-self {
-  padding-top:10px;
-  background-color:var(--background-primary);
-  margin:0;
-}
-.mod-root .collapsible-item-children {
-  margin-top:0;
-  background-color:var(--background-primary);
-  padding:10px;
-  margin:0;
-  border:1px solid var(--background-modifier-border);
-
-}*/
+/* Graph controls */
 
 .graph-controls {
   background:var(--background-primary);
@@ -2319,7 +2496,7 @@ body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=
 }
 input[type=range] {
   background-color:rgba(0,0,0,0.15);
-  height:16px;
+  height:1em;
   padding:9px 7px 0 7px;
   -webkit-appearance:none;
   cursor:default;
@@ -2345,6 +2522,7 @@ input[type=range]::-webkit-slider-thumb:hover,
 input[type=range]::-webkit-slider-thumb:active {
   background:var(--text-normal);
 }
+
 .local-graph-jumps-slider-container,
 .workspace-split.mod-left-split .local-graph-jumps-slider-container,
 .workspace-split.mod-right-split .local-graph-jumps-slider-container,
@@ -2371,49 +2549,6 @@ input[type=range]::-webkit-slider-thumb:active {
   opacity:0.8;
   transition:opacity 0.2s linear;
 }
-
-/* filled color for the circle when not hover*/
-.graph-view.color-fill {
-  color:var(--text-muted);
-}
-/*  color for the connecting line when not hover  --background-modifier-border*/
-.graph-view.color-line {
-  color:var(--background-modifier-border);
-}
-/* color for text */
-.graph-view.color-text {
-  color:var(--text-normal);
-}
-/* filled color for the circle when hover*/
-.graph-view.color-fill-highlight {
-  color:var(--text-accent);
-}
-/*  color for the connecting line when hover*/
-.graph-view.color-line-highlight {
-  color:var(--text-accent);
-  border:0;
-}
-/* color for the circle stroke */
-.graph-view.color-circle {
-  color:var(--text-accent);
-}
-.graph-view.color-fill-unresolved {
-  color:var(--text-faint);
-}
-
-/* ---------------
-.theme-dark .graph-view.color-arrow {
-color: #5cc863;
-}
-.theme-dark .graph-view.color-fill-tag {
-  color: #440154;
-}
-.theme-dark .graph-view.color-fill-attachment {
-  color: #277f8e;
-}
-.theme-dark .graph-view.color-fill-unresolved {
-  color: #fde725; 
-} */
 
 /* --------------- */
 /* Settings */
