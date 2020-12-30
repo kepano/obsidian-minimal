@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.5.0 by @kepano
+Minimal Obsidian 2.5.1 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -734,6 +734,7 @@ body, input, button,
 }
 .workspace-leaf-content[data-type='search'] .nav-action-button.is-active,
 .workspace-leaf-content[data-type='backlink'] .nav-action-button.is-active,
+.workspace-leaf-content[data-type='tag'] .nav-action-button.is-active,
 .workspace-tab-header.is-active,
 .workspace-leaf-content[data-type='search'] .nav-action-button.is-active {
   background:transparent;
@@ -816,7 +817,6 @@ span.cm-hashtag.cm-hashtag-end {
   padding-right:8px;
   border-right:1px solid var(--background-modifier-border);
 }
-
 
 /* --------------- */
 /* Modals */
@@ -1652,6 +1652,10 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .collapsible-item-self.is-clickable:hover {
   color:var(--text-muted);
   background:transparent;
+  cursor:var(--cursor);
+}
+.collapsible-item-self.is-clickable {
+  cursor:var(--cursor);
 }
 .search-result-collapse-indicator,
 .search-result-file-title:hover .search-result-collapse-indicator,
