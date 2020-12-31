@@ -771,7 +771,7 @@ body, input, button,
 /* Tags */
 
 .frontmatter-container .tag,
-.tag {
+p .tag {
   background-color:transparent;
   border:1px solid var(--background-modifier-border);
   color:var(--text-muted);
@@ -783,7 +783,7 @@ body, input, button,
   margin:2px 0 0 0;
   border-radius:14px;
 }
-.tag:hover {
+p .tag:hover {
   color:var(--text-normal);
   border-color:var(--background-modifier-border-hover);
 }
