@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.5.1 by @kepano
+Minimal Obsidian 2.5.2 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -70,7 +70,7 @@ OPTIONS
 
 Disabled features */
 
-.pane-list-item-ending-flair:not(.tag-pane-tag-count) { /* Search counts */
+.tree-item-flair:not(.tag-pane-tag-count) { /* Search counts */
   display:none;
 }
 
@@ -1549,10 +1549,11 @@ input[type=checkbox]:checked {
   border-right:1px solid transparent;
 }
 .nav-folder-title-content {
-  padding:1px 4px;
+  padding:0px 4px 1px 0;
 }
 .nav-folder-collapse-indicator {
   top:1px;
+  margin-left:-10px;
 }
 
 /* Disclosure icons
@@ -1625,14 +1626,15 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   background:transparent;
 }
 .nav-file-title,
+.tree-item-self,
 .nav-folder-title,
 .is-collapsed .search-result-file-title,
 .tag-pane-tag {
-  font-size:var(--font-small) !important;
+  font-size:var(--font-small);
   color:var(--text-muted);
 }
 .search-result-file-title {
-  font-size:var(--font-small) !important;
+  font-size:var(--font-small);
   color:var(--text-normal);
   font-weight:var(--font-normal);
 }
@@ -1839,7 +1841,7 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 /* Outline */
 
 .outline {
-  padding-top:10px;
+  padding-top:15px;
   padding-bottom:20px;
   font-size:var(--font-small);
 }
@@ -1971,7 +1973,7 @@ input.search-input:focus {
   margin:0;
 }
 .search-result-container {
-  padding:5px 10px 5px 10px;
+  padding:5px 10px 5px 0px;
 }
 .search-result-file-title {
   line-height:1.3;
@@ -1981,6 +1983,7 @@ input.search-input:focus {
   overflow:hidden;
   text-overflow:ellipsis;
 }
+.tree-item-inner,
 .search-result-file-title > span:not(.search-result-collapse-indicator):not(.search-result-count) {
   white-space:nowrap;
   overflow:hidden;
@@ -2008,41 +2011,6 @@ input.search-input:focus {
 }
 .side-dock-collapsible-section-header-indicator {
   display:none;
-}
-.side-dock-collapsible-section-header {
-  padding-left:15px;
-  color:var(--text-faint);
-  text-transform:uppercase;
-  letter-spacing:0.05em;
-  font-size:var(--font-smallest);
-  font-weight:500;
-  padding-top:10px;
-  background:transparent;
-}
-.backlink-pane {
-  padding-bottom:30px;
-}
-.backlink-pane .search-result-container {
-  padding:5px 5px 5px 10px;
-  margin-left:0;
-}
-.backlink-pane .search-result-file-title {
-  padding-left:20px;
-}
-.list-item-ending-flair {
-  right:0;
-  background:transparent;
-}
-.backlink-pane .list-item-ending-flair {
-  right:12px;
-}
-.tag-pane-tag .list-item-ending-flair {
-  right:5px;
-}
-.pane-list-item:hover .pane-list-item-ending-flair,
-.list-item:hover .list-item-ending-flair {
-  background:transparent;
-  color:var(--text-muted);
 }
 .search-result-file-title:hover {
   color:var(--text-normal);
@@ -2088,9 +2056,85 @@ input.search-input:focus {
   padding:0 0 0 0;
 }
 
+
+/* --------------- */
+/* Nested items */
+
+.nav-folder-collapse-indicator,
+.tree-item-self .collapse-icon {
+  color:var(--background-modifier-border-hover);
+}
+.tree-item-self .collapse-icon {
+  padding-left:0;
+  width:15px;
+  margin-left:-15px;
+}
+.tree-item-self:hover .collapse-icon {
+  color:var(--text-normal);
+}
+.tree-item {
+  padding-left:5px;
+}
+.tree-item-flair {
+  font-size:var(--font-smaller);
+  right:0;
+  background:transparent;
+  color:var(--text-faint);
+}
+.tree-item-flair-outer:after {
+  content:'';
+}
+.tree-item-self.is-clickable {
+  cursor:var(--cursor);
+}
+.tree-item-self.is-clickable:hover {
+  background:transparent;
+}
+.tree-item-self:hover .tree-item-flair {
+  background:transparent;
+  color:var(--text-muted);
+}
+.tree-item-children {
+  margin-left:5px;
+}
+
+/* --------------- */
+/* Backlink pane */
+
+.backlink-pane {
+  padding-bottom:30px;
+}
+.backlink-pane .search-result-container {
+  padding:5px 5px 5px 5px;
+  margin-left:0;
+}
+.backlink-pane .search-result-file-title {
+  padding-left:15px;
+}
+.backlink-pane > .tree-item-self .collapse-icon {
+  display:none;
+}
+.backlink-pane > .tree-item-self:hover,
+.backlink-pane > .tree-item-self {
+  padding-left:15px;
+  color:var(--text-muted);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  font-size:var(--font-smallest);
+  font-weight:500;
+  padding:5px 7px 5px 10px;
+  background:transparent;
+}
+.backlink-pane > .tree-item-self.is-collapsed {
+  color:var(--text-faint);
+}
+
 /* --------------- */
 /* Tag pane */
 
+.tag-container {
+  padding-left:15px;
+}
 .tag-pane-tag-count {
   padding:0;
   color:var(--text-faint);
@@ -2099,7 +2143,7 @@ input.search-input:focus {
   background:transparent;
 }
 .tag-pane-tag {
-  padding:2px 15px 2px 5px;
+  padding:2px 5px 2px 5px;
   cursor:var(--cursor);
 }
 .tag-pane-tag:hover {
