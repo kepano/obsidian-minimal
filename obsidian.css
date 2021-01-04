@@ -120,7 +120,7 @@ Disabled features */
 
   Font styles
 
-  Preview mode and UI */
+  /* Preview mode */
 
   --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   
@@ -131,6 +131,10 @@ Disabled features */
   /* Code */
 
   --font-monospace:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
+
+  /* UI */
+
+  --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
   /* Sizes, weights, padding */
 
@@ -618,10 +622,16 @@ MINIMAL STYLING */
 h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
 h1,h2,h3,h4 {letter-spacing:-0.02em;} 
 
+body, input, button  {
+  font-family:var(--font-ui);
+}
+
+.workspace-leaf-content[data-type=markdown] {
+  font-family:var(--text)
+}
 body, input, button, 
 .cm-s-obsidian .cm-formatting-hashtag,
 .cm-s-obsidian {
-  font-family:var(--text) !important;
   font-size:var(--font-normal);
   font-weight:var(--normal-weight);
   line-height:var(--line-height);
@@ -631,15 +641,15 @@ body, input, button,
 .cm-s-obsidian .cm-formatting-hashtag, 
 .cm-s-obsidian {
   line-height:var(--line-height);
-  font-family:var(--text-editor) !important;
+  font-family:var(--text-editor);
 }
 .cm-s-obsidian .cm-header,
 .cm-s-obsidian .cm-strong {
   font-weight:var(--bold-weight);
 }
 .cm-formatting-header {
-  color:var(--text-faint) !important;
-  font-weight:var(--normal-weight) !important;
+  color:var(--text-faint);
+  font-weight:var(--normal-weight);
 }
 .view-header-title,
 .file-embed-title,
@@ -1414,7 +1424,8 @@ input[type='search'],
 input[type='email'],
 input[type='password'],
 input[type='number'] {
-    font-size:var(--font-normal);
+  font-family:var(--font-ui);
+  font-size:var(--font-normal);
 }
 
 select:focus,
@@ -1580,6 +1591,12 @@ input[type=checkbox]:checked {
   transform:rotate(0deg);
 }*/
 
+.tooltip {
+  font-size:var(--font-small);
+  line-height:1.2;
+  padding:4px 8px;
+  border-radius:4px;
+}
 .nav-file {
   margin-left:12px;
   padding-right:4px;
@@ -1743,11 +1760,11 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 .markdown-preview-view .collapse-indicator:hover svg {
   opacity:1;
 }
-.markdown-preview-view .is-collapsed h1::after,
-.markdown-preview-view .is-collapsed h2::after,
-.markdown-preview-view .is-collapsed h3::after,
-.markdown-preview-view .is-collapsed h4::after,
-.markdown-preview-view .is-collapsed h5::after,
+.markdown-preview-view div.is-collapsed h1::after,
+.markdown-preview-view div.is-collapsed h2::after,
+.markdown-preview-view div.is-collapsed h3::after,
+.markdown-preview-view div.is-collapsed h4::after,
+.markdown-preview-view div.is-collapsed h5::after,
 .markdown-preview-view ol .is-collapsed::after,
 .markdown-preview-view ul .is-collapsed::after {
   content:"...";
@@ -1794,6 +1811,12 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 }
 .list-collapse-indicator .collapse-indicator .collapse-icon {
   opacity:0;
+}
+.markdown-preview-view ul > li h1,
+.markdown-preview-view ul > li h2,
+.markdown-preview-view ul > li h3,
+.markdown-preview-view ul > li h4 {
+  display:inline;
 }
 
 /* Folding icons in Edit mode */
@@ -1876,6 +1899,9 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 /* --------------- */
 /* Search */
 
+.search-result-container.mod-global-search {
+  padding-left:10px;
+}
 .search-result-file-match {
   cursor:var(--cursor) !important;
 }
@@ -1980,11 +2006,9 @@ input.search-input:focus {
   padding:4px 4px 4px 24px;
   vertical-align:middle;
   cursor:var(--cursor)!important;
-  overflow:hidden;
-  text-overflow:ellipsis;
 }
 .tree-item-inner,
-.search-result-file-title > span:not(.search-result-collapse-indicator):not(.search-result-count) {
+.search-result-file-title {
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
@@ -2637,7 +2661,7 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 .dropdown {
   border-color:var(--background-modifier-border);
-  font-family:var(--text);
+  font-family:var(--font-ui);
   background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
 }
 .theme-dark .dropdown {
