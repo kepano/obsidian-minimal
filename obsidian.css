@@ -1162,6 +1162,16 @@ border-bottom:1px solid #999;
   border:none;
   border-right:2px solid var(--text-accent);
 }
+.cm-fat-cursor .CodeMirror-cursor { 
+    background-color: var(--text-accent); 
+    opacity: 0.5; 
+    width: 5px; 
+} 
+.cm-animate-fat-cursor { 
+  background-color: var(--text-accent); 
+  opacity: 0.5; 
+  width: 5px; 
+} 
 .markdown-source-view {
   padding:0;
 }
