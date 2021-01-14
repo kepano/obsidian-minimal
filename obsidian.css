@@ -542,8 +542,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   color:var(--text-faint);
   cursor:var(--cursor);
 }
-#calendar-container h2 .arrow:hover,
-#calendar-container h2 .arrow:hover .arrow {
+#calendar-container .arrow:hover {
   fill:var(--text-muted);
   color:var(--text-muted);
 }
@@ -561,7 +560,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 #calendar-container .nav {
   padding:0;
 }
-#calendar-container tr td .dot {
+#calendar-container .dot {
   margin:0;
 }
 #calendar-container .arrow {
@@ -600,11 +599,12 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 #calendar-container .active,
 #calendar-container .active.today,
 #calendar-container .week-num:hover,
-#calendar-container td:not(:empty):hover {
+#calendar-container .day:hover {
   background-color:var(--color-background-day-active);
 }
 #calendar-container .active .dot {
-  fill:var(--text-faint);}
+  fill:var(--text-faint);
+}
 #calendar-container .active .task {
   stroke:var(--text-faint);
 }
