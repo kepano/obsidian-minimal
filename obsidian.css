@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.5.2 by @kepano
+Minimal Obsidian 2.5.3 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -110,7 +110,7 @@ Disabled features */
   --base-h:0;       /* Base hue */
   --base-s:0%;      /* Base saturation */
   --base-d:16%;     /* Base lightness Dark Mode  - 0 is black */
-  --base-l:96%;     /* Base lightness Light Mode  - 100 is white */
+  --base-l:97%;     /* Base lightness Light Mode  - 100 is white */
   --accent-h:201;   /* Accent hue */
   --accent-s:17%;   /* Accent saturation */
   --accent-d:60%;   /* Accent lightness Dark Mode */
@@ -183,9 +183,11 @@ Disabled features */
     --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 6%));
     --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 12%));
     --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 20%));
+    --background-modifier-form-field:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 6%));
+    --background-modifier-form-field-highlighted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 8%));
     --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 80%));
-    --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 45%));
-    --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 25%));
+    --text-muted:hsl(var(--base-h),calc(var(--base-s) - 5%),calc(var(--base-l) - 45%));
+    --text-faint:hsl(var(--base-h),calc(var(--base-s) - 5%),calc(var(--base-l) - 25%));
     --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-l),0);
     --background-translucent:rgba(255,255,255,0.85);
     --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
@@ -198,7 +200,7 @@ Disabled features */
     --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
     --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 10%));
     --interactive-accent-rgb:220, 220, 220;
-    --text-selection:hsl(var(--accent-h),50%,91%);
+    --text-selection:hsla(var(--accent-h),50%,calc(var(--base-l) - 20%), 30%);
     --text-highlight-bg:rgba(255, 224, 0, 0.5);
     --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
     --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-l) - 5%),0.7);
@@ -210,7 +212,6 @@ Disabled features */
   .theme-light.minimal-light-contrast .workspace-ribbon.mod-left,
   .theme-light.minimal-light-contrast .mod-left-split,
   .theme-light.minimal-light-contrast .modal.mod-settings .vertical-tab-header,
-
   .theme-dark {
     --background-primary:hsl(var(--base-h),var(--base-s),var(--base-d));
     --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
@@ -505,6 +506,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
     background:var(--background-translucent);
 }
 
+
 /* --------------- */
 /* Calendar Plugin */
 
@@ -626,6 +628,8 @@ body, input, button  {
   font-family:var(--font-ui);
 }
 
+.popover,
+.vertical-tab-content-container,
 .workspace-leaf-content[data-type=markdown] {
   font-family:var(--text)
 }
@@ -786,6 +790,7 @@ p .tag {
   border:1px solid var(--background-modifier-border);
   color:var(--text-muted);
   font-size:var(--font-small);
+  font-family:var(--font-ui);
   padding:2px 8px;
   text-align:center;
   text-decoration:none;
@@ -802,6 +807,7 @@ p .tag:hover {
   border:1px solid var(--background-modifier-border);
   color:var(--text-muted);
   font-size:var(--font-small);
+  font-family:var(--font-ui);
   text-align:center;
   text-decoration:none;
   display:inline-block;
@@ -920,14 +926,30 @@ input.prompt-input {
 .workspace-drop-overlay:before,
 .mod-drag,
 .drag-ghost {
-  opacity:0.8;
+  opacity:0;
   border-radius:0 !important;} 
 
 .mod-drag {
-  opacity:1;
-  background-color:var(--text-selection);} 
+  opacity:0;
+  border:2px solid var(--text-accent);
+  background-color:var(--background-primary);} 
 
-/* --------------- */
+.view-header.is-highlighted:after {
+  background-color:var(--text-selection);} 
+.view-header.is-highlighted .view-actions {
+  background:transparent;
+}
+
+/*
+.workspace-fake-target-overlay,
+.workspace-fake-target-overlay.is-in-sidebar,
+.workspace-drop-overlay,
+.view-header.is-highlighted:after {
+  opacity:0;
+  background-color:var(--background-primary);
+}
+
+ --------------- */
 /* Workspace */
 
 .empty-state {
@@ -971,13 +993,16 @@ input.prompt-input {
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:hover,
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover {
+  border-color:var(--background-modifier-border-hover);
+  transition:border-color 0.1s ease-in-out 0.05s, border-width 0.1s ease-in-out 0.05s;
+  border-width:2px;
 }
 
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active {
-  border-color:var(--background-modifier-border-hover);
+  border-color:var(--background-modifier-border-focus);
   border-width:2px;
 }
 .workspace-tab-container-before,
@@ -1321,8 +1346,7 @@ border-bottom:1px solid #999;
 }
 .cm-s-obsidian span.obsidian-search-match-highlight {
   background:inherit;
-  border-radius:2px;
-  box-shadow:0 0 0px 2px var(--text-normal);
+  background:var(--text-highlight-bg);
   padding-left:0;
   padding-right:0;
 }
@@ -1415,6 +1439,21 @@ input.document-replace-input:focus {
   padding-left:10px;
 }
 
+/* --------------- */
+/* Turn off file name trimming */
+
+.full-file-names .tree-item-inner,
+.full-file-names .nav-file-title-content,
+.full-file-names .search-result-file-title {
+    text-overflow:unset;
+    white-space:normal;
+    line-height:1.4;
+}
+
+.full-file-names .nav-file-title {
+    margin-bottom:3px;
+}
+
 
 /* --------------- */
 /* Form inputs */
@@ -1424,8 +1463,19 @@ input[type='search'],
 input[type='email'],
 input[type='password'],
 input[type='number'] {
+  padding:5px 10px;
+}
+
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+button,
+.dropdown,
+.setting-item-control button {
   font-family:var(--font-ui);
-  font-size:var(--font-normal);
+  font-size:13px;
 }
 
 select:focus,
@@ -1653,7 +1703,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .search-result-file-title {
   font-size:var(--font-small);
   color:var(--text-normal);
-  font-weight:var(--font-normal);
+  font-weight:var(--normal-weight);
 }
 .side-dock-collapsible-section-header {
   font-size:var(--font-small);
@@ -1738,8 +1788,8 @@ body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
 /* Add padding to account for gutter in Edit mode when folding is on */
 
 body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title,
-.minimal-folding .allow-fold-headings.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
-.minimal-folding .allow-fold-lists.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+.minimal-folding .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
+.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
   padding-left:16px;
 }
 
@@ -1864,8 +1914,7 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 /* Outline */
 
 .outline {
-  padding-top:15px;
-  padding-bottom:20px;
+  padding:15px 10px 20px 0;
   font-size:var(--font-small);
 }
 .outline .pane-empty {
@@ -1899,8 +1948,8 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 /* --------------- */
 /* Search */
 
-.search-result-container.mod-global-search {
-  padding-left:10px;
+.search-result-container.mod-global-search .search-empty-state {
+  padding-left:15px;
 }
 .search-result-file-match {
   cursor:var(--cursor) !important;
@@ -2060,7 +2109,7 @@ input.search-input:focus {
   border-color:var(--background-modifier-border-focus);
   transition:all 0.1s ease-in-out;
 }
-.workspace-leaf-content .search-input::placeholder {
+.search-input-container input::placeholder {
   color:var(--text-faint);
   font-size:var(--font-small);
 }
@@ -2448,7 +2497,7 @@ ol > li::before {
 /* Popovers */
 
 .theme-dark.minimal-dark-black .popover {
-  background:#111;
+  background:var(--background-primary-alt);
 }
 
 .popover,
@@ -2549,45 +2598,67 @@ body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=
 
 /* Graph controls */
 
+.graph-control-section .tree-item-children {
+  padding-bottom:15px;
+}
+.graph-control-section-header {
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  font-size:var(--font-smallest);
+  color:var(--text-muted);
+}
+.graph-controls .search-input-container {
+  width:100%;
+}
+.setting-item.mod-search-setting.has-term-changed .graph-control-search-button,
+.graph-controls .graph-control-search-button {
+  display:none;
+}
+.graph-controls .setting-item-name {
+  font-size:var(--font-small);
+}
 .graph-controls {
   background:var(--background-primary);
   border:none;
+  min-width:240px;
   left:0;
   top:10px;
   margin-bottom:0;
-  padding:0 20px 10px 10px;
+  padding:10px 20px 10px 10px;
   border-radius:0;
 }
 .mod-left-split .graph-controls {
   background:var(--background-secondary);
 }
 input[type=range] {
-  background-color:rgba(0,0,0,0.15);
-  height:1em;
-  padding:9px 7px 0 7px;
+  background-color:var(--background-modifier-border-hover);
+  height:2px;
+  padding:0 0px;
   -webkit-appearance:none;
   cursor:default;
   margin:0;
-  border-radius:50px;
+  border-radius:0px;
 }
 input[type=range]:focus {
 
 }
 input[type=range]::-webkit-slider-runnable-track {
-  background:var(--text-muted);
-  height:1px;
-  margin-top:-9px;
+  background:var(--background-modifier-border-hover);
+  height:2px;
+  margin-top:0px;
 }
 input[type=range]::-webkit-slider-thumb {
-  background:var(--text-muted);
-  height:7px;
-  width:20px;
-  margin-top:0px;
+  background:var(--text-accent);
+  height:12px;
+  width:12px;
+  border-radius:20px;
+  margin-top:-2px;
   cursor:default;
 }
 input[type=range]::-webkit-slider-thumb:hover,
 input[type=range]::-webkit-slider-thumb:active {
-  background:var(--text-normal);
+  background:var(--text-accent-hover);
 }
 
 .local-graph-jumps-slider-container,
@@ -2685,15 +2756,21 @@ input[type=range]::-webkit-slider-thumb:active {
   border-style:solid;
   border-radius:0 !important;
   border-color:var(--background-primary);
+  background-color:var(--background-modifier-border);
   min-height:40px;
 }
 .modal .vertical-tab-header::-webkit-scrollbar-track,
 .mod-left-split .workspace-tabs ::-webkit-scrollbar-track {
   background-color:var(--background-secondary);
 }
+.modal .vertical-tab-header::-webkit-scrollbar-track-piece,
+.mod-left-split .workspace-tabs ::-webkit-scrollbar-track-piece {
+  background-color:var(--background-secondary);
+}
 .modal .vertical-tab-header::-webkit-scrollbar-thumb,
 .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb {
   border-color:var(--background-secondary);
+  background-color:var(--background-modifier-border);
 }
 .theme-light.minimal-light-contrast .mod-left-split .vertical-tab-header::-webkit-scrollbar-thumb,
 .theme-light.minimal-light-contrast .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb {
@@ -2701,5 +2778,15 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 .theme-light.minimal-light-contrast .mod-left-split .vertical-tab-header::-webkit-scrollbar-track,
 .theme-light.minimal-light-contrast .mod-left-split .workspace-tabs ::-webkit-scrollbar-track {
-  border-color:var(--background-modifier-border-hover);
+  background-color:red;
+}
+.modal .vertical-tab-header::-webkit-scrollbar-thumb:hover,
+.mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
+  background-color:var(--background-modifier-border-hover);
+}
+.modal .vertical-tab-header::-webkit-scrollbar-thumb:active,
+.mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb:active,
+::-webkit-scrollbar-thumb:active {
+  background-color:var(--background-modifier-border-focus);
 }
