@@ -1,6 +1,6 @@
-Minimal is an opinionated Obsidian theme designed to create a focused editing experience and more Mac-like interface.
+Minimal is an opinionated Obsidian theme and plugin designed to create the most natural and distraction-free environment for thinking.
 
-This theme is designed to be used with the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) and the [Hider plugin](https://github.com/kepano/obsidian-hider).
+This theme is designed to be used with the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) and the [Hider plugin](https://github.com/kepano/obsidian-hider). You can install Minimal Theme and its companion plugins directly through the Obsidian app.
 
 ![](dark-complex.png)
 
