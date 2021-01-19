@@ -301,6 +301,48 @@ Frameless mode on macOS only */
   padding-top:0px;
 }
 
+/* Adjustments to title bar for traffic light icons */
+
+.mod-macos.minimal-folding.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header) {
+  --traffic-space:80px;
+  --traffic-padding:70px;
+}
+.mod-macos.minimal-folding.hider-frameless:not(.plugin-sliding-panes-rotate-header) {
+  --traffic-space:55px;
+  --traffic-padding:40px;
+}
+.mod-macos.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header) {
+  --traffic-space:95px;
+  --traffic-padding:70px;
+}
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) {
+  --traffic-space:65px;
+  --traffic-padding:40px;
+}
+.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header {
+  position:relative;
+  right:auto;
+  display:flex;
+}
+.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-icon {
+  flex:1 var(--traffic-space);
+  text-align:left;
+  min-width:var(--traffic-space);
+  padding-left:var(--traffic-padding);
+}
+.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-actions {
+  flex:1 var(--traffic-space);
+}
+.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title-container {
+  position:static;
+  flex-grow:0;
+  flex-shrink:1;
+  flex-basis:var(--line-width);
+}
+.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title:before {
+  right:var(--traffic-space);
+}
+
 /* --------------- */
 /* Andy Mode Sliding Panes
    Designed for use with death_au's plugin */
