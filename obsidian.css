@@ -319,27 +319,27 @@ Frameless mode on macOS only */
   --traffic-space:65px;
   --traffic-padding:40px;
 }
-.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header {
   position:relative;
   right:auto;
   display:flex;
 }
-.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-icon {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-icon {
   flex:1 var(--traffic-space);
   text-align:left;
   min-width:var(--traffic-space);
   padding-left:var(--traffic-padding);
 }
-.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-actions {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-actions {
   flex:1 var(--traffic-space);
 }
-.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title-container {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title-container {
   position:static;
   flex-grow:0;
   flex-shrink:1;
   flex-basis:var(--line-width);
 }
-.mod-macos.hider-frameless .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title:before {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title:before {
   right:var(--traffic-space);
 }
 
@@ -347,6 +347,12 @@ Frameless mode on macOS only */
 /* Andy Mode Sliding Panes
    Designed for use with death_au's plugin */
 
+body.plugin-sliding-panes-rotate-header {
+  --header-width:40px;
+}
+body.plugin-sliding-panes-rotate-header .view-header-title:before {
+  display:none;
+}
 body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
   background:none;
 }
@@ -366,7 +372,6 @@ body.plugin-sliding-panes .markdown-preview-section {
   margin-left:35px;
 }*/
 body.plugin-sliding-panes:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
-  padding-top:14px;
   transition:padding 0.1s ease;
 }
 body.plugin-sliding-panes .view-header-title:before {
