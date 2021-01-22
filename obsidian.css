@@ -319,21 +319,21 @@ Frameless mode on macOS only */
   --traffic-space:65px;
   --traffic-padding:40px;
 }
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-header {
   position:relative;
   right:auto;
   display:flex;
 }
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-icon {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-header-icon {
   flex:1 var(--traffic-space);
   text-align:left;
   min-width:var(--traffic-space);
   padding-left:var(--traffic-padding);
 }
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-actions {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-actions {
   flex:1 var(--traffic-space);
 }
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title-container {
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-header-title-container {
   position:static;
   flex-grow:0;
   flex-shrink:1;
@@ -707,7 +707,7 @@ body, input, button,
 .markdown-embed-title {
   letter-spacing:-0.02em;
   text-align:left;
-  font-size:var(--h1);
+  font-size:1.125em;
   font-weight:var(--bold-weight);
 }
 .empty-state-title,
@@ -739,7 +739,6 @@ body, input, button,
 .HyperMD-header-4,
 .cm-header-4 {
   font-variant:small-caps;
-  text-transform:lowercase;
   letter-spacing:0.02em;
   color:var(--text-normal);
   font-weight:var(--normal-weight);
@@ -749,7 +748,6 @@ body, input, button,
 .HyperMD-header-5,
 .cm-header-5 {
   font-variant:small-caps;
-  text-transform:lowercase;
   letter-spacing:0.05em;
   color:var(--text-normal);
   font-weight:300;
@@ -759,7 +757,6 @@ body, input, button,
 .HyperMD-header-6,
 .cm-header-6 {
   font-variant:small-caps;
-  text-transform:lowercase;
   letter-spacing:0.1em;
   color:var(--text-muted);
   font-weight:300;
