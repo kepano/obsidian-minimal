@@ -145,9 +145,9 @@ Disabled features */
   --h1:1.125em;
   --h2:1em;
   --h3:1em;
-  --h4:1em;
-  --h5:0.9735em;
-  --h6:0.875em;
+  --h4:0.90em;
+  --h5:0.85em;
+  --h6:0.85em;
   --normal-weight:400;   /* Switch to 300 if you want thinner default text */
   --bold-weight:600;     /* Switch to 700 if you want thicker bold text */
   --line-width:40rem;    /* Maximum characters per line */
@@ -698,9 +698,12 @@ body, input, button,
 .cm-s-obsidian .cm-strong {
   font-weight:var(--bold-weight);
 }
-.cm-formatting-header {
+.cm-formatting-header,
+.cm-s-obsidian .cm-formatting-header.cm-header-4,
+.cm-s-obsidian .cm-formatting-header.cm-header-5,
+.cm-s-obsidian .cm-formatting-header.cm-header-6 {
   color:var(--text-faint);
-  font-weight:var(--normal-weight);
+  font-weight:var(--bold-weight);
 }
 .view-header-title,
 .file-embed-title,
@@ -737,29 +740,29 @@ body, input, button,
 }
 .markdown-preview-view h4,
 .HyperMD-header-4,
-.cm-header-4 {
+.cm-s-obsidian .cm-header-4 {
   font-variant:small-caps;
   letter-spacing:0.02em;
   color:var(--text-normal);
-  font-weight:var(--normal-weight);
+  font-weight:500;
   font-size:var(--h4);
 }
 .markdown-preview-view h5,
 .HyperMD-header-5,
-.cm-header-5 {
+.cm-s-obsidian .cm-header-5 {
   font-variant:small-caps;
-  letter-spacing:0.05em;
+  letter-spacing:0.02em;
   color:var(--text-normal);
-  font-weight:300;
+  font-weight:500;
   font-size:var(--h5);
 }
 .markdown-preview-view h6,
 .HyperMD-header-6,
-.cm-header-6 {
+.cm-s-obsidian .cm-header-6 {
   font-variant:small-caps;
-  letter-spacing:0.1em;
+  letter-spacing:0.02em;
   color:var(--text-muted);
-  font-weight:300;
+  font-weight:400;
   font-size:var(--h6);
 }
 
