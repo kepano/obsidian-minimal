@@ -832,7 +832,7 @@ body, input, button,
 /* Tags */
 
 .frontmatter-container .tag,
-p .tag {
+.tag {
   background-color:transparent;
   border:1px solid var(--background-modifier-border);
   color:var(--text-muted);
@@ -845,7 +845,7 @@ p .tag {
   margin:2px 0 0 0;
   border-radius:14px;
 }
-p .tag:hover {
+.tag:hover {
   color:var(--text-normal);
   border-color:var(--background-modifier-border-hover);
 }
@@ -1400,6 +1400,18 @@ border-bottom:1px solid #999;
 }
 .is-flashing .tag {
   border-color:var(--text-highlight-bg-active);
+}
+.suggestion-container.mod-search-suggestion {
+  max-width:280px;
+}
+.mod-search-suggestion .suggestion-item {
+  font-size:var(--font-small);
+}
+.mod-search-suggestion .clickable-icon {
+  margin:0;
+}
+.search-suggest-item.mod-group {
+  font-size:var(--font-smaller);
 }
 .cm-s-obsidian span.obsidian-search-match-highlight {
   background:inherit;
@@ -2132,6 +2144,12 @@ input.search-input:focus {
   padding:0 0 6px 0;
   color:var(--text-muted);
   border-bottom:1px solid var(--background-modifier-border-focus);
+}
+.search-info-container {
+  font-size:var(--font-smaller);
+  color:var(--text-faint);
+  padding-top:5px;
+  padding-bottom:5px;
 }
 .search-info-more-matches {
   font-size:var(--font-smaller);
