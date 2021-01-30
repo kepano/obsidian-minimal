@@ -1,3 +1,9 @@
+Support the development of my plugins and themes **@kepano** on [Twitter](https://www.twitter.com/kepano), [Patreon](https://www.patreon.com/kepano) or [Buy me a coffee](https://www.buymeacoffee.com/kepano).
+
+---
+
+### Overview
+
 Minimal is an opinionated Obsidian theme and plugin designed to create the most natural and distraction-free environment for thinking.
 
 This theme is designed to be used with the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) and the [Hider plugin](https://github.com/kepano/obsidian-hider). You can install Minimal Theme and its companion plugins directly through the Obsidian app.
