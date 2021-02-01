@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.5.3 by @kepano
+Minimal Obsidian 2.5.4 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1905,28 +1905,34 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 }
 .markdown-preview-view .collapse-indicator {
   position:absolute;
-  margin-left:-40px;
+  margin-left:-42px;
   padding-bottom:10px;
   padding-top:8px;}
 .markdown-preview-view ul > li:not(.task-list-item) .collapse-indicator {
   padding-right:20px;}
 .markdown-preview-view ul > li:not(.task-list-item)::before {
-  content:'';
+  content:'\2022';
+  text-align:left;
+  padding:0;
+  font-size:22px;
   border-radius:50%;
-  background:var(--text-faint);
-  margin-right:10px;
-  margin-top:0px;
-  margin-left:-1rem;
+  background:transparent;
+  float:left;
+  margin-right:12px;
+  margin-top:10px;
+  margin-left:-16px;
   display:inline-block;
   line-height:0;
-  height:0.15em;
-  width:0.15em;
-  border:1px solid var(--text-faint);
+  height:4px;
+  width:4px;
+  border:0px;
   vertical-align:middle;
-  color:transparent
+  color:var(--text-faint);
+  transform:translateX(-2px);
 }
 .markdown-preview-view ul > li:not(.task-list-item).is-collapsed::before {
-  box-shadow:0 0 0px 4px var(--background-modifier-border);
+  background:var(--background-modifier-border);
+  box-shadow:3px 0 0px 4px var(--background-modifier-border);
 }
 .list-collapse-indicator .collapse-indicator .collapse-icon {
   opacity:0;
@@ -2511,9 +2517,9 @@ ul ul, ol ul, ol ol ul, ol ul ul, ul ol ul, ul ul ul {
   list-style:none;
   list-style-type:none;
 }
-ul li p, ol li p {
+/* ul li p, ol li p {
   display:inline;
-}
+}*/
 ol {
   padding-inline-start:1em;
   margin-left:1em;
