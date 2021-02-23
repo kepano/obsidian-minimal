@@ -2436,7 +2436,7 @@ a[href*="obsidian://search"] {
 iframe {
   border:0;
 }
-.markdown-preview-view img:not([width]),
+.markdown-preview-view .image-embed img:not([width]),
 .markdown-preview-view audio,
 .markdown-preview-view video {
   width:100%;
