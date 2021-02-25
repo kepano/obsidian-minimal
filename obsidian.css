@@ -2526,25 +2526,17 @@ ul ul, ol ul, ol ol ul, ol ul ul, ul ol ul, ul ul ul {
 ol {
   padding-inline-start:1em;
   margin-left:1em;
-  list-style:none;
-  counter-reset:counter;
+  list-style:default;
   position:relative;
 }
 ul > li {
   min-height:1.4em;
 }
-ol > li {
-  margin-left:0em;
-  min-height:1.4em;
-  counter-increment:counter;}
-ol > li::before {
-  content:counter(counter) ". ";
+ol > li::marker {
   color:var(--text-faint);
-  position:absolute;
-  left:-1.25em;
-  text-align:right;
-  width:2em;
 }
+ol > li {
+  margin-left:0em;}
 
 /* Code */
 .theme-light :not(pre) > code[class*="language-"],
