@@ -1244,6 +1244,7 @@ border-bottom:1px solid #999;
   opacity: 0.5; 
   width: 5px; 
 } 
+.markdown-source-view.mod-cm5,
 .markdown-source-view {
   padding:0;
 }
