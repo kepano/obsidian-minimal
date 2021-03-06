@@ -529,30 +529,41 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* --------------- */
 /* Image zoom  */
 
-.view-content img {
+.view-content .image-embed {
   max-width:100%;
   cursor:zoom-in;}
-.view-content img:active {
+.view-content .image-embed:active {
   cursor:zoom-out;
   display:block;
   z-index:100;
   position:fixed;
-    max-height:calc(100% + 1px);
-    max-width:calc(100% - 20px);
-    height:calc(100% + 1px);
-    width:100%;
-    object-fit:contain;
-    margin:-0.5px auto 0;
-    text-align:center;
-    top:50%;
-    transform:translateY(-50%);
-    padding:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:var(--background-translucent);
+  max-height:calc(100% + 1px);
+  max-width:calc(100% - 20px);
+  height:calc(100% + 1px);
+  width:100%;
+  object-fit:contain;
+  margin:-0.5px auto 0;
+  text-align:center;
+  padding:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:var(--background-translucent);
 }
-
+.view-content .image-embed:active img {
+  top:50%;
+  transform:translateY(-50%);
+  padding:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  opacity:1;
+}
+.theme-dark span[src$="#invert"] img {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
 
 /* --------------- */
 /* Calendar Plugin */
@@ -1819,9 +1830,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 
 /* Relationship lines in Preview */
 
-body.minimal-rel-preview .markdown-preview-view ul ul {
-  position:relative;
-}
 body.minimal-rel-preview .markdown-preview-view ul ul::before {
   content:'';
   border-left:1px solid var(--background-modifier-border);
