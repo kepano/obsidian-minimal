@@ -2919,7 +2919,12 @@ input[type=range]::-webkit-slider-thumb:active {
   font-weight:200;
 }
 .horizontal-tab-content, .vertical-tab-content {
-  background:var(--background-primary)
+  background:var(--background-primary);
+  padding-bottom:100px;
+}
+.vertical-tab-header,
+.vertical-tab-content { 
+  padding-bottom:100px;
 }
 .modal.mod-settings .vertical-tab-header {
   background:var(--background-secondary);
@@ -2959,6 +2964,9 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 .dropdown:focus {
   border-color:var(--background-modifier-border-focus);
+}
+.setting-item-control {
+  margin-right:10px;
 }
 
 /* --------------- */
