@@ -33,6 +33,8 @@ Special Features
   Focus mode
   Image zoom
   Calendar plugin
+  Dataview plugin
+  Checklist plugin
 
 Minimal Styling
 
@@ -550,10 +552,13 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   bottom:0;
   background:var(--background-translucent);
 }
-.view-content .image-embed:active img {
+.view-content .markdown-preview-view .image-embed:active img {
   top:50%;
   transform:translateY(-50%);
   padding:0;
+  margin:0 auto;
+  width:auto;
+  max-height:95vh;
   left:0;
   right:0;
   bottom:0;
@@ -674,6 +679,16 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 }
 
 /* --------------- */
+/* Dataview Plugin */
+
+.markdown-preview-view .table-view-table > thead > tr > th {
+  font-weight:600;
+  font-size:var(--font-normal);
+  color:var(--text-normal);
+  border-bottom:1px solid var(--text-faint);
+}
+
+/* --------------- */
 /* Checklist Plugin */
 
 .todo-list .group .item.classic,
@@ -683,7 +698,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   cursor:var(--cursor);
 }
 .todo-list {
-  padding:10px 10px 15px 20px;
+  padding:5px 10px 15px 15px;
 }
 .todo-list .title {
   font-weight:400;
@@ -2340,8 +2355,9 @@ input.search-input:focus {
 .workspace-leaf-content[data-type=starred] .item-list {
   padding-top:5px;
 }
+.workspace-leaf-content .view-content,
 .workspace-split.mod-right-split .view-content {
-  padding:0 0 0 0;
+  padding:0;
 }
 
 
