@@ -531,9 +531,11 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* --------------- */
 /* Image zoom  */
 
-.view-content .image-embed {
+.view-content .markdown-preview-view img {
   max-width:100%;
   cursor:zoom-in;}
+
+.view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
 .view-content .image-embed:active {
   cursor:zoom-out;
   display:block;
@@ -551,6 +553,9 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   right:0;
   bottom:0;
   background:var(--background-translucent);
+}
+.view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active {
+  padding:2.5%;
 }
 .view-content .markdown-preview-view .image-embed:active img {
   top:50%;
@@ -1967,6 +1972,9 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 
 /* Relationship lines in Preview */
 
+body.minimal-rel-preview ul {
+  position:relative;
+}
 body.minimal-rel-preview .markdown-preview-view ul ul::before {
   content:'';
   border-left:1px solid var(--background-modifier-border);
