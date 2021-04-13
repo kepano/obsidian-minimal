@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.5.5 by @kepano
+Minimal Obsidian 2.5.6 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -696,86 +696,91 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* --------------- */
 /* Checklist Plugin */
 
-.todo-list .group .item.classic,
-.todo-list .group .item.compact,
-.todo-list .group svg,
-.todo-list .group .page {
+
+.checklist-plugin-main .group .classic,
+.checklist-plugin-main .group .compact,
+.checklist-plugin-main .group svg,
+.checklist-plugin-main .group .page {
   cursor:var(--cursor);
 }
-.todo-list {
+.workspace .view-content .checklist-plugin-main {
   padding:5px 10px 15px 15px;
+  --todoList-togglePadding--compact:2px;
+  --todoList-listItemMargin--compact:2px;
 }
-.todo-list .title {
+.checklist-plugin-main .title {
   font-weight:400;
   color:var(--text-muted);
   font-size:var(--font-small);
 }
-.todo-list .group svg {
+.checklist-plugin-main .group svg {
   fill:var(--text-faint);
 }
-.todo-list .group svg:hover {
+.checklist-plugin-main .group svg:hover {
   fill:var(--text-normal);
 }
-.todo-list .group .title:hover {
+.checklist-plugin-main .group .title:hover {
   color:var(--text-normal);
 }
-.todo-list .group:not(:last-child) {
+.checklist-plugin-main .group:not(:last-child) {
   border-bottom:1px solid var(--background-modifier-border);
 }
-.todo-list .group {
+.checklist-plugin-main .group {
   padding:8px 0 0 0;
 }
-.todo-list .group .item.classic:last-child,
-.todo-list .group .item.compact:last-child {
+.checklist-plugin-main .group .classic:last-child,
+.checklist-plugin-main .group .compact:last-child {
   margin-bottom:10px;
 }
-.todo-list .group .item.classic,
-.todo-list .group .item.compact {
+.checklist-plugin-main .group .classic,
+.checklist-plugin-main .group .compact {
   font-size:var(--font-small);
 }
-.todo-list .group .item.classic,
-.todo-list .group .item.compact {
+.checklist-plugin-main .group .classic,
+.checklist-plugin-main .group .compact {
   background:transparent;
   border-radius:0;
   margin:0 auto;
   padding:0;
 }
-.todo-list .group .item.classic .content {
+.checklist-plugin-main .group .classic .content {
   padding:0;
 }
-.todo-list .group .item.classic:hover,
-.todo-list .group .item.compact:hover {
+.checklist-plugin-main .group .classic:hover,
+.checklist-plugin-main .group .compact:hover {
   background:transparent;
 }
-.todo-list .group .item.classic > .toggle,
-.todo-list .group .item.compact > .toggle {
-  padding:4px 5px 4px 0;
+.markdown-preview-view.checklist-plugin-main ul > li:not(.task-list-item)::before {
+  display:none;
 }
-.todo-list .group .item.compact > .toggle .checked {
+.checklist-plugin-main .group .compact > .toggle .checked {
   background:var(--text-accent);
   top:-1px;
   left:-1px;
   height:18px;
   width:18px;
 }
-.todo-list .group .count {
+.checklist-plugin-main .compact .toggle:hover {
+  opacity:1 !important;
+}
+.checklist-plugin-main .group .count {
   font-size:var(--font-smaller);
   padding:0;
   background:transparent;
   font-weight:400;
   color:var(--text-faint);
 }
-.todo-list .group .group-header:hover .count {
+.checklist-plugin-main .group .group-header:hover .count {
   color:var(--text-muted);
 }
-.todo-list .group .item .checkbox {
+.checklist-plugin-main .group .checkbox {
   border:1px solid var(--background-modifier-border-hover);
   min-height:18px;
   min-width:18px;
   height:18px;
   width:18px;
 }
-.todo-list .group .item .checkbox:hover {
+.checklist-plugin-main .group .checkbox:hover {
   border:1px solid var(--background-modifier-border-focus);
 }
 
@@ -1739,7 +1744,7 @@ input[type=checkbox]:focus,input[type=checkbox]:hover {
   outline:0;
   border-color:var(--text-faint);
 }
-.todo-list .group .item.compact > .toggle .checked,
+.checklist-plugin-main .group .compact > .toggle .checked,
 .is-flashing input[type=checkbox]:checked,
 input[type=checkbox]:checked {
   background-color:var(--background-modifier-accent) !important;
