@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.5.6 by @kepano
+Minimal Obsidian 2.5.7 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1049,6 +1049,28 @@ input.prompt-input:hover {
   font-weight:600;
 }
 
+.menu {
+  padding:5px;
+}
+.menu-item {
+  font-size:var(--font-small);
+  border-radius:5px;
+  padding:2px 12px 2px 8px;
+  height:24px;
+  cursor:var(--cursor);
+  line-height:20px;
+}
+.menu-separator {
+  margin:6px -5px;
+
+}
+.menu-item-icon {
+  width:20px;
+}
+.menu-item-icon svg {
+  width:12px;
+  height:12px;
+}
 
 /* --------------- */
 /* Minimal settings */
@@ -1825,14 +1847,16 @@ input[type=checkbox]:checked {
   padding-bottom:50px;
 }
 .nav-folder-title {
-  margin:0px;
-  padding:0 10px 0 24px;
+  margin: 0 0 0 8px;
+  min-width: auto;
+  width: calc(100% - 16px);
+  padding: 0 10px 0 16px;
   cursor:var(--cursor);
 }
 .nav-folder-title.is-being-dragged-over {
   background-color:var(--background-modifier-accent);
   border-color:var(--background-modifier-accent);
-  border-radius:0;
+  border-radius:6px;
   border-left:1px solid transparent;
   border-right:1px solid transparent;
 }
