@@ -1098,7 +1098,7 @@ input.prompt-input:hover {
   color:var(--text-faint) !important;
 }
 .cm-s-obsidian .cm-hmd-frontmatter {
-    font-family:var(--text);
+    font-family:var(--text-editor);
     color:var(--text-muted);
 }
 
