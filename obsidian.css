@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.5.7 by @kepano
+Minimal Obsidian 2.5.8 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -9,7 +9,7 @@ plugin and the Hider plugin.
 Sponsor my work on Patreon:
 https://www.patreon.com/kepano
 
-Readme:;
+Readme:
 https://github.com/kepano/obsidian-minimal
 
 ----------------------------------------------------------------
@@ -42,6 +42,7 @@ Minimal Styling
   Icons
   Tags
   Modals
+  Front matter
   Drag ghost
   Workspace
   Window frame
@@ -683,9 +684,12 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* --------------- */
 /* Dataview Plugin */
 
+.markdown-preview-view .table-view-table {
+  font-size:calc(var(--font-normal) - 1px);
+}
 .markdown-preview-view .table-view-table > thead > tr > th {
   font-weight:600;
-  font-size:var(--font-normal);
+  font-size:vcalc(var(--font-normal) - 1px);
   color:var(--text-normal);
   border-bottom:1px solid var(--text-faint);
 }
@@ -701,7 +705,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   cursor:var(--cursor);
 }
 .workspace .view-content .checklist-plugin-main {
-  padding:5px 10px 15px 15px;
+  padding:10px 10px 15px 15px;
   --todoList-togglePadding--compact:2px;
   --todoList-listItemMargin--compact:2px;
 }
@@ -723,7 +727,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   border-bottom:1px solid var(--background-modifier-border);
 }
 .checklist-plugin-main .group {
-  padding:8px 0 0 0;
+  padding:0 0 4px 0;
 }
 .checklist-plugin-main .group .classic:last-child,
 .checklist-plugin-main .group .compact:last-child {
@@ -737,7 +741,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 .checklist-plugin-main .group .compact {
   background:transparent;
   border-radius:0;
-  margin:0 auto;
+  margin:1px auto;
   padding:0;
 }
 .checklist-plugin-main .group .classic .content {
@@ -1070,6 +1074,32 @@ input.prompt-input:hover {
 .menu-item-icon svg {
   width:12px;
   height:12px;
+}
+
+/* --------------- */
+/* Front matter */
+
+.theme-dark pre.frontmatter,
+.theme-light pre.frontmatter {
+  padding:0 0 0px 0;
+  background:transparent;
+  font-family:var(--text);
+  line-height:1.2;
+  border-radius:0;
+  border-bottom:0px solid var(--background-modifier-border);
+}
+.markdown-preview-view .table-view-table > thead > tr > th {
+    border-color:var(--background-modifier-border);
+}
+.theme-dark .frontmatter .token,
+.theme-light .frontmatter .token,
+.markdown-preview-section .frontmatter code {
+  font-family:var(--text);
+  color:var(--text-faint) !important;
+}
+.cm-s-obsidian .cm-hmd-frontmatter {
+    font-family:var(--text);
+    color:var(--text-muted);
 }
 
 /* --------------- */
@@ -1853,12 +1883,14 @@ input[type=checkbox]:checked {
   padding: 0 10px 0 16px;
   cursor:var(--cursor);
 }
+.nav-folder.mod-root > .nav-folder-title.is-being-dragged-over {
+  background-color:var(--text-selection);
+}
 .nav-folder-title.is-being-dragged-over {
-  background-color:var(--background-modifier-accent);
-  border-color:var(--background-modifier-accent);
+  background-color:var(--text-selection);
+  border-color:var(--text-selection);
   border-radius:6px;
-  border-left:1px solid transparent;
-  border-right:1px solid transparent;
+  border:1px solid transparent;
 }
 .nav-folder-title-content {
   padding:0px 4px 1px 0;
