@@ -1079,8 +1079,8 @@ input.prompt-input:hover {
 /* --------------- */
 /* Front matter */
 
-.theme-dark pre.frontmatter,
-.theme-light pre.frontmatter {
+.theme-dark pre.frontmatter[class*="language-yaml"],
+.theme-light pre.frontmatter[class*="language-yaml"] {
   padding:0 0 0px 0;
   background:transparent;
   font-family:var(--text);
