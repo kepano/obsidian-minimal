@@ -665,6 +665,11 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 #calendar-container .active {
   color:var(--text-normal);
 }
+
+#calendar-container .reset-button,
+#calendar-container .day {
+  cursor:var(--cursor);
+}
 #calendar-container .active,
 #calendar-container .active.today,
 #calendar-container .week-num:hover,
@@ -692,6 +697,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   font-size:vcalc(var(--font-normal) - 1px);
   color:var(--text-normal);
   border-bottom:1px solid var(--text-faint);
+  cursor:var(--cursor);
 }
 
 /* --------------- */
@@ -803,7 +809,8 @@ body, input, button  {
 .workspace-leaf-content[data-type=markdown] {
   font-family:var(--text)
 }
-body, input, button, 
+body, input, button,
+.markdown-preview-view,
 .cm-s-obsidian .cm-formatting-hashtag,
 .cm-s-obsidian {
   font-size:var(--font-normal);
@@ -2341,7 +2348,7 @@ input.search-input:focus {
   margin:0;
 }
 .search-result-container {
-  padding:5px 10px 5px 0px;
+  padding:5px 10px 50px 0px;
 }
 .search-result-file-title {
   line-height:1.3;
