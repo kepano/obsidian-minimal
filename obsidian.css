@@ -2827,6 +2827,19 @@ ol > li {
   color:var(--text-muted);
 }
 
+.popover.hover-popover .markdown-preview-view .table-view-table,
+.popover.hover-popover .markdown-embed .markdown-preview-view {
+  font-size:1.05em;
+}
+
+.popover.hover-popover .markdown-embed h1,
+.popover.hover-popover .markdown-embed h2,
+.popover.hover-popover .markdown-embed h3,
+.popover.hover-popover .markdown-embed h4 {
+  margin-top:1rem;
+}
+
+
 /* --------------- */
 /* Graphs */
 
