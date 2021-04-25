@@ -740,6 +740,14 @@ body .kanban-plugin__lane button.kanban-plugin__lane-settings-button,
 .kanban-plugin__lane-action-wrapper > button {
   background:transparent;
 }
+body .kanban-plugin__item .kanban-plugin__item-edit-archive-button:hover,
+body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
+body .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  color:var(--text-normal);
+  background:transparent;
+}
 body .kanban-plugin__new-lane-button-wrapper {
   position:fixed;
   bottom:30px;
