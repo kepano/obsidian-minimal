@@ -740,6 +740,13 @@ body .kanban-plugin__item-title p {
 .kanban-plugin__lane-input-actions button {
   font-size:var(--font-small);
 }
+body .kanban-plugin__item {
+  background-color:var(--background-primary);
+}
+body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea {
+  padding:6px 8px;
+  border:1px solid var(--background-modifier-border);
+}
 body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled,
 body .kanban-plugin__item .kanban-plugin__item-edit-archive-button,
 body .kanban-plugin__item button.kanban-plugin__item-edit-button,
