@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.5.9 by @kepano
+Minimal Obsidian 2.5.10 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -34,6 +34,7 @@ Special Features
   Image zoom
   Calendar plugin
   Dataview plugin
+  Kanban plugin
   Checklist plugin
 
 Minimal Styling
@@ -199,8 +200,8 @@ Disabled features */
     --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
     --text-on-accent:white;
     --icon-hex:000;
-    --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
-    --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
+    --interactive-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 10%));
+    --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 0%));
     --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 10%));
     --interactive-accent-rgb:220, 220, 220;
     --text-selection:hsla(var(--accent-h),50%,calc(var(--base-l) - 20%), 30%);
@@ -698,6 +699,73 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   color:var(--text-normal);
   border-bottom:1px solid var(--text-faint);
   cursor:var(--cursor);
+}
+
+/* --------------- */
+/* Kanban Plugin */
+
+body .workspace-leaf-content[data-type=kanban] .view-header-title-container {
+  text-align: center;
+}
+body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=kanban] .view-header-title {
+  text-align: center;
+}
+body .kanban-plugin {
+  --interactive-accent: var(--text-selection);
+  --interactive-accent-hover: var(--background-tertiary);
+  --text-on-accent: var(--text-normal);
+  background-color: var(--background-primary);
+}
+body .kanban-plugin__board {
+  justify-content: center;
+}
+body .kanban-plugin__checkbox-label {
+  font-size:var(--font-small);
+  color:var(--text-muted);
+}
+body .kanban-plugin__grow-wrap > textarea, 
+body .kanban-plugin__grow-wrap::after, 
+body .kanban-plugin__item-title p {
+  font-size:var(--font-small);
+}
+.kanban-plugin__item-input-actions button,
+.kanban-plugin__lane-input-actions button {
+  font-size:var(--font-small);
+}
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled,
+body .kanban-plugin__item .kanban-plugin__item-edit-archive-button,
+body .kanban-plugin__item button.kanban-plugin__item-edit-button,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button,
+.kanban-plugin__item-settings-actions > button,
+.kanban-plugin__lane-action-wrapper > button {
+  background:transparent;
+}
+body .kanban-plugin__new-lane-button-wrapper {
+  position:fixed;
+  bottom:30px;
+}
+body .kanban-plugin__item-button-wrapper > button {
+  font-size: var(--font-small);
+  color: var(--text-muted);
+  background: transparent;
+}
+body .kanban-plugin__item-button-wrapper > button:hover {
+  color: var(--text-normal);
+  background: var(--background-tertiary);
+}
+body .kanban-plugin__item-button-wrapper {
+  padding-top:0;
+  border-top:none;
+}
+body .kanban-plugin__lane-items {
+  padding-bottom:0;
+}
+body button.kanban-plugin__new-lane-button {
+  background-color:transparent;
+  border:1px solid transparent;
+  text-align: center;
+  padding-right:25px;
+  color: var(--text-faint);
 }
 
 /* --------------- */
