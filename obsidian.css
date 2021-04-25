@@ -743,6 +743,13 @@ body .kanban-plugin__item-title p {
 body .kanban-plugin__item {
   background-color:var(--background-primary);
 }
+body .kanban-plugin__lane-header-wrapper  .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__lane-input-wrapper  .kanban-plugin__grow-wrap > textarea {
+  background:transparent;
+  color:var(--text-normal);
+  font-size:0.875rem;
+  font-weight:600;
+}
 body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea {
   padding:6px 8px;
   border:1px solid var(--background-modifier-border);
