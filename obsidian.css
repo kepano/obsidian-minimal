@@ -700,6 +700,9 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   border-bottom:1px solid var(--text-faint);
   cursor:var(--cursor);
 }
+/*.markdown-preview-view .table-view-table tr:hover {
+  background:var(--text-selection);
+}*/
 
 /* --------------- */
 /* Kanban Plugin */
@@ -750,6 +753,9 @@ body .kanban-plugin__lane-input-wrapper  .kanban-plugin__grow-wrap > textarea {
   font-size:0.875rem;
   font-weight:600;
 }
+body .kanban-plugin__item-input-wrapper {
+  border:0;
+}
 body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea {
   padding:6px 8px;
   border:1px solid var(--background-modifier-border);
@@ -786,11 +792,28 @@ body .kanban-plugin__item-button-wrapper > button:hover {
   background: var(--background-tertiary);
 }
 body .kanban-plugin__item-button-wrapper {
-  padding-top:0;
+  padding-top:5px;
   border-top:none;
+}
+
+body .kanban-plugin__lane-setting-wrapper > div:last-child {
+  border:none;
+  margin:0;
+}
+
+body .kanban-plugin__lane.is-dragging {
+  box-shadow:0 5px 30px rgba(0,0,0,0.15);
+  border:1px solid var(--background-modifier-border);
+}
+
+body .kanban-plugin__lane {
+  background:var(--background-primary);
+  padding:0;
+  border:1px solid transparent;
 }
 body .kanban-plugin__lane-items {
   padding-bottom:0;
+  background-color:var(--background-secondary);
 }
 body button.kanban-plugin__new-lane-button {
   background-color:transparent;
