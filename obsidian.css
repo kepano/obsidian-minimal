@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 2.5.10 by @kepano
+Minimal Obsidian 2.5.11 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -801,6 +801,10 @@ body .kanban-plugin__lane-setting-wrapper > div:last-child {
   margin:0;
 }
 
+body .kanban-plugin__item.is-dragging {
+  box-shadow: 0 5px 30px rgba(0,0,0,0.15),
+    0 0 0 2px var(--text-selection);
+}
 body .kanban-plugin__lane.is-dragging {
   box-shadow:0 5px 30px rgba(0,0,0,0.15);
   border:1px solid var(--background-modifier-border);
@@ -1544,9 +1548,7 @@ border-bottom:1px solid #999;
   max-width:var(--max-width);
   width:var(--line-width);
 }
-.markdown-source-view.is-readable-line-width .CodeMirror,
-.CodeMirror,
-.markdown-preview-section {
+.markdown-source-view.is-readable-line-width .CodeMirror {
   padding-left:0;
   padding-right:0;
   margin:0 auto 0 auto;
@@ -1836,6 +1838,11 @@ input.document-replace-input:focus {
   max-width:100%;
   padding:0;
   width:auto;
+}
+
+.minimal-folding .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
+.minimal-folding .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
+  padding-left:0;
 }
 
 /* Hide embed styling for sidebar documents */
