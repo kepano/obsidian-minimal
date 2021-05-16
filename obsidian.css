@@ -2262,7 +2262,7 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   position:absolute;
   margin-left:-42px;
   padding-bottom:10px;
-  padding-top:8px;}
+  padding-top:0px;}
 .markdown-preview-view ul > li:not(.task-list-item) .collapse-indicator {
   padding-right:20px;}
 .markdown-preview-view ul > li:not(.task-list-item)::before {
