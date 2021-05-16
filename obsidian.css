@@ -2946,14 +2946,13 @@ ol > li {
   display:none;
 }
 .popover .markdown-embed .markdown-preview-view {
-  padding-top:15px;
-  padding-bottom:30px;
+  padding:10px 20px 30px;
 }
 .popover.hover-popover .markdown-embed .markdown-embed-content {
   max-height:none;
 }
-.popover.mod-empty {
-  padding:20px 15px 20px 20px;
+.popover.hover-popover.mod-empty {
+  padding:20px 20px 20px 20px;
   color:var(--text-muted);
 }
 
