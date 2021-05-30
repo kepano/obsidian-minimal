@@ -949,6 +949,7 @@ body, input, button,
   line-height:var(--line-height);
   -webkit-font-smoothing:subpixel-antialiased;
 }
+.markdown-source-view.mod-cm6 .cm-scroller,
 .markdown-source-view,
 .cm-s-obsidian .cm-formatting-hashtag, 
 .cm-s-obsidian {
@@ -1561,6 +1562,7 @@ border-bottom:1px solid #999;
   max-width:var(--max-width);
   width:var(--line-width);
 }
+.markdown-source-view.is-readable-line-width .cm-editor,
 .markdown-source-view.is-readable-line-width .CodeMirror {
   padding-left:0;
   padding-right:0;
@@ -1597,6 +1599,7 @@ border-bottom:1px solid #999;
   opacity: 0.5; 
   width: 5px; 
 } 
+.markdown-source-view.mod-cm6,
 .markdown-source-view.mod-cm5,
 .markdown-source-view {
   padding:0;
