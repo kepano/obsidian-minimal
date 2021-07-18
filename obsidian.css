@@ -3398,6 +3398,7 @@ body.minimal-folding.is-mobile .view-header-title,
   height:0 !important;
   padding:0 !important;
   position:relative !important;
+  border-bottom:none;
 }
 .is-mobile .safe-area-top-cover {
   background-color:var(--background-primary);
@@ -3469,7 +3470,7 @@ body.minimal-folding.is-mobile .view-header-title,
   display:none;
 }
 .is-mobile .workspace-drawer-header {
-  padding:10px 10px 0 20px;
+  padding:5px 10px 0 20px;
 }
 .is-mobile .workspace-drawer-header-name {
   font-weight:var(--bold-weight);
@@ -3507,7 +3508,7 @@ body.minimal-folding.is-mobile .view-header-title,
   padding:15px 0;
   margin-right:0px;
 }
-.is-mobile .is-pinned .workspace-drawer-ribbon {
+.is-ios .is-pinned .workspace-drawer-ribbon {
   padding:30px 0 20px 0;
 }
 .is-mobile .side-dock-actions, .is-mobile .side-dock-settings {
@@ -3534,9 +3535,6 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .workspace-drawer-active-tab-container {
   z-index:2;
   background-color:var(--background-primary);
-}
-.is-mobile .side-dock-actions {
-  overflow-x:scroll;
 }
 .is-mobile .side-dock-actions,
 .is-mobile .side-dock-settings {
@@ -3630,16 +3628,13 @@ body.minimal-folding.is-mobile .view-header-title,
   max-width:100%;
   left:0 !important;
 }
-.is-mobile .is-pinned .workspace-drawer-ribbon {
-  padding:15px 0 15px 0;
-}
 .is-ios .is-pinned .workspace-drawer-ribbon {
   padding:30px 0 20px 0;
 }
 .is-ios .workspace-drawer.is-pinned .workspace-drawer-header {
   padding-top:26px;
 }
-.is-ios .is-ios .mod-root .workspace-leaf {
+.is-ios .mod-root .workspace-leaf {
   padding-top:20px;
 }
 .is-ios .mod-root .workspace-split.mod-horizontal .workspace-leaf:not(:first-of-type) {
