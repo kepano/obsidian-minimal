@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.0.2 by @kepano
+Minimal Obsidian 3.0.3 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -180,7 +180,10 @@ Disabled features */
   --border-width:1px;
   --border-width-alt:1px;
 
-  /* Adjustments for mobile */
+}
+
+/* Desktop font sizes */
+body {
   --font-adaptive-normal:var(--font-normal);
   --font-adaptive-small:var(--font-small);
   --font-adaptive-smaller:var(--font-smaller);
@@ -3637,6 +3640,9 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-ios .workspace-drawer.is-pinned .workspace-drawer-header {
   padding-top:26px;
 }
+.is-mobile .workspace-split.mod-root {
+  background-color:var(--background-primary);
+}
 .is-ios .mod-root .workspace-leaf {
   padding-top:20px;
 }
@@ -3717,11 +3723,40 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   display:none;
 }
 
+.mobile-toolbar {
+  width:100%;
+  text-align:center;
+  display:flex;
+  overflow: scroll;
+  background-color: var(--background-primary);
+  border-top: 1px solid var(--background-modifier-border);
+}
+
 /* --------------- */
 /* Phone styling */
 
 @media (max-width:400pt) {
 
+  .view-header-icon {
+    display:none;
+  }
+  .is-mobile .prompt {
+    border-radius:0;
+    padding-top:5px;
+    padding-bottom:0;
+    max-height:500px;
+    top:120px;
+  }
+  .is-mobile .suggestion-container {
+    max-height:200px;
+    border-top:1px solid var(--background-modifier-border);
+    border-radius:0;
+    padding-top:0;
+    box-shadow:none;
+  }
+  .is-mobile .suggestion-container .suggestion {
+    padding-top:10px;
+  }
   .workspace-drawer-header-icon .pin {
     display:none;
   }
@@ -3775,6 +3810,14 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 /* Tablet styling */
 
 @media (min-width:400pt) {
+
+  .mobile-toolbar-option {
+    border-radius:8px;
+    margin:6px 0;
+  }
+  .mobile-toolbar-option:hover {
+    background-color:var(--background-tertiary);
+  }
 
   .is-mobile.is-ios .safe-area-top-cover {
     background-color:transparent;
@@ -3863,6 +3906,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   .is-mobile .setting-item-control button {
     width:auto;
   }
+
   .is-mobile .workspace-drawer:not(.is-pinned) {
     margin:30px 16px 0;
     height:calc(100vh - 48px);
