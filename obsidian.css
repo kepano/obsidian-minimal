@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.0.3 by @kepano
+Minimal Obsidian 3.0.4 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -187,7 +187,7 @@ body {
   --font-adaptive-normal:var(--font-normal);
   --font-adaptive-small:var(--font-small);
   --font-adaptive-smaller:var(--font-smaller);
-  --font-adaptive-smallest: var(--font-smallest);
+  --font-adaptive-smallest:var(--font-smallest);
   --line-width-adaptive:var(--line-width);
 }
 
@@ -1466,6 +1466,7 @@ input.prompt-input:hover {
 
 .empty-state {
   background-color:var(--background-primary);
+  text-align:center;
 }
 .workspace-split.mod-vertical > .workspace-split {
   padding:0;
@@ -3465,12 +3466,20 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .search-result-container {
   padding-bottom:20px;
 }
+.is-mobile .search-result-file-match-replace-button {
+  background-color:var(--background-tertiary);
+  color:var(--text-normal);
+}
 .is-mobile .search-result-file-matches,
 .is-mobile .search-result-file-title {
   font-size:var(--font-adaptive-small);
 }
 .is-mobile .cm-s-obsidian .cm-gutters {
   display:none;
+}
+.is-mobile .empty-state-action {
+  border-radius:6px;
+  font-size:var(--font-adaptive-small);
 }
 .is-mobile .workspace-drawer-header {
   padding:5px 10px 0 20px;
@@ -3564,12 +3573,18 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile .workspace-leaf-content:not([data-type='search']) .nav-buttons-container {
   border-bottom:var(--border-width) solid var(--background-modifier-border);
 }
+.is-mobile input[type='text'] {
+  font-size:14px;
+}
 .is-mobile .search-input-container input[type='text'] {
   -webkit-appearance:none;
   border-radius:50px;
   height:40px;
   padding:10px 20px;
   font-size:14px;
+}
+.is-mobile .search-input-clear-button {
+  right:15px;
 }
 .is-mobile .modal, .is-mobile .prompt, .is-mobile .suggestion-container {
   width:100%;
@@ -3587,6 +3602,11 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 }
 .is-mobile .suggestion-item {
   font-size:var(--font-adaptive-normal);
+  padding-left:10px;
+  letter-spacing:0.001px;
+}
+.is-mobile .prompt-results .suggestion-flair {
+  display:none;
 }
 .is-mobile input[type='text'].prompt-input,
 .is-mobile input[type='text'].prompt-input:hover {
@@ -3633,6 +3653,9 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   width:100%;
   max-width:100%;
   left:0 !important;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  user-select:none;
 }
 .is-ios .is-pinned .workspace-drawer-ribbon {
   padding:30px 0 20px 0;
@@ -3727,9 +3750,39 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   width:100%;
   text-align:center;
   display:flex;
-  overflow: scroll;
-  background-color: var(--background-primary);
-  border-top: 1px solid var(--background-modifier-border);
+  overflow:scroll;
+  background-color:var(--background-primary);
+  border-top:1px solid var(--background-modifier-border);
+}
+.is-mobile .modal.mod-settings .vertical-tab-content-container {
+  border:0;
+}
+
+.is-mobile .modal,
+.is-mobile .modal-bg {
+  transition:none !important;
+  transform:none !important;
+}
+
+.is-mobile .document-search-container {
+  height:56px;
+  padding:10px 15px;
+}
+.is-mobile .document-search-container input[type='text'] {
+  width:auto;
+  margin:0 5px 0 0;
+  height:32px;
+  padding:5px 7px;
+  border-radius:6px;
+  border:1px solid var(--background-modifier-border);
+  background-color:var(--background-primary);
+}
+.is-mobile .document-search-container button {
+  width:auto;
+  margin:0px;
+  background:transparent;
+  font-size:14px;
+  height:32px;
 }
 
 /* --------------- */
@@ -3740,11 +3793,27 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   .view-header-icon {
     display:none;
   }
+  .is-mobile .suggestion-hotkey {
+    display:none;
+  }
+
+  .is-mobile .modal,
+  .is-mobile .menu,
+  .is-mobile .prompt {
+    border-radius:0;
+  }
+
+  .is-mobile .suggestion-flair {
+    right:0;
+    left:auto;
+    position:absolute;
+    padding:5px 5px 0 0;
+  }
   .is-mobile .prompt {
     border-radius:0;
     padding-top:5px;
     padding-bottom:0;
-    max-height:500px;
+    max-height:calc(100vh - 120px);
     top:120px;
   }
   .is-mobile .suggestion-container {
@@ -3838,9 +3907,6 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   .is-mobile .modal-container .modal.mod-settings .vertical-tabs-container {
     transform:translateZ(0);
   }
-  .is-mobile .modal.mod-settings .vertical-tab-content-container {
-    border:0;
-  }
   .is-mobile .view-action {
     padding:5px 5px 4px;
     border-radius:8px;
@@ -3883,7 +3949,6 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     box-shadow:0 0 100vh 100vh rgba(0,0,0,0.5);
   }
   /* Animations */
-  .is-mobile .modal-bg,
   .is-mobile .menu,
   .is-mobile .prompt {
     transition:none !important;
