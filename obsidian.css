@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.0 by @kepano
+Minimal Obsidian 3.0.1 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -3630,16 +3630,19 @@ body.minimal-folding.is-mobile .view-header-title,
   max-width:100%;
   left:0 !important;
 }
-.is-mobile .workspace-drawer.is-pinned .workspace-drawer-header {
+.is-mobile .is-pinned .workspace-drawer-ribbon {
+  padding:15px 0 15px 0;
+}
+.is-ios .is-pinned .workspace-drawer-ribbon {
+  padding:30px 0 20px 0;
+}
+.is-ios .workspace-drawer.is-pinned .workspace-drawer-header {
   padding-top:26px;
 }
-.is-mobile .workspace-split.mod-root {
-  background-color:var(--background-primary);
-}
-.is-mobile .mod-root .workspace-leaf {
+.is-ios .is-ios .mod-root .workspace-leaf {
   padding-top:20px;
 }
-.is-mobile .mod-root .workspace-split.mod-horizontal .workspace-leaf:not(:first-of-type) {
+.is-ios .mod-root .workspace-split.mod-horizontal .workspace-leaf:not(:first-of-type) {
   padding-top:0;
 }
 .is-mobile.focus-mode .view-actions {
@@ -3730,7 +3733,7 @@ body.minimal-folding.is-mobile .view-header-title,
   .is-mobile .workspace-drawer .workspace-drawer-header {
     padding-top:40px;
   }
-  .is-mobile .mod-root .workspace-leaf {
+  .is-ios .mod-root .workspace-leaf {
     padding-top:40px;
   }
   .is-mobile .workspace .workspace-drawer-backdrop {
