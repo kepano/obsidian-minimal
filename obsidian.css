@@ -1625,6 +1625,14 @@ input.prompt-input:hover {
 /* --------------- */
 /* Custom line width */
 
+/* Readable line width off */
+.markdown-preview-view,
+.markdown-source-view .cm-editor,
+.markdown-source-view .CodeMirror {
+  max-width:90%;
+  margin:0 auto;
+}
+/* With readable line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width:var(--max-width);
   width:var(--line-width-adaptive);
