@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.0.1 by @kepano
+Minimal Obsidian 3.0.2 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -3472,6 +3472,9 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .workspace-drawer-header {
   padding:5px 10px 0 20px;
 }
+body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
+  padding:5px;
+}
 .is-mobile .workspace-drawer-header-name {
   font-weight:var(--bold-weight);
   color:var(--text-normal);
@@ -3725,7 +3728,7 @@ body.minimal-folding.is-mobile .view-header-title,
   .is-mobile .markdown-source-view {
     padding-top:15px;
   }
-  .is-mobile .workspace-drawer .workspace-drawer-header {
+  .is-ios .workspace-drawer .workspace-drawer-header {
     padding-top:40px;
   }
   .is-ios .mod-root .workspace-leaf {
@@ -3736,7 +3739,7 @@ body.minimal-folding.is-mobile .view-header-title,
     height:calc(100vh + 50px);
     z-index:9;
   }
-  .is-mobile .workspace-drawer-ribbon {
+  .is-ios .workspace-drawer-ribbon {
     padding:40px 0 20px 0;
   }
   .is-mobile .view-header-title {
