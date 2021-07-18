@@ -3829,8 +3829,8 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   .workspace-drawer-header-icon .pin {
     display:none;
   }
-  .is-mobile .markdown-source-view {
-    padding-top:15px;
+  .is-mobile .markdown-source-view .cm-scroller > .cm-content {
+    margin-top:15px;
   }
   .is-ios .workspace-drawer .workspace-drawer-header {
     padding-top:40px;
