@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.0.5 by @kepano
+Minimal Obsidian 3.0.6 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -998,7 +998,7 @@ body, input, button,
   font-family:var(--text-editor);
 }
 .cm-s-obsidian span.cm-formatting-task {
-  font-family:var(--font-editor);
+  font-family:var(--text-editor);
   line-height:var(--line-height);
 }
 .cm-s-obsidian .cm-header,
@@ -1377,7 +1377,7 @@ input.prompt-input:hover {
 }
 .modal.mod-settings .vertical-tab-header,
 .modal.mod-settings .vertical-tab-content-container {
-  height:100vh;
+  height:90vh;
 }
 
 .setting-item-name,
@@ -2270,7 +2270,7 @@ body.minimal-rel-preview .markdown-preview-view ul ul::before {
   content:'';
   border-left:1px solid var(--background-modifier-border);
   position:absolute;
-  left:-14px;
+  left:-0.85em;
   top:0;
   bottom:0; 
 }
@@ -2278,7 +2278,7 @@ body.minimal-rel-preview .markdown-preview-view ul.contains-task-list::before {
   top:5px;
 }
 body.minimal-rel-preview .markdown-preview-view .task-list-item-checkbox {
-  margin-left:-21px;
+  margin-left:-1.3em;
 }
 
 /* Relationship lines in Edit mode  */
@@ -2358,7 +2358,8 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   padding-top:0px;}
 .markdown-preview-view ul > li:not(.task-list-item) .collapse-indicator {
   padding-right:20px;}
-
+.markdown-preview-view ul > li:not(.task-list-item)::marker {
+  font-size:0.9em;}
 /*.markdown-preview-view ul > li:not(.task-list-item)::before {
   content:'\2022';
   text-align:left;
@@ -3988,7 +3989,6 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   .is-mobile .setting-item-control button {
     width:auto;
   }
-
   .is-mobile .workspace-drawer:not(.is-pinned) {
     margin:30px 16px 0;
     height:calc(100vh - 48px);
