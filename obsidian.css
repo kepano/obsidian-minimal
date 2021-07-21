@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.0.8 by @kepano
+Minimal Obsidian 3.0.9 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1247,7 +1247,11 @@ input.prompt-input:hover {
   border-radius:6px;
   background:var(--background-tertiary);
 }
+.menu-item {
+  margin-bottom:1px;
+}
 .suggestion-item.is-selected,
+.menu-item:hover:not(.is-disabled):not(.is-label),
 .menu-item:hover {
   background:var(--background-tertiary);
 }
@@ -3512,6 +3516,9 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   color:var(--text-faint);
   font-size:var(--font-adaptive-small);
   margin-bottom:5px;
+}
+.is-mobile .mod-left .workspace-drawer-header-info,
+.is-mobile.hider-status .workspace-drawer-header-info {
   display:none;
 }
 .is-mobile .workspace-drawer-active-tab-header {
@@ -3933,6 +3940,27 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   .is-mobile .frontmatter-container .tag, 
   .is-mobile .tag {
     font-size:var(--font-adaptive-smaller);
+  }
+
+  /* experiment with scrolling tables */
+  .is-mobile .markdown-preview-sizer > div {
+    overflow-x:auto;
+  }
+  .is-mobile .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+  .is-mobile .markdown-preview-sizer {
+    max-width: 100%;
+  }
+  .is-mobile .markdown-preview-sizer > div > * {
+    max-width:var(--max-width);
+    margin-left:auto;
+    margin-right:auto;
+    margin-block-end:0.25em;
+    margin-block-start: 0.75em;
+  }
+  .is-mobile .markdown-preview-sizer > div > table {
+    margin-top:20px;
+    margin-left:6%;
+    margin-right:6%;
   }
 }
 
