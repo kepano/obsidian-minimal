@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.0.7 by @kepano
+Minimal Obsidian 3.0.8 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -3637,6 +3637,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile .modal-setting-back-button {
   padding:20px;
   background-color:var(--color-background);
+  box-shadow:none;
 }
 .is-mobile .hotkey-list-container .setting-command-hotkeys {
   flex:unset;
@@ -3801,6 +3802,42 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   font-size:14px;
   height:32px;
 }
+.is-mobile .modal .vertical-tab-header-group:last-child,
+.is-mobile .modal .vertical-tab-content .setting-item:last-child {
+  padding-bottom:70px;
+}
+.pull-out-action {
+  top:0;
+  height:100vh;
+  padding:30px 10px;
+  background:transparent;
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+}
+.is-mobile .markdown-preview-view pre {
+  overflow-x:scroll;
+}
+/* Sync */
+.is-mobile .sync-history-list {
+  padding:10px;
+  background-color:var(--background-primary);
+}
+.is-mobile .sync-history-list-item {
+  font-size:var(--font-adaptive-small);
+  padding:8px 10px;
+}
+.is-mobile .sync-history-content-container .modal-button-container {
+  padding:5px 10px 30px 10px;
+}
+
+.is-mobile .sync-history-content {
+  outline:none;
+  -webkit-appearance:none;
+  border:0;
+  background-color:var(--background-secondary);
+}
 
 /* --------------- */
 /* Phone styling */
@@ -3857,6 +3894,12 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     margin-top:-40px;
     height:calc(100vh + 50px);
     z-index:9;
+  }
+  .is-mobile .modal .vertical-tab-header-group-title {
+    padding:20px 20px 10px;
+  }
+  .is-mobile .modal .vertical-tab-nav-item {
+    padding:3px 20px;
   }
   .is-ios .workspace-drawer-ribbon {
     padding:40px 0 20px 0;
@@ -3918,9 +3961,6 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     border-top-right-radius:20px !important;
     margin-bottom:-15px;
     overflow:hidden;
-  }
-  .is-mobile .modal .vertical-tab-header-group {
-    padding-bottom:30px;
   }
   .is-mobile .modal-container .modal.mod-settings .vertical-tabs-container {
     transform:translateZ(0);
