@@ -3450,7 +3450,6 @@ Mobile styling
 }
 
 /* Padding reset */
-
 body.is-mobile {
   padding:0 !important;
 }
@@ -3881,7 +3880,6 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile .sync-history-content-container .modal-button-container {
   padding:5px 10px 30px 10px;
 }
-
 .is-mobile .sync-history-content {
   outline:none;
   -webkit-appearance:none;
@@ -3890,6 +3888,16 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 }
 .is-mobile .setting-item-control {
   margin-right:0;
+}
+.is-mobile .three-horizontal-bars {
+  opacity:0;
+}
+.is-mobile .view-header-title {
+  mask-image:unset;
+  -webkit-mask-image:unset;
+}
+.is-mobile.plugin-sliding-panes .view-header-title {
+  line-height:1.2;
 }
 
 /* --------------- */
