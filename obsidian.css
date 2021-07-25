@@ -2106,7 +2106,7 @@ input[type=checkbox]:checked {
   border:none;
   margin:3px 0 0 0;
   height:18px;
-  width: 18px;
+  width:18px;
   border-radius:26px;
   box-shadow:0 1px 2px 0px rgba(0,0,0,0.1);
   transition:all 0.1s linear;
@@ -3889,6 +3889,9 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   border:0;
   background-color:var(--background-secondary);
 }
+.is-mobile .setting-item-control {
+  margin-right:0;
+}
 
 /* --------------- */
 /* Phone styling */
@@ -3978,20 +3981,20 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     max-width:100%;
     overflow:hidden;
   }
-  .is-mobile .installed-plugins-container .setting-item-info {
+  .is-mobile .setting-item-info {
     flex:1 1 auto;
   }
-  .is-mobile .installed-plugins-container .setting-item-control {
+  .is-mobile .setting-item-control {
     flex:1 0 auto;
     margin-right:0;
   }
-  .is-mobile .installed-plugins-container .checkbox-container {
-    flex: 1 0 40px;
+  .is-mobile checkbox-container {
+    flex:1 0 40px;
     max-width:40px;
   }
   .is-mobile .setting-item-description {
-    word-break: break-word;
-    white-space: pre-line;
+    word-break:break-word;
+    white-space:pre-line;
   }
   .is-mobile .view-action {
     padding:3px 0 0 4px;
@@ -4011,19 +4014,27 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   }
   .is-mobile .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
   .is-mobile .markdown-preview-sizer {
-    max-width: 100%;
+    max-width:100%;
   }
   .is-mobile .markdown-preview-sizer > div > * {
     max-width:var(--max-width);
     margin-left:auto;
     margin-right:auto;
     margin-block-end:0.25em;
-    margin-block-start: 0.75em;
+    margin-block-start:0.75em;
   }
   .is-mobile .markdown-preview-sizer > div > table {
     margin-top:20px;
     margin-left:6%;
     margin-right:6%;
+  }
+  .is-mobile .setting-item-control select,
+  .is-mobile .setting-item-control input,
+  .is-mobile .setting-item-control button {
+    margin-bottom:5px;
+  }
+  .is-mobile .setting-item-control input[type="range"] {
+    margin-bottom:10px;
   }
 }
 
@@ -4116,6 +4127,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   }
   .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) {
     flex-direction:row;
+    align-items:center;
   }
   .is-mobile .setting-item-control select,
   .is-mobile .setting-item-control input,
@@ -4128,9 +4140,9 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     border-radius:15px;
   }
   .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
-      width:auto;
-      margin-top:0;
-    }
+    width:auto;
+    margin-top:0;
+  }
   .pull-down-action {
     width:400px;
     top:15px;
@@ -4138,4 +4150,3 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     border-radius:15px;
   }
 }
-
