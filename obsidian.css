@@ -3889,7 +3889,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile .setting-item-control {
   margin-right:0;
 }
-.is-mobile .three-horizontal-bars {
+.is-mobile .view-header-icon .three-horizontal-bars {
   opacity:0;
 }
 .is-mobile .view-header-title {
