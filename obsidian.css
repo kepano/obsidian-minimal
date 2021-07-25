@@ -1418,9 +1418,11 @@ input.prompt-input:hover {
 .setting-item {
   padding:0.75rem 0;
 } 
-
 .setting-item-description {
   padding-top:4px;
+}
+.setting-item-control {
+  margin-right:0;
 }
 
 .community-plugin-search {
@@ -1984,6 +1986,7 @@ input[type='number'] {
   padding:5px 10px;
   -webkit-appearance:none;
   transition:all 0.1s linear;
+    height:38px;
 }
 
 select:hover,
@@ -2032,6 +2035,7 @@ select {
   box-shadow:0 1px 1px 0px rgba(0,0,0,0.05);
   background-color:var(--background-tertiary);
   transition:border-color 0.1s linear;
+  height:38px;
 }
 select:hover {
   box-shadow:0 2px 3px 0px rgba(0,0,0,0.05);
@@ -3279,7 +3283,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top:-5px;
   transition:all 0.1s linear;
   cursor:default;
-  box-shadow:0 1px 1px 0px rgba(0,0,0,0.05), 0 2px 3px 0px rgba(0,0,0,0.1);
+  box-shadow:0 1px 1px 0px rgba(0,0,0,0.05), 0 2px 4px 0px rgba(0,0,0,0.1);
 }
 input[type=range]::-webkit-slider-thumb:hover,
 input[type=range]::-webkit-slider-thumb:active {
@@ -3381,9 +3385,6 @@ input[type=range]::-webkit-slider-thumb:active {
 .dropdown:focus {
   border-color:var(--background-modifier-border-focus);
 }
-.setting-item-control {
-  margin-right:10px;
-}
 
 /* --------------- */
 /* Scroll bars */
@@ -3440,7 +3441,7 @@ Mobile styling
 
 .is-mobile {
   --font-settings:16px;
-  --font-settings-small:14px;
+  --font-settings-small:13px;
 }
 .hider-tooltips .follow-link-popover {
   display:none;
@@ -3640,6 +3641,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 }
 .is-mobile input[type='text'] {
   font-size:14px;
+  height:38px
 }
 .is-mobile .search-input-container input[type='text'] {
   -webkit-appearance:none;
@@ -3886,9 +3888,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   border:0;
   background-color:var(--background-secondary);
 }
-.is-mobile .setting-item-control {
-  margin-right:0;
-}
+
 .is-mobile .view-header-icon .three-horizontal-bars {
   opacity:0;
 }
@@ -3898,6 +3898,10 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 }
 .is-mobile.plugin-sliding-panes .view-header-title {
   line-height:1.2;
+}
+.is-mobile .workspace-drawer-header-name-text {
+  white-space:nowrap;
+  margin-right:10px;
 }
 
 /* --------------- */
@@ -3995,7 +3999,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     flex:1 0 auto;
     margin-right:0;
   }
-  .is-mobile checkbox-container {
+  .is-mobile .checkbox-container {
     flex:1 0 40px;
     max-width:40px;
   }
