@@ -2974,7 +2974,7 @@ iframe {
   font-size:var(--font-adaptive-smaller);
 }
 .frontmatter-container .frontmatter-alias {
-
+  color:var(--text-muted);
 }
 .frontmatter-container {
 
