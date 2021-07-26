@@ -3995,9 +3995,11 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   .is-mobile .setting-item-info {
     flex:1 1 auto;
   }
+  .is-mobile .kanban-plugin__board-settings-modal .setting-item-control,
   .is-mobile .setting-item-control {
     flex:1 0 auto;
     margin-right:0;
+    min-width:auto;
   }
   .is-mobile .checkbox-container {
     flex:1 0 40px;
