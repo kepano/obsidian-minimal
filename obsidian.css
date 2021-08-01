@@ -588,6 +588,12 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 /* --------------- */
 /* Image zoom  */
 
+.full-width-media .markdown-preview-view .image-embed img:not([width]),
+.full-width-media .markdown-preview-view audio,
+.full-width-media .markdown-preview-view video {
+  width:100%;
+}
+
 .view-content .markdown-preview-view img {
   max-width:100%;
   cursor:zoom-in;}
@@ -2994,11 +3000,6 @@ a[href*="obsidian://search"] {
 iframe {
   border:0;
 }
-.markdown-preview-view .image-embed img:not([width]),
-.markdown-preview-view audio,
-.markdown-preview-view video {
-  width:100%;
-}
 .markdown-preview-view .mod-highlighted {
   transition:background-color 0.3s ease;
   background-color:var(--text-selection);
@@ -3382,11 +3383,11 @@ input[type=range]::-webkit-slider-thumb:active {
   padding-bottom:100px;
 }
 .plugin-list-plugins {
-  overflow:auto;
+  overflow:visible;
 }
 .community-theme-container, .hotkey-settings-container { 
   height:auto;
-  overflow:auto;
+  overflow:visible;
 }
 .modal.mod-settings .vertical-tab-header {
   background:var(--background-secondary);
