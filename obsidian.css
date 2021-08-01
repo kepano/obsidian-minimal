@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.2.1 by @kepano
+Minimal Obsidian 3.2.2 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1423,6 +1423,7 @@ input.prompt-input:hover {
   margin-right:10px;
 }
 
+button.mod-cta,
 .modal button,
 .modal button.mod-cta a {
   font-size:var(--font-settings-small);
@@ -2043,9 +2044,11 @@ input[type='number']:focus {
   border-color:var(--background-modifier-border-hover);
   box-shadow: 0 0 0px 2px var(--background-modifier-border-hover);
 }
-.modal button:not(.mod-cta):not(.mod-warning),
-.modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning),
+.modal button:not(.mod-warning),
+.modal.mod-settings button:not(.mod-warning) {
   background-color:var(--background-button);
+  color:var(--text-normal);
   border:1px solid var(--background-modifier-border);
   box-shadow:0 1px 1px 0px rgba(0,0,0,0.05);
   cursor:var(--cursor);
@@ -2054,8 +2057,8 @@ input[type='number']:focus {
   white-space: nowrap;
 }
 button:hover,
-.modal button:not(.mod-cta):not(.mod-warning):hover,
-.modal.mod-settings button:not(.mod-cta):not(.mod-warning):hover {
+.modal button:not(.mod-warning):hover,
+.modal.mod-settings button:not(.mod-warning):hover {
   background-color:var(--background-button);
   border-color:var(--background-modifier-border-hover);
   box-shadow:0 2px 3px 0px rgba(0,0,0,0.05);
@@ -2132,10 +2135,10 @@ input[type=checkbox]:checked {
 
 .checkbox-container {
   background-color:var(--background-modifier-border-hover);
+  box-shadow:inset 0 0px 1px 0px rgba(0,0,0,0.2);
   border:none;
   width:40px;
   height:24px;
-  box-shadow:none;
   cursor:var(--cursor);
 }
 .checkbox-container:after {
@@ -3378,9 +3381,12 @@ input[type=range]::-webkit-slider-thumb:active {
 .vertical-tab-content { 
   padding-bottom:100px;
 }
+.plugin-list-plugins {
+  overflow:visible;
+}
 .community-theme-container, .hotkey-settings-container { 
   height:auto;
-  overflow-y:visible;
+  overflow:visible;
 }
 .modal.mod-settings .vertical-tab-header {
   background:var(--background-secondary);
