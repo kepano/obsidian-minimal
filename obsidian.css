@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.2.0 by @kepano
+Minimal Obsidian 3.2.1 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -260,6 +260,7 @@ body {
     --text-highlight-bg:rgba(255, 224, 0, 0.5);
     --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
     --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-l) - 5%),0.7);
+    --shadow-color:rgba(0, 0, 0, 0.1);
   }
 
   .theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
@@ -298,6 +299,7 @@ body {
     --text-highlight-bg:rgba(255, 177, 80, 0.3);
     --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
     --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.8);
+    --shadow-color:rgba(0, 0, 0, 0.3);
   }
   .theme-light.minimal-light-white {
     --background-secondary:white;
@@ -420,9 +422,8 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
 }
 body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
-  box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.1) !important;
+  box-shadow:0 0 0 1px var(--background-modifier-border),1px 0px 15px 0px var(--shadow-color)!important;
 }
-
 body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
   box-shadow:none !important;
 }
@@ -446,10 +447,10 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-titl
 body.plugin-sliding-panes-rotate-header .view-header-title-container {
   position:static;
 }
-body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
+body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div {
   padding-left:0;
   padding-bottom:40px;
-  margin-left:4px;
+  margin-left:2px;
   bottom:0;
 }
 body.plugin-sliding-panes-rotate-header .view-header-icon {
