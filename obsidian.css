@@ -3382,11 +3382,11 @@ input[type=range]::-webkit-slider-thumb:active {
   padding-bottom:100px;
 }
 .plugin-list-plugins {
-  overflow:visible;
+  overflow:auto;
 }
 .community-theme-container, .hotkey-settings-container { 
   height:auto;
-  overflow:visible;
+  overflow:auto;
 }
 .modal.mod-settings .vertical-tab-header {
   background:var(--background-secondary);
