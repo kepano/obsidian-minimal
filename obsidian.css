@@ -3697,11 +3697,29 @@ body.minimal-folding.is-mobile .view-header-title,
   font-size:var(--font-adaptive-small);
 }
 
-/* Causes some scrolling issues */
+/* Folding on mobile */
 .is-mobile .markdown-source-view.mod-cm6 .cm-scroller > *:first-child {
   padding:0;
-  width:0;
   margin:0;
+  opacity:0;
+  width:0;
+}
+.is-mobile.minimal-folding .cm-editor.cm-wrap {
+  transform: translateX(0);
+}
+.is-mobile span[title="Fold line"] {
+  opacity:0;
+}
+.is-mobile span[title="Fold line"]:hover {
+  opacity:1;
+}
+.is-mobile span[title="Unfold line"]:hover {
+  color:var(--text-normal);
+}
+
+.ͼ1 .cm-foldPlaceholder {
+  background:transparent;
+  border-color:transparent;
 }
 
 .is-mobile .empty-state-action {
@@ -4203,7 +4221,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     font-size:var(--font-adaptive-smaller);
   }
 
-  /* experiment with scrolling tables */
+  /* experiment with scrolling tables 
   .is-mobile .markdown-preview-sizer > div {
     overflow-x:auto;
   }
@@ -4223,7 +4241,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     margin-left:6%;
     margin-right:6%;
   }
-
+*/
   .is-mobile .setting-item-control select,
   .is-mobile .setting-item-control input,
   .is-mobile .setting-item-control button {
