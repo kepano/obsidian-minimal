@@ -4216,7 +4216,8 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   .is-mobile .menu {
     padding-bottom:30px;
   }
-  .is-mobile .frontmatter-container .tag, 
+  .is-mobile .frontmatter-container .tag,
+  .is-mobile .cm-s-obsidian span.cm-hashtag,
   .is-mobile .tag {
     font-size:var(--font-adaptive-smaller);
   }
