@@ -3607,6 +3607,7 @@ Mobile styling
 body.is-mobile {
   padding:0 !important;
 }
+
 .is-mobile .markdown-source-view.mod-cm6 .cm-scroller,
 .is-mobile .ͼ1 .cm-line,
 .is-mobile .workspace-drawer-tab-container > *,
@@ -3627,6 +3628,7 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .horizontal-main-container {
   background-color:var(--background-primary);
 }
+
 .is-mobile .workspace {
   border-radius:0 !important;
   transform:none !important;
@@ -3643,6 +3645,7 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .workspace-drawer.mod-right.is-pinned {
   max-width:240pt;
 }
+
 .is-mobile .workspace-drawer.mod-right.is-pinned {
   border-right:none;
 }
@@ -3660,6 +3663,7 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .workspace-drawer-active-tab-header:hover .workspace-drawer-active-tab-back-icon {
   color:var(--text-normal);
 }
+
 .is-mobile .nav-file-title,
 .is-mobile .nav-folder-title,
 .is-mobile .outline,
@@ -3677,6 +3681,7 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .tree-item-flair {
   font-size:var(--font-adaptive-small);
 }
+
 .is-mobile .nav-files-container {
   padding:5px 5px 5px 5px;
 }
@@ -3691,9 +3696,14 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .search-result-file-title {
   font-size:var(--font-adaptive-small);
 }
-.is-mobile .cm-s-obsidian .cm-gutters {
-  display:none;
+
+/* Causes some scrolling issues */
+.is-mobile .markdown-source-view.mod-cm6 .cm-scroller > *:first-child {
+  padding:0;
+  width:0;
+  margin:0;
 }
+
 .is-mobile .empty-state-action {
   border-radius:6px;
   font-size:var(--font-adaptive-small);
@@ -3704,6 +3714,7 @@ body.minimal-folding.is-mobile .view-header-title,
 body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   padding:5px;
 }
+
 .is-mobile .workspace-drawer-header-name {
   font-weight:var(--bold-weight);
   color:var(--text-normal);
@@ -4212,6 +4223,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     margin-left:6%;
     margin-right:6%;
   }
+
   .is-mobile .setting-item-control select,
   .is-mobile .setting-item-control input,
   .is-mobile .setting-item-control button {
