@@ -1267,6 +1267,9 @@ input.prompt-input:hover {
   right:16px;
   opacity:0.25;
 }
+.prompt-results .suggestion-flair {
+  display:none;
+}
 .modal-container .suggestion-item.is-selected {
   border-radius:6px;
   background:var(--background-tertiary);
