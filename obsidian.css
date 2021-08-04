@@ -1267,7 +1267,7 @@ input.prompt-input:hover {
   right:16px;
   opacity:0.25;
 }
-.prompt-results .suggestion-flair {
+.prompt-results .suggestion-flair .filled-pin {
   display:none;
 }
 .modal-container .suggestion-item.is-selected {
