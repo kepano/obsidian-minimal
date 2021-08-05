@@ -1765,6 +1765,10 @@ button.mod-cta,
 .cm-s-obsidian span.cm-hmd-internal-link {
   color:var(--text-accent);
 }
+.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
+  background-color: var(--text-selection);
+  color: var(--text-normal);
+}
 
 /* Transcluded notes and embeds */
 
@@ -3007,6 +3011,10 @@ iframe {
   transition:background-color 0.3s ease;
   background-color:var(--text-selection);
   color:inherit;
+}
+.markdown-preview-view mark {
+  background-color: var(--text-selection);
+  color: var(--text-normal);
 }
 
 /* Metadata */
