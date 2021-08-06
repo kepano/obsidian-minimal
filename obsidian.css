@@ -3704,7 +3704,6 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .markdown-source-view.mod-cm6 .cm-scroller > *:first-child {
   padding:0;
   margin:0;
-  opacity:0;
   width:0;
 }
 .is-mobile.minimal-folding .cm-editor.cm-wrap {
