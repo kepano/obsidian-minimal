@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.2.2 by @kepano
+Minimal Obsidian 3.2.3 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1666,18 +1666,26 @@ button.mod-cta,
 /* Custom line width */
 
 /* Readable line width off */
+
 .markdown-preview-view .markdown-preview-sizer,
-.markdown-source-view .cm-editor,
 .markdown-source-view .CodeMirror {
   max-width:90%;
   margin:0 auto;
 }
+.is-mobile .markdown-source-view.mod-cm6 .cm-scroller {
+  padding-left:4%;
+  padding-right:4%;
+}
+
 /* With readable line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width:var(--max-width);
   width:var(--line-width-adaptive);
 }
-.markdown-source-view.is-readable-line-width .cm-editor,
+.is-mobile .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+  max-width:var(--line-width-adaptive);
+}
+
 .markdown-source-view.is-readable-line-width .CodeMirror {
   padding-left:0;
   padding-right:0;
@@ -1746,6 +1754,7 @@ button.mod-cta,
 .internal-embed .markdown-preview-section {
   max-width:100%;
 }
+.cm-s-obsidian .HyperMD-header,
 .cm-s-obsidian pre.HyperMD-header {
   padding-left:0 !important;
 }
@@ -2051,6 +2060,15 @@ input[type='password']:focus,
 input[type='number']:focus {
   -webkit-appearance:none;
   border-color:var(--background-modifier-border-hover);
+  box-shadow: 0 0 0px 2px var(--background-modifier-border-hover);
+}
+body:not(.is-mobile) button:active,
+body:not(.is-mobile) button:focus,
+body:not(.is-mobile) .dropdown:focus,
+body:not(.is-mobile) .dropdown:active,
+body:not(.is-mobile) select:focus,
+body:not(.is-mobile) select:active,
+body:not(.is-mobile) input:focus {
   box-shadow: 0 0 0px 2px var(--background-modifier-border-hover);
 }
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
@@ -2385,7 +2403,7 @@ body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
 }
 
 /* --------------- */
-/* Folding */
+/* Folding offset */
 
 /* Add padding to account for gutter in Edit mode when folding is on */
 
@@ -2396,6 +2414,10 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
 }
 .minimal-folding .allow-fold-lists.markdown-preview-view .markdown-embed .markdown-preview-sizer {
   padding-left:0;
+}
+.is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters,
+.is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+  transform:translateX(-10px); 
 }
 
 /* Folding icons in Preview */
@@ -3611,7 +3633,6 @@ body.is-mobile {
   padding:0 !important;
 }
 
-.is-mobile .markdown-source-view.mod-cm6 .cm-scroller,
 .is-mobile .ͼ1 .cm-line,
 .is-mobile .workspace-drawer-tab-container > *,
 body.minimal-folding.is-mobile .view-header-title, 
@@ -3701,13 +3722,9 @@ body.minimal-folding.is-mobile .view-header-title,
 }
 
 /* Folding on mobile */
-.is-mobile .markdown-source-view.mod-cm6 .cm-scroller > *:first-child {
-  padding:0;
-  margin:0;
-  width:0;
-}
-.is-mobile.minimal-folding .cm-editor.cm-wrap {
-  transform: translateX(0);
+
+.ͼ1 .cm-foldGutter .cm-gutterElement {
+  cursor: var(--cursor);
 }
 .is-mobile span[title="Fold line"] {
   opacity:0;
@@ -3718,6 +3735,48 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile span[title="Unfold line"]:hover {
   color:var(--text-normal);
 }
+
+/* 
+span[title="Fold line"], span[title="Unfold line"] {
+    line-height: 1;
+    position: relative;
+    top: 4px;
+    font-size: 0;
+    color: transparent;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor:var(--cursor);
+}
+span[title="Unfold line"]:after, .CodeMirror-foldgutter-folded:after {
+    content: "›";
+    transform: translateY(-2px);
+    cursor:var(--cursor);
+}
+span[title="Fold line"]:after, .CodeMirror-foldgutter-open:after {
+    content: "›";
+    transform: rotate(90deg);
+}
+span[title="Fold line"]:after, span[title="Unfold line"]:after {
+    font-size: 1rem;
+    line-height: 1;
+}
+span[title="Fold line"]:after, 
+span[title="Unfold line"]:after,
+.CodeMirror-foldgutter-open:after,
+.CodeMirror-foldgutter-folded:after {
+    text-align: center;
+    color: var(--text-faint);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.9rem;
+    height: 0.9rem;
+    line-height: 1;
+    font-weight: 600;
+}
+*/
 
 .ͼ1 .cm-foldPlaceholder {
   background:transparent;
@@ -4148,9 +4207,10 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   .workspace-drawer-header-icon .pin {
     display:none;
   }
+  /*
   .is-mobile .markdown-source-view .cm-scroller > .cm-content {
     margin-top:15px;
-  }
+  } */
   .is-ios .workspace-drawer .workspace-drawer-header {
     padding-top:40px;
   }
