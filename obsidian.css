@@ -4552,6 +4552,7 @@ settings:
         title: Fancy cursor
         description: Editor cursor uses your accent color
         type: class-toggle
+        default:  true
     - 
         id: borders-none
         title: Hide sidebar borders
@@ -4592,11 +4593,13 @@ settings:
         title: Underline internal links
         description: Show underlines on internal links
         type: class-toggle
+        default:  true
     -
         id: links-ext-on
         title: Underline external links
         description: Show underlines on external links
         type: class-toggle
+        default:  true
     -
         id: fonts
         title: Fonts
