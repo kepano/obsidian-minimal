@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.2.3 by @kepano
+Minimal Obsidian 3.3.0 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -4452,3 +4452,378 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     border-radius:15px;
   }
 }
+
+/* Style Settings */
+
+/* @settings
+
+name: Minimal Theme
+id: minimal-style
+settings:
+    -
+        id: styles
+        title: Background styles
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: light-mode-style
+        title: Light mode style
+        description: Background color style in light mode
+        type: class-select
+        allowEmpty: false
+        default: minimal-light
+        options:
+            - 
+                label: Default
+                value: minimal-light
+            - 
+                label: All white
+                value: minimal-light-white
+            - 
+                label: Low contrast
+                value: minimal-light-tonal
+            - 
+                label: High contrast
+                value: minimal-light-contrast
+    -
+        id: dark-mode-style
+        title: Dark mode style
+        description: Background color style in dark mode
+        type: class-select
+        allowEmpty: false
+        default: minimal-dark
+        options:
+            - 
+                label: Default
+                value: minimal-dark
+            - 
+                label: Low contrast
+                value: minimal-dark-tonal
+            - 
+                label: True black
+                value: minimal-dark-black
+    -
+        id: color
+        title: Colors
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: accent
+        title: Accent color
+        type: variable-color
+        format: hsl-split
+        default: '#6a8695'
+    - 
+        id: base
+        title: Base color
+        type: variable-color
+        format: hsl-split
+        default: '#f7f7f7'
+    - 
+        id: accent-d
+        title: Accent color adjust for dark mode
+        description: Adjust darkness of the accent color in dark mode
+        type: variable-number-slider
+        default: 60
+        min: 20
+        max: 80
+        step: 1
+        format: '%'
+    -
+        id: base-d
+        title: Base color adjustment for dark mode
+        description: Adjust darkness of the base color in dark mode
+        type: variable-number-slider
+        default: 15
+        min: 0
+        max: 40
+        step: 1
+        format: '%'
+    -
+        id: features
+        title: Features
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: fancy-cursor
+        title: Fancy cursor
+        description: Editor cursor uses your accent color
+        type: class-toggle
+    - 
+        id: borders-none
+        title: Hide sidebar borders
+        description: Turn off borders on sidebars
+        type: class-toggle
+    -
+        id: focus-mode
+        title: Hide action buttons in focus mode
+        description: When sidebars are collapsed hide action buttons, accessible by hovering
+        type: class-toggle
+    -
+        id: full-file-names
+        title: Show full file names
+        description: Turn off trimming on files in sidebar
+        type: class-toggle
+    -
+        id: minimal-folding
+        title: Folding offset
+        description: Recommended if you use folding headings and indents
+        type: class-toggle
+    -
+        id: minimal-rel-preview
+        title: Relationship lines in Preview
+        description: Show vertical lines that connect related bullet points and task lists
+        type: class-toggle
+    -
+        id: minimal-rel-edit
+        title: Relationship lines in Editor
+        description: Show vertical lines that connect related bullet points and task lists
+        type: class-toggle
+    -
+        id: full-width-media
+        title: Maximize media
+        description: Images and videos fill the width of the line
+        type: class-toggle
+    -
+        id: links-int-on
+        title: Underline internal links
+        description: Show underlines on internal links
+        type: class-toggle
+    -
+        id: links-ext-on
+        title: Underline external links
+        description: Show underlines on external links
+        type: class-toggle
+    -
+        id: fonts
+        title: Fonts
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: text
+        title: Text font
+        description: Used in preview mode
+        type: variable-text
+        default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+    -
+        id: text-editor
+        title: Editor font
+        description: Used in edit mode
+        type: variable-text
+        default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+    -
+        id: font-monospace
+        title: Monospace font
+        description: Used for code blocks and front matter
+        type: variable-text
+        default: Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace
+    -
+        id: font-ui
+        title: UI font
+        description: Used for buttons, menus and sidebar
+        type: variable-text
+        default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+    -
+        id: custom-fonts
+        title: Typography
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: font-normal
+        title: Body font size
+        description: Font size in px of the main text
+        type: variable-number
+        default: 16
+        format: px
+    - 
+        id: font-small
+        title: Sidebar font size
+        description: Font size in px of the sidebar and small text
+        type: variable-number
+        default: 13
+        format: px
+    - 
+        id: line-height
+        title: Body line height
+        description: Line height of the main text
+        type: variable-number
+        default: 1.5
+    - 
+        id: line-width
+        title: Normal line width
+        description: Number of characters per line
+        type: variable-number
+        default: 40
+        format: rem
+    -
+        id: max-width
+        title: Maximum line width
+        description: Percentage of space inside a pane that a line can fill. Recommended values between 80 to 100
+        type: variable-number
+        default: 88
+        format: '%'
+    -
+        id: headings
+        title: Headings
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: level-1-headings
+        title: Level 1 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h1
+        title: H1 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.125em
+    - 
+        id: h1-weight
+        title: H1 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    -
+        id: level-2-headings
+        title: Level 2 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h2
+        title: H2 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1em
+    - 
+        id: h2-weight
+        title: H2 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    - 
+        id: level-3-headings
+        title: Level 3 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h3
+        title: H3 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1em
+    - 
+        id: h3-weight
+        title: H3 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 500
+    -
+        id: level-4-headings
+        title: Level 4 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h4
+        title: H4 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 0.9em
+    - 
+        id: h4-weight
+        title: H4 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 500
+    - 
+        id: level-5-headings
+        title: Level 5 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h5
+        title: H5 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 0.85em
+    - 
+        id: h5-weight
+        title: H5 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 500
+    - 
+        id: level-6-headings
+        title: Level 6 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h6
+        title: H6 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 0.85em
+    - 
+        id: h6-weight
+        title: H6 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 400
+    -
+        id: advanced
+        title: Advanced
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: cursor
+        title: Cursor style
+        description: The cursor style for UI elements
+        type: variable-select
+        default: default
+        options:
+            - 
+                label: Default
+                value: default
+            - 
+                label: Pointer
+                value: pointer
+            - 
+                label: Crosshair
+                value: crosshair
+    -
+        id: font-smaller
+        title: Small font size
+        description: Font size in px of the main text
+        type: variable-number
+        default: 11
+        format: px
+    - 
+        id: font-smallest
+        title: Tiny font size
+        description: Font size in px of the main text
+        type: variable-number
+        default: 10
+        format: px
+    -
+        id: credits
+        title: Credits
+        type: heading
+        description: Made with ❤︎ by @kepano. Support my work at buymeacoffee.com/kepano
+        level: 2
+        collapsed: true
+    -
+
+*/
