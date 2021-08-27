@@ -854,6 +854,9 @@ body .kanban-plugin__checkbox-label {
   font-size:var(--font-adaptive-small);
   color:var(--text-muted);
 }
+body .kanban-plugin__item-markdown ul {
+  margin: 0;
+}
 body .kanban-plugin__item-content-wrapper {
   box-shadow:none;
 }
@@ -861,6 +864,9 @@ body .kanban-plugin__grow-wrap > textarea,
 body .kanban-plugin__grow-wrap::after {
   padding:0;
   border:0;
+}
+body:not(.is-mobile) .kanban-plugin__grow-wrap > textarea:focus {
+  box-shadow:none;
 }
 body .kanban-plugin__grow-wrap > textarea, 
 body .kanban-plugin__grow-wrap::after, 
@@ -1715,6 +1721,9 @@ button.mod-cta,
 }
 .mod-windows .titlebar-button:hover {
   background-color: var(--background-primary-alt);
+}
+.mod-windows .titlebar-button.mod-close:hover {
+  background-color: var(--background-modifier-error);
 }
 .mod-windows .mod-close:hover svg {
   fill:white !important;
