@@ -1703,6 +1703,7 @@ button.mod-cta,
 .titlebar-button {
   opacity:1;
   cursor:var(--cursor);
+  color:var(--text-muted);
 }
 .titlebar-button svg path {
   fill:var(--text-muted) !important;
@@ -1711,6 +1712,13 @@ button.mod-cta,
 .titlebar-button:hover svg path {
   fill:var(--text-normal) !important;
   stroke:var(--text-normal) !important;
+}
+.mod-windows .titlebar-button:hover {
+  background-color: var(--background-primary-alt);
+}
+.mod-windows .mod-close:hover svg {
+  fill:white !important;
+  stroke:white !important;
 }
 
 /* --------------- */
