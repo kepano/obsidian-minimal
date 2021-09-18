@@ -4573,6 +4573,26 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   }
 }
 
+/* make kanban board fit in window*/
+.kanban-plugin__board>div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    width: fit-content;
+    height: 100%;
+    width: 100% !important;
+}
+
+/*fix for Kanban plugin:
+fixes padding so that checkboxes are visible*/
+.kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list,
+.kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list,
+.kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-view
+ol {
+  padding-inline-start: 30px !important;
+}
+
 /* Style Settings */
 
 /* @settings
