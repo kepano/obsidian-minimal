@@ -965,6 +965,13 @@ body button.kanban-plugin__new-lane-button {
   color:var(--text-faint);
 }
 
+.kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list,
+.kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list,
+.kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-view
+ol {
+  padding-inline-start: 30px !important;
+}
+
 @media (max-width:400pt) {
   .kanban-plugin__board {
     flex-direction:column !important;
