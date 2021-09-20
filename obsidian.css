@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 3.3.2 by @kepano
+Minimal Obsidian 3.3.3 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -847,8 +847,8 @@ body .kanban-plugin {
   --text-on-accent:var(--text-normal);
   background-color:var(--background-primary);
 }
-body .kanban-plugin__board {
-  justify-content:center;
+body .kanban-plugin__board>div {
+  margin:0 auto;
 }
 body .kanban-plugin__checkbox-label {
   font-size:var(--font-adaptive-small);
@@ -879,6 +879,9 @@ body .kanban-plugin__item-title p {
 }
 body .kanban-plugin__item {
   background-color:var(--background-primary);
+}
+body .kanban-plugin__lane-header-wrapper {
+  border-bottom:0;
 }
 body .kanban-plugin__lane-header-wrapper  .kanban-plugin__grow-wrap > textarea,
 body .kanban-plugin__lane-input-wrapper  .kanban-plugin__grow-wrap > textarea {
@@ -949,27 +952,21 @@ body .kanban-plugin__lane.is-dragging {
 }
 
 body .kanban-plugin__lane {
-  background:var(--background-primary);
+  background:var(--background-secondary);
   padding:0;
+  border-radius:8px;
   border:1px solid transparent;
 }
 body .kanban-plugin__lane-items {
   padding-bottom:0;
+  margin:0;
   background-color:var(--background-secondary);
 }
-body button.kanban-plugin__new-lane-button {
-  background-color:transparent;
-  border:1px solid transparent;
-  text-align:center;
-  padding-right:25px;
-  color:var(--text-faint);
-}
 
-.kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list,
-.kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list,
-.kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-view
-ol {
-  padding-inline-start: 30px !important;
+body .kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list,
+body .kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list,
+body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-view ol {
+  padding-inline-start: 24px !important;
 }
 
 @media (max-width:400pt) {
@@ -1196,6 +1193,7 @@ body, input, button,
 } */
 .nav-action-button svg {
   width:15px;
+  height:15px;
 }
 .workspace-ribbon-collapse-btn svg path {
   stroke-width:3px;
