@@ -1,15 +1,12 @@
 # Minimal
 
-Minimal is an Obsidian theme meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugin [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings).
+Minimal is an Obsidian theme meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and the [Hider](https://github.com/kepano/obsidian-hider).
 
 Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano), [Patreon](https://www.patreon.com/kepano) or [Buy me a coffee](https://www.buymeacoffee.com/kepano).
 
 <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=kepano&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
 
 ![](cover.png)
-
-Minimal is designed to be used with the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) and the [Hider plugin](https://github.com/kepano/obsidian-hider). You can install Minimal Theme and its companion plugins directly through the Obsidian app.
-
 
 ### Goals
 
