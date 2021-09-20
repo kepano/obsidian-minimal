@@ -8,6 +8,8 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano), [
 
 ![](cover.png)
 
+✨ Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217)!
+
 ### Goals
 
 - Simplify the Obsidian UI for a more focused editing experience
