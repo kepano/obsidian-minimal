@@ -20,7 +20,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano), [
 
 The following features can be toggled on/off using Minimal Theme Settings plugin:
 
-- Styles — multiple light and dark mode styles with varying levels of contrast
+- Background styles — multiple levels of contrast for light and dark mode, including True Black for OLED devices
 - Focus mode — hides everything but the text sidebars are collapsed
 - Fancy cursor — uses accent color for the cursor
 - Hide sidebar borders
