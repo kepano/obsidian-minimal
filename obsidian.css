@@ -3778,6 +3778,12 @@ input[type=range]::-webkit-slider-thumb:active {
   height:auto;
   overflow:visible;
 }
+.hotkey-list-container {
+  padding-right:0;
+}
+.community-theme-filters-container, .hotkey-search-container {
+  padding:0 0 20px 0;
+}
 .modal.mod-settings .vertical-tab-header {
   background:var(--background-secondary);
   padding-top:5px;
@@ -3823,6 +3829,7 @@ body:not(.minimal-icons) .setting-hotkey-icon.setting-delete-hotkey svg {
 }
 .setting-hotkey.mod-empty {
   background:transparent;
+  color:var(--text-faint);
 }
 .dropdown {
   border-color:var(--background-modifier-border);
