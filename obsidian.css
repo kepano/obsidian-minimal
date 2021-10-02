@@ -778,13 +778,10 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
 #calendar-container .reset-button:hover {
   color:var(--text-normal);
 }
-#calendar-container .title {
-  font-size:var(--font-adaptive-small);}
-
 #calendar-container .year,
 #calendar-container .month,
 #calendar-container .title {
-  font-size:var(--font-adaptive-small);
+  font-size:var(--font-adaptive-normal);
   font-weight:400;
   color:var(--text-normal);
 }
@@ -847,13 +844,6 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
 
 body .kanban-plugin__markdown-preview-view {
   font-family:var(----text);
-}
-
-body .workspace-leaf-content[data-type=kanban] .view-header-title-container {
-  text-align:center;
-}
-body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=kanban] .view-header-title {
-  text-align:center;
 }
 body .kanban-plugin {
   --interactive-accent:var(--text-selection);
@@ -1435,7 +1425,7 @@ input.prompt-input:hover {
 .modal,
 .prompt,
 .suggestion-container {
-  box-shadow:0 5px 30px rgba(0,0,0,0.15);
+  box-shadow:0 5px 100px rgba(0,0,0,0.15);
 }
 .prompt-instructions {
   color:var(--text-muted);
@@ -3692,8 +3682,8 @@ input[type=range] {
   margin:0;
   border-radius:0px;
 }
-input[type=range]:focus {
-
+body:not(.is-mobile) input[type=range]:focus {
+  box-shadow: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
   background:var(--background-modifier-border-hover);
@@ -3719,7 +3709,9 @@ input[type=range]::-webkit-slider-thumb:active {
   box-shadow:0 1px 2px 0px rgba(0,0,0,0.05), 0 2px 3px 0px rgba(0,0,0,0.2);
   transition:all 0.1s linear;
 }
-
+body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
+  box-shadow:0 1px 2px 0px rgba(0,0,0,0.05), 0 2px 3px 0px rgba(0,0,0,0.2);
+}
 .local-graph-jumps-slider-container,
 .workspace-split.mod-left-split .local-graph-jumps-slider-container,
 .workspace-split.mod-right-split .local-graph-jumps-slider-container,
@@ -4203,6 +4195,11 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
 .is-mobile .modal.mod-settings {
   width:100vw;
   max-height:90vh;
+  padding:0;
+}
+.is-mobile .modal-content {
+  padding:0;
+  border-radius:20px;
 }
 .is-mobile .nav-buttons-container {
   padding:0 0 10px 15px;
@@ -4275,7 +4272,7 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
 }
 .is-mobile .modal-setting-back-button {
   border-bottom:1px solid var(--background-modifier-border);
-  padding:22px 20px 17px 20px;
+  padding:20px;
   background-color:var(--color-background);
   box-shadow:none;
 }
@@ -4535,10 +4532,11 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   margin-right:0;
   padding-right:0;
 }
-
-
 .is-mobile .modal.mod-settings .vertical-tabs-container {
   display:flex;
+  overflow:hidden;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
 }
 .is-mobile .modal.mod-settings .vertical-tab-header:before {
   content:"Settings";
@@ -4546,7 +4544,7 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   font-size:var(--font-settings);
   position:sticky;
   display:block;
-  padding:20px 20px 15px 20px;
+  padding:20px;
   text-align:center;
   border-bottom:1px solid var(--background-modifier-border);
   background:var(--background-primary);
@@ -4755,6 +4753,9 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   .is-mobile .modal .search-input-container {
     width:100%;
     margin:0;
+  }
+  .is-mobile .modal-setting-back-button {
+    padding:22px 20px 17px 20px;
   }
 
   /* Phone — Community plugins */
