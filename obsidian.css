@@ -4315,9 +4315,6 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile.focus-mode .view-actions {
   opacity:1;
 }
-.is-mobile .workspace-drawer-header-icon svg {
-  width:22px;
-}
 .is-mobile .workspace-drawer-tab-options {
   padding-top:10px;
 }
@@ -4329,8 +4326,13 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   padding:8px 10px;
   border-radius:6px;
 }
+.is-mobile .workspace-drawer-header-icon svg {
+  width:22px;
+  height:22px;
+}
 .is-mobile .nav-action-button svg {
   width:22px;
+  height:22px;
   margin:0;
 }
 .is-mobile .menu-item {
@@ -4348,6 +4350,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 }
 .is-mobile .view-action svg {
    width:22px;
+   height:22px;
 }
 .is-mobile .view-action {
   padding:5px 5px 4px;
