@@ -878,6 +878,7 @@ body .kanban-plugin__grow-wrap::after {
 body:not(.is-mobile) .kanban-plugin__grow-wrap > textarea:focus {
   box-shadow:none;
 }
+body .kanban-plugin__markdown-preview-view,
 body .kanban-plugin__grow-wrap > textarea, 
 body .kanban-plugin__grow-wrap::after, 
 body .kanban-plugin__item-title p {
@@ -981,7 +982,7 @@ body .kanban-plugin__lane-items {
 body .kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list,
 body .kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list,
 body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-view ol {
-  padding-inline-start: 25px !important;
+  padding-inline-start: 1.8em !important;
 }
 
 @media (max-width:400pt) {
@@ -4051,6 +4052,11 @@ body.minimal-folding.is-mobile .view-header-title,
   color:var(--text-normal);
 }
 
+.is-mobile .markdown-preview-view ul,
+.is-mobile .markdown-preview-view ol {
+  padding-inline-start:2em;
+}
+
 .is-mobile .nav-file-title,
 .is-mobile .nav-folder-title,
 .is-mobile .outline,
@@ -4217,6 +4223,27 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   -webkit-user-select:none;
   user-select:none;
 }
+.is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) {
+  flex-grow:0;
+}
+.is-mobile .community-plugin-item {
+  margin:0;
+}
+.is-mobile .community-plugin-search .setting-item {
+  padding-top: 10px;
+}
+.is-mobile .community-plugin-search .setting-item-control {
+  display:flex;
+  flex-direction:row;
+}
+.is-mobile .community-plugin-search .setting-item-control button {
+  max-width:11em;
+  justify-content:center;
+}
+.is-mobile .community-plugin-search .search-input-container {
+  margin:0 10px 0 0;
+}
+
 .is-mobile .suggestion-container {
   left:0;
   right:0;
