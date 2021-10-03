@@ -271,6 +271,8 @@ body {
     --background-modifier-form-field-highlighted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 8%));
     --background-button:white;
 
+    --modal-border:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 18%));
+
     --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-l),0);
     --background-translucent:rgba(255,255,255,0.85);
 
@@ -295,6 +297,7 @@ body {
   .theme-light.minimal-light-contrast .titlebar,
   .theme-light.minimal-light-contrast .workspace-ribbon.mod-left,
   .theme-light.minimal-light-contrast .mod-left-split,
+  .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
   .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
   .theme-dark {
 
@@ -327,6 +330,8 @@ body {
     --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-d),0.85);
     --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
     --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
+
+    --modal-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 12%));
 
     --icon-color:var(--text-muted);
     --icon-hex:FFF;
@@ -1356,10 +1361,10 @@ span.cm-hashtag.cm-hashtag-end {
   background:var(--background-primary);
   border-radius:10px;
   overflow:hidden;
-  padding:20px 20px 10px;
+  padding:20px;
 }
 body:not(.is-mobile) .modal {
-  border:1px solid var(--background-modifier-border-hover);
+  border:1px solid var(--modal-border);
 }
 .modal.mod-settings .vertical-tab-content-container {
   border-left:1px solid var(--background-modifier-border);
@@ -1380,13 +1385,14 @@ body:not(.is-mobile) .modal {
   text-align:left;
   font-size:13px;
 }
-input.prompt-input {
+input[type='text'].prompt-input {
   border:0;
   background:var(--background-primary);
   box-shadow:none!important;
   padding-left:10px;
   height:40px;
   line-height:4;
+  font-size:var(--font-adaptive-normal);
 }
 input.prompt-input:hover {
   border:0;
@@ -1561,12 +1567,25 @@ input.prompt-input:hover {
   line-height:1.3;
 }
 
+.modal .modal-content > h2 {
+  text-align:left;
+  font-size:var(--h1);
+  font-weight:600;
+}
+.modal .modal-content p {
+  font-size:var(--font-adaptive-normal);
+}
 .modal.mod-settings .vertical-tab-content h1,
 .modal.mod-settings .vertical-tab-content h2,
 .modal.mod-settings .vertical-tab-content h3 {
   text-align:left;
   font-size:var(--h1);
   font-weight:600;
+}
+.modal .modal-content > h2:first-child,
+.modal.mod-settings .vertical-tab-content > h2:first-child,
+.modal.mod-settings .vertical-tab-content > h3:first-child {
+  margin-top:0;
 }
 
 .community-plugin-search-summary,
@@ -2035,8 +2054,8 @@ body.hider-frameless .titlebar {
 }
 .file-embed-link svg,
 .markdown-embed-link svg {
-  width:16px;
-  height:16px;
+  width:20px;
+  height:20px;
   opacity:0; 
 }
 .markdown-embed:hover .file-embed-link svg,
@@ -3208,11 +3227,20 @@ input.search-input:focus {
 /* Status bar */
 
 .status-bar {
-  z-index:30;
   transition:color 200ms linear;
   color:var(--text-faint);
-  background-color:var(--background-primary);
   font-size:var(--font-adaptive-smaller);
+  line-height:1;
+  max-height:24px;
+}
+.minimal-status-off .status-bar {
+  background-color:var(--background-secondary);
+  border-width:var(--border-width);
+  padding:2px 6px 4px;
+}
+body:not(.minimal-status-off) .status-bar {
+  background-color:var(--background-primary);
+  z-index:30;
   border-top-left-radius:5px;
   width:auto;
   position:absolute;
@@ -3220,9 +3248,8 @@ input.search-input:focus {
   border:0;
   bottom:0;
   right:0;
-  max-height:35px;
-  line-height:1;
-  padding:8px 6px;
+  max-height:26px;
+  padding:2px 6px 6px 3px;
 }
 .sync-status-icon.mod-working,
 .sync-status-icon.mod-success {
@@ -3631,6 +3658,9 @@ body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=
 
 /* Graph controls */
 
+.graph-controls-button {
+  cursor:var(--cursor);
+}
 .graph-control-section .tree-item-children {
   padding-bottom:15px;
 }
@@ -3980,6 +4010,7 @@ Mobile styling
 -------------------------------------------------------------------------------- */
 
 .is-mobile {
+  --font-settings-title:18px;
   --font-settings:16px;
   --font-settings-small:13px;
   --input-height:40px;
@@ -4015,7 +4046,6 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .horizontal-main-container {
   background-color:var(--background-primary);
 }
-
 .is-mobile .workspace {
   border-radius:0 !important;
   transform:none !important;
@@ -4032,7 +4062,6 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .workspace-drawer.mod-right.is-pinned {
   max-width:240pt;
 }
-
 .is-mobile .workspace-drawer.mod-right.is-pinned {
   border-right:none;
 }
@@ -4113,6 +4142,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile .workspace-drawer-header-name {
   font-weight:var(--bold-weight);
   color:var(--text-normal);
+  font-size:1.125em;;
 }
 .is-mobile .workspace-drawer-header-info {
   color:var(--text-faint);
@@ -4272,7 +4302,11 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
 }
 .is-mobile .modal-setting-back-button {
   border-bottom:1px solid var(--background-modifier-border);
-  padding:20px;
+  display:flex;
+  margin-top:8px;
+  height:54px;
+  justify-content:center;
+  align-items:center;
   background-color:var(--color-background);
   box-shadow:none;
 }
@@ -4358,7 +4392,7 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   padding-top:8px;
 }
 .is-mobile .search-input-clear-button:before {
-  font-size:16px;
+  font-size:var(--font-settings);
   font-weight:500;
 }
 .is-mobile .menu-item {
@@ -4543,8 +4577,11 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   font-weight:600;
   font-size:var(--font-settings);
   position:sticky;
-  display:block;
-  padding:20px;
+  display:flex;
+  height:54px;
+  margin-top:6px;
+  align-items:center;
+  justify-content:center;
   text-align:center;
   border-bottom:1px solid var(--background-modifier-border);
   background:var(--background-primary);
@@ -4587,10 +4624,19 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
 .is-mobile .modal.mod-settings .vertical-tab-nav-item {
   font-size:var(--font-settings);
 }
-.is-mobile .modal.mod-settings svg.left-arrow-with-tail {
+.is-mobile .modal svg.left-arrow-with-tail {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 19l-7-7 7-7' /%3E%3C/svg%3E");
   height:26px;
   width:26px;
+}
+
+/* Mobile Community plugins */
+
+.is-mobile .community-plugin-search {
+  border:none;
+}
+.is-mobile .community-plugin-item:hover {
+  background-color:transparent;
 }
 
 /* --------------- */
@@ -4622,7 +4668,7 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
     right:0;
     font-size:34px;
     background-color:var(--background-primary);
-    padding: 6px 15px 2px 15px;
+    padding:3px 15px 2px 15px;
   }
   .is-mobile .modal-close-button:before {
     font-weight:300;
@@ -4673,15 +4719,15 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   .is-mobile .view-header-title {
     max-width:calc(100vw - 90px);
     padding-right:20px;
-    font-size:18px;
+    font-size:var(--font-settings-title);
     letter-spacing:-0.015em;
   }
   .is-mobile .workspace-drawer-header-name-text {
-    font-size:18px;
+    font-size:var(--font-settings-title);
     letter-spacing:-0.015em;
   }
   .is-mobile .menu-item.is-label {
-    font-size:18px;
+    font-size:var(--font-settings-title);
   }
   .is-mobile .view-header {
     border-bottom:var(--border-width) solid var(--background-modifier-border) !important;
@@ -4753,18 +4799,6 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   .is-mobile .modal .search-input-container {
     width:100%;
     margin:0;
-  }
-  .is-mobile .modal-setting-back-button {
-    padding:22px 20px 17px 20px;
-  }
-
-  /* Phone — Community plugins */
-
-  .is-mobile .community-plugin-search {
-    border:none;
-  }
-  .is-mobile .community-plugin-item:hover {
-    background-color:transparent;
   }
 
   /* Phone — Publish */
@@ -4911,6 +4945,10 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   .is-mobile .modal .search-input-container input {
     width:100%;
   }
+  .is-mobile .modal-setting-back-button,
+  .is-mobile .modal.mod-settings .vertical-tab-header:before {
+    margin-top:0;
+  }
   .pull-down-action {
     width:400px;
     top:15px;
@@ -5018,7 +5056,19 @@ settings:
         description: Editor cursor uses your accent color
         type: class-toggle
         default:  true
+    -
+        id: minimal-icons-off
+        title: Default icons
+        description: Use default icons instead of Minimal set
+        type: class-toggle
+        default:  true
     - 
+        id: minimal-status-off
+        title: Wide status bar
+        description: Use full width status bar
+        type: class-toggle
+        default:  true
+    -
         id: borders-none
         title: Hide sidebar borders
         description: Turn off borders on sidebars
