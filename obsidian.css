@@ -191,7 +191,7 @@ Disabled features */
   --line-height:1.5;
   --max-width:88%;       /* Amount of padding around the text, use 90% for narrower padding */
   --nested-padding:3.5%; /* Amount of padding for quotes and transclusions */
-  --icon-muted:0.4;
+  --icon-muted:0.5;
   --border-width:1px;
   --border-width-alt:1px;
   --input-height:34px;
@@ -759,17 +759,20 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
 }
 #calendar-container .arrow {
   cursor:var(--cursor);
-  width:16px;
+  width:22px;
+  border-radius:4px;
+  padding:3px 7px;
 }
 #calendar-container .arrow svg {
   width:12px;
   height:12px;
   color:var(--text-faint);
-  opacity:0.5;
+  opacity:0.7;
 }
 #calendar-container .arrow:hover {
   fill:var(--text-muted);
   color:var(--text-muted);
+  background-color:var(--background-tertiary);
 }
 #calendar-container .arrow:hover svg {
   color:var(--text-muted);
@@ -792,9 +795,6 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
 }
 #calendar-container .dot {
   margin:0;
-}
-#calendar-container .reset-button:hover {
-  color:var(--text-normal);
 }
 #calendar-container .year,
 #calendar-container .month,
@@ -822,6 +822,13 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
   font-size:var(--font-adaptive-smaller);
   font-weight:500;
   color:var(--text-muted);
+  border-radius:4px;
+  margin:0;
+  padding:2px 8px;
+}
+#calendar-container .reset-button:hover {
+  color:var(--text-normal);
+  background-color:var(--background-tertiary);
 }
 #calendar-container .reset-button,
 #calendar-container .day {
@@ -1231,7 +1238,6 @@ body:not(.no-svg-replace) svg.right-triangle {
   width:15px;
   height:15px;
 }
-
 body .view-header-icon svg path,
 body .graph-controls-button svg path,
 body .clickable-icon svg path,
@@ -1240,13 +1246,11 @@ body .side-dock-ribbon-action svg path,
 body .nav-action-button svg path,
 body .view-action svg path,
 body .workspace-tab-header-inner-icon svg path {
-    stroke-width:3px;
+  stroke-width:3px;
 }
-
 body .view-action svg.cross path {
   stroke-width:4px;
 }
-
 .workspace-ribbon-collapse-btn svg path {
   stroke-width:6px;
 }
@@ -1284,16 +1288,12 @@ body .view-action svg.cross path {
   opacity:1;
   transition:opacity 0.1s ease-in-out;
 }
+.workspace-tab-header.is-active:hover {
+  color:var(--text-muted);
+}
 .workspace-leaf-content[data-type='search'] .nav-action-button.is-active {
   background:transparent;
 }
-.nav-action-button,
-.workspace-leaf-content[data-type='search'] .nav-action-button,
-.workspace-leaf-content[data-type='backlink'] .nav-action-button {
-  padding:0 4px 0 8px;
-  margin:0;
-}
-
 .view-action:hover,
 .view-header-icon:hover,
 .nav-action-button:hover,
@@ -1302,7 +1302,7 @@ body .view-action svg.cross path {
 .side-dock-ribbon-action:hover {
   color:var(--text-muted);
   opacity:1;
-  transition:opacity 0 ease-in-out;
+  transition:opacity 0.1s ease-in-out;
 }
 .view-action:hover,
 .nav-action-button:hover,
@@ -3272,7 +3272,7 @@ body:not(.minimal-status-off) .status-bar {
   bottom:0;
   right:0;
   max-height:26px;
-  padding:2px 6px 6px 3px;
+  padding:2px 8px 6px 3px;
 }
 .sync-status-icon.mod-working,
 .sync-status-icon.mod-success {
@@ -3319,28 +3319,35 @@ body:not(.minimal-status-off) .status-bar {
 /* --------------- */
 /* Default ribbon sidedock icons */
 
-.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  opacity:1;
-  height:60px;
-  position:fixed;
-  width:38px;
-  top:auto;
-  text-align:center;
-  bottom:0;
-  z-index:9;
-} 
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,
 .workspace-ribbon.mod-right {
   opacity:1;
-  height:60px;
   position:fixed;
-  width:30px;
+  width:26px;
   top:auto;
-  bottom:0;
+  text-align:center;
+  bottom:32px;
   z-index:9;
+} 
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  left:8px;
+}
+.workspace-ribbon.mod-right {
+  right:4px;
+  height:32px;
+  position:absolute;
+  background:transparent;
+  border:0;
 }
 .workspace-ribbon-collapse-btn {
   margin:0;
-  padding-top:8px;
+  padding:3px 2px;
+  height:26px;
+  border-radius:var(--radius-m);
+}
+.workspace-ribbon-collapse-btn svg {
+  width:18px;
+  height:18px;
 }
 .workspace-ribbon-collapse-btn,
 .view-action,
@@ -3348,18 +3355,15 @@ body:not(.minimal-status-off) .status-bar {
 .side-dock-ribbon-action {
   cursor:var(--cursor);
 }
+.workspace-ribbon-collapse-btn:hover {
+  background-color:var(--background-tertiary);
+}
 .workspace-ribbon {
   border-width:var(--border-width-alt);
   border-color:var(--background-modifier-border);
   background:var(--background-secondary);
   flex:0 0 42px;
   padding-top:7px;
-}
-.workspace-ribbon.mod-right {
-  right:0;
-  position:absolute;
-  background:transparent;
-  border:0;
 }
 .mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split {
   margin-right:0;
@@ -5013,7 +5017,7 @@ div.menu-item:hover .menu-item-icon svg path {
 .workspace-leaf-content[data-type='search'] .nav-action-button,
 .workspace-leaf-content[data-type='backlink'] .nav-action-button {
   padding:3px 5px 3px;
-  margin:0 0 5px 0px;
+  margin:0 0 7px 0px;
   height:26px;
   text-align:center;
   border-radius:var(--radius-m);
@@ -5425,7 +5429,7 @@ body:not(.minimal-icons-off) svg.document {
 }
 body:not(.minimal-icons-off) .nav-action-button[aria-label="New note"] svg.document,
 body:not(.minimal-icons-off) svg.create-new {
-  -webkit-mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="red" d="M83.07 36.167c-.045-.134-.082-.263-.137-.392-.204-.442-.458-.862-.816-1.22l-25-25c-.359-.36-.78-.613-1.221-.818-.125-.058-.258-.091-.392-.137a4.131 4.131 0 00-1.079-.213c-.092-.008-.17-.054-.258-.054H25c-4.596 0-8.333 3.738-8.333 8.334v66.666c0 4.596 3.737 8.334 8.333 8.334h50c4.596 0 8.333-3.738 8.333-8.334V37.5c0-.087-.046-.167-.054-.258a4.126 4.126 0 00-.208-1.075zM25 83.333V16.667h25l25 25 .008 41.666H25z M54.167 37.5h-8.334V50h-12.5v8.333h12.5v12.5h8.334v-12.5h12.5V50h-12.5V37.5z"></path></svg>');
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z' /%3E%3C/svg%3E");
 }
 body:not(.minimal-icons-off) svg.documents {
   -webkit-mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M83.333 8.333H41.667C37.071 8.333 33.333 12.071 33.333 16.667v16.667H16.667c-4.596 0 -8.333 3.738 -8.333 8.333v41.667c0 4.596 3.738 8.333 8.333 8.333h41.667c4.596 0 8.333 -3.738 8.333 -8.333v-16.667h16.667c4.596 0 8.333 -3.738 8.333 -8.333V16.667C91.667 12.071 87.929 8.333 83.333 8.333zM16.667 83.333V41.667h41.667l0.008 41.667H16.667zM83.333 58.333h-16.667v-16.667c0 -4.596 -3.738 -8.333 -8.333 -8.333h-16.667V16.667h41.667V58.333z M25 50H50V58.333H25zM25 66.667H50V75H25z"></path></svg>');
