@@ -621,8 +621,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   margin-right:0px;
 }
 .view-actions {
-  padding-top:2px;
-  padding-right:5px;
+  padding:2px 5px;
   margin-right:0px;
   margin-left:auto;
   transition:opacity 0.25s ease-in-out;
