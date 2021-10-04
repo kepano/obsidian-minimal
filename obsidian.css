@@ -1427,6 +1427,9 @@ input.prompt-input:hover {
   cursor:var(--cursor);
   padding-left:10px;
 }
+.suggestion-hotkey {
+  margin-top:0.25em;
+}
 .suggestion-flair {
   left:auto;
   right:16px;
