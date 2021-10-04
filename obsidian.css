@@ -194,7 +194,7 @@ Disabled features */
   --icon-muted:0.5;
   --border-width:1px;
   --border-width-alt:1px;
-  --input-height:34px;
+  --input-height:32px;
 
   --radius-s:2px;
   --radius-m:5px;
@@ -2990,7 +2990,6 @@ span[title="Unfold line"]:hover,
   width:calc(100% - 20px);
   margin:0 0 5px 10px;
 }
-
 .workspace-leaf-content .setting-item {
   padding:5px 0;
   border:none;
@@ -3004,13 +3003,14 @@ span[title="Unfold line"]:hover,
   top:0px;
   bottom:0px;
   border-radius:15px;
-  line-height:0px;
-  height:13px;
-  width:13px;
+  line-height:0;
+  height:14px;
+  width:14px;
   margin:auto;
-  padding:4px 0 0 0;
+  padding:0 0 2px;
   text-align:center;
-  vertical-align:middle;
+  display:flex;
+  justify-content:center;
   align-items:center;
   color:var(--text-faint);
 }
@@ -3020,9 +3020,12 @@ span[title="Unfold line"]:hover,
 .search-input-clear-button:hover {
   color:var(--text-normal);
 }
+.search-input-clear-button:active {
+  background:var(--text-normal);
+}
 .search-input-clear-button:before {
   font-size:12px;
-  font-weight:300;
+  font-weight:400;
   color:var(--background-secondary);
 }
 .search-input {
