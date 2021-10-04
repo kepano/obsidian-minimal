@@ -605,6 +605,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 
 .workspace-ribbon.mod-left {
   transition:border-color 0s ease-in-out 0s, background-color 0s ease-in-out 0s;
+  border-left:0;
 }
 .workspace-ribbon.mod-left.is-collapsed {
   border-color:transparent;
@@ -621,6 +622,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 }
 .view-actions {
   padding-top:2px;
+  padding-right:5px;
   margin-right:0px;
   margin-left:auto;
   transition:opacity 0.25s ease-in-out;
