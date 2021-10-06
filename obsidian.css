@@ -2961,7 +2961,6 @@ body span[title="Unfold line"]:after {
 }
 body span[title="Unfold line"]:after,
 body .CodeMirror-foldgutter-folded:after {
-  background-color: currentColor;
   background-color: var(--text-faint);
   height: 12px;
   width: 12px;
@@ -2972,7 +2971,7 @@ body .CodeMirror-foldgutter-folded:after {
 
 body span[title="Fold line"]:after,
 body .CodeMirror-foldgutter-open:after {
-  background-color: currentColor;
+  background-color: var(--text-faint);
   height: 12px;
   width: 12px;
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><path fill="red" stroke-width="2" stroke="currentColor" d="M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z"></path></svg>');
@@ -2995,6 +2994,21 @@ span[title="Unfold line"]:hover,
 .CodeMirror-code > div:hover .CodeMirror-foldgutter-open:hover:after,
 .CodeMirror-code > div:hover .CodeMirror-foldgutter-folded:hover:after {
   opacity:1;
+}
+
+body.is-mobile span[title="Unfold line"]:after,
+body.is-mobile .CodeMirror-foldgutter-folded:after {
+  content: "›";
+  font-family: sans-serif;
+  transform: translateY(-2px);
+  transform: rotate(-90deg) translateY(2px) translateX(-0.45em);
+}
+
+body.is-mobile span[title="Fold line"]:after,
+body.is-mobile .CodeMirror-foldgutter-open:after {
+  content: "›";
+  font-family: sans-serif;
+  transform: rotate(360deg);
 }
 
 
@@ -4941,7 +4955,7 @@ body.is-mobile:not(.minimal-icons-off) .menu-item-icon svg {
     white-space:pre-line;
   }
   .is-mobile .view-action {
-    padding:0 0 0 4px;
+    padding:0 4px 0 4px;
     height:22px;
   }
   .is-mobile .menu {
