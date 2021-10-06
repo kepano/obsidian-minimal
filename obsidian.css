@@ -1293,6 +1293,7 @@ body .view-action svg.cross path {
   opacity:var(--icon-muted);
   transition:opacity 0.1s ease-in-out;
   cursor:var(--cursor);
+  line-height:0;
 }
 .workspace-tab-header-inner-icon {
   padding:4px 4px;
@@ -1439,7 +1440,6 @@ body:not(.is-mobile) .modal {
   text-align:left;
   font-size:var(--h2);
   line-height:1.4;
-  padding-bottom:0;
 }
 .modal-content {
   margin-top:0px;
@@ -3973,6 +3973,9 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
 }
 .plugin-list-plugins {
   overflow:visible;
+}
+.community-theme-container {
+  padding-top:10px;
 }
 .community-theme-container, .hotkey-settings-container { 
   height:auto;
