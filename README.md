@@ -36,7 +36,7 @@ The following features can be toggled on/off using Minimal Theme Settings plugin
 
 ### Plugin support
 
-- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) (aka Andy Mode)
+- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) (aka Andy Mode), with recommended spine width 36px
 - [Calendar Widget](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
