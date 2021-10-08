@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.0.0 by @kepano
+Minimal Obsidian 4.0.1 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -377,6 +377,7 @@ body {
     --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
     --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 30%));
     --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
+    --modal-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 14%));
 
     --icon-muted:0.5;
     --background-modifier-box-shadow:rgba(0, 0, 0, 1);
@@ -418,42 +419,23 @@ Frameless mode on macOS only */
 
 .mod-macos.minimal-folding.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header) {
   --traffic-space:80px;
-  --traffic-padding:70px;
+  --traffic-padding:60px;
 }
 .mod-macos.minimal-folding.hider-frameless:not(.plugin-sliding-panes-rotate-header) {
   --traffic-space:55px;
-  --traffic-padding:40px;
+  --traffic-padding:20px;
 }
 .mod-macos.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header) {
   --traffic-space:95px;
-  --traffic-padding:70px;
+  --traffic-padding:60px;
 }
 .mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) {
   --traffic-space:65px;
-  --traffic-padding:40px;
-}
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-header {
-  position:relative;
-  right:auto;
-  display:flex;
+  --traffic-padding:20px;
 }
 .mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-header-icon {
-  flex:1 var(--traffic-space);
-  text-align:left;
-  min-width:var(--traffic-space);
-  padding-left:var(--traffic-padding);
-}
-.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-actions {
-  flex:1 var(--traffic-space);
-}
-.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-header-title-container {
-  position:static;
-  flex-grow:0;
-  flex-shrink:1;
-  flex-basis:var(--line-width-adaptive);
-}
-.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title:before {
-  right:var(--traffic-space);
+
+  margin-left:var(--traffic-padding);
 }
 
 /* --------------- */
@@ -806,14 +788,14 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
   opacity:1;
 }
 #calendar-container tr th {
-  padding:2px 0;
+  padding:2px 0 4px;
   font-weight:500;
 }
 #calendar-container tr td {
-  padding:2px 0 0;
+  padding:2px 0 0 0;
   border-radius:var(--radius-m);
   cursor:var(--cursor);
-  border:2px solid transparent;
+  border:1px solid transparent;
   transition:none;
 }
 #calendar-container .nav {
@@ -860,6 +842,9 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
 #calendar-container .reset-button,
 #calendar-container .day {
   cursor:var(--cursor);
+}
+#calendar-container .day {
+  padding:2px 4px 4px;
 }
 #calendar-container .active,
 #calendar-container .active.today,
@@ -3819,11 +3804,11 @@ body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=
   background:transparent;}
 .mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls,
 .mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
-  top:30px;}
+  top:40px;}
 
 .mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls,
 .mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
-  top:30px;}
+  top:40px;}
 
 
 /* Graph controls */
@@ -3990,7 +3975,7 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
 .modal.mod-settings .vertical-tab-header {
   background:var(--background-secondary);
   padding-top:5px;
-  flex: 0 0 210px;
+  flex: 0 0 220px;
   padding-bottom:100px;
 }
 .vertical-tab-header-group-title {
