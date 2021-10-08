@@ -3819,10 +3819,6 @@ body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=
   background:transparent;}
 .mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls,
 .mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
-  top:30px;}
-
-.mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls,
-.mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
   top:var(--header-height);}
 
 
