@@ -3823,7 +3823,7 @@ body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=
 
 .mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls,
 .mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {
-  top:30px;}
+  top:var(--header-height);}
 
 
 /* Graph controls */
