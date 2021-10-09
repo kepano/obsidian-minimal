@@ -2270,6 +2270,16 @@ body.full-borders .side-dock-ribbon {
   border-top:var(--border-width-alt) solid var(--background-modifier-border);
   width:100%;
 }
+body:not(.minimal-status-off) .document-search-container {
+  height:70px;
+}
+body:not(.minimal-status-off) .document-search-container.mod-replace-mode {
+  height:112px;
+}
+body:not(.hider-ribbon) .document-search-container {
+  padding-right:32px;
+}
+
 input.document-search-input,
 input.document-replace-input {
   margin-top:2px;
