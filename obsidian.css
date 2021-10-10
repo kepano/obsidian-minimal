@@ -2252,32 +2252,38 @@ body.full-borders .side-dock-ribbon {
   mix-blend-mode:normal;
   box-shadow:0 0 0px 3px var(--text-accent);
 }
-.document-search-container.mod-replace-mode {
-  height:90px;
+body:not(.is-mobile) .document-search-container.mod-replace-mode {
+  height:70px;
 }
 .document-search-button,
 .document-search-close-button {
   cursor:var(--cursor);
 }
-.document-search-close-button:before {
-  font-weight:200;
-}
-.document-search-container {
+body:not(.is-mobile) .document-search-container {
   position:fixed;
   padding-top:10px;
-  height:50px;
+  top:var(--header-height);
+  height:36px;
   background-color:var(--background-primary);
-  border-top:var(--border-width-alt) solid var(--background-modifier-border);
+  border-top:none;
   width:100%;
+  padding:0;
 }
-body:not(.minimal-status-off) .document-search-container {
-  height:70px;
+body:not(.is-mobile) .document-search,
+body:not(.is-mobile) .document-replace {
+  max-width:var(--max-width);
+  width:var(--line-width);
+  margin:0 auto;
+  padding:0 5px;
 }
-body:not(.minimal-status-off) .document-search-container.mod-replace-mode {
-  height:112px;
+.markdown-source-view.is-searching {
+  margin-top:40px;
 }
-body:not(.hider-ribbon) .document-search-container {
-  padding-right:32px;
+.markdown-source-view.is-replacing {
+  margin-top:70px;
+}
+.view-content .is-searching {
+  margin-top:40px;
 }
 
 input.document-search-input,
@@ -3476,6 +3482,7 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
 .workspace-ribbon.mod-right {
   right:6px;
   height:32px;
+  padding-top:6px;
   position:absolute;
   background:transparent;
   border:0;
@@ -3798,8 +3805,8 @@ color:#5cc863;
 
 /* Full bleed (takes up full height) */
 
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-header,
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-header {
+body:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='localgraph'] .view-header,
+body:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='graph'] .view-header {
   position:fixed;
   background:transparent !important;
   width:100%;}
@@ -3935,13 +3942,11 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
 }
 
 /* --------------- */
-/* Settings */
+/* Close buttons */
 
+.document-search-close-button,
 .modal-close-button {
-  top:7px;
-  right:7px;
   cursor:var(--cursor);
-  padding:0;
   line-height:20px;
   text-align:center;
   height:24px;
@@ -3950,14 +3955,25 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
   color:var(--text-faint);
   border-radius:var(--radius-m);
 }
+.modal-close-button {
+  top:7px;
+  right:7px;
+  padding:0;
+}
+.document-search-close-button:hover,
 .modal-close-button:hover {
   color:var(--text-normal);
   background:var(--background-tertiary);
 }
+.document-search-close-button:before,
 .modal-close-button:before {
   font-family:Inter,sans-serif;
   font-weight:200;
 }
+
+/* --------------- */
+/* Settings */
+
 .horizontal-tab-content, .vertical-tab-content {
   background:var(--background-primary);
   padding-bottom:100px;
@@ -4059,6 +4075,26 @@ body:not(.minimal-icons) .setting-hotkey-icon.setting-delete-hotkey svg {
 .mod-publish p {
   font-size:var(--font-small);
 }
+.mod-publish .tree-item-flair {
+  display:unset;
+}
+.file-tree .mod-new .tree-item-flair,
+.file-tree .mod-deleted .tree-item-flair,
+.file-tree .mod-to-delete .tree-item-flair,
+.file-tree .mod-changed .tree-item-flair {
+  background:transparent;
+}
+.file-tree .mod-deleted .tree-item-flair,
+.file-tree .mod-to-delete .tree-item-flair {
+  color:var(--pink);
+}
+.file-tree .mod-new .tree-item-flair {
+  color:var(--green);
+}
+.file-tree .mod-changed .tree-item-flair {
+  color:var(--yellow);
+}
+
 .mod-publish .button-container,
 .modal.mod-publish .modal-button-container {
   margin-top:0px;
