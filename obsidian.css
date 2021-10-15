@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.0.2 by @kepano
+Minimal Obsidian 4.0.3 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -468,6 +468,9 @@ body.plugin-sliding-panes-rotate-header {
 body.plugin-sliding-panes-rotate-header .view-header-title:before {
   display:none;
 }
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+  border-left:0 !important;
+}
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
 body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
   background:none !important;
@@ -583,7 +586,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   padding-right:10px;
 }
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-ribbon-action {
-  display:inline-block;
+  display:flex;
   padding:4px;
   margin:6px 0px 5px 7px;
 }
@@ -638,6 +641,8 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   top:0;
   padding:4px;
   border-radius:var(--radius-m);
+  display:flex;
+  align-items:center;
 }
 body:not(.is-mobile) .view-actions .view-action {
   height:26px;
@@ -1162,11 +1167,13 @@ body, input, button,
   font-weight:var(--bold-weight);
 }
 .cm-formatting-header,
+.cm-s-obsidian .cm-formatting-header.cm-header-1,
+.cm-s-obsidian .cm-formatting-header.cm-header-2,
+.cm-s-obsidian .cm-formatting-header.cm-header-3,
 .cm-s-obsidian .cm-formatting-header.cm-header-4,
 .cm-s-obsidian .cm-formatting-header.cm-header-5,
 .cm-s-obsidian .cm-formatting-header.cm-header-6 {
   color:var(--text-faint);
-  font-weight:var(--bold-weight);
 }
 .view-header-title,
 .file-embed-title,
@@ -1246,6 +1253,16 @@ body svg.right-triangle {
   width:15px;
   height:15px;
 }
+body .view-header-icon,
+body .graph-controls-button,
+body .clickable-icon,
+body .menu-item-icon,
+body .side-dock-ribbon-action,
+body .nav-action-button,
+body .view-action,
+body .workspace-tab-header-inner-icon {
+  line-height:0;
+}
 body .view-header-icon svg path,
 body .graph-controls-button svg path,
 body .clickable-icon svg path,
@@ -1290,6 +1307,8 @@ body .view-action svg.cross path {
   height:26px;
   padding:4px;
   top:0;
+  display:flex;
+  align-items:center;
   left:6px;
   z-index:15;
 }
@@ -3480,7 +3499,7 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
   left:8px;
 }
 .workspace-ribbon.mod-right {
-  right:6px;
+  right:7px;
   height:32px;
   padding-top:6px;
   position:absolute;
