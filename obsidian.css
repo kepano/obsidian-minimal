@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.0.3 by @kepano
+Minimal Obsidian 4.0.4 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -34,6 +34,8 @@ Special Features
   Image zoom
   Calendar plugin
   Dataview plugin
+  Outliner plugin
+  QuickAdd plugin
   Kanban plugin
   Checklist plugin
 
@@ -882,6 +884,36 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
 }*/
 
 /* --------------- */
+/* Outliner Plugin */
+
+body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
+  background-image: linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px);
+  background-position-x:5px;
+  background-size:var(--font-normal) 1px;
+}
+body.outliner-plugin-bls .cm-s-obsidian .HyperMD-list-line {
+  padding-top:0;
+}
+body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
+  color:var(--text-faint);
+  margin-left:0;
+}
+body.outliner-plugin-bls.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
+  content:"";
+  border-right:none;
+}
+
+/* --------------- */
+/* QuickAdd Plugin */
+
+.modal .quickAddPrompt > h1 {
+  margin-top:0;
+  text-align:left !important;
+  font-size:var(--h1);
+  font-weight:600;
+}
+
+/* --------------- */
 /* Kanban Plugin */
 
 body .kanban-plugin__markdown-preview-view {
@@ -1447,6 +1479,7 @@ body:not(.is-mobile) .modal {
 }
 .modal-content {
   margin-top:0px;
+  overflow:visible;
   padding:0;
 }
 .modal-content .u-center-text {
@@ -1649,7 +1682,6 @@ div.menu-item:hover .menu-item-icon svg path {
   font-size:var(--font-settings);
   line-height:1.3;
 }
-
 .modal .modal-content > h2 {
   text-align:left;
   font-size:var(--h1);
