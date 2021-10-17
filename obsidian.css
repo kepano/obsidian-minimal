@@ -471,11 +471,12 @@ body.plugin-sliding-panes-rotate-header .view-header-title:before {
   display:none;
 }
 body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
-  border-left:0 !important;
+    border:none;
 }
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
-body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
   background:none !important;
+
 }
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
     text-orientation:sideways;
@@ -888,15 +889,18 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
 
 body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
   background-image: linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px);
-  background-position-x:5px;
+  background-position-x:2px;
   background-size:var(--font-normal) 1px;
+}
+body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list {
+  letter-spacing:unset;
 }
 body.outliner-plugin-bls .cm-s-obsidian .HyperMD-list-line {
   padding-top:0;
 }
 body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
   color:var(--text-faint);
-  margin-left:0;
+  margin-left:-3px;
 }
 body.outliner-plugin-bls.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
   content:"";
@@ -1479,7 +1483,6 @@ body:not(.is-mobile) .modal {
 }
 .modal-content {
   margin-top:0px;
-  overflow:visible;
   padding:0;
 }
 .modal-content .u-center-text {
@@ -2168,6 +2171,7 @@ body.full-borders .side-dock-ribbon {
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width:100%;
   width:100%;
+  min-height:0 !important;
 }
 
 .markdown-embed .markdown-preview-section div:last-child p,
@@ -3814,6 +3818,10 @@ ol > li {
 /* Fill color for nodes */
 .graph-view.color-fill {
   color:var(--text-muted);
+}
+/* Fill color for current local node */
+.graph-view.color-fill-focused {
+  color:var(--text-accent);
 }
 /* Fill color for nodes on hover */
 .graph-view.color-fill-highlight {
