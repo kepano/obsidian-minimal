@@ -6097,6 +6097,49 @@ name: Minimal Theme
 id: minimal-style
 settings:
     -
+        id: styles
+        title: Background styles
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: light-mode-style
+        title: Light mode style
+        description: Background color style in light mode
+        type: class-select
+        allowEmpty: false
+        default: minimal-light
+        options:
+            - 
+                label: Default
+                value: minimal-light
+            - 
+                label: All white
+                value: minimal-light-white
+            - 
+                label: Low contrast
+                value: minimal-light-tonal
+            - 
+                label: High contrast
+                value: minimal-light-contrast
+    -
+        id: dark-mode-style
+        title: Dark mode style
+        description: Background color style in dark mode
+        type: class-select
+        allowEmpty: false
+        default: minimal-dark
+        options:
+            - 
+                label: Default
+                value: minimal-dark
+            - 
+                label: Low contrast
+                value: minimal-dark-tonal
+            - 
+                label: True black
+                value: minimal-dark-black
+    -
         id: color
         title: Colors
         type: heading
@@ -6133,6 +6176,147 @@ settings:
         min: 0
         max: 40
         step: 1
+        format: '%'
+    -
+        id: features
+        title: Features
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: fancy-cursor
+        title: Fancy cursor
+        description: Editor cursor uses your accent color
+        type: class-toggle
+        default:  true
+    -
+        id: minimal-icons-off
+        title: Default icons
+        description: Use default icons instead of Minimal set
+        type: class-toggle
+        default:  false
+    - 
+        id: minimal-status-off
+        title: Wide status bar
+        description: Use full width status bar
+        type: class-toggle
+        default:  false
+    -
+        id: borders-none
+        title: Hide sidebar borders
+        description: Turn off borders on sidebars
+        type: class-toggle
+    -
+        id: focus-mode
+        title: Hide action buttons in focus mode
+        description: When sidebars are collapsed hide action buttons, accessible by hovering
+        type: class-toggle
+    -
+        id: full-file-names
+        title: Show full file names
+        description: Turn off trimming on files in sidebar
+        type: class-toggle
+    -
+        id: minimal-folding
+        title: Folding offset
+        description: Recommended if you use folding headings and indents
+        type: class-toggle
+    -
+        id: minimal-rel-preview
+        title: Relationship lines in Preview
+        description: Show vertical lines that connect related bullet points and task lists
+        type: class-toggle
+    -
+        id: minimal-rel-edit
+        title: Relationship lines in Editor
+        description: Show vertical lines that connect related bullet points and task lists
+        type: class-toggle
+    -
+        id: full-width-media
+        title: Maximize media
+        description: Images and videos fill the width of the line
+        type: class-toggle
+    -
+        id: links-int-on
+        title: Underline internal links
+        description: Show underlines on internal links
+        type: class-toggle
+        default:  true
+    -
+        id: links-ext-on
+        title: Underline external links
+        description: Show underlines on external links
+        type: class-toggle
+        default:  true
+    -
+        id: fonts
+        title: Fonts
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: text
+        title: Text font
+        description: Used in preview mode
+        type: variable-text
+        default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+    -
+        id: text-editor
+        title: Editor font
+        description: Used in edit mode
+        type: variable-text
+        default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+    -
+        id: font-monospace
+        title: Monospace font
+        description: Used for code blocks and front matter
+        type: variable-text
+        default: Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace
+    -
+        id: font-ui
+        title: UI font
+        description: Used for buttons, menus and sidebar
+        type: variable-text
+        default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+    -
+        id: custom-fonts
+        title: Typography
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: font-normal
+        title: Body font size
+        description: Font size in px of the main text
+        type: variable-number
+        default: 16
+        format: px
+    - 
+        id: font-small
+        title: Sidebar font size
+        description: Font size in px of the sidebar and small text
+        type: variable-number
+        default: 13
+        format: px
+    - 
+        id: line-height
+        title: Body line height
+        description: Line height of the main text
+        type: variable-number
+        default: 1.5
+    - 
+        id: line-width
+        title: Normal line width
+        description: Number of characters per line
+        type: variable-number
+        default: 40
+        format: rem
+    -
+        id: max-width
+        title: Maximum line width
+        description: Percentage of space inside a pane that a line can fill. Recommended values between 80 to 100
+        type: variable-number
+        default: 88
         format: '%'
     -
         id: headings
@@ -6270,6 +6454,20 @@ settings:
             - 
                 label: Crosshair
                 value: crosshair
+    -
+        id: font-smaller
+        title: Small font size
+        description: Font size in px of the main text
+        type: variable-number
+        default: 11
+        format: px
+    - 
+        id: font-smallest
+        title: Tiny font size
+        description: Font size in px of the main text
+        type: variable-number
+        default: 10
+        format: px
     -
         id: credits
         title: Credits
