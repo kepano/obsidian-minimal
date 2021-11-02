@@ -38,6 +38,8 @@ Special Features
   QuickAdd plugin
   Kanban plugin
   Checklist plugin
+  Git plugin
+  Dictionary plugin
 
 Desktop Styling
 
@@ -1188,6 +1190,90 @@ body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-
   border:1px solid var(--background-modifier-border-focus);
 }
 
+/* ----------- */
+/* Git Plugin */
+
+.git-view-body .opener {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--font-adaptive-smallest);
+  font-weight: 500;
+  padding: 5px 7px 5px 10px;
+  margin-bottom: 6px;
+}
+.git-view-body {
+  margin-top: 6px;
+}
+.git-view-body .file-view {
+  margin-left: 4px;
+}
+.git-view-body .file-view main:hover {
+  color: var(--text-normal);
+}
+.git-view-body .file-view .tools .type {
+  display: none !important;
+}
+.git-view-body .file-view .tools {
+  opacity: 0;
+  transition: opacity .1s;
+}
+.git-view-body .file-view main:hover .tools {
+  opacity: 1;
+}
+.git-view-body .staged {
+  margin-bottom: 12px;
+}
+.git-view-body .opener.open {
+  color: var(--text-normal);
+}
+div[data-type="git-view"] .search-input-container {
+  margin-left: 0;
+  width: 100%;
+}
+.git-view-body .opener .collapse-icon {
+  display: none !important;
+}
+
+/* ----------------- */
+/* Dictionary Plugin */
+
+div[data-type="dictionary-view"] .results > .container {
+  background-color: transparent;
+  margin-top: 0;
+}
+
+div[data-type="dictionary-view"] h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--font-adaptive-smallest);
+  font-weight: 500;
+  padding: 5px 7px 5px 0px;
+  margin-bottom: 6px;
+}
+
+div[data-type="dictionary-view"] .main {
+  border: 1px solid var(--background-modifier-border);
+  font-size: var(--font-adaptive-smaller);
+  color: var(--text-muted);
+}
+
+div[data-type="dictionary-view"] .main .definition{
+  padding: 6px 0 !important;
+}
+
+div[data-type="dictionary-view"] .main .synonyms{
+  padding: 6px 0 !important;
+}
+
+div[data-type="dictionary-view"] .main .label {
+  color: var(--text-normal);
+}
+
+div[data-type="dictionary-view"] .main > .opener {
+  font-size: var(--font-adaptive-small);
+  color: var(--text-normal);
+}
+
 /* ----------------------------------------------------------------
 Desktop Styling
 ---------------------------------------------------------------- */
@@ -1408,6 +1494,7 @@ body .view-action svg.cross path {
   text-align:center;
   border-radius:var(--radius-m);
 }
+.workspace-leaf-content[data-type='dictionary-view'] .nav-action-button.is-active,
 .workspace-leaf-content[data-type='search'] .nav-action-button.is-active,
 .workspace-leaf-content[data-type='backlink'] .nav-action-button.is-active,
 .workspace-leaf-content[data-type='tag'] .nav-action-button.is-active,
