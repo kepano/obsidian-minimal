@@ -41,13 +41,13 @@ The following features can be toggled on/off using Minimal Theme Settings plugin
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) (may conflict with Minimal Theme Settings plugin)
 - [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) (recommended spine width 36px)
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
+- [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
+- [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
+- [Dictionary](https://github.com/phibr0/obsidian-dictionary)
+- [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)
+- [Git](https://github.com/denolehov/obsidian-git)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
-- [Dictionary](https://github.com/phibr0/obsidian-dictionary)
-- [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
-- [Git](https://github.com/denolehov/obsidian-git)
-- [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
-
 
 ### Gallery
 
