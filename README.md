@@ -2,7 +2,7 @@
 
 Minimal is an Obsidian theme meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider).
 
-Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano), [Patreon](https://www.patreon.com/kepano) or [Buy me a coffee](https://www.buymeacoffee.com/kepano).
+Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or [Buy me a coffee](https://www.buymeacoffee.com/kepano)
 
 <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=kepano&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
 
@@ -21,7 +21,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano), [
 The following features can be toggled on/off using Minimal Theme Settings plugin:
 
 - Background styles — multiple levels of contrast for light and dark mode, including True Black for OLED devices
-- Focus mode — hides everything but the text sidebars are collapsed
+- Focus mode — hides everything but the text when sidebars are collapsed
 - Fancy cursor — uses accent color for the cursor
 - Hide sidebar borders
 - Trim filenames
@@ -36,10 +36,18 @@ The following features can be toggled on/off using Minimal Theme Settings plugin
 
 ### Plugin support
 
-- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) (aka Andy Mode), with recommended spine width 36px
-- [Calendar Widget](https://github.com/liamcain/obsidian-calendar-plugin)
+- [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)
+- [Hider](https://github.com/kepano/obsidian-hider)
+- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) (may conflict with Minimal Theme Settings plugin)
+- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) (recommended spine width 36px)
+- [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
+- [Outliner](https://github.com/vslinko/obsidian-outliner)
+- [Dictionary](https://github.com/phibr0/obsidian-dictionary)
+- [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
+- [Git](https://github.com/denolehov/obsidian-git)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
+
 
 ### Gallery
 

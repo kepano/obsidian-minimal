@@ -1,12 +1,12 @@
 /* 
 
-Minimal Obsidian 4.0.6 by @kepano
+Minimal Obsidian 4.0.7 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
 
-
-Sponsor my work on Patreon:
+Sponsor my work:
+https://www.buymeacoffee.com/kepano
 https://www.patreon.com/kepano
 
 Readme:
@@ -23,23 +23,27 @@ Options
   Cursor
   Font styles
 
-Theme
+Theme Variables
 
 Special Features
 
   Frameless mode
-  Andy mode for use with Sliding Panes plugin
   App ribbon removed
   Focus mode
   Image zoom
-  Calendar plugin
-  Dataview plugin
-  Outliner plugin
-  QuickAdd plugin
-  Kanban plugin
-  Checklist plugin
-  Git plugin
-  Dictionary plugin
+
+Plugins
+
+  Sliding Panes aka Andy mode
+  Calendar
+  Dataview
+  Outliner
+  QuickAdd
+  Kanban
+  Checklist
+  Git
+  Dictionary
+  Style Settings preferences
 
 Desktop Styling
 
@@ -77,12 +81,14 @@ Mobile Styling
   Phone styling
   Tablet styling
 
+Style Settings
+
+
 ----------------------------------------------------------------
 
 OPTIONS
 
 Disabled features */
-
 .tree-item-flair:not(.tag-pane-tag-count) { /* Search counts */
   display:none;
 }
@@ -145,24 +151,19 @@ Disabled features */
 
   Font styles
 
-  /* Preview mode */
-
+  /* Preview font */
   --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   
-  /* Editor mode */
-
+  /* Editor font */
   --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   
-  /* Code */
-
+  /* Code font */
   --font-monospace:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
 
-  /* UI */
-
+  /* UI font */
   --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
   /* Sizes, weights, padding */
-
   --font-normal:16px;
   --font-small:13px;
   --font-smaller:11px;
@@ -250,7 +251,7 @@ body {
 
 /*----------------------------------------------------------------
 
-  THEME
+  THEME VARIABLES
 
   These values are mostly driven by the options above */
 
@@ -445,113 +446,6 @@ Frameless mode on macOS only */
 }
 
 /* --------------- */
-/* Style Settings */
-
-.setting-item-heading.style-settings-heading,
-.style-settings-container .style-settings-heading {
-  cursor:var(--cursor);
-}
-.modal.mod-settings .setting-item .pickr button.pcr-button {
-  box-shadow:none;
-  border-radius:40px;
-  height:24px;
-  width:24px;
-}
-.setting-item .pickr .pcr-button:after,
-.setting-item .pickr .pcr-button:before {
-  border-radius:40px;
-  box-shadow:none;
-  border:none;
-}
-
-/* --------------- */
-/* Andy Mode Sliding Panes
-   Designed for use with death_au's plugin */
-
-body.plugin-sliding-panes-rotate-header {
-  --header-width:40px;
-}
-body.plugin-sliding-panes-rotate-header .view-header-title:before {
-  display:none;
-}
-body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
-    border:none;
-}
-body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
-body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
-  background:none !important;
-
-}
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
-    text-orientation:sideways;
-}
-body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
-  border-right:none;
-}
-body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
-body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
-  box-shadow:0 0 0 1px var(--background-modifier-border),1px 0px 15px 0px var(--shadow-color)!important;
-}
-body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
-  box-shadow:none !important;
-}
-body.plugin-sliding-panes:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
-  transition:padding 0.1s ease;
-}
-body.plugin-sliding-panes .view-header-title:before {
-  background:none;
-}
-body.plugin-sliding-panes .view-header {
-  background:none;
-}
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container
-body.plugin-sliding-panes-rotate-header.plugin-sliding-panes-header-alt .workspace > .mod-root .view-header-title {
-  margin-top:0;
-}
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container {
-  margin-left:0;
-  padding-top:0;
-}
-body.plugin-sliding-panes-rotate-header .view-header-title-container {
-  position:static;
-}
-body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div {
-  margin-left:0px;
-  bottom:0;
-}
-body.plugin-sliding-panes-rotate-header .view-header-icon {
-  opacity:var(--icon-muted);
-}
-body.plugin-sliding-panes-rotate-header .view-header-icon:hover {
-  opacity:1;
-}
-body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
-  padding:4px 1px;
-  margin:5px 0 0 0;
-  left:0;
-  width:26px;
-}
-body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
-  padding-bottom:33px;
-}
-/* Space for the hover ribbon in the bottom left */
-body.hider-ribbon.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
-  padding-bottom:50px;
-}
-body.plugin-sliding-panes.is-fullscreen .view-header-icon {
-  padding-top:8px;
-}
-body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-action {
-  margin:3px 0;
-  padding:4px 1px;
-  width:26px;
-}
-body.plugin-sliding-panes .mod-root .graph-controls {
-  top:20px;
-  left:30px;
-}
-
-/* --------------- */
 /* App Menu ribbon moved to the bottom edge */
 
 .hider-ribbon:not(.is-mobile) .workspace-ribbon-collapse-btn {
@@ -613,8 +507,6 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 .hider-ribbon .workspace-ribbon {
   padding:0;
 }
-
-
 
 /* --------------- */
 /* Focus mode */
@@ -757,8 +649,97 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
   mix-blend-mode:screen;
 }
 
+
+/*----------------------------------------------------------------
+PLUGINS
+
+Sliding Panes aka Andy Mode */
+
+body.plugin-sliding-panes-rotate-header {
+  --header-width:40px;
+}
+body.plugin-sliding-panes-rotate-header .view-header-title:before {
+  display:none;
+}
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+    border:none;
+}
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+  background:none !important;
+
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
+    text-orientation:sideways;
+}
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+  border-right:none;
+}
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
+body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
+  box-shadow:0 0 0 1px var(--background-modifier-border),1px 0px 15px 0px var(--shadow-color)!important;
+}
+body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
+  box-shadow:none !important;
+}
+body.plugin-sliding-panes:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
+  transition:padding 0.1s ease;
+}
+body.plugin-sliding-panes .view-header-title:before {
+  background:none;
+}
+body.plugin-sliding-panes .view-header {
+  background:none;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container
+body.plugin-sliding-panes-rotate-header.plugin-sliding-panes-header-alt .workspace > .mod-root .view-header-title {
+  margin-top:0;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container {
+  margin-left:0;
+  padding-top:0;
+}
+body.plugin-sliding-panes-rotate-header .view-header-title-container {
+  position:static;
+}
+body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div {
+  margin-left:0px;
+  bottom:0;
+}
+body.plugin-sliding-panes-rotate-header .view-header-icon {
+  opacity:var(--icon-muted);
+}
+body.plugin-sliding-panes-rotate-header .view-header-icon:hover {
+  opacity:1;
+}
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
+  padding:4px 1px;
+  margin:5px 0 0 0;
+  left:0;
+  width:26px;
+}
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
+  padding-bottom:33px;
+}
+/* Space for the hover ribbon in the bottom left */
+body.hider-ribbon.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
+  padding-bottom:50px;
+}
+body.plugin-sliding-panes.is-fullscreen .view-header-icon {
+  padding-top:8px;
+}
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-action {
+  margin:3px 0;
+  padding:4px 1px;
+  width:26px;
+}
+body.plugin-sliding-panes .mod-root .graph-controls {
+  top:20px;
+  left:30px;
+}
+
 /* --------------- */
-/* Calendar Plugin */
+/* Calendar plugin */
 
 .workspace-leaf-content[data-type='calendar'] .view-content {
   padding:5px 0 0 0;
@@ -884,7 +865,7 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
 }
 
 /* --------------- */
-/* Dataview Plugin */
+/* Dataview plugin */
 
 .markdown-preview-view .table-view-table {
   font-size:calc(var(--font-adaptive-normal) - 1px);
@@ -896,12 +877,19 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
   border-bottom:1px solid var(--text-faint);
   cursor:var(--cursor);
 }
-/*.markdown-preview-view .table-view-table tr:hover {
-  background:var(--text-selection);
-}*/
+ul.dataview-ul {
+  list-style:none;
+  padding-inline-start:0;
+  margin-block-start:0.5em;
+  margin-block-end:0.5em;
+}
+.dataview-ul li {
+  display: inline-block;
+  padding-right:0.25em;
+}
 
 /* --------------- */
-/* Outliner Plugin */
+/* Outliner plugin */
 
 body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
   background-image:linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px);
@@ -928,7 +916,7 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul {
 }
 
 /* --------------- */
-/* QuickAdd Plugin */
+/* QuickAdd plugin */
 
 .modal .quickAddPrompt > h1 {
   margin-top:0;
@@ -938,7 +926,7 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul {
 }
 
 /* --------------- */
-/* Kanban Plugin */
+/* Kanban plugin */
 
 body .kanban-plugin__markdown-preview-view {
   font-family:var(----text);
@@ -1100,13 +1088,12 @@ body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-
 }
 
 /* --------------- */
-/* Checklist Plugin */
-
+/* Checklist plugin */
 
 .checklist-plugin-main .group .classic,
 .checklist-plugin-main .group .compact,
 .checklist-plugin-main .group svg,
-.checklist-plugin-main .group .page {
+.checklist-plugin-main .group .page { 
   cursor:var(--cursor);
 }
 .workspace .view-content .checklist-plugin-main {
@@ -1191,7 +1178,7 @@ body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-
 }
 
 /* ----------- */
-/* Git Plugin */
+/* Git plugin */
 
 .git-view-body .opener {
   text-transform: uppercase;
@@ -1235,43 +1222,107 @@ div[data-type="git-view"] .search-input-container {
 }
 
 /* ----------------- */
-/* Dictionary Plugin */
+/* Dictionary plugin */
+
+.workspace-leaf-content .view-content.dictionary-view-content {
+  padding:0;
+}
+
+div[data-type="dictionary-view"] .contents {
+  padding-bottom:2rem;
+}
 
 div[data-type="dictionary-view"] .results > .container {
-  background-color: transparent;
-  margin-top: 0;
+  background-color:transparent;
+  margin-top:0;
+  max-width:none;
+  padding:0 10px;
 }
 
-div[data-type="dictionary-view"] h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: var(--font-adaptive-smallest);
-  font-weight: 500;
-  padding: 5px 7px 5px 0px;
-  margin-bottom: 6px;
+div[data-type="dictionary-view"] .error,
+div[data-type="dictionary-view"] .errorDescription {
+  text-align:left;
+  font-size:var(--font-adaptive-small);
+  padding:10px 12px 0;
+  margin:0;
 }
 
-div[data-type="dictionary-view"] .main {
-  border: 1px solid var(--background-modifier-border);
-  font-size: var(--font-adaptive-smaller);
-  color: var(--text-muted);
+div[data-type="dictionary-view"] .results > .container h3 {
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  color:var(--text-muted);
+  font-size:var(--font-adaptive-smallest);
+  font-weight:500;
+  padding:5px 7px 0px 2px;
+  margin-bottom:6px;
 }
 
-div[data-type="dictionary-view"] .main .definition{
-  padding: 6px 0 !important;
+div[data-type="dictionary-view"] .container .main {
+  border-radius:0;
+  background-color:transparent;
+  font-size:var(--font-adaptive-smaller);
+  line-height:1.3;
+  color:var(--text-muted);
+  padding:5px 0 0 ;
 }
 
-div[data-type="dictionary-view"] .main .synonyms{
-  padding: 6px 0 !important;
+div[data-type="dictionary-view"] .main .definition {
+  padding:10px;
+  border:1px solid var(--background-modifier-border);
+  border-radius:5px;
+  margin:5px 0 7px;
+  background-color:var(--background-primary);
+}
+div[data-type="dictionary-view"] .main .definition:last-child {
+  border:1px solid var(--background-modifier-border);
 }
 
+div[data-type="dictionary-view"] .main .synonyms {
+  padding:10px 0 0;
+}
+div[data-type="dictionary-view"] .main .synonyms p {
+  margin:0;
+}
+div[data-type="dictionary-view"] .main .definition > blockquote {
+  margin:0;
+}
 div[data-type="dictionary-view"] .main .label {
-  color: var(--text-normal);
+  color:var(--text-normal);
+  margin-bottom:2px;
+  font-size:var(--font-adaptive-smaller);
+  font-weight:500;
+}
+
+div[data-type="dictionary-view"] .main .mark {
+  color:var(--text-normal);
+  background-color:var(--text-selection);
+  box-shadow:none;
 }
 
 div[data-type="dictionary-view"] .main > .opener {
-  font-size: var(--font-adaptive-small);
-  color: var(--text-normal);
+  font-size:var(--font-adaptive-small);
+  color:var(--text-normal);
+  padding-left:5px;
+}
+
+/* --------------- */
+/* Style Settings plugin preferences */
+
+.setting-item-heading.style-settings-heading,
+.style-settings-container .style-settings-heading {
+  cursor:var(--cursor);
+}
+.modal.mod-settings .setting-item .pickr button.pcr-button {
+  box-shadow:none;
+  border-radius:40px;
+  height:24px;
+  width:24px;
+}
+.setting-item .pickr .pcr-button:after,
+.setting-item .pickr .pcr-button:before {
+  border-radius:40px;
+  box-shadow:none;
+  border:none;
 }
 
 /* ----------------------------------------------------------------
@@ -3470,7 +3521,6 @@ input.search-input:focus {
 .workspace-leaf-content[data-type=starred] .item-list {
   padding-top:5px;
 }
-.workspace-leaf-content .view-content,
 .workspace-split.mod-right-split .view-content {
   padding:0;
   background-color:var(--background-primary);
