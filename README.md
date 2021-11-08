@@ -18,7 +18,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 ### Features
 
-The following features can be toggled on/off using Minimal Theme Settings plugin:
+The following features can be toggled on/off using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin:
 
 - Background styles — multiple levels of contrast for light and dark mode, including True Black for OLED devices
 - Focus mode — hides everything but the text when sidebars are collapsed
@@ -42,6 +42,7 @@ The following features can be toggled on/off using Minimal Theme Settings plugin
 - [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) (recommended spine width 36px)
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
+- [CodeMirror Options](https://github.com/nothingislost/obsidian-codemirror-options)
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
 - [Dictionary](https://github.com/phibr0/obsidian-dictionary)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)

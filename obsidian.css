@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.0.8 by @kepano
+Minimal Obsidian 4.0.9 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -36,6 +36,7 @@ Plugins
 
   Calendar
   Checklist
+  CodeMirror Options
   Dataview
   Dictionary
   Excalidraw
@@ -871,6 +872,19 @@ PLUGINS
 }
 
 /* --------------- */
+/* CodeMirror Options plugin */
+
+.hide-tokens .cm-s-obsidian .CodeMirror-code pre.HyperMD-hr {
+  background:linear-gradient(to bottom, var(--background-modifier-border) 2px, transparent 1px) -0.85em repeat-x;
+  background-size:2px 2px;
+  color:transparent;
+}
+.hide-tokens .cm-s-obsidian span.cm-hr {
+  color:transparent;
+}
+
+
+/* --------------- */
 /* Dataview plugin */
 
 .markdown-preview-view .table-view-table {
@@ -943,7 +957,7 @@ div[data-type="dictionary-view"] .main .definition {
   padding:10px;
   border:1px solid var(--background-modifier-border);
   border-radius:5px;
-  margin:5px 0 7px;
+  margin:10px 0 5px;
   background-color:var(--background-primary);
 }
 div[data-type="dictionary-view"] .main .definition:last-child {
@@ -3428,34 +3442,34 @@ body.is-mobile .CodeMirror-foldgutter-open:after {
   flex:1;
 }
 .search-input-clear-button {
+  color:var(--text-muted);
   cursor:var(--cursor);
   top:0px;
+  right:2px;
   bottom:0px;
-  border-radius:15px;
   line-height:0;
-  height:15px;
-  width:15px;
+  height:var(--input-height);
+  width:28px;
   margin:auto;
   padding:0 0;
   text-align:center;
   display:flex;
   justify-content:center;
   align-items:center;
-  color:var(--text-faint);
-}
-.search-input-clear-button {
-  background:var(--text-muted);
 }
 .search-input-clear-button:hover {
   color:var(--text-normal);
 }
 .search-input-clear-button:active {
-  background:var(--text-normal);
+  color:var(--text-normal);
 }
 .search-input-clear-button:before {
-  font-size:12px;
-  font-weight:400;
-  color:var(--background-secondary);
+  content:'';
+  height:13px;
+  width:13px;
+  display:block;
+  background-color:currentColor;
+  -webkit-mask-image:url("data:image/svg+xml,<svg viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12ZM3.8705 3.09766L6.00003 5.22718L8.12955 3.09766L8.9024 3.8705L6.77287 6.00003L8.9024 8.12955L8.12955 8.9024L6.00003 6.77287L3.8705 8.9024L3.09766 8.12955L5.22718 6.00003L3.09766 3.8705L3.8705 3.09766Z' fill='currentColor'/></svg>");
 }
 .search-input {
   max-width:100%;
@@ -4774,9 +4788,6 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   padding:10px 20px;
   font-size:14px;
 }
-.is-mobile .search-input-clear-button {
-  right:15px;
-}
 .is-mobile .modal, .is-mobile .prompt, .is-mobile .suggestion-container {
   width:100%;
   max-width:100%;
@@ -4926,12 +4937,11 @@ body.is-mobile:not(.minimal-icons-off) .menu-item-icon svg {
    height:18px;
 }
 .is-mobile .search-input-clear-button {
-  height:18px;
-  width:18px;
+  right:6px;
 }
 .is-mobile .search-input-clear-button:before {
-  font-size:var(--font-settings);
-  font-weight:500;
+  height:16px;
+  width:16px;
 }
 .is-mobile .menu-item {
   padding:5px 10px;
