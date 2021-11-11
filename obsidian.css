@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.0.9 by @kepano
+Minimal Obsidian 4.0.10 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1455,7 +1455,7 @@ body, input, button,
 .empty-state-title,
 .markdown-preview-view h1,
 .HyperMD-header-1,
-.cm-header-1 {
+.cm-s-obsidian .cm-header-1 {
   letter-spacing:-0.02em;
   line-height:1.3;
   font-size:var(--h1);
@@ -1464,7 +1464,7 @@ body, input, button,
 }
 .markdown-preview-view h2,
 .HyperMD-header-2,
-.cm-header-2 {
+.cm-s-obsidian .cm-header-2 {
   letter-spacing:-0.02em;
   line-height:1.3;
   font-size:var(--h2);
@@ -1473,7 +1473,7 @@ body, input, button,
 }
 .markdown-preview-view h3,
 .HyperMD-header-3,
-.cm-header-3 {
+.cm-s-obsidian .cm-header-3 {
   letter-spacing:-0em;
   line-height:1.4;
   font-size:var(--h3);
@@ -2337,7 +2337,6 @@ body.full-borders .side-dock-ribbon {
 .is-mobile .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
   max-width:var(--line-width-adaptive);
 }
-
 .markdown-source-view.is-readable-line-width .CodeMirror {
   padding-left:0;
   padding-right:0;
@@ -2357,7 +2356,46 @@ body.full-borders .side-dock-ribbon {
 }
 
 /* --------------- */
-/* Editor mode */
+/* Editor mode (CodeMirror 6 Live Preview) */
+
+
+.markdown-source-view.mod-cm6 hr {
+  border-width:2px;
+}
+.mod-cm6 .ͼ1 .cm-line {
+  padding:0;
+}
+
+/* Bullets */
+.HyperMD-list-line > span:first-child {
+  color:var(--text-faint);
+}
+
+.markdown-source-view.mod-cm6 .cm-selection {
+  background-color:transparent;
+}
+
+
+.markdown-source-view.mod-cm6 .cm-scroller {
+  padding:0;
+}
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+  max-width:var(--line-width-adaptive);
+}
+.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+  padding-left:16px;
+}
+
+
+/*
+.cm-hmd-list-indent { 
+  background:linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px) 0.2em repeat;
+  background-size:calc(var(--font-normal)*1.1) 1px;
+}*/
+
+
+/* --------------- */
+/* Editor mode (Classic) */
 
 /* Fancy cursor */
 .fancy-cursor .CodeMirror-cursor {
@@ -2813,15 +2851,18 @@ input[type=checkbox]:checked {
   text-decoration:none;
   color:var(--text-normal);
 }
+.task-list-item-checkbox,
 .markdown-preview-view .task-list-item-checkbox {
+  filter:none;
   width:18px;
   height:18px;
+}
+.markdown-preview-view .task-list-item-checkbox {
   position:relative;
   top:6px;
   line-height:0;
   margin-left:-1.4em;
   margin-right:6px;
-  filter:none;
 }
 .markdown-preview-view ul > li.task-list-item {
   text-indent:0;
