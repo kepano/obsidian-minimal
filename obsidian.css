@@ -2367,27 +2367,39 @@ body.full-borders .side-dock-ribbon {
 }
 
 /* Bullets */
-.HyperMD-list-line > span:first-child {
+.mod-cm6 .HyperMD-list-line .list-bullet {
   color:var(--text-faint);
+  font-size:1.4em;
+  line-height:0;
 }
 
+/*
 .markdown-source-view.mod-cm6 .cm-selection {
   background-color:transparent;
-}
-
+} */
 
 .markdown-source-view.mod-cm6 .cm-scroller {
-  padding:0;
+  padding-top:0;
+  padding-left:calc((100% - var(--max-width)) / 2);
+  padding-right:calc((100% - var(--max-width)) / 2);
+}
+.markdown-source-view.mod-cm6 .cm-editor {
+
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
   max-width:var(--line-width-adaptive);
 }
-.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
-  padding-left:16px;
-}
-
 
 /*
+.mod-cm6 .HyperMD-header-1,
+.mod-cm6 .HyperMD-header-2,
+.mod-cm6 .HyperMD-header-3,
+.mod-cm6 .HyperMD-header-4,
+.mod-cm6 .HyperMD-header-5,
+.mod-cm6 .HyperMD-header-6 {
+  margin:15px 0;
+}
+
 .cm-hmd-list-indent { 
   background:linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px) 0.2em repeat;
   background-size:calc(var(--font-normal)*1.1) 1px;
