@@ -6669,7 +6669,7 @@ settings:
         title: H3 font weight
         description: Accepts numbers representing the CSS font-weight
         type: variable-number
-        default: 500
+        default: 600
     -
         id: level-4-headings
         title: Level 4 Headings
