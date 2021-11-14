@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.0.10 by @kepano
+Minimal Obsidian 4.1.0 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -271,7 +271,7 @@ body {
     --text-highlight-bg:rgba(255, 224, 0, 0.5);
     --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
 
-    --code-color:#c7254e;
+    --text-code:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 75%));
 
     --background-primary:white;
     --background-primary-alt:hsl(var(--base-h),var(--base-s),var(--base-l));
@@ -327,7 +327,7 @@ body {
     --text-highlight-bg:rgba(255, 177, 80, 0.3);
     --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
 
-    --code-color:#c7254e;
+    --text-code:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 60%));
 
     --background-primary:hsl(var(--base-h),var(--base-s),var(--base-d));
     --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
@@ -594,6 +594,10 @@ body.color-headings {
   opacity:1;
   transition:opacity 0.25s linear;
 }
+.theme-dark span[src$="#invert"] img {
+  filter:invert(1) hue-rotate(180deg);
+  mix-blend-mode:screen;
+}
 
 /* --------------- */
 /* Image zoom  */
@@ -604,15 +608,15 @@ body.color-headings {
   width:100%;
 }
 
-.view-content .markdown-preview-view img {
+body:not(.zoom-off) .view-content .markdown-preview-view img {
   max-width:100%;
   cursor:zoom-in;}
 
-.view-content .markdown-preview-view img:active {
+body:not(.zoom-off) .view-content .markdown-preview-view img:active {
   cursor:zoom-out;}
 
-body:not(.is-mobile) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
-body:not(.is-mobile) .view-content .image-embed:active {
+body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
+body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
   cursor:zoom-out;
   display:block;
   z-index:100;
@@ -630,10 +634,10 @@ body:not(.is-mobile) .view-content .image-embed:active {
   bottom:0;
   background:var(--background-translucent);
 }
-body:not(.is-mobile) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active {
+body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active {
   padding:2.5%;
 }
-body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active img {
+body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view .image-embed:active img {
   top:50%;
   transform:translateY(-50%);
   padding:0;
@@ -646,9 +650,19 @@ body:not(.is-mobile) .view-content .markdown-preview-view .image-embed:active im
   position:absolute;
   opacity:1;
 }
-.theme-dark span[src$="#invert"] img {
-  filter:invert(1) hue-rotate(180deg);
-  mix-blend-mode:screen;
+
+/* --------------- */
+/* Title borders */
+
+body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='graph']) .view-header,
+body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .view-header {
+  border-bottom:var(--border-width) solid var(--background-modifier-border);
+}
+body.borders-title .workspace-ribbon.mod-left.is-collapsed {
+  border-right:var(--border-width) solid var(--background-modifier-border);
+}
+body.borders-title .workspace-leaf.mod-active .workspace-leaf-content .view-header {
+  border-color:var(--background-modifier-border-hover);
 }
 
 
@@ -4082,8 +4096,12 @@ ol > li {
   margin-left:0em;}
 
 /* Code */
-.markdown-preview-view code {
-  color:var(--code-color);
+.markdown-preview-view pre,
+.markdown-preview-view code,
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock {
+  color:var(--text-code);
+  font-size: 0.85em;
 }
 
 .theme-light :not(pre) > code[class*="language-"],
@@ -6381,6 +6399,44 @@ body:not(.minimal-icons-off) svg.changelog {
 }
 
 
+/* Plugin compatibility */
+
+/* @plugins
+core:
+- backlink
+- command-palette
+- daily-notes
+- file-explorer
+- file-recovery
+- global-search
+- graph
+- outgoing-link
+- outline
+- page-preview
+- publish
+- random-note
+- starred
+- switcher
+- sync
+- tag-pane
+- word-count
+community:
+- dataview
+- calendar
+- obsidian-checklist-plugin
+- obsidian-codemirror-options
+- obsidian-dictionary
+- obsidian-excalidraw-plugin
+- obsidian-git
+- obsidian-hider
+- obsidian-kanban
+- obsidian-minimal-settings
+- obsidian-outliner
+- obsidian-system-dark-mode
+- obsidian-style-settings
+- sliding-panes-obsidian
+*/
+
 
 /* Style Settings */
 
@@ -6495,8 +6551,13 @@ settings:
         default:  false
     -
         id: borders-none
-        title: Hide sidebar borders
-        description: Turn off borders on sidebars
+        title: Minimal borders
+        description: Hide borders in sidebars
+        type: class-toggle
+    -
+        id: borders-title
+        title: Title borders
+        description: Show border below titles (only if minimal borders are off)
         type: class-toggle
     -
         id: focus-mode
@@ -6527,6 +6588,11 @@ settings:
         id: full-width-media
         title: Maximize media
         description: Images and videos fill the width of the line
+        type: class-toggle
+    -
+        id: zoom-off
+        title: Disable image zoom
+        description: Turns off click/hold to zoom images
         type: class-toggle
     -
         id: links-int-on
@@ -6730,6 +6796,13 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    - 
+        id: text-code
+        title: Code color
+        type: variable-themed-color
+        format: hex
+        default-light: '#363636'
+        default-dark: '#bfbfbf'
     -
         id: cursor
         title: Cursor style
