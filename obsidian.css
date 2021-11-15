@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.1.0 by @kepano
+Minimal Obsidian 4.1.1 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -2373,11 +2373,22 @@ body.full-borders .side-dock-ribbon {
 /* Editor mode (CodeMirror 6 Live Preview) */
 
 
+/* Fancy cursor */
+.fancy-cursor .mod-cm6 .cm-line {
+  caret-color:transparent;
+}
+.fancy-cursor .mod-cm6 .cm-cursor {
+  width:0;
+  border:none;
+  border-right:2px solid var(--text-accent);
+}
+
+
 .markdown-source-view.mod-cm6 hr {
   border-width:2px;
 }
 .mod-cm6 .ͼ1 .cm-line {
-  padding:0;
+  padding:0 0 0 1px;
 }
 
 /* Bullets */
@@ -2429,15 +2440,17 @@ body.full-borders .side-dock-ribbon {
   border-right:2px solid var(--text-accent);
 }
 .cm-fat-cursor .CodeMirror-cursor { 
-    background-color:var(--text-accent); 
-    opacity:0.5; 
-    width:5px; 
+  background-color:var(--text-accent); 
+  opacity:0.5; 
+  width:5px; 
 } 
 .cm-animate-fat-cursor { 
   background-color:var(--text-accent); 
   opacity:0.5; 
   width:5px; 
 } 
+
+
 .markdown-source-view.mod-cm6,
 .markdown-source-view.mod-cm5,
 .markdown-source-view {
@@ -6550,23 +6563,23 @@ settings:
         type: class-toggle
         default:  false
     -
-        id: borders-none
-        title: Minimal borders
-        description: Hide borders in sidebars
-        type: class-toggle
-    -
-        id: borders-title
-        title: Title borders
-        description: Show border below titles (only if minimal borders are off)
-        type: class-toggle
-    -
         id: focus-mode
         title: Hide action buttons in focus mode
         description: When sidebars are collapsed hide action buttons, accessible by hovering
         type: class-toggle
     -
+        id: borders-none
+        title: Hide borders
+        description: Removes borders between sidebar elements
+        type: class-toggle
+    -
+        id: borders-title
+        title: Border below pane title
+        description: Show border below pane title (if borders are not hidden)
+        type: class-toggle
+    -
         id: full-file-names
-        title: Show full file names
+        title: Full file names in sidebar
         description: Turn off trimming on files in sidebar
         type: class-toggle
     -
