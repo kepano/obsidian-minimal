@@ -2374,15 +2374,17 @@ body.full-borders .side-dock-ribbon {
 
 
 /* Fancy cursor */
-.fancy-cursor .mod-cm6 .cm-line {
+body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-line {
   caret-color:transparent;
 }
-.fancy-cursor .mod-cm6 .cm-cursor {
+body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   width:0;
   border:none;
   border-right:2px solid var(--text-accent);
 }
-
+.is-mobile.fancy-cursor .mod-cm6 .cm-line {
+  caret-color:var(--text-accent);
+}
 
 .markdown-source-view.mod-cm6 hr {
   border-width:2px;
