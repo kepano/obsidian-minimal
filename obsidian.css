@@ -917,10 +917,6 @@ ul.dataview-ul {
   margin-block-start:0.5em;
   margin-block-end:0.5em;
 }
-table .dataview-ul li {
-  display:inline-block;
-  padding-right:0.25em;
-}
 
 /* ----------------- */
 /* Dictionary plugin */
@@ -1802,9 +1798,11 @@ input.prompt-input:hover {
   font-size:var(--font-adaptive-normal);
 }
 .modal,
-.prompt,
-.suggestion-container {
+.prompt {
   box-shadow:0 5px 100px rgba(0,0,0,0.15);
+}
+.suggestion-container {
+  box-shadow:0 5px 40px rgba(0,0,0,0.2);
 }
 .prompt {
   border:1px solid var(--modal-border);
@@ -2406,7 +2404,7 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 } */
 
 .markdown-source-view.mod-cm6 .cm-scroller {
-  padding-top:0;
+  padding-top:15px;
   padding-left:calc((100% - var(--max-width)) / 2);
   padding-right:calc((100% - var(--max-width)) / 2);
 }
@@ -2647,8 +2645,18 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   mix-blend-mode:normal;
   box-shadow:0 0 0px 3px var(--text-accent);
 }
+
+body:not(.is-mobile).borders-title .document-search-container {
+  padding-top:6px;
+}
+body input.document-search-input.mod-no-match:hover,
+body input.document-replace-input.mod-no-match:hover,
+body input.document-search-input.mod-no-match,
+body input.document-replace-input.mod-no-match {
+  background-color:var(--background-primary);
+}
 body:not(.is-mobile) .document-search-container.mod-replace-mode {
-  height:70px;
+  height:72px;
 }
 .document-search-button,
 .document-search-close-button {
@@ -2658,7 +2666,7 @@ body:not(.is-mobile) .document-search-container {
   position:fixed;
   padding-top:10px;
   top:var(--header-height);
-  height:36px;
+  height:38px;
   background-color:var(--background-primary);
   border-top:none;
   width:100%;
@@ -2672,13 +2680,13 @@ body:not(.is-mobile) .document-replace {
   padding:0 5px;
 }
 .markdown-source-view.is-searching {
-  margin-top:40px;
+  margin-top:42px;
 }
 .markdown-source-view.is-replacing {
-  margin-top:70px;
+  margin-top:72px;
 }
 .view-content .is-searching {
-  margin-top:40px;
+  margin-top:42px;
 }
 
 input.document-search-input,
