@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.1.1 by @kepano
+Minimal Obsidian 4.1.2 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -170,6 +170,8 @@ Disabled features */
   --font-small:13px;
   --font-smaller:11px;
   --font-smallest:10px;
+
+  --font-title:1.1em;
 
   --h1:1.125em;
   --h2:1em;
@@ -1459,12 +1461,11 @@ body, input, button,
 .markdown-embed-title {
   letter-spacing:-0.02em;
   text-align:left;
-  font-size:1.1em;
+  font-size:var(--font-title);
   font-weight:var(--bold-weight);
 }
 .empty-state-title,
 .markdown-preview-view h1,
-.HyperMD-header-1,
 .cm-s-obsidian .cm-header-1 {
   letter-spacing:-0.02em;
   line-height:1.3;
@@ -1473,7 +1474,6 @@ body, input, button,
   font-weight:var(--h1-weight);
 }
 .markdown-preview-view h2,
-.HyperMD-header-2,
 .cm-s-obsidian .cm-header-2 {
   letter-spacing:-0.02em;
   line-height:1.3;
@@ -1482,7 +1482,6 @@ body, input, button,
   font-weight:var(--h2-weight);
 }
 .markdown-preview-view h3,
-.HyperMD-header-3,
 .cm-s-obsidian .cm-header-3 {
   letter-spacing:-0em;
   line-height:1.4;
@@ -1491,7 +1490,6 @@ body, input, button,
   font-weight:var(--h3-weight);
 }
 .markdown-preview-view h4,
-.HyperMD-header-4,
 .cm-s-obsidian .cm-header-4 {
   font-variant:small-caps;
   letter-spacing:0.02em;
@@ -1500,7 +1498,6 @@ body, input, button,
   font-weight:var(--h4-weight);
 }
 .markdown-preview-view h5,
-.HyperMD-header-5,
 .cm-s-obsidian .cm-header-5 {
   font-variant:small-caps;
   letter-spacing:0.02em;
@@ -1509,7 +1506,6 @@ body, input, button,
   font-weight:var(--h5-weight);
 }
 .markdown-preview-view h6,
-.HyperMD-header-6,
 .cm-s-obsidian .cm-header-6 {
   font-variant:small-caps;
   letter-spacing:0.02em;
