@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.1.2 by @kepano
+Minimal Obsidian 4.1.3 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1618,6 +1618,7 @@ body .view-action svg.cross path {
   text-align:center;
   border-radius:var(--radius-m);
 }
+.nav-action-button.is-active,
 .workspace-leaf-content[data-type='dictionary-view'] .nav-action-button.is-active,
 .workspace-leaf-content[data-type='search'] .nav-action-button.is-active,
 .workspace-leaf-content[data-type='backlink'] .nav-action-button.is-active,
@@ -1629,6 +1630,7 @@ body .view-action svg.cross path {
   opacity:1;
   transition:opacity 0.1s ease-in-out;
 }
+.nav-action-button.is-active,
 .workspace-tab-header.is-active:hover {
   color:var(--text-muted);
 }
@@ -1639,6 +1641,7 @@ body .view-action svg.cross path {
 .view-action:hover,
 .view-header-icon:hover,
 .nav-action-button:hover,
+.nav-action-button.is-active:hover,
 .workspace-tab-header:hover,
 .side-dock-ribbon-tab:hover,
 .side-dock-ribbon-action:hover {
@@ -2385,6 +2388,21 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 }
 .mod-cm6 .ͼ1 .cm-line {
   padding:0 0 0 1px;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+  background-color:transparent;
+  border-left:1px solid var(--quote-opening-modifier);
+}
+.markdown-source-view.mod-cm6 .cm-blockquote-border {
+  width:20px;
+  display:inline-block;
+  border-left:none;
+  border-right:1px solid var(--quote-opening-modifier);
+  height:1em;
+}
+.markdown-source-view.mod-cm6 .cm-hmd-indent-in-quote {
+  margin-left:10px;
 }
 
 /* Bullets */
@@ -4049,6 +4067,55 @@ audio::-webkit-media-controls-panel {
   font-size:var(--font-adaptive-small);
 }
 .frontmatter-container .frontmatter-container-header:before {
+}
+
+/* Backlinks in Preview */
+
+.mod-root .markdown-preview-sizer .nav-header {
+  border-top:1px solid var(--background-modifier-border);
+  margin-top:3em;
+  position:relative;
+}
+.mod-root .markdown-preview-sizer .nav-buttons-container,
+.mod-root .markdown-preview-sizer .backlink-pane,
+.mod-root .markdown-preview-sizer .backlink-pane .search-result-container,
+.mod-root .markdown-preview-sizer .search-input-container,
+.mod-root .markdown-preview-sizer .tree-item,
+.mod-root .markdown-preview-sizer .search-empty-state {
+  padding-left:0;
+  margin-left:0;
+}
+.is-mobile .workspace-leaf-content:not([data-type='search']) .markdown-preview-sizer .nav-buttons-container {
+  border-bottom:none;
+  padding-top:5px;
+}
+.mod-root .markdown-preview-sizer .search-input-container {
+  margin-bottom:0px;
+  width:calc(100% - 160px);
+  margin-top:10px;
+}
+.mod-root .markdown-preview-sizer .backlink-pane {
+  padding-top:10px;
+}
+.mod-root .markdown-preview-sizer .nav-buttons-container {
+  position:absolute;
+  right:0;
+  top:2px;
+}
+.mod-root .markdown-preview-sizer .backlink-pane > .tree-item-self:hover,
+.mod-root .markdown-preview-sizer .backlink-pane > .tree-item-self {
+  padding-left:0px;
+  text-transform:none;
+  color:var(--text-normal);
+  font-size:var(--font-adaptive-normal);
+  font-weight:500;
+  letter-spacing:unset;
+}
+.mod-root .markdown-preview-sizer .backlink-pane > .tree-item-self.is-collapsed {
+  color:var(--text-faint);
+}
+.mod-root .markdown-preview-sizer .backlink-pane .search-result-file-title {
+  font-size:var(--font-adaptive-small);
 }
 
 /* Blockquotes */
