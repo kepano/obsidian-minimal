@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.1.3 by @kepano
+Minimal Obsidian 4.1.4 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1149,13 +1149,15 @@ body .kanban-plugin__item {
 body .kanban-plugin__lane-header-wrapper {
   border-bottom:0;
 }
+body .kanban-plugin__lane-title p,
 body .kanban-plugin__lane-header-wrapper  .kanban-plugin__grow-wrap > textarea,
 body .kanban-plugin__lane-input-wrapper  .kanban-plugin__grow-wrap > textarea {
   background:transparent;
   color:var(--text-normal);
-  font-size:0.875rem;
-  font-weight:600;
+  font-size:calc(var(--font-adaptive-normal) - 2px);
+  font-weight:500;
 }
+body .kanban-plugin__item-form,
 body .kanban-plugin__item-input-wrapper {
   border:0;
 }
@@ -1195,11 +1197,22 @@ body .kanban-plugin__item button.kanban-plugin__item-postfix-button.is-enabled,
 body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled {
   color:var(--text-muted);
 }
-
 body .kanban-plugin button {
   box-shadow:none;
   cursor:var(--cursor);
 }
+
+body .kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
+body .kanban-plugin__item button.kanban-plugin__item-postfix-button:hover,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  background-color:var(--background-tertiary);
+}
+
+body:not(.minimal-icons-off) .kanban-plugin svg.cross {
+  height:14px;
+  width:14px;
+}
+
 body .kanban-plugin__item-button-wrapper > button {
   font-size:var(--font-adaptive-small);
   color:var(--text-muted);
@@ -1795,6 +1808,13 @@ input.prompt-input:hover {
 .suggestion-item,
 .suggestion-empty {
   font-size:var(--font-adaptive-normal);
+}
+
+body:not(.hider-scrollbars) .prompt {
+  padding-right:0px;
+}
+body:not(.hider-scrollbars) .prompt-results {
+  padding-right:10px;
 }
 .modal,
 .prompt {
@@ -4116,6 +4136,9 @@ audio::-webkit-media-controls-panel {
 }
 .mod-root .markdown-preview-sizer .backlink-pane > .tree-item-self.is-collapsed {
   color:var(--text-faint);
+}
+.mod-root .markdown-preview-sizer .backlink-pane > .tree-item-self.is-collapsed:hover {
+  color:var(--text-muted);
 }
 .mod-root .markdown-preview-sizer .backlink-pane .search-result-file-title {
   font-size:var(--font-adaptive-small);
