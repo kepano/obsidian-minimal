@@ -4091,8 +4091,11 @@ audio::-webkit-media-controls-panel {
 }
 .mod-root .markdown-preview-sizer .search-input-container {
   margin-bottom:0px;
-  width:calc(100% - 160px);
+  width:calc(100% - 130px);
   margin-top:10px;
+}
+.is-mobile .mod-root .markdown-preview-sizer .search-input-container {
+  width:calc(100% - 160px);
 }
 .mod-root .markdown-preview-sizer .backlink-pane {
   padding-top:10px;
@@ -4100,7 +4103,7 @@ audio::-webkit-media-controls-panel {
 .mod-root .markdown-preview-sizer .nav-buttons-container {
   position:absolute;
   right:0;
-  top:2px;
+  top:3px;
 }
 .mod-root .markdown-preview-sizer .backlink-pane > .tree-item-self:hover,
 .mod-root .markdown-preview-sizer .backlink-pane > .tree-item-self {
