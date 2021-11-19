@@ -1879,11 +1879,15 @@ div.menu-item:hover .menu-item-icon svg path {
 /* --------------- */
 /* Sync */
 
-
 .sync-history-content {
   font-size:var(--font-adaptive-small);
   border:none;
   padding:20px 40px 20px 20px;
+  border-radius:0;
+}
+body .sync-history-content-container textarea.sync-history-content:active,
+body .sync-history-content-container textarea.sync-history-content:focus {
+  box-shadow:none;
 }
 .sync-history-content-container {
   padding:0;
@@ -1897,11 +1901,22 @@ div.menu-item:hover .menu-item-icon svg path {
 }
 .sync-history-list-container {
   flex-basis:220px;
+  overflow:scroll;
+  border-right:1px solid var(--background-modifier-border);
 }
 .sync-history-list {
   padding:10px;
-  border-right:1px solid var(--background-modifier-border);
+  overflow:unset;
   background-color:var(--background-secondary);
+}
+.sync-history-load-more-button {
+  font-size:var(--font-adaptive-small);
+  cursor:var(--cursor);
+  margin:-10px 10px 10px;
+  border-radius:var(--radius-m);
+}
+.sync-history-load-more-button:hover {
+  background-color:var(--background-tertiary);
 }
 .sync-history-list-item {
   border-radius:var(--radius-m);
