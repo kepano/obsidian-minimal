@@ -660,7 +660,7 @@ body.borders-title .workspace-ribbon.mod-left.is-collapsed {
 body.borders-title .workspace-leaf.mod-active .workspace-leaf-content .view-header {
   border-color:var(--background-modifier-border-hover);
 }
-body.borders-title .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
+body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
   border:none; 
 }
 
