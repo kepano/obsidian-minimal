@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.1.4 by @kepano
+Minimal Obsidian 4.1.5 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1879,6 +1879,37 @@ div.menu-item:hover .menu-item-icon svg path {
 /* --------------- */
 /* Sync */
 
+/* Sync Log */
+
+.modal.mod-sync-log {
+  padding:20px 0 0 0;
+}
+.modal.mod-sync-log .modal-title {
+  padding:0 20px;
+}
+.modal.mod-sync-log .modal-content {
+  padding:0px;
+  display:flex;
+  flex-direction:column;
+}
+.modal-button-container {
+  border-top:1px solid var(--background-modifier-border);
+  padding:15px;
+  background-color:var(--background-primary);
+  margin:0;
+}
+.modal.mod-sync-log .sync-log-container {
+  padding:16px 20px;
+  background-color:var(--background-secondary);
+  flex-grow:1;
+  font-size:var(--font-adaptive-small);
+}
+.sync-log-container .list-item {
+  padding-left:0;
+}
+.modal.mod-sync-log .setting-item.mod-toggle {
+  padding:20px;
+}
 .sync-history-content {
   font-size:var(--font-adaptive-small);
   border:none;
@@ -1889,8 +1920,25 @@ body .sync-history-content-container textarea.sync-history-content:active,
 body .sync-history-content-container textarea.sync-history-content:focus {
   box-shadow:none;
 }
+
+/* Sync history */
+
+.sync-history-content-empty {
+  padding:5px 20px;
+  color:var(--text-muted);
+  font-size:var(--font-adaptive-small);
+}
 .sync-history-content-container {
   padding:0;
+  height:auto;
+  border-left:1px solid var(--background-modifier-border);
+  background-color:var(--background-primary);
+}
+.sync-history-content-buttons.u-center-text {
+  text-align:center;
+  padding:10px;
+  margin:0;
+  border-top:1px solid var(--background-modifier-border);
 }
 .sync-history-content-container .modal-button-container {
   margin:0;
@@ -1899,20 +1947,29 @@ body .sync-history-content-container textarea.sync-history-content:focus {
   background-color:var(--background-primary);
   text-align:center;
 }
+.sync-history-list {
+  min-width:220px;
+}
 .sync-history-list-container {
-  flex-basis:220px;
-  overflow:scroll;
-  border-right:1px solid var(--background-modifier-border);
+  min-width:220px;
+  flex-basis:230px;
+  max-height:none;
+  overflow-y:scroll;
+  background-color:var(--background-secondary);
 }
 .sync-history-list {
-  padding:10px;
+  padding:10px 10px 0 10px;
   overflow:unset;
   background-color:var(--background-secondary);
+}
+.sync-history-list .search-input-container {
+  width:100%;
+  margin:0;
 }
 .sync-history-load-more-button {
   font-size:var(--font-adaptive-small);
   cursor:var(--cursor);
-  margin:-10px 10px 10px;
+  margin:0px 10px 10px;
   border-radius:var(--radius-m);
 }
 .sync-history-load-more-button:hover {
@@ -1964,6 +2021,8 @@ body .sync-history-content-container textarea.sync-history-content:focus {
   --font-settings-small:12px;
 }
 
+.modal.mod-sync-history,
+.modal.mod-sync-log,
 .modal.mod-publish,
 .modal.mod-community-plugin,
 .modal.mod-settings {
@@ -2447,6 +2506,15 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   line-height:0;
 }
 
+
+.markdown-source-view.mod-cm6 .fold-gutter {
+  opacity:0;
+}
+.markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
+.markdown-source-view.mod-cm6 .fold-gutter:hover {
+  opacity:1;
+}
+
 /*
 .markdown-source-view.mod-cm6 .cm-selection {
   background-color:transparent;
@@ -2463,21 +2531,6 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
   max-width:var(--line-width-adaptive);
 }
-
-/*
-.mod-cm6 .HyperMD-header-1,
-.mod-cm6 .HyperMD-header-2,
-.mod-cm6 .HyperMD-header-3,
-.mod-cm6 .HyperMD-header-4,
-.mod-cm6 .HyperMD-header-5,
-.mod-cm6 .HyperMD-header-6 {
-  margin:15px 0;
-}
-
-.cm-hmd-list-indent { 
-  background:linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px) 0.2em repeat;
-  background-size:calc(var(--font-normal)*1.1) 1px;
-}*/
 
 
 /* --------------- */
@@ -3581,13 +3634,14 @@ body.is-mobile .CodeMirror-foldgutter-open:after {
   flex:1;
 }
 .search-input-clear-button {
+  background: var(--background-modifier-form-field);
   color:var(--text-muted);
   cursor:var(--cursor);
   top:0px;
   right:2px;
   bottom:0px;
   line-height:0;
-  height:var(--input-height);
+  height:calc(var(--input-height) - 2px);
   width:28px;
   margin:auto;
   padding:0 0;
@@ -4223,6 +4277,7 @@ ol > li {
   margin-left:0em;}
 
 /* Code */
+
 .markdown-preview-view pre,
 .markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code,
@@ -4230,7 +4285,18 @@ ol > li {
   color:var(--text-code);
   font-size: 0.85em;
 }
-
+button.copy-code-button {
+  cursor:var(--curosor);
+  box-shadow:none;
+  font-size:var(--font-adaptive-smaller);
+  background-color:transparent;
+  color:var(--text-faint);
+  padding:0.25em 0.75em;
+}
+button.copy-code-button:hover {
+  background-color:var(--background-button);
+  color:var(--text-muted);
+}
 .theme-light :not(pre) > code[class*="language-"],
 .theme-light pre[class*="language-"] {
   background-color:var(--background-primary-alt);
