@@ -1417,6 +1417,16 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   border:none;
 }
 
+
+/* --------------- */
+/* Obsidian Tabs plugin */
+
+body.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header,
+body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf .view-header, .plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header {
+  border:none;
+}
+
+
 /* ----------------------------------------------------------------
 Desktop Styling
 ---------------------------------------------------------------- */
@@ -2760,9 +2770,36 @@ body input.document-replace-input.mod-no-match {
 body:not(.is-mobile) .document-search-container.mod-replace-mode {
   height:72px;
 }
+.document-replace-buttons,
+.document-search-buttons {
+  height:30px;
+  padding-top:3px;
+  display:flex;
+}
 .document-search-button,
 .document-search-close-button {
   cursor:var(--cursor);
+  color:var(--text-muted);
+  background:var(--background-tertiary);
+  font-weight:500;
+  height:26px;
+}
+.document-search-button:hover {
+  box-shadow:none;
+  background:var(--background-tertiary);
+}
+body .document-search-close-button {
+  bottom:0;
+  top:0;
+  display:inline-flex;
+  height:26px;
+  width:26px;
+  line-height:24px;
+}
+.document-search-button {
+  margin:0 4px 0 0;
+  padding-left:0.75em;
+  padding-right:0.75em;
 }
 body:not(.is-mobile) .document-search-container {
   position:fixed;
