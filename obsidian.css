@@ -6434,7 +6434,7 @@ body:not(.minimal-icons-off) svg.right-arrow-with-tail {
   -webkit-mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M47.054 72.054l5.892 5.892L80.892 50l-27.946 -27.946l-5.892 5.892L64.942 45.833H25v8.333h39.942z"></path></svg>');
 }
 body:not(.minimal-icons-off) svg.right-arrow {
-  -webkit-mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7' /></svg>");}
+  -webkit-mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7' /></svg>");
 }
 body:not(.minimal-icons-off) svg.right-chevron-glyph {
   -webkit-mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M41.921 79.421L71.338 50l-29.417 -29.421l-8.842 8.842L53.663 50l-20.583 20.579z"></path></svg>');
