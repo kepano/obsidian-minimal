@@ -104,12 +104,6 @@ Disabled features */
   display:none;
 }
 
-/* Remove this if you re-enable status bar */
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  height:100%;
-}
-
 
 :root {
 
@@ -666,7 +660,9 @@ body.borders-title .workspace-ribbon.mod-left.is-collapsed {
 body.borders-title .workspace-leaf.mod-active .workspace-leaf-content .view-header {
   border-color:var(--background-modifier-border-hover);
 }
-
+body.borders-title .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
+  border:none; 
+}
 
 /*----------------------------------------------------------------
 PLUGINS
@@ -1795,11 +1791,20 @@ body:not(.is-mobile) .modal {
 .modal-content {
   margin-top:0px;
   padding:0;
+  font-size:var(--font-adaptive-small);
 }
 .modal-content .u-center-text {
   text-align:left;
-  font-size:13px;
+  font-size:var(--font-adaptive-small);
 }
+.modal-container.mod-confirmation .modal {
+  width:450px;
+  min-width:0;
+}
+.mod-confirmation .modal-content {
+  margin-top:20px;
+}
+
 input[type='text'].prompt-input {
   border:0;
   background:var(--background-primary);
@@ -1929,7 +1934,7 @@ div.menu-item:hover .menu-item-icon svg path {
   display:flex;
   flex-direction:column;
 }
-.modal-button-container {
+.modal.mod-sync-log .modal-button-container {
   border-top:1px solid var(--background-modifier-border);
   padding:15px;
   background-color:var(--background-primary);
@@ -2361,7 +2366,6 @@ body.hider-frameless .titlebar {
   fill:white !important;
   stroke:white !important;
 }
-
 .titlebar-button-container {
   height:var(--titlebar-height);
   top:0;
@@ -2373,8 +2377,9 @@ body.hider-frameless .titlebar {
 }
 .titlebar-text {
   display:none;
-  padding-top:5px;
-  color:var(--text-faint);
+  font-weight:500;
+  padding-top:6px;
+  color:var(--text-muted);
   letter-spacing:inherit;
 }
 .titlebar-button:hover {
@@ -3990,6 +3995,10 @@ input.search-input:focus {
 /* --------------- */
 /* Status bar */
 
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  height:100%;
+}
 .status-bar {
   transition:color 200ms linear;
   color:var(--text-faint);
