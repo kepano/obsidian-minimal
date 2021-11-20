@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.1.5 by @kepano
+Minimal Obsidian 4.1.6 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -829,7 +829,7 @@ PLUGINS
   border-bottom:1px solid var(--background-modifier-border);
 }
 .checklist-plugin-main .group {
-  padding:0 0 4px 0;
+  padding:0 0 2px 0;
 }
 .checklist-plugin-main .group .classic:last-child,
 .checklist-plugin-main .group .compact:last-child {
@@ -885,6 +885,33 @@ PLUGINS
 }
 .checklist-plugin-main .group .checkbox:hover {
   border:1px solid var(--background-modifier-border-focus);
+}
+.checklist-plugin-main button:active,
+.checklist-plugin-main button:focus,
+.checklist-plugin-main button:hover {
+  box-shadow:none !important;
+}
+.checklist-plugin-main button.collapse {
+  padding:0;
+}
+body:not(.is-mobile) .checklist-plugin-main button.collapse svg {
+  width:18px;
+  height:18px;
+}
+
+/* Checklist plugin mobile */
+.is-mobile .checklist-plugin-main .group-header .title {
+  flex-grow:1;
+  flex-shrink:0;
+}
+.is-mobile .checklist-plugin-main button {
+  width:auto;
+}
+.is-mobile .checklist-plugin-main.markdown-preview-view ul {
+  padding-inline-start:0;
+}
+.is-mobile .workspace .view-content .checklist-plugin-main {
+  padding-bottom:50px;
 }
 
 /* --------------- */
@@ -2909,6 +2936,9 @@ input.document-replace-input:focus {
 /* --------------- */
 /* Form inputs */
 
+button {
+  cursor:var(--cursor);
+}
 textarea,
 input[type='text'],
 input[type='search'],
