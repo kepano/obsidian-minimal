@@ -34,11 +34,11 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 - Click + hold to zoom in on images
 - Use `#invert` to invert images in dark mode, e.g. `![[image.jpeg#invert]]`
 
-## CSS helper classes
+### CSS helper classes
 
 The following classes can be added on a per-file basis using the  `cssClasses` YAML tag. The classes are composable, so you can include more than one to combine effects.
 
-### Tables and Dataview
+#### Tables and Dataview
 
 | Class         | Description                                         |
 | ------------- | --------------------------------------------------- |
