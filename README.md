@@ -34,6 +34,22 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 - Click + hold to zoom in on images
 - Use `#invert` to invert images in dark mode, e.g. `![[image.jpeg#invert]]`
 
+## CSS helper classes
+
+The following classes can be added on a per-file basis using the  `cssClasses` YAML tag. The classes are composable, so you can include more than one to combine effects.
+
+### Tables and Dataview
+
+| Class         | Description                                         |
+| ------------- | --------------------------------------------------- |
+| `table-small` | Use small font size in tables                       |
+| `table-tiny`  | Use tiny font size in tables                        |
+| `table-lines` | Add borders around all table cells                  |
+| `row-lines`   | Add borders between table rows                      |
+| `col-lines`   | Add borders between table columns                   |
+| `row-alt`     | Add striped background to alternating table rows    |
+| `col-alt`     | Add striped background to alternating table columns |
+
 ### Plugin support
 
 - [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)

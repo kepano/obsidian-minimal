@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.1.6 by @kepano
+Minimal Obsidian 4.1.7 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -280,6 +280,7 @@ body {
     --background-modifier-form-field:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 6%));
     --background-modifier-form-field-highlighted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 8%));
     --background-button:white;
+    --background-table-rows:var(--background-secondary);
 
     --modal-border:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 18%));
 
@@ -335,6 +336,7 @@ body {
     --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
     --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
     --background-modifier-form-field:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
+    --background-table-rows:var(--background-secondary);
 
     --background-button:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
 
@@ -358,15 +360,18 @@ body {
   }
   .theme-light.minimal-light-white {
     --background-secondary:white;
+    --background-table-rows:hsl(var(--base-h),var(--base-s),var(--base-l));
   }
   .theme-light.minimal-light-tonal {
     --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
     --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 4%));
     --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-l),0.85);
+    --background-table-rows:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 4%));
   }
   .theme-dark.minimal-dark-tonal {
     --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
     --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
+    --background-table-rows:var(--background-tertiary);
   }
   .theme-dark.minimal-dark-black {
     --base-d:0%;
@@ -382,6 +387,7 @@ body {
     --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
     --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 30%));
     --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
+    --background-table-rows:var(--background-tertiary);
     --modal-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 14%));
 
     --icon-muted:0.5;
@@ -593,6 +599,9 @@ body.color-headings {
 .theme-dark span[src$="#invert"] img {
   filter:invert(1) hue-rotate(180deg);
   mix-blend-mode:screen;
+}
+.theme-light span[src$="invertW"] img {
+  filter: invert(1) hue-rotate(180deg);
 }
 
 /* --------------- */
@@ -920,6 +929,9 @@ body:not(.is-mobile) .checklist-plugin-main button.collapse svg {
 }
 .hide-tokens .cm-s-obsidian span.cm-hr {
   color:transparent;
+}
+body.hide-tokens .cm-s-obsidian pre.HyperMD-table-row > span {
+  border-color:var(--background-modifier-border);
 }
 
 
@@ -2641,7 +2653,10 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 .cm-s-obsidian span.cm-url:hover {
   color:var(--text-accent);
 }
-.cm-s-obsidian span.cm-link {
+.mod-cm5 .cm-s-obsidian span.cm-link {
+  color:var(--text-muted);
+}
+.cm-s-obsidian .cm-active .cm-formatting-link + span.cm-link {
   color:var(--text-muted);
 }
 .cm-s-obsidian span.cm-hmd-internal-link {
@@ -3707,6 +3722,7 @@ body.is-mobile .CodeMirror-foldgutter-open:after {
 }
 .search-input-clear-button {
   background: var(--background-modifier-form-field);
+  border-radius:50%;
   color:var(--text-muted);
   cursor:var(--cursor);
   top:0px;
@@ -4303,8 +4319,15 @@ audio::-webkit-media-controls-panel {
 
 /* Tables */
 
+.markdown-preview-view table {
+  margin-block-start:1em;
+}
+.markdown-preview-view td {
+  font-size:calc(var(--font-adaptive-normal) - 2px);
+}
 .markdown-preview-view th {
   font-weight:var(--bold-weight);
+  font-size:calc(var(--font-adaptive-normal) - 2px);
   text-align:left;
   border-top:none;
 }
@@ -4319,6 +4342,50 @@ audio::-webkit-media-controls-panel {
 }
 .markdown-preview-view tr:last-child td {
   border-bottom:none;
+}
+
+/* Table helper classes for alternate styles */
+
+.row-alt th:first-child,
+.row-alt tbody > tr > td:first-child {
+  padding-left:10px;
+}
+.row-alt tbody > tr:nth-child(odd),
+.col-alt tr > th:nth-child(2n+2),
+.col-alt tr > td:nth-child(2n+2) {
+  padding-left:10px;
+  background:var(--background-table-rows);
+}
+.table-lines .table-view-table  {
+  border:1px solid var(--background-modifier-border);
+}
+.table-lines .table-view-table thead > tr > th,
+.table-lines .table-view-table > tbody > tr > td  {
+  border-right:1px solid var(--background-modifier-border);
+  border-bottom:1px solid var(--background-modifier-border);
+  padding:4px 10px;
+}
+.table-nowrap tbody > tr > td {
+  white-space:nowrap;
+}
+.row-lines tbody > tr > td,
+.row-lines .table-view-table > tbody > tr > td {
+  border-bottom:1px solid var(--background-modifier-border);
+}
+.col-lines tbody > tr > td,
+.col-lines .table-view-table thead > tr > th:not(:last-child),
+.col-lines .table-view-table > tbody > tr > td:not(:last-child) {
+  border-right:1px solid var(--background-modifier-border);
+}
+.table-small.markdown-preview-view .table-view-table > thead > tr > th,
+.table-small thead > tr > th,
+.table-small tbody > tr > td {
+  font-size:85%;
+}
+.table-tiny.markdown-preview-view .table-view-table > thead > tr > th,
+.table-tiny thead > tr > th,
+.table-tiny tbody > tr > td {
+  font-size:75%;
 }
 
 /* Preview Mode Lists  */
