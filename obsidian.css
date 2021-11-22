@@ -4263,13 +4263,13 @@ audio::-webkit-media-controls-panel {
 
 /* Backlinks in Preview */
 
-.mod-root .workspace-leaf-content[data-type='markdown']  .nav-header {
+.mod-root .workspace-leaf-content[data-type='markdown'] .nav-header {
   border-top:1px solid var(--background-modifier-border);
   margin-top:3em;
   position:relative;
 }
 .mod-root .workspace-leaf-content[data-type='markdown'] .nav-buttons-container,
-.mod-root .workspace-leaf-content[data-type='markdown'].backlink-pane,
+.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane,
 .mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane .search-result-container,
 .mod-root .workspace-leaf-content[data-type='markdown'] .search-input-container,
 .mod-root .workspace-leaf-content[data-type='markdown'] .tree-item,
