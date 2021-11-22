@@ -2488,7 +2488,7 @@ body.full-borders .side-dock-ribbon {
 }
 
 /* With readable line width */
-.markdown-preview-view.is-readable-line-width .workspace-leaf-content[data-type='markdown'] {
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width:var(--max-width);
   width:var(--line-width-adaptive);
 }
@@ -2675,7 +2675,7 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   width:30px;
 }
 
-.markdown-preview-view.is-readable-line-width .markdown-embed .workspace-leaf-content[data-type='markdown'] {
+.markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width:100%;
   width:100%;
   min-height:0 !important;
@@ -2927,14 +2927,14 @@ input.document-replace-input:focus {
 }
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-section,
-.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type='markdown'] {
+.workspace > .workspace-split:not(.mod-root) .markdown-preview-sizer {
   max-width:100%;
   padding:0;
   width:auto;
 }
 
 .minimal-folding .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .allow-fold-lists.markdown-preview-view .workspace-leaf-content[data-type='markdown'] {
+.minimal-folding .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
   padding-left:0;
 }
 
@@ -3448,10 +3448,10 @@ body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
 
 body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title,
 .minimal-folding .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding .allow-fold-lists.markdown-preview-view .workspace-leaf-content[data-type='markdown'] {
+.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
   padding-left:var(--folding-offset);
 }
-.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-embed .workspace-leaf-content[data-type='markdown'] {
+.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-embed .markdown-preview-sizer {
   padding-left:0;
 }
 .is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters,
@@ -4263,13 +4263,13 @@ audio::-webkit-media-controls-panel {
 
 /* Backlinks in Preview */
 
-.mod-root .workspace-leaf-content[data-type='markdown'] .nav-header {
+.mod-root .workspace-leaf-content[data-type='markdown']  .nav-header {
   border-top:1px solid var(--background-modifier-border);
   margin-top:3em;
   position:relative;
 }
 .mod-root .workspace-leaf-content[data-type='markdown'] .nav-buttons-container,
-.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane,
+.mod-root .workspace-leaf-content[data-type='markdown'].backlink-pane,
 .mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane .search-result-container,
 .mod-root .workspace-leaf-content[data-type='markdown'] .search-input-container,
 .mod-root .workspace-leaf-content[data-type='markdown'] .tree-item,
@@ -5030,7 +5030,7 @@ body.is-mobile {
 .is-mobile .workspace-drawer-tab-container > *,
 body.minimal-folding.is-mobile .view-header-title, 
 .minimal-folding.is-mobile .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding.is-mobile .allow-fold-lists.markdown-preview-view .workspace-leaf-content[data-type='markdown'] {
+.minimal-folding.is-mobile .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
   padding:0;
 }
 .is-mobile .titlebar {
@@ -5783,21 +5783,21 @@ body.is-mobile:not(.minimal-icons-off) .menu-item-icon svg {
   }
 
   /* experiment with scrolling tables 
-  .is-mobile .workspace-leaf-content[data-type='markdown'] > div {
+  .is-mobile .markdown-preview-sizer > div {
     overflow-x:auto;
   }
   .is-mobile .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
-  .is-mobile .workspace-leaf-content[data-type='markdown'] {
+  .is-mobile .markdown-preview-sizer {
     max-width:100%;
   }
-  .is-mobile .workspace-leaf-content[data-type='markdown'] > div > * {
+  .is-mobile .markdown-preview-sizer > div > * {
     max-width:var(--max-width);
     margin-left:auto;
     margin-right:auto;
     margin-block-end:0.25em;
     margin-block-start:0.75em;
   }
-  .is-mobile .workspace-leaf-content[data-type='markdown'] > div > table {
+  .is-mobile .markdown-preview-sizer > div > table {
     margin-top:20px;
     margin-left:6%;
     margin-right:6%;
