@@ -620,7 +620,8 @@ body:not(.zoom-off) .view-content .markdown-preview-view img {
   cursor:zoom-in;}
 
 body:not(.zoom-off) .view-content .markdown-preview-view img:active {
-  cursor:zoom-out;}
+  cursor:zoom-out;
+}
 
 body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
 body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
@@ -629,7 +630,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
   z-index:100;
   position:fixed;
   max-height:calc(100% + 1px);
-  max-width:calc(100% - 20px);
+  max-width:100%;
   height:calc(100% + 1px);
   width:100%;
   object-fit:contain;
@@ -649,7 +650,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view .image-
   transform:translateY(-50%);
   padding:0;
   margin:0 auto;
-  width:auto;
+  width:calc(100% - 20px);
   max-height:95vh;
   left:0;
   right:0;
@@ -4263,13 +4264,13 @@ audio::-webkit-media-controls-panel {
 
 /* Backlinks in Preview */
 
-.mod-root .workspace-leaf-content[data-type='markdown'] .nav-header {
+.mod-root .workspace-leaf-content[data-type='markdown']  .nav-header {
   border-top:1px solid var(--background-modifier-border);
   margin-top:3em;
   position:relative;
 }
 .mod-root .workspace-leaf-content[data-type='markdown'] .nav-buttons-container,
-.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane,
+.mod-root .workspace-leaf-content[data-type='markdown'].backlink-pane,
 .mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane .search-result-container,
 .mod-root .workspace-leaf-content[data-type='markdown'] .search-input-container,
 .mod-root .workspace-leaf-content[data-type='markdown'] .tree-item,
@@ -4378,6 +4379,11 @@ audio::-webkit-media-controls-panel {
 }
 .table-nowrap tbody > tr > td {
   white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+.row-highlight tbody > tr:hover td {
+  background-color:var(--background-table-rows);
 }
 .row-lines tbody > tr > td,
 .row-lines .table-view-table > tbody > tr > td {
@@ -4390,12 +4396,16 @@ audio::-webkit-media-controls-panel {
 }
 .table-small.markdown-preview-view .table-view-table > thead > tr > th,
 .table-small thead > tr > th,
-.table-small tbody > tr > td {
+.table-small tbody > tr > td,
+.table-small .table-view-table .tag,
+.table-small .table-view-table a.tag {
   font-size:85%;
 }
 .table-tiny.markdown-preview-view .table-view-table > thead > tr > th,
 .table-tiny thead > tr > th,
-.table-tiny tbody > tr > td {
+.table-tiny tbody > tr > td,
+.table-tiny .table-view-table .tag,
+.table-tiny .table-view-table a.tag {
   font-size:75%;
 }
 
