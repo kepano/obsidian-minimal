@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.1.8 by @kepano
+Minimal Obsidian 4.1.9 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -168,7 +168,7 @@ Disabled features */
   --font-title:1.1em;
 
   --h1:1.125em;
-  --h2:1em;
+  --h2:1.05em;
   --h3:1em;
   --h4:0.90em;
   --h5:0.85em;
@@ -280,7 +280,7 @@ body {
   --modal-border:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 18%));
 
   --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-l),0);
-  --background-translucent:rgba(255,255,255,0.85);
+  --background-translucent:rgba(255,255,255,0.9);
 
   --icon-color:var(--text-muted);
   --icon-hex:000;
@@ -336,7 +336,7 @@ body {
   --background-button:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
 
   --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-d),0);
-  --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-d),0.85);
+  --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-d),0.9);
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
 
@@ -360,7 +360,7 @@ body {
 .theme-light.minimal-light-tonal {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 4%));
-  --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-l),0.85);
+  --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-l),0.9);
   --background-table-rows:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 4%));
 }
 .theme-dark.minimal-dark-tonal {
@@ -530,7 +530,9 @@ Frameless mode on macOS only */
   transition:border-color 0s ease-in-out 0.1s, background-color 0s ease-in-out 0.2s;
 }
 .focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
-.focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
+.focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings,
+.focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .workspace-ribbon-collapse-btn,
+.focus-mode .workspace-ribbon.is-collapsed:hover .workspace-ribbon-collapse-btn {
   opacity:1;
   transition:opacity 0s ease-in-out;
 }
@@ -568,13 +570,9 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
   opacity:1;
   transition:opacity 0.25s ease-in-out;
 }
-.focus-mode .view-actions,
-.focus-mode .workspace-ribbon.mod-right.is-collapsed ~ .mod-root .view-actions,
-.focus-mode .workspace-ribbon.mod-left.is-collapsed ~ .mod-root .view-actions,
-.focus-mode .workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
-.focus-mode .workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
-  opacity:0;
-  transition:opacity 0.25s ease-in-out;
+
+body.focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
+  border-right:none;
 }
 
 /* --------------- */
@@ -594,6 +592,9 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
 }
 .theme-light span[src$="invertW"] img {
   filter: invert(1) hue-rotate(180deg);
+}
+span[src$="#round"] img {
+  border-radius:50%;
 }
 
 /* --------------- */
@@ -617,7 +618,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[ref
 body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
   cursor:zoom-out;
   display:block;
-  z-index:100;
+  z-index:200;
   position:fixed;
   max-height:calc(100% + 1px);
   max-width:100%;
@@ -642,6 +643,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view .image-
   margin:0 auto;
   width:calc(100% - 20px);
   max-height:95vh;
+  object-fit:contain;
   left:0;
   right:0;
   bottom:0;
@@ -928,14 +930,16 @@ body.hide-tokens .cm-s-obsidian pre.HyperMD-table-row > span {
 /* --------------- */
 /* Dataview plugin */
 
+body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table {
   font-size:calc(var(--font-adaptive-normal) - 1px);
 }
+body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
   font-weight:600;
   font-size:calc(var(--font-adaptive-normal) - 1px);
   color:var(--text-normal);
-  border-bottom:1px solid var(--text-faint);
+  border-bottom:1px solid var(--background-modifier-border);
   cursor:var(--cursor);
 }
 ul.dataview-ul {
@@ -944,6 +948,7 @@ ul.dataview-ul {
   margin-block-start:0.5em;
   margin-block-end:0.5em;
 }
+
 
 /* ----------------- */
 /* Dictionary plugin */
@@ -1512,6 +1517,7 @@ body, input, button,
   font-size:var(--font-title);
   font-weight:var(--bold-weight);
 }
+h1,
 .empty-state-title,
 .markdown-preview-view h1,
 .cm-s-obsidian .cm-header-1 {
@@ -2543,6 +2549,17 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   margin-left:10px;
 }
 
+
+/* Code execution blocks, e.g. Dataview */
+
+.markdown-source-view.mod-cm6 .cm-embed-block {
+  padding:0;
+  border:0;
+}
+.markdown-source-view.mod-cm6 .cm-embed-block:hover {
+  border:0;
+}
+
 /* Bullets */
 .mod-cm6 .HyperMD-list-line .list-bullet {
   color:var(--text-faint);
@@ -2562,23 +2579,33 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 /*
 .markdown-source-view.mod-cm6 .cm-selection {
   background-color:transparent;
-} */
-
+} 
+*/
 .markdown-source-view.mod-cm6 .cm-scroller {
-  padding-top:15px;
-  padding-left:calc((100% - var(--max-width)) / 2);
-  padding-right:calc((100% - var(--max-width)) / 2);
+  padding:15px 0 0 0;
 }
-.markdown-source-view.mod-cm6 .cm-editor {
-
-}
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer {
   max-width:var(--line-width-adaptive);
+  width:var(--max-width);
 }
-
+body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
+  max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
+}
 
 /* --------------- */
 /* Editor mode (Classic) */
+
+.theme-light .token.operator,
+.theme-light .token.entity,
+.theme-light .token.url,
+.theme-light .language-css .token.string,
+.theme-light .style .token.string,
+.theme-light .cm-operator,
+.theme-light .cm-string,
+.theme-light .cm-string-2,
+.theme-light .cm-link {
+  background-color:transparent;
+}
 
 /* Fancy cursor */
 .fancy-cursor .CodeMirror-cursor {
@@ -2655,14 +2682,15 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 
 /* Transcluded notes and embeds */
 
+.embed-strict .internal-embed .markdown-embed,
 .embed-inline .internal-embed .markdown-embed {
   padding:0;
   border:none;
 }
-.embed-inline .internal-embed .markdown-embed .markdown-embed-title {
+.embed-strict .internal-embed .markdown-embed .markdown-embed-title {
   display:none;
 }
-.embed-inline .internal-embed:not([src*="#^"]) .markdown-embed-link {
+.embed-strict .internal-embed:not([src*="#^"]) .markdown-embed-link {
   width:30px;
 }
 
@@ -2688,7 +2716,7 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 .internal-embed:not([src*="#^"]) .markdown-embed-link {
   right:0;
   width:100%;
-  cursor:var(--cursor);
+
 }
 .markdown-embed-link,
 .file-embed-link {
@@ -2750,7 +2778,7 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 /* Editor Mode Tables */
 .CodeMirror pre.HyperMD-table-row {
   font-family:var(--font-monospace);
-  font-size:calc(var(--font-adaptive-normal) - 1px);
+  font-size:calc(var(--font-adaptive-normal) - 2px);
 }
 
 /* Editor Mode Lists */
@@ -4321,27 +4349,46 @@ audio::-webkit-media-controls-panel {
 
 /* Tables */
 
+.markdown-source-view.mod-cm6 table {
+  border-collapse:collapse; 
+}
 .markdown-preview-view table {
   margin-block-start:1em;
 }
+
+.markdown-source-view.mod-cm6 td,
+.markdown-source-view.mod-cm6 th,
+.markdown-preview-view th,
+.markdown-preview-view td {
+  padding:4px 10px;
+}
+
+.markdown-source-view.mod-cm6 td,
 .markdown-preview-view td {
   font-size:calc(var(--font-adaptive-normal) - 2px);
 }
+
+.markdown-source-view.mod-cm6 th,
 .markdown-preview-view th {
   font-weight:var(--bold-weight);
   font-size:calc(var(--font-adaptive-normal) - 2px);
   text-align:left;
   border-top:none;
 }
+.markdown-source-view.mod-cm6 th:last-child,
+.markdown-source-view.mod-cm6 td:last-child,
 .markdown-preview-view th:last-child,
 .markdown-preview-view td:last-child {
   border-right:none;
 }
+.markdown-source-view.mod-cm6 th:first-child,
+.markdown-source-view.mod-cm6 td:first-child,
 .markdown-preview-view th:first-child,
 .markdown-preview-view td:first-child {
   border-left:none;
   padding-left:0;
 }
+.markdown-source-view.mod-cm6 tr:last-child td,
 .markdown-preview-view tr:last-child td {
   border-bottom:none;
 }
@@ -5977,7 +6024,8 @@ Icon replacement
 Thanks to Matthew Meyers and Chetachi Ezikeuzor
 -------------------------------------------------------------------------------- */
 
-.tree-item-self .collapse-icon {
+
+.is-mobile .tree-item-self .collapse-icon {
   width:20px;
 }
 
