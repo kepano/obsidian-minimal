@@ -1333,6 +1333,15 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul {
 }
 
 /* --------------- */
+/* Sortable plugin */
+
+/* Live preview */
+.markdown-source-view.mod-cm6 th {
+  background-repeat:no-repeat;
+  background-position:right;
+}
+
+/* --------------- */
 /* QuickAdd plugin */
 
 .modal .quickAddPrompt > h1 {
@@ -2526,14 +2535,12 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 .is-mobile.fancy-cursor .mod-cm6 .cm-line {
   caret-color:var(--text-accent);
 }
-
 .markdown-source-view.mod-cm6 hr {
   border-width:2px;
 }
 .mod-cm6 .ͼ1 .cm-line {
   padding:0 0 0 1px;
 }
-
 .markdown-source-view.mod-cm6 .HyperMD-quote {
   background-color:transparent;
   border-left:1px solid var(--quote-opening-modifier);
@@ -2582,11 +2589,12 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 } 
 */
 .markdown-source-view.mod-cm6 .cm-scroller {
-  padding:15px 0 0 0;
+  padding-top:15px;
+  padding-left:calc((100% - var(--max-width)) / 2);
+  padding-right:calc((100% - var(--max-width)) / 2);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer {
   max-width:var(--line-width-adaptive);
-  width:var(--max-width);
 }
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
   max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
@@ -4183,11 +4191,19 @@ a[href*="obsidian://search"] {
 .theme-dark a[href*="obsidian://search"] {
   background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'><path fill='white' stroke='white' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'></path></svg>");
 }
+
+/* Links and underline handling*/
 .minimal-theme:not(.links-int-on) a[href*="obsidian://"],
 .minimal-theme:not(.links-int-on) .markdown-preview-view .internal-link,
-.minimal-theme:not(.links-int-on) .external-link {
+.minimal-theme:not(.links-ext-on) .external-link,
+.minimal-theme:not(.links-ext-on) .cm-link .cm-underline,
+.minimal-theme:not(.links-ext-on) .cm-s-obsidian span.cm-url,
+.minimal-theme:not(.links-int-on) .cm-hmd-internal-link .cm-underline,
+.minimal-theme:not(.links-int-on) a.internal-link,
+.minimal-theme:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
   text-decoration:none;
 }
+.minimal-theme.links-int-on .is-live-preview .cm-hmd-internal-link,
 .minimal-theme.links-int-on .markdown-preview-view .internal-link,
 .markdown-preview-view .internal-link {
   text-decoration:underline;
@@ -4196,6 +4212,12 @@ a[href*="obsidian://search"] {
 .external-link {
   text-decoration:underline;
 }
+.is-live-preview.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.is-live-preview.cm-s-obsidian span.cm-url:hover,
+.is-live-preview.cm-s-obsidian span.cm-link:hover {
+  color:var(--text-accent-hover);
+}
+
 .footnotes-list {
   margin-block-start:-10px;
   padding-inline-start:20px;
