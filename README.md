@@ -79,7 +79,7 @@ Minimal is licensed under the MIT License which allows you to modify and redistr
 
 If you would like to distribute a fork of Minimal please keep my [Buy me a coffee](https://www.buymeacoffee.com/kepano) link present in your Readme. 
 
-Minimal is frequently updated to stay current with the latest version of Obsidian. To make it easy to stay current with the latest improvements, I recommend using [Github's fork feature](https://docs.github.com/en/get-started/quickstart/fork-a-repo) so that you can merge the latest changes into your fork. 
+Minimal is frequently updated to stay current with the latest version of Obsidian. To make it easy to stay current with the latest improvements, I recommend using [Github's fork feature](https://docs.github.com/en/get-started/quickstart/fork-a-repo) so that you can merge the latest changes into your fork. If you have any questions don't hesitate to reach me in the Obsidian Discord group. 
 
 ### Disclaimer
 
