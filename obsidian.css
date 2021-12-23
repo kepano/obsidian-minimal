@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.0 by @kepano
+Minimal Obsidian 4.2.0 beta 2 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -549,33 +549,34 @@ Frameless mode on macOS only */
 /* Requires Contextual Typography 2.2.1+ */
 
 .img-grid .markdown-preview-section .el-embed-image img:not([width]),
-.img-grid .markdown-preview-section video,
-.img-grid-ratio .markdown-preview-section .el-embed-image img:not([width]),
-.img-grid-ratio .markdown-preview-section video {
+.img-grid .markdown-preview-section video {
    width:100%;
 }
-.img-grid .markdown-preview-section > .el-embed-image > p,
-.img-grid-ratio .markdown-preview-section > .el-embed-image > p {
+
+.img-grid .markdown-preview-section > .el-embed-image > p {
    display:flex;
+   flex-wrap:wrap;
 }
-.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed,
-.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed {
+.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed {
    flex:1;
    margin-left:-0.5em;
    padding:0 0.5em 0rem 0.5em;
    margin-bottom:-0.5em;
 }
-.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child,
-.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child {
+.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child {
     margin-right:-0.5em;
 }
 .img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
    object-fit:cover;
    height:100%;
 }
-.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img {
+.img-grid .img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img,
+.img-grid.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img {
    object-fit:contain;
    height:100%;
+}
+.img-grid .markdown-preview-section > .el-embed-image > p > img {
+  margin-bottom:0.5em;
 }
 
 @media (max-width:400pt) {
@@ -588,6 +589,9 @@ Frameless mode on macOS only */
   body.contextual-typography.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child,
   body.contextual-typography.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child {
     margin-right:-0.25em;
+  }
+  .img-grid .markdown-preview-section > .el-embed-image > p > img {
+    margin-bottom:0.25em;
   }
   .markdown-preview-view .el-embed-image p {
     margin-block-start:0.25em;
@@ -1509,8 +1513,7 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul {
   font-weight:600;
 }
 
-/* --------------- */
-/* Sliding Panes aka Andy Mode */
+Sliding Panes aka Andy Mode */
 
 body.plugin-sliding-panes-rotate-header {
   --header-width:40px;
