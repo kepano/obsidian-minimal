@@ -39,10 +39,11 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 The following classes can be added on a per-file basis using the  `cssClasses` YAML tag. The classes are composable, so you can include more than one to combine effects.
 
 #### Image grids
+Turns consecutive images into columns. To make a new row, add an extra line break between images.
 
 | Class          | Description                                         |
 | -------------- | --------------------------------------------------- |
-| `img-grid` | Turns consecutive images into columns. To make a new row, add an extra line break between images. |
+| `img-grid` | Activate image grids |
 
 #### Line width control for tables, images and iframes
 
