@@ -3024,7 +3024,9 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
   mix-blend-mode:normal;
   box-shadow:0 0 0px 3px var(--text-accent);
 }
-
+.markdown-source-view.mod-cm5 .document-search-container {
+  position:fixed;
+}
 body:not(.is-mobile).borders-title .document-search-container {
   padding-top:6px;
 }
