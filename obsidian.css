@@ -1509,7 +1509,8 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul {
   font-weight:600;
 }
 
-Sliding Panes aka Andy Mode */
+/* --------------- */
+/* Sliding Panes aka Andy Mode */
 
 body.plugin-sliding-panes-rotate-header {
   --header-width:40px;
