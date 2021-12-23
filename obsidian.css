@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.1.9 by @kepano
+Minimal Obsidian 4.2.0 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -60,8 +60,10 @@ Plugins
   Calendar
   Checklist
   CodeMirror Options
+  Contextual Typography
   Dataview
   Dictionary
+  Embedded Note Titles
   Excalidraw
   Git
   Kanban
@@ -100,6 +102,8 @@ Desktop Styling
   Graphs
   Settings
   Scroll bars
+
+Layout Control
 
 Mobile Styling
 
@@ -241,6 +245,7 @@ body {
   --font-adaptive-smaller:var(--font-smaller);
   --font-adaptive-smallest:var(--font-smallest);
   --line-width-adaptive:var(--line-width);
+  --line-width-wide:calc(var(--line-width) + 12.5%);
 }
 
 /* Phone font sizes */
@@ -540,8 +545,58 @@ Frameless mode on macOS only */
 }
 
 /* --------------- */
+/* Image grid */
+/* Requires Contextual Typography 2.2.1+ */
+
+.img-grid .markdown-preview-section .el-embed-image img:not([width]),
+.img-grid .markdown-preview-section video,
+.img-grid-ratio .markdown-preview-section .el-embed-image img:not([width]),
+.img-grid-ratio .markdown-preview-section video {
+   width:100%;
+}
+.img-grid .markdown-preview-section > .el-embed-image > p,
+.img-grid-ratio .markdown-preview-section > .el-embed-image > p {
+   display:flex;
+}
+.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed,
+.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed {
+   flex:1;
+   margin-left:-0.5em;
+   padding:0 0.5em 0rem 0.5em;
+   margin-bottom:-0.5em;
+}
+.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child,
+.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child {
+    margin-right:-0.5em;
+}
+.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
+   object-fit:cover;
+   height:100%;
+}
+.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img {
+   object-fit:contain;
+   height:100%;
+}
+
+@media (max-width:400pt) {
+  body.contextual-typography.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed,
+  body.contextual-typography.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed {
+    margin-left:-0.25em;
+    padding:0 0.25em 0rem 0.25em;
+    margin-bottom:-0.25em;
+  }
+  body.contextual-typography.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child,
+  body.contextual-typography.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child {
+    margin-right:-0.25em;
+  }
+  .markdown-preview-view .el-embed-image p {
+    margin-block-start:0.25em;
+    margin-block-end:0.25em;
+  }
+}
+
+/* --------------- */
 /* Focus mode */
-/* When the left sidebar is collapsed */
 
 .workspace-ribbon.mod-left {
   transition:border-color 0s ease-in-out 0s, background-color 0s ease-in-out 0s;
@@ -552,10 +607,10 @@ Frameless mode on macOS only */
   background-color:transparent;
   transition:border-color 0s ease-in-out 0.1s, background-color 0s ease-in-out 0.2s;
 }
-.focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
-.focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings,
-.focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .workspace-ribbon-collapse-btn,
-.focus-mode .workspace-ribbon.is-collapsed:hover .workspace-ribbon-collapse-btn {
+.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
+.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings,
+.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .workspace-ribbon-collapse-btn,
+.minimal-focus-mode .workspace-ribbon.is-collapsed:hover .workspace-ribbon-collapse-btn {
   opacity:1;
   transition:opacity 0s ease-in-out;
 }
@@ -587,16 +642,46 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
   margin-left:-1px;
 }
 .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-actions,
-.focus-mode .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-header:hover .view-actions,
+.minimal-focus-mode .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-header:hover .view-actions,
 .workspace-ribbon.mod-left.is-collapsed ~ .mod-root .view-header:hover .view-actions,
 .mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions {
   opacity:1;
   transition:opacity 0.25s ease-in-out;
 }
-
-body.focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
+body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
   border-right:none;
 }
+.minimal-focus-mode .status-bar {
+  opacity:0;
+}
+.minimal-focus-mode .status-bar:hover {
+  opacity:1;
+  transition:opacity 0.2s ease-in-out;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+  opacity:0;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  transition:opacity 0.2s ease-in-out;
+  background-color:var(--background-primary);
+  z-index:9999;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header:hover {
+  opacity:1;
+  transition:opacity 0.2s ease-in-out;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content {
+  height:100%;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
+  margin-top:25px;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
+  margin-top:15px;
+}
+
 
 /* --------------- */
 /* Dark mode images  */
@@ -949,6 +1034,40 @@ body.hide-tokens .cm-s-obsidian pre.HyperMD-table-row > span {
   border-color:var(--background-modifier-border);
 }
 
+/* --------------- */
+/* Contextual Typography */
+
+/* Layout Control */
+.el-hr hr {
+  margin:1rem 0;
+}
+.el-h1,
+.el-h2 {
+  margin-top:0.75rem;
+}
+.el-hr + .el-h1,
+.el-hr + .el-h2,
+.el-h1 + .el-h1,
+.el-h1 + .el-h2,
+.el-h2 + .el-h2 {
+  margin-top:0rem;
+}
+.el-ol + .el-lang-dataview,
+.el-ul + .el-lang-dataview,
+.el-p:not(.el-lang-dataview) + .el-lang-dataview,
+.el-ol + .el-table,
+.el-ul + .el-table,
+.el-p + .el-table,
+.el-lang-dataview + .el-p {
+  margin-top:0.5rem;
+}
+.el-iframe + .el-p,
+.el-p + .el-iframe,
+.el-p:not(.el-embed-image) + .el-embed-image,
+.el-embed-image + .el-p:not(.el-embed-image) {
+  margin-top:1rem;
+}
+
 
 /* --------------- */
 /* Dataview plugin */
@@ -971,7 +1090,6 @@ ul.dataview-ul {
   margin-block-start:0.5em;
   margin-block-end:0.5em;
 }
-
 
 /* ----------------- */
 /* Dictionary plugin */
@@ -1107,6 +1225,24 @@ body .excalidraw label.ToolIcon {
   background-color:transparent;
 }
 
+/* --------------- */
+/* Embedded Note Titles plugin */
+
+.embedded-note-titles .markdown-preview-view > h1 {
+  /* ...preview mode styles... */
+}
+
+.embedded-note-titles .is-readable-line-width.markdown-preview-view > h1 {
+  /* ...preview mode styles with readable line width enabled... */
+}
+
+.embedded-note-titles .CodeMirror-scroll > h1 {
+  /* ...edit mode styles... */
+}
+
+.embedded-note-titles .is-readable-line-width .CodeMirror-scroll > h1 {
+  /* ...edit mode styles with readable line width enabled... */
+}
 
 /* ----------- */
 /* Git plugin */
@@ -1326,7 +1462,6 @@ body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-
     margin-bottom:1rem !important;
   }
 }
-
 
 /* --------------- */
 /* Outliner plugin */
@@ -2141,7 +2276,6 @@ body .sync-history-content-container textarea.sync-history-content:focus {
 .modal.mod-settings .vertical-tab-content > h3:first-child {
   margin-top:0;
 }
-
 .community-plugin-search-summary,
 .setting-item-description,
 .community-plugin-item .community-plugin-author,
@@ -2149,6 +2283,10 @@ body .sync-history-content-container textarea.sync-history-content:focus {
 .community-plugin-item .community-plugin-desc {
   font-size:var(--font-settings-small);
   line-height:1.3;
+  font-weight:400;
+}
+.style-settings-collapse-indicator {
+  margin-right:6px;
 }
 .modal .vertical-tab-nav-item {
   font-size:var(--font-small);
@@ -2512,8 +2650,9 @@ body.full-borders .side-dock-ribbon {
   margin:0 auto;
 }
 .is-mobile .markdown-source-view.mod-cm6 .cm-scroller {
-  padding-left:4%;
-  padding-right:4%;
+}
+.is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
+  padding-right:0;
 }
 
 /* With readable line width */
@@ -2545,7 +2684,6 @@ body.full-borders .side-dock-ribbon {
 /* --------------- */
 /* Editor mode (CodeMirror 6 Live Preview) */
 
-
 /* Fancy cursor */
 body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-line {
   caret-color:transparent;
@@ -2553,7 +2691,7 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-line {
 body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   width:0;
   border:none;
-  border-right:2px solid var(--text-accent);
+  border-left:2px solid var(--text-accent);
 }
 .is-mobile.fancy-cursor .mod-cm6 .cm-line {
   caret-color:var(--text-accent);
@@ -2581,7 +2719,14 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 
 
 /* Code execution blocks, e.g. Dataview */
-
+.markdown-source-view.mod-cm6 .edit-block-button {
+  cursor:var(--cursor);
+  color:var(--text-muted);
+  background-color:var(--background-tertiary);
+  top:0;
+  right:0;
+  transition: opacity 200ms;
+}
 .markdown-source-view.mod-cm6 .cm-embed-block {
   padding:0;
   border:0;
@@ -2596,21 +2741,28 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   font-size:1.4em;
   line-height:0;
 }
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  background-color:transparent;
+  border-left-width:1px;
+}
 
-
+.markdown-source-view.mod-cm6 .cm-gutterElement {
+  padding-top: 0.3em;
+  align-items: baseline;
+}
+.cm-gutterElement .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter {
   opacity:0;
 }
+.cm-gutterElement .collapse-indicator:hover,
+.cm-gutterElement .is-collapsed .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
 .markdown-source-view.mod-cm6 .fold-gutter:hover {
   opacity:1;
 }
-
-/*
 .markdown-source-view.mod-cm6 .cm-selection {
   background-color:transparent;
 } 
-*/
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top:15px;
   padding-left:calc((100% - var(--max-width)) / 2);
@@ -2622,6 +2774,8 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
   max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
 }
+
+
 
 /* --------------- */
 /* Editor mode (Classic) */
@@ -3547,7 +3701,7 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   padding-right:20px;
 }
 .markdown-preview-view .heading-collapse-indicator.collapse-indicator {
-  margin-left:-25px;
+  margin-left:-28px;
   padding-right:7px 8px 7px 0;
 }
 .markdown-preview-view .collapse-indicator {
@@ -5092,6 +5246,210 @@ body:not(.minimal-icons) .setting-hotkey-icon.setting-delete-hotkey svg {
   background-color:var(--background-modifier-border-focus);
 }
 
+/* --------------------------------------------------------------------------------
+Layout Control
+Requires Contextual Typography 2.2.1+
+-------------------------------------------------------------------------------- */
+
+/* Switch to flexbox */
+.contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer {
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  max-width:100%;
+  padding-left:0;
+}
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-embed-content .markdown-preview-sizer > div,
+.contextual-typography.minimal-folding .allow-fold-headings.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer,
+.contextual-typography.minimal-folding .allow-fold-lists.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer {
+  padding:0;
+}
+.contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer > div {
+  width:var(--max-width);
+  margin-left:auto;
+  margin-right:auto;
+}
+.contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  align-items:center;
+  padding-left:0;
+}
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  max-width:var(--max-width);
+  width:var(--line-width-adaptive);
+  overflow:hidden;
+}
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer > div {
+  max-width:100%;
+}
+.contextual-typography .markdown-preview-view p,
+.contextual-typography .markdown-preview-view ol,
+.contextual-typography .markdown-preview-view ul {
+  margin-block-start:0.5em;
+  margin-block-end:0.5em;
+}
+.contextual-typography .markdown-preview-view ol ol,
+.contextual-typography .markdown-preview-view ol ul,
+.contextual-typography .markdown-preview-view ul ul {
+  margin-block-start:0em;
+  margin-block-end:0em;
+}
+.contextual-typography .markdown-preview-view h1,
+.contextual-typography .markdown-preview-view h2,
+.contextual-typography .markdown-preview-view h3,
+.contextual-typography .markdown-preview-view h4,
+.contextual-typography .markdown-preview-view h5,
+.contextual-typography .markdown-preview-view h6 {
+  margin-block-start:0.4em;
+  margin-block-end:0.4em;
+}
+.contextual-typography .markdown-preview-view .markdown-preview-sizer > .el-table,
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
+.contextual-typography .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+  width:100%;
+  max-width:100%;
+  overflow-x:scroll;
+}
+.el-table,
+.el-lang-dataview .dataview.list-view-ul,
+.el-lang-dataview .dataview.dataview-error {
+  max-width:var(--max-width);
+  width:var(--line-width-adaptive);
+  margin-left:auto;
+  margin-right:auto;
+}
+.contextual-typography.minimal-folding:not(.is-mobile) .list-view-ul,
+.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
+  width:calc(var(--line-width-adaptive) - var(--folding-offset));
+}
+.el-table table,
+.el-lang-dataview .dataview.table-view-table {
+  width:var(--max-width);
+  max-width:var(--line-width-adaptive);
+  margin:0 auto 0.5rem;
+}
+.markdown-embed .el-table table,
+.markdown-embed .el-lang-dataview .dataview.table-view-table {
+  width:100%;
+}
+
+/* Folding offset */
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  padding-left:var(--folding-offset);
+}
+.contextual-typography.minimal-folding:not(.is-mobile):not(.table-100):not(.table-wide):not(.table-max) .el-table table,
+.contextual-typography.minimal-folding:not(.is-mobile):not(.table-100):not(.table-wide):not(.table-max) .el-lang-dataview .dataview.table-view-table {
+  max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
+}
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-100 .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-100 .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-wide .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-wide .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-max .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-max .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.iframe-100 .markdown-preview-sizer > .el-iframe,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.iframe-max .markdown-preview-sizer > .el-iframe,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.img-max .markdown-preview-sizer > .el-embed-image,
+.contextual-typography.minimal-folding:not(.is-mobile).table-100 .markdown-preview-view .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile).table-100 .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile).table-max .markdown-preview-view .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile).table-max .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile).table-wide .markdown-preview-view .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile).table-wide .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile).iframe-100 .markdown-preview-view .markdown-preview-sizer > .el-iframe,
+.contextual-typography.minimal-folding:not(.is-mobile).iframe-wide .markdown-preview-view .markdown-preview-sizer > .el-iframe,
+.contextual-typography.minimal-folding:not(.is-mobile).img-100 .markdown-preview-view .markdown-preview-sizer > .el-embed-image,
+.contextual-typography.minimal-folding:not(.is-mobile).img-max .markdown-preview-view .markdown-preview-sizer > .el-embed-image,
+.contextual-typography.minimal-folding:not(.is-mobile).img-wide .markdown-preview-view .markdown-preview-sizer > .el-embed-image {
+  padding-left:0;
+}
+
+/* Dataview and tables */
+.table-100 .el-table table,
+.table-100 .el-lang-dataview .dataview.table-view-table {
+  max-width:100%;
+  width:100%;
+}
+.markdown-preview-view.table-100 .el-table table,
+.markdown-preview-view.table-100 .el-lang-dataview .dataview.table-view-table {
+  max-width:100% !important;
+  width:100% !important;
+}
+.table-max .el-table table,
+.table-max .el-lang-dataview .dataview.table-view-table {
+  max-width:100%;
+}
+.markdown-preview-view.table-max .el-table table,
+.markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table {
+  max-width:100% !important;
+}
+.table-wide .markdown-preview-view.is-readable-line-width .el-table table,
+.markdown-preview-view.is-readable-line-width.table-wide .el-table table,
+.table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
+.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
+  max-width:var(--line-width-wide);
+}
+.table-100 .el-table table th:first-child,
+.table-100 .el-table table td:first-child,
+.table-100 .el-lang-dataview .dataview.table-view-table th:first-child,
+.table-100 .el-lang-dataview .dataview.table-view-table td:first-child {
+  padding-left:20px;
+}
+.table-100 .el-table table th:last-child,
+.table-100 .el-table table td:last-child,
+.table-100 .el-lang-dataview .dataview.table-view-table th:last-child,
+.table-100 .el-lang-dataview .dataview.table-view-table td:last-child {
+  padding-right:20px;
+}
+
+/* Images and iframes */
+.contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .markdown-preview-view.is-readable-line-width.iframe-max .markdown-preview-sizer > .el-iframe,
+.contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
+.contextual-typography .markdown-preview-view.is-readable-line-width.img-max .markdown-preview-sizer > .el-embed-image {
+  width:100%;
+}
+.contextual-typography.iframe-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .markdown-preview-view.is-readable-line-width.iframe-wide .markdown-preview-sizer > .el-iframe,
+.contextual-typography.img-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
+.contextual-typography .markdown-preview-view.is-readable-line-width.img-wide .markdown-preview-sizer > .el-embed-image {
+  width:var(--line-width-wide);
+}
+.contextual-typography.iframe-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .markdown-preview-view.iframe-100 .markdown-preview-sizer > .el-iframe,
+.contextual-typography.img-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
+.contextual-typography .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image {
+  width:100%;
+  max-width:100%;
+}
+
+/* Mobile */
+@media (max-width:400pt) {
+  .markdown-preview-view .el-table th:first-child,
+  .markdown-preview-view .el-table td:first-child,
+  .markdown-preview-view .el-lang-dataview th:first-child,
+  .markdown-preview-view .el-lang-dataview td:first-child {
+    padding-left:6vw;
+  }
+  .markdown-preview-view .el-table th:last-child,
+  .markdown-preview-view .el-table td:last-child,
+  .markdown-preview-view .el-lang-dataview th:last-child,
+  .markdown-preview-view .el-lang-dataview td:last-child {
+    padding-right:6vw;
+  }
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+    padding-left:0;
+    padding-right:0;
+  }
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
+  .markdown-preview-view .table-view-table table,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+    width:100%;
+  }
+}
+
 
 
 
@@ -5451,7 +5809,7 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
 .is-ios .mod-root .workspace-split.mod-horizontal .workspace-leaf:not(:first-of-type) {
   padding-top:0;
 }
-.is-mobile.focus-mode .view-actions {
+.is-mobile.minimal-focus-mode .view-actions {
   opacity:1;
 }
 .is-mobile .workspace-drawer-tab-options {
@@ -6219,6 +6577,7 @@ body:not(.minimal-icons-off) svg.play-audio-glyph,
 body:not(.minimal-icons-off) svg.plus-minus-glyph,
 body:not(.minimal-icons-off) svg.presentation-glyph,
 body:not(.minimal-icons-off) svg.question-mark-glyph,
+body:not(.minimal-icons-off) svg.reading-glasses,
 body:not(.minimal-icons-off) svg.restore-file-glyph,
 body:not(.minimal-icons-off) svg.scissors-glyph,
 body:not(.minimal-icons-off) svg.scissors,
@@ -6320,6 +6679,7 @@ body:not(.minimal-icons-off) svg.price-tag-glyph > path,
 body:not(.minimal-icons-off) svg.quote-glyph > path,
 body:not(.minimal-icons-off) svg.redo-glyph > path,
 body:not(.minimal-icons-off) svg.reset > path,
+body:not(.minimal-icons-off) svg.reading-glasses > path,
 body:not(.minimal-icons-off) svg.right-arrow-with-tail > path,
 body:not(.minimal-icons-off) svg.right-arrow > path,
 body:not(.minimal-icons-off) svg.right-chevron-glyph > path,
@@ -6568,6 +6928,7 @@ body:not(.minimal-icons-off) svg.left-arrow {
 body:not(.minimal-icons-off) svg.left-chevron-glyph {
   -webkit-mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M58.079 20.579L28.663 50l29.417 29.421l8.842 -8.842L46.338 50l20.583 -20.579z"></path></svg>');
 }
+body:not(.minimal-icons-off) svg.reading-glasses,
 body:not(.minimal-icons-off) svg.lines-of-text {
   -webkit-mask-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M83.333 12.5H16.667c-4.596 0 -8.333 3.738 -8.333 8.333v58.333c0 4.596 3.738 8.333 8.333 8.333h66.667c4.596 0 8.333 -3.738 8.333 -8.333V20.833c0 -4.596 -3.738 -8.333 -8.333 -8.333zM16.667 79.167V20.833h66.667l0.008 58.333H16.667z M25 29.167h50v8.333H25zm0 16.667h50v8.333H25zm0 16.667h25v8.333H25z"></path></svg>');
 }
@@ -6990,9 +7351,9 @@ settings:
         type: class-toggle
         default:  false
     -
-        id: focus-mode
-        title: Hide action buttons in focus mode
-        description: When sidebars are collapsed hide action buttons, accessible by hovering
+        id: minimal-focus-mode
+        title: Focus mode
+        description: Hide UI when a single file is open. UI is accessible via hover.
         type: class-toggle
     -
         id: borders-none
@@ -7025,16 +7386,6 @@ settings:
         description: Show vertical lines that connect related bullet points and task lists
         type: class-toggle
     -
-        id: full-width-media
-        title: Maximize media
-        description: Images and videos fill the width of the line
-        type: class-toggle
-    -
-        id: zoom-off
-        title: Disable image zoom
-        description: Turns off click/hold to zoom images
-        type: class-toggle
-    -
         id: links-int-on
         title: Underline internal links
         description: Show underlines on internal links
@@ -7046,6 +7397,135 @@ settings:
         description: Show underlines on external links
         type: class-toggle
         default:  true
+    -
+        id: full-width-media
+        title: Maximize media
+        description: Small images and videos fill the width of the line
+        type: class-toggle
+    -
+        id: zoom-off
+        title: Disable image zoom
+        description: Turns off click/hold to zoom images
+        type: class-toggle
+    -
+        id: layout
+        title: Layout
+        type: heading
+        level: 2
+        collapsed: true
+        description: Requires Contextual Typography plugin. These options can also be defined on a per-file basis using YAML, see documentation for details.
+    -
+        id: img-grid
+        title: Image grids
+        description: Turns consecutive images into columns. To make a new row, add an extra line break between images.
+        type: class-toggle
+    -
+        id: image-width
+        title: Image width
+        description: Default width for images and image grids
+        type: class-select
+        allowEmpty: false
+        default: img-default-width
+        options:
+            - 
+                label: Default
+                value: img-default-width
+            - 
+                label: Wide line width
+                value: img-wide
+            - 
+                label: Maximum line width
+                value: img-max
+            - 
+                label: 100% pane width
+                value: img-100
+    -
+        id: table-width
+        title: Table width
+        description: Default width for tables and Dataview elements
+        type: class-select
+        allowEmpty: false
+        default: table-default-width
+        options:
+            - 
+                label: Default
+                value: table-default-width
+            - 
+                label: Wide line width
+                value: table-wide
+            - 
+                label: Maximum line width
+                value: table-max
+            - 
+                label: 100% pane width
+                value: table-100
+    -
+        id: iframe-width
+        title: Iframe width
+        description: Default width for iframe elements
+        type: class-select
+        allowEmpty: false
+        default: iframe-default-width
+        options:
+            - 
+                label: Default
+                value: iframe-default-width
+            - 
+                label: Wide line width
+                value: iframe-wide
+            - 
+                label: Maximum line width
+                value: iframe-max
+            - 
+                label: 100% pane width
+                value: iframe-100
+    -
+        id: typography
+        title: Typography
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: font-normal
+        title: Body font size
+        description: Font size in px of the main text
+        type: variable-number
+        default: 16
+        format: px
+    - 
+        id: font-small
+        title: Sidebar font size
+        description: Font size in px of the sidebar and small text
+        type: variable-number
+        default: 13
+        format: px
+    - 
+        id: line-height
+        title: Body line height
+        description: Line height of the main text
+        type: variable-number
+        default: 1.5
+    -
+        id: line-width
+        title: Normal line width
+        description: Number of characters per line
+        type: variable-number
+        default: 40
+        format: rem
+    - 
+        id: line-width-wide
+        title: Wide line width
+        description: Number of characters per line for wide elements
+        type: variable-number
+        default: 50
+        format: rem
+    -
+        id: max-width
+        title: Maximum line width %
+        description: Percentage of space inside a pane that a line can fill.
+        type: variable-number
+        default: 88
+        format: '%'
     -
         id: fonts
         title: Fonts
@@ -7076,46 +7556,6 @@ settings:
         description: Used for buttons, menus and sidebar
         type: variable-text
         default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
-    -
-        id: custom-fonts
-        title: Typography
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: font-normal
-        title: Body font size
-        description: Font size in px of the main text
-        type: variable-number
-        default: 16
-        format: px
-    - 
-        id: font-small
-        title: Sidebar font size
-        description: Font size in px of the sidebar and small text
-        type: variable-number
-        default: 13
-        format: px
-    - 
-        id: line-height
-        title: Body line height
-        description: Line height of the main text
-        type: variable-number
-        default: 1.5
-    - 
-        id: line-width
-        title: Normal line width
-        description: Number of characters per line
-        type: variable-number
-        default: 40
-        format: rem
-    -
-        id: max-width
-        title: Maximum line width
-        description: Percentage of space inside a pane that a line can fill. Recommended values between 80 to 100
-        type: variable-number
-        default: 88
-        format: '%'
     -
         id: headings
         title: Headings
