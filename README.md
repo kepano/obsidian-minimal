@@ -36,7 +36,7 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 
 ### CSS helper classes
 
-The following classes can be added on a per-file basis using the  `cssClasses` YAML tag. The classes are composable, so you can include more than one to combine effects.
+The following classes can be added on a per-file basis using the `cssClasses` [YAML front matter key](https://help.obsidian.md/Advanced+topics/YAML+front+matter). The classes are composable, so you can include more than one to combine effects.
 
 #### Image grids
 Turns consecutive images into columns. To make a new row, add an extra line break between images.
