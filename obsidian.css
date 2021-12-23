@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.0 beta 2 by @kepano
+Minimal Obsidian 4.2.1 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1513,7 +1513,8 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul {
   font-weight:600;
 }
 
-Sliding Panes aka Andy Mode */
+/* --------------- */
+/* Sliding Panes aka Andy Mode */
 
 body.plugin-sliding-panes-rotate-header {
   --header-width:40px;
@@ -2764,9 +2765,9 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 .markdown-source-view.mod-cm6 .fold-gutter:hover {
   opacity:1;
 }
-.markdown-source-view.mod-cm6 .cm-selection {
+.markdown-source-view.mod-cm6  .cm-line:not(.HyperMD-codeblock) .cm-selection {
   background-color:transparent;
-} 
+}
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top:15px;
   padding-left:calc((100% - var(--max-width)) / 2);
