@@ -38,6 +38,27 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 
 The following classes can be added on a per-file basis using the  `cssClasses` YAML tag. The classes are composable, so you can include more than one to combine effects.
 
+#### Image grids
+
+| Class          | Description                                         |
+| -------------- | --------------------------------------------------- |
+| `img-grid` | Turns consecutive images into columns. To make a new row, add an extra line break between images. |
+
+#### Line width control for tables, images and iframes
+
+| Class                                   | Description                           |
+| --------------------------------------- | ------------------------------------- |
+| `table-100`, `img-100`, `iframe-100`    | Fill 100% of the pane width           |
+| `table-max`, `img-max`, `iframe-max`    | Fill the max line width (default 88%) |
+| `table-wide`, `img-wide`, `iframe-wide` | Fill the wide line width              |
+
+#### Embeds and transclusions
+
+| Class          | Description                                         |
+| -------------- | --------------------------------------------------- |
+| `embed-strict` | Transclusions appear seamlessly in the flow of text |
+
+
 #### Tables and Dataview
 
 | Class          | Description                                         |
