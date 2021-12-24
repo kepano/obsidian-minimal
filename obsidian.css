@@ -566,20 +566,25 @@ div:not(.el-embed-image) + .el-embed-image {
   display:grid;
   grid-column-gap:0.5rem;
   grid-row-gap:0;
-  grid-template-columns:repeat(auto-fit, minmax(10px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(0, 1fr));
 }
 .img-grid .markdown-preview-section > .el-embed-image > p > br {
    display:none;
 }
-.img-grid .markdown-preview-section > .el-embed-image > p > img,
+.img-grid .markdown-preview-section > .el-embed-image > p > img {
+  object-fit:cover;
+  align-self:stretch;
+}
 .img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
-   object-fit:cover;
-   height:100%;
+  object-fit:cover;
+  height:100%;
+  max-height:85vh;
 }
 .img-grid .img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img,
 .img-grid.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img {
    object-fit:contain;
    height:100%;
+   align-self:center;
 }
 
 @media (max-width:400pt) {
@@ -2852,8 +2857,10 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
 .cm-s-obsidian span.cm-url:hover {
   color:var(--text-accent);
 }
+span.cm-image-marker,
+.cm-s-obsidian span.cm-formatting-link,
 .mod-cm5 .cm-s-obsidian span.cm-link {
-  color:var(--text-muted);
+  color:var(--text-faint);
 }
 .cm-s-obsidian .cm-active .cm-formatting-link + span.cm-link {
   color:var(--text-muted);
