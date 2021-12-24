@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.2 by @kepano
+Minimal Obsidian 4.2.3 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -5317,6 +5317,8 @@ Requires Contextual Typography 2.2.1+
   overflow-x:scroll;
 }
 .el-table,
+.el-lang-dataview .block-language-dataview > h4,
+.el-lang-dataview .dataview.result-group,
 .el-lang-dataview .dataview.list-view-ul,
 .el-lang-dataview .dataview.dataview-error {
   max-width:var(--max-width);
@@ -5340,6 +5342,8 @@ Requires Contextual Typography 2.2.1+
 }
 
 /* Folding offset */
+.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .block-language-dataview > h4,
+.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview:not(.table-view-table),
 .contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   padding-left:var(--folding-offset);
 }
