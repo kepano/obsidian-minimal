@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.3 by @kepano
+Minimal Obsidian 4.2.4 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -2738,10 +2738,12 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 }
 
 /* Bullets */
-.mod-cm6 .HyperMD-list-line .list-bullet {
+.mod-cm6 .HyperMD-list-line .list-bullet,
+.mod-cm6 span.list-bullet {
   color:var(--text-faint);
   font-size:1.4em;
   line-height:0;
+  vertical-align:-0.1em;
 }
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   background-color:transparent;
@@ -2770,7 +2772,7 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   padding-left:calc((100% - var(--max-width)) / 2);
   padding-right:calc((100% - var(--max-width)) / 2);
 }
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer {
+body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
   max-width:var(--line-width-adaptive);
 }
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
@@ -3306,9 +3308,13 @@ input[type=checkbox]:checked {
 .markdown-preview-section > .contains-task-list {
   padding-bottom:0.5em;
 }
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
 .markdown-preview-view ul > li.task-list-item.is-checked {
   text-decoration:none;
   color:var(--text-normal);
+}
+.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) .task-list-item-checkbox {
+  margin-left:-4px;
 }
 .task-list-item-checkbox,
 .markdown-preview-view .task-list-item-checkbox {
@@ -3650,6 +3656,40 @@ body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
   border-right:1px solid var(--background-modifier-border);
   height:100%;
 }
+
+/* Relationship lines in Live Preview */
+
+:root {
+  --indent-font-family: var(--text-editor);
+  --indent-font-size: var(--font-adaptive-normal);
+}
+
+body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line {
+  overflow: hidden;
+}
+body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+  position: relative;
+  font-family: var(--indent-font-family) !important;
+  font-size: var(--indent-font-size) !important;
+}
+body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+  content: '';
+  font-family: var(--indent-font-family) !important;
+  font-size: var(--indent-font-size) !important;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: -1.6em;
+  padding-bottom: 999em;
+  background:linear-gradient(
+    to right,
+    var(--background-modifier-border) 1px,
+    transparent 1px)
+    repeat;
+  background-size:1.8ch 1px;
+  left:3.5px;
+}
+
 
 /* --------------- */
 /* Folding offset */
