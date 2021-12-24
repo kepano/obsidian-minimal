@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.1 by @kepano
+Minimal Obsidian 4.2.2 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -548,24 +548,30 @@ Frameless mode on macOS only */
 /* Image grid */
 /* Requires Contextual Typography 2.2.1+ */
 
+div:not(.el-embed-image) + .el-embed-image {
+  margin-top:1rem;
+}
+.el-embed-image {
+  margin-top:0.5rem;
+}
+.contextual-typography .markdown-preview-section > .el-embed-image > p {
+  margin-block-start:0;
+  margin-block-end:0;
+}
 .img-grid .markdown-preview-section .el-embed-image img:not([width]),
 .img-grid .markdown-preview-section video {
    width:100%;
 }
-
 .img-grid .markdown-preview-section > .el-embed-image > p {
-   display:flex;
-   flex-wrap:wrap;
+  display:grid;
+  grid-column-gap:0.5rem;
+  grid-row-gap:0;
+  grid-template-columns:repeat(auto-fit, minmax(10px, 1fr));
 }
-.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed {
-   flex:1;
-   margin-left:-0.5em;
-   padding:0 0.5em 0rem 0.5em;
-   margin-bottom:-0.5em;
+.img-grid .markdown-preview-section > .el-embed-image > p > br {
+   display:none;
 }
-.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child {
-    margin-right:-0.5em;
-}
+.img-grid .markdown-preview-section > .el-embed-image > p > img,
 .img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
    object-fit:cover;
    height:100%;
@@ -575,27 +581,13 @@ Frameless mode on macOS only */
    object-fit:contain;
    height:100%;
 }
-.img-grid .markdown-preview-section > .el-embed-image > p > img {
-  margin-bottom:0.5em;
-}
 
 @media (max-width:400pt) {
-  body.contextual-typography.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed,
-  body.contextual-typography.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed {
-    margin-left:-0.25em;
-    padding:0 0.25em 0rem 0.25em;
-    margin-bottom:-0.25em;
+  .el-embed-image {
+    margin-top:0.25rem;
   }
-  body.contextual-typography.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child,
-  body.contextual-typography.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed:last-child {
-    margin-right:-0.25em;
-  }
-  .img-grid .markdown-preview-section > .el-embed-image > p > img {
-    margin-bottom:0.25em;
-  }
-  .markdown-preview-view .el-embed-image p {
-    margin-block-start:0.25em;
-    margin-block-end:0.25em;
+  .img-grid .markdown-preview-section > .el-embed-image > p {
+    grid-column-gap:0.25rem;
   }
 }
 
