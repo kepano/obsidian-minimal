@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.4 by @kepano
+Minimal Obsidian 4.2.5 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -682,7 +682,11 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
 .minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
   margin-top:15px;
 }
-
+/*
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .document-search-container {
+  top:0px;
+  z-index:99999;
+} */
 
 /* --------------- */
 /* Dark mode images  */
@@ -2695,7 +2699,10 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   border:none;
   border-left:2px solid var(--text-accent);
 }
-.is-mobile.fancy-cursor .mod-cm6 .cm-line {
+body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
+  margin-left:1px;
+}
+.is-mobile.fancy-cursor .mod-cm6 .cm-line .mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) .task-list-item-checkbox{
   caret-color:var(--text-accent);
 }
 .markdown-source-view.mod-cm6 hr {
@@ -2799,7 +2806,7 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
 /* Fancy cursor */
 .fancy-cursor .CodeMirror-cursor {
   border:none;
-  border-right:2px solid var(--text-accent);
+  border-left:2px solid var(--text-accent);
 }
 .cm-fat-cursor .CodeMirror-cursor { 
   background-color:var(--text-accent); 
@@ -2864,6 +2871,7 @@ span.cm-image-marker,
 .mod-cm5 .cm-s-obsidian span.cm-link {
   color:var(--text-faint);
 }
+
 .cm-s-obsidian .cm-active .cm-formatting-link + span.cm-link {
   color:var(--text-muted);
 }
@@ -3313,7 +3321,7 @@ input[type=checkbox]:checked {
   text-decoration:none;
   color:var(--text-normal);
 }
-.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) .task-list-item-checkbox {
+.mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-left:-4px;
 }
 .task-list-item-checkbox,
@@ -3937,6 +3945,25 @@ body.is-mobile .CodeMirror-foldgutter-open:after {
 .search-result-container:before {
   height:1px;
 }
+.search-result-file-match-replace-button {
+  background-color:var(--background-primary);
+  border:1px solid var(--background-modifier-border);
+  color:var(--text-muted);
+  opacity:1;
+  top:auto;
+  right:18px;
+  bottom:1px;
+  font-weight:500;
+  font-size:var(--font-adaptive-smaller);
+}
+.search-result-hover-button:hover {
+  background-color:var(--background-tertiary);
+  color:var(--text-muted);  
+}
+.search-result-file-match-replace-button:hover {
+  background-color:var(--background-modifier-border);
+  color:var(--text-normal);
+}
 .search-result-container.is-loading:before {
   background-color:var(--background-modifier-accent);
 }
@@ -4416,22 +4443,23 @@ a[href*="obsidian://search"] {
 }
 
 /* Links and underline handling*/
-.minimal-theme:not(.links-int-on) a[href*="obsidian://"],
-.minimal-theme:not(.links-int-on) .markdown-preview-view .internal-link,
-.minimal-theme:not(.links-ext-on) .external-link,
-.minimal-theme:not(.links-ext-on) .cm-link .cm-underline,
-.minimal-theme:not(.links-ext-on) .cm-s-obsidian span.cm-url,
-.minimal-theme:not(.links-int-on) .cm-hmd-internal-link .cm-underline,
-.minimal-theme:not(.links-int-on) a.internal-link,
-.minimal-theme:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
+body:not(.links-int-on) a[href*="obsidian://"],
+body:not(.links-int-on) .markdown-preview-view .internal-link,
+body:not(.links-ext-on) .external-link,
+body:not(.links-ext-on) .cm-link .cm-underline,
+body:not(.links-ext-on) .cm-s-obsidian span.cm-url,
+body:not(.links-int-on) .cm-hmd-internal-link .cm-underline,
+body:not(.links-int-on) a.internal-link,
+body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
   text-decoration:none;
 }
-.minimal-theme.links-int-on .is-live-preview .cm-hmd-internal-link,
-.minimal-theme.links-int-on .markdown-preview-view .internal-link,
+.links-int-on .is-live-preview .cm-hmd-internal-link,
+.links-int-on .markdown-preview-view .internal-link,
+.links-int-on .cm-s-obsidian span.cm-hmd-internal-link,
 .markdown-preview-view .internal-link {
   text-decoration:underline;
 }
-.minimal-theme.links-ext-on .external-link,
+.links-ext-on .external-link,
 .external-link {
   text-decoration:underline;
 }
@@ -5578,12 +5606,10 @@ body.minimal-folding.is-mobile .view-header-title,
 .is-mobile .workspace-drawer-active-tab-header:hover .workspace-drawer-active-tab-back-icon {
   color:var(--text-normal);
 }
-
 .is-mobile .markdown-preview-view ul,
 .is-mobile .markdown-preview-view ol {
   padding-inline-start:2em;
 }
-
 .is-mobile .nav-file-title,
 .is-mobile .nav-folder-title,
 .is-mobile .outline,
