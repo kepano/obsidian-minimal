@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.6 by @kepano
+Minimal Obsidian 4.2.7 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -1544,7 +1544,7 @@ body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
   box-shadow:0 0 0 1px var(--background-modifier-border),1px 0px 15px 0px var(--shadow-color)!important;
 }
-body.sliding-panes .workspace-leaf-content {
+body.plugin-sliding-panes .workspace-split.mod-root {
   background-color:var(--background-primary);
 }
 body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
