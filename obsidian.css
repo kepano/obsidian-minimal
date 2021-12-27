@@ -1497,6 +1497,10 @@ body.outliner-plugin-bls.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
 body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul {
   color:transparent !important;
 }
+body.outliner-plugin-bls .cm-s-obsidian:not(.is-live-preview) .cm-formatting-list-ul:before,
+body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
+  color:var(--text-faint);
+}
 
 /* --------------- */
 /* Sortable plugin */
@@ -2695,6 +2699,10 @@ body.full-borders .side-dock-ribbon {
 
 /* --------------- */
 /* Editor mode (CodeMirror 6 Live Preview) */
+
+.CodeMirror-wrap > div > textarea {
+  opacity:0;
+}
 
 /* Fancy cursor */
 body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-line {
