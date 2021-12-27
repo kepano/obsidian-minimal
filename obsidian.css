@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.5 by @kepano
+Minimal Obsidian 4.2.6 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -578,7 +578,6 @@ div:not(.el-embed-image) + .el-embed-image {
 .img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
   object-fit:cover;
   height:100%;
-  max-height:85vh;
 }
 .img-grid .img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img,
 .img-grid.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img {
@@ -676,10 +675,10 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
 .minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content {
   height:100%;
 }
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
+.minimal-focus-mode:not(.plugin-sliding-panes) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
   margin-top:25px;
 }
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
+.minimal-focus-mode:not(.plugin-sliding-panes) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
   margin-top:15px;
 }
 /*
@@ -777,6 +776,10 @@ body.borders-title .workspace-ribbon.mod-left.is-collapsed {
 body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
   border:none; 
 }
+/*
+body.borders-title.plugin-sliding-panes-rotate-header .view-content {
+  border-left:var(--border-width) solid var(--background-modifier-border);
+}*/
 
 /*----------------------------------------------------------------
 PLUGINS
@@ -1540,6 +1543,9 @@ body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-r
 body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
   box-shadow:0 0 0 1px var(--background-modifier-border),1px 0px 15px 0px var(--shadow-color)!important;
+}
+body.sliding-panes .workspace-leaf-content {
+  background-color:var(--background-primary);
 }
 body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
   box-shadow:none !important;
