@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.7 by @kepano
+Minimal Obsidian 4.2.8 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -208,6 +208,13 @@ Disabled features */
   --h5-weight:500;
   --h6-weight:400;
 
+  --h1-variant:normal;
+  --h2-variant:normal;
+  --h3-variant:normal;
+  --h4-variant:small-caps;
+  --h5-variant:small-caps;
+  --h6-variant:small-caps;
+
   --normal-weight:400;   /* Switch to 300 if you want thinner default text */
   --bold-weight:600;     /* Switch to 700 if you want thicker bold text */
   --line-width:40rem;    /* Maximum characters per line */
@@ -235,7 +242,6 @@ Disabled features */
   --pink:#b05279;
   --cyan:#73bbb2;
   --blue:#6c99bb;
-
 }
 
 /* Desktop font sizes */
@@ -281,6 +287,9 @@ body {
   --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 90%));
   --text-muted:hsl(var(--base-h),calc(var(--base-s) - 5%),calc(var(--base-l) - 45%));
   --text-faint:hsl(var(--base-h),calc(var(--base-s) - 5%),calc(var(--base-l) - 25%));
+
+  --text-bold:var(--text-normal);
+  --text-italic:var(--text-normal);
 
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l));
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) - 10%));
@@ -338,6 +347,9 @@ body {
   --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 67%));
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
+
+  --text-bold:var(--text-normal);
+  --text-italic:var(--text-normal);
 
   --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 12%));
@@ -1030,6 +1042,19 @@ body:not(.is-mobile) .checklist-plugin-main button.collapse svg {
 /* --------------- */
 /* CodeMirror Options plugin */
 
+body #cMenuModalBar {
+  box-shadow:0px 2px 20px var(--shadow-color);
+}
+body #cMenuModalBar .cMenuCommandItem {
+  cursor:var(--cursor);
+}
+body #cMenuModalBar button.cMenuCommandItem:hover {
+  background-color:var(--background-tertiary);
+}
+
+/* --------------- */
+/* CodeMirror Options plugin */
+
 .hide-tokens .cm-s-obsidian .CodeMirror-code pre.HyperMD-hr {
   background:linear-gradient(to bottom, var(--background-modifier-border) 2px, transparent 1px) -0.85em repeat-x;
   background-size:2px 2px;
@@ -1683,6 +1708,14 @@ body, input, button,
 .cm-s-obsidian .cm-strong {
   font-weight:var(--bold-weight);
 }
+strong,
+.cm-s-obsidian .cm-strong {
+  color:var(--text-bold);
+}
+em,
+.cm-s-obsidian .cm-em {
+  color:var(--text-italic);
+}
 .cm-formatting-header,
 .cm-s-obsidian .cm-formatting-header.cm-header-1,
 .cm-s-obsidian .cm-formatting-header.cm-header-2,
@@ -1704,6 +1737,7 @@ h1,
 .empty-state-title,
 .markdown-preview-view h1,
 .cm-s-obsidian .cm-header-1 {
+  font-variant:var(--h1-variant);
   letter-spacing:-0.02em;
   line-height:1.3;
   font-size:var(--h1);
@@ -1712,6 +1746,7 @@ h1,
 }
 .markdown-preview-view h2,
 .cm-s-obsidian .cm-header-2 {
+  font-variant:var(--h2-variant);
   letter-spacing:-0.02em;
   line-height:1.3;
   font-size:var(--h2);
@@ -1720,6 +1755,7 @@ h1,
 }
 .markdown-preview-view h3,
 .cm-s-obsidian .cm-header-3 {
+  font-variant:var(--h3-variant);
   letter-spacing:-0em;
   line-height:1.4;
   font-size:var(--h3);
@@ -1728,7 +1764,7 @@ h1,
 }
 .markdown-preview-view h4,
 .cm-s-obsidian .cm-header-4 {
-  font-variant:small-caps;
+  font-variant:var(--h4-variant);
   letter-spacing:0.02em;
   font-size:var(--h4);
   color:var(--h4-color);
@@ -1736,7 +1772,7 @@ h1,
 }
 .markdown-preview-view h5,
 .cm-s-obsidian .cm-header-5 {
-  font-variant:small-caps;
+  font-variant:var(--h5-variant);
   letter-spacing:0.02em;
   font-size:var(--h5);
   color:var(--h5-color);
@@ -1744,7 +1780,7 @@ h1,
 }
 .markdown-preview-view h6,
 .cm-s-obsidian .cm-header-6 {
-  font-variant:small-caps;
+  font-variant:var(--h6-variant);
   letter-spacing:0.02em;
   font-size:var(--h6);
   color:var(--h6-color);
@@ -2700,6 +2736,7 @@ body.full-borders .side-dock-ribbon {
 /* --------------- */
 /* Editor mode (CodeMirror 6 Live Preview) */
 
+/* Fix strange Obsidian ghost textearea bug on right click */
 .CodeMirror-wrap > div > textarea {
   opacity:0;
 }
@@ -7677,6 +7714,19 @@ settings:
         format: hex
         default-light: '#363636'
         default-dark: '#d1d1d1'
+    - 
+        id: h1-variant
+        title: H1 font variant
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps 
     -
         id: level-2-headings
         title: Level 2 Headings
@@ -7702,6 +7752,19 @@ settings:
         format: hex
         default-light: '#363636'
         default-dark: '#d1d1d1'
+    - 
+        id: h2-variant
+        title: H2 font variant
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps 
     -
         id: level-3-headings
         title: Level 3 Headings
@@ -7727,6 +7790,19 @@ settings:
         format: hex
         default-light: '#363636'
         default-dark: '#d1d1d1'
+    - 
+        id: h3-variant
+        title: H3 font variant
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps 
     -
         id: level-4-headings
         title: Level 4 Headings
@@ -7753,6 +7829,19 @@ settings:
         default-light: '#363636'
         default-dark: '#d1d1d1'
     - 
+        id: h4-variant
+        title: H4 font variant
+        type: variable-select
+        allowEmpty: false
+        default: small-caps
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps 
+    - 
         id: level-5-headings
         title: Level 5 Headings
         type: heading
@@ -7778,6 +7867,19 @@ settings:
         default-light: '#363636'
         default-dark: '#d1d1d1'
     - 
+        id: h5-variant
+        title: H5 font variant
+        type: variable-select
+        allowEmpty: false
+        default: small-caps
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps 
+    -
         id: level-6-headings
         title: Level 6 Headings
         type: heading
@@ -7802,19 +7904,25 @@ settings:
         format: hex
         default-light: '#363636'
         default-dark: '#d1d1d1'
+    - 
+        id: h6-variant
+        title: H6 font variant
+        type: variable-select
+        allowEmpty: false
+        default: small-caps
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps
     -
         id: advanced
         title: Advanced
         type: heading
         level: 2
         collapsed: true
-    - 
-        id: text-code
-        title: Code color
-        type: variable-themed-color
-        format: hex
-        default-light: '#363636'
-        default-dark: '#bfbfbf'
     -
         id: cursor
         title: Cursor style
@@ -7831,6 +7939,27 @@ settings:
             - 
                 label: Crosshair
                 value: crosshair
+    - 
+        id: text-bold
+        title: Bold text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: text-italic
+        title: Italic text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: text-code
+        title: Code text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#363636'
+        default-dark: '#bfbfbf'
     -
         id: font-smaller
         title: Small font size
