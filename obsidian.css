@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.8 by @kepano
+Minimal Obsidian 4.2.9 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -5450,7 +5450,12 @@ Requires Contextual Typography 2.2.1+
   margin-left:auto;
   margin-right:auto;
 }
-.contextual-typography.minimal-folding:not(.is-mobile) .list-view-ul,
+.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
+  padding-inline-start:calc(2em + var(--folding-offset));
+}
+.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
+  transform:translateX(calc(var(--folding-offset)/2));
+}
 .minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
   width:calc(var(--line-width-adaptive) - var(--folding-offset));
 }
@@ -5467,7 +5472,6 @@ Requires Contextual Typography 2.2.1+
 
 /* Folding offset */
 .contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .block-language-dataview > h4,
-.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview:not(.table-view-table),
 .contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   padding-left:var(--folding-offset);
 }
@@ -7947,7 +7951,7 @@ settings:
     - 
         id: minimal-strike-lists
         title: Strike completed tasks
-        description: Use line through greyed text for
+        description: Use line through greyed text for completed tasks
         type: class-toggle
         default:  false
     - 
