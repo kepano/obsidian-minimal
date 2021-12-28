@@ -4407,24 +4407,24 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
 .status-bar-item-segment {
   margin-right:10px;
 }
-.status-bar-item.mod-clickable {
-  cursor:var(--cursor);
+.status-bar-item {
+  cursor:var(--cursor) !important;
 }
+.status-bar-item.plugin-sync:hover,
+.status-bar-item.cMenu-statusbar-button:hover,
 .status-bar-item.mod-clickable:hover {
-  background-color:var(--background-tertiary);
+  text-align:center;
+  background-color:var(--background-tertiary) !important;
   border-radius:4px;
 }
 .status-bar-item {
-  padding:7px 5px;
-  margin:0 2px 0 0;
+  padding:7px 4px;
+  margin:0 0 0 0;
 }
 .status-bar-item,
 .sync-status-icon {
   display:flex;
   align-items:center;
-}
-.status-bar-item.plugin-sync {
-  padding-right:0;
 }
 .status-bar-item.plugin-sync svg {
   height:15px;
