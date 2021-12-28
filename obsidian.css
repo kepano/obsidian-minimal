@@ -3372,6 +3372,11 @@ input[type=checkbox]:checked {
   text-decoration:none;
   color:var(--text-normal);
 }
+.minimal-strike-lists .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
+.minimal-strike-lists ul > li.task-list-item.is-checked {
+  text-decoration:line-through;
+  color:var(--text-faint);
+}
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-left:-4px;
 }
@@ -7939,6 +7944,12 @@ settings:
             - 
                 label: Crosshair
                 value: crosshair
+    - 
+        id: minimal-strike-lists
+        title: Strike completed tasks
+        description: Use line through greyed text for
+        type: class-toggle
+        default:  false
     - 
         id: text-bold
         title: Bold text color
