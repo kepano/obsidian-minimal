@@ -1,0 +1,42 @@
+/* Minimal Theme by @kepano
+
+Use this snippet to translate labeled navigation setting into other languages
+*/
+
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:after {
+  content:"Note";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="File explorer"] .workspace-tab-header-inner-icon:after {
+  content:"Notes";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Search"] .workspace-tab-header-inner-icon:after {
+  content:"Search";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Calendar"] .workspace-tab-header-inner-icon:after {
+  content:"Calendar";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Graph view"] .workspace-tab-header-inner-icon:after,
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Graph of"] .workspace-tab-header-inner-icon:after {
+  content:"Graph";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Search"] .workspace-tab-header-inner-icon:after {
+  content:"Search";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outline of"] .workspace-tab-header-inner-icon:after {
+  content:"Outline";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Starred"] .workspace-tab-header-inner-icon:after {
+  content:"Starred";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Dictionary"] .workspace-tab-header-inner-icon:after {
+  content:"Dictionary";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Tag pane"] .workspace-tab-header-inner-icon:after {
+  content:"Tags";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Backlinks for"] .workspace-tab-header-inner-icon:after {
+  content:"Backlinks";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outgoing links from"] .workspace-tab-header-inner-icon:after {
+  content:"Outlinks";
+}
