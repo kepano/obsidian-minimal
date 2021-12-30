@@ -3111,8 +3111,7 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
   color:var(--text-accent);
 }
 span.cm-image-marker,
-.cm-s-obsidian span.cm-formatting-link,
-.mod-cm5 .cm-s-obsidian span.cm-link {
+.cm-s-obsidian span.cm-formatting-link {
   color:var(--text-faint);
 }
 
