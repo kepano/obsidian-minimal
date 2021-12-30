@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.9 by @kepano
+Minimal Obsidian 4.2.10 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -619,16 +619,59 @@ div:not(.el-embed-image) + .el-embed-image {
   background-color:transparent;
   transition:border-color 0s ease-in-out 0.1s, background-color 0s ease-in-out 0.2s;
 }
-.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
-.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings,
-.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .workspace-ribbon-collapse-btn,
+
+.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed,
+.minimal-focus-mode .workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn {
+  opacity:0;
+}
+.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover,
 .minimal-focus-mode .workspace-ribbon.is-collapsed:hover .workspace-ribbon-collapse-btn {
   opacity:1;
-  transition:opacity 0s ease-in-out;
+  transition:opacity 0.2s ease-in-out;
 }
 .is-right-sidedock-collapsed .workspace-split.mod-right-split {
   margin-right:0px;
 }
+body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
+  border-right:none;
+}
+.minimal-focus-mode .status-bar {
+  opacity:0;
+}
+.minimal-focus-mode .status-bar:hover {
+  opacity:1;
+  transition:opacity 0.2s ease-in-out;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+  opacity:0;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  transition:opacity 0.2s ease-in-out;
+  background-color:var(--background-primary);
+  z-index:9999;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header:hover {
+  opacity:1;
+  transition:opacity 0.2s ease-in-out;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content {
+  height:100%;
+}
+.minimal-focus-mode:not(.plugin-sliding-panes) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
+  margin-top:var(--header-height);
+}
+.minimal-focus-mode:not(.plugin-sliding-panes) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
+  margin-top:calc(var(--header-height) - 10px);
+}
+/*
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .document-search-container {
+  top:0px;
+  z-index:99999;
+} */
+
+
 .view-actions {
   padding:0px 5px;
   margin-right:0px;
@@ -660,44 +703,7 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
   opacity:1;
   transition:opacity 0.25s ease-in-out;
 }
-body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
-  border-right:none;
-}
-.minimal-focus-mode .status-bar {
-  opacity:0;
-}
-.minimal-focus-mode .status-bar:hover {
-  opacity:1;
-  transition:opacity 0.2s ease-in-out;
-}
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-  opacity:0;
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  transition:opacity 0.2s ease-in-out;
-  background-color:var(--background-primary);
-  z-index:9999;
-}
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header:hover {
-  opacity:1;
-  transition:opacity 0.2s ease-in-out;
-}
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content {
-  height:100%;
-}
-.minimal-focus-mode:not(.plugin-sliding-panes) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
-  margin-top:25px;
-}
-.minimal-focus-mode:not(.plugin-sliding-panes) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
-  margin-top:15px;
-}
-/*
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .document-search-container {
-  top:0px;
-  z-index:99999;
-} */
+
 
 /* --------------- */
 /* Dark mode images  */
@@ -715,7 +721,7 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
   mix-blend-mode:screen;
 }
 .theme-light span[src$="invertW"] img {
-  filter: invert(1) hue-rotate(180deg);
+  filter:invert(1) hue-rotate(180deg);
 }
 span[src$="#round"] img {
   border-radius:50%;
@@ -2785,7 +2791,7 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   background-color:var(--background-tertiary);
   top:0;
   right:0;
-  transition: opacity 200ms;
+  transition:opacity 200ms;
 }
 .markdown-source-view.mod-cm6 .cm-embed-block {
   padding:0;
@@ -2803,14 +2809,18 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   line-height:0;
   vertical-align:-0.1em;
 }
+.mod-cm6 .HyperMD-list-line .list-bullet::after,
+.mod-cm6 span.list-bullet::after {
+  line-height:1.05em;
+}
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   background-color:transparent;
   border-left-width:1px;
 }
 
 .markdown-source-view.mod-cm6 .cm-gutterElement {
-  padding-top: 0.3em;
-  align-items: baseline;
+  padding-top:0.3em;
+  align-items:baseline;
 }
 .cm-gutterElement .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter {
@@ -3724,27 +3734,27 @@ body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
 /* Relationship lines in Live Preview */
 
 :root {
-  --indent-font-family: var(--text-editor);
-  --indent-font-size: var(--font-adaptive-normal);
+  --indent-font-family:var(--text-editor);
+  --indent-font-size:var(--font-adaptive-normal);
 }
 
 body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line {
-  overflow: hidden;
+  overflow:hidden;
 }
 body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
-  position: relative;
-  font-family: var(--indent-font-family) !important;
-  font-size: var(--indent-font-size) !important;
+  position:relative;
+  font-family:var(--indent-font-family) !important;
+  font-size:var(--indent-font-size) !important;
 }
 body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
-  content: '';
-  font-family: var(--indent-font-family) !important;
-  font-size: var(--indent-font-size) !important;
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: -1.6em;
-  padding-bottom: 999em;
+  content:'';
+  font-family:var(--indent-font-family) !important;
+  font-size:var(--indent-font-size) !important;
+  display:block;
+  position:absolute;
+  width:100%;
+  top:-1.6em;
+  padding-bottom:999em;
   background:linear-gradient(
     to right,
     var(--background-modifier-border) 1px,
@@ -3765,6 +3775,7 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
 .minimal-folding .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
   padding-left:var(--folding-offset);
 }
+
 .minimal-folding .allow-fold-lists.markdown-preview-view .markdown-embed .markdown-preview-sizer {
   padding-left:0;
 }
@@ -4054,7 +4065,7 @@ body.is-mobile .CodeMirror-foldgutter-open:after {
 }
 .search-input-container {
   width:calc(100% - 20px);
-  margin:0 0 5px 10px;
+  margin:0 0 8px 10px;
 }
 .workspace-leaf-content .setting-item {
   padding:5px 0;
@@ -4065,7 +4076,7 @@ body.is-mobile .CodeMirror-foldgutter-open:after {
   flex:1;
 }
 .search-input-clear-button {
-  background: var(--background-modifier-form-field);
+  background:var(--background-modifier-form-field);
   border-radius:50%;
   color:var(--text-muted);
   cursor:var(--cursor);
@@ -4813,7 +4824,7 @@ ol > li {
 .cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian .HyperMD-codeblock {
   color:var(--text-code);
-  font-size: 0.85em;
+  font-size:0.85em;
 }
 button.copy-code-button {
   cursor:var(--curosor);
@@ -5453,9 +5464,10 @@ Requires Contextual Typography 2.2.1+
 .contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
   padding-inline-start:calc(2em + var(--folding-offset));
 }
+/*
 .contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
   transform:translateX(calc(var(--folding-offset)/2));
-}
+}*/
 .minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
   width:calc(var(--line-width-adaptive) - var(--folding-offset));
 }
@@ -5613,7 +5625,6 @@ Mobile styling
 body.is-mobile {
   padding:0 !important;
 }
-
 .is-mobile .ͼ1 .cm-line,
 .is-mobile .workspace-drawer-tab-container > *,
 body.minimal-folding.is-mobile .view-header-title, 
