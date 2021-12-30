@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.2.12 by @kepano
+Minimal Obsidian 4.3.0 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -221,6 +221,7 @@ Disabled features */
   --line-height:1.5;
   --max-width:88%;       /* Amount of padding around the text, use 90% for narrower padding */
   --nested-padding:3.5%; /* Amount of padding for quotes and transclusions */
+  --max-col-width:18em;
   --icon-muted:0.5;
   --border-width:1px;
   --border-width-alt:1px;
@@ -342,6 +343,7 @@ body {
 .theme-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
+.excalidraw.theme--dark,
 .theme-dark {
 
   --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 67%));
@@ -710,7 +712,7 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
 }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-container-inner {
   flex-direction:column;
-  padding:8px 8px 6px 8px;
+  padding:8px 8px 4px 8px;
 }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header {
   padding:0;
@@ -778,6 +780,51 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
 }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outgoing links from"] .workspace-tab-header-inner-icon:after {
   content:"Outlinks";
+}
+
+
+/* --------------- */
+/* Container scroll borders */
+
+.item-list,
+.nav-files-container,
+.workspace-leaf-content[data-type='search'] .search-result-container {
+  background:
+    linear-gradient(
+      var(--background-secondary) 10%,
+      rgba(255, 255, 255, 0)
+    )
+    center top,
+    linear-gradient(
+      var(--background-modifier-border) 100%,
+      rgba(0, 0, 0, 0)
+    )
+    center top;  
+}
+.tag-container,
+.outgoing-link-pane,
+.backlink-pane {
+  background:
+    linear-gradient(
+      var(--background-primary) 10%,
+      rgba(255, 255, 255, 0)
+    )
+    center top,
+    linear-gradient(
+      var(--background-modifier-border) 100%,
+      rgba(0, 0, 0, 0)
+    )
+    center top;
+}
+.item-list,
+.nav-files-container,
+.workspace-leaf-content[data-type='search'] .search-result-container,
+.tag-container,
+.outgoing-link-pane,
+.backlink-pane {
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 91% var(--border-width);
+  background-attachment: local, scroll;
 }
 
 
@@ -1212,6 +1259,17 @@ ul.dataview-ul {
   margin-block-end:0.5em;
 }
 
+.trim-cols .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
+.trim-cols .markdown-preview-view .table-view-table > tbody > tr > td {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+.markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
+.markdown-preview-view .table-view-table > tbody > tr > td {
+  max-width:var(--max-col-width);
+}
+
 /* ----------------- */
 /* Dictionary plugin */
 
@@ -1299,7 +1357,13 @@ div[data-type="dictionary-view"] .main > .opener {
 /* --------------- */
 /* Excalidraw Plugin */
 
-body .excalidraw {
+body .excalidraw,
+body .excalidraw.theme--dark {
+  --color-primary-light:var(--text-selection);
+  --color-primary:var(--interactive-accent);
+  --color-primary-chubb:var(--interactive-accent-hover);
+  --color-primary-darker:var(--interactive-accent-hover);
+  --color-primary-darkest:var(--interactive-accent-hover);
   --ui-font:var(--font-ui);
   --button-gray-1:var(--background-tertiary);
   --button-gray-2:var(--background-tertiary);
@@ -1313,6 +1377,13 @@ body .excalidraw {
 
 .workspace-leaf-content[data-type=excalidraw] .view-header .view-header-title-container {
   width:auto;
+}
+body .excalidraw .App-toolbar-container .ToolIcon_type_floating:not(.is-mobile) .ToolIcon__icon {
+  box-shadow:none;
+}
+body .excalidraw button,
+body .excalidraw .buttonList label {
+  cursor:var(--cursor);
 }
 body .excalidraw .Dialog__title {
   font-variant:normal;
@@ -1563,6 +1634,7 @@ body .kanban-plugin__lane {
 body {
   --kanban-border:var(--border-width);
 }
+body.theme-dark,
 body.minimal-dark-black.theme-dark,
 body.minimal-dark-tonal.theme-dark,
 body.minimal-light-white.theme-light,
@@ -7656,13 +7728,13 @@ settings:
         title: Underline internal links
         description: Show underlines on internal links
         type: class-toggle
-        default:  true
+        default: true
     -
         id: links-ext-on
         title: Underline external links
         description: Show underlines on external links
         type: class-toggle
-        default:  true
+        default: true
     -
         id: full-width-media
         title: Maximize media
@@ -7745,6 +7817,24 @@ settings:
             - 
                 label: 100% pane width
                 value: iframe-100
+    -
+        id: tables
+        title: Tables
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: trim-cols
+        title: Trim Dataview columns
+        description: Disables word wrapping in table cells, and trims long text
+        type: class-toggle
+        default: true
+    - 
+        id: max-col-width
+        title: Dataview maximum column width
+        description: Maximum width for Dataview columns, accepts any CSS unit
+        type: variable-text
+        default: 18em
     -
         id: typography
         title: Typography
@@ -8083,7 +8173,7 @@ settings:
         title: Strike completed tasks
         description: Use line through greyed text for completed tasks
         type: class-toggle
-        default:  false
+        default: false
     - 
         id: text-bold
         title: Bold text color
