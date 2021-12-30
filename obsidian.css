@@ -786,9 +786,9 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
 /* --------------- */
 /* Container scroll borders */
 
-.item-list,
-.nav-files-container,
-.workspace-leaf-content[data-type='search'] .search-result-container {
+body:not(.is-mobile) .item-list,
+body:not(.is-mobile) .nav-files-container,
+body:not(.is-mobile) .workspace-leaf-content[data-type='search'] .search-result-container {
   background:
     linear-gradient(
       var(--background-secondary) 10%,
@@ -801,9 +801,9 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
     )
     center top;  
 }
-.tag-container,
-.outgoing-link-pane,
-.backlink-pane {
+body:not(.is-mobile) .tag-container,
+body:not(.is-mobile) .outgoing-link-pane,
+body:not(.is-mobile) .backlink-pane {
   background:
     linear-gradient(
       var(--background-primary) 10%,
@@ -816,12 +816,12 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
     )
     center top;
 }
-.item-list,
-.nav-files-container,
-.workspace-leaf-content[data-type='search'] .search-result-container,
-.tag-container,
-.outgoing-link-pane,
-.backlink-pane {
+body:not(.is-mobile) .item-list,
+body:not(.is-mobile) .nav-files-container,
+body:not(.is-mobile) .workspace-leaf-content[data-type='search'] .search-result-container,
+body:not(.is-mobile) .tag-container,
+body:not(.is-mobile) .outgoing-link-pane,
+body:not(.is-mobile) .backlink-pane {
   background-repeat: no-repeat;
   background-size: 100% 40px, 91% var(--border-width);
   background-attachment: local, scroll;
