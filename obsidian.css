@@ -611,13 +611,11 @@ div:not(.el-embed-image) + .el-embed-image {
 /* Focus mode */
 
 .workspace-ribbon.mod-left {
-  transition:border-color 0s ease-in-out 0s, background-color 0s ease-in-out 0s;
   border-left:0;
 }
 .workspace-ribbon.mod-left.is-collapsed {
   border-color:transparent;
   background-color:transparent;
-  transition:border-color 0s ease-in-out 0.1s, background-color 0s ease-in-out 0.2s;
 }
 
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed,
@@ -4456,10 +4454,12 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
 /* Default ribbon sidedock icons */
 
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,
-.workspace-ribbon.mod-right {
+.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn {
   opacity:1;
   position:fixed;
   width:26px;
+  display:flex;
+  align-items:center;
   top:auto;
   text-align:center;
   bottom:32px;
@@ -4469,7 +4469,7 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
   left:8px;
 }
 .workspace-ribbon.mod-right {
-  right:7px;
+  right:4px;
   height:32px;
   padding-top:6px;
   position:absolute;
