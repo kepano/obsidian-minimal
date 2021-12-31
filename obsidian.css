@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.3.1 by @kepano
+Minimal Obsidian 4.3.2 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -2988,11 +2988,11 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   color:var(--text-faint);
   font-size:1.4em;
   line-height:0;
-  vertical-align:-0.1em;
+  vertical-align:middle;
 }
 .mod-cm6 .HyperMD-list-line .list-bullet::after,
 .mod-cm6 span.list-bullet::after {
-  line-height:1.05em;
+  line-height:1em;
 }
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
   color:var(--text-faint);
