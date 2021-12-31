@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.3.0 by @kepano
+Minimal Obsidian 4.3.1 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -496,7 +496,7 @@ Frameless mode on macOS only */
 }
 
 /* --------------- */
-/* App Menu ribbon moved to the bottom edge */
+/* App ribbon moved to the bottom edge */
 
 .hider-ribbon:not(.is-mobile) .workspace-ribbon-collapse-btn {
   display:none;
@@ -619,15 +619,18 @@ div:not(.el-embed-image) + .el-embed-image {
   border-color:transparent;
   background-color:transparent;
 }
-
+.minimal-focus-mode .workspace-ribbon.mod-left {
+  background-color:var(--background-secondary);
+  transition:background-color 0s linear 0s;
+}
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed,
 .minimal-focus-mode .workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn {
   opacity:0;
+  transition:opacity 0.1s ease-in-out 0.1s;
 }
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover,
 .minimal-focus-mode .workspace-ribbon.is-collapsed:hover .workspace-ribbon-collapse-btn {
   opacity:1;
-  transition:opacity 0.2s ease-in-out;
 }
 .is-right-sidedock-collapsed .workspace-split.mod-right-split {
   margin-right:0px;
@@ -3114,7 +3117,7 @@ span.cm-image-marker,
 .cm-s-obsidian span.cm-formatting-link {
   color:var(--text-faint);
 }
-
+.cm-s-obsidian span.cm-image-alt-text.cm-link,
 .cm-s-obsidian .cm-active .cm-formatting-link + span.cm-link {
   color:var(--text-muted);
 }
@@ -4644,6 +4647,7 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
 }
 .workspace-ribbon.mod-right {
   right:4px;
+  bottom:0;
   height:32px;
   padding-top:6px;
   position:absolute;
