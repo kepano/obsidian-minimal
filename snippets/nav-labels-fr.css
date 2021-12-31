@@ -1,0 +1,39 @@
+/* Minimal Theme by @kepano
+
+Use this snippet to translate labeled navigation setting into other languages
+*/
+
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:after {
+  content:"Volet";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Explorateur de fichiers"] .workspace-tab-header-inner-icon:after {
+  content:"Fichiers";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Rechercher"] .workspace-tab-header-inner-icon:after {
+  content:"Rechercher";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Calendar"] .workspace-tab-header-inner-icon:after {
+  content:"Calendrier";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Vue graphique"] .workspace-tab-header-inner-icon:after,
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Graphique de"] .workspace-tab-header-inner-icon:after {
+  content:"Graphique";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Plan de"] .workspace-tab-header-inner-icon:after {
+  content:"Plan";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Favoris"] .workspace-tab-header-inner-icon:after {
+  content:"Favoris";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Dictionary"] .workspace-tab-header-inner-icon:after {
+  content:"Dictionnaire";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Volet des tags"] .workspace-tab-header-inner-icon:after {
+  content:"Tags";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Rétrolien pour"] .workspace-tab-header-inner-icon:after {
+  content:"Rétroliens";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Liens sortants"] .workspace-tab-header-inner-icon:after {
+  content:"Liens";
+}

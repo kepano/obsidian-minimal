@@ -763,9 +763,6 @@ body:not(.is-mobile) .view-actions .view-action:last-child  {
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Graph of"] .workspace-tab-header-inner-icon:after {
   content:"Graph";
 }
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Search"] .workspace-tab-header-inner-icon:after {
-  content:"Search";
-}
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outline of"] .workspace-tab-header-inner-icon:after {
   content:"Outline";
 }
@@ -7677,7 +7674,7 @@ settings:
     -
         id: labeled-nav
         title: Text labels for primary navigation
-        description: Navigation in left sidebar uses text labels
+        description: Navigation in left sidebar uses text labels. For non-English users this feature requires an additional snippet available on Github.
         type: class-toggle
         default: false
     -

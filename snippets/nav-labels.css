@@ -19,9 +19,6 @@ body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-h
 body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Graph of"] .workspace-tab-header-inner-icon:after {
   content:"Graph";
 }
-body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Search"] .workspace-tab-header-inner-icon:after {
-  content:"Search";
-}
 body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outline of"] .workspace-tab-header-inner-icon:after {
   content:"Outline";
 }
