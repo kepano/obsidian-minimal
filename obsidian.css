@@ -283,7 +283,8 @@ body {
 
   These values are mostly driven by the options above */
 
-.theme-light {
+.theme-light,
+body .excalidraw {
 
   --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 90%));
   --text-muted:hsl(var(--base-h),calc(var(--base-s) - 5%),calc(var(--base-l) - 45%));
