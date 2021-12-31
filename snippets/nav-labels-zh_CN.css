@@ -2,7 +2,7 @@ body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-h
   content:"笔记";
 }
 body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="文件列表"] .workspace-tab-header-inner-icon:after {
-  content:"笔记";
+  content:"文件";
 }
 body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="搜索"] .workspace-tab-header-inner-icon:after {
   content:"搜索";
@@ -10,9 +10,9 @@ body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-h
 body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Calendar"] .workspace-tab-header-inner-icon:after {
   content:"日历";
 }
-body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Graph view"] .workspace-tab-header-inner-icon:after,
-body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Graph of"] .workspace-tab-header-inner-icon:after {
-  content:"图谱";
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="关系图谱"] .workspace-tab-header-inner-icon:after,
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="图谱"] .workspace-tab-header-inner-icon:after {
+  content:"关系图谱";
 }
 body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="大纲"] .workspace-tab-header-inner-icon:after {
   content:"大纲";
@@ -20,15 +20,15 @@ body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-h
 body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="星标"] .workspace-tab-header-inner-icon:after {
   content:"星标";
 }
-body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="目录"] .workspace-tab-header-inner-icon:after {
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Dictionary"] .workspace-tab-header-inner-icon:after {
   content:"目录";
 }
 body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="标签面板"] .workspace-tab-header-inner-icon:after {
   content:"标签";
 }
-body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Backlinks for"] .workspace-tab-header-inner-icon:after {
-  content:"入链";
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="反向链接"] .workspace-tab-header-inner-icon:after {
+  content:"反向链接";
 }
-body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outgoing links from"] .workspace-tab-header-inner-icon:after {
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="出链"] .workspace-tab-header-inner-icon:after {
   content:"出链";
 }
