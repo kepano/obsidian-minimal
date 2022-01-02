@@ -1197,9 +1197,6 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
   background-size:2px 2px;
   color:transparent;
 }
-.hide-tokens .cm-s-obsidian span.cm-hr {
-  color:transparent;
-}
 body.hide-tokens .cm-s-obsidian pre.HyperMD-table-row > span {
   border-color:var(--background-modifier-border);
 }
@@ -2965,6 +2962,9 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   margin-left:10px;
 }
 
+/* HR */
+
+
 
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
@@ -3117,7 +3117,7 @@ span.cm-image-marker,
 .cm-s-obsidian span.cm-image-alt-text.cm-link,
 .cm-s-obsidian .cm-active .cm-formatting-link + span.cm-link,
 .cm-s-obsidian .cm-active .cm-formatting-link + span.cm-link:hover,
-.cm-s-obsidian:not(is-live-preview) .cm-formatting-link + span.cm-link {
+.cm-s-obsidian:not(.is-live-preview) .cm-formatting-link + span.cm-link {
   color:var(--text-muted);
 }
 .cm-s-obsidian span.cm-hmd-internal-link {
