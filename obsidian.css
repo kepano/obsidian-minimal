@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.3.3 by @kepano
+Minimal Obsidian 4.3.4 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -220,13 +220,14 @@ Disabled features */
   --line-width:40rem;    /* Maximum characters per line */
   --line-height:1.5;
   --max-width:88%;       /* Amount of padding around the text, use 90% for narrower padding */
-  --nested-padding:3.5%; /* Amount of padding for quotes and transclusions */
   --max-col-width:18em;
   --icon-muted:0.5;
   --border-width:1px;
   --border-width-alt:1px;
 
   --folding-offset:16px;
+  --nested-padding:3.5%; /* Quotes and transclusions */
+  --list-padding:2em;    /* List padding */
 
   --radius-s:2px;
   --radius-m:5px;
@@ -3001,16 +3002,14 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   background-color:transparent;
   border-left-width:1px;
 }
-
 .markdown-source-view.mod-cm6 .cm-gutterElement {
-  padding-top:0.3em;
-  align-items:baseline;
+  padding-top:0.2em !important;
 }
 .cm-gutterElement .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter {
   opacity:0;
 }
-.cm-gutterElement .collapse-indicator:hover,
+.cm-gutterElement:hover .collapse-indicator,
 .cm-gutterElement .is-collapsed .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
 .markdown-source-view.mod-cm6 .fold-gutter:hover {
@@ -3893,7 +3892,7 @@ body.minimal-rel-preview .markdown-preview-view ol ul,
 body.minimal-rel-preview .markdown-preview-view ul ol,
 body.minimal-rel-preview .markdown-preview-view ol ol {
     margin-left:-15px;
-    padding-left:50px;
+    padding-left:var(--list-padding);
     border-left:1px solid var(--background-modifier-border);
 }
 
@@ -3964,9 +3963,16 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
 .minimal-folding .allow-fold-lists.markdown-preview-view .markdown-embed .markdown-preview-sizer {
   padding-left:0;
 }
+
 .is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters,
 .is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
-  transform:translateX(-10px); 
+  transform:translateX(-6px); 
+}
+@media (max-width:750pt) {
+  .is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters,
+  .is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+    transform:translateX(-12px); 
+  }
 }
 
 /* Folding icons in Preview */
@@ -4976,10 +4982,10 @@ audio::-webkit-media-controls-panel {
 
 /* Preview Mode Lists  */
 ul {
-  padding-inline-start:2em; }
+  padding-inline-start:var(--list-padding); }
 /* 
 ul {
-  padding-inline-start:2em;
+  padding-inline-start:var(--list-padding);
   list-style:none;
   list-style-type:none;
 }
@@ -5650,7 +5656,7 @@ Requires Contextual Typography 2.2.1+
   margin-right:auto;
 }
 .contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
-  padding-inline-start:calc(2em + var(--folding-offset));
+  padding-inline-start:calc(var(--list-padding) + var(--folding-offset));
 }
 /*
 .contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
@@ -5867,7 +5873,7 @@ body.minimal-folding.is-mobile .view-header-title,
 }
 .is-mobile .markdown-preview-view ul,
 .is-mobile .markdown-preview-view ol {
-  padding-inline-start:2em;
+  padding-inline-start:var(--list-padding);
 }
 .is-mobile .nav-file-title,
 .is-mobile .nav-folder-title,
@@ -5903,7 +5909,6 @@ body.minimal-folding.is-mobile .view-header-title,
 }
 
 /* Folding on mobile */
-
 .ͼ1 .cm-foldGutter .cm-gutterElement {
   cursor:var(--cursor);
 }
@@ -6474,7 +6479,6 @@ body.is-mobile:not(.minimal-icons-off) .menu-item-icon svg {
   .is-mobile .modal-close-button:hover {
     background:var(--background-primary);
   }
-
   .is-mobile .suggestion-flair {
     right:0;
     left:auto;
@@ -6566,28 +6570,6 @@ body.is-mobile:not(.minimal-icons-off) .menu-item-icon svg {
   .is-mobile .tag {
     font-size:var(--font-adaptive-smaller);
   }
-
-  /* experiment with scrolling tables 
-  .is-mobile .markdown-preview-sizer > div {
-    overflow-x:auto;
-  }
-  .is-mobile .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
-  .is-mobile .markdown-preview-sizer {
-    max-width:100%;
-  }
-  .is-mobile .markdown-preview-sizer > div > * {
-    max-width:var(--max-width);
-    margin-left:auto;
-    margin-right:auto;
-    margin-block-end:0.25em;
-    margin-block-start:0.75em;
-  }
-  .is-mobile .markdown-preview-sizer > div > table {
-    margin-top:20px;
-    margin-left:6%;
-    margin-right:6%;
-  }
-*/
   .is-mobile .setting-item-control select,
   .is-mobile .setting-item-control input,
   .is-mobile .setting-item-control button {
@@ -6600,9 +6582,12 @@ body.is-mobile:not(.minimal-icons-off) .menu-item-icon svg {
     width:100%;
     margin:0;
   }
-
   .is-mobile .modal-close-button {
     top:18px;
+  }
+  .is-mobile .markdown-preview-view ul,
+  .is-mobile .markdown-preview-view ol {
+    padding-inline-start:1.5em;
   }
 
   /* Phone — Publish */
