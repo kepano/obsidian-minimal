@@ -1920,6 +1920,7 @@ em,
 h1,
 .empty-state-title,
 .markdown-preview-view h1,
+.markdown-source-view.mod-cm6 .HyperMD-header-1 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-1 {
   font-variant:var(--h1-variant);
   letter-spacing:-0.02em;
@@ -1929,6 +1930,7 @@ h1,
   font-weight:var(--h1-weight);
 }
 .markdown-preview-view h2,
+.markdown-source-view.mod-cm6 .HyperMD-header-2 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-2 {
   font-variant:var(--h2-variant);
   letter-spacing:-0.02em;
@@ -1938,6 +1940,7 @@ h1,
   font-weight:var(--h2-weight);
 }
 .markdown-preview-view h3,
+.markdown-source-view.mod-cm6 .HyperMD-header-3 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-3 {
   font-variant:var(--h3-variant);
   letter-spacing:-0em;
@@ -1947,6 +1950,7 @@ h1,
   font-weight:var(--h3-weight);
 }
 .markdown-preview-view h4,
+.markdown-source-view.mod-cm6 .HyperMD-header-4 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-4 {
   font-variant:var(--h4-variant);
   letter-spacing:0.02em;
@@ -1955,6 +1959,7 @@ h1,
   font-weight:var(--h4-weight);
 }
 .markdown-preview-view h5,
+.markdown-source-view.mod-cm6 .HyperMD-header-5 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-5 {
   font-variant:var(--h5-variant);
   letter-spacing:0.02em;
@@ -1963,6 +1968,7 @@ h1,
   font-weight:var(--h5-weight);
 }
 .markdown-preview-view h6,
+.markdown-source-view.mod-cm6 .HyperMD-header-6 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-6 {
   font-variant:var(--h6-variant);
   letter-spacing:0.02em;
@@ -2962,6 +2968,11 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   margin-left:10px;
 }
 
+/* Quotes */
+.is-live-preview .cm-hmd-indent-in-quote {
+  color:var(--text-faint);
+}
+
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
   cursor:var(--cursor);
@@ -3001,12 +3012,19 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
 .markdown-source-view.mod-cm6 .cm-gutterElement {
   padding-top:0.2em !important;
 }
+.ͼ1 .cm-foldPlaceholder,
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  cursor:var(--cursor);
+}
 .cm-gutterElement .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter {
   opacity:0;
 }
 .cm-gutterElement:hover .collapse-indicator,
 .cm-gutterElement .is-collapsed .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-line:hover .cm-fold-indicator .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
 .markdown-source-view.mod-cm6 .fold-gutter:hover {
   opacity:1;
@@ -3918,7 +3936,7 @@ body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
   --indent-font-size:var(--font-adaptive-normal);
 }
 
-body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line {
+body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-list-line-1) {
   overflow:hidden;
 }
 body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
