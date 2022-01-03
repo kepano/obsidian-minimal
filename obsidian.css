@@ -2962,10 +2962,6 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   margin-left:10px;
 }
 
-/* HR */
-
-
-
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
   cursor:var(--cursor);
