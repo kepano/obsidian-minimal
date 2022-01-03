@@ -1,6 +1,6 @@
 /* 
 
-Minimal Obsidian 4.3.4 by @kepano
+Minimal Obsidian 4.3.5 by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings 
 plugin and the Hider plugin.
@@ -664,10 +664,10 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
 .minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content {
   height:100%;
 }
-.minimal-focus-mode:not(.plugin-sliding-panes) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
+.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
   margin-top:var(--header-height);
 }
-.minimal-focus-mode:not(.plugin-sliding-panes) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
+.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
   margin-top:calc(var(--header-height) - 10px);
 }
 /*
@@ -1259,7 +1259,8 @@ ul.dataview-ul {
 }
 
 .trim-cols .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
-.trim-cols .markdown-preview-view .table-view-table > tbody > tr > td {
+.trim-cols .markdown-preview-view .table-view-table > tbody > tr > td,
+.trim-cols .markdown-source-view.mod-cm6 .table-view-table > thead > tr > th {
   white-space:nowrap;
   text-overflow:ellipsis;
   overflow:hidden;
@@ -1424,8 +1425,21 @@ body .excalidraw label.ToolIcon {
 }
 
 .embedded-note-titles .is-readable-line-width.markdown-preview-view > h1 {
-  /* ...preview mode styles with readable line width enabled... */
+  max-width:var(--max-width) !important;
+  width:var(--line-width-adaptive) !important;
 }
+.embedded-note-titles.minimal-folding .is-readable-line-width.markdown-preview-view > h1 {
+  padding-left:var(--folding-offset) !important;
+}
+
+/* Attempting focus mode + embedded note titles
+
+.embedded-note-titles.minimal-focus-mode .markdown-preview-view > h1 {
+  padding-top:var(--header-height);
+}
+.embedded-note-titles.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .CodeMirror-scroller {
+  margin-top:calc(var(--header-height) - 10px);
+}*/
 
 .embedded-note-titles .CodeMirror-scroll > h1 {
   /* ...edit mode styles... */
