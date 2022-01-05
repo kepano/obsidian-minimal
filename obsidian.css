@@ -15,7 +15,7 @@ https://github.com/kepano/obsidian-minimal
 
 MIT License
 
-Copyright (c) 2020-2021 Stephan Ango (@kepano)
+Copyright (c) 2020-2022 Stephan Ango (@kepano)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -548,7 +548,7 @@ Frameless mode on macOS only */
   transition:opacity 0.25s ease-in-out;
 }
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  border-top:1px solid var(--background-modifier-border);
+  opacity:0;
 }
 .hider-ribbon:not(.is-mobile) .workspace-split.mod-left-split {
   margin:0;
@@ -3601,6 +3601,7 @@ input[type=checkbox]:checked {
 }
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-left:-4px;
+  margin-top:0;
 }
 .task-list-item-checkbox,
 .markdown-preview-view .task-list-item-checkbox {
