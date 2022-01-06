@@ -877,6 +877,7 @@ body:not(.zoom-off) .view-content img:active {
 
 body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
 body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
+  aspect-ratio:unset;
   cursor:zoom-out;
   display:block;
   z-index:200;
@@ -898,6 +899,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content img[referrerpolicy='no-referre
   padding:2.5%;
 }
 body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
+  aspect-ratio:unset;
   top:50%;
   transform:translateY(-50%);
   padding:0;
@@ -916,7 +918,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 /* Title borders */
 
 body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='graph']) .view-header,
-body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .view-header {
+body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type='graph']):not([data-type='empty']) .view-header {
   border-bottom:var(--border-width) solid var(--background-modifier-border);
 }
 body.borders-title .workspace-ribbon.mod-left.is-collapsed {
@@ -3055,7 +3057,7 @@ body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-conte
   max-width:var(--line-width-adaptive);
 }
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
-  max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
+  max-width:var(--line-width-adaptive);
 }
 
 
@@ -3985,7 +3987,8 @@ body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::b
 
 body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title,
 .minimal-folding .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
+.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-preview-sizer,
+.minimal-folding .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
   padding-left:var(--folding-offset);
 }
 
@@ -4751,6 +4754,7 @@ body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
 }
 .links-ext-on .external-link,
 .external-link {
+  background-position-y:center;
   text-decoration:underline;
 }
 .is-live-preview.cm-s-obsidian span.cm-hmd-internal-link:hover,
@@ -5622,6 +5626,7 @@ Requires Contextual Typography 2.2.1+
   width:100%;
   max-width:100%;
   padding-left:0;
+  padding-top:10px;
 }
 .contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-embed-content .markdown-preview-sizer > div,
 .contextual-typography.minimal-folding .allow-fold-headings.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer,
