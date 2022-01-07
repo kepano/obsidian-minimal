@@ -917,8 +917,8 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 /* --------------- */
 /* Title borders */
 
-body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='graph']) .view-header,
-body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type='graph']):not([data-type='empty']) .view-header {
+body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='graph']):not([data-type='localgraph']) .view-header,
+body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type='graph']):not([data-type='empty']):not([data-type='localgraph']) .view-header {
   border-bottom:var(--border-width) solid var(--background-modifier-border);
 }
 body.borders-title .workspace-ribbon.mod-left.is-collapsed {
@@ -1739,11 +1739,22 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 /* --------------- */
 /* QuickAdd plugin */
 
-.modal .quickAddPrompt > h1 {
+.modal .quickAddPrompt > h1,
+.modal .quickAddYesNoPrompt h1 {
   margin-top:0;
   text-align:left !important;
   font-size:var(--h1);
   font-weight:600;
+}
+.modal .quickAddYesNoPrompt p {
+  text-align:left !important;
+}
+.modal .quickAddYesNoPrompt button {
+  font-size: var(--font-settings-small);
+}
+.modal .yesNoPromptButtonContainer {
+  font-size: var(--font-settings-small);
+  justify-content:flex-end;
 }
 
 /* --------------- */
@@ -1836,7 +1847,7 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 }
 
 /* --------------- */
-/* Style Settings plugin preferences */
+/* Style Settings preferences */
 
 .setting-item-heading.style-settings-heading,
 .style-settings-container .style-settings-heading {
@@ -1853,6 +1864,31 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   border-radius:40px;
   box-shadow:none;
   border:none;
+}
+.workspace-leaf-content .setting-item.setting-item-heading {
+  border-bottom:1px solid var(--background-modifier-border);
+  padding:10px 0 5px;
+}
+.workspace-leaf-content[data-type="style-settings"] .setting-item {
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+.setting-item .style-settings-import,
+.setting-item .style-settings-export {
+  text-decoration:none;
+  font-size:var(--font-settings-small);
+  font-weight:500;
+  color:var(--text-muted);
+  margin:0;
+  padding:2px 8px;
+  border-radius:5px;
+  cursor:var(--cursor);
+}
+.style-settings-import:hover,
+.style-settings-export:hover {
+  background-color:var(--background-tertiary);
+  color:var(--text-normal);
+  cursor:var(--cursor);
 }
 
 
@@ -2221,6 +2257,9 @@ body:not(.is-mobile) .modal {
   font-size:var(--h2);
   line-height:1.4;
 }
+.modal:not(.mod-settings):not(.mod-publish):not(.mod-community-plugin):not(.mod-sync-log) .modal-content {
+  padding:20px 2px 5px;
+}
 .modal-content {
   margin-top:0px;
   padding:0;
@@ -2502,8 +2541,8 @@ body .sync-history-content-container textarea.sync-history-content:focus {
 .modal.mod-community-plugin,
 .modal.mod-settings {
   width:90vw;
-  height:100vh;
-  max-height:90vh;
+  height:90vh;
+  max-height:1000px;
   max-width:1000px;
 }
 .modal.mod-settings .vertical-tab-header,
@@ -2693,7 +2732,7 @@ body.is-dragging {
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   border-right:var(--border-width) solid var(--background-modifier-border);
-  width:1px !important;
+  width:8px !important;
   background:transparent;
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
@@ -3473,6 +3512,7 @@ input[type='password'],
 input[type='number'],
 button,
 .dropdown,
+body .addChoiceBox #addChoiceTypeSelector,
 .setting-item-control button {
   font-family:var(--font-ui);
   font-size:13px;
