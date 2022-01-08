@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'src/main.full.css' : 'src/scss/index.scss'
+                    'src/css/main.css' : 'src/scss/index.scss'
                 }
             },
             dist: {
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'src/css/main.css' : 'src/scss/index.scss'
+                    'src/css/main.min.css' : 'src/scss/index.scss'
                 }
             }
         },
@@ -44,18 +44,19 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'src/css/main.css' : 'src/css/main.css'
+                    'src/css/main.min.css' : 'src/css/main.min.css'
                 }
             }
         },
         concat_css: {
             dist: {
-                src: 'src/css/*.css',
-                dest: 'obsidian.css'
+                files: {
+                  'obsidian.css': ['src/css/license.css','src/css/main.min.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
+                }
             },
             local: {
                 files: {
-                  'Minimal.css': ['src/css/license.css','src/main.full.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
+                  'Minimal.css': ['src/css/license.css','src/css/main.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
                 }
             }
         },
