@@ -112,14 +112,19 @@ Minimal is frequently updated to stay current with the latest version of Obsidia
 ### Build instructions
 
 **Set up**
+
 ```
 sudo gem install sass
 npm install -g grunt-cli
 npm install
-````
+```
 
 **Define local path**
+
 To build directly into your Obsidian vault rename `.env.example` to `.env` and update `OBSIDIAN_PATH` to the local path of your Obsidian theme folder.
 
 **To run**
-`npx grunt`
+
+```
+npx grunt
+```
