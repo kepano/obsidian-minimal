@@ -13,14 +13,17 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 ## Goals
 
 - Simplify the Obsidian UI for a more focused editing experience
-- Create a native look and feel on MacOS, iOS and iPadOS
-- Make colors, fonts, and display features customizable
+- Follow native interface guidelines for MacOS, iOS and iPadOS
+- Make it easy to customize colors, fonts, and display features
+- Add advanced layout options for data-rich notes, such as card view, image grids, and full-width tables
 
 ## Screenshots
 
-![](assets/light-simple.png)
-![](lassets/ight-focus.png)
-![](assets/dark-complex.png)
+**Background styles** include low contrast, high contrast options an true black for OLED devices
+
+| ![](assets/minimal-light.png) | ![](assets/minimal-light-high-contrast.png) | ![](assets/minimal-light-white.png) |
+| - | - | - |
+| ![](assets/minimal-dark.png) | ![](assets/minimal-dark-low-contrast.png) | ![](assets/minimal-true-black.png) |
 
 ---
 
