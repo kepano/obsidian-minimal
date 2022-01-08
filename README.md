@@ -19,11 +19,12 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 ## Screenshots
 
-**Background styles** include low contrast, high contrast options an true black for OLED devices
+**Background styles** include low contrast, high contrast, and a true black option ideal for OLED devices
 
-| ![](assets/minimal-light.png) | ![](assets/minimal-light-high-contrast.png) | ![](assets/minimal-light-white.png) |
+| ![](assets/minimal-light.png) | ![](assets/minimal-dark.png) |
 | - | - | - |
-| ![](assets/minimal-dark.png) | ![](assets/minimal-dark-low-contrast.png) | ![](assets/minimal-true-black.png) |
+| ![](assets/minimal-light-high-contrast.png) | ![](assets/minimal-dark-low-contrast.png) |
+| ![](assets/minimal-light-white.png) | ![](assets/minimal-true-black.png) | 
 
 ---
 
