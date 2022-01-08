@@ -1,9 +1,8 @@
 # Minimal
 
-![](cover.png)
-
-
 Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217) ✨ 
+
+![](cover.png)
 
 Minimal is an Obsidian theme meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider).
 
@@ -25,7 +24,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 ---
 
-## Features
+## Features and options
 
 The following features can be toggled on/off using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin:
 
@@ -35,7 +34,7 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 - Hide sidebar borders
 - Trim filenames
 - Relationship lines
-- Use system default cursor for UI elements
+- Cursor options for UI elements
 - When using [Hider](https://github.com/kepano/obsidian-hider) to turn off menu ribbon, it can be accessed by hovering over the bottom left edge of the window
 - Click + hold to zoom in on images
 
@@ -43,8 +42,8 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 
 - [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)
 - [Hider](https://github.com/kepano/obsidian-hider)
-- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) (may conflict with Minimal Theme Settings plugin)
-- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) (recommended spine width 36px)
+- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) — may conflict with Minimal Theme Settings plugin
+- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
 - [CodeMirror Options](https://github.com/nothingislost/obsidian-codemirror-options)
