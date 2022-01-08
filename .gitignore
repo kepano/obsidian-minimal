@@ -1,7 +1,4 @@
 .DS_Store
 /node_modules
 .sass-cache/*
-
-package.json
-package-lock.json
-Gruntfile.js
+.env

@@ -95,6 +95,12 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 ![](lassets/ight-focus.png)
 ![](assets/dark-complex.png)
 
+### Disclaimer
+
+This theme is provided as is, and is focused on my personal use of Obsidian on Mac OS. As such it is not thoroughly tested across all operating systems and features of Obsidian. 
+
+This theme modifies significant parts of the Obsidian interface, so it might break with future updates. It may also be incompatible with other bits of custom CSS you have. The theme file is organized in such a way that you can comment out sections that may be causing conflicts.
+
 ### Distributing Minimal forks
 
 Minimal is licensed under the MIT License which allows you to modify and redistribute the code. The only requirement is that you must preserve the copyright and license notice in your CSS file. 
@@ -103,8 +109,17 @@ If you would like to distribute a fork of Minimal please keep my [Buy me a coffe
 
 Minimal is frequently updated to stay current with the latest version of Obsidian. To make it easy to stay current with the latest improvements, I recommend using [Github's fork feature](https://docs.github.com/en/get-started/quickstart/fork-a-repo) so that you can merge the latest changes into your fork. If you have any questions don't hesitate to reach me in the Obsidian Discord group. 
 
-### Disclaimer
+### Build instructions
 
-This theme is provided as is, and is focused on my personal use of Obsidian on Mac OS. As such it is not thoroughly tested across all operating systems and features of Obsidian. 
+**Set up**
+```
+sudo gem install sass
+npm install -g grunt-cli
+npm install
+````
 
-This theme modifies significant parts of the Obsidian interface, so it might break with future updates. It may also be incompatible with other bits of custom CSS you have. The theme file is organized in such a way that you can comment out sections that may be causing conflicts.
+**Define local path**
+To build directly into your Obsidian vault rename `.env.example` to `.env` and update `OBSIDIAN_PATH` to the local path of your Obsidian theme folder.
+
+**To run**
+`npx grunt`
