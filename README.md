@@ -29,14 +29,17 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 ## Screenshots
 
-**Background styles** include low contrast, high contrast, and a true black option ideal for OLED devices
+**Background styles** include low contrast, high contrast, and a true black option ideal for OLED devices.
 
 ![](assets/minimal-variants.png)
 
-
-**Helper classes** for tables and card layouts allow you to create beautiful visualizations, and powerful workflows
+**Helper classes** for tables and card layouts allow you to create powerful workflows.
 
 ![](assets/minimal-movies.png)
+
+Combining **image grid**, **image width** and **focus mode** allows you to immerse yourself in visual projects.
+
+![](assets/minimal-img-grid.png)
 
 ---
 
