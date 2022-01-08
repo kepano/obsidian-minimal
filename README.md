@@ -34,6 +34,10 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 ![](assets/minimal-variants.png)
 
 
+**Helper classes** for tables and card layouts allow you to create beautiful visualizations, and powerful workflows
+
+![](assets/minimal-movies.png)
+
 ---
 
 ## Customization
