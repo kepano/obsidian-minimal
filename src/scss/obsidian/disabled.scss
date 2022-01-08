@@ -1,0 +1,16 @@
+/* Disabled features */
+
+/* Search counts */
+.tree-item-flair:not(.tag-pane-tag-count) { 
+  display:none;
+}
+
+/* Folder name */
+.tree-item-inner-subtext { 
+  display:none;
+}
+
+/* Hides the name of the root folder */
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  display:none;
+}

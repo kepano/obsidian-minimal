@@ -1,0 +1,54 @@
+/* Default ribbon sidedock icons */
+
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,
+.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn {
+  opacity:1;
+  position:fixed;
+  width:26px;
+  display:flex;
+  align-items:center;
+  top:auto;
+  text-align:center;
+  bottom:32px;
+  z-index:9;
+} 
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  left:8px;
+}
+.workspace-ribbon.mod-right {
+  right:4px;
+  bottom:0;
+  height:32px;
+  padding-top:6px;
+  position:absolute;
+  background:transparent;
+  border:0;
+}
+.mod-right .workspace-ribbon-collapse-btn {
+  background-color:var(--background-primary);
+}
+.workspace-ribbon-collapse-btn,
+.view-action,
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action {
+  cursor:var(--cursor);
+}
+.workspace-ribbon-collapse-btn:hover {
+  background-color:var(--background-tertiary);
+}
+.workspace-ribbon {
+  border-width:var(--border-width-alt);
+  border-color:var(--background-modifier-border);
+  background:var(--background-secondary);
+  flex:0 0 42px;
+  padding-top:7px;
+}
+.mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split {
+  margin-right:0;
+}
+.side-dock-settings {
+  padding-bottom:20px;
+}
+body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
+  padding-top:24px;
+}

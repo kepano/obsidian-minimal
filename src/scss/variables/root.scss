@@ -1,0 +1,107 @@
+:root {
+
+  /* Colors
+
+  Most colors are driven from the following values, meaning that 
+  the backgrounds, borders, and various shades are 
+  automatically generated for you.
+
+  - Base color is used for the backgrounds, text and borders.
+  - Accent color is used for links and some interactive elements.
+
+  The colors use HSL (hue, saturation, lightness)
+
+  - Hue (0-360 degrees):0 is red, 120 is green, and 240 is blue
+  - Saturation (0-100%):0% is desaturated, 100% is full saturation
+  - Lightness (0-100%):0% is black, 100% is white
+
+  */
+  
+  --base-h:0;       /* Base hue */
+  --base-s:0%;      /* Base saturation */
+  --base-d:15%;     /* Base lightness Dark Mode  - 0 is black */
+  --base-l:96%;     /* Base lightness Light Mode  - 100 is white */
+  --accent-h:201;   /* Accent hue */
+  --accent-s:17%;   /* Accent saturation */
+  --accent-d:60%;   /* Accent lightness Dark Mode */
+  --accent-l:50%;   /* Accent lightness Light Mode */
+
+  /* Cursor */
+  --cursor:default;
+
+  /* Preview font */
+  --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  
+  /* Editor font */
+  --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  
+  /* Code font */
+  --font-monospace:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
+
+  /* UI font */
+  --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+  /* Font sizes */
+  --font-normal:16px;
+  --font-small:13px;
+  --font-smaller:11px;
+  --font-smallest:10px;
+  --font-title:1.1em;
+
+  /* Font weights */
+  --normal-weight:400;   /* Switch to 300 if you want thinner default text */
+  --bold-weight:600;     /* Switch to 700 if you want thicker bold text */
+
+  /* Headings */
+  --h1:1.125em;
+  --h2:1.05em;
+  --h3:1em;
+  --h4:0.90em;
+  --h5:0.85em;
+  --h6:0.85em;
+
+  --h1-weight:600;
+  --h2-weight:600;
+  --h3-weight:500;
+  --h4-weight:500;
+  --h5-weight:500;
+  --h6-weight:400;
+
+  --h1-variant:normal;
+  --h2-variant:normal;
+  --h3-variant:normal;
+  --h4-variant:small-caps;
+  --h5-variant:small-caps;
+  --h6-variant:small-caps;
+
+  /* Line widths */
+  --line-width:40rem;    /* Maximum characters per line */
+  --line-height:1.5;
+  --max-width:88%;       /* Amount of padding around the text, use 90% for narrower padding */
+  --max-col-width:18em;
+
+  --icon-muted:0.5;
+  --border-width:1px;
+  --border-width-alt:1px;
+
+  --folding-offset:16px;
+  --nested-padding:3.5%; /* Quotes and transclusions */
+  --list-padding:2em;    /* List padding */
+
+  --radius-s:2px;
+  --radius-m:5px;
+  --radius-l:10px;
+
+  --input-height:32px;
+  --header-height:40px;
+
+  --red:#d04255;
+  --yellow:#e5b567;
+  --green:#a8c373;
+  --orange:#e57e43;
+  --purple:#9e86c8;
+  --pink:#b05279;
+  --cyan:#73bbb2;
+  --blue:#6c99bb;
+
+}

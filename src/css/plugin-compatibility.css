@@ -1,0 +1,39 @@
+/* Plugin compatibility */
+
+/* @plugins
+core:
+- backlink
+- command-palette
+- daily-notes
+- file-explorer
+- file-recovery
+- global-search
+- graph
+- outgoing-link
+- outline
+- page-preview
+- publish
+- random-note
+- starred
+- switcher
+- sync
+- tag-pane
+- word-count
+community:
+- dataview
+- calendar
+- obsidian-checklist-plugin
+- obsidian-codemirror-options
+- obsidian-dictionary-plugin
+- obsidian-embedded-note-titles
+- obsidian-excalidraw-plugin
+- obsidian-git
+- obsidian-hider
+- obsidian-kanban
+- obsidian-minimal-settings
+- obsidian-outliner
+- obsidian-system-dark-mode
+- obsidian-style-settings
+- quickadd
+- sliding-panes-obsidian
+*/

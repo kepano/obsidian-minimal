@@ -1,0 +1,29 @@
+/* Outliner plugin (pre Live Preview) */
+
+body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
+  background-image:linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px);
+  background-position-x:2px;
+  background-size:var(--font-normal) 1px;
+}
+body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list {
+  letter-spacing:unset;
+}
+body.outliner-plugin-bls .cm-s-obsidian .HyperMD-list-line {
+  padding-top:0;
+}
+body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
+  color:var(--text-faint);
+  margin-left:-3px;
+  margin-top:-5px;
+}
+body.outliner-plugin-bls.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
+  content:"";
+  border-right:none;
+}
+body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul {
+  color:transparent !important;
+}
+body.outliner-plugin-bls .cm-s-obsidian:not(.is-live-preview) .cm-formatting-list-ul:before,
+body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
+  color:var(--text-faint);
+}

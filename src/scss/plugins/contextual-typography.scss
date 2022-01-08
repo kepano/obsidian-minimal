@@ -1,0 +1,31 @@
+/* Contextual Typography */
+
+.el-hr hr {
+  margin:1rem 0;
+}
+.el-h1,
+.el-h2 {
+  margin-top:0.75rem;
+}
+.el-hr + .el-h1,
+.el-hr + .el-h2,
+.el-h1 + .el-h1,
+.el-h1 + .el-h2,
+.el-h2 + .el-h2 {
+  margin-top:0rem;
+}
+.el-ol + .el-lang-dataview,
+.el-ul + .el-lang-dataview,
+.el-p:not(.el-lang-dataview) + .el-lang-dataview,
+.el-ol + .el-table,
+.el-ul + .el-table,
+.el-p + .el-table,
+.el-lang-dataview + .el-p {
+  margin-top:0.5rem;
+}
+.el-iframe + .el-p,
+.el-p + .el-iframe,
+.el-p:not(.el-embed-image) + .el-embed-image,
+.el-embed-image + .el-p:not(.el-embed-image) {
+  margin-top:1rem;
+}

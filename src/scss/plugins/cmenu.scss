@@ -1,0 +1,11 @@
+/* cMenu plugin */
+
+body #cMenuModalBar {
+  box-shadow:0px 2px 20px var(--shadow-color);
+}
+body #cMenuModalBar .cMenuCommandItem {
+  cursor:var(--cursor);
+}
+body #cMenuModalBar button.cMenuCommandItem:hover {
+  background-color:var(--background-tertiary);
+}

@@ -1,0 +1,17 @@
+/* Embedded searches */
+
+.markdown-preview-view .internal-query.is-embed {
+  border-top:none;
+  border-bottom:none;
+}
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
+  justify-content:start;
+}
+.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
+  font-weight:500;
+  color:var(--text-normal);
+  font-size:var(--h2);
+}
+.internal-query.is-embed .search-result-file-matches {
+  border-bottom:0;
+}

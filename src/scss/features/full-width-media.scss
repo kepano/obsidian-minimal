@@ -1,0 +1,7 @@
+/* Full width media  */
+
+.full-width-media .markdown-preview-view .image-embed img:not([width]),
+.full-width-media .markdown-preview-view audio,
+.full-width-media .markdown-preview-view video {
+  width:100%;
+}

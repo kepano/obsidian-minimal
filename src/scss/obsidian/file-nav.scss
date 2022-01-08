@@ -1,0 +1,194 @@
+/* File browser */
+
+.nav-header {
+  padding:0;
+}
+.nav-buttons-container {
+  padding:10px 5px 0px 8px;
+  margin-bottom:0px !important;
+  justify-content:flex-start;
+  border:0;
+}
+.nav-files-container {
+  overflow-x:hidden;
+  padding-bottom:50px;
+}
+.nav-folder-title {
+  margin:0 0 0 8px;
+  min-width:auto;
+  width:calc(100% - var(--folding-offset));
+  padding:0 10px 0 var(--folding-offset);
+  line-height:1.5;
+  cursor:var(--cursor);
+}
+.nav-folder.mod-root > .nav-folder-title.is-being-dragged-over {
+  background-color:var(--text-selection);
+}
+.nav-folder-title.is-being-dragged-over {
+  background-color:var(--text-selection);
+  border-color:var(--text-selection);
+  border-radius:var(--radius-m);
+  border:1px solid transparent;
+}
+.nav-folder-title-content {
+  padding:0px 4px 1px 0;
+}
+.nav-folder-collapse-indicator {
+  top:1px;
+  margin-left:-10px;
+}
+
+.nav-file {
+  margin-left:12px;
+  padding-right:4px;
+}
+.nav-file-title {
+  width:calc(100% - 30px);
+  margin:0 8px 0 -4px;
+  padding:2px 2px;
+  border-width:0;
+  line-height:1.6;
+  border-color:var(--background-secondary);
+  border-radius:var(--radius-m);
+  cursor:var(--cursor);
+}
+.nav-file-title.is-being-dragged,
+.nav-file-title.is-active,
+body:not(.is-grabbing) .nav-file-title.is-active:hover {
+  background-color:var(--background-tertiary);
+  color:var(--text-normal);
+}
+.nav-file-title-content {
+  width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  padding:0 5px;
+  vertical-align:middle;
+  cursor:var(--cursor);
+}
+.drop-indicator {
+  border-width:1px;
+}
+.nav-file-icon {
+  margin:1px 0 0 0;
+  vertical-align:bottom;
+  padding:0 0 0 5px;
+}
+.workspace-leaf-content[data-type=starred] .nav-file-title-content {
+  width:calc(100% - 15px);
+}
+.workspace-leaf-content[data-type=starred] .nav-file-icon {
+  opacity:0.5;
+}
+body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator,
+body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator,
+body:not(.is-grabbing) .nav-file-title:hover,
+body:not(.is-grabbing) .nav-folder-title:hover {
+  background:transparent;
+}
+.nav-file-title,
+.tree-item-self,
+.nav-folder-title,
+.is-collapsed .search-result-file-title,
+.tag-pane-tag {
+  font-size:var(--font-adaptive-small);
+  color:var(--text-muted);
+}
+.search-result-file-title {
+  font-size:var(--font-adaptive-small);
+  color:var(--text-normal);
+  font-weight:var(--normal-weight);
+}
+.side-dock-collapsible-section-header {
+  font-size:var(--font-adaptive-small);
+  color:var(--text-muted);
+  cursor:var(--cursor);
+  margin-right:0;
+  margin-left:0;
+}
+.side-dock-collapsible-section-header:hover,
+.side-dock-collapsible-section-header:not(.is-collapsed) {
+  color:var(--text-muted);
+  background:transparent;
+}
+.tree-view-item-self:hover .tree-view-item-collapse,
+.collapsible-item-self.is-clickable:hover {
+  color:var(--text-muted);
+  background:transparent;
+  cursor:var(--cursor);
+}
+.collapsible-item-self.is-clickable {
+  cursor:var(--cursor);
+}
+.search-result-collapse-indicator svg,
+.search-result-file-title:hover .search-result-collapse-indicator svg,
+.side-dock-collapsible-section-header-indicator:hover svg,
+.side-dock-collapsible-section-header:hover .side-dock-collapsible-section-header-indicator svg,
+.markdown-preview-view .collapse-indicator svg,
+.tree-view-item-collapse svg,
+.is-collapsed .search-result-collapse-indicator svg,
+.nav-folder-collapse-indicator svg,
+.side-dock-collapsible-section-header-indicator svg,
+.is-collapsed .side-dock-collapsible-section-header-indicator svg {
+  color:var(--text-faint);
+  cursor:var(--cursor);
+}
+.search-result-collapse-indicator,
+.search-result-file-title:hover .search-result-collapse-indicator,
+.side-dock-collapsible-section-header-indicator:hover,
+.side-dock-collapsible-section-header:hover .side-dock-collapsible-section-header-indicator,
+.markdown-preview-view .collapse-indicator,
+.tree-view-item-collapse,
+.is-collapsed .search-result-collapse-indicator,
+.nav-folder-collapse-indicator,
+.side-dock-collapsible-section-header-indicator,
+.is-collapsed .side-dock-collapsible-section-header-indicator {
+  color:var(--text-faint);
+  cursor:var(--cursor);
+}
+.nav-folder-title.is-being-dragged-over .nav-folder-collapse-indicator svg {
+  color:var(--text-normal);
+}
+
+
+/* --------------- */
+/* Nested items */
+
+.nav-folder-collapse-indicator,
+.tree-item-self .collapse-icon {
+  color:var(--background-modifier-border-hover);
+}
+.tree-item-self .collapse-icon {
+  padding-left:0;
+  width:15px;
+  margin-left:-15px;
+}
+.tree-item-self:hover .collapse-icon {
+  color:var(--text-normal);
+}
+.tree-item {
+  padding-left:5px;
+}
+.tree-item-flair {
+  font-size:var(--font-adaptive-smaller);
+  right:0;
+  background:transparent;
+  color:var(--text-faint);
+}
+.tree-item-flair-outer:after {
+  content:'';
+}
+.tree-item-self.is-clickable {
+  cursor:var(--cursor);
+}
+.tree-item-self.is-clickable:hover {
+  background:transparent;
+}
+.tree-item-self:hover .tree-item-flair {
+  background:transparent;
+  color:var(--text-muted);
+}
+.tree-item-children {
+  margin-left:5px;
+}

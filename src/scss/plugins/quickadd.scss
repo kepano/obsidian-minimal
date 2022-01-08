@@ -1,0 +1,19 @@
+/* QuickAdd plugin */
+
+.modal .quickAddPrompt > h1,
+.modal .quickAddYesNoPrompt h1 {
+  margin-top:0;
+  text-align:left !important;
+  font-size:var(--h1);
+  font-weight:600;
+}
+.modal .quickAddYesNoPrompt p {
+  text-align:left !important;
+}
+.modal .quickAddYesNoPrompt button {
+  font-size: var(--font-settings-small);
+}
+.modal .yesNoPromptButtonContainer {
+  font-size: var(--font-settings-small);
+  justify-content:flex-end;
+}

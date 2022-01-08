@@ -1,0 +1,13 @@
+/* Turn off file name trimming */
+
+.full-file-names .tree-item-inner,
+.full-file-names .nav-file-title-content,
+.full-file-names .search-result-file-title {
+    text-overflow:unset;
+    white-space:normal;
+    line-height:1.4;
+}
+
+.full-file-names .nav-file-title {
+    margin-bottom:3px;
+}

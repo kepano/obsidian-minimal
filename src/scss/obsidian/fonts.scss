@@ -1,0 +1,123 @@
+/* Headings and fonts */
+
+h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
+h1,h2,h3,h4 {letter-spacing:-0.02em;} 
+
+body, input, button  {
+  font-family:var(--font-ui);
+}
+
+.popover,
+.vertical-tab-content-container,
+.workspace-leaf-content[data-type=markdown] {
+  font-family:var(--text)
+}
+body, input, button,
+.markdown-preview-view,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian {
+  font-size:var(--font-adaptive-normal);
+  font-weight:var(--normal-weight);
+  line-height:var(--line-height);
+  -webkit-font-smoothing:subpixel-antialiased;
+}
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-source-view,
+.cm-s-obsidian .cm-formatting-hashtag, 
+.cm-s-obsidian,
+.cm-s-obsidian span.cm-formatting-task {
+  line-height:var(--line-height);
+  font-family:var(--text-editor);
+}
+.cm-s-obsidian span.cm-formatting-task {
+  font-family:var(--text-editor);
+  line-height:var(--line-height);
+}
+.cm-s-obsidian .cm-header,
+.cm-s-obsidian .cm-strong {
+  font-weight:var(--bold-weight);
+}
+strong,
+.cm-s-obsidian .cm-strong {
+  color:var(--text-bold);
+}
+em,
+.cm-s-obsidian .cm-em {
+  color:var(--text-italic);
+}
+.cm-formatting-header,
+.cm-s-obsidian .cm-formatting-header.cm-header-1,
+.cm-s-obsidian .cm-formatting-header.cm-header-2,
+.cm-s-obsidian .cm-formatting-header.cm-header-3,
+.cm-s-obsidian .cm-formatting-header.cm-header-4,
+.cm-s-obsidian .cm-formatting-header.cm-header-5,
+.cm-s-obsidian .cm-formatting-header.cm-header-6 {
+  color:var(--text-faint);
+}
+.view-header-title,
+.file-embed-title,
+.markdown-embed-title {
+  letter-spacing:-0.02em;
+  text-align:left;
+  font-size:var(--font-title);
+  font-weight:var(--bold-weight);
+}
+h1,
+.empty-state-title,
+.markdown-preview-view h1,
+.markdown-source-view.mod-cm6 .HyperMD-header-1 > .cm-fold-indicator,
+.cm-s-obsidian .cm-header-1 {
+  font-variant:var(--h1-variant);
+  letter-spacing:-0.02em;
+  line-height:1.3;
+  font-size:var(--h1);
+  color:var(--h1-color);
+  font-weight:var(--h1-weight);
+}
+.markdown-preview-view h2,
+.markdown-source-view.mod-cm6 .HyperMD-header-2 > .cm-fold-indicator,
+.cm-s-obsidian .cm-header-2 {
+  font-variant:var(--h2-variant);
+  letter-spacing:-0.02em;
+  line-height:1.3;
+  font-size:var(--h2);
+  color:var(--h2-color);
+  font-weight:var(--h2-weight);
+}
+.markdown-preview-view h3,
+.markdown-source-view.mod-cm6 .HyperMD-header-3 > .cm-fold-indicator,
+.cm-s-obsidian .cm-header-3 {
+  font-variant:var(--h3-variant);
+  letter-spacing:-0em;
+  line-height:1.4;
+  font-size:var(--h3);
+  color:var(--h3-color);
+  font-weight:var(--h3-weight);
+}
+.markdown-preview-view h4,
+.markdown-source-view.mod-cm6 .HyperMD-header-4 > .cm-fold-indicator,
+.cm-s-obsidian .cm-header-4 {
+  font-variant:var(--h4-variant);
+  letter-spacing:0.02em;
+  font-size:var(--h4);
+  color:var(--h4-color);
+  font-weight:var(--h4-weight);
+}
+.markdown-preview-view h5,
+.markdown-source-view.mod-cm6 .HyperMD-header-5 > .cm-fold-indicator,
+.cm-s-obsidian .cm-header-5 {
+  font-variant:var(--h5-variant);
+  letter-spacing:0.02em;
+  font-size:var(--h5);
+  color:var(--h5-color);
+  font-weight:var(--h5-weight);
+}
+.markdown-preview-view h6,
+.markdown-source-view.mod-cm6 .HyperMD-header-6 > .cm-fold-indicator,
+.cm-s-obsidian .cm-header-6 {
+  font-variant:var(--h6-variant);
+  letter-spacing:0.02em;
+  font-size:var(--h6);
+  color:var(--h6-color);
+  font-weight:var(--h6-weight);
+}

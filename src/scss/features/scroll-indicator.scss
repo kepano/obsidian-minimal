@@ -1,0 +1,42 @@
+/* Scroll indicator for sidebar containers */
+
+body:not(.is-mobile) .item-list,
+body:not(.is-mobile) .nav-files-container,
+body:not(.is-mobile) .workspace-leaf-content[data-type='search'] .search-result-container {
+  background:
+    linear-gradient(
+      var(--background-secondary) 10%,
+      rgba(255, 255, 255, 0)
+    )
+    center top,
+    linear-gradient(
+      var(--background-modifier-border) 100%,
+      rgba(0, 0, 0, 0)
+    )
+    center top;  
+}
+body:not(.is-mobile) .tag-container,
+body:not(.is-mobile) .outgoing-link-pane,
+body:not(.is-mobile) .backlink-pane {
+  background:
+    linear-gradient(
+      var(--background-primary) 10%,
+      rgba(255, 255, 255, 0)
+    )
+    center top,
+    linear-gradient(
+      var(--background-modifier-border) 100%,
+      rgba(0, 0, 0, 0)
+    )
+    center top;
+}
+body:not(.is-mobile) .item-list,
+body:not(.is-mobile) .nav-files-container,
+body:not(.is-mobile) .workspace-leaf-content[data-type='search'] .search-result-container,
+body:not(.is-mobile) .tag-container,
+body:not(.is-mobile) .outgoing-link-pane,
+body:not(.is-mobile) .backlink-pane {
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 91% var(--border-width);
+  background-attachment: local, scroll;
+}

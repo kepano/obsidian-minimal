@@ -1,0 +1,34 @@
+/* Sidebar documents */
+
+.workspace > .workspace-split:not(.mod-root) .CodeMirror,
+.workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
+  font-size:var(--font-adaptive-small);
+  line-height:1.2;}
+.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .markdown-preview-view {
+  padding:0 15px;
+}
+.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .markdown-embed .markdown-preview-view {
+  padding:0;
+}
+.workspace > .workspace-split:not(.mod-root) .CodeMirror,
+.workspace > .workspace-split:not(.mod-root) .markdown-preview-section,
+.workspace > .workspace-split:not(.mod-root) .markdown-preview-sizer {
+  max-width:100%;
+  padding:0;
+  width:auto;
+}
+
+.minimal-folding .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
+.minimal-folding .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
+  padding-left:0;
+}
+
+/* Hide embed styling for sidebar documents */
+.workspace > .workspace-split:not(.mod-root) .internal-embed .markdown-embed {
+  border:none;
+  padding:0;
+}
+
+.workspace > .workspace-split:not(.mod-root) .CodeMirror-sizer {
+  padding-left:10px;
+}

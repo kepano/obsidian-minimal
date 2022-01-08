@@ -1,0 +1,23 @@
+/* Links and underline handling*/
+
+body:not(.links-int-on) a[href*="obsidian://"],
+body:not(.links-int-on) .markdown-preview-view .internal-link,
+body:not(.links-ext-on) .external-link,
+body:not(.links-ext-on) .cm-link .cm-underline,
+body:not(.links-ext-on) .cm-s-obsidian span.cm-url,
+body:not(.links-int-on) .cm-hmd-internal-link .cm-underline,
+body:not(.links-int-on) a.internal-link,
+body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
+  text-decoration:none;
+}
+.links-int-on .is-live-preview .cm-hmd-internal-link,
+.links-int-on .markdown-preview-view .internal-link,
+.links-int-on .cm-s-obsidian span.cm-hmd-internal-link,
+.markdown-preview-view .internal-link {
+  text-decoration:underline;
+}
+.links-ext-on .external-link,
+.external-link {
+  background-position-y:center;
+  text-decoration:underline;
+}

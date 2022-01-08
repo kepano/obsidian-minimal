@@ -91,9 +91,9 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 
 ### Gallery
 
-![](light-simple.png)
-![](light-focus.png)
-![](dark-complex.png)
+![](assets/light-simple.png)
+![](lassets/ight-focus.png)
+![](assets/dark-complex.png)
 
 ### Distributing Minimal forks
 

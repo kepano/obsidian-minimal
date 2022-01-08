@@ -1,0 +1,45 @@
+/* Preview mode tables */
+
+.markdown-source-view.mod-cm6 table {
+  border-collapse:collapse; 
+}
+.markdown-preview-view table {
+  margin-block-start:1em;
+}
+
+.markdown-source-view.mod-cm6 td,
+.markdown-source-view.mod-cm6 th,
+.markdown-preview-view th,
+.markdown-preview-view td {
+  padding:4px 10px;
+}
+
+.markdown-source-view.mod-cm6 td,
+.markdown-preview-view td {
+  font-size:calc(var(--font-adaptive-normal) - 2px);
+}
+
+.markdown-source-view.mod-cm6 th,
+.markdown-preview-view th {
+  font-weight:var(--bold-weight);
+  font-size:calc(var(--font-adaptive-normal) - 2px);
+  text-align:left;
+  border-top:none;
+}
+.markdown-source-view.mod-cm6 th:last-child,
+.markdown-source-view.mod-cm6 td:last-child,
+.markdown-preview-view th:last-child,
+.markdown-preview-view td:last-child {
+  border-right:none;
+}
+.markdown-source-view.mod-cm6 th:first-child,
+.markdown-source-view.mod-cm6 td:first-child,
+.markdown-preview-view th:first-child,
+.markdown-preview-view td:first-child {
+  border-left:none;
+  padding-left:0;
+}
+.markdown-source-view.mod-cm6 tr:last-child td,
+.markdown-preview-view tr:last-child td {
+  border-bottom:none;
+}

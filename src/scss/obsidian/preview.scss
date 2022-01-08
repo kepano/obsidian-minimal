@@ -1,0 +1,149 @@
+/* Preview mode  */
+
+.markdown-preview-view hr {
+  height:1px;
+  border-width:2px 0 0 0;
+}
+a[href*="obsidian://search"] {
+  background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'><path fill='black' stroke='black' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'></path></svg>");
+}
+.theme-dark a[href*="obsidian://search"] {
+  background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'><path fill='white' stroke='white' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'></path></svg>");
+}
+
+.is-live-preview.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.is-live-preview.cm-s-obsidian span.cm-url:hover,
+.is-live-preview.cm-s-obsidian span.cm-link:hover {
+  color:var(--text-accent-hover);
+}
+
+.footnotes-list {
+  margin-block-start:-10px;
+  padding-inline-start:20px;
+  font-size:var(--font-adaptive-small);
+}
+.footnotes-list p {
+  display:inline;
+  margin-block-end:0;
+  margin-block-start:0;
+}
+.footnote-ref a {
+  text-decoration:none;
+}
+.footnote-backref {
+  color:var(--text-faint);
+}
+iframe {
+  border:0;
+}
+.markdown-preview-view .mod-highlighted {
+  transition:background-color 0.3s ease;
+  background-color:var(--text-selection);
+  color:inherit;
+}
+
+/* Audio files */
+.theme-dark audio {
+  filter:none;
+}
+.theme-dark audio::-webkit-media-controls-panel {
+  filter:invert(1);
+}
+audio {
+  height:36px;
+  border-radius:4px;
+}
+audio::-webkit-media-controls-enclosure {
+  border:1px solid var(--background-modifier-border);
+  background-color:var(--background-secondary);
+}
+audio::-webkit-media-controls-current-time-display {
+  color:var(--text-normal);
+  filter:invert(1);
+  text-shadow:none;
+}
+audio::-webkit-media-controls-time-remaining-display {
+  color:var(--text-faint);
+  filter:invert(1);
+  text-shadow:none;
+}
+audio::-webkit-media-controls-panel {
+  padding:0;
+}
+
+
+/* Blockquotes */
+.markdown-preview-view blockquote {
+  border-radius:0;
+  border:solid var(--quote-opening-modifier);
+  border-width:0px 0px 0px 1px;
+  background-color:transparent;
+  color:var(--text-muted);
+  padding:0 0 0 calc(var(--nested-padding) / 2);
+  margin-inline-start:var(--nested-padding);
+}
+
+/* Preview Mode Lists  */
+ul {
+  padding-inline-start:var(--list-padding); }
+ol {
+  padding-inline-start:1em;
+  margin-left:1em;
+  list-style:default;
+}
+ul > li {
+  min-height:1.4em;
+}
+ul > li::marker,
+ol > li::marker {
+  color:var(--text-faint);
+}
+ol > li {
+  margin-left:0em;}
+
+/* Code */
+.markdown-preview-view pre,
+.markdown-preview-view code,
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock {
+  color:var(--text-code);
+  font-size:0.85em;
+}
+button.copy-code-button {
+  cursor:var(--curosor);
+  box-shadow:none;
+  font-size:var(--font-adaptive-smaller);
+  background-color:transparent;
+  color:var(--text-faint);
+  padding:0.25em 0.75em;
+}
+button.copy-code-button:hover {
+  background-color:var(--background-button);
+  color:var(--text-muted);
+}
+.theme-light :not(pre) > code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  background-color:var(--background-primary-alt);
+}
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  text-shadow:none;
+}
+
+.cm-s-obsidian .hmd-fold-html-stub,
+.cm-s-obsidian .hmd-fold-code-stub,
+.cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian .cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock,
+.cm-s-obsidian .HyperMD-hr,
+.cm-s-obsidian .cm-hmd-frontmatter,
+.cm-s-obsidian .cm-hmd-orgmode-markup,
+.cm-s-obsidian .cm-formatting-code,
+.cm-s-obsidian .cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder,
+.cm-s-obsidian .CodeMirror-linewidget kbd,
+.cm-s-obsidian .hmd-fold-html kbd
+.CodeMirror-code {
+  font-family:var(--font-monospace);
+}

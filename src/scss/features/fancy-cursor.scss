@@ -1,0 +1,34 @@
+/* Fancy cursor */
+
+.fancy-cursor .CodeMirror-cursor {
+  border:none;
+  border-left:2px solid var(--text-accent);
+}
+.cm-fat-cursor .CodeMirror-cursor { 
+  background-color:var(--text-accent); 
+  opacity:0.5; 
+  width:5px; 
+} 
+.cm-animate-fat-cursor { 
+  background-color:var(--text-accent); 
+  opacity:0.5; 
+  width:5px; 
+}
+
+
+/* Live Preview */
+
+body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-line {
+  caret-color:transparent;
+}
+body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
+  width:0;
+  border:none;
+  border-left:2px solid var(--text-accent);
+}
+body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
+  margin-left:1px;
+}
+.is-mobile.fancy-cursor .mod-cm6 .cm-line .mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) .task-list-item-checkbox{
+  caret-color:var(--text-accent);
+}

@@ -1,0 +1,63 @@
+/* Focus mode */
+
+.workspace-ribbon.mod-left {
+  border-left:0;
+}
+.workspace-ribbon.mod-left.is-collapsed {
+  border-color:transparent;
+  background-color:transparent;
+}
+.minimal-focus-mode .workspace-ribbon.mod-left {
+  background-color:var(--background-secondary);
+  transition:background-color 0s linear 0s;
+}
+.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed,
+.minimal-focus-mode .workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn {
+  opacity:0;
+  transition:opacity 0.1s ease-in-out 0.1s;
+}
+.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover,
+.minimal-focus-mode .workspace-ribbon.is-collapsed:hover .workspace-ribbon-collapse-btn {
+  opacity:1;
+}
+.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+  margin-right:0px;
+}
+body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
+  border-right:none;
+}
+.minimal-focus-mode .status-bar {
+  opacity:0;
+}
+.minimal-focus-mode .status-bar:hover {
+  opacity:1;
+  transition:opacity 0.2s ease-in-out;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+  opacity:0;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  transition:opacity 0.2s ease-in-out;
+  background-color:var(--background-primary);
+  z-index:9999;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header:hover {
+  opacity:1;
+  transition:opacity 0.2s ease-in-out;
+}
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content {
+  height:100%;
+}
+.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
+  margin-top:var(--header-height);
+}
+.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
+  margin-top:calc(var(--header-height) - 10px);
+}
+/*
+.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .document-search-container {
+  top:0px;
+  z-index:99999;
+} */

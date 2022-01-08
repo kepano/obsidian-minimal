@@ -1,0 +1,33 @@
+/* Drag ghost */
+
+body.is-dragging {
+  cursor:grabbing;
+  cursor:-webkit-grabbing;
+}
+
+.workspace-drop-overlay:before,
+.mod-drag,
+.drag-ghost {
+  opacity:0;
+  border-radius:0 !important;} 
+
+.mod-drag {
+  opacity:0;
+  border:2px solid var(--text-accent);
+  background-color:var(--background-primary);} 
+
+.view-header.is-highlighted:after {
+  background-color:var(--text-selection);} 
+.view-header.is-highlighted .view-actions {
+  background:transparent;
+}
+
+/*
+.workspace-fake-target-overlay,
+.workspace-fake-target-overlay.is-in-sidebar,
+.workspace-drop-overlay,
+.view-header.is-highlighted:after {
+  opacity:0;
+  background-color:var(--background-primary);
+}
+*/
