@@ -36,6 +36,8 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 
 ---
 
+## Usage
+
 ### CSS helper classes
 
 The following classes can be added on a per-file basis using the `cssClasses` [YAML front matter key](https://help.obsidian.md/Advanced+topics/YAML+front+matter). The classes are composable, so you can include more than one to combine effects.
@@ -99,11 +101,7 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 
 ---
 
-### Disclaimer
-
-This theme is provided as is, and is focused on my personal use of Obsidian on Mac OS. As such it is not thoroughly tested across all operating systems and features of Obsidian. 
-
-This theme modifies significant parts of the Obsidian interface, so it might break with future updates. It may also be incompatible with other bits of custom CSS you have. The theme file is organized in such a way that you can comment out sections that may be causing conflicts.
+## Developers
 
 ### Distributing Minimal forks
 
@@ -132,3 +130,13 @@ To build directly into your Obsidian vault rename `.env.example` to `.env` and u
 ```
 npx grunt
 ```
+
+This builds two files, the `obsidian.css` distribution file which is minified and also copied to your vault for live reload, and the `Minimal.css` file which is an unminified concatenated copy in the project root.
+
+---
+
+## Disclaimer
+
+This theme is provided as is, and is focused on my personal use of Obsidian on Mac OS. As such it is not thoroughly tested across all operating systems and features of Obsidian. 
+
+This theme modifies significant parts of the Obsidian interface, so it might break with future updates. It may also be incompatible with other bits of custom CSS you have. The theme file is organized in such a way that you can comment out sections that may be causing conflicts.
