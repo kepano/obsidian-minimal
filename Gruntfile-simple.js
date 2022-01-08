@@ -53,7 +53,7 @@ module.exports = function(grunt) {
                 src: 'src/css/*.css',
                 dest: 'obsidian.css'
             },
-            local: {
+            unminified: {
                 files: {
                   'Minimal.css': ['src/css/license.css','src/main.full.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
                 }
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: ['src/**/*.scss','src/**/*.css'],
-                tasks: ['env','sass:unminified','sass:dist','cssmin','concat_css','copy',]
+                tasks: ['env','sass:dist','cssmin','concat_css:dist','copy','sass:unminified','concat_css:unminified']
             }
         }
     });
