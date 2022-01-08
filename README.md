@@ -10,6 +10,16 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=kepano&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
 
+## About Minimal
+
+- [Goals](#goals)
+- [Screenshots](#screenshots)
+- [Customization](#customization)
+- [Plugin support](#plugin-support)
+- [Documentation](#documentation)
+- [Developers](#developers)
+- [Disclaimer](#disclaimer)
+
 ## Goals
 
 - Simplify the Obsidian UI for a more focused editing experience
@@ -28,7 +38,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 ---
 
-## Features and options
+## Customization
 
 The following features can be toggled on/off using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin:
 
@@ -42,7 +52,7 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 - When using [Hider](https://github.com/kepano/obsidian-hider) to turn off menu ribbon, it can be accessed by hovering over the bottom left edge of the window
 - Click + hold to zoom in on images
 
-### Plugin support
+## Plugin support
 
 - [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)
 - [Hider](https://github.com/kepano/obsidian-hider)
