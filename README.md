@@ -3,7 +3,7 @@
 ![](cover.png)
 
 
-✨ Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217)!
+Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217) ✨ 
 
 Minimal is an Obsidian theme meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider).
 
@@ -36,12 +36,8 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 - Trim filenames
 - Relationship lines
 - Use system default cursor for UI elements
-
-### Other enhancements
-
 - When using [Hider](https://github.com/kepano/obsidian-hider) to turn off menu ribbon, it can be accessed by hovering over the bottom left edge of the window
 - Click + hold to zoom in on images
-- Use `#invert` to invert images in dark mode, e.g. `![[image.jpeg#invert]]`
 
 ### Plugin support
 
@@ -60,6 +56,10 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 
 ## Documentation
+
+### Image filters
+
+- Use `#invert` to invert images in dark mode, e.g. `![[image.jpeg#invert]]`
 
 ### CSS helper classes
 
@@ -133,7 +133,6 @@ npx grunt
 
 This builds two files, the `obsidian.css` distribution file which is minified and also copied to your vault for live reload, and the `Minimal.css` file which is an unminified concatenated copy in the project root.
 
----
 
 ## Disclaimer
 
