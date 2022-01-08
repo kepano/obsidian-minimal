@@ -31,10 +31,8 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 **Background styles** include low contrast, high contrast, and a true black option ideal for OLED devices
 
-| ![](assets/minimal-light.png) | ![](assets/minimal-dark.png) |
-| - | - |
-| ![](assets/minimal-light-high-contrast.png) | ![](assets/minimal-dark-low-contrast.png) |
-| ![](assets/minimal-light-white.png) | ![](assets/minimal-true-black.png) |
+![](assets/minimal-variants.png)
+
 
 ---
 
@@ -69,6 +67,8 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 
 ## Documentation
+
+Further documentation can be found at [publish.obsdian.md/kepano](https://publish.obsidian.md/kepano)
 
 ### Image filters
 
