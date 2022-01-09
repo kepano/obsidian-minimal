@@ -139,7 +139,7 @@ Controls the width of elements by type. [Learn more.](https://github.com/kepano/
 
 ### Cards
 
-Using `cards` transforms Dataview tables cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable). Compatible with table width classes.
+Using `cards` transforms Dataview tables cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable). Compatible with table width classes.  Note that `cards` must be present for the other classes to work.
 
 | Class                | Description                                    |
 | :------------------- | :--------------------------------------------- |
