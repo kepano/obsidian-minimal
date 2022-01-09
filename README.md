@@ -121,14 +121,14 @@ cssClasses: cards
 ```
 
 ### Image grids
-Turns consecutive images into columns. To make a new row, add an extra line break between images. [See screenshots →](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
+Turns consecutive images into columns. To make a new row, add an extra line break between images. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
 
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
 | `img-grid`     | Activate image grids |
 
 ### Line width control for tables, images and iframes
-Controls the width of elements by type. [See screenshots →](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
+Controls the width of elements by type. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
 
 | Class                                   | Description                           |
 | :-------------------------------------- | :------------------------------------ |
@@ -152,7 +152,7 @@ Using `cards` transforms Dataview tables cards that can be sorted using the [Sor
 
 ### Tables and Dataview
 
-Controls the row and column styling for tables. [See screenshots →](https://github.com/kepano/obsidian-minimal/releases/tag/4.1.7)
+Controls the row and column styling for tables. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.1.7)
 
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
