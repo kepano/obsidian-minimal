@@ -3937,7 +3937,8 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
 /* Circle */
 span[src$="#circle"] img,
 span[src$="#round"] img {
-  border-radius: 50%; }
+  border-radius: 50%;
+  aspect-ratio: 1/1; }
 
 /* Image grid */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
