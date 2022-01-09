@@ -45,11 +45,9 @@ Minimal plays well with dozens of popular plugins like **Kanban**, **Dataview**,
 
 ![](assets/minimal-plugins.png)
 
----
-
 ## Customization
 
-The following features can be toggled on/off using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin:
+The following features can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin or Style Settings (more on this below)
 
 - Background styles for light and dark mode, including True Black for OLED devices
 - Focus mode — hides everything but the text when sidebars are collapsed
@@ -67,9 +65,10 @@ For customization use [Minimal Theme Settings](https://github.com/kepano/obsidia
 
 [Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements. When using Hider to turn off menu ribbon, it can be accessed by hovering over the bottom left edge of the window.
 
-### Plugins
+### Community plugins
 
-- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
+Most plugins work well with Minimal, but these plugins have received special love and attention:
+
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
@@ -79,6 +78,7 @@ For customization use [Minimal Theme Settings](https://github.com/kepano/obsidia
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 - [QuickAdd](https://github.com/chhoumann/quickadd)
+- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
 
 ## Documentation
 
@@ -89,7 +89,7 @@ Further documentation can be found at [publish.obsdian.md/kepano](https://publis
 Filters can be added to images to create the following effects. Use them by adding the filter name at the end of the image link, e.g. `![[image.jpeg#invert]]`
 
 | Filter          | Description                                         |
-| -------------- | --------------------------------------------------- |
+|: -------------- | :-------------------------------------------------- |
 | `#invert` | Invert images in dark mode (great for charts and handwriting) |
 | `#circle` | Crop image to a circle |
 
@@ -101,13 +101,13 @@ The following classes can be added on a per-file basis using the `cssClasses` [Y
 Turns consecutive images into columns. To make a new row, add an extra line break between images.
 
 | Class          | Description                                         |
-| -------------- | --------------------------------------------------- |
+| :------------- | :-------------------------------------------------- |
 | `img-grid` | Activate image grids |
 
 #### Line width control for tables, images and iframes
 
 | Class                                   | Description                           |
-| --------------------------------------- | ------------------------------------- |
+| :-------------------------------------- | :------------------------------------ |
 | `table-100`, `img-100`, `iframe-100`    | Fill 100% of the pane width           |
 | `table-max`, `img-max`, `iframe-max`    | Fill the max line width (default 88%) |
 | `table-wide`, `img-wide`, `iframe-wide` | Fill the wide line width              |
@@ -115,7 +115,7 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 #### Embeds and transclusions
 
 | Class          | Description                                         |
-| -------------- | --------------------------------------------------- |
+| :------------- | :-------------------------------------------------- |
 | `embed-strict` | Transclusions appear seamlessly in the flow of text |
 
 

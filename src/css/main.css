@@ -3724,7 +3724,8 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
 .theme-light span[src$="invertW"] img {
   filter: invert(1) hue-rotate(180deg); }
 
-/* Round */
+/* Circle */
+span[src$="#circle"] img,
 span[src$="#round"] img {
   border-radius: 50%; }
 

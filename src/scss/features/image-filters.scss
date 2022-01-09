@@ -10,7 +10,6 @@
 }
 
 /* Invert  */
-
 .theme-dark div[src$="#invert"] img,
 .theme-dark span[src$="#invert"] img {
   filter:invert(1) hue-rotate(180deg);
@@ -25,8 +24,8 @@
   filter:invert(1) hue-rotate(180deg);
 }
 
-/* Round */
-
+/* Circle */
+span[src$="#circle"] img,
 span[src$="#round"] img {
   border-radius:50%;
 }
