@@ -1,11 +1,22 @@
+/* Minimal by @kepano */
+/* MIT License */
+
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        /* Get the user-defined OBSIDIAN_PATH from .env file 
+           so that we can live reload the theme in the vault */ 
+
         env : {
             local : {
               src : ".env"
             }
         },
+
+        /* Compile the compressed and uncompressed versions of
+        the theme using Sass */ 
+
         sass: {
             unminified: {
                 options: {
@@ -25,16 +36,9 @@ module.exports = function(grunt) {
                 }
             }
         },
-        copy: {
-            local: { 
-                expand: true,
-                src: 'obsidian.css',
-                dest: process.env.HOME + process.env.OBSIDIAN_PATH,
-                rename: function(dest, src) {
-                   return dest + 'Minimal.css';
-                } 
-            }
-        },
+
+        /* Minify theme */
+
         cssmin: {
             options: {
                 advanced: false,
@@ -48,18 +52,40 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+        /* Concatenate theme files adding in the commented license, plugin compatibility, 
+           and Style Settings that would otherwise be removed in compression.
+        */
+
         concat_css: {
             dist: {
                 files: {
                   'obsidian.css': ['src/css/license.css','src/css/main.min.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
                 }
             },
-            local: {
+            unminified: {
                 files: {
                   'Minimal.css': ['src/css/license.css','src/css/main.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
                 }
             }
         },
+
+        /* Copy the finished file from the working directory to the vault directory
+        and use correct theme name */ 
+
+        copy: {
+            local: { 
+                expand: true,
+                src: 'obsidian.css',
+                dest: process.env.HOME + process.env.OBSIDIAN_PATH,
+                rename: function(dest, src) {
+                   return dest + 'Minimal.css';
+                } 
+            }
+        },
+
+        /* Watch for changes, and compile new changes */ 
+
         watch: {
             css: {
                 files: ['src/**/*.scss','src/**/*.css'],
