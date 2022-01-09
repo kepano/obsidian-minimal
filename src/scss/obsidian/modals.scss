@@ -23,7 +23,7 @@ body:not(.is-mobile) .modal {
   font-size:var(--h2);
   line-height:1.4;
 }
-.modal:not(.mod-settings):not(.mod-community-theme):not(.mod-publish):not(.mod-publish):not(.mod-community-plugin):not(.mod-sync-log) .modal-content {
+.modal:not(.mod-sync-history):not(.mod-settings):not(.mod-community-theme):not(.mod-publish):not(.mod-publish):not(.mod-community-plugin):not(.mod-sync-log) .modal-content {
   padding:20px 2px 5px;
 }
 .modal-content {

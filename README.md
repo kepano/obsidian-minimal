@@ -45,6 +45,12 @@ Minimal plays well with dozens of popular plugins like **Kanban**, **Dataview**,
 
 ![](assets/minimal-plugins.png)
 
+Every screen in the Obsidian app is has been updated to create a cohesive experience, including **settings**, **plugin browser**, **sync**, **publish**, and **file recovery**
+
+![](assets/minimal-modals.png)
+
+
+
 ## Customization
 
 The following features can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin or Style Settings (more on this below)
@@ -55,7 +61,7 @@ The following features can be accessed using [Minimal Theme Settings](https://gi
 - Hide sidebar borders
 - Trim filenames
 - Cursor options for UI elements
-- Click + hold to zoom in on images
+- Click and hold to zoom in on images
 
 ## Plugin support
 
@@ -63,7 +69,7 @@ The following features can be accessed using [Minimal Theme Settings](https://gi
 
 For customization use [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [Minimal hotkeys](#hotkeys), while Style Settings has more granular settings for headings and advanced features. Note that running both simultaneously may lead to conflicts.
 
-[Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements. When using Hider to turn off menu ribbon, it can be accessed by hovering over the bottom left edge of the window.
+[Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements. When using Hider to turn off the app ribbon, it can be accessed by hovering over the bottom left edge of the window.
 
 ### Community plugins
 
@@ -102,7 +108,7 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
-| `img-grid` | Activate image grids |
+| `img-grid`     | Activate image grids |
 
 #### Line width control for tables, images and iframes
 
