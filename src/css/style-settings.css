@@ -644,3 +644,42 @@ settings:
         collapsed: true
 
 */
+/* Style Settings */
+
+/* @settings
+name: Minimal Cards
+id: minimal-cards-style
+settings:
+    - 
+        id: cards-min-width
+        title: Card minimum width
+        description: 
+        type: variable-text
+        default: 180px
+    - 
+        id: cards-padding
+        title: Card padding
+        description: 
+        type: variable-text
+        default: 1.2em
+    - 
+        id: cards-image-height
+        title: Card maximum image height
+        description: 
+        type: variable-text
+        default: 400px
+    - 
+        id: cards-border-width
+        title: Card border width
+        description: 
+        type: variable-text
+        default: 1px
+    -  
+        id: cards-background
+        title: Card background color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+
+*/

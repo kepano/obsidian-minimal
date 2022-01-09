@@ -85,11 +85,12 @@ Most plugins work well with Minimal, but the following plugins have received spe
 
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
-- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography)
+- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography) — required for image grids and layout control
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
 - [Dictionary](https://github.com/phibr0/obsidian-dictionary)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)
 - [Git](https://github.com/denolehov/obsidian-git)
+- [Hider](https://github.com/kepano/obsidian-hider)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 - [QuickAdd](https://github.com/chhoumann/quickadd)
@@ -98,15 +99,15 @@ Most plugins work well with Minimal, but the following plugins have received spe
 
 ## Helper classes and filters
 
-Addintional documentation can be found at [publish.obsdian.md/kepano](https://publish.obsidian.md/kepano)
+Additional documentation can be found at [publish.obsdian.md/kepano](https://publish.obsidian.md/kepano)
 
 ## Image filters
 
-Filters can be added to images to create the following effects. Use them by adding the filter name at the end of the image link, e.g. `![[image.jpeg#invert]]`
+Image filters can be added to create the following effects. Use them by adding the filter name at the end of the image link, e.g. `![[image.jpeg#invert]]`
 
 | Filter    | Description                                                   |
 | :-------- | :------------------------------------------------------------ |
-| `#invert` | Invert images in dark mode (great for charts and handwriting) |
+| `#invert` | Invert images in dark mode — ideal for charts and handwriting |
 | `#circle` | Crop image to a circle |
 
 ## CSS helper classes
