@@ -647,6 +647,12 @@ settings:
         type: variable-text
         default: 180px
     - 
+        id: cards-mobile-width
+        title: Card minimum width on mobile
+        description: 
+        type: variable-text
+        default: 120px
+    - 
         id: cards-padding
         title: Card padding
         description: 
