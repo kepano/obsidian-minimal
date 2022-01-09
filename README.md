@@ -88,8 +88,8 @@ Further documentation can be found at [publish.obsdian.md/kepano](https://publis
 
 Filters can be added to images to create the following effects. Use them by adding the filter name at the end of the image link, e.g. `![[image.jpeg#invert]]`
 
-| Filter          | Description                                         |
-|: -------------- | :-------------------------------------------------- |
+| Filter    | Description                                                   |
+|: -------- | :------------------------------------------------------------ |
 | `#invert` | Invert images in dark mode (great for charts and handwriting) |
 | `#circle` | Crop image to a circle |
 
@@ -122,7 +122,7 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 #### Tables and Dataview
 
 | Class          | Description                                         |
-| -------------- | --------------------------------------------------- |
+| :------------- | :-------------------------------------------------- |
 | `table-nowrap` | Disable line wrapping in table cells                |
 | `table-small`  | Use small font size in tables                       |
 | `table-tiny`   | Use tiny font size in tables                        |
