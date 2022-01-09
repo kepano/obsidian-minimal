@@ -41,7 +41,7 @@ Combining **focus mode** with **image grid** and **image width** options allows 
 
 ![](assets/minimal-img-grid.png)
 
-Minimal plays well with dozens of popular Obsidian plugins like Kanban, Sliding Panes, and Calendar
+Minimal plays well with dozens of popular plugins like **Kanban**, **Dataview**, **Sliding Panes**, **Calendar**, [and more](#plugin-support)
 
 ![](assets/minimal-plugins.png)
 
