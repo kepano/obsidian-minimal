@@ -65,7 +65,7 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 
 ### Companion plugins
 
-For customization use [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings includes hotkey support, while Style Settings has more granular settings for headings and advanceed features. Note that running both simultaneously may lead to conflicts.
+For customization use [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [Minimal hotkeys](#hotkeys), while Style Settings has more granular settings for headings and advanced features. Note that running both simultaneously may lead to conflicts.
 
 [Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements.
 
@@ -129,6 +129,28 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 | `row-alt`      | Add striped background to alternating table rows    |
 | `col-alt`      | Add striped background to alternating table columns |
 
+
+### Hotkeys
+
+Hotkeys are only available when using the Minimal Theme Settings plugin.
+
+#### Background and borders
+
+- Switch between light and dark mode
+- Cycle between light mode styles
+- Cycle between dark mode styles
+- Toggle sidebar borders
+
+#### Layout control
+
+- Toggle image grids
+- Cycle between image width options
+- Cycle between table width options
+- Cycle between iframe width options
+
+#### Typography
+
+- Increase and decrease body font size
 
 ## Developers
 
