@@ -4,7 +4,7 @@ Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/bes
 
 ![](cover.png)
 
-Minimal is an Obsidian interface replacement meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider).
+Minimal is an [Obsidian](https://obsidian.md/) interface replacement meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider).
 
 Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or [Buy me a coffee](https://www.buymeacoffee.com/kepano)
 
@@ -17,7 +17,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 - [Features](#features)
 - [Installation](#installation)
 - [Companion plugins](#companion-plugins)
-- [Community plugins](#community-plugins)
+- [Plugin support](#plugin-support)
 - [Documentation](#documentation)
 - [Developers](#developers)
 - [Disclaimer](#disclaimer)
@@ -71,16 +71,19 @@ The following features can be accessed using [Minimal Theme Settings](https://gi
 
 ## Companion plugins
 
-To customize Minimal, install the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [hotkeys](#hotkeys), while Style Settings has more granular settings for headings and advanced features. Note that running both simultaneously may lead to conflicts.
+To customize Minimal, install the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [hotkeys](#hotkeys), while Style Settings has more granular settings for headings and advanced features. Note that running both simultaneously may lead to conflicts.
 
-[Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements. When using Hider to turn off the app ribbon, it can be accessed by hovering over the bottom left edge of the window.
+The [Hider plugin](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements. When using Hider to turn off the app ribbon, it can be accessed by hovering over the bottom left edge of the window.
 
-## Community plugins
+In addition [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography) is highly recommended, and required for all advanced layout features such as image grids and block width options.
 
-Most plugins work well with Minimal, but these plugins have received special love and attention:
+## Plugin support
+
+Most plugins work well with Minimal, but the following plugins have received special love and attention:
 
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
+- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography)
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
 - [Dictionary](https://github.com/phibr0/obsidian-dictionary)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)
@@ -89,10 +92,11 @@ Most plugins work well with Minimal, but these plugins have received special lov
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 - [QuickAdd](https://github.com/chhoumann/quickadd)
 - [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
+- [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) — recommended for cards and tables
 
 ## Documentation
 
-Further documentation can be found at [publish.obsdian.md/kepano](https://publish.obsidian.md/kepano)
+Addintional documentation can be found at [publish.obsdian.md/kepano](https://publish.obsidian.md/kepano)
 
 ### Image filters
 
@@ -128,6 +132,19 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 | :------------- | :-------------------------------------------------- |
 | `embed-strict` | Transclusions appear seamlessly in the flow of text |
 
+
+#### Cards
+
+Using `cards` transforms Dataview tables cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable)
+
+| Class                | Description                                    |
+| :------------------- | :--------------------------------------------- |
+| `cards`              | Set all Dataview tables to card layout         |
+| `cards-align-bottom` | Align the last element of a card to the bottom |
+| `cards-16-9`         | Fit images in cards to 16:9 ratio              |
+| `cards-1-1`          | Fit images in cards to 1:1 ratio (square)      |
+| `cards-2-1`          | Fit images in cards to 2:1 ratio               |
+| `cards-2-3`          | Fit images in cards to 2:3 ratio               |
 
 #### Tables and Dataview
 
@@ -192,13 +209,13 @@ To build directly into your Obsidian vault rename `.env.example` to `.env` and u
 npx grunt
 ```
 
-This builds two files, the `obsidian.css` distribution file which is minified and also copied to your vault for live reload, and the `Minimal.css` file which is an unminified concatenated copy in the project root.
+This builds two files, the `obsidian.css` distribution file (for the community themes store) which is minified and also copied to your vault for live reload, and the `Minimal.css` file which is an unminified copy saved to the project root.
 
 ### Distributing Minimal forks
 
 Minimal is licensed under the MIT License which allows you to modify and redistribute the code, however you must preserve the copyright and license notice in your CSS file. 
 
-If you would like to distribute a fork of Minimal please keep my [Buy me a coffee](https://www.buymeacoffee.com/kepano) link present in your Readme. 
+**If you would like to distribute a fork of Minimal please keep my [Buy me a coffee](https://www.buymeacoffee.com/kepano) link present in your Readme.**
 
 Minimal is frequently updated to stay current with the latest version of Obsidian. To make it easy to stay current with the latest improvements, I recommend using [Github's fork feature](https://docs.github.com/en/get-started/quickstart/fork-a-repo) so that you can merge the latest changes into your fork. If you have any questions don't hesitate to reach me in the Obsidian Discord group. 
 
