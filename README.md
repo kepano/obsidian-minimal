@@ -99,7 +99,7 @@ Most plugins work well with Minimal, but the following plugins have received spe
 
 Addintional documentation can be found at [publish.obsdian.md/kepano](https://publish.obsidian.md/kepano)
 
-### Image filters
+## Image filters
 
 Filters can be added to images to create the following effects. Use them by adding the filter name at the end of the image link, e.g. `![[image.jpeg#invert]]`
 
@@ -112,14 +112,14 @@ Filters can be added to images to create the following effects. Use them by addi
 
 The following classes can be added on a per-file basis using the `cssClasses` [YAML front matter key](https://help.obsidian.md/Advanced+topics/YAML+front+matter). The classes are composable, so you can include more than one to combine effects.
 
-#### Image grids
+### Image grids
 Turns consecutive images into columns. To make a new row, add an extra line break between images.
 
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
 | `img-grid`     | Activate image grids |
 
-#### Line width control for tables, images and iframes
+### Line width control for tables, images and iframes
 
 | Class                                   | Description                           |
 | :-------------------------------------- | :------------------------------------ |
@@ -127,13 +127,13 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 | `table-max`, `img-max`, `iframe-max`    | Fill the max line width (default 88%) |
 | `table-wide`, `img-wide`, `iframe-wide` | Fill the wide line width              |
 
-#### Embeds and transclusions
+### Embeds and transclusions
 
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
 | `embed-strict` | Transclusions appear seamlessly in the flow of text |
 
-#### Cards
+### Cards
 
 Using `cards` transforms Dataview tables cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable)
 
@@ -147,7 +147,7 @@ Using `cards` transforms Dataview tables cards that can be sorted using the [Sor
 | `cards-2-1`          | Fit images in cards to 2:1 ratio               |
 | `cards-2-3`          | Fit images in cards to 2:3 ratio               |
 
-#### Tables and Dataview
+### Tables and Dataview
 
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
@@ -165,21 +165,21 @@ Using `cards` transforms Dataview tables cards that can be sorted using the [Sor
 
 Hotkeys are only available when using the Minimal Theme Settings plugin.
 
-#### Background and borders
+### Background and borders
 
 - Switch between light and dark mode
 - Cycle between light mode styles
 - Cycle between dark mode styles
 - Toggle sidebar borders
 
-#### Layout control
+### Layout control
 
 - Toggle image grids
 - Cycle between image width options
 - Cycle between table width options
 - Cycle between iframe width options
 
-#### Misc
+### Misc
 
 - Toggle focus mode
 - Increase and decrease body font size
