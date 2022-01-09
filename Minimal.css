@@ -3603,6 +3603,7 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   caret-color: var(--text-accent); }
 
 /* Focus mode */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
 .workspace-ribbon.mod-left {
   border-left: 0; }
 
@@ -3690,6 +3691,7 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
   width: 100%; }
 
 /* Table helper classes for alternate styles */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
 .row-alt th:first-child,
 .row-alt tbody > tr > td:first-child {
   padding-left: 10px; }
@@ -3768,6 +3770,7 @@ span[src$="#round"] img {
   border-radius: 50%; }
 
 /* Image grid */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
 /* Requires Contextual Typography 2.2.1+ */
 div:not(.el-embed-image) + .el-embed-image {
   margin-top: 1rem; }
@@ -3813,6 +3816,7 @@ div:not(.el-embed-image) + .el-embed-image {
   .img-grid .markdown-preview-section > .el-embed-image > p {
     grid-column-gap: 0.25rem; } }
 /* Image zoom  */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
 body:not(.zoom-off) .view-content img {
   max-width: 100%;
   cursor: zoom-in; }
@@ -3859,6 +3863,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
   opacity: 1; }
 
 /* Labeled nav */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
   height: auto; }
 
@@ -3929,8 +3934,8 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
   content: "Outlinks"; }
 
 /* Layout Control
-
-Requires Contextual Typography 2.2.1+ */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* Requires Contextual Typography 2.2.1+ */
 /* Switch to flexbox */
 .contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer {
   display: flex;
@@ -4356,8 +4361,8 @@ body:not(.is-mobile) .backlink-pane {
 
 /* Mobile */
 /* Mobile styling
-
-Needs cleanup
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* Needs cleanup
 -------------------------------------------------------------------------------- */
 .is-mobile {
   --font-settings-title:18px;
