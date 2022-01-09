@@ -4,6 +4,7 @@
 
 :root {
   --cards-min-width:180px;
+  --cards-mobile-width:120px;
   --cards-image-height:400px;
   --cards-padding:1.2em;
   --cards-image-fit:contain;
@@ -13,7 +14,7 @@
 
 @media (max-width:400pt) {
   :root {
-    --cards-min-width:130px;
+    --cards-min-width:var(--cards-mobile-width);
   }
 }
 
@@ -36,6 +37,7 @@
   grid-column-gap:0.75rem;
   grid-row-gap:0.75rem;
 }
+
 .cards table.dataview > tbody > tr {
   background-color:var(--cards-background);
   border:var(--cards-border-width) solid var(--background-modifier-border);
@@ -77,6 +79,12 @@
 .cards table.dataview tbody > tr > td:not(:first-child) {
   font-size:90%;
   color:var(--text-muted);
+}
+
+@media (max-width:400pt) {
+ .cards table.dataview tbody > tr > td:not(:first-child) {
+    font-size:80%;
+ }
 }
 
 /* Helpers */
@@ -126,10 +134,10 @@
 /* Buttons */
 .cards table.dataview tbody > tr > td > button {
   width:100%;
-  margin:calc(var(--cards-padding)/3) 0;
+  margin:calc(var(--cards-padding)/2) 0;
 }
 .cards table.dataview tbody > tr > td:last-child > button {
-  margin-bottom:0;
+  margin-bottom:calc(var(--cards-padding)/6);
 }
 
 /* Lists */

@@ -2801,6 +2801,7 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
 /* MIT License */
 :root {
   --cards-min-width:180px;
+  --cards-mobile-width:120px;
   --cards-image-height:400px;
   --cards-padding:1.2em;
   --cards-image-fit:contain;
@@ -2809,7 +2810,7 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
 
 @media (max-width: 400pt) {
   :root {
-    --cards-min-width:130px; } }
+    --cards-min-width:var(--cards-mobile-width); } }
 /* Make the grid and basic cards */
 .cards.table-100 table.dataview tbody,
 .table-100 .cards table.dataview tbody {
@@ -2867,6 +2868,9 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   font-size: 90%;
   color: var(--text-muted); }
 
+@media (max-width: 400pt) {
+  .cards table.dataview tbody > tr > td:not(:first-child) {
+    font-size: 80%; } }
 /* Helpers */
 .cards-cover.cards table.dataview tbody > tr > td img {
   object-fit: cover; }
@@ -2906,10 +2910,10 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
 /* Buttons */
 .cards table.dataview tbody > tr > td > button {
   width: 100%;
-  margin: calc(var(--cards-padding)/3) 0; }
+  margin: calc(var(--cards-padding)/2) 0; }
 
 .cards table.dataview tbody > tr > td:last-child > button {
-  margin-bottom: 0; }
+  margin-bottom: calc(var(--cards-padding)/6); }
 
 /* Lists */
 .cards table.dataview tbody > tr > td > ul {
@@ -6199,19 +6203,23 @@ body .sync-history-content-container textarea.sync-history-content:focus {
 /* Buttons plugin */
 body.theme-dark .button-default,
 body.theme-light .button-default {
-  border: 1px solid var(--background-modifier-border);
-  box-shadow: 0 1px 1px 0px var(--btn-shadow-color);
+  border: none;
+  box-shadow: none;
+  height: var(--input-height);
+  background: var(--background-tertiary);
   color: var(--text-normal);
   font-size: revert;
+  font-weight: 500;
   transform: none;
-  transition: none; }
+  transition: all 0.1s linear; }
 
 body.theme-dark .button-default:hover,
 body.theme-light .button-default:hover {
-  border-color: var(--background-modifier-border-hover);
-  box-shadow: 0 2px 3px 0px var(--btn-shadow-color);
+  border: none;
+  background: var(--background-modifier-border-hover);
+  box-shadow: none;
   transform: none;
-  transition: none; }
+  transition: all 0.1s linear; }
 
 /* Calendar plugin */
 .workspace-leaf-content[data-type='calendar'] .view-content {
