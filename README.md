@@ -4,7 +4,7 @@ Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/bes
 
 ![](cover.png)
 
-Minimal is an Obsidian theme meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider).
+Minimal is an Obsidian interface replacement meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider).
 
 Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or [Buy me a coffee](https://www.buymeacoffee.com/kepano)
 
@@ -51,14 +51,12 @@ Minimal plays well with dozens of popular plugins like **Kanban**, **Dataview**,
 
 The following features can be toggled on/off using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin:
 
-- Background styles — multiple levels of contrast for light and dark mode, including True Black for OLED devices
+- Background styles for light and dark mode, including True Black for OLED devices
 - Focus mode — hides everything but the text when sidebars are collapsed
 - Fancy cursor — uses accent color for the cursor
 - Hide sidebar borders
 - Trim filenames
-- Relationship lines
 - Cursor options for UI elements
-- When using [Hider](https://github.com/kepano/obsidian-hider) to turn off menu ribbon, it can be accessed by hovering over the bottom left edge of the window
 - Click + hold to zoom in on images
 
 ## Plugin support
@@ -67,7 +65,7 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 
 For customization use [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [Minimal hotkeys](#hotkeys), while Style Settings has more granular settings for headings and advanced features. Note that running both simultaneously may lead to conflicts.
 
-[Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements.
+[Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements. When using Hider to turn off menu ribbon, it can be accessed by hovering over the bottom left edge of the window.
 
 ### Plugins
 
