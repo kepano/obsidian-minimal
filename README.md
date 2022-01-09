@@ -14,8 +14,10 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 - [Goals](#goals)
 - [Screenshots](#screenshots)
-- [Customization](#customization)
-- [Plugin support](#plugin-support)
+- [Features](#features)
+- [Installation](#installation)
+- [Companion plugins](#companion-plugins)
+- [Community plugins](#community-plugins)
 - [Documentation](#documentation)
 - [Developers](#developers)
 - [Disclaimer](#disclaimer)
@@ -49,9 +51,7 @@ Every screen in the Obsidian app is has been updated to create a cohesive experi
 
 ![](assets/minimal-modals.png)
 
-
-
-## Customization
+## Features
 
 The following features can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin or Style Settings (more on this below)
 
@@ -63,15 +63,19 @@ The following features can be accessed using [Minimal Theme Settings](https://gi
 - Cursor options for UI elements
 - Click and hold to zoom in on images
 
-## Plugin support
+## Installation
 
-### Companion plugins
+- Open Obsidian Settings
+- Go to `Appearance` and click `Manage`
+- Under community themes search for Minimal and click `Use`
 
-For customization use [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [Minimal hotkeys](#hotkeys), while Style Settings has more granular settings for headings and advanced features. Note that running both simultaneously may lead to conflicts.
+## Companion plugins
+
+To customize Minimal, install the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [hotkeys](#hotkeys), while Style Settings has more granular settings for headings and advanced features. Note that running both simultaneously may lead to conflicts.
 
 [Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements. When using Hider to turn off the app ribbon, it can be accessed by hovering over the bottom left edge of the window.
 
-### Community plugins
+## Community plugins
 
 Most plugins work well with Minimal, but these plugins have received special love and attention:
 
@@ -157,15 +161,16 @@ Hotkeys are only available when using the Minimal Theme Settings plugin.
 - Cycle between table width options
 - Cycle between iframe width options
 
-#### Typography
+#### Misc
 
+- Toggle focus mode
 - Increase and decrease body font size
 
 ## Developers
 
 ### Contributing
 
-If you would like to see Minimal support a plugin, or have found a bug you'd like to help fix, don't hesitate to open a pull request.
+If you would like add support for a plugin, or have found a bug you'd like to help fix, don't hesitate to open a pull request.
 
 ### Build instructions
 
