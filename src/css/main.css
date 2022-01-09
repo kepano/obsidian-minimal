@@ -3705,6 +3705,7 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
   font-size: 75%; }
 
 /* Dark mode images  */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
 .theme-dark .markdown-preview-view img {
   opacity: 0.75;
   transition: opacity 0.25s linear; }

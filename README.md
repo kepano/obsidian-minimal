@@ -44,25 +44,26 @@ Combining **focus mode** with **image grid** and **image width** options allows 
 
 ![](assets/minimal-img-grid.png)
 
-Minimal plays well with dozens of popular plugins like **Kanban**, **Dataview**, **Sliding Panes**, **Calendar**, [and more](#plugin-support)
+Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, **Sliding Panes**, [and more](#plugin-support)
 
 ![](assets/minimal-plugins.png)
 
-Every screen in the Obsidian app is has been updated to create a cohesive experience, including **settings**, **plugin browser**, **sync**, **publish**, and **file recovery**
+Every screen in the Obsidian app is has been revised to create a cohesive experience, including **settings**, **plugin browser**, **sync**, **publish**, and **file recovery**
 
 ![](assets/minimal-modals.png)
 
 ## Features
 
-The following features can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin or Style Settings (more on this below)
+The following features can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin or Style Settings plugin (see companion plugins instructions below)
 
-- Background styles for light and dark mode, including True Black for OLED devices
+- Background styles for light and dark mode, including true black ideal for OLED devices
 - Focus mode — hides everything but the text when sidebars are collapsed
+- Custom icons
 - Fancy cursor — uses accent color for the cursor
 - Hide sidebar borders
 - Trim filenames
-- Cursor options for UI elements
-- Click and hold to zoom in on images
+- Cursor options
+- Click and hold to expand images
 
 ## Installation
 
@@ -112,6 +113,11 @@ Filters can be added to images to create the following effects. Use them by addi
 
 The following classes can be added on a per-file basis using the `cssClasses` [YAML front matter key](https://help.obsidian.md/Advanced+topics/YAML+front+matter). The classes are composable, so you can include more than one to combine effects.
 
+Example: 
+```
+cssClasses: cards
+```
+
 ### Image grids
 Turns consecutive images into columns. To make a new row, add an extra line break between images.
 
@@ -135,7 +141,7 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 
 ### Cards
 
-Using `cards` transforms Dataview tables cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable)
+Using `cards` transforms Dataview tables cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable). Compatible with table width classes.
 
 | Class                | Description                                    |
 | :------------------- | :--------------------------------------------- |
