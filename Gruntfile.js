@@ -37,7 +37,7 @@ module.exports = function(grunt) {
             }
         },
 
-        /* Minify theme */
+        /* Minify theme used for distribution and live reload */
 
         cssmin: {
             options: {
@@ -54,8 +54,7 @@ module.exports = function(grunt) {
         },
 
         /* Concatenate theme files adding in the commented license, plugin compatibility, 
-           and Style Settings that would otherwise be removed in compression.
-        */
+           and Style Settings that would otherwise be removed in compression */
 
         concat_css: {
             dist: {
@@ -70,8 +69,8 @@ module.exports = function(grunt) {
             }
         },
 
-        /* Copy the finished file from the working directory to the vault directory
-        and use correct theme name */ 
+        /* Copy the finished distribution file from the working directory to the vault 
+        directory and use correct theme name */ 
 
         copy: {
             local: { 
