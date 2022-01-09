@@ -69,18 +69,18 @@ For customization use [Minimal Theme Settings](https://github.com/kepano/obsidia
 
 [Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements.
 
-### Community plugins
+### Plugins
 
 - [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
-- [CodeMirror Options](https://github.com/nothingislost/obsidian-codemirror-options)
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
 - [Dictionary](https://github.com/phibr0/obsidian-dictionary)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)
 - [Git](https://github.com/denolehov/obsidian-git)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
+- [QuickAdd](https://github.com/chhoumann/quickadd)
 
 ## Documentation
 
@@ -88,7 +88,12 @@ Further documentation can be found at [publish.obsdian.md/kepano](https://publis
 
 ### Image filters
 
-- Use `#invert` to invert images in dark mode, e.g. `![[image.jpeg#invert]]`
+Filters can be added to images to create the following effects. Use them by adding the filter name at the end of the image link, e.g. `![[image.jpeg#invert]]`
+
+| Filter          | Description                                         |
+| -------------- | --------------------------------------------------- |
+| `#invert` | Invert images in dark mode (great for charts and handwriting) |
+| `#circle` | Crop image to a circle |
 
 ### CSS helper classes
 
@@ -154,13 +159,9 @@ Hotkeys are only available when using the Minimal Theme Settings plugin.
 
 ## Developers
 
-### Distributing Minimal forks
+### Contributing
 
-Minimal is licensed under the MIT License which allows you to modify and redistribute the code, however you must preserve the copyright and license notice in your CSS file. 
-
-If you would like to distribute a fork of Minimal please keep my [Buy me a coffee](https://www.buymeacoffee.com/kepano) link present in your Readme. 
-
-Minimal is frequently updated to stay current with the latest version of Obsidian. To make it easy to stay current with the latest improvements, I recommend using [Github's fork feature](https://docs.github.com/en/get-started/quickstart/fork-a-repo) so that you can merge the latest changes into your fork. If you have any questions don't hesitate to reach me in the Obsidian Discord group. 
+If you would like to see Minimal support a plugin, or have found a bug you'd like to help fix, don't hesitate to open a pull request.
 
 ### Build instructions
 
@@ -184,6 +185,13 @@ npx grunt
 
 This builds two files, the `obsidian.css` distribution file which is minified and also copied to your vault for live reload, and the `Minimal.css` file which is an unminified concatenated copy in the project root.
 
+### Distributing Minimal forks
+
+Minimal is licensed under the MIT License which allows you to modify and redistribute the code, however you must preserve the copyright and license notice in your CSS file. 
+
+If you would like to distribute a fork of Minimal please keep my [Buy me a coffee](https://www.buymeacoffee.com/kepano) link present in your Readme. 
+
+Minimal is frequently updated to stay current with the latest version of Obsidian. To make it easy to stay current with the latest improvements, I recommend using [Github's fork feature](https://docs.github.com/en/get-started/quickstart/fork-a-repo) so that you can merge the latest changes into your fork. If you have any questions don't hesitate to reach me in the Obsidian Discord group. 
 
 ## Disclaimer
 
