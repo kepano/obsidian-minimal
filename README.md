@@ -18,7 +18,8 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 - [Installation](#installation)
 - [Companion plugins](#companion-plugins)
 - [Plugin support](#plugin-support)
-- [Documentation](#documentation)
+- [Helper classes](#helper-classes-and-filters)
+- [Hotkeys](#hotkeys)
 - [Developers](#developers)
 - [Disclaimer](#disclaimer)
 
@@ -94,7 +95,7 @@ Most plugins work well with Minimal, but the following plugins have received spe
 - [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
 - [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) — recommended for cards and tables
 
-## Documentation
+## Helper classes and filters
 
 Addintional documentation can be found at [publish.obsdian.md/kepano](https://publish.obsidian.md/kepano)
 
@@ -107,7 +108,7 @@ Filters can be added to images to create the following effects. Use them by addi
 | `#invert` | Invert images in dark mode (great for charts and handwriting) |
 | `#circle` | Crop image to a circle |
 
-### CSS helper classes
+## CSS helper classes
 
 The following classes can be added on a per-file basis using the `cssClasses` [YAML front matter key](https://help.obsidian.md/Advanced+topics/YAML+front+matter). The classes are composable, so you can include more than one to combine effects.
 
@@ -131,7 +132,6 @@ Turns consecutive images into columns. To make a new row, add an extra line brea
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
 | `embed-strict` | Transclusions appear seamlessly in the flow of text |
-
 
 #### Cards
 
@@ -161,7 +161,7 @@ Using `cards` transforms Dataview tables cards that can be sorted using the [Sor
 | `col-alt`      | Add striped background to alternating table columns |
 
 
-### Hotkeys
+## Hotkeys
 
 Hotkeys are only available when using the Minimal Theme Settings plugin.
 
