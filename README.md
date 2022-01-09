@@ -112,7 +112,7 @@ Image filters can be added to create the following effects. Use them by adding t
 
 ## CSS helper classes
 
-The following classes can be added on a per-file basis using the `cssClasses` [YAML front matter key](https://help.obsidian.md/Advanced+topics/YAML+front+matter). The classes are composable, so you can include more multiple classes to combine effects.
+CSS helper classes can be added on a per-file basis using the `cssClasses` [YAML front matter key](https://help.obsidian.md/Advanced+topics/YAML+front+matter). These classes are composable, so you can include more than one to combine effects.
 
 For example, use the following code at the top of your file to enable cards layout: 
 ```
@@ -226,7 +226,7 @@ This builds two files, the `obsidian.css` distribution file (for the community t
 
 ### Distributing Minimal forks
 
-Minimal is licensed under the MIT License which allows you to modify and redistribute the code, however you must preserve the copyright and license notice in your CSS file. 
+Minimal is licensed under the MIT License which allows you to modify and redistribute the code, however you must preserve the copyright and license notice in your CSS file. This includes any code you may extract as standalone snippets.
 
 **If you would like to distribute a fork of Minimal please keep my [Buy me a coffee](https://www.buymeacoffee.com/kepano) link present in your Readme.**
 
@@ -234,6 +234,6 @@ Minimal is frequently updated to stay current with the latest version of Obsidia
 
 ## Disclaimer
 
-This theme is provided as is, and is focused on my personal use of Obsidian on Mac OS. As such it is not thoroughly tested across all operating systems and features of Obsidian. 
+This theme is provided as is, and is designed for my personal use of Obsidian on Mac OS. As such it is not thoroughly tested across all operating systems and use cases. 
 
-This theme modifies significant parts of the Obsidian interface, so it might break with future updates. It may also be incompatible with other bits of custom CSS you have. The theme file is organized in such a way that you can comment out sections that may be causing conflicts.
+This theme modifies significant parts of the Obsidian interface, so it may break with future updates. It may also be incompatible with other bits of custom CSS you have.
