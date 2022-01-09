@@ -111,33 +111,30 @@ Filters can be added to images to create the following effects. Use them by addi
 
 ## CSS helper classes
 
-The following classes can be added on a per-file basis using the `cssClasses` [YAML front matter key](https://help.obsidian.md/Advanced+topics/YAML+front+matter). The classes are composable, so you can include more than one to combine effects.
+The following classes can be added on a per-file basis using the `cssClasses` [YAML front matter key](https://help.obsidian.md/Advanced+topics/YAML+front+matter). The classes are composable, so you can include more multiple classes to combine effects.
 
-Example: 
+For example, use the following code at the top of your file to enable cards layout: 
 ```
+---
 cssClasses: cards
+---
 ```
 
 ### Image grids
-Turns consecutive images into columns. To make a new row, add an extra line break between images.
+Turns consecutive images into columns. To make a new row, add an extra line break between images. [See screenshots →](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
 
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
 | `img-grid`     | Activate image grids |
 
 ### Line width control for tables, images and iframes
+Controls the width of elements by type. [See screenshots →](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
 
 | Class                                   | Description                           |
 | :-------------------------------------- | :------------------------------------ |
 | `table-100`, `img-100`, `iframe-100`    | Fill 100% of the pane width           |
 | `table-max`, `img-max`, `iframe-max`    | Fill the max line width (default 88%) |
 | `table-wide`, `img-wide`, `iframe-wide` | Fill the wide line width              |
-
-### Embeds and transclusions
-
-| Class          | Description                                         |
-| :------------- | :-------------------------------------------------- |
-| `embed-strict` | Transclusions appear seamlessly in the flow of text |
 
 ### Cards
 
@@ -155,6 +152,8 @@ Using `cards` transforms Dataview tables cards that can be sorted using the [Sor
 
 ### Tables and Dataview
 
+Controls the row and column styling for tables. [See screenshots →](https://github.com/kepano/obsidian-minimal/releases/tag/4.1.7)
+
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
 | `table-nowrap` | Disable line wrapping in table cells                |
@@ -165,6 +164,12 @@ Using `cards` transforms Dataview tables cards that can be sorted using the [Sor
 | `col-lines`    | Add borders between table columns                   |
 | `row-alt`      | Add striped background to alternating table rows    |
 | `col-alt`      | Add striped background to alternating table columns |
+
+### Embeds and transclusions
+
+| Class          | Description                                         |
+| :------------- | :-------------------------------------------------- |
+| `embed-strict` | Transclusions appear seamlessly in the flow of text |
 
 
 ## Hotkeys
