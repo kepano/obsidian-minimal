@@ -2143,8 +2143,8 @@ input.document-replace-input:focus {
 .modal.mod-community-plugin,
 .modal.mod-settings {
   width: 90vw;
-  height: 90vh;
-  max-height: 1000px;
+  height: 100vh;
+  max-height: 90vh;
   max-width: 1000px; }
 
 .modal.mod-settings .vertical-tab-header,
@@ -2864,6 +2864,14 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
 
 .links-int-on .cards table.dataview tbody > tr > td a {
   text-decoration: none; }
+
+/* Buttons */
+.cards table.dataview tbody > tr > td > button {
+  width: 100%;
+  margin: calc(var(--cards-padding)/3) 0; }
+
+.cards table.dataview tbody > tr > td:last-child > button {
+  margin-bottom: 0; }
 
 /* Lists */
 .cards table.dataview tbody > tr > td > ul {
@@ -4368,70 +4376,23 @@ body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
   text-decoration: underline; }
 
 /* Relationship lines */
-/* Relationship lines in Preview V1
-
-body.minimal-rel-preview .markdown-preview-view ol li,
-body.minimal-rel-preview .markdown-preview-view ul li {
-  position:relative;
-}
-body.minimal-rel-preview .markdown-preview-view ol li::before,
-body.minimal-rel-preview .markdown-preview-view ul li::before {
-  content:'';
-  border-left:1px solid var(--background-modifier-border);
-  position:absolute;
-  left:-0.85em;
-  top:calc(var(--font-normal) + 10px);
-  bottom:0px;
-}
-body.minimal-rel-preview .markdown-preview-view ul.contains-task-list li::before {
-  top:calc(var(--font-normal) + 16px);
-}
-
-/* Relationship lines in Preview mode V2
-
-body.minimal-rel-preview .markdown-preview-view ul { 
-  background:linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px) -0.85em repeat;
-  background-size:calc(var(--font-normal)*2) 1px;
-}
-body.minimal-rel-preview .markdown-preview-view ul li {
-  background-color:var(--background-primary);
-}
-body.minimal-rel-preview .markdown-preview-view ul li:before {
-  font-size:1.35em;
-  line-height:30px;
-  text-align:center;
-  color:var(--text-faint);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  vertical-align:middle;
-  width:1em;
-  height:30px;
-  position:absolute;
-  margin-left:-1.075em;
-  background-color:var(--background-primary);
-  content:'•';
-}
-body.minimal-rel-preview .markdown-preview-view ul li.task-list-item:before {
-  height:35px;
-  line-height:35px;
-}
-*/
-body.minimal-rel-preview .markdown-preview-view ul ul,
-body.minimal-rel-preview .markdown-preview-view ol ul,
-body.minimal-rel-preview .markdown-preview-view ul ol,
-body.minimal-rel-preview .markdown-preview-view ol ol {
+body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul ul,
+body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ol ul,
+body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul ol,
+body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ol ol {
   margin-left: -15px;
   padding-left: var(--list-padding);
   border-left: 1px solid var(--background-modifier-border); }
 
-body.minimal-rel-preview .markdown-preview-view ul li.is-flashing {
+body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul li.is-flashing {
   background-color: var(--text-highlight-bg); }
 
-/* Relationship lines in Edit mode  */
+/* Relationship lines in Legacy Editor */
+.ig-lists .cm-hmd-list-indent > .cm-tab,
 body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab {
   display: inline-block; }
 
+.ig-lists .cm-hmd-list-indent > .cm-tab:after,
 body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
   content: " ";
   display: block;
@@ -4441,32 +4402,40 @@ body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
   border-right: 1px solid var(--background-modifier-border);
   height: 100%; }
 
-/* Relationship lines in Live Preview */
+/* Relationship lines in Live Preview, disabled now that Indentation Guides is available
+
 :root {
   --indent-font-family:var(--text-editor);
-  --indent-font-size:var(--font-adaptive-normal); }
+  --indent-font-size:var(--font-adaptive-normal);
+}
 
 body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-list-line-1) {
-  overflow: hidden; }
-
+  overflow:hidden;
+}
 body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
-  position: relative;
-  font-family: var(--indent-font-family) !important;
-  font-size: var(--indent-font-size) !important; }
-
+  position:relative;
+  font-family:var(--indent-font-family) !important;
+  font-size:var(--indent-font-size) !important;
+}
 body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
-  content: '';
-  font-family: var(--indent-font-family) !important;
-  font-size: var(--indent-font-size) !important;
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: -1.6em;
-  padding-bottom: 999em;
-  background: linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px) repeat;
-  background-size: 1.8ch 1px;
-  left: 3.5px; }
+  content:'';
+  font-family:var(--indent-font-family) !important;
+  font-size:var(--indent-font-size) !important;
+  display:block;
+  position:absolute;
+  width:100%;
+  top:-1.6em;
+  padding-bottom:999em;
+  background:linear-gradient(
+    to right,
+    var(--background-modifier-border) 1px,
+    transparent 1px)
+    repeat;
+  background-size:1.8ch 1px;
+  left:3.5px;
+}
 
+*/
 /* Scroll indicator for sidebar containers */
 body:not(.is-mobile) .item-list,
 body:not(.is-mobile) .nav-files-container,
@@ -6189,6 +6158,23 @@ body .sync-history-content-container textarea.sync-history-content:focus {
   background-color: var(--background-tertiary); }
 
 /* Community plugins */
+/* Buttons plugin */
+body.theme-dark .button-default,
+body.theme-light .button-default {
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: 0 1px 1px 0px var(--btn-shadow-color);
+  color: var(--text-normal);
+  font-size: revert;
+  transform: none;
+  transition: none; }
+
+body.theme-dark .button-default:hover,
+body.theme-light .button-default:hover {
+  border-color: var(--background-modifier-border-hover);
+  box-shadow: 0 2px 3px 0px var(--btn-shadow-color);
+  transform: none;
+  transition: none; }
+
 /* Calendar plugin */
 .workspace-leaf-content[data-type='calendar'] .view-content {
   padding: 5px 0 0 0; }
@@ -6817,6 +6803,16 @@ div[data-type="git-view"] .search-input-clear-button {
 
 .hider-ribbon .workspace-ribbon {
   padding: 0; }
+
+/* Indentation Guides plugin */
+body {
+  --indentation-guide-adjust:2px;
+  --indentation-guide-adjust-preview:1px; }
+
+body.theme-light,
+body.theme-dark {
+  --indentation-guide-color:var(--background-modifier-border);
+  --indentation-guide-active-color:var(--background-modifier-border-hover); }
 
 /* Kanban plugin */
 body .kanban-plugin__markdown-preview-view {

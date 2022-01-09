@@ -1,0 +1,19 @@
+/* Buttons plugin */
+
+body.theme-dark .button-default,
+body.theme-light .button-default {
+  border:1px solid var(--background-modifier-border);
+  box-shadow:0 1px 1px 0px var(--btn-shadow-color);
+  color:var(--text-normal);
+  font-size:revert;
+  transform:none;
+  transition:none;
+}
+body.theme-dark .button-default:hover,
+body.theme-light .button-default:hover {
+  border-color:var(--background-modifier-border-hover);
+  box-shadow:0 2px 3px 0px var(--btn-shadow-color);
+  transform:none;
+  transition:none;
+}
+

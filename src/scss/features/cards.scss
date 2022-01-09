@@ -79,7 +79,6 @@
   color:var(--text-muted);
 }
 
-
 /* Helpers */
 .cards-cover.cards table.dataview tbody > tr > td img {
   object-fit:cover;
@@ -120,10 +119,17 @@
   text-decoration:none;
 }
 .cards table.dataview tbody > tr > td:not(:first-child) a:not(.tag) {
-
 }
 .cards table.dataview tbody > tr > td:not(:first-child) a:not(.tag):hover {
+}
 
+/* Buttons */
+.cards table.dataview tbody > tr > td > button {
+  width:100%;
+  margin:calc(var(--cards-padding)/3) 0;
+}
+.cards table.dataview tbody > tr > td:last-child > button {
+  margin-bottom:0;
 }
 
 /* Lists */
