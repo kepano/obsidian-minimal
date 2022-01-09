@@ -1,0 +1,64 @@
+/* Checklists, task lists, checkboxes */
+
+input[type=checkbox] {
+  -webkit-appearance:none;
+  appearance:none;
+  border-radius:50%;
+  border:1px solid var(--background-modifier-border-hover);
+  padding:0;
+}
+input[type=checkbox]:focus,input[type=checkbox]:hover {
+  outline:0;
+  border-color:var(--text-faint);
+}
+.checklist-plugin-main .group .compact > .toggle .checked,
+.is-flashing input[type=checkbox]:checked,
+input[type=checkbox]:checked {
+  background-color:var(--background-modifier-accent) !important;
+  border:1px solid var(--background-modifier-accent);
+  background-position:center;
+  background-size:70%;
+  background-repeat:no-repeat;
+  background-image:url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+}
+.markdown-preview-section > .contains-task-list {
+  padding-bottom:0.5em;
+}
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
+.markdown-preview-view ul > li.task-list-item.is-checked {
+  text-decoration:none;
+  color:var(--text-normal);
+}
+.minimal-strike-lists .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
+.minimal-strike-lists ul > li.task-list-item.is-checked {
+  text-decoration:line-through;
+  color:var(--text-faint);
+}
+.mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
+  margin-left:-4px;
+  margin-top:0;
+}
+.task-list-item-checkbox,
+.markdown-preview-view .task-list-item-checkbox {
+  filter:none;
+  width:18px;
+  height:18px;
+}
+.markdown-preview-view .task-list-item-checkbox {
+  position:relative;
+  top:6px;
+  line-height:0;
+  margin-left:-1.4em;
+  margin-right:6px;
+}
+.markdown-preview-view ul > li.task-list-item {
+  text-indent:0;
+  line-height:1.4;
+}
+.markdown-preview-view .task-list-item {
+  padding-inline-start:0;
+}
+.side-dock-plugin-panel-inner {
+  padding-right:6px;
+  padding-left:6px;
+}

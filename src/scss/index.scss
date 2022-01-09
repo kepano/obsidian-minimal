@@ -1,0 +1,89 @@
+/* Variables */
+@import 'variables/root';
+@import 'variables/theme';
+@import 'variables/adaptive-font-size';
+
+/* Disabled features */
+@import 'obsidian/disabled';
+
+/* Obsidian */
+@import 'obsidian/checklists';
+@import 'obsidian/dragging';
+@import 'obsidian/editor';
+@import 'obsidian/editor-legacy';
+@import 'obsidian/fonts';
+@import 'obsidian/frontmatter';
+@import 'obsidian/file-nav';
+@import 'obsidian/folding';
+@import 'obsidian/icons';
+@import 'obsidian/inputs';
+@import 'obsidian/modals';
+@import 'obsidian/preview';
+@import 'obsidian/preview-backlinks';
+@import 'obsidian/preview-embedded-search';
+@import 'obsidian/preview-tables';
+@import 'obsidian/preview-transclusions';
+@import 'obsidian/ribbon';
+@import 'obsidian/scrollbars';
+@import 'obsidian/search-replace';
+@import 'obsidian/settings';
+@import 'obsidian/status-bar';
+@import 'obsidian/tags';
+@import 'obsidian/tag-pane';
+@import 'obsidian/tooltips';
+@import 'obsidian/title-bar';
+@import 'obsidian/window-frame';
+@import 'obsidian/workspace';
+
+/* Minimal features */
+@import 'features/borders';
+@import 'features/cards';
+@import 'features/colorful-headings';
+@import 'features/custom-icons';
+@import 'features/fancy-cursor';
+@import 'features/focus-mode';
+@import 'features/folding-offset';
+@import 'features/full-width-media';
+@import 'features/helpers-tables';
+@import 'features/image-filters';
+@import 'features/image-grid';
+@import 'features/image-zoom';
+@import 'features/labeled-nav';
+@import 'features/layout-control';
+@import 'features/line-width';
+@import 'features/link-underline';
+@import 'features/relationship-lines';
+@import 'features/scroll-indicator';
+@import 'features/sidebar-notes';
+@import 'features/trim-file-names';
+
+/* Mobile */
+@import 'mobile/mobile';
+
+/* Core plugins */
+@import 'plugins-core/backlinks-outlinks';
+@import 'plugins-core/graph';
+@import 'plugins-core/outline';
+@import 'plugins-core/page-preview';
+@import 'plugins-core/publish';
+@import 'plugins-core/search';
+@import 'plugins-core/sync';
+
+/* Community plugins */
+@import 'plugins/calendar';
+@import 'plugins/checklist';
+@import 'plugins/cmenu';
+@import 'plugins/contextual-typography';
+@import 'plugins/dataview';
+@import 'plugins/dictionary';
+@import 'plugins/excalidraw';
+@import 'plugins/embedded-note-titles';
+@import 'plugins/git';
+@import 'plugins/hider';
+@import 'plugins/kanban';
+@import 'plugins/outliner';
+@import 'plugins/quickadd';
+@import 'plugins/sliding-panes';
+@import 'plugins/sortable';
+@import 'plugins/style-settings';
+@import 'plugins/tabs';

@@ -1,0 +1,6 @@
+/* Obsidian Tabs plugin */
+
+body.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header,
+body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf .view-header, .plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header {
+  border:none;
+}

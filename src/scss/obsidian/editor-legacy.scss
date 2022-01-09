@@ -1,0 +1,97 @@
+/* Editor mode (Legacy) */
+
+.theme-light .token.operator,
+.theme-light .token.entity,
+.theme-light .token.url,
+.theme-light .language-css .token.string,
+.theme-light .style .token.string,
+.theme-light .cm-operator,
+.theme-light .cm-string,
+.theme-light .cm-string-2,
+.theme-light .cm-link {
+  background-color:transparent;
+}
+
+.markdown-source-view.mod-cm6,
+.markdown-source-view.mod-cm5,
+.markdown-source-view {
+  padding:0;
+}
+.cm-s-obsidian .CodeMirror-code {
+  padding-right:0;
+}
+.CodeMirror-lines {
+  padding-bottom:170px;
+}
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like {
+  padding-left:0;
+  padding-right:0;
+}
+.cm-s-obsidian pre.HyperMD-list-line {
+  padding-top:0;
+}
+.workspace .markdown-preview-view {
+  padding:0;
+}
+.workspace .markdown-preview-view .markdown-embed {
+  margin:0;
+}
+.workspace .markdown-preview-view .markdown-embed-content {
+  max-height:none;
+}
+.markdown-embed-title,
+.internal-embed .markdown-preview-section {
+  max-width:100%;
+}
+.cm-s-obsidian .HyperMD-header,
+.cm-s-obsidian pre.HyperMD-header {
+  padding-left:0 !important;
+}
+.CodeMirror-linenumber {
+  font-size:var(--font-adaptive-small) !important;
+  font-feature-settings:'tnum';
+  color:var(--text-faint);
+  padding-top:3px;
+}
+.cm-s-obsidian span.cm-url,
+.cm-s-obsidian span.cm-url:hover {
+  color:var(--text-accent);
+}
+span.cm-image-marker,
+.cm-s-obsidian span.cm-formatting-link {
+  color:var(--text-faint);
+}
+.cm-s-obsidian span.cm-image-alt-text.cm-link,
+.cm-s-obsidian .cm-active .cm-formatting-link + span.cm-link,
+.cm-s-obsidian .cm-active .cm-formatting-link + span.cm-link:hover,
+.cm-s-obsidian:not(.is-live-preview) .cm-formatting-link + span.cm-link {
+  color:var(--text-muted);
+}
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color:var(--text-accent);
+}
+
+/* Editor Mode Footnotes */
+.cm-s-obsidian span.cm-footref {
+  font-size:var(--font-adaptive-normal);
+}
+.cm-s-obsidian pre.HyperMD-footnote {
+  font-size:var(--font-adaptive-small);
+  padding-left:20px;
+}
+
+/* Editor Mode Tables */
+.CodeMirror pre.HyperMD-table-row {
+  font-family:var(--font-monospace);
+  font-size:calc(var(--font-adaptive-normal) - 2px);
+}
+
+/* Editor Mode Lists */
+.cm-formatting-list {
+  color:var(--text-faint) !important;
+}
+/* Editor Mode Quotes */
+.cm-formatting-quote {
+  color:var(--text-faint) !important;
+}

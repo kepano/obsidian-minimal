@@ -1,0 +1,51 @@
+/* Tags */
+
+.frontmatter-container .tag,
+a.tag {
+  background-color:transparent;
+  border:1px solid var(--background-modifier-border);
+  color:var(--text-muted);
+  font-size:var(--font-adaptive-small);
+  font-family:var(--font-ui);
+  padding:2px 8px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  margin:2px 0 0 0;
+  border-radius:14px;
+}
+a.tag:hover {
+  color:var(--text-normal);
+  border-color:var(--background-modifier-border-hover);
+}
+.cm-s-obsidian span.cm-hashtag {
+  background-color:transparent;
+  border:1px solid var(--background-modifier-border);
+  color:var(--text-muted);
+  font-size:var(--font-adaptive-small);
+  font-family:var(--font-ui);
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  margin:2px 0;
+  vertical-align:middle;
+  padding-top:1px;
+  border-left:none;
+  border-right:none;
+  padding-bottom:2px;
+  cursor:text;
+}
+span.cm-hashtag.cm-hashtag-begin {
+  border-top-left-radius:14px;
+  border-bottom-left-radius:14px;
+  padding-left:8px;
+  border-right:none;
+  border-left:1px solid var(--background-modifier-border);
+}
+span.cm-hashtag.cm-hashtag-end {
+  border-top-right-radius:14px;
+  border-bottom-right-radius:14px;
+  border-left:none;
+  padding-right:8px;
+  border-right:1px solid var(--background-modifier-border);
+}

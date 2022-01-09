@@ -1,0 +1,31 @@
+/* Desktop font sizes */
+body {
+  --font-adaptive-normal:var(--font-normal);
+  --font-adaptive-small:var(--font-small);
+  --font-adaptive-smaller:var(--font-smaller);
+  --font-adaptive-smallest:var(--font-smallest);
+  --line-width-adaptive:var(--line-width);
+  --line-width-wide:calc(var(--line-width) + 12.5%);
+}
+
+/* Phone font sizes */
+@media (max-width:400pt) {
+  .is-mobile {
+    --font-adaptive-small:calc(var(--font-small) + 2px);
+    --font-adaptive-smaller:calc(var(--font-smaller) + 2px);
+    --font-adaptive-smallest:calc(var(--font-smallest) + 2px);
+    --max-width:88%;
+  }
+}
+
+/* Tablet font sizes */
+@media (min-width:400pt) {
+  .is-mobile {
+    --font-adaptive-normal:calc(var(--font-normal) + 4px);
+    --font-adaptive-small:calc(var(--font-small) + 3px);
+    --font-adaptive-smaller:calc(var(--font-smaller) + 2px);
+    --font-adaptive-smallest:calc(var(--font-smallest) + 2px);
+    --line-width-adaptive:calc(var(--line-width) + 6rem);
+    --max-width:90%;
+  }
+}

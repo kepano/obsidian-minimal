@@ -1,0 +1,112 @@
+/* Relationship lines */
+
+/* Relationship lines in Preview V1
+
+body.minimal-rel-preview .markdown-preview-view ol li,
+body.minimal-rel-preview .markdown-preview-view ul li {
+  position:relative;
+}
+body.minimal-rel-preview .markdown-preview-view ol li::before,
+body.minimal-rel-preview .markdown-preview-view ul li::before {
+  content:'';
+  border-left:1px solid var(--background-modifier-border);
+  position:absolute;
+  left:-0.85em;
+  top:calc(var(--font-normal) + 10px);
+  bottom:0px;
+}
+body.minimal-rel-preview .markdown-preview-view ul.contains-task-list li::before {
+  top:calc(var(--font-normal) + 16px);
+}
+
+/* Relationship lines in Preview mode V2
+
+body.minimal-rel-preview .markdown-preview-view ul { 
+  background:linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px) -0.85em repeat;
+  background-size:calc(var(--font-normal)*2) 1px;
+}
+body.minimal-rel-preview .markdown-preview-view ul li {
+  background-color:var(--background-primary);
+}
+body.minimal-rel-preview .markdown-preview-view ul li:before {
+  font-size:1.35em;
+  line-height:30px;
+  text-align:center;
+  color:var(--text-faint);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+  width:1em;
+  height:30px;
+  position:absolute;
+  margin-left:-1.075em;
+  background-color:var(--background-primary);
+  content:'•';
+}
+body.minimal-rel-preview .markdown-preview-view ul li.task-list-item:before {
+  height:35px;
+  line-height:35px;
+}
+*/
+
+body.minimal-rel-preview .markdown-preview-view ul ul,
+body.minimal-rel-preview .markdown-preview-view ol ul,
+body.minimal-rel-preview .markdown-preview-view ul ol,
+body.minimal-rel-preview .markdown-preview-view ol ol {
+    margin-left:-15px;
+    padding-left:var(--list-padding);
+    border-left:1px solid var(--background-modifier-border);
+}
+
+body.minimal-rel-preview .markdown-preview-view ul li.is-flashing {
+  background-color:var(--text-highlight-bg);
+}
+
+/* Relationship lines in Edit mode  */
+
+body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab {
+  display:inline-block;
+}
+body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
+  content:" ";
+  display:block;
+  width:1px;
+  position:absolute;
+  top:1px;
+  border-right:1px solid var(--background-modifier-border);
+  height:100%;
+}
+
+/* Relationship lines in Live Preview */
+
+:root {
+  --indent-font-family:var(--text-editor);
+  --indent-font-size:var(--font-adaptive-normal);
+}
+
+body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-list-line-1) {
+  overflow:hidden;
+}
+body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+  position:relative;
+  font-family:var(--indent-font-family) !important;
+  font-size:var(--indent-font-size) !important;
+}
+body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+  content:'';
+  font-family:var(--indent-font-family) !important;
+  font-size:var(--indent-font-size) !important;
+  display:block;
+  position:absolute;
+  width:100%;
+  top:-1.6em;
+  padding-bottom:999em;
+  background:linear-gradient(
+    to right,
+    var(--background-modifier-border) 1px,
+    transparent 1px)
+    repeat;
+  background-size:1.8ch 1px;
+  left:3.5px;
+}

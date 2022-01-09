@@ -1,0 +1,25 @@
+/* Tag pane */
+
+.tag-container {
+  padding-left:15px;
+}
+.tag-pane-tag-count {
+  padding:0;
+  color:var(--text-faint);
+}
+.pane-list-item-ending-flair {
+  background:transparent;
+}
+.tag-pane-tag {
+  padding:2px 5px 2px 5px;
+  cursor:var(--cursor);
+}
+.tag-pane-tag:hover {
+  background:transparent;
+}
+.nav-file.is-active .nav-file-title:hover {
+  background:var(--background-tertiary) !important;
+}
+.nav-file.is-active > .nav-file-title {
+  background:var(--background-tertiary);
+}

@@ -1,0 +1,54 @@
+/* Backlinks in Preview */
+
+.mod-root .workspace-leaf-content[data-type='markdown']  .nav-header {
+  border-top:1px solid var(--background-modifier-border);
+  margin-top:3em;
+  position:relative;
+}
+.mod-root .workspace-leaf-content[data-type='markdown'] .nav-buttons-container,
+.mod-root .workspace-leaf-content[data-type='markdown'].backlink-pane,
+.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane .search-result-container,
+.mod-root .workspace-leaf-content[data-type='markdown'] .search-input-container,
+.mod-root .workspace-leaf-content[data-type='markdown'] .tree-item,
+.mod-root .workspace-leaf-content[data-type='markdown'] .search-empty-state {
+  padding-left:0;
+  margin-left:0;
+}
+.is-mobile .workspace-leaf-content:not([data-type='search']) .workspace-leaf-content[data-type='markdown'] .nav-buttons-container {
+  border-bottom:none;
+  padding-top:5px;
+}
+.mod-root .workspace-leaf-content[data-type='markdown'] .search-input-container {
+  margin-bottom:0px;
+  width:calc(100% - 130px);
+  margin-top:10px;
+}
+.is-mobile .mod-root .workspace-leaf-content[data-type='markdown'] .search-input-container {
+  width:calc(100% - 160px);
+}
+.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane {
+  padding-top:10px;
+}
+.mod-root .workspace-leaf-content[data-type='markdown'] .nav-buttons-container {
+  position:absolute;
+  right:0;
+  top:3px;
+}
+.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane > .tree-item-self:hover,
+.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane > .tree-item-self {
+  padding-left:0px;
+  text-transform:none;
+  color:var(--text-normal);
+  font-size:var(--font-adaptive-normal);
+  font-weight:500;
+  letter-spacing:unset;
+}
+.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane > .tree-item-self.is-collapsed {
+  color:var(--text-faint);
+}
+.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane > .tree-item-self.is-collapsed:hover {
+  color:var(--text-muted);
+}
+.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane .search-result-file-title {
+  font-size:var(--font-adaptive-small);
+}

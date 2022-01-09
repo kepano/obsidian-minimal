@@ -1,0 +1,118 @@
+/* Workspace */
+
+.empty-state {
+  background-color:var(--background-primary);
+  text-align:center;
+}
+.workspace-split.mod-vertical > .workspace-split {
+  padding:0;
+}
+.workspace-split .workspace-tabs {
+  background:var(--background-primary);
+}
+.workspace-split:not(.mod-right-split) .workspace-tabs {
+  background:var(--background-secondary);
+}
+.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
+.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
+    border-top-right-radius:0px;
+    border-top-left-radius:0px;
+}
+.workspace-split.mod-root.mod-horizontal .workspace-leaf-resize-handle,
+.workspace-split.mod-root.mod-vertical .workspace-leaf-resize-handle {
+  border-width:1px;
+}
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  height:3px;
+  background:transparent;
+  border-bottom:var(--border-width-alt) solid var(--background-modifier-border);
+}
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  background:transparent;
+  border-left:var(--border-width-alt) solid var(--background-modifier-border);
+  width:3px !important;
+}  
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+  border-right:var(--border-width) solid var(--background-modifier-border);
+  width:8px !important;
+  background:transparent;
+}
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover {
+  border-color:var(--background-modifier-border-hover);
+  transition:border-color 0.1s ease-in-out 0.05s, border-width 0.1s ease-in-out 0.05s;
+  border-width:2px;
+}
+
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active,
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:active,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:active {
+  border-color:var(--background-modifier-border-focus);
+  border-width:2px;
+}
+.workspace-tab-container-before,
+.workspace-tab-container-after{
+  width:0;
+}
+.workspace-leaf {
+  border-left:0px;
+}
+.mod-horizontal .workspace-leaf {
+  border-bottom:0px;
+  background-color:transparent;
+  box-shadow:none !important;
+}
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+  border-radius:0;
+}
+
+.workspace-leaf:not(.mod-active) {} /* Effects on non-active panels */
+
+.workspace-tab-container-inner {
+  background:transparent;
+  border-radius:0;
+  width:100%;
+  max-width:100%;
+  margin:0 auto;
+  padding-left:5px;
+}
+.mod-right-split .workspace-tabs .workspace-tab-header-container {
+  border:none;
+  height:calc(var(--header-height) - 1px);
+}
+.mod-right-split .workspace-tabs .nav-buttons-container {
+  z-index:1;
+  border-top:var(--border-width) solid var(--background-modifier-border);
+}
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-active,
+.workspace-tab-header.is-after-active,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active,
+.workspace-tab-header.is-after-active {
+  background:transparent;
+}
+.workspace-tabs {
+  border:0;
+  padding-right:0;
+  font-size:100%;
+}
+.workspace-tab-container-inner {
+  padding-left:6px;
+}
+.workspace-tab-header-inner {
+  padding:0px 0px 0 2px;
+}
+.workspace-tab-header-container {
+  height:var(--header-height);
+  padding:0;
+  align-items:center;
+  background-color:transparent;
+}
+.workspace-tab-header-container {
+  border-bottom:var(--border-width) solid var(--background-modifier-border);
+}

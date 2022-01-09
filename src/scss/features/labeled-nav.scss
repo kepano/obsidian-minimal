@@ -1,0 +1,74 @@
+/* Labeled nav */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
+  height: auto;
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-container-inner {
+  flex-direction:column;
+  padding:8px 8px 4px 8px;
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header {
+  padding:0;
+  margin-bottom:2px;
+  height:auto;
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner {
+  padding:0;
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon {
+  border-radius:6px;
+  padding:5px 6px;
+  margin:0;
+  width:100%;
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3)  .workspace-tab-header-inner-icon {
+  font-size: var(--font-small);
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  color:var(--text-normal);
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-inner-icon svg {
+  margin-right:6px;
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
+  border:none; 
+}
+
+/* Snippet this to translate into other languages */
+
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:after {
+  content:"Note";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="File explorer"] .workspace-tab-header-inner-icon:after {
+  content:"Notes";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Search"] .workspace-tab-header-inner-icon:after {
+  content:"Search";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Calendar"] .workspace-tab-header-inner-icon:after {
+  content:"Calendar";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Graph view"] .workspace-tab-header-inner-icon:after,
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Graph of"] .workspace-tab-header-inner-icon:after {
+  content:"Graph";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outline of"] .workspace-tab-header-inner-icon:after {
+  content:"Outline";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Starred"] .workspace-tab-header-inner-icon:after {
+  content:"Starred";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Dictionary"] .workspace-tab-header-inner-icon:after {
+  content:"Dictionary";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Tag pane"] .workspace-tab-header-inner-icon:after {
+  content:"Tags";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Backlinks for"] .workspace-tab-header-inner-icon:after {
+  content:"Backlinks";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outgoing links from"] .workspace-tab-header-inner-icon:after {
+  content:"Outlinks";
+}

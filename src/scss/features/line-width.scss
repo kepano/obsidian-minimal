@@ -1,0 +1,40 @@
+/* Custom line width */
+
+/* Readable line width off */
+.markdown-preview-view .markdown-preview-sizer,
+.markdown-source-view .CodeMirror {
+  max-width:90%;
+  margin:0 auto;
+}
+.is-mobile .markdown-source-view.mod-cm6 .cm-scroller {
+}
+.is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
+  padding-right:0;
+}
+
+/* With readable line width */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  max-width:var(--max-width);
+  width:var(--line-width-adaptive);
+}
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content,
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
+  max-width:var(--line-width-adaptive);
+}
+.markdown-source-view.is-readable-line-width .CodeMirror {
+  padding-left:0;
+  padding-right:0;
+  margin:0 auto 0 auto;
+  width:var(--line-width-adaptive);
+  max-width:var(--max-width);
+}
+.view-header-title-container {
+  padding-left:0;
+  padding-right:0px;
+  position:absolute;
+  width:var(--line-width-adaptive);
+  max-width:var(--max-width);
+  margin:0 auto;
+  left:0;
+  right:0;
+}

@@ -1,0 +1,54 @@
+/* Backlink pane */
+
+.outgoing-link-pane,
+.backlink-pane {
+  padding-bottom:30px;
+}
+.outgoing-link-pane .search-result-container,
+.backlink-pane .search-result-container {
+  padding:5px 5px 5px 5px;
+  margin-left:0;
+}
+.outgoing-link-pane .search-result-file-title,
+.backlink-pane .search-result-file-title {
+  padding-left:15px;
+}
+.outgoing-link-pane .tree-item-icon,
+.outgoing-link-pane > .tree-item-self .collapse-icon,
+.backlink-pane > .tree-item-self .collapse-icon {
+  display:none;
+}
+.tree-item-self.outgoing-link-item {
+  padding:0;
+  margin-left:5px;
+}
+.outgoing-link-pane > .tree-item-self:hover,
+.outgoing-link-pane > .tree-item-self,
+.backlink-pane > .tree-item-self:hover,
+.backlink-pane > .tree-item-self {
+  padding-left:15px;
+  color:var(--text-muted);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  font-size:var(--font-adaptive-smallest);
+  font-weight:500;
+  padding:5px 7px 5px 10px;
+  background:transparent;
+}
+
+.outgoing-link-pane > .tree-item-self.is-collapsed,
+.backlink-pane > .tree-item-self.is-collapsed {
+  color:var(--text-faint);
+}
+
+.outgoing-link-pane .search-result-file-match {
+  padding:5px 0;
+  border:0;
+}
+.outgoing-link-pane .search-result-file-match-destination-file {
+  background:transparent;
+}
+.search-result-file-match:hover .search-result-file-match-destination-file:hover {
+  background:transparent;
+  color:var(--text-normal);
+}

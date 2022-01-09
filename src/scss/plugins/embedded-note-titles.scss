@@ -1,0 +1,30 @@
+/* Embedded Note Titles plugin */
+
+.embedded-note-titles .markdown-preview-view > h1 {
+  /* ...preview mode styles... */
+}
+
+.embedded-note-titles .is-readable-line-width.markdown-preview-view > h1 {
+  max-width:var(--max-width) !important;
+  width:var(--line-width-adaptive) !important;
+}
+.embedded-note-titles.minimal-folding .is-readable-line-width.markdown-preview-view > h1 {
+  padding-left:var(--folding-offset) !important;
+}
+
+/* Attempting focus mode + embedded note titles
+
+.embedded-note-titles.minimal-focus-mode .markdown-preview-view > h1 {
+  padding-top:var(--header-height);
+}
+.embedded-note-titles.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .CodeMirror-scroller {
+  margin-top:calc(var(--header-height) - 10px);
+}*/
+
+.embedded-note-titles .CodeMirror-scroll > h1 {
+  /* ...edit mode styles... */
+}
+
+.embedded-note-titles .is-readable-line-width .CodeMirror-scroll > h1 {
+  /* ...edit mode styles with readable line width enabled... */
+}

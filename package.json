@@ -1,0 +1,16 @@
+{
+    "name": "minimal",
+    "version": "1.0.0",
+    "dependencies": {
+        "dotenv": "^10.0.0"
+    },
+    "devDependencies": {
+        "grunt": "~1.4.1",
+        "grunt-concat-css": "~0.3.2",
+        "grunt-contrib-copy": "~1.0.0",
+        "grunt-contrib-cssmin": "^4.0.0",
+        "grunt-contrib-sass": "~2.0.0",
+        "grunt-contrib-watch": "~1.1.0",
+        "grunt-env": "~1.0.1"
+    }
+}

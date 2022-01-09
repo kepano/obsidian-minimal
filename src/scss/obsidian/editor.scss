@@ -1,0 +1,103 @@
+/* Editor mode (CodeMirror 6 Live Preview) */
+
+/* Fix strange Obsidian ghost textearea bug on right click */
+.CodeMirror-wrap > div > textarea {
+  opacity:0;
+}
+
+.markdown-source-view.mod-cm6 hr {
+  border-width:2px;
+}
+.mod-cm6 .ͼ1 .cm-line {
+  padding:0 0 0 1px;
+}
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+  background-color:transparent;
+  border-left:1px solid var(--quote-opening-modifier);
+}
+.markdown-source-view.mod-cm6 .cm-blockquote-border {
+  width:20px;
+  display:inline-block;
+  border-left:none;
+  border-right:1px solid var(--quote-opening-modifier);
+  height:1em;
+}
+.markdown-source-view.mod-cm6 .cm-hmd-indent-in-quote {
+  margin-left:10px;
+}
+
+/* Quotes */
+.is-live-preview .cm-hmd-indent-in-quote {
+  color:var(--text-faint);
+}
+
+/* Code execution blocks, e.g. Dataview */
+.markdown-source-view.mod-cm6 .edit-block-button {
+  cursor:var(--cursor);
+  color:var(--text-muted);
+  background-color:var(--background-tertiary);
+  top:0;
+  right:0;
+  transition:opacity 200ms;
+}
+.markdown-source-view.mod-cm6 .cm-embed-block {
+  padding:0;
+  border:0;
+}
+.markdown-source-view.mod-cm6 .cm-embed-block:hover {
+  border:0;
+}
+
+/* Bullets */
+.mod-cm6 .HyperMD-list-line .list-bullet,
+.mod-cm6 span.list-bullet {
+  color:var(--text-faint);
+  font-size:1.4em;
+  line-height:0;
+  vertical-align:middle;
+}
+.mod-cm6 .HyperMD-list-line .list-bullet::after,
+.mod-cm6 span.list-bullet::after {
+  line-height:1em;
+}
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
+  color:var(--text-faint);
+}
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  background-color:transparent;
+  border-left-width:1px;
+}
+.markdown-source-view.mod-cm6 .cm-gutterElement {
+  padding-top:0.2em !important;
+}
+.ͼ1 .cm-foldPlaceholder,
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  cursor:var(--cursor);
+}
+.cm-gutterElement .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
+.markdown-source-view.mod-cm6 .fold-gutter {
+  opacity:0;
+}
+.cm-gutterElement:hover .collapse-indicator,
+.cm-gutterElement .is-collapsed .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-line:hover .cm-fold-indicator .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator,
+.markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
+.markdown-source-view.mod-cm6 .fold-gutter:hover {
+  opacity:1;
+}
+.markdown-source-view.mod-cm6  .cm-line:not(.HyperMD-codeblock) .cm-selection {
+  background-color:transparent;
+}
+.markdown-source-view.mod-cm6 .cm-scroller {
+  padding-top:15px;
+  padding-left:calc((100% - var(--max-width)) / 2);
+  padding-right:calc((100% - var(--max-width)) / 2);
+}
+body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
+  max-width:var(--line-width-adaptive);
+}
+body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
+  max-width:var(--line-width-adaptive);
+}

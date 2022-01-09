@@ -1,0 +1,43 @@
+/* Style Settings preferences */
+
+.setting-item-heading.style-settings-heading,
+.style-settings-container .style-settings-heading {
+  cursor:var(--cursor);
+}
+.modal.mod-settings .setting-item .pickr button.pcr-button {
+  box-shadow:none;
+  border-radius:40px;
+  height:24px;
+  width:24px;
+}
+.setting-item .pickr .pcr-button:after,
+.setting-item .pickr .pcr-button:before {
+  border-radius:40px;
+  box-shadow:none;
+  border:none;
+}
+.workspace-leaf-content .setting-item.setting-item-heading {
+  border-bottom:1px solid var(--background-modifier-border);
+  padding:10px 0 5px;
+}
+.workspace-leaf-content[data-type="style-settings"] .setting-item {
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+.setting-item .style-settings-import,
+.setting-item .style-settings-export {
+  text-decoration:none;
+  font-size:var(--font-settings-small);
+  font-weight:500;
+  color:var(--text-muted);
+  margin:0;
+  padding:2px 8px;
+  border-radius:5px;
+  cursor:var(--cursor);
+}
+.style-settings-import:hover,
+.style-settings-export:hover {
+  background-color:var(--background-tertiary);
+  color:var(--text-normal);
+  cursor:var(--cursor);
+}

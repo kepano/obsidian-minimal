@@ -1,0 +1,53 @@
+/* Table helper classes for alternate styles */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+
+.row-alt th:first-child,
+.row-alt tbody > tr > td:first-child {
+  padding-left:10px;
+}
+.row-alt tbody > tr:nth-child(odd),
+.col-alt tr > th:nth-child(2n+2),
+.col-alt tr > td:nth-child(2n+2) {
+  padding-left:10px;
+  background:var(--background-table-rows);
+}
+.table-lines .table-view-table  {
+  border:1px solid var(--background-modifier-border);
+}
+.table-lines .table-view-table thead > tr > th,
+.table-lines .table-view-table > tbody > tr > td  {
+  border-right:1px solid var(--background-modifier-border);
+  border-bottom:1px solid var(--background-modifier-border);
+  padding:4px 10px;
+}
+.table-nowrap tbody > tr > td {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+.row-highlight tbody > tr:hover td {
+  background-color:var(--background-table-rows);
+}
+.row-lines tbody > tr > td,
+.row-lines .table-view-table > tbody > tr > td {
+  border-bottom:1px solid var(--background-modifier-border);
+}
+.col-lines tbody > tr > td,
+.col-lines .table-view-table thead > tr > th:not(:last-child),
+.col-lines .table-view-table > tbody > tr > td:not(:last-child) {
+  border-right:1px solid var(--background-modifier-border);
+}
+.table-small.markdown-preview-view .table-view-table > thead > tr > th,
+.table-small thead > tr > th,
+.table-small tbody > tr > td,
+.table-small .table-view-table .tag,
+.table-small .table-view-table a.tag {
+  font-size:85%;
+}
+.table-tiny.markdown-preview-view .table-view-table > thead > tr > th,
+.table-tiny thead > tr > th,
+.table-tiny tbody > tr > td,
+.table-tiny .table-view-table .tag,
+.table-tiny .table-view-table a.tag {
+  font-size:75%;
+}

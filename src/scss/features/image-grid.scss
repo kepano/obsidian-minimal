@@ -1,0 +1,50 @@
+/* Image grid */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* Requires Contextual Typography 2.2.1+ */
+
+div:not(.el-embed-image) + .el-embed-image {
+  margin-top:1rem;
+}
+.el-embed-image {
+  margin-top:0.5rem;
+}
+.contextual-typography .markdown-preview-section > .el-embed-image > p {
+  margin-block-start:0;
+  margin-block-end:0;
+}
+.img-grid .markdown-preview-section .el-embed-image img:not([width]),
+.img-grid .markdown-preview-section video {
+   width:100%;
+}
+.img-grid .markdown-preview-section > .el-embed-image > p {
+  display:grid;
+  grid-column-gap:0.5rem;
+  grid-row-gap:0;
+  grid-template-columns:repeat(auto-fit, minmax(0, 1fr));
+}
+.img-grid .markdown-preview-section > .el-embed-image > p > br {
+   display:none;
+}
+.img-grid .markdown-preview-section > .el-embed-image > p > img {
+  object-fit:cover;
+  align-self:stretch;
+}
+.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
+  object-fit:cover;
+  height:100%;
+}
+.img-grid .img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img,
+.img-grid.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img {
+   object-fit:contain;
+   height:100%;
+   align-self:center;
+}
+
+@media (max-width:400pt) {
+  .el-embed-image {
+    margin-top:0.25rem;
+  }
+  .img-grid .markdown-preview-section > .el-embed-image > p {
+    grid-column-gap:0.25rem;
+  }
+}

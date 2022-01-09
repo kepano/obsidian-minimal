@@ -1,0 +1,216 @@
+/* Layout Control
+/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* Requires Contextual Typography 2.2.1+ */
+
+/* Switch to flexbox */
+
+.contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer {
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  max-width:100%;
+  padding-left:0;
+  padding-top:10px;
+}
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-embed-content .markdown-preview-sizer > div,
+.contextual-typography.minimal-folding .allow-fold-headings.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer,
+.contextual-typography.minimal-folding .allow-fold-lists.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer {
+  padding:0;
+}
+.contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer > div {
+  width:var(--max-width);
+  margin-left:auto;
+  margin-right:auto;
+}
+.contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  align-items:center;
+  padding-left:0;
+}
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  max-width:var(--max-width);
+  width:var(--line-width-adaptive);
+  overflow:hidden;
+}
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer > div {
+  max-width:100%;
+}
+.contextual-typography .markdown-preview-view p,
+.contextual-typography .markdown-preview-view ol,
+.contextual-typography .markdown-preview-view ul {
+  margin-block-start:0.5em;
+  margin-block-end:0.5em;
+}
+.contextual-typography .markdown-preview-view ol ol,
+.contextual-typography .markdown-preview-view ol ul,
+.contextual-typography .markdown-preview-view ul ul {
+  margin-block-start:0em;
+  margin-block-end:0em;
+}
+.contextual-typography .markdown-preview-view h1,
+.contextual-typography .markdown-preview-view h2,
+.contextual-typography .markdown-preview-view h3,
+.contextual-typography .markdown-preview-view h4,
+.contextual-typography .markdown-preview-view h5,
+.contextual-typography .markdown-preview-view h6 {
+  margin-block-start:0.4em;
+  margin-block-end:0.4em;
+}
+.contextual-typography .markdown-preview-view .markdown-preview-sizer > .el-table,
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
+.contextual-typography .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+  width:100%;
+  max-width:100%;
+  overflow-x:scroll;
+}
+.el-table,
+.el-lang-dataview .block-language-dataview > h4,
+.el-lang-dataview .dataview.result-group,
+.el-lang-dataview .dataview.list-view-ul,
+.el-lang-dataview .dataview.dataview-error {
+  max-width:var(--max-width);
+  width:var(--line-width-adaptive);
+  margin-left:auto;
+  margin-right:auto;
+}
+.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
+  padding-inline-start:calc(var(--list-padding) + var(--folding-offset));
+}
+/*
+.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
+  transform:translateX(calc(var(--folding-offset)/2));
+}*/
+.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
+  width:calc(var(--line-width-adaptive) - var(--folding-offset));
+}
+.el-table table,
+.el-lang-dataview .dataview.table-view-table {
+  width:var(--max-width);
+  max-width:var(--line-width-adaptive);
+  margin:0 auto 0.5rem;
+}
+.markdown-embed .el-table table,
+.markdown-embed .el-lang-dataview .dataview.table-view-table {
+  width:100%;
+}
+
+
+/* Folding offset */
+
+.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .block-language-dataview > h4,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  padding-left:var(--folding-offset);
+}
+.contextual-typography.minimal-folding:not(.is-mobile):not(.table-100):not(.table-wide):not(.table-max) .el-table table,
+.contextual-typography.minimal-folding:not(.is-mobile):not(.table-100):not(.table-wide):not(.table-max) .el-lang-dataview .dataview.table-view-table {
+  max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
+}
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-100 .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-100 .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-wide .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-wide .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-max .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-max .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.iframe-100 .markdown-preview-sizer > .el-iframe,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.iframe-max .markdown-preview-sizer > .el-iframe,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image,
+.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.img-max .markdown-preview-sizer > .el-embed-image,
+.contextual-typography.minimal-folding:not(.is-mobile).table-100 .markdown-preview-view .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile).table-100 .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile).table-max .markdown-preview-view .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile).table-max .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile).table-wide .markdown-preview-view .markdown-preview-sizer > .el-table,
+.contextual-typography.minimal-folding:not(.is-mobile).table-wide .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography.minimal-folding:not(.is-mobile).iframe-100 .markdown-preview-view .markdown-preview-sizer > .el-iframe,
+.contextual-typography.minimal-folding:not(.is-mobile).iframe-wide .markdown-preview-view .markdown-preview-sizer > .el-iframe,
+.contextual-typography.minimal-folding:not(.is-mobile).img-100 .markdown-preview-view .markdown-preview-sizer > .el-embed-image,
+.contextual-typography.minimal-folding:not(.is-mobile).img-max .markdown-preview-view .markdown-preview-sizer > .el-embed-image,
+.contextual-typography.minimal-folding:not(.is-mobile).img-wide .markdown-preview-view .markdown-preview-sizer > .el-embed-image {
+  padding-left:0;
+}
+
+
+/* Dataview and tables */
+.table-100 .el-table table,
+.table-100 .el-lang-dataview .dataview.table-view-table {
+  max-width:100%;
+  width:100%;
+}
+.markdown-preview-view.table-100 .el-table table,
+.markdown-preview-view.table-100 .el-lang-dataview .dataview.table-view-table {
+  max-width:100% !important;
+  width:100% !important;
+}
+.table-max .el-table table,
+.table-max .el-lang-dataview .dataview.table-view-table {
+  max-width:100%;
+}
+.markdown-preview-view.table-max .el-table table,
+.markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table {
+  max-width:100% !important;
+}
+.table-wide .markdown-preview-view.is-readable-line-width .el-table table,
+.markdown-preview-view.is-readable-line-width.table-wide .el-table table,
+.table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
+.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
+  max-width:var(--line-width-wide);
+}
+.table-100 .el-table table th:first-child,
+.table-100 .el-table table td:first-child,
+.table-100 .el-lang-dataview .dataview.table-view-table th:first-child,
+.table-100 .el-lang-dataview .dataview.table-view-table td:first-child {
+  padding-left:20px;
+}
+.table-100 .el-table table th:last-child,
+.table-100 .el-table table td:last-child,
+.table-100 .el-lang-dataview .dataview.table-view-table th:last-child,
+.table-100 .el-lang-dataview .dataview.table-view-table td:last-child {
+  padding-right:20px;
+}
+
+/* Images and iframes */
+.contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .markdown-preview-view.is-readable-line-width.iframe-max .markdown-preview-sizer > .el-iframe,
+.contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
+.contextual-typography .markdown-preview-view.is-readable-line-width.img-max .markdown-preview-sizer > .el-embed-image {
+  width:100%;
+}
+.contextual-typography.iframe-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .markdown-preview-view.is-readable-line-width.iframe-wide .markdown-preview-sizer > .el-iframe,
+.contextual-typography.img-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
+.contextual-typography .markdown-preview-view.is-readable-line-width.img-wide .markdown-preview-sizer > .el-embed-image {
+  width:var(--line-width-wide);
+}
+.contextual-typography.iframe-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .markdown-preview-view.iframe-100 .markdown-preview-sizer > .el-iframe,
+.contextual-typography.img-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
+.contextual-typography .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image {
+  width:100%;
+  max-width:100%;
+}
+
+/* Mobile */
+@media (max-width:400pt) {
+  .markdown-preview-view .el-table th:first-child,
+  .markdown-preview-view .el-table td:first-child,
+  .markdown-preview-view .el-lang-dataview th:first-child,
+  .markdown-preview-view .el-lang-dataview td:first-child {
+    padding-left:6vw;
+  }
+  .markdown-preview-view .el-table th:last-child,
+  .markdown-preview-view .el-table td:last-child,
+  .markdown-preview-view .el-lang-dataview th:last-child,
+  .markdown-preview-view .el-lang-dataview td:last-child {
+    padding-right:6vw;
+  }
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+    padding-left:0;
+    padding-right:0;
+  }
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
+  .markdown-preview-view .table-view-table table,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+    width:100%;
+  }
+}
