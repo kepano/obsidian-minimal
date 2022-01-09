@@ -219,16 +219,6 @@ settings:
         description: Recommended if you use folding headings and indents
         type: class-toggle
     -
-        id: minimal-rel-preview
-        title: Relationship lines in Preview
-        description: Show vertical lines that connect related bullet points and task lists
-        type: class-toggle
-    -
-        id: minimal-rel-edit
-        title: Relationship lines in Editor
-        description: Show vertical lines that connect related bullet points and task lists
-        type: class-toggle
-    -
         id: links-int-on
         title: Underline internal links
         description: Show underlines on internal links
