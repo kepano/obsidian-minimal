@@ -29,17 +29,21 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 ## Screenshots
 
-**Background styles** include low contrast, high contrast, and a true black option ideal for OLED devices.
+**Background styles** include low contrast, high contrast, and a true black option ideal for OLED devices
 
 ![](assets/minimal-variants.png)
 
-**Helper classes** for tables and card layouts allow you to create powerful workflows.
+**Helper classes** for tables and card layouts allow you to create powerful workflows
 
 ![](assets/minimal-movies.png)
 
-Combining **image grid**, **image width** and **focus mode** allows you to immerse yourself in visual projects.
+Combining **focus mode** with **image grid** and **image width** options allows you to immerse yourself in visual projects
 
 ![](assets/minimal-img-grid.png)
+
+Minimal plays well with dozens of popular Obsidian plugins like Kanban, Sliding Panes, and Calendar
+
+![](assets/minimal-plugins.png)
 
 ---
 
@@ -59,9 +63,14 @@ The following features can be toggled on/off using [Minimal Theme Settings](http
 
 ## Plugin support
 
-- [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)
-- [Hider](https://github.com/kepano/obsidian-hider)
-- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) — may conflict with Minimal Theme Settings plugin
+### Companion plugins
+
+For customization use [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings includes hotkey support, while Style Settings has more granular settings for headings and advanceed features. Note that running both simultaneously may lead to conflicts.
+
+[Hider](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements.
+
+### Community plugins
+
 - [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
