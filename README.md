@@ -155,16 +155,17 @@ Using `cards` transforms Dataview tables cards that can be sorted using the [Sor
 
 Controls the row and column styling for tables. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.1.7)
 
-| Class          | Description                                         |
-| :------------- | :-------------------------------------------------- |
-| `table-nowrap` | Disable line wrapping in table cells                |
-| `table-small`  | Use small font size in tables                       |
-| `table-tiny`   | Use tiny font size in tables                        |
-| `table-lines`  | Add borders around all table cells                  |
-| `row-lines`    | Add borders between table rows                      |
-| `col-lines`    | Add borders between table columns                   |
-| `row-alt`      | Add striped background to alternating table rows    |
-| `col-alt`      | Add striped background to alternating table columns |
+| Class           | Description                                         |
+| :-------------- | :-------------------------------------------------- |
+| `table-nowrap`  | Disable line wrapping in table cells                |
+| `table-tabular` | Use tabular figures in tables                       |
+| `table-small`   | Use small font size in tables                       |
+| `table-tiny`    | Use tiny font size in tables                        |
+| `table-lines`   | Add borders around all table cells                  |
+| `row-lines`     | Add borders between table rows                      |
+| `col-lines`     | Add borders between table columns                   |
+| `row-alt`       | Add striped background to alternating table rows    |
+| `col-alt`       | Add striped background to alternating table columns |
 
 ### Embeds and transclusions
 

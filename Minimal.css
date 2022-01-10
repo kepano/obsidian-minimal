@@ -3921,6 +3921,9 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
   padding-left: 10px;
   background: var(--background-table-rows); }
 
+.table-tabular table {
+  font-variant-numeric: tabular-nums; }
+
 .table-lines .table-view-table {
   border: 1px solid var(--background-modifier-border); }
 
