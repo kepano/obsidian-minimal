@@ -2891,6 +2891,15 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   align-items: flex-end;
   flex-grow: 1; }
 
+.cards-cols-1 table.dataview tbody {
+  grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+.cards-cols-2 table.dataview tbody {
+  grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+@media (min-width: 400pt) {
+  .cards-cols-3 table.dataview tbody {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* Card content */
 /* Paragraphs */
 .cards table.dataview tbody > tr > td > *:not(.el-embed-image) {
