@@ -24,4 +24,4 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Debug info (please complete the following information):**
-Paste your debug info below, which can be accessed by Ctrl/Cmd-P, enter "Show debug info", and click "Copy to clipboard".
+Paste your debug info below, which can be accessed in Obsidian with Ctrl/Cmd-P, enter "Show debug info", and click "Copy to clipboard".
