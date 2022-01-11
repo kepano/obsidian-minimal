@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Report a bug with Minimal
-title: "[BUG] "
+title: 
 labels: bug
 assignees: ''
 
