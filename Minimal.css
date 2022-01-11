@@ -475,6 +475,9 @@ body.is-dragging {
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   cursor: var(--cursor); }
 
+.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
+  right: -4px; }
+
 .cm-gutterElement .collapse-indicator,
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter {
@@ -2543,7 +2546,7 @@ span.cm-hashtag.cm-hashtag-end {
   background: linear-gradient(90deg, var(--background-transparent) 0%, var(--background-primary) 80%);
   width: 60px;
   content: " ";
-  height: 100%;
+  height: calc(100% - 2px);
   display: inline-block;
   vertical-align: bottom;
   position: absolute;
@@ -5564,22 +5567,22 @@ body.is-mobile:not(.minimal-icons-off) .menu-item-icon svg {
   color: var(--text-faint); }
 
 /* Full bleed (takes up full height) */
-body:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='localgraph'] .view-header,
-body:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='graph'] .view-header {
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='localgraph'] .view-header,
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='graph'] .view-header {
   position: fixed;
   background: transparent !important;
   width: 100%; }
 
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-content,
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-content {
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-content,
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-content {
   height: 100%; }
 
 body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-header-title,
 body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-header-title {
   display: none; }
 
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-actions,
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-actions {
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-actions,
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-actions {
   background: transparent; }
 
 .mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls,
@@ -6864,8 +6867,8 @@ div[data-type="git-view"] .search-input-clear-button {
 
 /* Indentation Guides plugin */
 body {
-  --indentation-guide-adjust:2px;
-  --indentation-guide-adjust-preview:1px; }
+  --indentation-guide-adjust:4px;
+  --indentation-guide-adjust-preview:0.15em; }
 
 body.theme-light,
 body.theme-dark {

@@ -16,7 +16,7 @@
   background:linear-gradient(90deg,var(--background-transparent) 0%,var(--background-primary) 80%);
   width:60px;
   content:" ";
-  height:100%;
+  height:calc(100% - 2px);
   display:inline-block;
   vertical-align:bottom;
   position:absolute;

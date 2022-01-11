@@ -36,19 +36,19 @@
 
 /* Full bleed (takes up full height) */
 
-body:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='localgraph'] .view-header,
-body:not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='graph'] .view-header {
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='localgraph'] .view-header,
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type='graph'] .view-header {
   position:fixed;
   background:transparent !important;
   width:100%;}
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-content,
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-content {
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-content,
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-content {
   height:100%;}
 body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-header-title,
 body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-header-title {
   display:none;}
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-actions,
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-actions {
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='localgraph'] .view-actions,
+body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='graph'] .view-actions {
   background:transparent;}
 .mod-root .workspace-leaf-content[data-type='localgraph'] .graph-controls,
 .mod-root .workspace-leaf-content[data-type='graph'] .graph-controls {

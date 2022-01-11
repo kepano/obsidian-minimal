@@ -74,6 +74,9 @@
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   cursor:var(--cursor);
 }
+.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
+  right:-4px;
+}
 .cm-gutterElement .collapse-indicator,
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter {
