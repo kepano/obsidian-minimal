@@ -11,6 +11,7 @@ body.theme-light .button-default {
   font-weight:500;
   transform:none;
   transition:all 0.1s linear;
+  padding:0 20px;
 }
 body.theme-dark .button-default:hover,
 body.theme-light .button-default:hover {
@@ -20,4 +21,25 @@ body.theme-light .button-default:hover {
   transform:none;
   transition:all 0.1s linear;
 }
+body.theme-light .button-default:focus,
+body.theme-light .button-default:active,
+body.theme-dark .button-default:focus,
+body.theme-dark .button-default:active {
+  box-shadow:none;
+}
 
+body .button-default.blue {
+  background-color:var(--blue) !important;
+}
+.button-default.red {
+  background-color:var(--red) !important; 
+}
+.button-default.green {
+  background-color:var(--green) !important;
+}
+.button-default.yellow {
+  background-color:var(--yellow) !important;
+}
+.button-default.purple {
+  background-color:var(--purple) !important;
+}
