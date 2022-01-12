@@ -73,11 +73,11 @@ The following features can be accessed using [Minimal Theme Settings](https://gi
 
 ## Companion plugins
 
-To customize Minimal, install the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [hotkeys](#hotkeys), while Style Settings has a few extra granular settings for headings and advanced features. Running both simultaneously is **not recommended** as this will lead to conflicts.
+To customize Minimal, install the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [hotkeys](#hotkeys), while Style Settings has a few extra granular settings for headings and advanced features. Running both simultaneously is **not suggested** as this will lead to conflicts.
 
-The [Hider plugin](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements. When using Hider to turn off the app ribbon, it can be accessed by hovering over the bottom left edge of the window.
+[Hider plugin](https://github.com/kepano/obsidian-hider) is recommended to hide Obsidian UI elements such as window frame, scrollbars, tooltips, etc. When using Hider to turn off the main toolbar (AKA app ribbon), it can be accessed by hovering over the bottom left edge of the window.
 
-In addition [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography) is highly recommended, and required for all advanced layout features such as image grids and block width options.
+[Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography) is required for advanced layout features such as image grids and block width options.
 
 ## Plugin support
 
