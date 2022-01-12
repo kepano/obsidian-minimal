@@ -73,7 +73,7 @@ The following features can be accessed using [Minimal Theme Settings](https://gi
 
 ## Companion plugins
 
-To customize Minimal, install the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [hotkeys](#hotkeys), while Style Settings has more granular settings for headings and advanced features. Note that running both simultaneously may lead to conflicts.
+To customize Minimal, install the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [hotkeys](#hotkeys), while Style Settings has a few extra granular settings for headings and advanced features. Running both simultaneously is **not recommended** as this will lead to conflicts.
 
 The [Hider plugin](https://github.com/kepano/obsidian-hider) is also recommended to hide UI elements. When using Hider to turn off the app ribbon, it can be accessed by hovering over the bottom left edge of the window.
 
