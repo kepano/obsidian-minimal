@@ -2306,6 +2306,35 @@ button.mod-cta,
 .community-theme.is-selected .community-theme-info + div {
   box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1), inset 0 0 0 2px var(--text-accent); }
 
+.community-theme.is-selected .community-theme-info {
+  margin-bottom: 0; }
+
+.community-theme.is-selected .community-theme-info .clickable-icon {
+  width: 100%;
+  background-color: var(--background-tertiary);
+  border: 1px solid var(--background-modifier-border);
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  padding: 7px 0;
+  margin: 20px 0 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0px var(--btn-shadow-color); }
+
+.community-theme.is-selected .community-theme-info .clickable-icon:hover {
+  border: 1px solid var(--background-modifier-border-hover);
+  box-shadow: 0 2px 3px 0px var(--btn-shadow-color); }
+
+.community-theme.is-selected .community-theme-info .clickable-icon::after {
+  content: "Documentation";
+  padding-left: 4px; }
+
+.community-theme.is-selected .modal-button-container .mod-cta {
+  background-color: var(--interactive-accent); }
+
+.community-theme.is-selected .modal-button-container .mod-cta:hover {
+  background-color: var(--interactive-accent-hover); }
+
 .community-theme-info {
   line-height: 1;
   flex-grow: 0;
