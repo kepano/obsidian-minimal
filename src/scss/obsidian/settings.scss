@@ -143,8 +143,55 @@ button.mod-cta,
 .hotkey-list-container {
   padding-right:0;
 }
+
+.theme-list {
+  justify-content: space-evenly;
+}
 .community-theme-filters-container, .hotkey-search-container {
   padding:0 0 20px 0;
+}
+.community-theme {
+  padding:0;
+  margin:0 0 4em 0;
+  align-items:stretch;
+  background:transparent;
+}
+.community-theme-title {
+  text-align:left;
+  font-size:var(--font-settings);
+}
+.community-theme-info + div {
+  background-color:var(--background-secondary);
+  display: flex;
+  align-items: center;
+  padding:10px;
+  flex-grow:1;
+  border-radius:20px;
+}
+.community-theme.is-selected {
+  padding-left:0;
+  padding-right:0;
+  background-color:transparent;
+}
+.community-theme.is-selected .community-theme-info + div {
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1),inset 0 0 0 2px var(--text-accent);
+}
+.community-theme-info {
+  line-height:1;
+  flex-grow:0;
+  padding:0 0 10px 0;
+  align-items:flex-end;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+.community-theme-remove-button {
+  padding:4px 6px;
+  display:flex;
+  color:var(--text-muted);
+  background-color:transparent;
+}
+.community-theme .community-theme-screenshot {
+  max-width:100%;
 }
 .modal.mod-settings .vertical-tab-header {
   background:var(--background-secondary);
