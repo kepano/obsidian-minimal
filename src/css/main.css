@@ -6602,6 +6602,15 @@ ul.dataview-ul {
   text-overflow: ellipsis;
   overflow: hidden; }
 
+/* Calendar */
+.markdown-preview-view .block-language-dataview table.calendar th {
+  border: none;
+  cursor: default;
+  background-image: none; }
+
+.markdown-preview-view .block-language-dataview table.calendar .day {
+  font-size: var(--font-adaptive-small); }
+
 /* Dictionary plugin */
 .workspace-leaf-content .view-content.dictionary-view-content {
   padding: 0; }
