@@ -391,6 +391,15 @@ body.is-dragging {
 .markdown-source-view.mod-cm6 .cm-hmd-indent-in-quote {
   margin-left: 10px; }
 
+/* Tables */
+.cm-s-obsidian .HyperMD-table-row {
+  font-size: calc(var(--font-adaptive-normal) - 2px); }
+
+.cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep,
+.cm-hmd-table-sep-dummy {
+  color: var(--text-faint);
+  font-weight: 400; }
+
 /* Quotes */
 .is-live-preview .cm-hmd-indent-in-quote {
   color: var(--text-faint); }
@@ -2301,13 +2310,16 @@ button.mod-cta,
 .community-theme.is-selected {
   padding-left: 0;
   padding-right: 0;
-  background-color: transparent; }
+  background-color: transparent;
+  color: var(--text-normal); }
 
 .community-theme.is-selected .community-theme-info + div {
   box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1), inset 0 0 0 2px var(--text-accent); }
 
+.community-theme.is-selected .community-theme-downloads,
 .community-theme.is-selected .community-theme-info {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  color: var(--text-muted); }
 
 .community-theme.is-selected .community-theme-info .clickable-icon {
   width: 100%;

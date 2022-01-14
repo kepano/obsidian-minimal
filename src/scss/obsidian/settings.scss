@@ -172,13 +172,16 @@ button.mod-cta,
   padding-left:0;
   padding-right:0;
   background-color:transparent;
+  color:var(--text-normal);
 }
 .community-theme.is-selected .community-theme-info + div {
   box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1),inset 0 0 0 2px var(--text-accent);
 }
 
+.community-theme.is-selected .community-theme-downloads,
 .community-theme.is-selected .community-theme-info {
   margin-bottom:0;
+  color:var(--text-muted);
 }
 .community-theme.is-selected .community-theme-info .clickable-icon {
   width:100%;

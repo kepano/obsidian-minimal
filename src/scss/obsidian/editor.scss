@@ -26,6 +26,16 @@
   margin-left:10px;
 }
 
+/* Tables */
+.cm-s-obsidian .HyperMD-table-row {
+  font-size: calc(var(--font-adaptive-normal) - 2px);
+}
+.cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep,
+.cm-hmd-table-sep-dummy {
+  color:var(--text-faint);
+  font-weight:400;
+}
+
 /* Quotes */
 .is-live-preview .cm-hmd-indent-in-quote {
   color:var(--text-faint);
