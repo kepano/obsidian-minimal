@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Before you open a bug report**
-Dsiable plugins and snippets that could be causing a conflict. Update to the latest versions of the following, and restart Obsidian:
+Disable plugins and snippets that could be causing a conflict. Update to the latest versions of the following, and restart Obsidian:
 - Minimal Theme
 - Minimal Theme Settings plugin (or Style Settings plugin, but not both)
 - Contextual Typography plugin
