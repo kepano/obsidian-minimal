@@ -23,6 +23,10 @@
   border-bottom:1px solid var(--background-modifier-border);
   padding:4px 10px;
 }
+.table-lines .table-view-table thead > tr > th:first-child,
+.table-lines .table-view-table > tbody > tr > td:first-child {
+  padding-left:10px;
+}
 .table-nowrap tbody > tr > td {
   white-space:nowrap;
   text-overflow:ellipsis;

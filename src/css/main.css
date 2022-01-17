@@ -415,7 +415,8 @@ body.is-dragging {
 
 .markdown-source-view.mod-cm6 .cm-embed-block {
   padding: 0;
-  border: 0; }
+  border: 0;
+  border-radius: 0; }
 
 .markdown-source-view.mod-cm6 .cm-embed-block:hover {
   border: 0; }
@@ -2896,7 +2897,7 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   transition: box-shadow 0.15s linear; }
 
 /* Styling elements inside cards */
-.trim-cols .markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
+.markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
 .trim-cols .cards table.dataview tbody > tr > td {
   white-space: normal; }
 
@@ -4011,6 +4012,10 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
   border-right: 1px solid var(--background-modifier-border);
   border-bottom: 1px solid var(--background-modifier-border);
   padding: 4px 10px; }
+
+.table-lines .table-view-table thead > tr > th:first-child,
+.table-lines .table-view-table > tbody > tr > td:first-child {
+  padding-left: 10px; }
 
 .table-nowrap tbody > tr > td {
   white-space: nowrap;
