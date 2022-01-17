@@ -460,8 +460,12 @@ body.is-dragging {
 .markdown-source-view.mod-cm6 .fold-gutter:hover {
   opacity: 1; }
 
+/* Live Preview text xelection */
 .markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .cm-selection {
   background-color: transparent; }
+
+.markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
+  background-color: var(--text-selection); }
 
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top: 15px;
