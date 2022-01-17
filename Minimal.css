@@ -2934,9 +2934,11 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   transition: box-shadow 0.15s linear; }
 
 /* Styling elements inside cards */
+.trim-cols .markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
 .trim-cols .cards table.dataview tbody > tr > td {
   white-space: normal; }
 
+.markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
 .cards table.dataview tbody > tr > td {
   border-bottom: none;
   padding: 0 !important;
@@ -3036,6 +3038,22 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   max-height: var(--cards-image-height);
   background-color: var(--background-secondary);
   vertical-align: bottom; }
+
+/* ------------------- */
+/* Sorting */
+.markdown-source-view.mod-cm6.cards .edit-block-button {
+  top: 0;
+  right: 24px;
+  opacity: 1;
+  background-color: transparent; }
+
+.markdown-source-view.mod-cm6.cards .edit-block-button svg {
+  opacity: 0.5;
+  width: 18px;
+  height: 18px; }
+
+.markdown-source-view.mod-cm6.cards .edit-block-button:hover svg {
+  opacity: 1; }
 
 /* ------------------- */
 /* Sorting */
