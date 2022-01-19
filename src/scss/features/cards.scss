@@ -180,21 +180,13 @@
 }
 
 /* ------------------- */
-/* Sorting */
+/* Block button */
 
 .markdown-source-view.mod-cm6.cards .edit-block-button {
   top:0;
   right:24px;
   opacity:1;
   background-color:transparent;
-}
-.markdown-source-view.mod-cm6.cards .edit-block-button svg {
-  opacity:0.5;
-  width:18px;
-  height:18px;
-}
-.markdown-source-view.mod-cm6.cards .edit-block-button:hover svg {
-  opacity:1;
 }
 
 /* ------------------- */

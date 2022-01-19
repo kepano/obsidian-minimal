@@ -122,9 +122,12 @@ button.mod-cta,
 
 /* Settings */
 
-.horizontal-tab-content, .vertical-tab-content {
+.horizontal-tab-content,
+.vertical-tab-content {
   background:var(--background-primary);
   padding-bottom:100px;
+  padding-left:40px;
+  padding-right:40px;
 }
 .vertical-tab-header,
 .vertical-tab-content { 

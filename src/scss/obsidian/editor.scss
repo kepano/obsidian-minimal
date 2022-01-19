@@ -45,10 +45,22 @@
 .markdown-source-view.mod-cm6 .edit-block-button {
   cursor:var(--cursor);
   color:var(--text-muted);
-  background-color:var(--background-tertiary);
+  background-color:transparent;
   top:0;
   right:0;
   transition:opacity 200ms;
+  padding:4px;
+}
+.markdown-source-view.mod-cm6 .edit-block-button:hover {
+  background-color:var(--background-tertiary);
+}
+.markdown-source-view.mod-cm6 .edit-block-button svg {
+  opacity:0.5;
+  width:18px;
+  height:18px;
+}
+.markdown-source-view.mod-cm6 .edit-block-button:hover svg {
+  opacity:1;
 }
 .markdown-source-view.mod-cm6 .cm-embed-block {
   padding:0;
