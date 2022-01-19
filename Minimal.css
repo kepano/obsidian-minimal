@@ -4046,6 +4046,7 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
 .table-tabular table {
   font-variant-numeric: tabular-nums; }
 
+.table-lines table,
 .table-lines .table-view-table {
   border: 1px solid var(--background-modifier-border); }
 
@@ -4055,8 +4056,8 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
   border-bottom: 1px solid var(--background-modifier-border);
   padding: 4px 10px; }
 
-.table-lines .table-view-table thead > tr > th:first-child,
-.table-lines .table-view-table > tbody > tr > td:first-child {
+.table-lines thead > tr > th:first-child,
+.table-lines tbody > tr > td:first-child {
   padding-left: 10px; }
 
 .table-nowrap tbody > tr > td {
