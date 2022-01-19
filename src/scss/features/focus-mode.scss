@@ -57,6 +57,12 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
 .minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
   margin-top:calc(var(--header-height) - 10px);
 }
+.minimal-focus-mode .view-content .is-searching {
+  margin-top: 60px;
+}
+.minimal-focus-mode  .markdown-source-view.is-replacing {
+  margin-top: 100px;    
+}
 /*
 .minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .document-search-container {
   top:0px;

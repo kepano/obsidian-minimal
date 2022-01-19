@@ -21,8 +21,9 @@
 
 .markdown-source-view.mod-cm6 th,
 .markdown-preview-view th {
-  font-weight:var(--bold-weight);
+  font-weight:400;
   font-size:calc(var(--font-adaptive-normal) - 2px);
+  color:var(--text-muted);
   text-align:left;
   border-top:none;
 }

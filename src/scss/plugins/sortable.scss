@@ -1,5 +1,35 @@
 /* Sortable plugin */
 
+.theme-dark .markdown-preview-view th,
+.theme-light .markdown-preview-view th {
+  background-image:none;
+  cursor:default;
+}
+.theme-light th[sortable-style="sortable-asc"] {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='black' fill-opacity='0.4' d='M6.5 4l4-4 4 4z'></path></svg>");
+}
+.theme-light th[sortable-style="sortable-desc"] {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='black' fill-opacity='0.4' d='M14.5 0l-4 4-4-4z'></path></svg>");
+}
+.theme-light th[sortable-style="sortable-asc"]:hover {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='black' fill-opacity='0.6' d='M6.5 4l4-4 4 4z'></path></svg>");
+}
+.theme-light th[sortable-style="sortable-desc"]:hover {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='black' fill-opacity='0.6' d='M14.5 0l-4 4-4-4z'></path></svg>");
+}
+.theme-dark th[sortable-style="sortable-asc"] {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='white' fill-opacity='0.4' d='M6.5 4l4-4 4 4z'></path></svg>");
+}
+.theme-dark th[sortable-style="sortable-desc"] {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='white' fill-opacity='0.4' d='M14.5 0l-4 4-4-4z'></path></svg>");
+}
+.theme-dark th[sortable-style="sortable-asc"]:hover {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='white' fill-opacity='0.6' d='M6.5 4l4-4 4 4z'></path></svg>");
+}
+.theme-dark th[sortable-style="sortable-desc"]:hover {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='white' fill-opacity='0.6' d='M14.5 0l-4 4-4-4z'></path></svg>");
+}
+
 /* Live preview */
 .markdown-source-view.mod-cm6 th {
   background-repeat:no-repeat;

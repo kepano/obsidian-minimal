@@ -137,7 +137,13 @@ button.mod-cta,
   overflow:visible;
 }
 .installed-plugins-container .clickable-icon {
-  margin:0 4px;
+  margin:0 5px;
+}
+.installed-plugins-container .clickable-icon[aria-label="Uninstall"] {
+  margin:0 5px 0 3px;
+}
+.plugin-list-plugins .clickable-icon {
+  margin:0 10px 0 0;
 }
 .community-theme-container {
   padding-top:10px;

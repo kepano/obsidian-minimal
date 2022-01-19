@@ -6,9 +6,9 @@ body .table-view-table > thead > tr > th,
 }
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
-  font-weight:600;
-  font-size:calc(var(--font-adaptive-normal) - 1px);
-  color:var(--text-normal);
+  font-weight:400;
+  font-size:calc(var(--font-adaptive-normal) - 2px);
+  color:var(--text-muted);
   border-bottom:1px solid var(--background-modifier-border);
   cursor:var(--cursor);
 }
@@ -30,6 +30,31 @@ ul.dataview-ul {
   white-space:nowrap;
   text-overflow:ellipsis;
   overflow:hidden;
+}
+
+/* Inline fields */
+
+body .dataview.inline-field-key,
+body .dataview.inline-field-value,
+body .dataview .inline-field-standalone-value {
+  font-family:var(--text);
+  font-size:calc(var(--font-adaptive-normal) - 2px);
+  background:transparent;
+  color:var(--text-muted);
+}
+body .dataview.inline-field-key {
+  padding:0;
+}
+body .dataview .inline-field-standalone-value {
+  padding:0;
+}
+body .dataview.inline-field-key::after {
+  margin-left:3px;
+  content:"|";
+  color:var(--background-modifier-border);
+}
+body .dataview.inline-field-value {
+  padding:0 1px 0 3px;
 }
 
 /* Calendar */

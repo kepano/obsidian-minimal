@@ -51,7 +51,7 @@
 }
 .cards table.dataview > tbody > tr:hover {
   border:var(--cards-border-width) solid var(--background-modifier-border-hover);
-  box-shadow:0 4px 8px 0px rgba(0,0,0,0.05),0 1px 3px 1px rgba(0,0,0,0.025);
+  box-shadow:0 4px 6px 0px rgba(0,0,0,0.05),0 1px 3px 1px rgba(0,0,0,0.025);
   transition:box-shadow 0.15s linear;
 }
 
