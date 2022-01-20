@@ -71,6 +71,8 @@ The following features can be accessed using [Minimal Theme Settings](https://gi
 - Go to `Appearance` and click `Manage`
 - Under community themes search for Minimal and click `Use`
 
+Have a question? Join the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
+
 ## Companion plugins
 
 To customize Minimal, install the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [hotkeys](#hotkeys), while Style Settings has a few extra granular settings for headings and advanced features. Running both simultaneously is **not suggested** as this will lead to conflicts.
@@ -201,7 +203,7 @@ Hotkeys are only available when using the Minimal Theme Settings plugin.
 
 ### Contributing
 
-If you would like add support for a plugin, or have found a bug you'd like to help fix, don't hesitate to open a pull request.
+If you would like add support for a plugin, or have found a bug you'd like to help fix, don't hesitate to open a pull request. Have a question? Join the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
 
 ### Build instructions
 
