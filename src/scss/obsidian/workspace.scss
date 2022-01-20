@@ -1,9 +1,27 @@
 /* Workspace */
 
+
+/* Empty state */
 .empty-state {
   background-color:var(--background-primary);
   text-align:center;
 }
+.empty-state-title {
+  display:none;
+}
+.empty-state-action-list {
+  color:var(--text-normal);
+  font-size:var(--font-adaptive-normal);
+}
+.empty-state-action-list:after {
+  content:"Minimal 4.4.3";
+  padding-top:2em;
+  display:block;
+  color:var(--text-faint);
+  font-size:var(--font-adaptive-small);
+  font-family:var(--font-monospace);
+}
+
 .workspace-split.mod-vertical > .workspace-split {
   padding:0;
 }

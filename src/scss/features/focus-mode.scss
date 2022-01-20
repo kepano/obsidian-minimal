@@ -51,16 +51,27 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
 .minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content {
   height:100%;
 }
+
+/* Reader offset */
 .minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
-  margin-top:var(--header-height);
+  margin-top:calc(var(--header-height) - 10px);
 }
+
+/* Legacy editor offset */
 .minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
   margin-top:calc(var(--header-height) - 10px);
 }
+
+/* CM6 Live preview offset */
+.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .mod-cm6 .cm-contentContainer {
+  padding-top:calc(var(--header-height) - 10px);
+}
+
+/* Internal search offset */
 .minimal-focus-mode .view-content .is-searching {
   margin-top: 60px;
 }
-.minimal-focus-mode  .markdown-source-view.is-replacing {
+.minimal-focus-mode .markdown-source-view.is-replacing {
   margin-top: 100px;    
 }
 /*

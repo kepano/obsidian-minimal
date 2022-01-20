@@ -120,6 +120,21 @@
   .cards-cols-3 table.dataview tbody {
     grid-template-columns:repeat(3, minmax(0, 1fr));
   }
+  .cards-cols-4 table.dataview tbody {
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+  }
+  .cards-cols-5 table.dataview tbody {
+    grid-template-columns:repeat(5, minmax(0, 1fr));
+  }
+  .cards-cols-6 table.dataview tbody {
+    grid-template-columns:repeat(6, minmax(0, 1fr));
+  }
+  .cards-cols-7 table.dataview tbody {
+    grid-template-columns:repeat(7, minmax(0, 1fr));
+  }
+  .cards-cols-8 table.dataview tbody {
+    grid-template-columns:repeat(8, minmax(0, 1fr));
+  }
 }
 
 /* Card content */
@@ -183,8 +198,8 @@
 /* Block button */
 
 .markdown-source-view.mod-cm6.cards .edit-block-button {
-  top:0;
-  right:24px;
+  top:3px;
+  right:32px;
   opacity:1;
   background-color:transparent;
 }

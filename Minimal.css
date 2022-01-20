@@ -2791,9 +2791,25 @@ body.hider-frameless .titlebar {
   padding: 2px 15px; }
 
 /* Workspace */
+/* Empty state */
 .empty-state {
   background-color: var(--background-primary);
   text-align: center; }
+
+.empty-state-title {
+  display: none; }
+
+.empty-state-action-list {
+  color: var(--text-normal);
+  font-size: var(--font-adaptive-normal); }
+
+.empty-state-action-list:after {
+  content: "Minimal 4.4.3";
+  padding-top: 2em;
+  display: block;
+  color: var(--text-faint);
+  font-size: var(--font-adaptive-small);
+  font-family: var(--font-monospace); }
 
 .workspace-split.mod-vertical > .workspace-split {
   padding: 0; }
@@ -3029,7 +3045,22 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
 
 @media (min-width: 400pt) {
   .cards-cols-3 table.dataview tbody {
-    grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .cards-cols-4 table.dataview tbody {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+  .cards-cols-5 table.dataview tbody {
+    grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+  .cards-cols-6 table.dataview tbody {
+    grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+  .cards-cols-7 table.dataview tbody {
+    grid-template-columns: repeat(7, minmax(0, 1fr)); }
+
+  .cards-cols-8 table.dataview tbody {
+    grid-template-columns: repeat(8, minmax(0, 1fr)); } }
 /* Card content */
 /* Paragraphs */
 .cards table.dataview tbody > tr > td > *:not(.el-embed-image) {
@@ -3080,8 +3111,8 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
 /* ------------------- */
 /* Block button */
 .markdown-source-view.mod-cm6.cards .edit-block-button {
-  top: 0;
-  right: 24px;
+  top: 3px;
+  right: 32px;
   opacity: 1;
   background-color: transparent; }
 
@@ -4020,12 +4051,19 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
 .minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content {
   height: 100%; }
 
+/* Reader offset */
 .minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
-  margin-top: var(--header-height); }
+  margin-top: calc(var(--header-height) - 10px); }
 
+/* Legacy editor offset */
 .minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
   margin-top: calc(var(--header-height) - 10px); }
 
+/* CM6 Live preview offset */
+.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .mod-cm6 .cm-contentContainer {
+  padding-top: calc(var(--header-height) - 10px); }
+
+/* Internal search offset */
 .minimal-focus-mode .view-content .is-searching {
   margin-top: 60px; }
 
