@@ -4,6 +4,7 @@
 
 :root {
   --cards-min-width:180px;
+  --cards-max-width:1fr;
   --cards-mobile-width:120px;
   --cards-image-height:400px;
   --cards-padding:1.2em;
@@ -33,7 +34,7 @@
   clear:both;
   padding:0.5rem 0;
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(var(--cards-min-width), 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
   grid-column-gap:0.75rem;
   grid-row-gap:0.75rem;
 }
