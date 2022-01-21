@@ -29,6 +29,12 @@
       background-color:var(--text-accent);
       border-radius:0px;
   }
+
+}
+
+.markdown-source-view.is-live-preview.progress-colors progress,
+.markdown-preview-view.progress-colors progress {
+
   &[value^='0']::-webkit-progress-value,
   &[value^='10']::-webkit-progress-value,
   &[value^='20']::-webkit-progress-value,

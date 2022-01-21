@@ -2866,27 +2866,28 @@ select:hover {
   .markdown-preview-view progress[value]::-webkit-progress-value {
     background-color: var(--text-accent);
     border-radius: 0px; }
-  .markdown-source-view.is-live-preview progress[value^='0']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='10']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='20']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='30']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='0']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='10']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='20']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='30']::-webkit-progress-value {
-    background-color: var(--red); }
-  .markdown-source-view.is-live-preview progress[value^='40']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='50']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='40']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='50']::-webkit-progress-value {
-    background-color: var(--orange); }
-  .markdown-source-view.is-live-preview progress[value^='60']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='70']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='60']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='70']::-webkit-progress-value {
-    background-color: var(--yellow); }
-  .markdown-source-view.is-live-preview progress[value^='80']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='90']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='80']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='90']::-webkit-progress-value {
-    background-color: var(--green); }
-  .markdown-source-view.is-live-preview progress[value^='100']::-webkit-progress-value,
-  .markdown-preview-view progress[value^='100']::-webkit-progress-value {
-    background-color: var(--text-accent); }
+
+.markdown-source-view.is-live-preview.progress-colors progress[value^='0']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='10']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='20']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='30']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='0']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='10']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='20']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='30']::-webkit-progress-value {
+  background-color: var(--red); }
+.markdown-source-view.is-live-preview.progress-colors progress[value^='40']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='50']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='40']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='50']::-webkit-progress-value {
+  background-color: var(--orange); }
+.markdown-source-view.is-live-preview.progress-colors progress[value^='60']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='70']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='60']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='70']::-webkit-progress-value {
+  background-color: var(--yellow); }
+.markdown-source-view.is-live-preview.progress-colors progress[value^='80']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='90']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='80']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='90']::-webkit-progress-value {
+  background-color: var(--green); }
+.markdown-source-view.is-live-preview.progress-colors progress[value^='100']::-webkit-progress-value,
+.markdown-preview-view.progress-colors progress[value^='100']::-webkit-progress-value {
+  background-color: var(--text-accent); }
 
 /* Range slider input */
 input[type=range] {
