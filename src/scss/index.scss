@@ -16,7 +16,6 @@
 @import 'obsidian/file-nav';
 @import 'obsidian/folding';
 @import 'obsidian/icons';
-@import 'obsidian/inputs';
 @import 'obsidian/modals';
 @import 'obsidian/preview';
 @import 'obsidian/preview-backlinks';
@@ -34,6 +33,13 @@
 @import 'obsidian/title-bar';
 @import 'obsidian/window-frame';
 @import 'obsidian/workspace';
+
+/* Components */
+@import 'components/buttons';
+@import 'components/dropdowns';
+@import 'components/progress';
+@import 'components/slider';
+@import 'components/toggles';
 
 /* Minimal features */
 @import 'features/borders';

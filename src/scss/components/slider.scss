@@ -1,0 +1,41 @@
+/* Range slider input */
+
+input[type=range] {
+  background-color:var(--background-modifier-border-hover);
+  height:2px;
+  padding:0 0px;
+  -webkit-appearance:none;
+  cursor:default;
+  margin:0;
+  border-radius:0px;
+}
+body:not(.is-mobile) input[type=range]:focus {
+  box-shadow:none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background:var(--background-modifier-border-hover);
+  height:2px;
+  margin-top:0px;
+}
+input[type=range]::-webkit-slider-thumb {
+  background:white;
+  border:1px solid var(--background-modifier-border-hover);
+  height:18px;
+  width:18px;
+  border-radius:16px;
+  margin-top:-5px;
+  transition:all 0.1s linear;
+  cursor:default;
+  box-shadow:0 1px 1px 0px rgba(0,0,0,0.05), 0 2px 4px 0px rgba(0,0,0,0.1);
+}
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-webkit-slider-thumb:active {
+  background:white;
+  border-width:1;
+  border:1px solid var(--background-modifier-border-focus);
+  box-shadow:0 1px 2px 0px rgba(0,0,0,0.05), 0 2px 3px 0px rgba(0,0,0,0.2);
+  transition:all 0.1s linear;
+}
+body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
+  box-shadow:0 1px 2px 0px rgba(0,0,0,0.05), 0 2px 3px 0px rgba(0,0,0,0.2);
+}

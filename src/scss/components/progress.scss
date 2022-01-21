@@ -1,0 +1,54 @@
+/* Progress bars */
+.theme-light {
+  --progress-outline:rgba(0,0,0,0.05);
+}
+.theme-dark {
+  --progress-outline:rgba(255,255,255,0.04);
+}
+.markdown-source-view.is-live-preview progress,
+.markdown-preview-view progress {
+  -webkit-writing-mode:horizontal-tb;
+  writing-mode:horizontal-tb;
+  appearance:none;
+  box-sizing:border-box;
+  display:inline-block;
+  height:5px;
+  width:220px;
+  max-width:100%;
+  border-radius:5px;
+  border:0;
+  vertical-align:-0.2rem;
+
+  &[value]::-webkit-progress-bar {
+      background-color:var(--background-tertiary);
+      box-shadow:inset 0px 0px 0px 1px var(--progress-outline);
+      border-radius:5px;
+      overflow:hidden;
+  }
+  &[value]::-webkit-progress-value{
+      background-color:var(--text-accent);
+      border-radius:0px;
+  }
+  &[value^='0']::-webkit-progress-value,
+  &[value^='10']::-webkit-progress-value,
+  &[value^='20']::-webkit-progress-value,
+  &[value^='30']::-webkit-progress-value {
+      background-color:var(--red);
+  }
+  &[value^='40']::-webkit-progress-value,
+  &[value^='50']::-webkit-progress-value {
+      background-color:var(--orange);
+  }
+  &[value^='60']::-webkit-progress-value,
+  &[value^='70']::-webkit-progress-value {
+      background-color:var(--yellow);
+  }
+  &[value^='80']::-webkit-progress-value,
+  &[value^='90']::-webkit-progress-value {
+      background-color:var(--green);
+  }
+  &[value^='100']::-webkit-progress-value {
+      background-color:var(--text-accent);
+  }
+
+}
