@@ -99,7 +99,7 @@ Most plugins work well with Minimal, but the following plugins have received spe
 - [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
 - [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) — recommended for cards and tables
 
-## Helper classes and filters
+## Helper filters and classes
 
 Additional documentation can be found at [publish.obsdian.md/kepano](https://publish.obsidian.md/kepano)
 
@@ -107,10 +107,11 @@ Additional documentation can be found at [publish.obsdian.md/kepano](https://pub
 
 Image filters can be added to create the following effects. Use them by adding the filter name at the end of the image link, e.g. `![[image.jpeg#invert]]`
 
-| Filter    | Description                                                   |
-| :-------- | :------------------------------------------------------------ |
-| `#invert` | Invert images in dark mode — ideal for charts and handwriting |
-| `#circle` | Crop image to a circle |
+| Filter     | Description                                                                        |
+| :--------- | :--------------------------------------------------------------------------------- |
+| `#invert`  | Invert images in dark mode — ideal for charts and handwriting on light backgrounds |
+| `#invertW` | Invert images in light mode — ideal for charts and handwriting on dark backgrounds |
+| `#circle`  | Crop image to a circle |
 
 ## CSS helper classes
 
@@ -145,7 +146,7 @@ Using `cards` transforms Dataview tables cards that can be sorted using the [Sor
 
 | Class                 | Description                                      |
 | :-------------------- | :----------------------------------------------- |
-| `cards`               | Set all Dataview tables to card layout           |
+| `cards` (required)    | Set all Dataview tables to card layout           |
 | `cards-align-bottom`  | Align the last element of a card to the bottom   |
 | `cards-cover`         | Images are resized to fill the defined space     |
 | `cards-16-9`          | Fit images in cards to 16:9 ratio                |
