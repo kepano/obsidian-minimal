@@ -143,15 +143,16 @@ Controls the width of elements by type. [Learn more.](https://github.com/kepano/
 
 Using `cards` transforms Dataview tables cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable). Compatible with table width classes.  Note that `cards` must be present for the other classes to work.
 
-| Class                | Description                                    |
-| :------------------- | :--------------------------------------------- |
-| `cards`              | Set all Dataview tables to card layout         |
-| `cards-align-bottom` | Align the last element of a card to the bottom |
-| `cards-cover`        | Images are resized to fill the defined space   |
-| `cards-16-9`         | Fit images in cards to 16:9 ratio              |
-| `cards-1-1`          | Fit images in cards to 1:1 ratio (square)      |
-| `cards-2-1`          | Fit images in cards to 2:1 ratio               |
-| `cards-2-3`          | Fit images in cards to 2:3 ratio               |
+| Class                 | Description                                      |
+| :-------------------- | :----------------------------------------------- |
+| `cards`               | Set all Dataview tables to card layout           |
+| `cards-align-bottom`  | Align the last element of a card to the bottom   |
+| `cards-cover`         | Images are resized to fill the defined space     |
+| `cards-16-9`          | Fit images in cards to 16:9 ratio                |
+| `cards-1-1`           | Fit images in cards to 1:1 ratio (square)        |
+| `cards-2-1`           | Fit images in cards to 2:1 ratio                 |
+| `cards-2-3`           | Fit images in cards to 2:3 ratio                 |
+| `cards-cols-1` to `8` | Force a specific number of columns (from 1 to 8) |
 
 ### Tables and Dataview
 
