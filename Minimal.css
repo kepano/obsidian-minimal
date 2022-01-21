@@ -4045,7 +4045,7 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
   height: 100%; }
 
 /* Reader offset */
-.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-preview-view .markdown-preview-sizer {
+.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-reading-view > .markdown-preview-view > .markdown-preview-sizer {
   margin-top: calc(var(--header-height) - 10px); }
 
 /* Legacy editor offset */
