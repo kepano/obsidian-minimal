@@ -23,9 +23,7 @@ body:not(.is-mobile) .modal {
   font-size:var(--h2);
   line-height:1.4;
 }
-.modal:not(.mod-sync-history):not(.mod-settings):not(.mod-community-theme):not(.mod-publish):not(.mod-publish):not(.mod-community-plugin):not(.mod-sync-log) .modal-content {
-  padding:20px 2px 5px;
-}
+
 .modal-content {
   margin-top:0px;
   padding:0;
@@ -36,11 +34,18 @@ body:not(.is-mobile) .modal {
   font-size:var(--font-adaptive-small);
 }
 .modal-container.mod-confirmation .modal {
-  width:450px;
+  width:480px;
   min-width:0;
 }
 .mod-confirmation .modal-content {
   margin-top:20px;
+}
+
+.modal-button-container {
+  margin-top:10px
+}
+.modal-button-container button {
+  margin-top:10px
 }
 
 /* Close buttons */

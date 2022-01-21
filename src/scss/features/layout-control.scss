@@ -17,12 +17,12 @@
 .contextual-typography.minimal-folding .allow-fold-lists.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer {
   padding:0;
 }
-.contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer > div {
+.contextual-typography .markdown-preview-view .markdown-preview-sizer > div {
   width:var(--max-width);
   margin-left:auto;
   margin-right:auto;
 }
-.contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   align-items:center;
   padding-left:0;
 }

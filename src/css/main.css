@@ -1468,9 +1468,6 @@ body:not(.is-mobile) .modal {
   font-size: var(--h2);
   line-height: 1.4; }
 
-.modal:not(.mod-sync-history):not(.mod-settings):not(.mod-community-theme):not(.mod-publish):not(.mod-publish):not(.mod-community-plugin):not(.mod-sync-log) .modal-content {
-  padding: 20px 2px 5px; }
-
 .modal-content {
   margin-top: 0px;
   padding: 0;
@@ -1481,11 +1478,17 @@ body:not(.is-mobile) .modal {
   font-size: var(--font-adaptive-small); }
 
 .modal-container.mod-confirmation .modal {
-  width: 450px;
+  width: 480px;
   min-width: 0; }
 
 .mod-confirmation .modal-content {
   margin-top: 20px; }
+
+.modal-button-container {
+  margin-top: 10px; }
+
+.modal-button-container button {
+  margin-top: 10px; }
 
 /* Close buttons */
 .document-search-close-button,
@@ -1932,6 +1935,9 @@ button.copy-code-button:hover {
   color: var(--text-muted); }
 
 .markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+  max-height: none !important; }
+
+.markdown-embed-content {
   max-height: none !important; }
 
 .markdown-embed .markdown-preview-view {
@@ -4325,12 +4331,12 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 .contextual-typography.minimal-folding .allow-fold-lists.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer {
   padding: 0; }
 
-.contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer > div {
+.contextual-typography .markdown-preview-view .markdown-preview-sizer > div {
   width: var(--max-width);
   margin-left: auto;
   margin-right: auto; }
 
-.contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   align-items: center;
   padding-left: 0; }
 
@@ -7300,6 +7306,9 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 .modal .yesNoPromptButtonContainer {
   font-size: var(--font-settings-small);
   justify-content: flex-end; }
+
+.modal:not(.mod-confirmation):not(.mod-sync-history):not(.mod-settings):not(.mod-community-theme):not(.mod-publish):not(.mod-publish):not(.mod-community-plugin):not(.mod-sync-log) .modal-content {
+  padding: 20px 2px 5px; }
 
 /* Sliding Panes aka Andy Mode plugin */
 body.plugin-sliding-panes-rotate-header {

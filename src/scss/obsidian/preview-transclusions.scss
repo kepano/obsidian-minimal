@@ -12,6 +12,8 @@
   width:30px;
 }
 
+
+
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width:100%;
   width:100%;
@@ -55,7 +57,11 @@
   color:var(--text-muted);
 }
 .markdown-preview-view .markdown-embed-content > .markdown-preview-view {
-  max-height:none !important;}
+  max-height:none !important;
+}
+.markdown-embed-content {
+  max-height:none !important;
+}
 .markdown-embed .markdown-preview-view {
   padding:0;}
 .internal-embed .markdown-embed {

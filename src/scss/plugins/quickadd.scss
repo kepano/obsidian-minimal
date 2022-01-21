@@ -17,3 +17,7 @@
   font-size: var(--font-settings-small);
   justify-content:flex-end;
 }
+
+.modal:not(.mod-confirmation):not(.mod-sync-history):not(.mod-settings):not(.mod-community-theme):not(.mod-publish):not(.mod-publish):not(.mod-community-plugin):not(.mod-sync-log) .modal-content {
+  padding:20px 2px 5px;
+} 
