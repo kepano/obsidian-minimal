@@ -726,6 +726,12 @@ settings:
         type: variable-text
         default: 180px
     - 
+        id: cards-max-width
+        title: Card maximum width
+        description: Default fills the available width, accepts valid CSS units
+        type: variable-text
+        default: 1fr
+    - 
         id: cards-mobile-width
         title: Card minimum width on mobile
         description: 
