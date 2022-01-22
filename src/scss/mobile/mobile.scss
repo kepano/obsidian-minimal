@@ -452,16 +452,21 @@ body.is-mobile:not(.minimal-icons-off) .menu-item-icon svg {
   transition:none !important;
   transform:none !important;
 }
+
+.is-mobile .document-search,
+.is-mobile .document-replace {
+  flex-direction:row;
+}
 .is-mobile .document-search-container {
   height:56px;
-  padding:10px 15px;
+  padding:0px 15px;
 }
 .is-mobile .document-search-container input[type='text'] {
   width:auto;
   margin:0 5px 0 0;
   height:32px;
   padding:5px 7px;
-  border-radius:var(--radius-m);
+  border-radius:50px;
   border:1px solid var(--background-modifier-border);
   background-color:var(--background-primary);
 }
@@ -919,6 +924,7 @@ body.is-mobile:not(.minimal-icons-off) .menu-item-icon svg {
     margin:30px 16px 0;
     height:calc(100vh - 48px);
     border-radius:15px;
+    z-index:9999999999;
   }
   .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
     width:auto;

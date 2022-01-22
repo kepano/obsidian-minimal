@@ -1,32 +1,47 @@
 /* Focus mode */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
-.workspace-ribbon.mod-left {
-  border-left:0;
+body.minimal-focus-mode.borders-title .workspace-leaf .workspace-leaf-content:not([data-type=graph]):not([data-type=localgraph]) .view-header, 
+body.minimal-focus-mode.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type=graph]):not([data-type=empty]):not([data-type=localgraph]) .view-header {
+  border-bottom:var(--border-width) solid transparent;
 }
-.workspace-ribbon.mod-left.is-collapsed {
-  border-color:transparent;
-  background-color:transparent;
+body.minimal-focus-mode.borders-title .workspace-leaf .workspace-leaf-content:not([data-type=graph]):not([data-type=localgraph]) .view-header:focus-within, 
+body.minimal-focus-mode.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type=graph]):not([data-type=empty]):not([data-type=localgraph]) .view-header:focus-within,
+body.minimal-focus-mode.borders-title .workspace-leaf .workspace-leaf-content:not([data-type=graph]):not([data-type=localgraph]) .view-header:hover, 
+body.minimal-focus-mode.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type=graph]):not([data-type=empty]):not([data-type=localgraph]) .view-header:hover {
+  border-bottom:var(--border-width) solid var(--background-modifier-border);
 }
-.minimal-focus-mode .workspace-ribbon.mod-left {
-  background-color:var(--background-secondary);
-  transition:background-color 0s linear 0s;
+
+body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .app-container .workspace-split.mod-root > .workspace-leaf .view-header {
+  height:0em;
+  transition:all linear 0.1s;
 }
-.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed,
-.minimal-focus-mode .workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn {
+
+body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .view-header-title,
+body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .view-action svg {
   opacity:0;
-  transition:opacity 0.1s ease-in-out 0.1s;
+  transition:all linear 0.1s;
 }
-.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover,
-.minimal-focus-mode .workspace-ribbon.is-collapsed:hover .workspace-ribbon-collapse-btn {
+
+body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf .view-header:hover,
+body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf .view-header:focus-within {
+  height:var(--header-height);
+  transition:all linear 0.1s;
+}
+
+body.minimal-focus-mode .view-header:hover .view-action svg,
+body.minimal-focus-mode .view-header:focus-within .view-action svg,
+body.minimal-focus-mode .view-header:hover .view-header-title,
+body.minimal-focus-mode .view-header:focus-within .view-header-title {
   opacity:1;
+  transition:all linear 0.1s;
 }
-.is-right-sidedock-collapsed .workspace-split.mod-right-split {
-  margin-right:0px;
+
+.minimal-focus-mode .view-content:not(.is-mobile) {
+  height:100%;
 }
-body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
-  border-right:none;
-}
+
+/* Hide status bar */
 .minimal-focus-mode .status-bar {
   opacity:0;
 }
@@ -34,48 +49,3 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
   opacity:1;
   transition:opacity 0.2s ease-in-out;
 }
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-  opacity:0;
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  transition:opacity 0.2s ease-in-out;
-  background-color:var(--background-primary);
-  z-index:9999;
-}
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header:hover {
-  opacity:1;
-  transition:opacity 0.2s ease-in-out;
-}
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content {
-  height:100%;
-}
-
-/* Reader offset */
-.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .markdown-reading-view > .markdown-preview-view > .markdown-preview-sizer {
-  margin-top:calc(var(--header-height) - 10px);
-}
-
-/* Legacy editor offset */
-.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-content .CodeMirror-sizer {
-  margin-top:calc(var(--header-height) - 10px);
-}
-
-/* CM6 Live preview offset */
-.minimal-focus-mode:not(.plugin-sliding-panes-rotate-header):not(.embedded-note-titles) .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .mod-cm6 .cm-contentContainer {
-  padding-top:calc(var(--header-height) - 10px);
-}
-
-/* Internal search offset */
-.minimal-focus-mode .view-content .is-searching {
-  margin-top: 60px;
-}
-.minimal-focus-mode .markdown-source-view.is-replacing {
-  margin-top: 100px;    
-}
-/*
-.minimal-focus-mode .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .document-search-container {
-  top:0px;
-  z-index:99999;
-} */
