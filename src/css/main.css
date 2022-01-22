@@ -2853,7 +2853,8 @@ select:hover {
   height: 5px;
   width: 220px;
   max-width: 100%;
-  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 0px;
   border: 0;
   vertical-align: -0.2rem; }
   .markdown-source-view.is-live-preview progress[value]::-webkit-progress-bar,
@@ -2865,29 +2866,40 @@ select:hover {
   .markdown-source-view.is-live-preview progress[value]::-webkit-progress-value,
   .markdown-preview-view progress[value]::-webkit-progress-value {
     background-color: var(--text-accent);
-    border-radius: 0px; }
-
-.markdown-source-view.is-live-preview.progress-colors progress[value^='0']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='10']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='20']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='30']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='0']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='10']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='20']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='30']::-webkit-progress-value {
-  background-color: var(--red); }
-.markdown-source-view.is-live-preview.progress-colors progress[value^='40']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='50']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='40']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='50']::-webkit-progress-value {
-  background-color: var(--orange); }
-.markdown-source-view.is-live-preview.progress-colors progress[value^='60']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='70']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='60']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='70']::-webkit-progress-value {
-  background-color: var(--yellow); }
-.markdown-source-view.is-live-preview.progress-colors progress[value^='80']::-webkit-progress-value, .markdown-source-view.is-live-preview.progress-colors progress[value^='90']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='80']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='90']::-webkit-progress-value {
-  background-color: var(--green); }
-.markdown-source-view.is-live-preview.progress-colors progress[value^='100']::-webkit-progress-value,
-.markdown-preview-view.progress-colors progress[value^='100']::-webkit-progress-value {
-  background-color: var(--text-accent); }
+    overflow: hidden;
+    border-radius: 5px; }
+  .markdown-source-view.is-live-preview progress[value^='1']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='2']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='3']::-webkit-progress-value,
+  .markdown-preview-view progress[value^='1']::-webkit-progress-value,
+  .markdown-preview-view progress[value^='2']::-webkit-progress-value,
+  .markdown-preview-view progress[value^='3']::-webkit-progress-value {
+    background-color: var(--red); }
+  .markdown-source-view.is-live-preview progress[value^='4']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='5']::-webkit-progress-value,
+  .markdown-preview-view progress[value^='4']::-webkit-progress-value,
+  .markdown-preview-view progress[value^='5']::-webkit-progress-value {
+    background-color: var(--orange); }
+  .markdown-source-view.is-live-preview progress[value^='6']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='7']::-webkit-progress-value,
+  .markdown-preview-view progress[value^='6']::-webkit-progress-value,
+  .markdown-preview-view progress[value^='7']::-webkit-progress-value {
+    background-color: var(--yellow); }
+  .markdown-source-view.is-live-preview progress[value^='8']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value^='9']::-webkit-progress-value,
+  .markdown-preview-view progress[value^='8']::-webkit-progress-value,
+  .markdown-preview-view progress[value^='9']::-webkit-progress-value {
+    background-color: var(--green); }
+  .markdown-source-view.is-live-preview progress[value='1']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value='100']::-webkit-progress-value,
+  .markdown-preview-view progress[value='1']::-webkit-progress-value,
+  .markdown-preview-view progress[value='100']::-webkit-progress-value {
+    background-color: var(--text-accent); }
+  .markdown-source-view.is-live-preview progress[value='0']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value='2']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value='3']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value='4']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value='5']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value='6']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value='7']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value='8']::-webkit-progress-value, .markdown-source-view.is-live-preview progress[value='9']::-webkit-progress-value,
+  .markdown-preview-view progress[value='0']::-webkit-progress-value,
+  .markdown-preview-view progress[value='2']::-webkit-progress-value,
+  .markdown-preview-view progress[value='3']::-webkit-progress-value,
+  .markdown-preview-view progress[value='4']::-webkit-progress-value,
+  .markdown-preview-view progress[value='5']::-webkit-progress-value,
+  .markdown-preview-view progress[value='6']::-webkit-progress-value,
+  .markdown-preview-view progress[value='7']::-webkit-progress-value,
+  .markdown-preview-view progress[value='8']::-webkit-progress-value,
+  .markdown-preview-view progress[value='9']::-webkit-progress-value {
+    background-color: var(--red); }
 
 /* Range slider input */
 input[type=range] {
