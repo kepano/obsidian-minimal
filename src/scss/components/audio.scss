@@ -1,0 +1,28 @@
+/* Audio files */
+.theme-dark audio {
+  filter:none;
+}
+.theme-dark audio::-webkit-media-controls-panel {
+  filter:invert(1);
+}
+audio {
+  height:36px;
+  border-radius:4px;
+}
+audio::-webkit-media-controls-enclosure {
+  border:1px solid var(--background-modifier-border);
+  background-color:var(--background-secondary);
+}
+audio::-webkit-media-controls-current-time-display {
+  color:var(--text-normal);
+  filter:invert(1);
+  text-shadow:none;
+}
+audio::-webkit-media-controls-time-remaining-display {
+  color:var(--text-faint);
+  filter:invert(1);
+  text-shadow:none;
+}
+audio::-webkit-media-controls-panel {
+  padding:0;
+}

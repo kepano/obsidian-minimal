@@ -16,17 +16,18 @@
 @import 'obsidian/file-nav';
 @import 'obsidian/folding';
 @import 'obsidian/icons';
+@import 'obsidian/lists';
 @import 'obsidian/modals';
 @import 'obsidian/preview';
 @import 'obsidian/preview-backlinks';
 @import 'obsidian/preview-embedded-search';
-@import 'obsidian/preview-tables';
 @import 'obsidian/preview-transclusions';
 @import 'obsidian/ribbon';
 @import 'obsidian/scrollbars';
 @import 'obsidian/search-replace';
 @import 'obsidian/settings';
 @import 'obsidian/status-bar';
+@import 'obsidian/tables';
 @import 'obsidian/tags';
 @import 'obsidian/tag-pane';
 @import 'obsidian/tooltips';
@@ -35,8 +36,10 @@
 @import 'obsidian/workspace';
 
 /* Components */
+@import 'components/audio';
 @import 'components/buttons';
 @import 'components/dropdowns';
+@import 'components/inputs';
 @import 'components/progress';
 @import 'components/slider';
 @import 'components/toggles';

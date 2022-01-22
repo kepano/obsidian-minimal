@@ -563,6 +563,25 @@ settings:
                 label: Small caps
                 value: small-caps
     -
+        id: lists
+        title: Lists
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: minimal-strike-lists
+        title: Strike completed tasks
+        description: Use line through greyed text for completed tasks
+        type: class-toggle
+        default: false
+    -
+        id: list-spacing
+        title: List item spacing
+        description: Space between list items
+        type: variable-number
+        default: 0.1
+        format: em
+    -
         id: advanced
         title: Advanced
         type: heading
@@ -584,12 +603,6 @@ settings:
             - 
                 label: Crosshair
                 value: crosshair
-    - 
-        id: minimal-strike-lists
-        title: Strike completed tasks
-        description: Use line through greyed text for completed tasks
-        type: class-toggle
-        default: false
     - 
         id: text-bold
         title: Bold text color

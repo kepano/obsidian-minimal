@@ -1,0 +1,47 @@
+/* Reader Mode Lists  */
+
+ul {
+  padding-inline-start:var(--list-padding); }
+ol {
+  padding-inline-start:1em;
+  margin-left:1em;
+  list-style:default;
+}
+ul > li {
+  min-height:1.4em;
+}
+ul > li::marker,
+ol > li::marker {
+  color:var(--text-faint);
+}
+ol > li {
+  margin-left:0em;}
+
+/* Space between list items */
+.markdown-preview-view ol>li,
+.markdown-preview-view ul>li,
+.mod-cm6 .HyperMD-list-line.cm-line {
+  padding-top:var(--list-spacing);
+  padding-bottom:var(--list-spacing);
+}
+
+/* Legacy Editor Mode Lists */
+.cm-formatting-list {
+  color:var(--text-faint) !important;
+}
+
+/* Bullets */
+.mod-cm6 .HyperMD-list-line .list-bullet::after,
+.mod-cm6 span.list-bullet::after {
+  line-height:0.85em;
+  font-size:1.4em;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  vertical-align:middle;
+  color:var(--text-faint);
+}
+
+
+ul>li.is-collapsed::marker,
+.markdown-source-view.mod-cm6 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
+  color:var(--text-accent);
+}

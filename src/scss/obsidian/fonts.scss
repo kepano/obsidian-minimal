@@ -14,8 +14,8 @@ body, input, button  {
 }
 body, input, button,
 .markdown-preview-view,
-.cm-s-obsidian .cm-formatting-hashtag,
-.cm-s-obsidian {
+.markdown-source-view.mod-cm6.is-live-preview .cm-scroller,
+.cm-s-obsidian .cm-formatting-hashtag {
   font-size:var(--font-adaptive-normal);
   font-weight:var(--normal-weight);
   line-height:var(--line-height);
@@ -28,7 +28,14 @@ body, input, button,
 .cm-s-obsidian span.cm-formatting-task {
   line-height:var(--line-height);
   font-family:var(--text-editor);
+  -webkit-font-smoothing:subpixel-antialiased;
 }
+
+/* Use reading font in live preview */
+.lp-reading-font .markdown-source-view.mod-cm6.is-live-preview .cm-scroller {
+  font-family:var(--text)
+}
+
 .cm-s-obsidian span.cm-formatting-task {
   font-family:var(--text-editor);
   line-height:var(--line-height);

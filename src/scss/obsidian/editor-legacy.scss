@@ -81,16 +81,6 @@ span.cm-image-marker,
   padding-left:20px;
 }
 
-/* Editor Mode Tables */
-.CodeMirror pre.HyperMD-table-row {
-  font-family:var(--font-monospace);
-  font-size:calc(var(--font-adaptive-normal) - 2px);
-}
-
-/* Editor Mode Lists */
-.cm-formatting-list {
-  color:var(--text-faint) !important;
-}
 /* Editor Mode Quotes */
 .cm-formatting-quote {
   color:var(--text-faint) !important;

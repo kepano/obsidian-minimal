@@ -46,7 +46,9 @@
   --font-small:13px;
   --font-smaller:11px;
   --font-smallest:10px;
+
   --font-title:1.1em;
+  --font-inputs:13px;
 
   /* Font weights */
   --normal-weight:400;   /* Switch to 300 if you want thinner default text */
@@ -86,7 +88,9 @@
 
   --folding-offset:16px;
   --nested-padding:3.5%; /* Quotes and transclusions */
+
   --list-padding:2em;    /* List padding */
+  --list-spacing:0.1em;  /* Space between list items */
 
   --radius-s:2px;
   --radius-m:5px;

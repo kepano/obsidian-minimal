@@ -22,14 +22,13 @@
 
   &[value]::-webkit-progress-bar {
     background-color:var(--background-tertiary);
-    box-shadow:inset 0px 0px 0px 1px var(--progress-outline);
+    box-shadow:inset 0px 0px 0px var(--border-width) var(--progress-outline);
     border-radius:5px;
     overflow:hidden;
   }
   &[value]::-webkit-progress-value {
     background-color:var(--text-accent);
     overflow:hidden;
-    border-radius:5px;
   }
 
   &[value^='1']::-webkit-progress-value,

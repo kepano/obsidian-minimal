@@ -11,6 +11,9 @@
 .mod-cm6 .ͼ1 .cm-line {
   padding:0 0 0 1px;
 }
+
+
+/* Block quotes */
 .markdown-source-view.mod-cm6 .HyperMD-quote {
   background-color:transparent;
   border-left:1px solid var(--quote-opening-modifier);
@@ -25,18 +28,6 @@
 .markdown-source-view.mod-cm6 .cm-hmd-indent-in-quote {
   margin-left:10px;
 }
-
-/* Tables */
-.cm-s-obsidian .HyperMD-table-row {
-  font-size: calc(var(--font-adaptive-normal) - 2px);
-}
-.cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep,
-.cm-hmd-table-sep-dummy {
-  color:var(--text-faint);
-  font-weight:400;
-}
-
-/* Quotes */
 .is-live-preview .cm-hmd-indent-in-quote {
   color:var(--text-faint);
 }
@@ -76,14 +67,7 @@
   font-variant-numeric:tabular-nums;
 }
 
-/* Bullets */
-.mod-cm6 .HyperMD-list-line .list-bullet::after,
-.mod-cm6 span.list-bullet::after {
-  line-height:0.85em;
-  font-size:1.4em;
-  vertical-align:middle;
-  color:var(--text-faint);
-}
+/* Live Preview folding */
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
   color:var(--text-faint);
 }
@@ -112,7 +96,7 @@
   opacity:1;
 }
 
-/* Live Preview text xelection */
+/* Live Preview text selection */
 .markdown-source-view.mod-cm6  .cm-line:not(.HyperMD-codeblock) .cm-selection {
   background-color:transparent;
 }
