@@ -2846,11 +2846,9 @@ input[type='text'],
 input[type='search'],
 input[type='email'],
 input[type='password'],
-input[type='number'],
-.dropdown,
-body .addChoiceBox #addChoiceTypeSelector {
+input[type='number'] {
   font-family: var(--font-ui);
-  font-size: 13px; }
+  font-size: var(--font-inputs); }
 
 textarea {
   padding: 5px 10px;
@@ -2869,17 +2867,12 @@ input[type='number'] {
   height: var(--input-height); }
 
 textarea:hover,
-select:hover,
 input:hover {
   border-color: var(--background-modifier-border-hover);
   transition: all 0.1s linear; }
 
 textarea:active,
 textarea:focus,
-.dropdown:focus,
-.dropdown:active,
-select:focus,
-select:active,
 input[type='text']:active,
 input[type='search']:active,
 input[type='email']:active,
