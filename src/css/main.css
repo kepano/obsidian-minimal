@@ -1842,6 +1842,10 @@ body input.document-replace-input.mod-no-match {
 body:not(.is-mobile) .document-search-container.mod-replace-mode {
   height: 72px; }
 
+body:not(.is-mobile) .document-replace-buttons,
+body:not(.is-mobile) .document-search-buttons {
+  padding-top: 3px; }
+
 .document-replace-buttons,
 .document-search-buttons {
   height: 30px;
