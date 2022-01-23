@@ -52,6 +52,9 @@
   color:var(--text-faint);
   font-variant-numeric:tabular-nums;
 }
+.table-numbers table > tbody > tr > td:first-child {
+  white-space:nowrap;
+}
 .row-highlight tbody > tr:hover td {
   background-color:var(--background-table-rows);
 }

@@ -1938,9 +1938,6 @@ body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
   mix-blend-mode: normal;
   box-shadow: 0 0 0px 3px var(--text-accent); }
 
-.markdown-source-view.mod-cm5 .document-search-container {
-  position: fixed; }
-
 body:not(.is-mobile).borders-title .document-search-container {
   padding-top: 0; }
 
@@ -4366,6 +4363,9 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
   min-width: 2em;
   color: var(--text-faint);
   font-variant-numeric: tabular-nums; }
+
+.table-numbers table > tbody > tr > td:first-child {
+  white-space: nowrap; }
 
 .row-highlight tbody > tr:hover td {
   background-color: var(--background-table-rows); }
