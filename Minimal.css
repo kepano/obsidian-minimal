@@ -4153,6 +4153,34 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
 
 /* Focus mode */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* Hide app ribbon */
+.workspace-ribbon.mod-left {
+  border-left: 0; }
+
+.workspace-ribbon.mod-left.is-collapsed {
+  border-color: transparent;
+  background-color: transparent; }
+
+.minimal-focus-mode .workspace-ribbon.mod-left {
+  background-color: var(--background-secondary);
+  transition: background-color 0s linear 0s; }
+
+.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed,
+.minimal-focus-mode .workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out 0.1s; }
+
+.minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover,
+.minimal-focus-mode .workspace-ribbon.is-collapsed:hover .workspace-ribbon-collapse-btn {
+  opacity: 1; }
+
+.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+  margin-right: 0px; }
+
+body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
+  border-right: none; }
+
+/* Collapse header bar */
 body.minimal-focus-mode.borders-title .workspace-leaf .workspace-leaf-content:not([data-type=graph]):not([data-type=localgraph]) .view-header,
 body.minimal-focus-mode.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type=graph]):not([data-type=empty]):not([data-type=localgraph]) .view-header {
   border-bottom: var(--border-width) solid transparent; }
