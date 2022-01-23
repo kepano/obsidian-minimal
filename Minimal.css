@@ -2320,6 +2320,7 @@ body:not(.minimal-icons) .setting-hotkey-icon.setting-delete-hotkey svg {
 .mod-confirmation .modal-button-container > .mod-warning:first-child {
   background: transparent;
   border: none;
+  font-weight: 500;
   color: var(--text-error);
   cursor: pointer;
   margin-right: auto;
@@ -2849,7 +2850,8 @@ button {
 button,
 .setting-item-control button {
   font-family: var(--font-ui);
-  font-size: var(--font-inputs); }
+  font-size: var(--font-inputs);
+  font-weight: 400; }
 
 button:active,
 button:focus {
