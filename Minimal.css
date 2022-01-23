@@ -1,4 +1,4 @@
-/* Minimal Obsidian 4.4.7 by @kepano
+/* Minimal Obsidian 4.4.8 by @kepano
 
 User interface replacement for Obsidian.
 
@@ -1306,8 +1306,23 @@ ul > li::marker,
 ol > li::marker {
   color: var(--text-faint); }
 
+ul > li::marker,
+.mod-cm6 .HyperMD-list-line .list-bullet::after,
+.mod-cm6 span.list-bullet::after {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+
 ol > li {
   margin-left: 0em; }
+
+.el-ul > ul {
+  margin-left: -0.25em; }
+
+/* Live Preview */
+.cm-line {
+  tab-size: var(--list-padding); }
+
+body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
+  margin-left: 0.75em !important; }
 
 /* Space between list items */
 .markdown-preview-view ol > li,
@@ -1328,6 +1343,15 @@ ol > li {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   vertical-align: middle;
   color: var(--text-faint); }
+
+body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
+  left: -5px; }
+
+/* List folding */
+.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
+  right: -8px;
+  top: 1px;
+  width: 26px; }
 
 ul > li.is-collapsed::marker,
 .markdown-source-view.mod-cm6 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
@@ -7213,7 +7237,7 @@ div[data-type="git-view"] .search-input-clear-button {
 
 /* Indentation Guides plugin */
 body {
-  --indentation-guide-adjust:4px;
+  --indentation-guide-adjust:0px;
   --indentation-guide-adjust-preview:0.15em; }
 
 body.theme-light,
