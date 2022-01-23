@@ -16,6 +16,11 @@ body:not(.is-mobile) button:active,
 body:not(.is-mobile) button:focus {
   box-shadow:0 0 0px 2px var(--background-modifier-border-hover);
 }
+button.mod-warning,
+button.mod-warning:hover {
+  border:1px solid var(--background-modifier-error);
+  color:var(--text-error);
+}
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
 .modal button:not(.mod-warning),
 .modal.mod-settings button:not(.mod-warning) {

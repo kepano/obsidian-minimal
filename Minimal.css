@@ -158,6 +158,7 @@ body .excalidraw {
   --text-highlight-bg:rgba(255, 224, 0, 0.5);
   --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
   --text-code:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 75%));
+  --text-error:rgba(255,20,20,0.85);
   --background-primary:white;
   --background-primary-alt:hsl(var(--base-h),var(--base-s),var(--base-l));
   --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-l));
@@ -168,6 +169,8 @@ body .excalidraw {
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 20%));
   --background-modifier-form-field:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 6%));
   --background-modifier-form-field-highlighted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 8%));
+  --background-modifier-error:rgba(255,0,0,0.16);
+  --background-modifier-error-hover:rgba(255,0,0,0.1);
   --background-button:white;
   --background-table-rows:var(--background-secondary);
   --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-l),0);
@@ -205,6 +208,7 @@ body .excalidraw {
   --text-highlight-bg:rgba(255, 177, 80, 0.3);
   --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
   --text-code:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 60%));
+  --text-error:rgba(255,20,20,0.8);
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-d));
   --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
   --background-secondary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
@@ -215,6 +219,8 @@ body .excalidraw {
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
   --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
   --background-modifier-form-field:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
+  --background-modifier-error:rgba(255,20,20,0.12);
+  --background-modifier-error-hover:rgba(255,20,20,0.18);
   --background-table-rows:var(--background-secondary);
   --background-button:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
   --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-d),0);
@@ -1357,19 +1363,6 @@ body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
 
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   left: -5px; }
-
-/* List folding */
-.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .task-list-item-checkbox ~ .cm-fold-indicator .collapse-indicator {
-  right: 0px; }
-
-.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-  right: -8px;
-  top: 1px;
-  width: 26px; }
-
-ul > li.is-collapsed::marker,
-.markdown-source-view.mod-cm6 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
-  color: var(--text-accent); }
 
 /* Modals */
 .progress-bar-message {
@@ -2849,6 +2842,11 @@ button:focus {
 body:not(.is-mobile) button:active,
 body:not(.is-mobile) button:focus {
   box-shadow: 0 0 0px 2px var(--background-modifier-border-hover); }
+
+button.mod-warning,
+button.mod-warning:hover {
+  border: 1px solid var(--background-modifier-error);
+  color: var(--text-error); }
 
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
 .modal button:not(.mod-warning),
