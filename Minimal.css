@@ -2659,7 +2659,7 @@ body.hider-frameless .titlebar {
 /* Workspace */
 /* Empty state */
 .empty-state {
-  background-color: var(--background-secondary);
+  background-color: var(--background-primary);
   text-align: center; }
 
 .workspace-leaf-content[data-type="empty"] .view-header,
