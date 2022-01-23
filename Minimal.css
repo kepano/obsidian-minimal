@@ -4316,6 +4316,18 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
   text-overflow: ellipsis;
   overflow: hidden; }
 
+.table-numbers table {
+  counter-reset: section; }
+
+.table-numbers table > tbody > tr > td:first-child::before {
+  counter-increment: section;
+  content: counter(section) " ";
+  padding-right: 0.5em;
+  display: inline-block;
+  min-width: 2em;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums; }
+
 .row-highlight tbody > tr:hover td {
   background-color: var(--background-table-rows); }
 
