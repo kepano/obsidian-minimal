@@ -302,23 +302,3 @@ body:not(.minimal-icons) .setting-hotkey-icon.setting-delete-hotkey svg {
 .setting-item-control {
   margin-right:0;
 }
-
-
-/* Confirm delete */
-.mod-confirmation .modal-button-container {
-  display:flex;
-}
-.mod-confirmation .modal-button-container > .mod-warning:first-child {
-  background:transparent;
-  border:none;
-  font-weight:500;
-  color:var(--text-error);
-  cursor:pointer;
-  margin-right:auto;
-  box-shadow:none;
-  padding-left:0;
-  padding-right:0;
-} 
-.mod-confirmation .modal-button-container > .mod-warning:first-child:hover {
-  text-decoration:underline;
-}

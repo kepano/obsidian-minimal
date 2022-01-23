@@ -32,19 +32,38 @@ body:not(.is-mobile) .modal {
   text-align:left;
   font-size:var(--font-adaptive-small);
 }
-.modal-container.mod-confirmation .modal {
-  width:480px;
-  min-width:0;
-}
-.mod-confirmation .modal-content {
-  margin-top:20px;
-}
 
 .modal-button-container {
   margin-top:10px
 }
 .modal-button-container button {
   margin-top:10px
+}
+
+/* Confirm delete */
+.modal-container.mod-confirmation .modal {
+  width:480px;
+  min-width:0;
+}
+.mod-confirmation .modal-content {
+  margin-top:10px;
+}
+.mod-confirmation .modal-button-container {
+  display:flex;
+}
+.mod-confirmation .modal-button-container > .mod-warning:first-child {
+  background:transparent;
+  border:none;
+  font-weight:500;
+  color:var(--text-error);
+  cursor:pointer;
+  margin-right:auto;
+  box-shadow:none;
+  padding-left:0;
+  padding-right:0;
+} 
+.mod-confirmation .modal-button-container > .mod-warning:first-child:hover {
+  text-decoration:underline;
 }
 
 /* Close buttons */
