@@ -18,7 +18,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 - [Installation](#installation)
 - [Companion plugins](#companion-plugins)
 - [Plugin support](#plugin-support)
-- [Helper classes](#helper-classes-and-filters)
+- [Helper classes](#helper-filters-and-classes)
 - [Hotkeys](#hotkeys)
 - [Developers](#developers)
 - [Disclaimer](#disclaimer)
