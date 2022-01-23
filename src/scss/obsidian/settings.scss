@@ -121,6 +121,12 @@ button.mod-cta,
 }
 
 /* Settings */
+.modal.mod-settings .vertical-tab-content-container {
+  padding-top:0;
+}
+.modal.mod-settings .vertical-tab-content-container .vertical-tab-content { 
+  padding-top:30px;
+}
 
 .horizontal-tab-content,
 .vertical-tab-content {

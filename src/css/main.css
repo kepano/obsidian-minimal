@@ -306,15 +306,10 @@ input[type=checkbox]:checked {
 .markdown-preview-section > .contains-task-list {
   padding-bottom: 0.5em; }
 
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
-.markdown-preview-view ul > li.task-list-item.is-checked {
+body:not(.minimal-strike-lists) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
+body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is-checked {
   text-decoration: none;
   color: var(--text-normal); }
-
-.minimal-strike-lists .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
-.minimal-strike-lists ul > li.task-list-item.is-checked {
-  text-decoration: line-through;
-  color: var(--text-faint); }
 
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-left: -0.5em;
@@ -2113,6 +2108,12 @@ button.mod-cta,
   margin-left: 3px; }
 
 /* Settings */
+.modal.mod-settings .vertical-tab-content-container {
+  padding-top: 0; }
+
+.modal.mod-settings .vertical-tab-content-container .vertical-tab-content {
+  padding-top: 30px; }
+
 .horizontal-tab-content,
 .vertical-tab-content {
   background: var(--background-primary);
