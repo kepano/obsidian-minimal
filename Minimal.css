@@ -1419,20 +1419,40 @@ input.prompt-input:hover {
   padding-left: 10px;
   line-height: 4; }
 
+.suggestion-container {
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
+  padding: 0 6px;
+  border-radius: 8px;
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border-hover); }
+
 .suggestion-item {
   cursor: var(--cursor);
-  padding-left: 10px; }
+  padding: 4px 10px 4px 10px;
+  border-radius: 4px; }
+
+.suggestion-container .suggestion-item:first-child {
+  margin-top: 6px; }
+
+.suggestion-container .suggestion-item:last-child {
+  margin-bottom: 6px; }
+
+.suggestion-container .suggestion-item {
+  font-size: calc(var(--font-adaptive-normal) * .9) !important; }
 
 .suggestion-hotkey {
   margin-top: 0.25em; }
 
 .suggestion-flair {
   left: auto;
-  right: 16px;
+  right: 8px;
   opacity: 0.25; }
 
 .prompt-results .suggestion-flair .filled-pin {
   display: none; }
+
+.prompt-results .suggestion-item {
+  padding: 5px 8px 5px 10px; }
 
 .modal-container .suggestion-item.is-selected {
   border-radius: var(--radius-m);
@@ -1459,9 +1479,6 @@ body:not(.hider-scrollbars) .prompt-results {
 .modal,
 .prompt {
   box-shadow: 0 5px 100px rgba(0, 0, 0, 0.15); }
-
-.suggestion-container {
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2); }
 
 .prompt {
   border: 1px solid var(--modal-border); }
@@ -2615,9 +2632,10 @@ body.hider-frameless .titlebar {
 /* Workspace */
 /* Empty state */
 .empty-state {
-  background-color: var(--background-primary);
+  background-color: var(--background-secondary);
   text-align: center; }
 
+.workspace-leaf-content[data-type="empty"] .view-header,
 .empty-state-title {
   display: none; }
 
@@ -3036,7 +3054,7 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
   --border-width-alt:0px; }
 
 /* Title borders */
-body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='graph']):not([data-type='localgraph']) .view-header,
+body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='empty']):not([data-type='graph']):not([data-type='localgraph']) .view-header,
 body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type='graph']):not([data-type='empty']):not([data-type='localgraph']) .view-header {
   border-bottom: var(--border-width) solid var(--background-modifier-border); }
 
@@ -7426,7 +7444,7 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
   font-size: var(--font-settings-small);
   justify-content: flex-end; }
 
-.modal:not(.mod-confirmation):not(.mod-sync-history):not(.mod-settings):not(.mod-community-theme):not(.mod-publish):not(.mod-publish):not(.mod-community-plugin):not(.mod-sync-log) .modal-content {
+.quickAddModal .modal-content {
   padding: 20px 2px 5px; }
 
 /* Sliding Panes aka Andy Mode plugin */

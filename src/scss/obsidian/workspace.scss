@@ -3,9 +3,10 @@
 
 /* Empty state */
 .empty-state {
-  background-color:var(--background-primary);
+  background-color:var(--background-secondary);
   text-align:center;
 }
+.workspace-leaf-content[data-type="empty"] .view-header,
 .empty-state-title {
   display:none;
 }

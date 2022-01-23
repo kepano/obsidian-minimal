@@ -9,7 +9,7 @@
 
 /* Title borders */
 
-body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='graph']):not([data-type='localgraph']) .view-header,
+body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='empty']):not([data-type='graph']):not([data-type='localgraph']) .view-header,
 body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type='graph']):not([data-type='empty']):not([data-type='localgraph']) .view-header {
   border-bottom:var(--border-width) solid var(--background-modifier-border);
 }
