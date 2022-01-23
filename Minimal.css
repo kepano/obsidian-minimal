@@ -368,7 +368,7 @@ input[type=checkbox]:checked {
   position: relative;
   top: 5px;
   line-height: 0;
-  margin: 0px 6px 1px -1.3em; }
+  margin: 0px 6px 1px -1.2em; }
 
 .markdown-preview-view ul > li.task-list-item {
   text-indent: 0;
