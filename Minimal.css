@@ -4155,11 +4155,12 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 /* Hide app ribbon */
 .workspace-ribbon.mod-left {
-  border-left: 0; }
+  border-left: 0;
+  transition: none; }
 
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed {
   border-color: transparent;
-  background-color: transparent; }
+  background-color: var(--background-primary); }
 
 .minimal-focus-mode .workspace-ribbon.mod-left {
   background-color: var(--background-secondary);
@@ -4168,7 +4169,7 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed,
 .minimal-focus-mode .workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn {
   opacity: 0;
-  transition: opacity 0.1s ease-in-out 0.1s; }
+  transition: opacity 0.1s ease-in-out 0.1s, background-color 0.1s linear 0.1s; }
 
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover,
 .minimal-focus-mode .workspace-ribbon.is-collapsed:hover .workspace-ribbon-collapse-btn {
