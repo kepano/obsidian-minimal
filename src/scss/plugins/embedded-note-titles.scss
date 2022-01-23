@@ -1,5 +1,10 @@
 /* Embedded Note Titles plugin */
 
+.contextual-typography .markdown-preview-view h1.embedded-note-title {
+  margin-block-start:0;
+  margin-block-end:0;
+}
+
 .embedded-note-titles .markdown-preview-view > h1 {
   /* ...preview mode styles... */
 }

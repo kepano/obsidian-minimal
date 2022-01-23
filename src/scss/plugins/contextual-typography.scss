@@ -3,8 +3,8 @@
 .el-hr hr {
   margin:1rem 0;
 }
-.el-h1,
-.el-h2 {
+.el-p + .el-h1,
+.el-p + .el-h2 {
   margin-top:0.75rem;
 }
 .el-hr + .el-h1,

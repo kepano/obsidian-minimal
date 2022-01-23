@@ -11,7 +11,14 @@
 .mod-cm6 .ͼ1 .cm-line {
   padding:0 0 0 1px;
 }
-
+.ͼ1 .cm-content {
+  padding-top:10px;
+}
+.markdown-source-view.mod-cm6 .cm-scroller {
+  padding-top:15px;
+  padding-left:calc((100% - var(--max-width)) / 2);
+  padding-right:calc((100% - var(--max-width)) / 2);
+}
 
 /* Block quotes */
 .markdown-source-view.mod-cm6 .HyperMD-quote {
@@ -102,12 +109,6 @@
 }
 .markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
     background-color: var(--text-selection);
-}
-
-.markdown-source-view.mod-cm6 .cm-scroller {
-  padding-top:15px;
-  padding-left:calc((100% - var(--max-width)) / 2);
-  padding-right:calc((100% - var(--max-width)) / 2);
 }
 body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
   max-width:var(--line-width-adaptive);

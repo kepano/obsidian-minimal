@@ -380,6 +380,14 @@ body.is-dragging {
 .mod-cm6 .ͼ1 .cm-line {
   padding: 0 0 0 1px; }
 
+.ͼ1 .cm-content {
+  padding-top: 10px; }
+
+.markdown-source-view.mod-cm6 .cm-scroller {
+  padding-top: 15px;
+  padding-left: calc((100% - var(--max-width)) / 2);
+  padding-right: calc((100% - var(--max-width)) / 2); }
+
 /* Block quotes */
 .markdown-source-view.mod-cm6 .HyperMD-quote {
   background-color: transparent;
@@ -465,11 +473,6 @@ body.is-dragging {
 
 .markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
   background-color: var(--text-selection); }
-
-.markdown-source-view.mod-cm6 .cm-scroller {
-  padding-top: 15px;
-  padding-left: calc((100% - var(--max-width)) / 2);
-  padding-right: calc((100% - var(--max-width)) / 2); }
 
 body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
   max-width: var(--line-width-adaptive); }
@@ -4412,13 +4415,16 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 /* Requires Contextual Typography 2.2.1+ */
 /* Switch to flexbox */
+.contextual-typography .markdown-preview-view.markdown-preview-view {
+  padding-top: 15px; }
+
 .contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 100%;
   padding-left: 0;
-  padding-top: 10px; }
+  padding-top: 0; }
 
 .contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-embed-content .markdown-preview-sizer > div,
 .contextual-typography.minimal-folding .allow-fold-headings.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer,
@@ -6752,8 +6758,8 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .el-hr hr {
   margin: 1rem 0; }
 
-.el-h1,
-.el-h2 {
+.el-p + .el-h1,
+.el-p + .el-h2 {
   margin-top: 0.75rem; }
 
 .el-hr + .el-h1,
@@ -6973,6 +6979,10 @@ body .excalidraw label.ToolIcon {
   background-color: transparent; }
 
 /* Embedded Note Titles plugin */
+.contextual-typography .markdown-preview-view h1.embedded-note-title {
+  margin-block-start: 0;
+  margin-block-end: 0; }
+
 .embedded-note-titles .markdown-preview-view > h1 {
   /* ...preview mode styles... */ }
 

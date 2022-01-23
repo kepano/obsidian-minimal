@@ -4,13 +4,16 @@
 
 /* Switch to flexbox */
 
+.contextual-typography .markdown-preview-view.markdown-preview-view {
+  padding-top:15px;
+}
 .contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer {
   display:flex;
   flex-direction:column;
   width:100%;
   max-width:100%;
   padding-left:0;
-  padding-top:10px;
+  padding-top:0;
 }
 .contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-embed-content .markdown-preview-sizer > div,
 .contextual-typography.minimal-folding .allow-fold-headings.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer,
