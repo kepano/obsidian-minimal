@@ -28,8 +28,8 @@ body .excalidraw {
   --background-modifier-form-field:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 6%));
   --background-modifier-form-field-highlighted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 8%));
 
-  --background-modifier-error:rgba(255,0,0,0.16);
-  --background-modifier-error-hover:rgba(255,0,0,0.1);
+  --background-modifier-error:rgba(255,0,0,0.14);
+  --background-modifier-error-hover:rgba(255,0,0,0.08);
 
   --background-button:white;
   --background-table-rows:var(--background-secondary);
