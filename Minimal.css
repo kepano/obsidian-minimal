@@ -4521,7 +4521,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 /* Requires Contextual Typography 2.2.1+ */
 /* Switch to flexbox */
-.contextual-typography .markdown-preview-view.markdown-preview-view {
+.contextual-typography .markdown-reading-view > .markdown-preview-view {
   padding-top: 15px; }
 
 .contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer {
