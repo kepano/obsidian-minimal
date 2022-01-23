@@ -4085,7 +4085,7 @@ body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header)
   transition: all linear 0.1s; }
 
 body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .view-header-title,
-body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .view-action svg {
+body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .view-actions {
   opacity: 0;
   transition: all linear 0.1s; }
 
@@ -4094,8 +4094,8 @@ body.minimal-focus-mode:not(.is-mobile):not(.plugin-sliding-panes-rotate-header)
   height: calc(var(--header-height) + 3px);
   transition: all linear 0.1s; }
 
-body.minimal-focus-mode .view-header:hover .view-action svg,
-body.minimal-focus-mode .view-header:focus-within .view-action svg,
+body.minimal-focus-mode .view-header:hover .view-actions,
+body.minimal-focus-mode .view-header:focus-within .view-actions,
 body.minimal-focus-mode .view-header:hover .view-header-title,
 body.minimal-focus-mode .view-header:focus-within .view-header-title {
   opacity: 1;
