@@ -162,6 +162,7 @@ Controls the row and column styling for tables. [Learn more.](https://github.com
 | Class           | Description                                         |
 | :-------------- | :-------------------------------------------------- |
 | `table-nowrap`  | Disable line wrapping in table cells                |
+| `table-numbers` | Add row numbers to tables                           |
 | `table-tabular` | Use tabular figures in tables                       |
 | `table-small`   | Use small font size in tables                       |
 | `table-tiny`    | Use tiny font size in tables                        |
