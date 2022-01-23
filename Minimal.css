@@ -1623,6 +1623,10 @@ iframe {
   padding: 0 0 0 calc(var(--nested-padding) / 2);
   margin-inline-start: var(--nested-padding); }
 
+.markdown-preview-view blockquote em,
+.markdown-preview-view blockquote strong {
+  color: var(--text-muted); }
+
 /* Code */
 .markdown-preview-view pre,
 .markdown-preview-view code,
@@ -1632,7 +1636,7 @@ iframe {
   font-size: 0.85em; }
 
 button.copy-code-button {
-  cursor: var(--curosor);
+  cursor: var(--cursor);
   box-shadow: none;
   font-size: var(--font-adaptive-smaller);
   background-color: transparent;
