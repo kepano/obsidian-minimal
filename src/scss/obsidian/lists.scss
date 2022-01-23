@@ -62,6 +62,9 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
 }
 
 /* List folding */
+.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .task-list-item-checkbox ~ .cm-fold-indicator .collapse-indicator {
+  right:0px;
+}
 .markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
   right:-8px;
   top:1px;

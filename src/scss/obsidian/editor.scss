@@ -86,8 +86,21 @@
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   cursor:var(--cursor);
 }
+
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
+  right:6px;
+}
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-task-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
+  right:0px;
+}
 .markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-  right:-4px;
+  right:-8px;
+  top:1px;
+  width:26px;
+}
+ul>li.is-collapsed::marker,
+.markdown-source-view.mod-cm6 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
+  color:var(--text-accent);
 }
 .cm-gutterElement .collapse-indicator,
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,

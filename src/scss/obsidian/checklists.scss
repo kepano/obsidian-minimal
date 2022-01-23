@@ -35,7 +35,7 @@ input[type=checkbox]:checked {
   color:var(--text-faint);
 }
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin-left:-4px;
+  margin-left:-0.5em;
   margin-top:0;
 }
 .task-list-item-checkbox,
@@ -46,14 +46,13 @@ input[type=checkbox]:checked {
 }
 .markdown-preview-view .task-list-item-checkbox {
   position:relative;
-  top:6px;
+  top:5px;
   line-height:0;
-  margin-left:-1.4em;
-  margin-right:6px;
+  margin:1px 6px 2px -1.3em;
 }
 .markdown-preview-view ul > li.task-list-item {
   text-indent:0;
-  line-height:1.4;
+  line-height:var(--line-height);
 }
 .markdown-preview-view .task-list-item {
   padding-inline-start:0;

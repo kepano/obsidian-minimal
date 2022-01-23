@@ -349,7 +349,7 @@ input[type=checkbox]:checked {
   color: var(--text-faint); }
 
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin-left: -4px;
+  margin-left: -0.5em;
   margin-top: 0; }
 
 .task-list-item-checkbox,
@@ -360,14 +360,13 @@ input[type=checkbox]:checked {
 
 .markdown-preview-view .task-list-item-checkbox {
   position: relative;
-  top: 6px;
+  top: 5px;
   line-height: 0;
-  margin-left: -1.4em;
-  margin-right: 6px; }
+  margin: 1px 6px 2px -1.3em; }
 
 .markdown-preview-view ul > li.task-list-item {
   text-indent: 0;
-  line-height: 1.4; }
+  line-height: var(--line-height); }
 
 .markdown-preview-view .task-list-item {
   padding-inline-start: 0; }
@@ -489,8 +488,20 @@ body.is-dragging {
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   cursor: var(--cursor); }
 
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
+  right: 6px; }
+
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-task-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
+  right: 0px; }
+
 .markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-  right: -4px; }
+  right: -8px;
+  top: 1px;
+  width: 26px; }
+
+ul > li.is-collapsed::marker,
+.markdown-source-view.mod-cm6 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
+  color: var(--text-accent); }
 
 .cm-gutterElement .collapse-indicator,
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
@@ -1348,6 +1359,9 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   left: -5px; }
 
 /* List folding */
+.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .task-list-item-checkbox ~ .cm-fold-indicator .collapse-indicator {
+  right: 0px; }
+
 .markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
   right: -8px;
   top: 1px;
