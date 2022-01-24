@@ -64,6 +64,7 @@ iframe {
 .markdown-preview-view pre,
 .markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code,
+.markdown-source-view.mod-cm6 .cm-preview-code-block pre.dataview-error,
 .cm-s-obsidian .HyperMD-codeblock {
   color:var(--text-code);
   font-size:0.85em;
