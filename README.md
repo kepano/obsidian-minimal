@@ -209,7 +209,7 @@ If you would like add support for a plugin, or have found a bug you'd like to he
 
 ### Plugin support
 
-Plugin authors and developers can add support for Minimal theme by submitting a pull request. See the [src/scss/plugins](https://github.com/kepano/obsidian-minimal/tree/master/src/scss/plugins) folder for examples of snippets for plugins that are currently supported. Build instructions can be found below.
+Plugin authors and developers can add support for Minimal theme by submitting a pull request. See the [src/scss/plugins](https://github.com/kepano/obsidian-minimal/tree/master/src/scss/plugins) folder with examples of snippets for plugins that are currently supported.
 
 ### Localization
 
