@@ -213,7 +213,7 @@ Plugin authors and developers can add support for Minimal theme by submitting a 
 
 ### Localization
 
-Due to a limitation of Obsidian ([see feature request](https://forum.obsidian.md/t/use-cross-language-identifiers-for-workspace-tabs-for-use-in-theming/31236)), the **Text labels** feature, and some custom icons, are not supported in languages other than English. You can help by submitting a translation. To do so, create a snippet that matches the `aria-label` values to your language, with the two letter language code suffix -fr add to the file name. [Here is an example I made for French](https://github.com/kepano/obsidian-minimal/blob/master/translations/nav-labels-fr.css) .
+Due to a limitation of Obsidian ([see feature request](https://forum.obsidian.md/t/use-cross-language-identifiers-for-workspace-tabs-for-use-in-theming/31236)), the **Text labels** feature, and some custom icons, are not supported in languages other than English. You can help by submitting a translation. To do so, create a snippet that matches the `aria-label` values to your language, with the two letter language code suffix added to the file name. [Here is an example of the French translation](https://github.com/kepano/obsidian-minimal/blob/master/translations/nav-labels-fr.css).
 
 Localization can also be added to Style Settings, [see instructions](https://github.com/mgmeyers/obsidian-style-settings#localization-support).
 
