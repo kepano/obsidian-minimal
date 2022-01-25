@@ -1,7 +1,6 @@
 /* Sync */
 
 /* Sync Log */
-
 .modal.mod-sync-log {
   padding:20px 0 0 0;
 }
@@ -105,4 +104,29 @@ body .sync-history-content-container textarea.sync-history-content:focus {
 }
 .sync-history-list-item.is-active, .sync-history-list-item:hover {
   background-color:var(--background-tertiary);
+}
+
+
+/* Mobile */
+.is-mobile { 
+  .sync-status-icon {
+    margin-top:2px;
+  }
+  .sync-history-list {
+    padding:10px;
+    background-color:var(--background-primary);
+  }
+  .sync-history-list-item {
+    font-size:var(--font-adaptive-small);
+    padding:8px 10px;
+  }
+  .sync-history-content-container .modal-button-container {
+    padding:5px 10px 30px 10px;
+  }
+  .sync-history-content {
+    outline:none;
+    -webkit-appearance:none;
+    border:0;
+    background-color:var(--background-secondary);
+  }
 }
