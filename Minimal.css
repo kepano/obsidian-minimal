@@ -5581,7 +5581,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   .is-mobile .community-plugin-search .setting-item {
     padding-top: 10px; }
 
-  .is-mobile
   .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) {
     flex-direction: row;
     align-items: center; }
