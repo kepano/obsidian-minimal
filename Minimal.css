@@ -3942,6 +3942,7 @@ body:not(.minimal-icons-off) svg.document {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M83.071 36.167c-0.046 -0.133 -0.083 -0.263 -0.138 -0.392c-0.204 -0.442 -0.458 -0.863 -0.817 -1.221l-25 -25c-0.358 -0.358 -0.779 -0.613 -1.221 -0.817c-0.125 -0.058 -0.258 -0.092 -0.392 -0.138c-0.35 -0.117 -0.708 -0.192 -1.079 -0.212C54.333 8.379 54.254 8.333 54.167 8.333H25C20.404 8.333 16.667 12.071 16.667 16.667v66.667c0 4.596 3.738 8.333 8.333 8.333h50c4.596 0 8.333 -3.738 8.333 -8.333V37.5c0 -0.088 -0.046 -0.167 -0.054 -0.258C83.258 36.875 83.188 36.517 83.071 36.167zM69.108 33.333H58.333V22.558L69.108 33.333zM25 83.333V16.667h25v20.833c0 2.304 1.863 4.167 4.167 4.167h20.833l0.008 41.667H25z"></path></svg>'); }
 
 body:not(.minimal-icons-off) .nav-action-button[aria-label="New note"] svg.document,
+body:not(.minimal-icons-off) .workspace-leaf-content[data-type="file-explorer"] .nav-action-button:first-child svg.document,
 body:not(.minimal-icons-off) svg.create-new {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z' /%3E%3C/svg%3E"); }
 
@@ -3983,10 +3984,12 @@ body:not(.minimal-icons-off) svg.filled-pin {
 body:not(.minimal-icons-off) svg.folder {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M83.333 75H16.667V33.333h66.667m0 -8.333h-33.333l-8.333 -8.333H16.667c-4.625 0 -8.333 3.708 -8.333 8.333v50a8.333 8.333 0 0 0 8.333 8.333h66.667a8.333 8.333 0 0 0 8.333 -8.333V33.333a8.333 8.333 0 0 0 -8.333 -8.333z"></path></svg>'); }
 
+body:not(.minimal-icons-off) .workspace-tab-header[data-type="file-explorer"] svg.folder,
 body:not(.minimal-icons-off) .workspace-tab-header[aria-label="File explorer"] svg.folder {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' /%3E%3C/svg%3E"); }
 
-body:not(.minimal-icons-off) .nav-action-button[aria-label="New folder"] svg.folder {
+body:not(.minimal-icons-off) .nav-action-button[aria-label="New folder"] svg.folder,
+body:not(.minimal-icons-off) .workspace-leaf-content[data-type="file-explorer"] .nav-action-button:nth-child(2) svg.folder {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z' /%3E%3C/svg%3E"); }
 
 body:not(.minimal-icons-off) svg.fullscreen {
@@ -4105,7 +4108,7 @@ body:not(.minimal-icons-off) svg.price-tag-glyph {
 body:not(.minimal-icons-off) svg.quote-glyph {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="black" d="M6.5 10c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.318.142-.686.238-1.028.466c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.945c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 6.5 10zm11 0c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.317.143-.686.238-1.028.467c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.944c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 17.5 10z"></path></svg>'); }
 
-body:not(.minimal-icons-off) .workspace-tab-header[aria-label="Dictionary"] svg.quote-glyph {
+body:not(.minimal-icons-off) .workspace-tab-header[data-type="dictionary-view"] svg.quote-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' /%3E%3C/svg%3E"); }
 
 body:not(.minimal-icons-off) svg.redo-glyph {
@@ -4694,39 +4697,42 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
   border: none; }
 
-/* Snippet this to translate into other languages */
+/* Snippet this to translate into other languages updated for Obsidian 0.13.22 */
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:after {
+  content: ""; }
+
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-icon:after {
   content: "Note"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="File explorer"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="file-explorer"] .workspace-tab-header-inner-icon:after {
   content: "Notes"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Search"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon:after {
   content: "Search"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Calendar"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="calendar"] .workspace-tab-header-inner-icon:after {
   content: "Calendar"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Graph view"] .workspace-tab-header-inner-icon:after,
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Graph of"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="localgraph"] .workspace-tab-header-inner-icon:after,
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="graph"] .workspace-tab-header-inner-icon:after {
   content: "Graph"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outline of"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="outline"] .workspace-tab-header-inner-icon:after {
   content: "Outline"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Starred"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="starred"] .workspace-tab-header-inner-icon:after {
   content: "Starred"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Dictionary"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="dictionary-view"] .workspace-tab-header-inner-icon:after {
   content: "Dictionary"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label="Tag pane"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="tag"] .workspace-tab-header-inner-icon:after {
   content: "Tags"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Backlinks for"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="backlink"] .workspace-tab-header-inner-icon:after {
   content: "Backlinks"; }
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[aria-label*="Outgoing links from"] .workspace-tab-header-inner-icon:after {
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="outgoing-link"] .workspace-tab-header-inner-icon:after {
   content: "Outlinks"; }
 
 /* Layout Control
