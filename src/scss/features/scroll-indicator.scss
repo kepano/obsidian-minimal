@@ -1,8 +1,11 @@
 /* Scroll indicator for sidebar containers */
 
-body:not(.is-mobile) .item-list,
-body:not(.is-mobile) .nav-files-container,
-body:not(.is-mobile) .workspace-leaf-content[data-type='search'] .search-result-container {
+body:not(.is-mobile) .mod-left-split .item-list,
+body:not(.is-mobile) .mod-left-split .nav-files-container,
+body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type='search'] .search-result-container,
+body:not(.is-mobile) .mod-left-split .tag-container,
+body:not(.is-mobile) .mod-left-split .outgoing-link-pane,
+body:not(.is-mobile) .mod-left-split .backlink-pane {
   background:
     linear-gradient(
       var(--background-secondary) 10%,
@@ -13,11 +16,17 @@ body:not(.is-mobile) .workspace-leaf-content[data-type='search'] .search-result-
       var(--background-modifier-border) 100%,
       rgba(0, 0, 0, 0)
     )
-    center top;  
+    center top;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 91% var(--border-width);
+    background-attachment: local, scroll; 
 }
-body:not(.is-mobile) .tag-container,
-body:not(.is-mobile) .outgoing-link-pane,
-body:not(.is-mobile) .backlink-pane {
+body:not(.is-mobile) .mod-right-split .item-list,
+body:not(.is-mobile) .mod-right-split .nav-files-container,
+body:not(.is-mobile) .mod-right-split .workspace-leaf-content[data-type='search'] .search-result-container,
+body:not(.is-mobile) .mod-right-split .tag-container,
+body:not(.is-mobile) .mod-right-split .outgoing-link-pane,
+body:not(.is-mobile) .mod-right-split .backlink-pane {
   background:
     linear-gradient(
       var(--background-primary) 10%,
@@ -29,14 +38,7 @@ body:not(.is-mobile) .backlink-pane {
       rgba(0, 0, 0, 0)
     )
     center top;
-}
-body:not(.is-mobile) .item-list,
-body:not(.is-mobile) .nav-files-container,
-body:not(.is-mobile) .workspace-leaf-content[data-type='search'] .search-result-container,
-body:not(.is-mobile) .tag-container,
-body:not(.is-mobile) .outgoing-link-pane,
-body:not(.is-mobile) .backlink-pane {
-  background-repeat: no-repeat;
-  background-size: 100% 40px, 91% var(--border-width);
-  background-attachment: local, scroll;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 91% var(--border-width);
+    background-attachment: local, scroll;
 }
