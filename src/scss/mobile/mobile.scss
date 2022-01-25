@@ -333,7 +333,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   border:none;
   box-shadow:0 5px 200px var(--background-modifier-box-shadow);
 }
-
 .mobile-toolbar {
   width:100%;
   text-align:center;
@@ -367,11 +366,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   font-size:14px;
   height:32px;
 }
-.is-mobile .modal .vertical-tab-header-group:last-child,
-.is-mobile .modal .vertical-tab-content,
-.is-mobile .minimal-donation {
-  padding-bottom:70px !important;
-}
+
 .pull-out-action {
   top:0;
   height:100vh;
@@ -385,7 +380,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
 .is-mobile .markdown-preview-view pre {
   overflow-x:scroll;
 }
-
 .is-mobile .view-header-icon .three-horizontal-bars {
   opacity:0;
 }
@@ -514,18 +508,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   .is-mobile.is-ios .safe-area-top-cover {
     background-color:transparent;
   }
-  .is-mobile .modal,
-  .is-mobile .modal-container .modal.mod-settings  {
-    max-width:800px;
-    transform:translateZ(0);
-    border-top-left-radius:15px !important;
-    border-top-right-radius:15px !important;
-    margin-bottom:-15px;
-    overflow:hidden;
-  }
-  .is-mobile .modal-container .modal.mod-settings .vertical-tabs-container {
-    transform:translateZ(0);
-  }
   .is-mobile .view-action {
     padding:5px 5px 4px;
   }
@@ -539,9 +521,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
     transform:unset !important;
     animation:unset !important;
   }
-  .is-mobile .modal-container .modal-bg {
-    opacity:0.8 !important;
-  }
+  
   .is-mobile .community-plugin-search .setting-item {
   padding-top:10px;}
   .is-mobile 
@@ -561,13 +541,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   }
   .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
     width:auto;
-    margin-top:0;
-  }
-  .is-mobile .modal .search-input-container input {
-    width:100%;
-  }
-  .is-mobile .modal-setting-back-button,
-  .is-mobile .modal.mod-settings .vertical-tab-header:before {
     margin-top:0;
   }
   .is-mobile .markdown-preview-view ol > li.task-list-item .collapse-indicator,

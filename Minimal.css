@@ -88,6 +88,8 @@ SOFTWARE.
   --font-smallest:10px;
   --font-title:1.1em;
   --font-inputs:13px;
+  --font-settings:15px;
+  --font-settings-small:12px;
   /* Font weights */
   --normal-weight:400;
   /* Switch to 300 if you want thinner default text */
@@ -2171,10 +2173,6 @@ input.document-replace-input:focus {
   font-size: var(--font-adaptive-small); }
 
 /* Settings */
-:root {
-  --font-settings:15px;
-  --font-settings-small:12px; }
-
 .modal.mod-sync-history,
 .modal.mod-sync-log,
 .modal.mod-publish,
@@ -2320,7 +2318,8 @@ button.mod-cta,
 .community-theme-container {
   padding-top: 10px; }
 
-.community-theme-container, .hotkey-settings-container {
+.community-theme-container,
+.hotkey-settings-container {
   height: auto;
   overflow: visible; }
 
@@ -2330,7 +2329,8 @@ button.mod-cta,
 .theme-list {
   justify-content: space-evenly; }
 
-.community-theme-filters-container, .hotkey-search-container {
+.community-theme-filters-container,
+.hotkey-search-container {
   padding: 0 0 20px 0; }
 
 .modal.mod-community-theme {
@@ -5436,11 +5436,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   font-size: 14px;
   height: 32px; }
 
-.is-mobile .modal .vertical-tab-header-group:last-child,
-.is-mobile .modal .vertical-tab-content,
-.is-mobile .minimal-donation {
-  padding-bottom: 70px !important; }
-
 .pull-out-action {
   top: 0;
   height: 100vh;
@@ -5571,18 +5566,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   .is-mobile.is-ios .safe-area-top-cover {
     background-color: transparent; }
 
-  .is-mobile .modal,
-  .is-mobile .modal-container .modal.mod-settings {
-    max-width: 800px;
-    transform: translateZ(0);
-    border-top-left-radius: 15px !important;
-    border-top-right-radius: 15px !important;
-    margin-bottom: -15px;
-    overflow: hidden; }
-
-  .is-mobile .modal-container .modal.mod-settings .vertical-tabs-container {
-    transform: translateZ(0); }
-
   .is-mobile .view-action {
     padding: 5px 5px 4px; }
 
@@ -5594,9 +5577,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
     transition: unset !important;
     transform: unset !important;
     animation: unset !important; }
-
-  .is-mobile .modal-container .modal-bg {
-    opacity: 0.8 !important; }
 
   .is-mobile .community-plugin-search .setting-item {
     padding-top: 10px; }
@@ -5618,13 +5598,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
 
   .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
     width: auto;
-    margin-top: 0; }
-
-  .is-mobile .modal .search-input-container input {
-    width: 100%; }
-
-  .is-mobile .modal-setting-back-button,
-  .is-mobile .modal.mod-settings .vertical-tab-header:before {
     margin-top: 0; }
 
   .is-mobile .markdown-preview-view ol > li.task-list-item .collapse-indicator,

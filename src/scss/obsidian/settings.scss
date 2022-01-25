@@ -1,10 +1,5 @@
 /* Settings */
 
-:root {
-  --font-settings:15px;
-  --font-settings-small:12px;
-}
-
 .modal.mod-sync-history,
 .modal.mod-sync-log,
 .modal.mod-publish,
@@ -154,7 +149,8 @@ button.mod-cta,
 .community-theme-container {
   padding-top:10px;
 }
-.community-theme-container, .hotkey-settings-container { 
+.community-theme-container,
+.hotkey-settings-container { 
   height:auto;
   overflow:visible;
 }
@@ -165,7 +161,8 @@ button.mod-cta,
 .theme-list {
   justify-content: space-evenly;
 }
-.community-theme-filters-container, .hotkey-search-container {
+.community-theme-filters-container,
+.hotkey-search-container {
   padding:0 0 20px 0;
 }
 .modal.mod-community-theme {
