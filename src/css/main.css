@@ -243,25 +243,25 @@
   --tx1:
     hsl(
       var(--base-h),
-      var(--base-s),
+      calc(var(--base-s) - 10%),
       calc(var(--base-l) + 67%)
     );
   --tx2:
     hsl(
       var(--base-h),
-      var(--base-s),
+      calc(var(--base-s) - 20%),
       calc(var(--base-l) + 45%)
     );
   --tx3:
     hsl(
       var(--base-h),
-      var(--base-s),
+      calc(var(--base-s) - 10%),
       calc(var(--base-l) + 20%)
     );
   --tx4:
     hsl(
       var(--base-h),
-      var(--base-s),
+      calc(var(--base-s) - 10%),
       calc(var(--base-l) + 50%)
     );
   --ax1:
