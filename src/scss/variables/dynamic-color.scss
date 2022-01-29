@@ -29,6 +29,8 @@
 
 .theme-light,
 .theme-light.minimal-default-light {
+
+  --accent-l:50%;
   --base-l:96%;
 
   --bg1:white;
@@ -137,6 +139,7 @@
 .theme-dark,
 .theme-dark.minimal-default-dark {
 
+  --accent-l:60%;
   --base-l:15%;
 
   --bg1:
@@ -214,21 +217,21 @@
     hsl(
       var(--accent-h),
       var(--accent-s),
-      var(--accent-d)
+      var(--accent-l)
     );
 
   --ax2:
     hsl(
       var(--accent-h),
       var(--accent-s),
-      calc(var(--accent-d) + 12%)
+      calc(var(--accent-l) + 12%)
     );
 
   --ax3:
     hsl(
       var(--accent-h),
       var(--accent-s),
-      calc(var(--accent-d) - 20%)
+      calc(var(--accent-l) - 20%)
     );
 
   --hl1:
