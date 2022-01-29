@@ -2911,7 +2911,7 @@ span.cm-hashtag.cm-hashtag-end {
 .view-header-title {
   padding-right: 60px; }
 
-.view-header-title:before {
+body:not(.is-mobile).view-header-title:before {
   background: linear-gradient(90deg, transparent 0%, var(--background-primary) 80%);
   width: 50px;
   content: " ";
