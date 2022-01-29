@@ -3,10 +3,12 @@
 /* Frameless mode */
 body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
   padding-top:24px;
+  transition:padding-top 0.6s linear;
 }
 /* Include support for Electron Window Tweaker */
-body.mod-macos.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
+body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
   padding-top:calc(24px + var(--ewt-traffic-light-y));
+  transition:padding-top 0.6s linear;
 }
 .hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
 .hider-frameless:not(.is-mobile) .workspace-split.mod-root .view-header {

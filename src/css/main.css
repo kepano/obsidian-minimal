@@ -1571,10 +1571,12 @@ a[href*="obsidian://search"] {
 /* Editor */
 .cm-s-obsidian span.cm-url,
 .cm-s-obsidian span.cm-url:hover {
-  color: var(--text-accent); }
+  color: var(--text-accent);
+  font-weight: var(--link-weight); }
 
 .cm-s-obsidian span.cm-hmd-internal-link {
-  color: var(--text-accent); }
+  color: var(--text-accent);
+  font-weight: var(--link-weight); }
 
 /* Reader Mode Lists  */
 ul {
@@ -7418,11 +7420,13 @@ div[data-type="git-view"] .search-input-clear-button {
 /* Hider plugin */
 /* Frameless mode */
 body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
-  padding-top: 24px; }
+  padding-top: 24px;
+  transition: padding-top 0.6s linear; }
 
 /* Include support for Electron Window Tweaker */
-body.mod-macos.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
-  padding-top: calc(24px + var(--ewt-traffic-light-y)); }
+body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
+  padding-top: calc(24px + var(--ewt-traffic-light-y));
+  transition: padding-top 0.6s linear; }
 
 .hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
 .hider-frameless:not(.is-mobile) .workspace-split.mod-root .view-header {
