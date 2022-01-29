@@ -1606,12 +1606,8 @@ a[href*="obsidian://search"] {
 .is-live-preview.cm-s-obsidian span.cm-link:hover {
   color: var(--text-accent-hover); }
 
-/* Editor */
 .cm-s-obsidian span.cm-url,
-.cm-s-obsidian span.cm-url:hover {
-  color: var(--text-accent);
-  font-weight: var(--link-weight); }
-
+.is-live-preview.cm-s-obsidian span.cm-link,
 .cm-s-obsidian span.cm-hmd-internal-link {
   color: var(--text-accent);
   font-weight: var(--link-weight); }
