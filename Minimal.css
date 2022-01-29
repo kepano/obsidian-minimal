@@ -2949,17 +2949,18 @@ span.cm-hashtag.cm-hashtag-end {
 .view-header-title {
   padding-right: 60px; }
 
+/*
 body:not(.is-mobile) .view-header-title:before {
-  background: linear-gradient(90deg, transparent 0%, var(--background-primary) 80%);
-  width: 50px;
-  content: " ";
-  height: var(--header-height);
-  display: inline-block;
-  vertical-align: bottom;
-  position: absolute;
-  right: 50px;
-  pointer-events: none; }
-
+  background:linear-gradient(90deg,transparent 0%,var(--background-primary) 80%);
+  width:50px;
+  content:" ";
+  height:var(--header-height);
+  display:inline-block;
+  vertical-align:bottom;
+  position:absolute;
+  right:50px;
+  pointer-events:none;
+}*/
 .workspace-leaf-header,
 .view-header,
 .workspace-leaf.mod-active .view-header,
