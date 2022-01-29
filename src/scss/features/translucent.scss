@@ -1,0 +1,17 @@
+/* Translucent */
+
+.theme-light.is-translucent.mod-macos,
+.theme-dark.is-translucent.mod-macos {
+  --opacity-translucency:1;
+}
+
+.is-translucent.mod-macos .workspace-ribbon.side-dock-ribbon.mod-left,
+.is-translucent.mod-macos .workspace-split.mod-left-split,
+.is-translucent.mod-macos .titlebar {
+  --opacity-translucency:0.7;
+}
+.theme-light.is-translucent.mod-macos .workspace-ribbon.side-dock-ribbon.mod-left,
+.theme-light.is-translucent.mod-macos .workspace-split.mod-left-split,
+.theme-light.is-translucent.mod-macos .titlebar {
+  --opacity-translucency:0.7;
+}

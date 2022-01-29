@@ -81,6 +81,7 @@ h1,
   font-size:var(--h1);
   color:var(--h1-color);
   font-weight:var(--h1-weight);
+  font-style:var(--h1-style);
 }
 .markdown-preview-view h2,
 .markdown-source-view.mod-cm6 .HyperMD-header-2 > .cm-fold-indicator,
@@ -91,6 +92,7 @@ h1,
   font-size:var(--h2);
   color:var(--h2-color);
   font-weight:var(--h2-weight);
+  font-style:var(--h2-style);
 }
 .markdown-preview-view h3,
 .markdown-source-view.mod-cm6 .HyperMD-header-3 > .cm-fold-indicator,
@@ -101,6 +103,7 @@ h1,
   font-size:var(--h3);
   color:var(--h3-color);
   font-weight:var(--h3-weight);
+  font-style:var(--h3-style);
 }
 .markdown-preview-view h4,
 .markdown-source-view.mod-cm6 .HyperMD-header-4 > .cm-fold-indicator,
@@ -110,6 +113,7 @@ h1,
   font-size:var(--h4);
   color:var(--h4-color);
   font-weight:var(--h4-weight);
+  font-style:var(--h4-style);
 }
 .markdown-preview-view h5,
 .markdown-source-view.mod-cm6 .HyperMD-header-5 > .cm-fold-indicator,
@@ -119,6 +123,7 @@ h1,
   font-size:var(--h5);
   color:var(--h5-color);
   font-weight:var(--h5-weight);
+  font-style:var(--h5-style);
 }
 .markdown-preview-view h6,
 .markdown-source-view.mod-cm6 .HyperMD-header-6 > .cm-fold-indicator,
@@ -128,4 +133,5 @@ h1,
   font-size:var(--h6);
   color:var(--h6-color);
   font-weight:var(--h6-weight);
+  font-style:var(--h6-style);
 }

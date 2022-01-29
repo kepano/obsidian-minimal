@@ -1,0 +1,25 @@
+/* Dracula */
+
+.theme-light.minimal-dracula-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-dracula-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
+.theme-light.minimal-dracula-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-dracula-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-dracula-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-dracula-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
+.theme-dark.minimal-dracula-dark {
+  --bg1:#1B1A23;
+  --bg2:#22212C;
+  --bg3:rgba(255,255,255,0.062);
+
+  --ui1:#353243;
+  --ui2:#423F50;
+  --ui3:#665c54;
+
+  --tx1:#F8F8F3;
+  --tx2:#a3a0bd;
+  --tx3:#423F50;
+
+  --ax1:#9580FF;
+  --ax2:#9580FF;
+  --ax3:#9580FF;
+}

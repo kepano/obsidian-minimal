@@ -54,10 +54,7 @@
   color:var(--text-faint);
   padding-top:3px;
 }
-.cm-s-obsidian span.cm-url,
-.cm-s-obsidian span.cm-url:hover {
-  color:var(--text-accent);
-}
+
 span.cm-image-marker,
 .cm-s-obsidian span.cm-formatting-link {
   color:var(--text-faint);
@@ -68,9 +65,7 @@ span.cm-image-marker,
 .cm-s-obsidian:not(.is-live-preview) .cm-formatting-link + span.cm-link {
   color:var(--text-muted);
 }
-.cm-s-obsidian span.cm-hmd-internal-link {
-  color:var(--text-accent);
-}
+
 
 /* Editor Mode Footnotes */
 .cm-s-obsidian span.cm-footref {

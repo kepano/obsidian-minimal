@@ -1,9 +1,12 @@
 /* Hider plugin */
 
 /* Frameless mode */
-
-.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
+body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
   padding-top:24px;
+}
+/* Include support for Electron Window Tweaker */
+body.mod-macos.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
+  padding-top:calc(24px + var(--ewt-traffic-light-y));
 }
 .hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
 .hider-frameless:not(.is-mobile) .workspace-split.mod-root .view-header {

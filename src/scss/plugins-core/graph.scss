@@ -1,5 +1,8 @@
 /* Graphs */
-
+:root {
+  --node:var(--text-muted);
+  --node-focused:var(--text-accent);
+}
 
 /* Fill color for nodes */
 .graph-view.color-fill {

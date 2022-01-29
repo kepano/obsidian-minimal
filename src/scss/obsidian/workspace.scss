@@ -14,7 +14,9 @@
   color:var(--text-normal);
   font-size:var(--font-adaptive-normal);
 }
-
+.workspace-split.mod-root {
+  background-color:var(--background-primary);
+}
 .workspace-split.mod-vertical > .workspace-split {
   padding:0;
 }
@@ -36,16 +38,16 @@
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   height:3px;
   background:transparent;
-  border-bottom:var(--border-width-alt) solid var(--background-modifier-border);
+  border-bottom:var(--border-width-alt) solid var(--background-divider);
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   background:transparent;
-  border-left:var(--border-width-alt) solid var(--background-modifier-border);
+  border-left:var(--border-width-alt) solid var(--background-divider);
   width:3px !important;
 }  
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
-  border-right:var(--border-width) solid var(--background-modifier-border);
+  border-right:var(--border-width) solid var(--background-divider);
   width:8px !important;
   background:transparent;
 }
@@ -97,7 +99,7 @@
 }
 .mod-right-split .workspace-tabs .nav-buttons-container {
   z-index:1;
-  border-top:var(--border-width) solid var(--background-modifier-border);
+  border-top:var(--border-width) solid var(--background-divider);
 }
 .workspace-tab-header.is-before-active .workspace-tab-header-inner,
 .workspace-tab-header.is-active,

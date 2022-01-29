@@ -8,35 +8,16 @@
 .markdown-source-view.mod-cm6 hr {
   border-width:2px;
 }
-.mod-cm6 .ͼ1 .cm-line {
+.mod-cm6 .cm-editor .cm-line {
   padding:0 0 0 1px;
 }
-.ͼ1 .cm-content {
+.cm-editor .cm-content {
   padding-top:10px;
 }
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top:15px;
   padding-left:calc((100% - var(--max-width)) / 2);
   padding-right:calc((100% - var(--max-width)) / 2);
-}
-
-/* Block quotes */
-.markdown-source-view.mod-cm6 .HyperMD-quote {
-  background-color:transparent;
-  border-left:1px solid var(--quote-opening-modifier);
-}
-.markdown-source-view.mod-cm6 .cm-blockquote-border {
-  width:20px;
-  display:inline-block;
-  border-left:none;
-  border-right:1px solid var(--quote-opening-modifier);
-  height:1em;
-}
-.markdown-source-view.mod-cm6 .cm-hmd-indent-in-quote {
-  margin-left:10px;
-}
-.is-live-preview .cm-hmd-indent-in-quote {
-  color:var(--text-faint);
 }
 
 /* Code execution blocks, e.g. Dataview */
@@ -70,7 +51,7 @@
 }
 
 /* Line numbers */
-.ͼ1 .cm-lineNumbers .cm-gutterElement {
+.cm-editor .cm-lineNumbers .cm-gutterElement {
   font-variant-numeric:tabular-nums;
 }
 
@@ -82,7 +63,7 @@
   background-color:transparent;
   border-left-width:1px;
 }
-.ͼ1 .cm-foldPlaceholder,
+.cm-editor .cm-foldPlaceholder,
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   cursor:var(--cursor);
 }

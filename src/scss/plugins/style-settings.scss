@@ -1,5 +1,6 @@
 /* Style Settings preferences */
 
+
 .setting-item-heading.style-settings-heading,
 .style-settings-container .style-settings-heading {
   cursor:var(--cursor);
@@ -24,6 +25,16 @@
   max-width:var(--max-width);
   margin:0 auto;
 }
+.mod-root .workspace-leaf-content[data-type="style-settings"] .style-settings-container .setting-item:not(.setting-item-heading) {
+  flex-direction:row;
+  align-items:center;
+  padding:0.5em 0;
+}
+
+.workspace-split:not(.mod-root) .workspace-leaf-content[data-type="style-settings"] .setting-item-name {
+  font-size:var(--font-small);
+}
+
 .setting-item .style-settings-import,
 .setting-item .style-settings-export {
   text-decoration:none;

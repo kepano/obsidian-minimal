@@ -13,14 +13,14 @@
   padding-right:60px;
 }
 .view-header-title:before {
-  background:linear-gradient(90deg,var(--background-transparent) 0%,var(--background-primary) 80%);
-  width:60px;
+  background:linear-gradient(90deg,transparent 0%,var(--background-primary) 80%);
+  width:50px;
   content:" ";
-  height:calc(100% - 2px);
+  height:var(--header-height);
   display:inline-block;
   vertical-align:bottom;
   position:absolute;
-  right:0px;
+  right:50px;
   pointer-events:none;
 }
 .workspace-leaf-header,
@@ -37,8 +37,6 @@
 .view-content {
   height:calc(100% - var(--header-height));
 }
-
-
 .view-actions {
   padding:0px 5px;
   margin-right:0px;

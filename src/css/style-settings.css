@@ -1,333 +1,138 @@
 /* @settings
 
-name: Minimal
+name: Minimal Custom Color Scheme
 id: minimal-style
 settings:
     -
-        id: styles
-        title: Background styles
+        id: instructions
+        title: Welcome 👋
         type: heading
         level: 2
         collapsed: true
+        description: Use the Minimal Theme Settings plugin to access hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization.
     -
-        id: light-mode-style
-        title: Light mode style
-        description: Background color style in light mode
-        type: class-select
-        allowEmpty: false
-        default: minimal-light
-        options:
-            - 
-                label: Default
-                value: minimal-light
-            - 
-                label: All white
-                value: minimal-light-white
-            - 
-                label: Low contrast
-                value: minimal-light-tonal
-            - 
-                label: High contrast
-                value: minimal-light-contrast
-    -
-        id: dark-mode-style
-        title: Dark mode style
-        description: Background color style in dark mode
-        type: class-select
-        allowEmpty: false
-        default: minimal-dark
-        options:
-            - 
-                label: Default
-                value: minimal-dark
-            - 
-                label: Low contrast
-                value: minimal-dark-tonal
-            - 
-                label: True black
-                value: minimal-dark-black
-    -
-        id: color
-        title: Colors
+        id: interface
+        title: Interface
         type: heading
         level: 2
         collapsed: true
     - 
-        id: accent
-        title: Accent color
-        type: variable-color
-        format: hsl-split
-        default: '#6a8695'
+        id: bg1
+        title: Main window background
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     - 
-        id: base
-        title: Base color
-        type: variable-color
-        format: hsl-split
-        default: '#f7f7f7'
+        id: bg2
+        title: Sidebar background
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     - 
-        id: accent-d
-        title: Accent color adjust for dark mode
-        description: Adjust darkness of the accent color in dark mode
-        type: variable-number-slider
-        default: 60
-        min: 20
-        max: 80
-        step: 1
-        format: '%'
-    -
-        id: base-d
-        title: Base color adjustment for dark mode
-        description: Adjust darkness of the base color in dark mode
-        type: variable-number-slider
-        default: 15
-        min: 0
-        max: 40
-        step: 1
-        format: '%'
-    -
-        id: features
-        title: Features
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: fancy-cursor
-        title: Fancy cursor
-        description: Editor cursor uses your accent color
-        type: class-toggle
-        default: true
-    -
-        id: labeled-nav
-        title: Text labels for primary navigation
-        description: Navigation in left sidebar uses text labels. For non-English users this feature requires an additional snippet available on Github.
-        type: class-toggle
-        default: false
-    -
-        id: full-file-names
-        title: Full file names in sidebar
-        description: Do not trim file names in sidebar
-        type: class-toggle
-    -
-        id: minimal-icons-off
-        title: Default icons
-        description: Use default icons instead of Minimal set
-        type: class-toggle
-        default: false
+        id: bg3
+        title: Active background
+        description: For hovered buttons and current file
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     - 
-        id: minimal-status-off
-        title: Wide status bar
-        description: Use full width status bar
-        type: class-toggle
-        default: false
-    -
-        id: minimal-focus-mode
-        title: Focus mode
-        description: Hide UI when a single file is open. UI is accessible via hover.
-        type: class-toggle
-    -
-        id: borders-none
-        title: Hide borders
-        description: Removes borders between sidebar elements
-        type: class-toggle
-    -
-        id: borders-title
-        title: Border below pane title
-        description: Show border below pane title (if borders are not hidden)
-        type: class-toggle
-    -
-        id: minimal-folding
-        title: Folding offset
-        description: Recommended if you use folding headings and indents
-        type: class-toggle
-    -
-        id: links-int-on
-        title: Underline internal links
-        description: Show underlines on internal links
-        type: class-toggle
-        default: true
-    -
-        id: links-ext-on
-        title: Underline external links
-        description: Show underlines on external links
-        type: class-toggle
-        default: true
-    -
-        id: full-width-media
-        title: Maximize media
-        description: Small images and videos fill the width of the line
-        type: class-toggle
-    -
-        id: zoom-off
-        title: Disable image zoom
-        description: Turns off click/hold to zoom images
-        type: class-toggle
-    -
-        id: layout
-        title: Layout
-        type: heading
-        level: 2
-        collapsed: true
-        description: Requires Contextual Typography plugin. These options can also be defined on a per-file basis using YAML, see documentation for details.
-    -
-        id: img-grid
-        title: Image grids
-        description: Turns consecutive images into columns. To make a new row, add an extra line break between images.
-        type: class-toggle
-    -
-        id: image-width
-        title: Image width
-        description: Default width for images and image grids
-        type: class-select
-        allowEmpty: false
-        default: img-default-width
-        options:
-            - 
-                label: Default
-                value: img-default-width
-            - 
-                label: Wide line width
-                value: img-wide
-            - 
-                label: Maximum line width
-                value: img-max
-            - 
-                label: 100% pane width
-                value: img-100
-    -
-        id: table-width
-        title: Table width
-        description: Default width for tables and Dataview elements
-        type: class-select
-        allowEmpty: false
-        default: table-default-width
-        options:
-            - 
-                label: Default
-                value: table-default-width
-            - 
-                label: Wide line width
-                value: table-wide
-            - 
-                label: Maximum line width
-                value: table-max
-            - 
-                label: 100% pane width
-                value: table-100
-    -
-        id: iframe-width
-        title: Iframe width
-        description: Default width for iframe elements
-        type: class-select
-        allowEmpty: false
-        default: iframe-default-width
-        options:
-            - 
-                label: Default
-                value: iframe-default-width
-            - 
-                label: Wide line width
-                value: iframe-wide
-            - 
-                label: Maximum line width
-                value: iframe-max
-            - 
-                label: 100% pane width
-                value: iframe-100
-    -
-        id: tables
-        title: Tables
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: trim-cols
-        title: Trim Dataview columns
-        description: Disables word wrapping in table cells, and trims long text
-        type: class-toggle
-        default: true
+        id: ui1
+        title: Outlines
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     - 
-        id: max-col-width
-        title: Dataview maximum column width
-        description: Maximum width for Dataview columns, accepts any CSS unit
-        type: variable-text
-        default: 18em
+        id: ui2
+        title: Outlines (highlighted)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: ui3
+        title: Outlines (focused)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
-        id: typography
-        title: Typography
+        id: links
+        title: Links
         type: heading
         level: 2
         collapsed: true
     - 
-        id: font-normal
-        title: Body font size
-        description: Font size in px of the main text
+        id: ax1
+        title: Link color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: ax2
+        title: Link color (hovering)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: link-weight
+        title: Link font weight
+        description: Accepts numbers representing the CSS font-weight
         type: variable-number
-        default: 16
-        format: px
-    - 
-        id: font-small
-        title: Sidebar font size
-        description: Font size in px of the sidebar and small text
-        type: variable-number
-        default: 13
-        format: px
-    - 
-        id: line-height
-        title: Body line height
-        description: Line height of the main text
-        type: variable-number
-        default: 1.5
+        default: 400
     -
-        id: line-width
-        title: Normal line width
-        description: Number of characters per line
-        type: variable-number
-        default: 40
-        format: rem
-    - 
-        id: line-width-wide
-        title: Wide line width
-        description: Number of characters per line for wide elements
-        type: variable-number
-        default: 50
-        format: rem
-    -
-        id: max-width
-        title: Maximum line width %
-        description: Percentage of space inside a pane that a line can fill.
-        type: variable-number
-        default: 88
-        format: '%'
-    -
-        id: fonts
-        title: Fonts
-        type: heading
-        level: 2
-        collapsed: true
-    - 
         id: text
-        title: Text font
-        description: Used in preview mode
-        type: variable-text
-        default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
-    -
-        id: text-editor
-        title: Editor font
-        description: Used in edit mode
-        type: variable-text
-        default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
-    -
-        id: font-monospace
-        title: Monospace font
-        description: Used for code blocks and front matter
-        type: variable-text
-        default: Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace
-    -
-        id: font-ui
-        title: UI font
-        description: Used for buttons, menus and sidebar
-        type: variable-text
-        default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+        title: Text
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: tx1
+        title: Normal text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: hl1
+        title: Selected text background
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tx2
+        title: Muted text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tx3
+        title: Faint text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: text-bold
+        title: Bold text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: text-italic
+        title: Italic text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
         id: headings
         title: Headings
@@ -357,8 +162,8 @@ settings:
         title: H1 font color
         type: variable-themed-color
         format: hex
-        default-light: '#363636'
-        default-dark: '#d1d1d1'
+        default-light: '#'
+        default-dark: '#'
     - 
         id: h1-variant
         title: H1 font variant
@@ -372,6 +177,19 @@ settings:
             - 
                 label: Small caps
                 value: small-caps 
+    - 
+        id: h1-style
+        title: H1 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
     -
         id: level-2-headings
         title: Level 2 Headings
@@ -395,8 +213,8 @@ settings:
         title: H2 font color
         type: variable-themed-color
         format: hex
-        default-light: '#363636'
-        default-dark: '#d1d1d1'
+        default-light: '#'
+        default-dark: '#'
     - 
         id: h2-variant
         title: H2 font variant
@@ -409,7 +227,20 @@ settings:
                 value: normal
             - 
                 label: Small caps
-                value: small-caps 
+                value: small-caps
+    - 
+        id: h2-style
+        title: H2 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
     -
         id: level-3-headings
         title: Level 3 Headings
@@ -433,8 +264,8 @@ settings:
         title: H3 font color
         type: variable-themed-color
         format: hex
-        default-light: '#363636'
-        default-dark: '#d1d1d1'
+        default-light: '#'
+        default-dark: '#'
     - 
         id: h3-variant
         title: H3 font variant
@@ -447,7 +278,20 @@ settings:
                 value: normal
             - 
                 label: Small caps
-                value: small-caps 
+                value: small-caps
+    - 
+        id: h3-style
+        title: H3 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
     -
         id: level-4-headings
         title: Level 4 Headings
@@ -471,8 +315,8 @@ settings:
         title: H4 font color
         type: variable-themed-color
         format: hex
-        default-light: '#363636'
-        default-dark: '#d1d1d1'
+        default-light: '#'
+        default-dark: '#'
     - 
         id: h4-variant
         title: H4 font variant
@@ -486,6 +330,19 @@ settings:
             - 
                 label: Small caps
                 value: small-caps 
+    - 
+        id: h4-style
+        title: H4 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
     - 
         id: level-5-headings
         title: Level 5 Headings
@@ -509,8 +366,8 @@ settings:
         title: H5 font color
         type: variable-themed-color
         format: hex
-        default-light: '#363636'
-        default-dark: '#d1d1d1'
+        default-light: '#'
+        default-dark: '#'
     - 
         id: h5-variant
         title: H5 font variant
@@ -524,6 +381,19 @@ settings:
             - 
                 label: Small caps
                 value: small-caps 
+    - 
+        id: h5-style
+        title: H5 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
     -
         id: level-6-headings
         title: Level 6 Headings
@@ -547,8 +417,8 @@ settings:
         title: H6 font color
         type: variable-themed-color
         format: hex
-        default-light: '#363636'
-        default-dark: '#d1d1d1'
+        default-light: '#'
+        default-dark: '#'
     - 
         id: h6-variant
         title: H6 font variant
@@ -562,12 +432,64 @@ settings:
             - 
                 label: Small caps
                 value: small-caps
+    - 
+        id: h6-style
+        title: H6 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
     -
-        id: lists
-        title: Lists
+        id: blockquotes
+        title: Blockquotes
         type: heading
         level: 2
         collapsed: true
+    - 
+        id: text-blockquote
+        title: Blockquotes text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: blockquote-size
+        title: Blockquotes font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: ''
+    - 
+        id: blockquote-style
+        title: Blockquotes font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
+    -
+        id: lists
+        title: Lists and checkboxes
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: ax3
+        title: Checkbox color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
         id: minimal-strike-lists
         title: Strike completed tasks
@@ -577,77 +499,35 @@ settings:
     -
         id: list-spacing
         title: List item spacing
-        description: Space between list items
-        type: variable-number
-        default: 0.1
+        description: Space between list items in em units
+        type: variable-number-slider
+        default: 0.075
+        min: 0
+        max: 0.3
+        step: 0.005
         format: em
     -
-        id: advanced
-        title: Advanced
+        id: code-blocks
+        title: Code blocks
         type: heading
         level: 2
         collapsed: true
-    -
-        id: cursor
-        title: Cursor style
-        description: The cursor style for UI elements
-        type: variable-select
-        default: default
-        options:
-            - 
-                label: Default
-                value: default
-            - 
-                label: Pointer
-                value: pointer
-            - 
-                label: Crosshair
-                value: crosshair
-    - 
-        id: text-bold
-        title: Bold text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: text-italic
-        title: Italic text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
     - 
         id: text-code
         title: Code text color
+        description: Where syntax highlighting is not present
         type: variable-themed-color
         format: hex
-        default-light: '#363636'
-        default-dark: '#bfbfbf'
-    -
-        id: font-smaller
-        title: Small font size
-        description: Font size in px of the main text
-        type: variable-number
-        default: 11
-        format: px
+        default-light: '#'
+        default-dark: '#'
     - 
-        id: font-smallest
-        title: Tiny font size
-        description: Font size in px of the main text
-        type: variable-number
-        default: 10
-        format: px
-    -
-        id: credits
-        title: Credits
-        type: heading
-        description: Made with ❤︎ by @kepano. Support my work at buymeacoffee.com/kepano
-        level: 2
-        collapsed: true
+        id: font-code
+        title: Code font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 13px
 
 */
-/* Style Settings */
 
 /* @settings
 name: Minimal Cards
@@ -697,4 +577,38 @@ settings:
         default-light: '#'
         default-dark: '#'
 
+*/
+
+/* @settings
+name: Minimal Advanced Settings
+id: minimal-advanced
+settings:
+    -
+        id: zoom-off
+        title: Disable image zoom
+        description: Turns off click/hold to zoom images
+        type: class-toggle
+    -
+        id: cursor
+        title: Cursor style
+        description: The cursor style for UI elements
+        type: variable-select
+        default: default
+        options:
+            - 
+                label: Default
+                value: default
+            - 
+                label: Pointer
+                value: pointer
+            - 
+                label: Crosshair
+                value: crosshair
+    - 
+        id: font-smallest
+        title: Tiny font size
+        description: Font size in px of tiny text
+        type: variable-number
+        default: 10
+        format: px
 */

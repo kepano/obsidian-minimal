@@ -10,7 +10,7 @@ input[type='number'] {
 }
 textarea {
   padding:5px 10px;
-  transition:all 0.1s linear;
+  transition:box-shadow 0.1s linear;
   -webkit-appearance:none;
   line-height:1.3;
 }
@@ -21,13 +21,13 @@ input[type='password'],
 input[type='number'] {
   padding:5px 10px;
   -webkit-appearance:none;
-  transition:all 0.1s linear;
+  transition:box-shadow 0.1s linear;
   height:var(--input-height);
 }
 textarea:hover,
 input:hover {
   border-color:var(--background-modifier-border-hover);
-  transition:all 0.1s linear;
+  transition:border-color 0.1s linear, box-shadow 0.1s linear;
 }
 textarea:active,
 textarea:focus,
@@ -52,4 +52,5 @@ body:not(.is-mobile) select:focus,
 body:not(.is-mobile) select:active,
 body:not(.is-mobile) input:focus {
   box-shadow:0 0 0px 2px var(--background-modifier-border-hover);
+  transition:border-color 0.1s linear, box-shadow 0.1s linear;
 }

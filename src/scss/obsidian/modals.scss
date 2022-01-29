@@ -15,7 +15,7 @@ body:not(.is-mobile) .modal {
   border:1px solid var(--modal-border);
 }
 .modal.mod-settings .vertical-tab-content-container {
-  border-left:1px solid var(--background-modifier-border);
+  border-left:1px solid var(--background-divider);
   padding-bottom:0;
   padding-right:0;
 }
@@ -197,7 +197,7 @@ body:not(.is-mobile) .modal {
     opacity:0.2;
     background:center right no-repeat url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='black'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7' /></svg>");
   }
-  .theme-dark.modal .vertical-tab-nav-item:after {
+  &.theme-dark .modal .vertical-tab-nav-item:after {
     background:center right no-repeat url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='white'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7' /></svg>");
   }
   .vertical-tab-header-group-items {
@@ -316,9 +316,9 @@ body:not(.is-mobile) .modal {
     .modal-container .modal.mod-settings  {
       max-width:800px;
       transform:translateZ(0);
-      border-top-left-radius:15px !important;
-      border-top-right-radius:15px !important;
-      margin-bottom:-15px;
+      border-radius:15px;
+      margin-bottom:0;
+      bottom:5vh;
       overflow:hidden;
     }
     .modal-container .modal.mod-settings .vertical-tabs-container {

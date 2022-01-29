@@ -27,7 +27,19 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
   left:0;
   right:0;
   bottom:0;
-  background:var(--background-translucent);
+
+}
+body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active:after,
+body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active:after {
+  background-color:var(--background-primary);
+  opacity:0.9;
+  content:"";
+  height:100%;
+  width:calc(100% - 1px);
+  position:fixed;
+  left:0;
+  right:1px;
+  z-index:0;
 }
 body:not(.is-mobile):not(.zoom-off) .view-content img[referrerpolicy='no-referrer']:active {
   padding:2.5%;
@@ -35,6 +47,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content img[referrerpolicy='no-referre
 body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
   aspect-ratio:unset;
   top:50%;
+  z-index:99;
   transform:translateY(-50%);
   padding:0;
   margin:0 auto;

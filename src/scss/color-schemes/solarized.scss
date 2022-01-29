@@ -1,0 +1,58 @@
+/* Solarized */
+
+.theme-light.minimal-solarized-light {
+  --base-h:44;
+  --base-s:87%;
+  --base-l:94%;
+
+  --accent-h:18;
+  --accent-s:80%;
+  --accent-l:44%;
+
+  --bg1:#fdf6e3;
+  --bg2:#eee8d5;
+  --bg3:rgba(0,0,0,0.062);
+
+  --ui1:#e9e1c8;
+  --ui2:#e9e1c8;
+  --ui3:#e9e1c8;
+
+  --tx1:#073642;
+  --tx2:#586e75;
+  --tx3:#586e75;
+
+  --hl1:#eee8d5;
+}
+.theme-light.minimal-solarized-light.minimal-light-tonal {
+  --bg2:#fdf6e3;
+}
+
+.theme-light.minimal-solarized-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-solarized-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
+.theme-light.minimal-solarized-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-solarized-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-solarized-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-solarized-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
+.theme-dark.minimal-solarized-dark {
+  --bg1:#002b36;
+  --bg2:#073642;
+  --bg3:rgba(255,255,255,0.062);
+
+  --ui1:#19414B;
+  --ui2:#274850;
+  --ui3:#31535B;
+
+  --tx1:#93a1a1;
+  --tx2:#657b83;
+  --tx3:#31535B;
+
+  --ax1:#cb4b16;
+  --ax2:#EC6026;
+  --ax3:#cb4b16;
+
+  --hl1:#073642;
+}
+.theme-dark.minimal-solarized-dark.minimal-dark-black {
+  --hl1:#002b36;
+  --ui1:#002b36;
+}

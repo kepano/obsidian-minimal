@@ -7,9 +7,10 @@ input[type=checkbox] {
   border:1px solid var(--background-modifier-border-hover);
   padding:0;
 }
-input[type=checkbox]:focus,input[type=checkbox]:hover {
+input[type=checkbox]:hover,
+input[type=checkbox]:focus {
   outline:0;
-  border-color:var(--text-faint);
+  border-color:var(--background-modifier-border-focus);
 }
 .checklist-plugin-main .group .compact > .toggle .checked,
 .is-flashing input[type=checkbox]:checked,

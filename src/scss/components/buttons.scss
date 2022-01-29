@@ -20,7 +20,7 @@ body:not(.is-mobile) button:focus {
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
 .modal button:not(.mod-warning),
 .modal.mod-settings button:not(.mod-warning) {
-  background-color:var(--background-button);
+  background-color:var(--interactive-normal);
   color:var(--text-normal);
   border:1px solid var(--background-modifier-border);
   box-shadow:0 1px 1px 0px var(--btn-shadow-color);
@@ -45,7 +45,7 @@ button.mod-warning:hover {
 button:hover,
 .modal button:not(.mod-warning):hover,
 .modal.mod-settings button:not(.mod-warning):hover {
-  background-color:var(--background-button);
+  background-color:var(--interactive-normal);
   border-color:var(--background-modifier-border-hover);
   box-shadow:0 2px 3px 0px var(--btn-shadow-color);
   transition:background-color 0.2s ease-out, border-color 0.2s ease-out;

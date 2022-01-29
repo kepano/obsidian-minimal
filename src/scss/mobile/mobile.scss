@@ -23,7 +23,7 @@ body.is-mobile {
   padding:0 !important;
 }
 
-.is-mobile .ͼ1 .cm-line,
+.is-mobile .cm-editor .cm-line,
 .is-mobile .workspace-drawer-tab-container > *,
 body.minimal-folding.is-mobile .view-header-title, 
 .minimal-folding.is-mobile .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
@@ -116,10 +116,10 @@ body.minimal-folding.is-mobile .view-header-title,
   }
 
   /* Folding on mobile */
-  .ͼ1 .cm-foldGutter .cm-gutterElement {
+  .cm-editor .cm-foldGutter .cm-gutterElement {
     cursor:var(--cursor);
   }
-  .ͼ1 .cm-foldPlaceholder {
+  .cm-editor .cm-foldPlaceholder {
     background:transparent;
     border-color:transparent;
   }
@@ -157,7 +157,6 @@ body.minimal-folding.is-mobile .view-header-title,
   .backlink-pane {
     padding-left:10px;
   }
-
 
 }
 

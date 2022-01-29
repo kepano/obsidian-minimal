@@ -1,0 +1,58 @@
+/* Notion */
+
+.theme-light.minimal-notion-light {
+  --bg2:#f7f6f4;
+  --bg3:#e8e7e4;
+
+  --ui1:#ededec;
+  --ui2:#dbdbda;
+  --ui3:#2eaadc;
+
+  --tx1:#37352f;
+  --tx2:#72706c;
+  --tx3:#aaa9a5;
+
+  --ax1:#37352f;
+  --ax2:#000;
+  --ax3:#2eaadc;
+
+  --hl1:#d9eff8;
+  --link-weight:500;
+}
+.theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-notion-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
+.theme-light.minimal-notion-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-notion-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-notion-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-notion-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
+.theme-dark.minimal-notion-dark {
+  --base-h:203;
+  --base-s:8%;
+  --base-d:20%;
+
+  --accent-h:18;
+  --accent-s:80%;
+  --accent-l:44%;
+
+  --bg1:#2f3437;
+  --bg2:#373c3f;
+  --bg3:#4b5053;
+
+  --ui1:rgba(255, 255, 255, 0.07);
+  --ui2:#585d5f;
+  --ui3:#D8DEE9;
+
+  --tx1:#ebebeb;
+  --tx2:#909295;
+  --tx3:#585d5f;
+
+  --ax1:#ebebeb;
+  --ax2:#fff;
+  --ax3:#2eaadc;
+
+  --hl1:#314d58;
+  --link-weight:500;
+}
+.theme-dark.minimal-notion-dark.minimal-dark-black {
+  --bg3:#2f3437;
+}

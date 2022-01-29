@@ -1,0 +1,297 @@
+/* Dynamic colors
+
+  Most colors are driven from the following values, meaning that 
+  the backgrounds, borders, and various shades are 
+  automatically generated.
+
+  - Base color is used for the backgrounds, text and borders.
+  - Accent color is used for links and some interactive elements.
+
+  The colors use HSL (hue, saturation, lightness)
+
+  - Hue (0-360 degrees):0 is red, 120 is green, and 240 is blue
+  - Saturation (0-100%):0% is desaturated, 100% is full saturation
+  - Lightness (0-100%):0% is black, 100% is white
+
+*/
+
+:root {
+  --base-h:0;       /* Base hue */
+  --base-s:0%;      /* Base saturation */
+  --base-d:15%;     /* Base lightness Dark Mode  - 0 is black */
+  --base-l:96%;     /* Base lightness Light Mode  - 100 is white */
+
+  --accent-h:201;   /* Accent hue */
+  --accent-s:17%;   /* Accent saturation */
+  --accent-d:60%;   /* Accent lightness Dark Mode */
+  --accent-l:50%;   /* Accent lightness Light Mode */
+}
+
+.theme-light,
+.theme-light.minimal-default-light {
+  --bg1:white;
+
+  --bg2:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      var(--base-l)
+    );
+
+  --bg3:
+    hsla(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-l) - 25%),
+      0.2
+    );
+
+  --ui1:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-l) - 6%)
+    );
+
+  --ui2:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-l) - 12%)
+    );
+
+  --ui3:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-l) - 20%)
+    );
+
+  --tx1:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-l) - 90%)
+    );
+
+  --tx2:
+    hsl(
+      var(--base-h),
+      calc(var(--base-s) - 20%),
+      calc(var(--base-l) - 45%)
+    );
+
+  --tx3:
+    hsl(
+      var(--base-h),
+      calc(var(--base-s) - 10%),
+      calc(var(--base-l) - 25%)
+    );
+
+  --tx4:
+    hsl(
+      var(--base-h),
+      calc(var(--base-s) - 10%),
+      calc(var(--base-l) - 60%)
+    );
+
+  --ax1:
+    hsl(
+      var(--accent-h),
+      var(--accent-s),
+      var(--accent-l)
+    );
+
+  --ax2:
+    hsl(
+      var(--accent-h),
+      var(--accent-s),
+      calc(var(--accent-l) - 10%)
+    );
+
+  --ax3:
+    hsl(
+      var(--accent-h),
+      var(--accent-s),
+      calc(var(--accent-l) + 10%)
+    );
+
+  --hl1:
+    hsla(
+      var(--accent-h),
+      50%,
+      calc(var(--base-l) - 20%), 
+      30%
+    );
+
+}
+
+.theme-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
+.theme-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
+.theme-dark,
+.theme-dark.minimal-default-dark {
+  --bg1:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      var(--base-d)
+    );
+
+  --bg2:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-d) - 2%)
+    );
+
+  --bg3:
+    hsla(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-d) + 20%),
+      0.2
+    );
+
+  --ui1:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-d) + 5%)
+    );
+
+  --ui2:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-d) + 8%)
+    );
+
+  --ui3:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-d) + 20%)
+    );
+
+  --tx1:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-d) + 67%)
+    );
+
+  --tx2:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-d) + 45%)
+    );
+
+  --tx3:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-d) + 20%)
+    );
+
+  --tx4:
+    hsl(
+      var(--base-h),
+      var(--base-s),
+      calc(var(--base-d) + 50%)
+    );
+
+  --ax1:
+    hsl(
+      var(--accent-h),
+      var(--accent-s),
+      var(--accent-d)
+    );
+
+  --ax2:
+    hsl(
+      var(--accent-h),
+      var(--accent-s),
+      calc(var(--accent-d) + 12%)
+    );
+
+  --ax3:
+    hsl(
+      var(--accent-h),
+      var(--accent-s),
+      calc(var(--accent-d) - 20%)
+    );
+
+  --hl1:
+    hsla(
+      var(--accent-h),
+      70%,
+      40%, 
+      30%
+    );
+
+}
+
+.theme-light.minimal-light-white {
+  --background-primary:         white;
+  --background-secondary:       white;
+  --background-secondary-alt:   white;
+}
+
+.theme-dark.minimal-dark-black {
+  --base-d:0%;
+
+  --background-primary:        black;
+  --background-secondary:      black;
+  --background-secondary-alt:  black;
+
+  --background-tertiary:
+        hsl(
+          var(--base-h),
+          var(--base-s),
+          calc(var(--base-d) + 10%))
+        ;
+
+  --tx1:hsl(
+          var(--base-h),
+          var(--base-s),
+          calc(var(--base-d) + 75%)
+        );
+
+  --tx2:hsl(
+          var(--base-h),
+          var(--base-s),
+          calc(var(--base-d) + 50%)
+        );
+
+  --tx3:hsl(
+          var(--base-h),
+          var(--base-s),
+          calc(var(--base-d) + 25%)
+        );
+
+
+  --ui1:hsl(
+          var(--base-h),
+          var(--base-s),
+          calc(var(--base-d) + 12%)
+        );
+
+  --ui2:hsl(
+          var(--base-h),
+          var(--base-s),
+          calc(var(--base-d) + 20%)
+        );
+
+  --ui3:hsl(
+          var(--base-h),
+          var(--base-s),
+          calc(var(--base-d) + 30%)
+        );
+
+
+}

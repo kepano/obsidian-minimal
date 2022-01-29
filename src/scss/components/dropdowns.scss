@@ -7,7 +7,7 @@ body .addChoiceBox #addChoiceTypeSelector {
 .dropdown,
 select {
   box-shadow:0 1px 1px 0px var(--btn-shadow-color);
-  background-color:var(--background-button);
+  background-color:var(--interactive-normal);
   border-color:var(--background-modifier-border);
   transition:border-color 0.1s linear;
   height:var(--input-height);
@@ -21,7 +21,7 @@ select {
 }
 .dropdown:hover,
 select:hover {
-  background-color:var(--background-button);
+  background-color:var(--interactive-normal);
   box-shadow:0 2px 3px 0px var(--btn-shadow-color);
   border-color:var(--background-modifier-border-hover);
   transition:all 0.1s linear;
