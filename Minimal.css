@@ -147,6 +147,7 @@ SOFTWARE.
 
 .theme-light,
 .theme-light.minimal-default-light {
+  --base-l:96%;
   --bg1:white;
   --bg2:
     hsl(
@@ -237,66 +238,67 @@ SOFTWARE.
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark,
 .theme-dark.minimal-default-dark {
+  --base-l:15%;
   --bg1:
     hsl(
       var(--base-h),
       var(--base-s),
-      var(--base-d)
+      var(--base-l)
     );
   --bg2:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-d) - 2%)
+      calc(var(--base-l) - 2%)
     );
   --bg3:
     hsla(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-d) + 20%),
+      calc(var(--base-l) + 20%),
       0.2
     );
   --ui1:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-d) + 5%)
+      calc(var(--base-l) + 5%)
     );
   --ui2:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-d) + 8%)
+      calc(var(--base-l) + 8%)
     );
   --ui3:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-d) + 20%)
+      calc(var(--base-l) + 20%)
     );
   --tx1:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-d) + 67%)
+      calc(var(--base-l) + 67%)
     );
   --tx2:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-d) + 45%)
+      calc(var(--base-l) + 45%)
     );
   --tx3:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-d) + 20%)
+      calc(var(--base-l) + 20%)
     );
   --tx4:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-d) + 50%)
+      calc(var(--base-l) + 50%)
     );
   --ax1:
     hsl(
@@ -8247,6 +8249,13 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: base
+        title: Base color
+        type: variable-themed-color
+        format: hsl-split
+        default-light: '#'
+        default-dark: '#'
+    - 
         id: bg1
         title: Main window background
         type: variable-themed-color
@@ -8265,6 +8274,7 @@ settings:
         title: Active background
         description: For hovered buttons and current file
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -8272,6 +8282,7 @@ settings:
         id: ui1
         title: Outlines
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -8279,6 +8290,7 @@ settings:
         id: ui2
         title: Outlines (highlighted)
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -8286,6 +8298,7 @@ settings:
         id: ui3
         title: Outlines (focused)
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'

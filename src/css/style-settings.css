@@ -17,6 +17,13 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: base
+        title: Base color
+        type: variable-themed-color
+        format: hsl-split
+        default-light: '#'
+        default-dark: '#'
+    - 
         id: bg1
         title: Main window background
         type: variable-themed-color
@@ -35,6 +42,7 @@ settings:
         title: Active background
         description: For hovered buttons and current file
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -42,6 +50,7 @@ settings:
         id: ui1
         title: Outlines
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -49,6 +58,7 @@ settings:
         id: ui2
         title: Outlines (highlighted)
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -56,6 +66,7 @@ settings:
         id: ui3
         title: Outlines (focused)
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
