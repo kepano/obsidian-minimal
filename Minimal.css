@@ -1611,6 +1611,11 @@ a[href*="obsidian://search"] {
   color: var(--text-accent);
   font-weight: var(--link-weight); }
 
+.cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink,
+.cm-s-obsidian span.cm-link.cm-hmd-barelink,
+.cm-s-obsidian span.cm-link.cm-hmd-barelink:hover {
+  color: var(--text-normal); }
+
 .cm-s-obsidian .cm-active .cm-formatting.cm-formatting-link,
 .cm-s-obsidian span.cm-image-alt-text.cm-link,
 .cm-s-obsidian:not(.is-live-preview) .cm-formatting-link + span.cm-link {
