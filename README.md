@@ -17,6 +17,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 - [Features](#features)
 - [Installation](#installation)
 - [Companion plugins](#companion-plugins)
+- [Color schemes](#color-schemes)
 - [Plugin support](#plugin-support)
 - [Helper classes](#helper-filters-and-classes)
 - [Hotkeys](#hotkeys)
@@ -81,6 +82,21 @@ Have a question? Join the [Minimal channel](https://discord.com/channels/6860537
 - [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography) is required for advanced layout features such as image grids and block width options.
 
 - [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings) allows you to create a custom color scheme. This plugin is optional.
+
+
+## Color schemes
+
+### Preset color schemes
+
+Minimal comes loaded with color schemes that you can define separately for light and dark mode using the [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin, these include Dracula, Gruvbox, Nord, Notion, Solarized, and Things. 
+
+![Minimal Theme Settings](https://kep-log.s3-us-west-2.amazonaws.com/minimal-color-schemes.gif)
+
+### Custom color schemes
+
+You can use the Style Settings plugin to customize your color scheme. To see your changes more easily, open Style Settings in a new pane by using the command palette (`CMD + P` by default). Using Style Settings you can customize Minimal's colors, font sizes, font styles, and many more details.
+
+![Style Settings](https://kep-log.s3-us-west-2.amazonaws.com/minimal-style-settings.gif)
 
 ## Plugin support
 
