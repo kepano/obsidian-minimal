@@ -1,5 +1,4 @@
 /* Gruvbox */
-
 .theme-light.minimal-gruvbox-light {
   --base-h:49;
   --base-s:92%;
@@ -25,6 +24,10 @@
 }
 .theme-light.minimal-gruvbox-light.minimal-light-tonal {
   --bg2:#fcf2c7;
+}
+.theme-light.minimal-gruvbox-light.minimal-light-white {
+  --bg3:#faf5d7;
+  --ui1:#f2e6bd;
 }
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,

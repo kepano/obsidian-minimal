@@ -1,35 +1,62 @@
 /* Things */
 
 .theme-light.minimal-things-light {
-  --bg2:#f6f7f8;
-  --bg3:#D8DEE9;
+  --bg1:white;
+  --bg2:#f5f6f8;
+  --bg3:rgba(162,177,187,0.25);
 
-  --ui1:#ebedf0;
-  --ui2:#D8DEE9;
-  --ui3:#D8DEE9;
+  --ui1:#eef0f4;
+  --ui2:#c1c3c6;
+  --ui3:#c1c3c6;
 
-  --tx1:#2E3440;
-  --tx2:#4C566A;
-  --tx3:#D8DEE9;
+  --tx1:#26272b;
+  --tx2:#7D7F84;
+  --tx3:#a9abb0;
 
-  --ax1:#5E81AC;
+  --ax1:#1b61c2;
   --ax2:#5E81AC;
+  --ax3:#1b61c2;
+
+  --hl1:#cae2ff;
+
+  --h1-color:#1b61c2;
+  --h2-color:#1b61c2;
+  --h4-color:#1b61c2;
 }
+.theme-light.minimal-things-light.minimal-light-tonal {
+  --ui1:#e6e8ec;
+}
+.theme-light.minimal-things-light.minimal-light-white {
+  --bg3:#f5f6f8;
+}
+.theme-light.minimal-things-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-things-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
+.theme-light.minimal-things-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-things-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-things-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-things-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-things-dark {
-  --bg1:#1c2127;
-  --bg2:#181c20;
-  --bg3:#21262d;
+  --bg1:#24262a;
+  --bg2:#202225;
+  --bg3:#3d3f41;
 
-  --ui1:#252b32;
-  --ui2:#333a43;
-  --ui3:#D8DEE9;
+  --background-divider:#17191c;  
 
-  --tx1:#cdd3da;
-  --tx2:#8493a5;
-  --tx3:#434c55;
+  --ui1:#45464a;
+  --ui2:#565a60;
+  --ui3:#6c6e70;
+
+  --tx1:#fbfbfb;
+  --tx2:#CBCCCD;
+  --tx3:#6c6e70;
 
   --ax1:#4d95f7;
   --ax2:#79a9ec;
-
   --ax3:#4d95f7;
+
+  --hl1:#254174;
+
+  --h1-color:#4d95f7;
+  --h2-color:#4d95f7;
+  --h4-color:#4d95f7;
 }

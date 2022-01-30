@@ -51,7 +51,7 @@ body .excalidraw {
   --text-accent:                       var(--ax1);
   --text-accent-hover:                 var(--ax2);
 
-  --text-on-accent:                    var(--mono100);
+  --text-on-accent:                    var(--mono0);
 
   --text-selection:                    var(--hl1);
 
@@ -133,7 +133,6 @@ body .excalidraw {
 
 .theme-light.minimal-light-white {
   --background-table-rows:     var(--bg2);
-
   --background-modifier-form-field: var(--bg3);
 }
 
