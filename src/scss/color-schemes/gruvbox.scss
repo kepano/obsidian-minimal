@@ -3,11 +3,11 @@
 .theme-light.minimal-gruvbox-light {
   --bg1:#fcf2c7;
   --bg2:#f2e6bd;
-  --bg3:rgba(0,0,0,0.062);
+  --bg3:#ebd9b3;
 
-  --ui1:#eadcb2;
-  --ui2:#504945;
-  --ui3:#665c54;
+  --ui1:#ebdbb2;
+  --ui2:#d5c4a1;
+  --ui3:#bdae93;
 
   --tx1:#282828;
   --tx2:#7c7065;
@@ -15,6 +15,12 @@
 
   --ax1:#fe8019;
   --ax2:#d65d0e;
+  --ax3:#d65d0d;
+
+  --hl1:#ebdbb2;
+}
+.theme-light.minimal-gruvbox-light.minimal-light-tonal {
+  --bg2:#fcf2c7;
 }
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
@@ -25,7 +31,8 @@
 .theme-dark.minimal-gruvbox-dark {
   --bg1:#282828;
   --bg2:#1e2021;
-  --bg3:rgba(255,255,255,0.062);
+  --bg3:#3d3836;
+  --bg3:rgba(62,57,55,0.5);
 
   --ui1:#3c3836;
   --ui2:#504945;
@@ -38,24 +45,10 @@
   --ax1:#fe8019;
   --ax2:#d65d0e;
   --ax3:#d65d0e;
+
+  --hl1:#504946;
 }
-
-.theme-light.minimal-notion-light {
-  --bg2:#f7f6f4;
-  --bg3:#e8e7e4;
-
-  --ui1:#ededec;
-  --ui2:#dbdbda;
-  --ui3:#2eaadc;
-
-  --tx1:#37352f;
-  --tx2:#72706c;
-  --tx3:#aaa9a5;
-
-  --ax1:#37352f;
-  --ax2:#000;
-  --ax3:#2eaadc;
-
-  --hl1:#d9eff8;
-  --link-weight:500;
+.theme-dark.minimal-gruvbox-dark.minimal-dark-black {
+  --hl1:#3d3836;
+  --ui1:#282828;
 }
