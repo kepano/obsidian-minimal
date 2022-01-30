@@ -6,7 +6,7 @@
 
   --ui1:#ededec;
   --ui2:#dbdbda;
-  --ui3:#2eaadc;
+  --ui3:#aaa9a5;
 
   --tx1:#37352f;
   --tx2:#72706c;
@@ -38,7 +38,7 @@
   --bg2:#373c3f;
   --bg3:#4b5053;
 
-  --ui1:rgba(255, 255, 255, 0.07);
+  --ui1:#3e4245;
   --ui2:#585d5f;
   --ui3:#D8DEE9;
 
@@ -54,5 +54,8 @@
   --link-weight:500;
 }
 .theme-dark.minimal-notion-dark.minimal-dark-black {
-  --bg3:#2f3437;
+  --base-d:5%;
+
+  --bg3:#232729;
+  --ui1:#2f3437;
 }
