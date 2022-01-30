@@ -76,7 +76,9 @@ Have a question? Join the [Minimal channel](https://discord.com/channels/6860537
 
 ## Companion plugins
 
-To customize Minimal, install the [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) or [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings). Minimal Theme Settings is best if you want to use [hotkeys](#hotkeys), while Style Settings has a few extra granular settings for headings and advanced features. Running both simultaneously is **not suggested** as this will lead to conflicts.
+[Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) allows you to customize color schemes, fonts, [hotkeys](#hotkeys), and access the main feature toggles. This plugin is highly recommended for all users of Minimal.
+
+[Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings) allows you to create a custom color scheme.
 
 [Hider plugin](https://github.com/kepano/obsidian-hider) is recommended to hide Obsidian UI elements such as window frame, scrollbars, tooltips, etc. When using Hider to turn off the main toolbar (AKA app ribbon), it can be accessed by hovering over the bottom left edge of the window.
 
