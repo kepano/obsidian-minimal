@@ -6,7 +6,7 @@
   --bg3:rgba(162,177,187,0.25);
 
   --ui1:#eef0f4;
-  --ui2:#c1c3c6;
+  --ui2:#D8DADD;
   --ui3:#c1c3c6;
 
   --tx1:#26272b;
@@ -14,7 +14,7 @@
   --tx3:#a9abb0;
 
   --ax1:#1b61c2;
-  --ax2:#5E81AC;
+  --ax2:#1C88DD;
   --ax3:#1b61c2;
 
   --hl1:#cae2ff;
@@ -36,6 +36,10 @@
 .theme-light.minimal-things-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-things-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-things-dark {
+  --base-h:218;
+  --base-s:9%;
+  --base-l:15%;
+
   --bg1:#24262a;
   --bg2:#202225;
   --bg3:#3d3f41;
@@ -59,4 +63,11 @@
   --h1-color:#4d95f7;
   --h2-color:#4d95f7;
   --h4-color:#4d95f7;
+}
+
+.theme-dark.minimal-things-dark.minimal-dark-black {
+  --base-d:5%;
+
+  --bg3:#24262a;
+  --background-divider:#24262a;  
 }
