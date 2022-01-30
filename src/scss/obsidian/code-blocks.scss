@@ -8,9 +8,12 @@
 }
 
 /* Reading */
-.markdown-preview-view pre,
-.markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+  color:var(--text-code);
+  font-size: 0.85em;
+}
+.markdown-preview-view pre,
 .markdown-source-view.mod-cm6 .cm-preview-code-block pre.dataview-error,
 .mod-cm6 .cm-editor .HyperMD-codeblock.cm-line,
 .cm-s-obsidian .HyperMD-codeblock {

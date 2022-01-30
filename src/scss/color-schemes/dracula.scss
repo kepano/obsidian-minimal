@@ -7,19 +7,28 @@
 .theme-light.minimal-dracula-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-dracula-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-dracula-dark {
-  --bg1:#1B1A23;
-  --bg2:#22212C;
-  --bg3:rgba(255,255,255,0.062);
+  --base-h:232;
+  --base-s:16%;
+  --base-l:19%;
 
-  --ui1:#353243;
-  --ui2:#423F50;
-  --ui3:#665c54;
+  --accent-h:265;
+  --accent-s:89%;
+  --accent-l:78%;
 
-  --tx1:#F8F8F3;
-  --tx2:#a3a0bd;
-  --tx3:#423F50;
+  --bg1:#282a37;
+  --bg2:#21222c;
 
-  --ax1:#9580FF;
-  --ax2:#9580FF;
-  --ax3:#9580FF;
+  --ui2:#44475a;
+  --ui3:#6272a4;
+
+  --tx1:#f8f8f2;
+  --tx2:#949FBE;
+  --tx3:#6272a4;
+
+  --ax3:#ff79c6;
+
+  --hl1:#44475a;
+}
+.theme-dark.minimal-dracula-dark.minimal-dark-black {
+  --ui1:#282a36;
 }

@@ -107,6 +107,10 @@
 #calendar-container .day {
   cursor:var(--cursor);
 }
+#calendar-container .day.adjacent-month {
+  color:var(--text-faint);
+  opacity:1;
+}
 #calendar-container .day {
   padding:2px 4px 4px;
 }

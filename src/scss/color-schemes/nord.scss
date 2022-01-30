@@ -1,4 +1,25 @@
 /* Nord */
+.theme-light.minimal-nord-light {
+  --base-h:220;
+  --base-s:5%;
+  --base-l:94%;
+
+  --accent-h:213;
+  --accent-s:32%;
+  --accent-l:52%;
+
+  --bg1:#fff;
+  --bg2:#eceff4;
+  --bg3:rgba(157,174,206,0.25);
+
+  --tx1:#2e3440;
+  --tx2:#7D8697;
+  --tx3:#ADB1B8;
+
+  --ax1:#5e81ac;
+  --ax2:#81a1c1;
+
+}
 
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-nord-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
@@ -7,19 +28,28 @@
 .theme-light.minimal-nord-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-nord-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-nord-dark {
+  --base-h:220;
+  --base-s:16%;
+  --base-l:22%;
+
+  --accent-h:213;
+  --accent-s:32%;
+  --accent-l:52%;
+
   --bg1:#2e3440;
   --bg2:#3b4252;
-  --bg3:rgba(255,255,255,0.062);
+  --bg3:rgba(135,152,190,0.15);
 
   --ui1:#434c5e;
-  --ui2:#434c5e;
-  --ui3:#665c54;
+  --ui2:#58647b;
+  --ui3:#5e81ac;
 
   --tx1:#d8dee9;
-  --tx2:#d8dee9;
+  --tx2:#9eafcc;
   --tx3:#4c566a;
 
-  --ax1:#5e81ac;
-  --ax2:#5e81ac;
   --ax3:#5e81ac;
+}
+.theme-dark.minimal-nord-dark.minimal-dark-black {
+  --ui1:#2e3440;
 }

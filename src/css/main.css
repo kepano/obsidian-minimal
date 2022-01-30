@@ -453,6 +453,7 @@ body .excalidraw {
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
   --modal-border: var(--ui2);
+  --background-modifier-form-field: var(--bg3);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
   --background-modifier-box-shadow:rgba(0, 0, 0, 1); }
 
@@ -599,9 +600,12 @@ body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is
   padding-right: 10px; }
 
 /* Reading */
-.markdown-preview-view pre,
-.markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+  color: var(--text-code);
+  font-size: 0.85em; }
+
+.markdown-preview-view pre,
 .markdown-source-view.mod-cm6 .cm-preview-code-block pre.dataview-error,
 .mod-cm6 .cm-editor .HyperMD-codeblock.cm-line,
 .cm-s-obsidian .HyperMD-codeblock {
@@ -6960,6 +6964,10 @@ body .button-default.blue {
 #calendar-container .day {
   cursor: var(--cursor); }
 
+#calendar-container .day.adjacent-month {
+  color: var(--text-faint);
+  opacity: 1; }
+
 #calendar-container .day {
   padding: 2px 4px 4px; }
 
@@ -7957,18 +7965,24 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
 .theme-light.minimal-dracula-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-dracula-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-dracula-dark {
-  --bg1:#1B1A23;
-  --bg2:#22212C;
-  --bg3:rgba(255,255,255,0.062);
-  --ui1:#353243;
-  --ui2:#423F50;
-  --ui3:#665c54;
-  --tx1:#F8F8F3;
-  --tx2:#a3a0bd;
-  --tx3:#423F50;
-  --ax1:#9580FF;
-  --ax2:#9580FF;
-  --ax3:#9580FF; }
+  --base-h:232;
+  --base-s:16%;
+  --base-l:19%;
+  --accent-h:265;
+  --accent-s:89%;
+  --accent-l:78%;
+  --bg1:#282a37;
+  --bg2:#21222c;
+  --ui2:#44475a;
+  --ui3:#6272a4;
+  --tx1:#f8f8f2;
+  --tx2:#949FBE;
+  --tx3:#6272a4;
+  --ax3:#ff79c6;
+  --hl1:#44475a; }
+
+.theme-dark.minimal-dracula-dark.minimal-dark-black {
+  --ui1:#282a36; }
 
 /* Gruvbox */
 .theme-light.minimal-gruvbox-light {
@@ -8020,6 +8034,22 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --link-weight:500; }
 
 /* Nord */
+.theme-light.minimal-nord-light {
+  --base-h:220;
+  --base-s:5%;
+  --base-l:94%;
+  --accent-h:213;
+  --accent-s:32%;
+  --accent-l:52%;
+  --bg1:#fff;
+  --bg2:#eceff4;
+  --bg3:rgba(157,174,206,0.25);
+  --tx1:#2e3440;
+  --tx2:#7D8697;
+  --tx3:#ADB1B8;
+  --ax1:#5e81ac;
+  --ax2:#81a1c1; }
+
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-nord-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
 .theme-light.minimal-nord-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
@@ -8027,18 +8057,25 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
 .theme-light.minimal-nord-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-nord-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-nord-dark {
+  --base-h:220;
+  --base-s:16%;
+  --base-l:22%;
+  --accent-h:213;
+  --accent-s:32%;
+  --accent-l:52%;
   --bg1:#2e3440;
   --bg2:#3b4252;
-  --bg3:rgba(255,255,255,0.062);
+  --bg3:rgba(135,152,190,0.15);
   --ui1:#434c5e;
-  --ui2:#434c5e;
-  --ui3:#665c54;
+  --ui2:#58647b;
+  --ui3:#5e81ac;
   --tx1:#d8dee9;
-  --tx2:#d8dee9;
+  --tx2:#9eafcc;
   --tx3:#4c566a;
-  --ax1:#5e81ac;
-  --ax2:#5e81ac;
   --ax3:#5e81ac; }
+
+.theme-dark.minimal-nord-dark.minimal-dark-black {
+  --ui1:#2e3440; }
 
 /* Notion */
 .theme-light.minimal-notion-light {
