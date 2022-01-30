@@ -19,6 +19,7 @@ settings:
     - 
         id: base
         title: Base color
+        description: Defines all background and border colors unless overridden below
         type: variable-themed-color
         format: hsl-split
         default-light: '#'
@@ -26,6 +27,7 @@ settings:
     - 
         id: accent
         title: Accent color
+        description: Defines all link and accent colors unless overridden below
         type: variable-themed-color
         format: hsl-split
         default-light: '#6a8695'
@@ -55,15 +57,16 @@ settings:
         default-dark: '#'
     - 
         id: ui1
-        title: Outlines
+        title: Border color
         type: variable-themed-color
+        description: For divider lines and outlined elements
         opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
         id: ui2
-        title: Outlines (highlighted)
+        title: Border color (highlighted)
         type: variable-themed-color
         opacity: true
         format: hex
@@ -71,7 +74,7 @@ settings:
         default-dark: '#'
     - 
         id: ui3
-        title: Outlines (focused)
+        title: Border color (focused)
         type: variable-themed-color
         opacity: true
         format: hex
