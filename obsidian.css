@@ -106,11 +106,11 @@ settings:
     - 
         id: accent
         title: Accent color
-        description: Defines all link and accent colors unless overridden below
+        description: Defines link and checkbox colors unless overridden below
         type: variable-themed-color
         format: hsl-split
-        default-light: '#6a8695'
-        default-dark: '#6a8695'
+        default-light: '#'
+        default-dark: '#'
     - 
         id: bg1
         title: Main window background
