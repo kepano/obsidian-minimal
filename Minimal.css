@@ -419,7 +419,7 @@ body .excalidraw {
   --text-blockquote: var(--tx2);
   --text-accent: var(--ax1);
   --text-accent-hover: var(--ax2);
-  --text-on-accent: var(--mono0);
+  --text-on-accent: white;
   --text-selection: var(--hl1);
   --background-primary: var(--bg1);
   --background-primary-alt: var(--bg2);
@@ -2862,7 +2862,7 @@ a.tag {
   color: var(--text-muted);
   font-size: var(--font-adaptive-small);
   font-family: var(--font-ui);
-  padding: 2px 8px;
+  padding: 2px 8px 2px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
