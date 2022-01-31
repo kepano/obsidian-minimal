@@ -8140,9 +8140,9 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --base-h:44;
   --base-s:87%;
   --base-l:94%;
-  --accent-h:18;
-  --accent-s:80%;
-  --accent-l:44%;
+  --accent-h:205;
+  --accent-s:70%;
+  --accent-l:48%;
   --bg1:#fdf6e3;
   --bg2:#eee8d5;
   --bg3:rgba(0,0,0,0.062);
@@ -8153,6 +8153,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx2:#586e75;
   --tx3:#ABB2AC;
   --tx4:#586e75;
+  --ax1:#268bd2;
   --hl1:#eee8d5; }
 
 .theme-light.minimal-solarized-light.minimal-light-tonal {
@@ -8165,6 +8166,9 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
 .theme-light.minimal-solarized-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-solarized-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-solarized-dark {
+  --accent-h:205;
+  --accent-s:70%;
+  --accent-l:48%;
   --bg1:#002b36;
   --bg2:#073642;
   --bg3:rgba(255,255,255,0.062);
@@ -8174,8 +8178,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx1:#93a1a1;
   --tx2:#657b83;
   --tx3:#31535B;
-  --ax1:#cb4b16;
-  --ax2:#EC6026;
+  --ax1:#268bd2;
   --ax3:#cb4b16;
   --hl1:#073642; }
 
