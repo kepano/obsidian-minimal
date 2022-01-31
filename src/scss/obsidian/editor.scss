@@ -102,7 +102,7 @@ ul>li.is-collapsed::marker,
   background-color:transparent;
 }
 .markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
-    background-color: var(--text-selection);
+  background-color: var(--text-selection);
 }
 body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
   max-width:var(--line-width-adaptive);

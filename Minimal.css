@@ -2642,7 +2642,8 @@ button.mod-cta,
   padding-left: 4px; }
 
 .community-theme.is-selected .modal-button-container .mod-cta {
-  background-color: var(--interactive-accent); }
+  background-color: var(--interactive-accent);
+  color: white; }
 
 .community-theme.is-selected .modal-button-container .mod-cta:hover {
   background-color: var(--interactive-accent-hover); }
@@ -8217,7 +8218,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx2:#657b83;
   --tx3:#31535B;
   --ax1:#268bd2;
-  --ax3:#cb4b16;
+  --ax3:#268bd2;
   --hl1:#073642; }
 
 .theme-dark.minimal-solarized-dark.minimal-dark-black {
