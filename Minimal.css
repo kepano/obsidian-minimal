@@ -1101,6 +1101,15 @@ h1,
   overflow-x: hidden;
   padding-bottom: 50px; }
 
+body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding-bottom: 7px;
+  margin-left: -3px;
+  font-size: var(--font-adaptive-smaller); }
+
 .nav-folder-title {
   margin: 0 0 0 8px;
   min-width: auto;
