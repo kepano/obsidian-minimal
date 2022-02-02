@@ -1526,13 +1526,13 @@ body .view-action svg.cross path {
 .workspace-tab-header.is-active,
 .workspace-leaf-content[data-type='search'] .nav-action-button.is-active {
   background: transparent;
-  color: var(--text-muted);
+  color: var(--icon-color);
   opacity: 1;
   transition: opacity 0.1s ease-in-out; }
 
 .nav-action-button.is-active,
 .workspace-tab-header.is-active:hover {
-  color: var(--text-muted); }
+  color: var(--icon-color); }
 
 .workspace-leaf-content[data-type='search'] .nav-action-button.is-active {
   background: transparent; }
