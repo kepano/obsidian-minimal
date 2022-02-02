@@ -477,8 +477,7 @@ body .excalidraw {
   --btn-shadow-color:rgba(0, 0, 0, 0.2); }
 
 .theme-light.minimal-light-white {
-  --background-table-rows: var(--bg2);
-  --background-modifier-form-field: var(--bg3); }
+  --background-table-rows: var(--bg2); }
 
 .theme-light.minimal-light-tonal {
   --background-primary: var(--bg2);
@@ -6566,7 +6565,7 @@ input.prompt-input {
 .search-input-container input:hover,
 .search-input-container input:focus {
   font-size: var(--font-adaptive-small);
-  padding: 5px 10px;
+  padding: 5px 28px 5px 10px;
   background-color: var(--background-modifier-form-field); }
 
 .search-input-container {
@@ -6582,7 +6581,7 @@ input.prompt-input {
   flex: 1; }
 
 .search-input-clear-button {
-  background: var(--background-modifier-form-field);
+  background: transparent;
   border-radius: 50%;
   color: var(--text-muted);
   cursor: var(--cursor);
