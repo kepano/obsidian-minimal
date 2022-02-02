@@ -6104,7 +6104,7 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
 
 /* Page Preview aka Popovers */
 .theme-dark.minimal-dark-black .popover {
-  background: var(--background-primary-alt); }
+  background: var(--bg2); }
 
 .popover,
 .popover.hover-popover {
