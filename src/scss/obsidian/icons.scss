@@ -52,7 +52,7 @@ body .view-action svg.cross path {
 .side-dock-ribbon-action,
 .workspace-tab-header {
   background:transparent;
-  color:var(--text-muted);
+  color:var(--icon-color);
   opacity:var(--icon-muted);
   transition:opacity 0.1s ease-in-out;
   cursor:var(--cursor);
@@ -128,7 +128,7 @@ body .view-action svg.cross path {
 .workspace-tab-header:hover,
 .side-dock-ribbon-tab:hover,
 .side-dock-ribbon-action:hover {
-  color:var(--text-muted);
+  color:var(--icon-color-hover);
   opacity:1;
   transition:opacity 0.1s ease-in-out;
 }

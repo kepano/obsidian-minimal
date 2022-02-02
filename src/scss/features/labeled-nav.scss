@@ -37,7 +37,7 @@
   }
    .workspace-tab-header:hover .workspace-tab-header-inner-icon,
    .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-    color:var(--text-normal);
+    color:var(--icon-color-active);
   }
   .workspace-tab-header-inner-icon svg {
     margin-right:6px;

@@ -403,6 +403,8 @@ body .excalidraw {
   --quote-opening-modifier: var(--ui2);
   --modal-border: var(--ui1);
   --icon-color: var(--tx2);
+  --icon-color-hover: var(--tx2);
+  --icon-color-active: var(--tx1);
   --icon-hex: var(--mono0); }
 
 .theme-light,
@@ -1458,7 +1460,7 @@ body .view-action svg.cross path {
 .side-dock-ribbon-action,
 .workspace-tab-header {
   background: transparent;
-  color: var(--text-muted);
+  color: var(--icon-color);
   opacity: var(--icon-muted);
   transition: opacity 0.1s ease-in-out;
   cursor: var(--cursor);
@@ -1534,7 +1536,7 @@ body .view-action svg.cross path {
 .workspace-tab-header:hover,
 .side-dock-ribbon-tab:hover,
 .side-dock-ribbon-action:hover {
-  color: var(--text-muted);
+  color: var(--icon-color-hover);
   opacity: 1;
   transition: opacity 0.1s ease-in-out; }
 
@@ -4929,7 +4931,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
   align-items: center; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header:hover .workspace-tab-header-inner-icon,
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-  color: var(--text-normal); }
+  color: var(--icon-color-active); }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-inner-icon svg {
   margin-right: 6px; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
