@@ -643,7 +643,7 @@ body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is
 .cm-s-obsidian span.cm-inline-code,
 .markdown-preview-view code {
   color: var(--text-code);
-  font-size: 0.85em; }
+  font-size: var(--font-code); }
 
 .markdown-preview-view pre,
 .markdown-source-view.mod-cm6 .cm-preview-code-block pre.dataview-error,
