@@ -7581,7 +7581,8 @@ body .kanban-plugin__markdown-preview-view,
 body .kanban-plugin__grow-wrap > textarea,
 body .kanban-plugin__grow-wrap::after,
 body .kanban-plugin__item-title p {
-  font-size: calc(var(--font-adaptive-normal) - 2px); }
+  font-size: calc(var(--font-adaptive-normal) - 2px);
+  line-height: 1.3; }
 
 .kanban-plugin__item-input-actions button,
 .kanban-plugin__lane-input-actions button {
@@ -7602,9 +7603,13 @@ body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap > textarea {
   font-weight: 500; }
 
 body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea {
+  padding: 0; }
+
+body .kanban-plugin__grow-wrap {
   padding: 6px 8px;
   border-radius: 6px;
-  border: 1px solid var(--background-modifier-border); }
+  border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-primary); }
 
 body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea::placeholder {
   color: var(--text-faint); }
