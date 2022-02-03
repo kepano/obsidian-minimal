@@ -1685,9 +1685,6 @@ body:not(.is-mobile) .modal {
   padding: 0;
   font-size: var(--font-adaptive-small); }
 
-body:not(.is-mobile) .modal-content {
-  overflow: unset; }
-
 .modal-content .u-center-text {
   text-align: left;
   font-size: var(--font-adaptive-small); }
@@ -7782,7 +7779,7 @@ body .leaflet-container {
   background-color: var(--background-secondary); }
 
 .map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) {
-  margin-top: -11px; }
+  margin-top: -16px; }
 
 .leaflet-control-attribution {
   display: none; }
