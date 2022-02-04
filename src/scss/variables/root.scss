@@ -15,9 +15,8 @@
   --font-smaller:11px;
   --font-smallest:10px;
 
-  --font-code:var(--font-small);
+  --font-code:calc(var(--font-normal) * 0.9);
 
-  --font-title:1.1em;
   --font-inputs:13px;
   --font-settings:15px;
   --font-settings-small:12px;
@@ -26,6 +25,10 @@
   --normal-weight:400;
   --bold-weight:600;
   --link-weight:inherit;
+
+  /* Headings */
+  --title-size:1.1em;
+  --title-weight:600;
 
   /* Headings */
   --h1:1.125em;

@@ -119,6 +119,38 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
+        id: titlebar
+        title: Title bar
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: title-size
+        title: Title font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.1em
+    - 
+        id: title-weight
+        title: Title font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    - 
+        id: title-color-inactive
+        title: Title font color (inactive)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: title-color
+        title: Title font color (active)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
         id: links
         title: Links
         type: heading

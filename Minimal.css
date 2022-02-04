@@ -51,8 +51,7 @@ SOFTWARE.
   --font-small:13px;
   --font-smaller:11px;
   --font-smallest:10px;
-  --font-code:var(--font-small);
-  --font-title:1.1em;
+  --font-code:calc(var(--font-normal) * 0.9);
   --font-inputs:13px;
   --font-settings:15px;
   --font-settings-small:12px;
@@ -60,6 +59,9 @@ SOFTWARE.
   --normal-weight:400;
   --bold-weight:600;
   --link-weight:inherit;
+  /* Headings */
+  --title-size:1.1em;
+  --title-weight:600;
   /* Headings */
   --h1:1.125em;
   --h2:1.05em;
@@ -325,7 +327,7 @@ SOFTWARE.
     hsl(
       var(--accent-h),
       var(--accent-s),
-      calc(var(--accent-l) - 20%)
+      calc(var(--accent-l) - 12%)
     );
   --hl1:
     hsla(
@@ -414,6 +416,8 @@ body .excalidraw {
   --text-italic: var(--tx1);
   --text-muted: var(--tx2);
   --text-faint: var(--tx3);
+  --title-color: var(--tx1);
+  --title-color-inactive: var(--tx2);
   --text-code: var(--tx4);
   --text-error: var(--red);
   --text-blockquote: var(--tx2);
@@ -963,8 +967,16 @@ em,
 .markdown-embed-title {
   letter-spacing: -0.02em;
   text-align: left;
-  font-size: var(--font-title);
-  font-weight: var(--bold-weight); }
+  font-size: var(--title-size);
+  font-weight: var(--title-weight); }
+
+.view-header-title {
+  color: var(--title-color-inactive); }
+
+.file-embed-title,
+.markdown-embed-title,
+.workspace-leaf.mod-active .view-header-title {
+  color: var(--title-color); }
 
 h1,
 .empty-state-title,
@@ -8132,6 +8144,16 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
 
 /* Color schemes */
 /* Dracula */
+.theme-dark.minimal-dracula-dark {
+  --red:#ff5555;
+  --yellow:#f1fa8c;
+  --green:#50fa7b;
+  --orange:#ffb86c;
+  --purple:#bd93f9;
+  --pink:#ff79c6;
+  --cyan:#8be9fd;
+  --blue:#6272a4; }
+
 .theme-light.minimal-dracula-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-dracula-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
 .theme-light.minimal-dracula-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
@@ -8222,6 +8244,17 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --ui1:#282828; }
 
 /* Nord */
+.theme-dark.minimal-nord-dark,
+.theme-light.minimal-nord-light {
+  --red:#BF616A;
+  --yellow:#EBCB8B;
+  --green:#A3BE8C;
+  --orange:#D08770;
+  --purple:#B48EAD;
+  --pink:#B48EAD;
+  --cyan:#88C0D0;
+  --blue:#81A1C1; }
+
 .theme-light.minimal-nord-light {
   --base-h:221;
   --base-s:27%;
@@ -8596,6 +8629,38 @@ settings:
         title: Icon color (active)
         type: variable-themed-color
         opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: titlebar
+        title: Title bar
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: title-size
+        title: Title font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.1em
+    - 
+        id: title-weight
+        title: Title font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    - 
+        id: title-color-inactive
+        title: Title font color (inactive)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: title-color
+        title: Title font color (active)
+        type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'

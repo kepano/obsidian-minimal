@@ -1,4 +1,17 @@
 /* Nord */
+
+.theme-dark.minimal-nord-dark,
+.theme-light.minimal-nord-light {
+  --red:#BF616A;
+  --yellow:#EBCB8B;
+  --green:#A3BE8C;
+  --orange:#D08770;
+  --purple:#B48EAD;
+  --pink:#B48EAD;
+  --cyan:#88C0D0;
+  --blue:#81A1C1;
+}
+
 .theme-light.minimal-nord-light {
   --base-h:221;
   --base-s:27%;
@@ -22,7 +35,6 @@
 
   --ax1:#5e81ac;
   --ax2:#81a1c1;
-
 }
 
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
