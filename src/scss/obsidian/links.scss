@@ -22,11 +22,15 @@ a[href*="obsidian://search"] {
   color:var(--text-accent-hover);
 }
 
-.cm-s-obsidian span.cm-url,
+.cm-s-obsidian .cm-url,
 .cm-s-obsidian .cm-active .cm-url,
-.is-live-preview.cm-s-obsidian span.cm-link,
-.cm-s-obsidian span.cm-hmd-internal-link {
+.is-live-preview.cm-s-obsidian .cm-link,
+.cm-s-obsidian .cm-hmd-internal-link {
   color:var(--text-accent);
+}
+.cm-url,
+.cm-link,
+.cm-hmd-internal-link {
   font-weight:var(--link-weight);
 }
 
