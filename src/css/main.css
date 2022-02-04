@@ -377,7 +377,7 @@ body .excalidraw {
   --text-muted: var(--tx2);
   --text-faint: var(--tx3);
   --text-code: var(--tx4);
-  --text-error: rgba(255,20,20,0.85);
+  --text-error: var(--red);
   --text-blockquote: var(--tx2);
   --text-accent: var(--ax1);
   --text-accent-hover: var(--ax2);
@@ -8116,6 +8116,17 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --ui1:#282a36; }
 
 /* Gruvbox */
+.theme-dark.minimal-gruvbox-dark,
+.theme-light.minimal-gruvbox-light {
+  --red:#cc241d;
+  --yellow:#d79921;
+  --green:#98971a;
+  --orange:#d65d0e;
+  --purple:#b16286;
+  --pink:#b16286;
+  --cyan:#689d6a;
+  --blue:#458588; }
+
 .theme-light.minimal-gruvbox-light {
   --base-h:49;
   --base-s:92%;
@@ -8129,8 +8140,8 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx1:#282828;
   --tx2:#7c7065;
   --tx3:#a89a85;
-  --ax1:#fe8019;
-  --ax2:#d65d0e;
+  --ax1:#d65d0e;
+  --ax2:#af3a03;
   --ax3:#d65d0d;
   --hl1:#ebdbb2; }
 
@@ -8158,8 +8169,8 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx1:#fbf1c7;
   --tx2:#bdae93;
   --tx3:#7c6f64;
-  --ax1:#fe8019;
-  --ax2:#d65d0e;
+  --ax1:#d65d0e;
+  --ax2:#fe8019;
   --ax3:#d65d0e;
   --hl1:#504946; }
 
