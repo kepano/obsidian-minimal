@@ -204,8 +204,8 @@
 /* Block button */
 
 .markdown-source-view.mod-cm6.cards .edit-block-button {
-  top:3px;
-  right:32px;
+  top:0px;
+  right:26px;
   opacity:1;
   background-color:transparent;
 }
@@ -229,10 +229,15 @@
   float:right;
   position:relative;
   text-align:right;
+  height:24px;
   padding-bottom:4px;
 }
 .cards table.dataview thead:before {
   content:'';
+  position:absolute;
+  right:0;
+  top:0;
+  height:18px;
   background-repeat:no-repeat;
   cursor:var(--cursor);
   text-align:right;
@@ -255,6 +260,7 @@
   opacity:0.5;
 }
 .cards table.dataview thead > tr {
+  top:0;
   position:absolute;
   display:none;
   z-index:9;
@@ -264,7 +270,7 @@
   padding:6px;
   border-radius:6px;
   flex-direction:column;
-  margin:0;
+  margin:26px 0 0 0;
   width:100%;
 }
 .cards table.dataview thead:hover > tr {

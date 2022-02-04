@@ -3724,8 +3724,8 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
 /* ------------------- */
 /* Block button */
 .markdown-source-view.mod-cm6.cards .edit-block-button {
-  top: 3px;
-  right: 32px;
+  top: 0px;
+  right: 26px;
   opacity: 1;
   background-color: transparent; }
 
@@ -3746,10 +3746,15 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   float: right;
   position: relative;
   text-align: right;
+  height: 24px;
   padding-bottom: 4px; }
 
 .cards table.dataview thead:before {
   content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 18px;
   background-repeat: no-repeat;
   cursor: var(--cursor);
   text-align: right;
@@ -3772,6 +3777,7 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   opacity: 0.5; }
 
 .cards table.dataview thead > tr {
+  top: 0;
   position: absolute;
   display: none;
   z-index: 9;
@@ -3781,7 +3787,7 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   padding: 6px;
   border-radius: 6px;
   flex-direction: column;
-  margin: 0;
+  margin: 26px 0 0 0;
   width: 100%; }
 
 .cards table.dataview thead:hover > tr {
@@ -8298,6 +8304,17 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --ui1:#2f3437; }
 
 /* Solarized */
+.theme-dark.minimal-solarized-dark,
+.theme-light.minimal-solarized-light {
+  --red:#dc322f;
+  --yellow:#b58900;
+  --green:#859900;
+  --orange:#cb4b16;
+  --purple:#6c71c4;
+  --pink:#d33682;
+  --cyan:#2aa198;
+  --blue:#268bd2; }
+
 .theme-light.minimal-solarized-light {
   --base-h:44;
   --base-s:87%;

@@ -1,5 +1,17 @@
 /* Solarized */
 
+.theme-dark.minimal-solarized-dark,
+.theme-light.minimal-solarized-light {
+  --red:#dc322f;
+  --yellow:#b58900;
+  --green:#859900;
+  --orange:#cb4b16;
+  --purple:#6c71c4;
+  --pink:#d33682;
+  --cyan:#2aa198;
+  --blue:#268bd2;
+}
+
 .theme-light.minimal-solarized-light {
   --base-h:44;
   --base-s:87%;
