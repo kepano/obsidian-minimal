@@ -6282,7 +6282,8 @@ input.prompt-input {
 
 .suggestion-item,
 .suggestion-empty {
-  font-size: var(--font-adaptive-normal); }
+  font-size: var(--font-adaptive-normal);
+  cursor: var(--cursor); }
 
 /* Mobile */
 .is-mobile {
