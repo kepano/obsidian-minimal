@@ -2115,8 +2115,7 @@ iframe {
   border-bottom: 0; }
 
 /* Transcluded notes and embeds */
-.embed-strict .internal-embed .markdown-embed,
-.embed-inline .internal-embed .markdown-embed {
+.embed-strict .internal-embed .markdown-embed {
   padding: 0;
   border: none; }
 
