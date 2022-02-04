@@ -142,7 +142,15 @@ SOFTWARE.
   --accent-d:60%;
   /* Accent lightness Dark Mode */
   --accent-l:50%;
-  /* Accent lightness Light Mode */ }
+  /* Accent lightness Light Mode */
+  --red:#d04255;
+  --yellow:#e5b567;
+  --green:#a8c373;
+  --orange:#e57e43;
+  --purple:#9e86c8;
+  --pink:#b05279;
+  --cyan:#73bbb2;
+  --blue:#6c99bb; }
 
 .theme-light,
 .theme-light.minimal-default-light {
@@ -384,14 +392,6 @@ SOFTWARE.
 
 .theme-light,
 .theme-dark {
-  --red:#d04255;
-  --yellow:#e5b567;
-  --green:#a8c373;
-  --orange:#e57e43;
-  --purple:#9e86c8;
-  --pink:#b05279;
-  --cyan:#73bbb2;
-  --blue:#6c99bb;
   --h1-color:var(--text-normal);
   --h2-color:var(--text-normal);
   --h3-color:var(--text-normal);
