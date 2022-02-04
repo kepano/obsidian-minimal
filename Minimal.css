@@ -3412,6 +3412,7 @@ body:not(.is-mobile) input:focus {
   box-sizing: border-box;
   display: inline-block;
   height: 5px;
+  margin-bottom: 4px;
   width: 220px;
   max-width: 100%;
   overflow: hidden;
@@ -3610,6 +3611,10 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   overflow: visible !important;
   max-width: 100%;
   display: flex; }
+
+.cards table.dataview tbody > tr > td .el-p {
+  display: block;
+  width: 100%; }
 
 .cards table.dataview tbody > tr > td:first-child {
   font-weight: var(--bold-weight); }

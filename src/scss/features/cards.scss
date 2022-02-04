@@ -72,6 +72,11 @@
   max-width:100%;
   display:flex;
 }
+.cards table.dataview tbody > tr > td .el-p {
+  display:block;
+  width:100%;
+}
+
 .cards table.dataview tbody > tr > td:first-child {
   font-weight:var(--bold-weight);
 }
