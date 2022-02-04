@@ -1,6 +1,5 @@
 /* Code blocks */
 
-
 /* Live Preview */
 .mod-cm6 .cm-editor .HyperMD-codeblock.cm-line {
 	padding-left:10px;
@@ -12,6 +11,9 @@
 .markdown-preview-view code {
   color:var(--text-code);
   font-size:var(--font-code);
+}
+.markdown-preview-view pre code {
+  background-color:transparent;
 }
 .markdown-preview-view pre,
 .markdown-source-view.mod-cm6 .cm-preview-code-block pre.dataview-error,

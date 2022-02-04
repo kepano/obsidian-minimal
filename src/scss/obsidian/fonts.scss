@@ -6,7 +6,9 @@ h1,h2,h3,h4 {letter-spacing:-0.02em;}
 body, input, button  {
   font-family:var(--font-ui);
 }
-
+.cm-s-obsidian span.cm-error {
+  color:var(--red);
+}
 .popover,
 .vertical-tab-content-container,
 .workspace-leaf-content[data-type=markdown] {

@@ -611,6 +611,9 @@ body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is
   color: var(--text-code);
   font-size: var(--font-code); }
 
+.markdown-preview-view pre code {
+  background-color: transparent; }
+
 .markdown-preview-view pre,
 .markdown-source-view.mod-cm6 .cm-preview-code-block pre.dataview-error,
 .mod-cm6 .cm-editor .HyperMD-codeblock.cm-line,
@@ -870,6 +873,9 @@ h1, h2, h3, h4 {
 
 body, input, button {
   font-family: var(--font-ui); }
+
+.cm-s-obsidian span.cm-error {
+  color: var(--red); }
 
 .popover,
 .vertical-tab-content-container,
@@ -2785,6 +2791,159 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
 .status-bar-item.plugin-sync svg {
   height: 15px;
   width: 15px; }
+
+/* Syntax highlighting */
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"] {
+  color: var(--tx1); }
+
+.theme-dark .token.prolog,
+.theme-dark .token.doctype,
+.theme-dark .token.cdata,
+.theme-dark .cm-meta,
+.theme-dark .cm-qualifier {
+  color: var(--tx2); }
+
+.theme-dark .cm-comment,
+.theme-dark .token.comment {
+  color: var(--tx2); }
+
+.theme-dark .token.tag,
+.theme-dark .token.constant,
+.theme-dark .token.symbol,
+.theme-dark .token.deleted,
+.theme-dark .cm-tag {
+  color: var(--red); }
+
+.theme-dark .token.punctuation,
+.theme-dark .cm-punctuation,
+.theme-dark .cm-bracket,
+.theme-dark .cm-hr {
+  color: var(--tx2); }
+
+.theme-dark .token.boolean,
+.theme-dark .token.number,
+.theme-dark .cm-number {
+  color: var(--purple); }
+
+.theme-dark .token.selector,
+.theme-dark .token.attr-name,
+.theme-dark .token.string,
+.theme-dark .token.char,
+.theme-dark .token.builtin,
+.theme-dark .token.inserted,
+.theme-dark .cm-string,
+.theme-dark .cm-string-2 {
+  color: var(--green); }
+
+.theme-dark .cm-property,
+.theme-dark .token.property,
+.theme-dark .token.operator,
+.theme-dark .token.entity,
+.theme-dark .token.url,
+.theme-dark .language-css .token.string,
+.theme-dark .style .token.string,
+.theme-dark .token.variable,
+.theme-dark .cm-operator,
+.theme-dark .cm-link,
+.theme-dark .cm-variable-2,
+.theme-dark .cm-variable-3 {
+  color: var(--cyan); }
+
+.theme-dark .token.atrule,
+.theme-dark .token.attr-value,
+.theme-dark .token.function,
+.theme-dark .token.class-name,
+.theme-dark .cm-attribute,
+.theme-dark .cm-variable,
+.theme-dark .cm-type,
+.theme-dark .cm-def {
+  color: var(--yellow); }
+
+.theme-dark .token.keyword,
+.theme-dark .cm-keyword,
+.theme-dark .cm-builtin {
+  color: var(--pink); }
+
+.theme-dark .token.regex,
+.theme-dark .token.important {
+  color: var(--orange); }
+
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  color: var(--tx1); }
+
+.theme-light .token.prolog,
+.theme-light .token.doctype,
+.theme-light .token.cdata,
+.theme-light .cm-meta,
+.theme-light .cm-qualifier {
+  color: var(--tx2); }
+
+.theme-light .cm-comment,
+.theme-light .token.comment {
+  color: var(--tx2); }
+
+.theme-light .token.tag,
+.theme-light .token.constant,
+.theme-light .token.symbol,
+.theme-light .token.deleted,
+.theme-light .cm-tag {
+  color: var(--red); }
+
+.theme-light .token.punctuation,
+.theme-light .cm-punctuation,
+.theme-light .cm-bracket,
+.theme-light .cm-hr {
+  color: var(--tx2); }
+
+.theme-light .token.boolean,
+.theme-light .token.number,
+.theme-light .cm-number {
+  color: var(--purple); }
+
+.theme-light .token.selector,
+.theme-light .token.attr-name,
+.theme-light .token.string,
+.theme-light .token.char,
+.theme-light .token.builtin,
+.theme-light .token.inserted,
+.theme-light .cm-string,
+.theme-light .cm-string-2 {
+  color: var(--green); }
+
+.theme-light .cm-property,
+.theme-light .token.property,
+.theme-light .token.operator,
+.theme-light .token.entity,
+.theme-light .token.url,
+.theme-light .language-css .token.string,
+.theme-light .style .token.string,
+.theme-light .token.variable,
+.theme-light .cm-operator,
+.theme-light .cm-link,
+.theme-light .cm-variable-2,
+.theme-light .cm-variable-3 {
+  color: var(--cyan); }
+
+.theme-light .token.atrule,
+.theme-light .token.attr-value,
+.theme-light .token.function,
+.theme-light .token.class-name,
+.theme-light .cm-attribute,
+.theme-light .cm-variable,
+.theme-light .cm-type,
+.theme-light .cm-def {
+  color: var(--yellow); }
+
+.theme-light .token.keyword,
+.theme-light .cm-keyword,
+.theme-light .cm-builtin {
+  color: var(--pink); }
+
+.theme-light .token.regex,
+.theme-light .token.important {
+  color: var(--orange); }
 
 /* Preview mode tables */
 .markdown-source-view.mod-cm6 table {
@@ -8098,6 +8257,19 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   background-color: var(--background-tertiary);
   color: var(--text-normal);
   cursor: var(--cursor); }
+
+.themed-color-wrapper > div + div {
+  margin-top: 0;
+  margin-left: 6px; }
+
+.theme-light .themed-color-wrapper > .theme-light {
+  background-color: transparent; }
+
+.theme-light .themed-color-wrapper > .theme-dark {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.theme-dark .themed-color-wrapper > .theme-dark {
+  background-color: transparent; }
 
 /* Obsidian Tabs plugin */
 body.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header,
