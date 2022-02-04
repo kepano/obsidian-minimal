@@ -118,8 +118,6 @@ Most plugins work well with Minimal, but the following plugins have received spe
 
 ## Helper filters and classes
 
-Additional documentation can be found at [publish.obsdian.md/kepano](https://publish.obsidian.md/kepano)
-
 ## Image filters
 
 Image filters can be added to create the following effects. Use them by adding the filter name at the end of the image link, e.g. `![[image.jpeg#invert]]`
