@@ -7645,7 +7645,7 @@ body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap > textarea {
 body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea {
   padding: 0; }
 
-body .kanban-plugin__grow-wrap {
+body .kanban-plugin__item-form .kanban-plugin__grow-wrap {
   padding: 6px 8px;
   border-radius: 6px;
   border: 1px solid var(--background-modifier-border);
@@ -7753,7 +7753,8 @@ body .kanban-plugin__lane-items {
   background-color: var(--background-secondary); }
 
 body .kanban-plugin__item-input-wrapper {
-  border: 0; }
+  border: 0;
+  padding-top: 1px; }
 
 body .kanban-plugin__item-form,
 body .kanban-plugin__item-button-wrapper {
