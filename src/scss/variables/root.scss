@@ -15,8 +15,6 @@
   --font-smaller:11px;
   --font-smallest:10px;
 
-  --font-code:calc(var(--font-normal) * 0.9);
-
   --font-inputs:13px;
   --font-settings:15px;
   --font-settings-small:12px;
@@ -84,5 +82,8 @@
 
   --input-height:32px;
   --header-height:40px;
+
+  --mobile-left-sidebar-width:280pt;
+  --mobile-right-sidebar-width:240pt;
 
 }

@@ -313,6 +313,11 @@ body:not(.is-mobile) .modal {
 
   /* Tablet */
   @media (min-width:400pt) {
+    .modal .vertical-tab-header,
+    .modal .vertical-tabs-container,
+    .modal .vertical-tab-content-container {
+      border-radius:15px !important;
+    }
     .modal,
     .modal-container .modal.mod-settings  {
       max-width:800px;
@@ -339,7 +344,6 @@ body:not(.is-mobile) .modal {
 
   /* Phone */
   @media (max-width:400pt) {
-
     .modal {
       border-radius:0;
       border:none;

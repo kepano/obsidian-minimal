@@ -702,4 +702,25 @@ settings:
         type: variable-number
         default: 10
         format: px
+    - 
+        id: font-smallest
+        title: Tiny font size
+        description: Font size in px of tiny text
+        type: variable-number
+        default: 10
+        format: px
+    - 
+        id: mobile-left-sidebar-width
+        title: Mobile left sidebar width
+        description: Maximum width for pinned left sidebar on mobile
+        type: variable-number
+        default: 280
+        format: pt
+    - 
+        id: mobile-right-sidebar-width
+        title: Mobile right sidebar width
+        description: Maximum width for pinned right sidebar on mobile
+        type: variable-number
+        default: 240
+        format: pt
 */

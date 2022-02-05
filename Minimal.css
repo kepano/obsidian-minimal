@@ -51,7 +51,6 @@ SOFTWARE.
   --font-small:13px;
   --font-smaller:11px;
   --font-smallest:10px;
-  --font-code:calc(var(--font-normal) * 0.9);
   --font-inputs:13px;
   --font-settings:15px;
   --font-settings-small:12px;
@@ -110,7 +109,9 @@ SOFTWARE.
   --radius-m:5px;
   --radius-l:10px;
   --input-height:32px;
-  --header-height:40px; }
+  --header-height:40px;
+  --mobile-left-sidebar-width:280pt;
+  --mobile-right-sidebar-width:240pt; }
 
 /* Dynamic colors
 
@@ -507,7 +508,8 @@ body {
   --font-adaptive-smaller:var(--font-smaller);
   --font-adaptive-smallest:var(--font-smallest);
   --line-width-adaptive:var(--line-width);
-  --line-width-wide:calc(var(--line-width) + 12.5%); }
+  --line-width-wide:calc(var(--line-width) + 12.5%);
+  --font-code:calc(var(--font-adaptive-normal) * 0.9); }
 
 /* Phone font sizes */
 @media (max-width: 400pt) {
@@ -1963,6 +1965,10 @@ body:not(.is-mobile) .modal {
   .is-mobile .modal.mod-settings .vertical-tab-content-container {
     border: 0; }
   @media (min-width: 400pt) {
+    .is-mobile .modal .vertical-tab-header,
+    .is-mobile .modal .vertical-tabs-container,
+    .is-mobile .modal .vertical-tab-content-container {
+      border-radius: 15px !important; }
     .is-mobile .modal,
     .is-mobile .modal-container .modal.mod-settings {
       max-width: 800px;
@@ -5667,9 +5673,11 @@ body.minimal-folding.is-mobile .view-header-title,
     border: none;
     box-shadow: 0 5px 50px 5px rgba(0, 0, 0, 0.05); }
   .is-mobile .workspace-drawer.mod-left.is-pinned {
-    max-width: 280pt; }
+    max-width: var(--mobile-left-sidebar-width);
+    min-width: 150pt; }
   .is-mobile .workspace-drawer.mod-right.is-pinned {
-    max-width: 240pt; }
+    max-width: var(--mobile-right-sidebar-width);
+    min-width: 150pt; }
   .is-mobile .workspace-drawer.mod-right.is-pinned {
     border-right: none; }
   .is-mobile .workspace-leaf-content[data-type=starred] .item-list {
@@ -9388,4 +9396,25 @@ settings:
         type: variable-number
         default: 10
         format: px
+    - 
+        id: font-smallest
+        title: Tiny font size
+        description: Font size in px of tiny text
+        type: variable-number
+        default: 10
+        format: px
+    - 
+        id: mobile-left-sidebar-width
+        title: Mobile left sidebar width
+        description: Maximum width for pinned left sidebar on mobile
+        type: variable-number
+        default: 280
+        format: pt
+    - 
+        id: mobile-right-sidebar-width
+        title: Mobile right sidebar width
+        description: Maximum width for pinned right sidebar on mobile
+        type: variable-number
+        default: 240
+        format: pt
 */
