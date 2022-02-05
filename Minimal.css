@@ -3481,6 +3481,10 @@ button:hover,
   box-shadow: 0 2px 3px 0px var(--btn-shadow-color);
   transition: background-color 0.2s ease-out, border-color 0.2s ease-out; }
 
+.is-mobile button.copy-code-button {
+  width: auto;
+  margin-right: 4px; }
+
 /* Dropdowns */
 .dropdown,
 body .addChoiceBox #addChoiceTypeSelector {
