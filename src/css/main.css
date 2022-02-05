@@ -118,7 +118,8 @@
   --blue:#6c99bb; }
 
 .theme-light,
-.theme-light.minimal-default-light {
+.theme-light.minimal-default-light,
+body .excalidraw {
   --accent-l:50%;
   --base-l:96%;
   --bg1:white;
@@ -210,7 +211,8 @@
 .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark,
-.theme-dark.minimal-default-dark {
+.theme-dark.minimal-default-dark,
+.excalidraw.theme--dark {
   --accent-l:60%;
   --base-l:15%;
   --bg1:
@@ -7591,6 +7593,7 @@ body .excalidraw.theme--dark {
   --color-primary-darker:var(--interactive-accent-hover);
   --color-primary-darkest:var(--interactive-accent-hover);
   --ui-font:var(--font-ui);
+  --island-bg-color:var(--background-secondary);
   --button-gray-1:var(--background-tertiary);
   --button-gray-2:var(--background-tertiary);
   --focus-highlight-color:var(--background-modifier-border-focus);

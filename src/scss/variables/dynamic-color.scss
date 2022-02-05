@@ -37,7 +37,8 @@
 }
 
 .theme-light,
-.theme-light.minimal-default-light {
+.theme-light.minimal-default-light,
+body .excalidraw {
 
   --accent-l:50%;
   --base-l:96%;
@@ -146,7 +147,8 @@
 .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark,
-.theme-dark.minimal-default-dark {
+.theme-dark.minimal-default-dark,
+.excalidraw.theme--dark {
 
   --accent-l:60%;
   --base-l:15%;
