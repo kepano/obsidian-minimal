@@ -4871,21 +4871,16 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
 /* Add padding to account for gutter in Edit mode when folding is on */
 body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title,
 .minimal-folding .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
   padding-left: var(--folding-offset); }
 
+body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+  padding-left: var(--folding-offset); }
+
+body.is-mobile .markdown-source-view.mod-cm6.is-folding .cm-contentContainer,
 .minimal-folding .allow-fold-lists.markdown-preview-view .markdown-embed .markdown-preview-sizer {
   padding-left: 0; }
 
-.is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters,
-.is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
-  transform: translateX(-6px); }
-
-@media (max-width: 750pt) {
-  .is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters,
-  .is-mobile.minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
-    transform: translateX(-12px); } }
 /* Full width media  */
 .full-width-media .markdown-preview-view .image-embed img:not([width]),
 .full-width-media .markdown-preview-view audio,
