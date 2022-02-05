@@ -1,0 +1,100 @@
+/* iOS style modals */
+
+:root {
+  --ios-radius:10px;
+  --ios-shadow:0 5px 100px rgba(0,0,0,0.15);
+  --ios-muted:#8e8e93;
+}
+
+.theme-light {
+  --ios-blue:#007aff;
+  --ios-red:#ff3c2f;
+  --ios-bg-translucent:rgba(255,255,255,0.85);
+  --ios-bg:white;
+  --ios-border:rgba(0,0,0,0.1);
+}
+.theme-dark {
+  --ios-blue:#0b84ff;
+  --ios-red:#ff453a;
+  --ios-bg-translucent:rgba(44,44,46,0.85);
+  --ios-bg:#2c2c2e;
+  --ios-border:rgba(255,255,255,0.15);
+}
+
+.is-ios {
+  --text-error:#ff453a;
+
+  .mod-confirmation .modal {
+    max-width:95vw;
+    overflow:visible;
+    background-color:rgba(0,0,0,0.07);
+    padding:0;
+    border-radius:var(--ios-radius);
+    box-shadow:var(--ios-shadow);
+    .modal-title {
+      text-align:center;
+      display:none;
+    }
+    .modal-content {
+      border-radius:var(--ios-radius) var(--ios-radius) 0 0;
+      background-color:var(--ios-bg-translucent);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+      font-size:13px;
+      margin:0;
+      text-align:center;
+      color:var(--ios-muted);
+      padding:15px;
+      p {
+        margin-block-start:0;
+        margin-block-end:0;
+      }
+    }
+    button {
+      background-color:var(--ios-bg-translucent);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+      margin:0;
+      border:none;
+      height:auto;
+      padding:28px 0;
+      line-height:0;
+      box-shadow:none;
+      color:var(--ios-blue);
+      font-weight:400;
+      border-radius:0;
+      font-size:18px;
+    }
+    button:hover {
+      background-color:transparent;
+      border:none;
+      box-shadow:none;
+      border-top:1px solid var(--ios-border);
+    }
+    .modal-button-container>.mod-warning:nth-last-child(3),
+    button.mod-warning {
+      border-top:1px solid var(--ios-border);
+      background-color:var(--ios-bg-translucent);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+      color:var(--ios-red);
+      font-weight:400;
+      text-decoration:none;
+    }
+    .modal-button-container>button:last-child {
+      border-top:none;
+      margin-top:10px;
+      font-weight:600;
+      border-radius:var(--ios-radius);
+      background-color:var(--ios-bg);
+    }
+    .modal-button-container>.mod-warning:nth-last-child(2) {
+      border-bottom-left-radius:var(--ios-radius);
+      border-bottom-right-radius:var(--ios-radius);
+    }
+    .modal-button-container>button:last-child:hover {
+      background-color:var(--ios-bg-translucent);
+    }
+  }
+
+}

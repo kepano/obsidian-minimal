@@ -135,7 +135,6 @@ body:not(.is-mobile) .modal {
   }
   .mod-confirmation .modal {
     border-radius:15px;
-    bottom:3.5vh;
     .modal-close-button {
       display:none;
     }
@@ -324,9 +323,10 @@ body:not(.is-mobile) .modal {
       transform:translateZ(0);
       border-radius:15px;
       margin-bottom:0;
-      bottom:5vh;
+      bottom:auto;
       overflow:hidden;
     }
+    .mod-confirmation .modal {}
     .modal-container .modal.mod-settings .vertical-tabs-container {
       transform:translateZ(0);
     }
@@ -353,6 +353,9 @@ body:not(.is-mobile) .modal {
     .modal.mod-settings {
       max-height:calc(100vh - 32px);
       box-shadow:0 -32px 0 0 var(--background-primary);
+    }
+    .mod-confirmation .modal {
+      bottom:4.5vh;
     }
     .modal .search-input-container {
       width:100%;
