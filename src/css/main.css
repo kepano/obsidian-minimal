@@ -1040,7 +1040,8 @@ h1,
   color: var(--text-muted);
   font-size: var(--font-adaptive-small); }
 
-.cm-s-obsidian .cm-hmd-frontmatter {
+.cm-s-obsidian .cm-hmd-frontmatter,
+.cm-s-obsidian .cm-def.cm-hmd-frontmatter {
   font-size: var(--font-adaptive-small);
   color: var(--text-muted); }
 
