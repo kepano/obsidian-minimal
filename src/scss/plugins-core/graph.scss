@@ -1,24 +1,28 @@
 /* Graphs */
-:root {
+.theme-dark,
+.theme-light {
   --node:var(--text-muted);
   --node-focused:var(--text-accent);
+  --node-tag:var(--red);
+  --node-attachment:var(--yellow);
+  --node-unresolved:var(--text-faint);
 }
 
 /* Fill color for nodes */
 .graph-view.color-fill {
-  color:var(--text-muted);
+  color:var(--node);
 }
 /* Fill color for current local node */
 .graph-view.color-fill-focused {
-  color:var(--text-accent);
+  color:var(--node-focused);
 }
 /* Fill color for nodes on hover */
 .graph-view.color-fill-highlight {
-  color:var(--text-accent);
+  color:var(--node-focused);
 }
 /* Stroke color for nodes */
 .graph-view.color-circle {
-  color:var(--text-accent);
+  color:var(--node-focused);
 }
 /* Line color */
 .graph-view.color-line {
@@ -26,15 +30,25 @@
 }
 /* Line color on hover */
 .graph-view.color-line-highlight {
-  color:var(--text-accent);
+  color:var(--node-focused);
   border:0;
 }
 /* Text color */
 .graph-view.color-text {
   color:var(--text-normal);
 }
-.graph-view.color-fill-unresolved {
-  color:var(--text-faint);
+/* Tag nodes */
+.theme-dark .graph-view.color-fill-tag,
+.theme-light .graph-view.color-fill-tag {
+  color:var(--node-tag);
+}
+.theme-dark .graph-view.color-fill-attachment,
+.theme-light .graph-view.color-fill-attachment {
+  color:var(--node-attachment);
+}
+.theme-dark .graph-view.color-fill-unresolved,
+.theme-light .graph-view.color-fill-unresolved {
+  color:var(--node-unresolved);
 }
 
 /* Full bleed (takes up full height) */

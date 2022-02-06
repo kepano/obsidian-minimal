@@ -12,7 +12,7 @@ settings:
         description: Use the Minimal Theme Settings plugin to access hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization.
     -
         id: interface
-        title: Interface
+        title: Interface colors
         type: heading
         level: 2
         collapsed: true
@@ -75,6 +75,69 @@ settings:
     - 
         id: ui3
         title: Border color (focused)
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: extended-palette
+        title: Extended palette
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: red
+        title: Red
+        description: Extended palette colors are defaults used for progress bar status, syntax highlighting, colorful headings, and graph nodes
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: orange
+        title: Orange
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: yellow
+        title: Yellow
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: green
+        title: Green
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: cyan
+        title: Cyan
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: purple
+        title: Purple
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: pink
+        title: Pink
         type: variable-themed-color
         opacity: true
         format: hex
@@ -267,7 +330,10 @@ settings:
                 value: normal
             - 
                 label: Small caps
-                value: small-caps 
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps 
     - 
         id: h1-style
         title: H1 font style
@@ -281,6 +347,12 @@ settings:
             - 
                 label: Italic
                 value: italic
+    -
+        id: h1-l
+        title: H1 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false
     -
         id: level-2-headings
         title: Level 2 Headings
@@ -319,6 +391,9 @@ settings:
             - 
                 label: Small caps
                 value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
     - 
         id: h2-style
         title: H2 font style
@@ -332,6 +407,12 @@ settings:
             - 
                 label: Italic
                 value: italic
+    -
+        id: h2-l
+        title: H2 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false
     -
         id: level-3-headings
         title: Level 3 Headings
@@ -370,6 +451,9 @@ settings:
             - 
                 label: Small caps
                 value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
     - 
         id: h3-style
         title: H3 font style
@@ -383,6 +467,12 @@ settings:
             - 
                 label: Italic
                 value: italic
+    -
+        id: h3-l
+        title: H3 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false
     -
         id: level-4-headings
         title: Level 4 Headings
@@ -420,7 +510,10 @@ settings:
                 value: normal
             - 
                 label: Small caps
-                value: small-caps 
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps 
     - 
         id: h4-style
         title: H4 font style
@@ -434,6 +527,12 @@ settings:
             - 
                 label: Italic
                 value: italic
+    -
+        id: h4-l
+        title: H4 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false   
     - 
         id: level-5-headings
         title: Level 5 Headings
@@ -471,7 +570,10 @@ settings:
                 value: normal
             - 
                 label: Small caps
-                value: small-caps 
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps 
     - 
         id: h5-style
         title: H5 font style
@@ -485,6 +587,12 @@ settings:
             - 
                 label: Italic
                 value: italic
+    -
+        id: h5-l
+        title: H5 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false
     -
         id: level-6-headings
         title: Level 6 Headings
@@ -523,6 +631,9 @@ settings:
             - 
                 label: Small caps
                 value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
     - 
         id: h6-style
         title: H6 font style
@@ -536,6 +647,12 @@ settings:
             - 
                 label: Italic
                 value: italic
+    -
+        id: h6-l
+        title: H6 divider line
+        type: class-toggle
+        description: Adds a border below the heading
+        default: false
     -
         id: blockquotes
         title: Blockquotes
@@ -617,6 +734,72 @@ settings:
         description: Accepts any CSS font-size value
         type: variable-text
         default: 13px
+    -
+        id: graphs
+        title: Graphs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: node
+        title: Node color
+        description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: node-focused
+        title: Active node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-tag
+        title: Tag node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-attachment
+        title: Attachment node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-unresolved
+        title: Unresolved node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: translucency
+        title: Translucency
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: bg-translucency-light
+        title: Translucency (light mode)
+        description: Sidebar translucency in light mode. Requires turning on "Translucent window" in Appearance settings, and "Translucent sidebar" in Minimal settings.
+        type: variable-number-slider
+        default: 0.7
+        min: 0
+        max: 1
+        step: 0.05
+    -
+        id: bg-translucency-dark
+        title: Translucency (dark mode)
+        description: Sidebar translucency in dark mode
+        type: variable-number-slider
+        default: 0.85
+        min: 0
+        max: 1
+        step: 0.05
 
 */
 
@@ -627,7 +810,6 @@ settings:
     - 
         id: cards-min-width
         title: Card minimum width
-        description: 
         type: variable-text
         default: 180px
     - 
@@ -639,25 +821,21 @@ settings:
     - 
         id: cards-mobile-width
         title: Card minimum width on mobile
-        description: 
         type: variable-text
         default: 120px
     - 
         id: cards-padding
         title: Card padding
-        description: 
         type: variable-text
         default: 1.2em
     - 
         id: cards-image-height
         title: Card maximum image height
-        description: 
         type: variable-text
         default: 400px
     - 
         id: cards-border-width
         title: Card border width
-        description: 
         type: variable-text
         default: 1px
     -  

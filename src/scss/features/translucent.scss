@@ -1,21 +1,18 @@
 /* Translucent */
-
-.theme-light.is-translucent.mod-macos,
-.theme-dark.is-translucent.mod-macos {
+:root {
+  --bg-translucency-light:0.7;
+  --bg-translucency-dark:0.85;
+}
+.theme-light.frosted-sidebar.is-translucent,
+.theme-dark.frosted-sidebar.is-translucent {
   --opacity-translucency:1;
 }
-.theme-light.is-translucent.mod-macos {
-  --bg-translucency:0.7;
-}
-.theme-dark.is-translucent.mod-macos {
-  --bg-translucency:0.9;
-}
-.is-translucent.mod-macos .workspace-split:not(.mod-right-split) .workspace-tabs {
+.is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs {
   background:transparent;
 }
-.is-translucent.mod-macos .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+.is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs:after {
   background:var(--bg2);
-  opacity:var(--bg-translucency);
+  opacity:var(--bg-translucency-light);
   top:-50px;
   content:"";
   height:120%;
@@ -23,9 +20,15 @@
   width:100%;
   z-index:-10;
 }
-.theme-light.is-translucent.mod-macos.minimal-light-white .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+.theme-dark.is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+  opacity:var(--bg-translucency-dark);
+}
+.theme-light.is-translucent.frosted-sidebar.minimal-light-white .workspace-split:not(.mod-right-split) .workspace-tabs:after {
   background:white;
 }
-.theme-dark.is-translucent.mod-macos.minimal-dark-black .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+.theme-dark.is-translucent.frosted-sidebar.minimal-dark-black .workspace-split:not(.mod-right-split) .workspace-tabs:after {
   background:black;
+}
+.is-translucent .status-bar {
+  margin:0;
 }

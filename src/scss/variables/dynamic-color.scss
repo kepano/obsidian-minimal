@@ -30,10 +30,10 @@
   --yellow:#e5b567;
   --green:#a8c373;
   --orange:#e57e43;
-  --purple:#9e86c8;
-  --pink:#b05279;
   --cyan:#73bbb2;
   --blue:#6c99bb;
+  --purple:#9e86c8;
+  --pink:#b05279;
 }
 
 .theme-light,
@@ -56,8 +56,8 @@ body .excalidraw {
     hsla(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) - 25%),
-      0.2
+      calc(var(--base-l) - 50%),
+      0.12
     );
 
   --ui1:
@@ -171,8 +171,8 @@ body .excalidraw {
     hsla(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 20%),
-      0.2
+      calc(var(--base-l) + 40%),
+      0.12
     );
 
   --ui1:

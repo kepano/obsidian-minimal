@@ -1,6 +1,13 @@
 /* Things */
 
 .theme-light.minimal-things-light {
+  --blue:#1b61c2;
+}
+.theme-dark.minimal-things-dark {
+  --blue:#4d95f7;
+}
+
+.theme-light.minimal-things-light {
   --bg1:white;
   --bg2:#f5f6f8;
   --bg3:rgba(162,177,187,0.25);
@@ -21,6 +28,7 @@
 
   --h1-color:#1b61c2;
   --h2-color:#1b61c2;
+  --h3-color:#1b61c2;
   --h4-color:#1b61c2;
 }
 .theme-light.minimal-things-light.minimal-light-tonal {
@@ -62,6 +70,7 @@
 
   --h1-color:#4d95f7;
   --h2-color:#4d95f7;
+  --h3-color:#4d95f7;
   --h4-color:#4d95f7;
 }
 
