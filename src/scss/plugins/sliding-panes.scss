@@ -66,6 +66,9 @@ body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-r
   left:0;
   width:26px;
 }
+body.is-mobile.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
+  height:30px;
+}
 body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
   padding-bottom:33px;
 }

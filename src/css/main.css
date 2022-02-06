@@ -5859,6 +5859,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
 .is-mobile .view-header-icon {
   padding: 16px 10px 16px; }
 
+.is-mobile .mod-root .view-header-icon,
 .is-mobile .mod-left.is-pinned + .mod-root .view-header-icon {
   display: none; }
 
@@ -6044,9 +6045,9 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
 /* --------------- */
 /* Tablet */
 @media (min-width: 400pt) {
-  .mod-left:not(.is-pinned) + .mod-root .view-header-icon {
+  .mod-left:not(.is-pinned) + .mod-root > div:first-of-type .view-header-icon {
     opacity: var(--icon-muted);
-    margin-left: 2px; }
+    display: flex; }
 
   .mod-left:not(.is-pinned) + .mod-root .view-header-icon:hover,
   .mod-left:not(.is-pinned) + .mod-root .view-header-icon .three-horizontal-bars {
@@ -8268,6 +8269,9 @@ body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-r
   margin: 5px 0 0 0;
   left: 0;
   width: 26px; }
+
+body.is-mobile.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
+  height: 30px; }
 
 body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
   padding-bottom: 33px; }
