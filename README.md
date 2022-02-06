@@ -56,19 +56,20 @@ Every screen in the Obsidian app has been revised to create a cohesive experienc
 
 ## Features
 
-The following features can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin or Style Settings plugin (see companion plugins instructions below)
+The following options can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin (see companion plugins instructions below)
 
 - Background contrast options for light and dark mode, including true black ideal for OLED devices
 - Color schemes including Dracula, Gruvbox, Nord, Solarized, [and more](#color-schemes)
+- Fonts and font sizes
+
+**Feature toggles**
+
 - Focus mode — hides title bar and status bar
-- Custom icons
-- Fancy cursor — uses accent color for the cursor
-- Colorful headings
-- Translucent sidebar
-- Hide sidebar borders
-- Trim filenames
-- Cursor options
-- Click and hold to expand images
+- Fancy cursor — use accent color for the cursor
+- Colorful headings — use different colors for each heading
+- Translucent sidebar — frosted glass style sidebar
+- Hide sidebar borders — removes dividing lines for a more minimal appearance
+- Trim filenames — file names are trimmed to a single line
 
 ## Installation
 
