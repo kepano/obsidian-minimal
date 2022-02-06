@@ -76,12 +76,12 @@ To install the theme
 
 - Open Obsidian Settings
 - Go to `Appearance` and click `Manage`
-- Under community themes search for Minimal and click `Use`
+- Under community themes search for "Minimal" and click `Use`
 
 To install the companion plugin
 
 - Go to `Community plugins` and turn off `Safe mode`
-- Under community themes search Minimal Theme Settings and click `Install`, then `Enable`
+- Under community themes search for "Minimal Theme Settings" and click `Install`, then `Enable`
 
 Have a question? Join the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
 
