@@ -6,8 +6,8 @@
   border:solid var(--quote-opening-modifier);
   border-width:0px 0px 0px 1px;
   background-color:transparent;
-  padding:0 0 0 calc(var(--nested-padding) / 2);
-  margin-inline-start:var(--nested-padding);
+  padding:0 0 0 var(--nested-padding);
+  margin-inline-start:0;
   font-size:var(--blockquote-size);
   font-style:var(--blockquote-style);
   color:var(--text-blockquote);

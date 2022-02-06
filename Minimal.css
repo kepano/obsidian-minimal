@@ -99,7 +99,7 @@ SOFTWARE.
   --border-width:1px;
   --border-width-alt:1px;
   --folding-offset:16px;
-  --nested-padding:3.5%;
+  --nested-padding:30px;
   /* Quotes and transclusions */
   --list-padding:2em;
   /* List padding */
@@ -551,8 +551,8 @@ body {
   border: solid var(--quote-opening-modifier);
   border-width: 0px 0px 0px 1px;
   background-color: transparent;
-  padding: 0 0 0 calc(var(--nested-padding) / 2);
-  margin-inline-start: var(--nested-padding);
+  padding: 0 0 0 var(--nested-padding);
+  margin-inline-start: 0;
   font-size: var(--blockquote-size);
   font-style: var(--blockquote-style);
   color: var(--text-blockquote); }
@@ -1483,8 +1483,8 @@ body.is-mobile .CodeMirror-foldgutter-open:after {
 
 /* Icons and icon buttons */
 body svg.right-triangle {
-  color: var(--text-faint);
-  background-color: var(--text-faint);
+  color: var(--text-muted);
+  background-color: var(--text-muted);
   height: 12px;
   width: 12px;
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><path fill="black" stroke-width="2" stroke="currentColor" d="M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z"></path></svg>'); }
@@ -1647,6 +1647,7 @@ a[href*="obsidian://search"] {
   color: var(--text-accent-hover); }
 
 a em,
+.cm-s-obsidian span.cm-url,
 .cm-s-obsidian .cm-url,
 .cm-s-obsidian .cm-active .cm-url,
 .is-live-preview.cm-s-obsidian .cm-link,
