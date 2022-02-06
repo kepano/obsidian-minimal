@@ -249,6 +249,7 @@ settings:
         id: tx1
         title: Normal text color
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -263,6 +264,7 @@ settings:
         id: tx2
         title: Muted text color
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -270,6 +272,7 @@ settings:
         id: tx3
         title: Faint text color
         type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
