@@ -696,9 +696,16 @@ settings:
                 label: Crosshair
                 value: crosshair
     - 
+        id: font-smaller
+        title: Smaller font size
+        description: Font size in px of smaller text
+        type: variable-number
+        default: 11
+        format: px
+    - 
         id: font-smallest
-        title: Tiny font size
-        description: Font size in px of tiny text
+        title: Smallest font size
+        description: Font size in px of smallest text
         type: variable-number
         default: 10
         format: px

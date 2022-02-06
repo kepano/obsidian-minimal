@@ -4,14 +4,28 @@
 .theme-dark.is-translucent.mod-macos {
   --opacity-translucency:1;
 }
-
-.is-translucent.mod-macos .workspace-ribbon.side-dock-ribbon.mod-left,
-.is-translucent.mod-macos .workspace-split.mod-left-split,
-.is-translucent.mod-macos .titlebar {
-  --opacity-translucency:0.7;
+.theme-light.is-translucent.mod-macos {
+  --bg-translucency:0.7;
 }
-.theme-light.is-translucent.mod-macos .workspace-ribbon.side-dock-ribbon.mod-left,
-.theme-light.is-translucent.mod-macos .workspace-split.mod-left-split,
-.theme-light.is-translucent.mod-macos .titlebar {
-  --opacity-translucency:0.7;
+.theme-dark.is-translucent.mod-macos {
+  --bg-translucency:0.9;
+}
+.is-translucent.mod-macos .workspace-split:not(.mod-right-split) .workspace-tabs {
+  background:transparent;
+}
+.is-translucent.mod-macos .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+  background:var(--bg2);
+  opacity:var(--bg-translucency);
+  top:-50px;
+  content:"";
+  height:120%;
+  position:fixed;
+  width:100%;
+  z-index:-10;
+}
+.theme-light.is-translucent.mod-macos.minimal-light-white .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+  background:white;
+}
+.theme-dark.is-translucent.mod-macos.minimal-dark-black .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+  background:black;
 }

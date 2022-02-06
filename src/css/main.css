@@ -5521,12 +5521,12 @@ body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::b
 
 */
 /* Scroll indicator for sidebar containers */
-body:not(.is-mobile) .mod-left-split .item-list,
-body:not(.is-mobile) .mod-left-split .nav-files-container,
-body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type='search'] .search-result-container,
-body:not(.is-mobile) .mod-left-split .tag-container,
-body:not(.is-mobile) .mod-left-split .outgoing-link-pane,
-body:not(.is-mobile) .mod-left-split .backlink-pane {
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .item-list,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .nav-files-container,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type='search'] .search-result-container,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .tag-container,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .outgoing-link-pane,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .backlink-pane {
   background: linear-gradient(var(--background-secondary) 10%, rgba(255, 255, 255, 0)) center top, linear-gradient(var(--background-modifier-border) 100%, rgba(0, 0, 0, 0)) center top;
   background-repeat: no-repeat;
   background-size: 100% 40px, 91% var(--border-width);
@@ -5585,15 +5585,30 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 .theme-dark.is-translucent.mod-macos {
   --opacity-translucency:1; }
 
-.is-translucent.mod-macos .workspace-ribbon.side-dock-ribbon.mod-left,
-.is-translucent.mod-macos .workspace-split.mod-left-split,
-.is-translucent.mod-macos .titlebar {
-  --opacity-translucency:0.7; }
+.theme-light.is-translucent.mod-macos {
+  --bg-translucency:0.7; }
 
-.theme-light.is-translucent.mod-macos .workspace-ribbon.side-dock-ribbon.mod-left,
-.theme-light.is-translucent.mod-macos .workspace-split.mod-left-split,
-.theme-light.is-translucent.mod-macos .titlebar {
-  --opacity-translucency:0.7; }
+.theme-dark.is-translucent.mod-macos {
+  --bg-translucency:0.9; }
+
+.is-translucent.mod-macos .workspace-split:not(.mod-right-split) .workspace-tabs {
+  background: transparent; }
+
+.is-translucent.mod-macos .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+  background: var(--bg2);
+  opacity: var(--bg-translucency);
+  top: -50px;
+  content: "";
+  height: 120%;
+  position: fixed;
+  width: 100%;
+  z-index: -10; }
+
+.theme-light.is-translucent.mod-macos.minimal-light-white .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+  background: white; }
+
+.theme-dark.is-translucent.mod-macos.minimal-dark-black .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+  background: black; }
 
 /* Turn off file name trimming */
 .full-file-names .tree-item-inner,

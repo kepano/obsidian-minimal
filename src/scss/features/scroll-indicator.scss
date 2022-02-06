@@ -1,11 +1,11 @@
 /* Scroll indicator for sidebar containers */
 
-body:not(.is-mobile) .mod-left-split .item-list,
-body:not(.is-mobile) .mod-left-split .nav-files-container,
-body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type='search'] .search-result-container,
-body:not(.is-mobile) .mod-left-split .tag-container,
-body:not(.is-mobile) .mod-left-split .outgoing-link-pane,
-body:not(.is-mobile) .mod-left-split .backlink-pane {
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .item-list,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .nav-files-container,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type='search'] .search-result-container,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .tag-container,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .outgoing-link-pane,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .backlink-pane {
   background:
     linear-gradient(
       var(--background-secondary) 10%,
