@@ -58,10 +58,13 @@ Every screen in the Obsidian app has been revised to create a cohesive experienc
 
 The following features can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin or Style Settings plugin (see companion plugins instructions below)
 
-- Background styles for light and dark mode, including true black ideal for OLED devices
-- Focus mode — hides everything but the text when sidebars are collapsed
+- Background contrast options for light and dark mode, including true black ideal for OLED devices
+- Color schemes including Dracula, Gruvbox, Nord, Solarized, [and more](#color-schemes)
+- Focus mode — hides title bar and status bar
 - Custom icons
 - Fancy cursor — uses accent color for the cursor
+- Colorful headings
+- Translucent sidebar
 - Hide sidebar borders
 - Trim filenames
 - Cursor options
@@ -72,6 +75,8 @@ The following features can be accessed using [Minimal Theme Settings](https://gi
 - Open Obsidian Settings
 - Go to `Appearance` and click `Manage`
 - Under community themes search for Minimal and click `Use`
+- Go to `Community plugins` and turn off `Safe mode`
+- Under community themes search Minimal Theme Settings and click `Install`, then `Enable`
 
 Have a question? Join the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
 
