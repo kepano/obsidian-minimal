@@ -1,9 +1,15 @@
 /* Sidebar documents */
 
+.mod-left-split .markdown-preview-sizer>div,
+.mod-left-split .cm-contentContainer {
+  padding-left:0 !important;
+  max-width:100% !important;
+}
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
+.workspace > .workspace-split:not(.mod-root) .cm-scroller,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
   font-size:var(--font-adaptive-small);
-  line-height:1.2;}
+  line-height:1.25;}
 .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .markdown-preview-view {
   padding:0 15px;
 }

@@ -55,7 +55,12 @@
   padding-top:3px;
 }
 
+
 span.cm-image-marker,
+.cm-s-obsidian span.cm-footref.cm-formatting.cm-formatting-link.cm-formatting-link-end,
+.cm-s-obsidian .cm-formatting-link+span.cm-link.cm-formatting.cm-formatting-link-end,
+.cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
+.cm-s-obsidian span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
 .cm-s-obsidian span.cm-formatting-link {
   color:var(--text-faint);
 }

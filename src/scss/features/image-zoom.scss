@@ -29,11 +29,13 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
   bottom:0;
 
 }
-body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active:after,
+body:not(.is-mobile):not(.zoom-off) .view-content img[referrerpolicy='no-referrer']:active {
+  background-color:var(--background-primary);
+}
 body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active:after {
   background-color:var(--background-primary);
   opacity:0.9;
-  content:"";
+  content:" ";
   height:100%;
   width:calc(100% - 1px);
   position:fixed;

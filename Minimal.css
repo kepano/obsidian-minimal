@@ -891,6 +891,10 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
   padding-top: 3px; }
 
 span.cm-image-marker,
+.cm-s-obsidian span.cm-footref.cm-formatting.cm-formatting-link.cm-formatting-link-end,
+.cm-s-obsidian .cm-formatting-link + span.cm-link.cm-formatting.cm-formatting-link-end,
+.cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
+.cm-s-obsidian span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
 .cm-s-obsidian span.cm-formatting-link {
   color: var(--text-faint); }
 
@@ -1642,6 +1646,7 @@ a[href*="obsidian://search"] {
 .is-live-preview.cm-s-obsidian span.cm-link:hover {
   color: var(--text-accent-hover); }
 
+a em,
 .cm-s-obsidian .cm-url,
 .cm-s-obsidian .cm-active .cm-url,
 .is-live-preview.cm-s-obsidian .cm-link,
@@ -5117,11 +5122,13 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
   right: 0;
   bottom: 0; }
 
-body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active:after,
+body:not(.is-mobile):not(.zoom-off) .view-content img[referrerpolicy='no-referrer']:active {
+  background-color: var(--background-primary); }
+
 body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active:after {
   background-color: var(--background-primary);
   opacity: 0.9;
-  content: "";
+  content: " ";
   height: 100%;
   width: calc(100% - 1px);
   position: fixed;
@@ -5575,10 +5582,16 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
   background-attachment: local, scroll; }
 
 /* Sidebar documents */
+.mod-left-split .markdown-preview-sizer > div,
+.mod-left-split .cm-contentContainer {
+  padding-left: 0 !important;
+  max-width: 100% !important; }
+
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
+.workspace > .workspace-split:not(.mod-root) .cm-scroller,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
   font-size: var(--font-adaptive-small);
-  line-height: 1.2; }
+  line-height: 1.25; }
 
 .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .markdown-preview-view {
   padding: 0 15px; }
@@ -7810,7 +7823,7 @@ body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspac
   transition: padding-top 0.6s linear; }
 
 /* Include support for Electron Window Tweaker */
-body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
+body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs:nth-child(3) {
   padding-top: calc(24px + var(--ewt-traffic-light-y));
   transition: padding-top 0.6s linear; }
 
