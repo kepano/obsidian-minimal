@@ -6167,6 +6167,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
 .is-ios {
   --text-error:#ff453a; }
   .is-ios .mod-confirmation .modal {
+    width: 400px;
     max-width: 95vw;
     overflow: visible;
     background-color: rgba(0, 0, 0, 0.07);
