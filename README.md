@@ -240,7 +240,7 @@ Plugin authors and developers can add support for Minimal theme by submitting a 
 
 ### Localization
 
-By default the **Text labels for primary navigation** feature uses English labels. To use this feature in other languages you will need to install a translation snippet found in the [translations folder](https://github.com/kepano/obsidian-minimal/tree/master/translations). To add a new language, create a snippet that matches the `aria-label` values to your language, with the two letter language code suffix added to the file name. [Here is an example of the French translation](https://github.com/kepano/obsidian-minimal/blob/master/translations/nav-labels-fr.css).
+By default the **Text labels for primary navigation** feature uses English labels. To use this feature in other languages you will need to install a translation snippet such as the ones found in the [translations folder](https://github.com/kepano/obsidian-minimal/tree/master/translations). To add support for another language, create a snippet that matches the `aria-label` values to your language, and add the two letter language code suffix added to the file name. [Here is an example of the French translation](https://github.com/kepano/obsidian-minimal/blob/master/translations/nav-labels-fr.css).
 
 Localization can also be added to Style Settings, [see instructions](https://github.com/mgmeyers/obsidian-style-settings#localization-support).
 
