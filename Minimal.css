@@ -1661,7 +1661,7 @@ a em,
 .cm-s-obsidian .cm-url,
 .cm-s-obsidian .cm-active .cm-url,
 .is-live-preview.cm-s-obsidian .cm-link,
-.cm-s-obsidian .cm-hmd-internal-link {
+.cm-s-obsidian.mod-cm6 .cm-hmd-internal-link {
   color: var(--text-accent); }
 
 .cm-url,
