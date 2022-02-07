@@ -7868,7 +7868,7 @@ body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspac
 
 /* Include support for Electron Window Tweaker */
 body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs:nth-child(3) {
-  padding-top: calc(18px + var(--ewt-traffic-light-y));
+  padding-top: calc(24px + var(--ewt-traffic-light-y));
   transition: padding-top 0.6s linear; }
 
 .hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
@@ -8747,6 +8747,9 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --accent-h:205;
   --accent-s:70%;
   --accent-l:48%;
+  --base-h:193;
+  --base-s:98%;
+  --base-l:11%;
   --bg1:#002b36;
   --bg2:#073642;
   --bg3:rgba(255,255,255,0.062);
@@ -8756,6 +8759,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx1:#93a1a1;
   --tx2:#657b83;
   --tx3:#31535B;
+  --tx4:#657b83;
   --ax1:#268bd2;
   --ax3:#268bd2;
   --hl1:#073642; }
