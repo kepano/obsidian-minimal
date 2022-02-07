@@ -2821,7 +2821,6 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
 .sync-status-icon.mod-working,
 .sync-status-icon.mod-success {
   color: var(--text-faint);
-  transition: color 200ms linear;
   cursor: var(--cursor); }
 
 .status-bar:hover .sync-status-icon.mod-working,
@@ -2829,6 +2828,10 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
 .status-bar:hover {
   color: var(--text-muted);
   transition: color 200ms linear; }
+
+.status-bar .plugin-sync:hover .sync-status-icon.mod-working,
+.status-bar .plugin-sync:hover .sync-status-icon.mod-success {
+  color: var(--text-normal); }
 
 .status-bar-item {
   padding: 0 5px; }
@@ -3077,7 +3080,7 @@ a.tag {
   color: var(--text-muted);
   font-size: var(--font-adaptive-small);
   font-family: var(--font-ui);
-  padding: 0.5px 8px 0.5px;
+  padding: 0.5px 8px 1px;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
