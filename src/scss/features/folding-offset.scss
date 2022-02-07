@@ -10,7 +10,6 @@ body.minimal-folding:not(.plugin-sliding-panes-rotate-header) .view-header-title
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
   padding-left:var(--folding-offset);
 }
-
 body.is-mobile .markdown-source-view.mod-cm6.is-folding .cm-contentContainer,
 .minimal-folding .allow-fold-lists.markdown-preview-view .markdown-embed .markdown-preview-sizer {
   padding-left:0;

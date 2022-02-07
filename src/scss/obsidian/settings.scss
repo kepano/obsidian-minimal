@@ -279,7 +279,7 @@ button.mod-cta,
   background-color:var(--background-tertiary);
 }
 .setting-hotkey {
-  background-color:var(--background-modifier-border);
+  background-color:var(--background-tertiary);
   padding:3px 4px 3px 8px;
   display:flex;
   align-items:center;
@@ -287,6 +287,9 @@ button.mod-cta,
 .setting-hotkey-icon.setting-delete-hotkey {
   margin-left:3px;
   cursor:var(--cursor);
+}
+.setting-delete-hotkey:hover {
+  background-color:transparent;
 }
 body:not(.minimal-icons) .setting-hotkey-icon.setting-delete-hotkey svg {
   width:16px;

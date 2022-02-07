@@ -2714,7 +2714,7 @@ button.mod-cta,
   background-color: var(--background-tertiary); }
 
 .setting-hotkey {
-  background-color: var(--background-modifier-border);
+  background-color: var(--background-tertiary);
   padding: 3px 4px 3px 8px;
   display: flex;
   align-items: center; }
@@ -2722,6 +2722,9 @@ button.mod-cta,
 .setting-hotkey-icon.setting-delete-hotkey {
   margin-left: 3px;
   cursor: var(--cursor); }
+
+.setting-delete-hotkey:hover {
+  background-color: transparent; }
 
 body:not(.minimal-icons) .setting-hotkey-icon.setting-delete-hotkey svg {
   width: 16px;
@@ -3034,11 +3037,12 @@ a.tag {
   color: var(--text-muted);
   font-size: var(--font-adaptive-small);
   font-family: var(--font-ui);
-  padding: 2px 8px 2px;
+  padding: 0.5px 8px 0.5px;
   text-align: center;
   text-decoration: none;
+  vertical-align: middle;
   display: inline-block;
-  margin: 2px 0 0 0;
+  margin: 1px 0;
   border-radius: 14px; }
 
 a.tag:hover {
@@ -3053,13 +3057,12 @@ a.tag:hover {
   font-family: var(--font-ui);
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  margin: 2px 0;
-  vertical-align: middle;
-  padding-top: 1px;
+  margin: 0;
+  vertical-align: text-bottom;
+  padding-top: 2px;
   border-left: none;
   border-right: none;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
   cursor: text; }
 
 span.cm-hashtag.cm-hashtag-begin {
@@ -4800,6 +4803,10 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   margin-left: 1px; }
 
 .is-mobile.fancy-cursor .mod-cm6 .cm-line .mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) .task-list-item-checkbox {
+  caret-color: var(--text-accent); }
+
+/* Prompt */
+.fancy-cursor input.prompt-input {
   caret-color: var(--text-accent); }
 
 /* Focus mode */
@@ -8018,6 +8025,9 @@ body .kanban-plugin__item-title p {
 
 body .kanban-plugin__item {
   background-color: var(--background-primary); }
+
+body .kanban-plugin__lane-form-wrapper {
+  border: 1px solid var(--background-modifier-border); }
 
 body .kanban-plugin__lane-header-wrapper {
   border-bottom: 0; }
