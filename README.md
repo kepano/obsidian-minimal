@@ -78,11 +78,17 @@ Have a question? Join the [Minimal channel](https://discord.com/channels/6860537
 
 ## Settings
 
-The following settings can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Many of these settings below can be toggled with [hotkeys](#hotkeys). Use the Style Settings plugin for even deeper customization.
+The following settings can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Many of these settings below can be toggled with [hotkeys](#hotkeys).
 
-- Background contrast options for light and dark mode, including true black ideal for OLED devices
-- Color schemes including Dracula, Gruvbox, Nord, Solarized, [and more](#color-schemes)
-- Fonts and font sizes
+### Interface colors and fonts
+
+- **Background contrast** —  includes true black dark mode for OLED devices
+- **Color scheme** — includes Dracula, Gruvbox, Nord, Solarized, [and more](#color-schemes)
+- **Accent color** — used for links and checkboxes and other elements
+- **Fonts** and **font size**
+- **Line width** — set normal line width and maximum width within a pane
+
+You can also use the Style Settings plugin for even deeper customization
 
 ### Feature toggles
 
@@ -96,7 +102,7 @@ The following settings can be accessed using [Minimal Theme Settings](https://gi
 
 ### Layout options
 
-Minimal includes layout options for images, tables and iframes. These can also be enabled on a per-file basis using [helper classes](#helper-filters-and-classes).
+Controls images, tables and iframes. These settings can also be enabled on a per-file basis using [helper classes](#helper-filters-and-classes).
 
 - **Image grids** — turns consecutive images into columns. To make a new row, add an extra line break between images. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
 - **Default element width** — controls the width of elements by type. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
@@ -106,7 +112,7 @@ Minimal includes layout options for images, tables and iframes. These can also b
 
 ### Preset color schemes
 
-Minimal comes loaded with color schemes that you can define separately for light and dark mode using the [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin, these include Dracula, Gruvbox, Nord, Notion, Solarized, and Things. 
+Minimal offers color schemes that can be separately selected for light and dark mode using the [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Color schemes include Dracula, Gruvbox, Nord, Notion, Solarized, and Things. 
 
 ![Minimal Theme Settings](https://kep-log.s3-us-west-2.amazonaws.com/minimal-color-schemes.gif)
 
