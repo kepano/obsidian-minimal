@@ -14,9 +14,9 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 - [Goals](#goals)
 - [Screenshots](#screenshots)
-- [Features](#features)
 - [Installation](#installation)
 - [Companion plugins](#companion-plugins)
+- [Settings](#settings)
 - [Color schemes](#color-schemes)
 - [Plugin support](#plugin-support)
 - [Helper classes](#helper-filters-and-classes)
@@ -54,24 +54,6 @@ Every screen in the Obsidian app has been revised to create a cohesive experienc
 
 ![](assets/minimal-modals.png)
 
-## Features
-
-The following options can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin (see companion plugins instructions below). Many of the features below can be toggled with [hotkeys](#hotkeys)
-
-- Background contrast options for light and dark mode, including true black ideal for OLED devices
-- Color schemes including Dracula, Gruvbox, Nord, Solarized, [and more](#color-schemes)
-- Fonts and font sizes
-
-### Feature toggles
-
-- **Text labels for primary navigation** — adds text labels the top left navigation, note that a translation snippet is necessary for languages other than English [more on localization](#localization)
-- **Focus mode** — hides title bar and status bar
-- **Fancy cursor** — use accent color for the cursor
-- **Colorful headings** — use different colors for each heading
-- **Translucent sidebar** — frosted glass style sidebar
-- **Hide sidebar borders** — removes dividing lines for a more minimal appearance
-- **Trim filenames** — file names are trimmed to a single line
-
 ## Installation
 
 To install the theme
@@ -92,9 +74,33 @@ Have a question? Join the [Minimal channel](https://discord.com/channels/6860537
 - [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) allows you to customize color schemes, fonts, [hotkeys](#hotkeys), and access the main feature toggles. This plugin is highly recommended for all users of Minimal.
 - [Hider plugin](https://github.com/kepano/obsidian-hider) is recommended to hide Obsidian UI elements such as window frame, scrollbars, tooltips, etc. When using Hider to turn off the main toolbar (AKA app ribbon), it can be accessed by hovering over the bottom left edge of the window.
 - [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography) is required for advanced layout features such as image grids and block width options.
-
 - [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings) allows you to create a custom color scheme. This plugin is optional.
 
+## Settings
+
+The following settings can be accessed using [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Many of these settings below can be toggled with [hotkeys](#hotkeys). Use the Style Settings plugin for even deeper customization.
+
+- Background contrast options for light and dark mode, including true black ideal for OLED devices
+- Color schemes including Dracula, Gruvbox, Nord, Solarized, [and more](#color-schemes)
+- Fonts and font sizes
+
+### Feature toggles
+
+- **Text labels for primary navigation** — adds text labels the top left navigation, note that a translation snippet is necessary for languages other than English [more on localization](#localization)
+- **Focus mode** — hides title bar and status bar
+- **Fancy cursor** — use accent color for the cursor
+- **Colorful headings** — use different colors for each heading
+- **Translucent sidebar** — frosted glass style sidebar
+- **Hide sidebar borders** — removes dividing lines for a more minimal appearance
+- **Trim filenames** — file names are trimmed to a single line
+
+### Default layout options
+
+Minimal includes layout options for images, tables and iframes. These can also be enabled on a per-file basis using [helper classes](#helper-filters-and-classes).
+
+- **Image grids** — turns consecutive images into columns. To make a new row, add an extra line break between images. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
+- **Default element width** — controls the width of elements by type. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
+- **Trim Dataview columns** — disables text wrapping in Dataview tables, and sets a maximum width that trims long text
 
 ## Color schemes
 
