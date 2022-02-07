@@ -94,7 +94,7 @@ The following settings can be accessed using [Minimal Theme Settings](https://gi
 - **Hide sidebar borders** — removes dividing lines for a more minimal appearance
 - **Trim filenames** — file names are trimmed to a single line
 
-### Default layout options
+### Layout options
 
 Minimal includes layout options for images, tables and iframes. These can also be enabled on a per-file basis using [helper classes](#helper-filters-and-classes).
 
