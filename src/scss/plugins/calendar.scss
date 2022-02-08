@@ -76,10 +76,12 @@
   font-weight:400;
   color:var(--text-normal);
 }
+#calendar-container .today.active,
 #calendar-container .today {
   color:var(--text-accent);
   font-weight:600;
 }
+#calendar-container .today.active .dot,
 #calendar-container .today .dot {
   fill:var(--text-accent);
 }

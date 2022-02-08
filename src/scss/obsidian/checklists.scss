@@ -7,11 +7,11 @@
   --checkbox-margin:0px 5px 0px -1.35em;
 }
 .checkbox-square {
-  --checkbox-size:16px;
+  --checkbox-size:15px;
   --checkbox-radius:4px;
   --checkbox-top:2px;
   --checkbox-left:1px;
-  --checkbox-margin:0px 7px 0px -1.35em;
+  --checkbox-margin:0px 8px 0px -1.35em;
 }
 
 input[type=checkbox] {
@@ -46,7 +46,7 @@ body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is
 }
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-left:-0.5em;
-  margin-right:0;
+  margin-right:1px;
   margin-top:0;
 }
 .task-list-item-checkbox,
