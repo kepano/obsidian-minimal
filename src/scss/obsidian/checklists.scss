@@ -1,9 +1,23 @@
 /* Checklists, task lists, checkboxes */
+:root {
+  --checkbox-size:18px;
+  --checkbox-radius:50%;
+  --checkbox-top:3px;
+  --checkbox-left:0;
+  --checkbox-margin:0px 5px 0px -1.35em;
+}
+.checkbox-square {
+  --checkbox-size:16px;
+  --checkbox-radius:4px;
+  --checkbox-top:2px;
+  --checkbox-left:1px;
+  --checkbox-margin:0px 7px 0px -1.35em;
+}
 
 input[type=checkbox] {
   -webkit-appearance:none;
   appearance:none;
-  border-radius:50%;
+  border-radius:var(--checkbox-radius);
   border:1px solid var(--background-modifier-border-hover);
   padding:0;
 }
@@ -37,14 +51,15 @@ body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is
 .task-list-item-checkbox,
 .markdown-preview-view .task-list-item-checkbox {
   filter:none;
-  width:18px;
-  height:18px;
+  width:var(--checkbox-size);
+  height:var(--checkbox-size);
 }
 .markdown-preview-view .task-list-item-checkbox {
   position:relative;
-  top:5px;
+  top:var(--checkbox-top);
+  left:var(--checkbox-left);
   line-height:0;
-  margin:0px 6px 1px -1.2em;
+  margin:var(--checkbox-margin);
 }
 .markdown-preview-view ul > li.task-list-item {
   text-indent:0;

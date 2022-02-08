@@ -701,6 +701,19 @@ settings:
         format: hex
         default-light: '#'
         default-dark: '#'
+    - 
+        id: checkbox-shape
+        title: Checkbox shape
+        type: class-select
+        allowEmpty: false
+        default: checkbox-circle
+        options:
+            - 
+                label: Circle
+                value: checkbox-circle
+            - 
+                label: Square
+                value: checkbox-square
     -
         id: minimal-strike-lists
         title: Strike completed tasks
