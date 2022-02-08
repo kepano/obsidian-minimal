@@ -632,6 +632,7 @@ body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is
 
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-left: -0.5em;
+  margin-right: 0;
   margin-top: 0; }
 
 .task-list-item-checkbox,
