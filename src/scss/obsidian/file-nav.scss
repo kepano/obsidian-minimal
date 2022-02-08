@@ -170,11 +170,15 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 .tree-item-self .collapse-icon {
   padding-left:0;
-  width:15px;
+  width:18px;
   margin-left:-15px;
+  justify-content:center;
 }
 .tree-item-self:hover .collapse-icon {
   color:var(--text-normal);
+}
+.tree-item-self {
+  padding-left:15px;
 }
 .tree-item {
   padding-left:5px;

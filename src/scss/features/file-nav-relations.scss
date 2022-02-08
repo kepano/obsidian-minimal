@@ -1,0 +1,17 @@
+.nav-folder-children .nav-folder-children {
+  margin-left:18px;
+  padding-left:0;
+  border-left:1px solid var(--background-modifier-border);
+}
+.nav-folder-title {
+  margin-left:6px;
+}
+.nav-folder-title-content {
+  padding-left:4px;
+}
+.nav-file {
+  margin-left:10px;
+}
+.mod-root > .nav-folder-children > .nav-file {
+  margin-left:12px;
+}
