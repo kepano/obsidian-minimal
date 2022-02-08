@@ -20,9 +20,15 @@ body .leaflet-container {
 	margin:10px;
 }
 .block-language-leaflet {
-	border-radius:var(--radius-l);
+	border-radius:var(--radius-m);
 	overflow:hidden;
-	border:1px solid var(--background-modifier-border);
+	border:var(--border-width) solid var(--background-modifier-border);
+}
+.map-wide .block-language-leaflet {
+  border-radius:var(--radius-l);  
+}
+.map-max .block-language-leaflet {
+	border-radius:var(--radius-xl);
 }
 
 .workspace-leaf-content[data-type="obsidian-leaflet-map-view"] .block-language-leaflet {

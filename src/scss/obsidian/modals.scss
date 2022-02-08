@@ -7,7 +7,7 @@
   box-shadow:0 5px 100px rgba(0,0,0,0.15);
   border:none;
   background:var(--background-primary);
-  border-radius:10px;
+  border-radius:var(--radius-l);
   overflow:hidden;
   padding:20px;
 }

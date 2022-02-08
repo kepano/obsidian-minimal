@@ -69,7 +69,8 @@
   /* Space between list items */
   --radius-s:2px;
   --radius-m:5px;
-  --radius-l:10px;
+  --radius-l:12px;
+  --radius-xl:16px;
   --input-height:32px;
   --header-height:40px;
   --mobile-left-sidebar-width:280pt;
@@ -408,7 +409,7 @@ body .excalidraw {
   --background-modifier-border-focus: var(--ui3);
   --background-divider: var(--ui1);
   --quote-opening-modifier: var(--ui2);
-  --modal-border: var(--ui1);
+  --modal-border: var(--ui2);
   --icon-color: var(--tx2);
   --icon-color-hover: var(--tx2);
   --icon-color-active: var(--tx1);
@@ -1724,7 +1725,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   box-shadow: 0 5px 100px rgba(0, 0, 0, 0.15);
   border: none;
   background: var(--background-primary);
-  border-radius: 10px;
+  border-radius: var(--radius-l);
   overflow: hidden;
   padding: 20px; }
 
@@ -8267,9 +8268,15 @@ body .leaflet-container {
   margin: 10px; }
 
 .block-language-leaflet {
-  border-radius: var(--radius-l);
+  border-radius: var(--radius-m);
   overflow: hidden;
-  border: 1px solid var(--background-modifier-border); }
+  border: var(--border-width) solid var(--background-modifier-border); }
+
+.map-wide .block-language-leaflet {
+  border-radius: var(--radius-l); }
+
+.map-max .block-language-leaflet {
+  border-radius: var(--radius-xl); }
 
 .workspace-leaf-content[data-type="obsidian-leaflet-map-view"] .block-language-leaflet {
   border-radius: 0;
