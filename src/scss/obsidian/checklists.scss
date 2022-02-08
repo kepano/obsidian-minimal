@@ -20,6 +20,7 @@ input[type=checkbox] {
   border-radius:var(--checkbox-radius);
   border:1px solid var(--background-modifier-border-hover);
   padding:0;
+  margin:0 6px 0 0;
 }
 input[type=checkbox]:hover,
 input[type=checkbox]:focus {
