@@ -6,7 +6,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
 }
 body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
   background:var(--background-secondary);
-  border-bottom:var(--border-width) solid var(--background-modifier-border);
+  border-bottom:var(--border-width) solid var(--background-divider);
   height:var(--titlebar-height) !important;
   top:0 !important;
   padding-top:0 !important;

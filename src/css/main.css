@@ -2287,7 +2287,7 @@ iframe {
 
 .workspace-ribbon {
   border-width: var(--border-width-alt);
-  border-color: var(--background-modifier-border);
+  border-color: var(--background-divider);
   background: var(--background-secondary);
   flex: 0 0 42px;
   padding-top: 7px; }
@@ -3232,7 +3232,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
 
 body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
   background: var(--background-secondary);
-  border-bottom: var(--border-width) solid var(--background-modifier-border);
+  border-bottom: var(--border-width) solid var(--background-divider);
   height: var(--titlebar-height) !important;
   top: 0 !important;
   padding-top: 0 !important; }
@@ -3416,7 +3416,7 @@ body.hider-frameless .titlebar {
   background-color: transparent; }
 
 .workspace-tab-header-container {
-  border-bottom: var(--border-width) solid var(--background-modifier-border); }
+  border-bottom: var(--border-width) solid var(--background-divider); }
 
 /* Components */
 /* Audio files */
