@@ -6206,7 +6206,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
 
   .is-mobile .markdown-preview-view ul,
   .is-mobile .markdown-preview-view ol {
-    padding-inline-start: 1.5em; } }
+    padding-inline-start: 1.75em; } }
 /* --------------- */
 /* Tablet */
 @media (min-width: 400pt) {
