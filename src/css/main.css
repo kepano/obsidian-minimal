@@ -4041,6 +4041,9 @@ body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,
 .colorful-active .menu-item:hover .menu-item-icon {
   color: var(--sp1); }
 
+.is-mobile.colorful-active .nav-file-title.is-active {
+  box-shadow: 0 0 0px 2px var(--ax3); }
+
 /*
 .colorful-active .suggestion-container .suggestion-item:hover,
 .colorful-active .modal-container .suggestion-item.is-selected {
@@ -6048,7 +6051,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   cursor: var(--cursor); }
 
 .is-mobile .nav-file-title.is-active {
-  box-shadow: 0 0 0px 3px var(--background-tertiary); }
+  box-shadow: 0 0 0px 2px var(--background-tertiary); }
 
 .pull-down-action {
   top: 0;
@@ -8735,9 +8738,6 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --base-h:106;
   --base-s:0%;
   --base-l:94%;
-  --accent-h:211;
-  --accent-s:100%;
-  --accent-l:50%;
   --bg1:#fff;
   --bg2:#f0f0f0;
   --bg3:#d7d7d7;
@@ -8746,6 +8746,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx2:#808080;
   --tx3:#b0b0b0;
   --ax1:#027aff;
+  --ax1:#0463cc;
   --ax3:#007bff;
   --hl1:#b3d7ff; }
 
@@ -8763,9 +8764,6 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --base-h:106;
   --base-s:0%;
   --base-l:12%;
-  --accent-h:211;
-  --accent-s:100%;
-  --accent-l:50%;
   --bg1:#1e1e1e;
   --bg2:#282828;
   --bg3:#414141;
@@ -8777,6 +8775,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx2:#8c8c8c;
   --tx3:#686868;
   --ax1:#027aff;
+  --ax2:#3f9bff;
   --ax3:#007bff;
   --hl1:#3f638b;
   --sp1:#fff; }

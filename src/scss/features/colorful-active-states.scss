@@ -26,7 +26,9 @@ body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,
 .colorful-active .menu-item:hover .menu-item-icon {
   color:var(--sp1);
 }
-
+.is-mobile.colorful-active .nav-file-title.is-active {
+  box-shadow:0 0 0px 2px var(--ax3);
+}
 /*
 .colorful-active .suggestion-container .suggestion-item:hover,
 .colorful-active .modal-container .suggestion-item.is-selected {
