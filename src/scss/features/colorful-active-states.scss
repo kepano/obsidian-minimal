@@ -1,4 +1,7 @@
 /* Colorful active states */
+.colorful-active {
+  --sp1:var(--bg1);
+}
 
 .colorful-active .nav-file-title.is-active, 
 .colorful-active #calendar-container .active,
@@ -12,16 +15,16 @@ body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,
 .colorful-active .menu-item:hover,
 .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label) {
   background-color:var(--ax3);
-  color:var(--bg1);
+  color:var(--sp1);
 }
 .colorful-active #calendar-container .day:active .dot,
 .colorful-active #calendar-container .active .dot,
 .colorful-active #calendar-container .today.active .dot {
-  fill:var(--bg1);
+  fill:var(--sp1);
 }
 .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label) .menu-item-icon,
 .colorful-active .menu-item:hover .menu-item-icon {
-  color:var(--bg1);
+  color:var(--sp1);
 }
 
 /*

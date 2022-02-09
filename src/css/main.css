@@ -4014,6 +4014,9 @@ body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split
   background-color: var(--background-tertiary); }
 
 /* Colorful active states */
+.colorful-active {
+  --sp1:var(--bg1); }
+
 .colorful-active .nav-file-title.is-active,
 .colorful-active #calendar-container .active,
 .colorful-active #calendar-container .active.today,
@@ -4026,16 +4029,16 @@ body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,
 .colorful-active .menu-item:hover,
 .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label) {
   background-color: var(--ax3);
-  color: var(--bg1); }
+  color: var(--sp1); }
 
 .colorful-active #calendar-container .day:active .dot,
 .colorful-active #calendar-container .active .dot,
 .colorful-active #calendar-container .today.active .dot {
-  fill: var(--bg1); }
+  fill: var(--sp1); }
 
 .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label) .menu-item-icon,
 .colorful-active .menu-item:hover .menu-item-icon {
-  color: var(--bg1); }
+  color: var(--sp1); }
 
 /*
 .colorful-active .suggestion-container .suggestion-item:hover,
@@ -8774,7 +8777,8 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx3:#686868;
   --ax1:#027aff;
   --ax3:#007bff;
-  --hl1:#3f638b; }
+  --hl1:#3f638b;
+  --sp1:#fff; }
 
 .theme-dark.minimal-macos-dark.minimal-dark-black {
   --background-divider:#1e1e1e; }
@@ -9014,7 +9018,8 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --h1-color:#4d95f7;
   --h2-color:#4d95f7;
   --h3-color:#4d95f7;
-  --h4-color:#4d95f7; }
+  --h4-color:#4d95f7;
+  --sp1:#fff; }
 
 .theme-dark.minimal-things-dark.minimal-dark-black {
   --base-d:5%;
