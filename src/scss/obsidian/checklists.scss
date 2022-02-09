@@ -13,7 +13,6 @@
   --checkbox-left:1px;
   --checkbox-margin:0px 8px 0px -1.35em;
 }
-
 input[type=checkbox] {
   -webkit-appearance:none;
   appearance:none;
@@ -21,6 +20,8 @@ input[type=checkbox] {
   border:1px solid var(--background-modifier-border-hover);
   padding:0;
   margin:0 6px 0 0;
+  width:var(--checkbox-size);
+  height:var(--checkbox-size);
 }
 input[type=checkbox]:hover,
 input[type=checkbox]:focus {
@@ -46,9 +47,7 @@ body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is
   color:var(--text-normal);
 }
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin-left:-0.5em;
-  margin-right:1px;
-  margin-top:0;
+  margin:-2px 1px 0 -0.5em;
 }
 .task-list-item-checkbox,
 .markdown-preview-view .task-list-item-checkbox {

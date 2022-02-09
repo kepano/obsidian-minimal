@@ -567,7 +567,9 @@ input[type=checkbox] {
   border-radius: var(--checkbox-radius);
   border: 1px solid var(--background-modifier-border-hover);
   padding: 0;
-  margin: 0 6px 0 0; }
+  margin: 0 6px 0 0;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size); }
 
 input[type=checkbox]:hover,
 input[type=checkbox]:focus {
@@ -593,9 +595,7 @@ body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is
   color: var(--text-normal); }
 
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin-left: -0.5em;
-  margin-right: 1px;
-  margin-top: 0; }
+  margin: -2px 1px 0 -0.5em; }
 
 .task-list-item-checkbox,
 .markdown-preview-view .task-list-item-checkbox {
@@ -1709,7 +1709,7 @@ body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
 /* Bullets */
 .mod-cm6 .HyperMD-list-line .list-bullet::after,
 .mod-cm6 span.list-bullet::after {
-  line-height: 0.85em;
+  line-height: 0.95em;
   font-size: 1.4em;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   vertical-align: middle;
@@ -3147,6 +3147,13 @@ span.cm-hashtag.cm-hashtag-end {
   animation: none; }
 
 /* Title Bar */
+/* Alignment */
+.title-align-left .view-header-title-container {
+  margin-left: calc(var(--traffic-x-space) + 24px); }
+
+.title-align-center .view-header-title {
+  text-align: center; }
+
 .view-actions {
   margin-right: 1px;
   z-index: 15;
@@ -5721,7 +5728,7 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
   --h5l:var(--ui1);
   --h6l:var(--ui1); }
 
-.h1-l .markdown-reading-view h1,
+.h1-l .markdown-reading-view h1:not(.embedded-note-title),
 .h1-l .mod-cm6 .cm-editor .HyperMD-header-1 {
   border-bottom: 1px solid var(--h1l);
   padding-bottom: 0.4em; }
@@ -7318,6 +7325,10 @@ body .sync-history-content-container textarea.sync-history-content:focus {
   background-color: var(--background-secondary); }
 
 /* Community plugins */
+/* Banner plugin */
+.contextual-typography .markdown-preview-view div.has-banner-icon.obsidian-banner-wrapper {
+  overflow: visible; }
+
 /* Buttons plugin */
 body.theme-dark .button-default,
 body.theme-light .button-default {
@@ -7637,6 +7648,8 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .el-lang-dataview + .el-p {
   margin-top: 0.5rem; }
 
+.el-lang-leaflet,
+.el-lang-leaflet + *,
 .el-iframe + .el-p,
 .el-p + .el-iframe,
 .el-p:not(.el-embed-image) + .el-embed-image,
@@ -7963,24 +7976,19 @@ body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-sp
   padding-top: 0px; }
 
 /* Adjustments to title bar for traffic light icons */
-.mod-macos.minimal-folding.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header) {
-  --traffic-space:80px;
-  --traffic-padding:60px; }
+:root {
+  --traffic-x-space:0px; }
 
-.mod-macos.minimal-folding.hider-frameless:not(.plugin-sliding-panes-rotate-header) {
-  --traffic-space:55px;
-  --traffic-padding:20px; }
+/* Frameless + no ribbon */
+.mod-macos.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type {
+  --traffic-x-space:75px; }
 
-.mod-macos.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header) {
-  --traffic-space:95px;
-  --traffic-padding:60px; }
+/* Frameless */
+.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type {
+  --traffic-x-space:30px; }
 
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) {
-  --traffic-space:65px;
-  --traffic-padding:20px; }
-
-.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-header-icon {
-  margin-left: var(--traffic-padding); }
+.view-header-icon {
+  margin-left: var(--traffic-x-space); }
 
 /* --------------- */
 /* App ribbon moved to the bottom edge */
@@ -8251,10 +8259,12 @@ body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-
     margin-bottom: 1rem !important; } }
 /* Leaflet plugin */
 .theme-light {
-  --leaflet-buttons:var(--bg1); }
+  --leaflet-buttons:var(--bg1);
+  --leaflet-borders:rgba(0,0,0,0.1); }
 
 .theme-dark {
-  --leaflet-buttons:var(--bg1); }
+  --leaflet-buttons:var(--bg2);
+  --leaflet-borders:rgba(255,255,255,0.1); }
 
 body .leaflet-container {
   background-color: var(--background-secondary); }
@@ -8288,30 +8298,66 @@ body .leaflet-container {
   border-left: none;
   border-right: none; }
 
+/* Checkbox */
+.block-language-leaflet .leaflet-control-expandable-list .input-container .input-item > input {
+  appearance: none; }
+
 /* Buttons */
 body .block-language-leaflet .leaflet-bar.disabled > a {
   background-color: transparent;
   opacity: 0.3; }
 
+body .leaflet-touch .leaflet-bar a:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+
+body .leaflet-touch .leaflet-bar a:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+body .block-language-leaflet .leaflet-control-has-actions .control-actions.expanded,
 body .block-language-leaflet .leaflet-control-expandable,
 body .block-language-leaflet .leaflet-distance-control,
+body .leaflet-bar,
 body .leaflet-bar a {
   background-color: var(--leaflet-buttons);
   color: var(--text-muted);
   border: none; }
 
+body .leaflet-bar a.leaflet-disabled,
+body .leaflet-bar a.leaflet-disabled:hover {
+  background-color: var(--leaflet-buttons);
+  color: var(--text-faint);
+  opacity: 0.6;
+  cursor: not-allowed; }
+
+body .leaflet-control a {
+  cursor: var(--cursor);
+  color: var(--text-normal); }
+
 body .leaflet-bar a:hover {
-  background-color: var(--background-secondary);
+  background-color: var(--background-tertiary);
   color: var(--text-normal);
   border: none; }
 
 body .leaflet-touch .leaflet-control-layers,
 body .leaflet-touch .leaflet-bar {
-  border: 1px solid rgba(0, 0, 0, 0.1); }
+  border-radius: 5px;
+  box-shadow: 2px 0 8px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--ui1); }
 
-.leaflet-control a {
-  cursor: var(--cursor);
-  color: var(--text-normal); }
+body .block-language-leaflet .leaflet-control-has-actions .control-actions {
+  box-shadow: 0;
+  border: 1px solid var(--ui1); }
+
+body .leaflet-control-expandable-list .leaflet-bar {
+  box-shadow: none;
+  border-radius: 0; }
+
+body .block-language-leaflet .leaflet-distance-control {
+  padding: 4px 10px;
+  height: auto;
+  cursor: var(--cursor) !important; }
 
 /* Map View plugin */
 .map-view-marker-name {

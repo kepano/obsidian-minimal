@@ -25,24 +25,20 @@ body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-sp
 
 /* Adjustments to title bar for traffic light icons */
 
-.mod-macos.minimal-folding.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header) {
-  --traffic-space:80px;
-  --traffic-padding:60px;
+:root {
+  --traffic-x-space:0px;
 }
-.mod-macos.minimal-folding.hider-frameless:not(.plugin-sliding-panes-rotate-header) {
-  --traffic-space:55px;
-  --traffic-padding:20px;
+
+/* Frameless + no ribbon */
+.mod-macos.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
+  --traffic-x-space:75px;
 }
-.mod-macos.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header) {
-  --traffic-space:95px;
-  --traffic-padding:60px;
+/* Frameless */
+.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
+  --traffic-x-space:30px;
 }
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header) {
-  --traffic-space:65px;
-  --traffic-padding:20px;
-}
-.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .workspace-leaf-content:not([data-type='graph']) .view-header-icon {
-  margin-left:var(--traffic-padding);
+.view-header-icon {
+  margin-left:var(--traffic-x-space);
 }
 
 /* --------------- */

@@ -188,6 +188,22 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: title-alignment
+        title: Title alignment
+        type: class-select
+        allowEmpty: false
+        default: title-align-body
+        options:
+            - 
+                label: Text body
+                value: title-align-body
+            - 
+                label: Left
+                value: title-align-left
+            -
+                label: Center
+                value: title-align-center
+    - 
         id: title-size
         title: Title font size
         description: Accepts any CSS font-size value

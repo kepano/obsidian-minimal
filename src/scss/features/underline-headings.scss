@@ -10,7 +10,7 @@
   --h6l:var(--ui1);
 }
 
-.h1-l .markdown-reading-view h1,
+.h1-l .markdown-reading-view h1:not(.embedded-note-title),
 .h1-l .mod-cm6 .cm-editor .HyperMD-header-1 {
   border-bottom:1px solid var(--h1l);
   padding-bottom:0.4em;

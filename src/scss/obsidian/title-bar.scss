@@ -1,5 +1,15 @@
 /* Title Bar */
 
+/* Alignment */
+
+.title-align-left .view-header-title-container {
+  margin-left:calc(var(--traffic-x-space) + 24px);
+}
+.title-align-center .view-header-title {
+  text-align:center;
+}
+
+
 .view-actions {
   margin-right:1px;
   z-index:15;
