@@ -2775,6 +2775,7 @@ body:not(.minimal-icons) .setting-hotkey-icon.setting-delete-hotkey svg {
   transition: color 200ms linear;
   color: var(--text-faint);
   font-size: var(--font-adaptive-smaller);
+  border-top: var(--border-width) solid var(--background-divider);
   line-height: 1;
   max-height: 24px; }
 
@@ -4974,7 +4975,7 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
 .status-bar {
   transition: opacity 0.2s ease-in-out; }
 
-.minimal-focus-mode .status-bar {
+.minimal-focus-mode:not(.minimal-status-off) .status-bar {
   opacity: 0; }
 
 .minimal-focus-mode .status-bar:hover {
