@@ -301,7 +301,8 @@ body .excalidraw {
       70%,
       40%,
       30%
-    ); }
+    );
+  --sp1:#fff; }
 
 .theme-light.minimal-light-white {
   --background-primary: white;
