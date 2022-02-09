@@ -557,7 +557,7 @@ body {
 .checkbox-square {
   --checkbox-size:15px;
   --checkbox-radius:4px;
-  --checkbox-top:2px;
+  --checkbox-top:1px;
   --checkbox-left:1px;
   --checkbox-margin:0px 8px 0px -1.35em; }
 
