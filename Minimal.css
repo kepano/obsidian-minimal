@@ -1027,7 +1027,7 @@ h1,
 .markdown-source-view.mod-cm6 .HyperMD-header-1 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-1 {
   font-variant: var(--h1-variant);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.3;
   font-size: var(--h1);
   color: var(--h1-color);
