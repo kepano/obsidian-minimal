@@ -3791,9 +3791,17 @@ body.borders-title .workspace-ribbon.mod-left.is-collapsed {
 body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
   border: none; }
 
-/* Cards */
-/* Copyright (c) 2020-2022 Stephan Ango (@kepano) */
-/* MIT License */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+
+Cards snippet for Obsidian
+
+author: @kepano
+version: 1.1.0
+
+Support my work:
+https://github.com/sponsors/kepano
+
+*/
 :root {
   --cards-min-width:180px;
   --cards-max-width:1fr;
@@ -5153,8 +5161,17 @@ span[src$="#round"] img {
   border-radius: 50%;
   aspect-ratio: 1/1; }
 
-/* Image grid */
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+
+Image Grid snippet for Obsidian
+
+author: @kepano
+version: 3.0.0
+
+Support my work:
+https://github.com/sponsors/kepano
+
+*/
 /* Requires Contextual Typography 2.2.1+ */
 div:not(.el-embed-image) + .el-embed-image {
   margin-top: 1rem; }
@@ -5258,8 +5275,17 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
   position: absolute;
   opacity: 1; }
 
-/* Labeled nav */
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+
+Labeled Nav snippet for Obsidian
+
+author: @kepano
+version: 1.2.0
+
+Support my work:
+https://github.com/sponsors/kepano
+
+*/
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
   height: auto; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-container-inner {
@@ -5321,8 +5347,17 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="tag"] .workspace-tab-header-inner-icon:after {
   content: "Tags"; }
 
-/* Layout Control
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+
+Layout Control snippet for Obsidian
+
+author: @kepano
+version: 1.0.0
+
+Support my work:
+https://github.com/sponsors/kepano
+
+*/
 /* Requires Contextual Typography 2.2.1+ */
 /* Switch to flexbox */
 .contextual-typography .markdown-reading-view > .markdown-preview-view {
@@ -5721,7 +5756,7 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 .workspace > .workspace-split:not(.mod-root) .CodeMirror-sizer {
   padding-left: 10px; }
 
-/* Translucent */
+/* Translucent sidebars */
 :root {
   --bg-translucency-light:0.7;
   --bg-translucency-dark:0.85; }
