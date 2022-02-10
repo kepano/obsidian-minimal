@@ -190,6 +190,7 @@ settings:
     - 
         id: title-alignment
         title: Title alignment
+        description: For the "Text body" option you may need to also toggle "Folding offset" in Minimal Theme Settings if you notice a small misalignment
         type: class-select
         allowEmpty: false
         default: title-align-body

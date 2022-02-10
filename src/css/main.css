@@ -5690,19 +5690,32 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 .theme-dark.frosted-sidebar.is-translucent {
   --opacity-translucency:1; }
 
+.is-translucent.frosted-sidebar:not(.hider-ribbon) .workspace-ribbon.mod-left,
 .is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs {
   background: transparent; }
 
-.is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs:after {
+.is-translucent.frosted-sidebar:not(.hider-ribbon) .workspace-ribbon.mod-left:after {
+  background: var(--bg2);
+  opacity: var(--bg-translucency-light);
+  top: 0px;
+  left: 0px;
+  content: "";
+  height: 120%;
+  position: fixed;
+  width: 42px;
+  z-index: -10; }
+
+.is-translucent.frosted-sidebar .mod-left-split .workspace-tabs:after {
   background: var(--bg2);
   opacity: var(--bg-translucency-light);
   top: -50px;
   content: "";
   height: 120%;
   position: fixed;
-  width: 100%;
+  width: 120%;
   z-index: -10; }
 
+.theme-dark.is-translucent.frosted-sidebar:not(.hider-ribbon) .workspace-ribbon.mod-left:after,
 .theme-dark.is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs:after {
   opacity: var(--bg-translucency-dark); }
 
@@ -7964,12 +7977,15 @@ div[data-type="git-view"] .search-input-clear-button {
 /* Frameless mode */
 body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
   padding-top: 24px;
-  transition: padding-top 0.6s linear; }
+  transition: padding-top 0.2s linear; }
 
 /* Include support for Electron Window Tweaker */
 body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs:nth-child(3) {
   padding-top: calc(24px + var(--ewt-traffic-light-y));
-  transition: padding-top 0.6s linear; }
+  transition: padding-top 0.2s linear; }
+
+body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mobile) .workspace-ribbon .side-dock-actions {
+  padding-top: calc(24px + var(--ewt-traffic-light-y)); }
 
 .hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
 .hider-frameless:not(.is-mobile) .workspace-split.mod-root .view-header {
@@ -7997,6 +8013,10 @@ body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-sp
 
 .view-header-icon {
   margin-left: var(--traffic-x-space); }
+
+/* Remove ribbon border on Mac when frameless */
+.mod-macos.hider-frameless .workspace-ribbon {
+  border: none; }
 
 /* --------------- */
 /* App ribbon moved to the bottom edge */

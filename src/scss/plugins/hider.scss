@@ -3,13 +3,17 @@
 /* Frameless mode */
 body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
   padding-top:24px;
-  transition:padding-top 0.6s linear;
+  transition:padding-top 0.2s linear;
 }
 /* Include support for Electron Window Tweaker */
 body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs:nth-child(3) {
   padding-top:calc(24px + var(--ewt-traffic-light-y));
-  transition:padding-top 0.6s linear;
+  transition:padding-top 0.2s linear;
 }
+body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mobile) .workspace-ribbon .side-dock-actions {
+  padding-top:calc(24px + var(--ewt-traffic-light-y));
+}
+
 .hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
 .hider-frameless:not(.is-mobile) .workspace-split.mod-root .view-header {
   padding-top:0px;
@@ -24,7 +28,6 @@ body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-sp
 }
 
 /* Adjustments to title bar for traffic light icons */
-
 :root {
   --traffic-x-space:0px;
 }
@@ -39,6 +42,11 @@ body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-sp
 }
 .view-header-icon {
   margin-left:var(--traffic-x-space);
+}
+
+/* Remove ribbon border on Mac when frameless */
+.mod-macos.hider-frameless .workspace-ribbon {
+  border:none;
 }
 
 /* --------------- */
