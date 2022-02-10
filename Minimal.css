@@ -9457,6 +9457,13 @@ settings:
         default-light: '#'
         default-dark: '#'
     - 
+        id: text-italic
+        title: Italic text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
         id: text-bold
         title: Bold text color
         type: variable-themed-color
@@ -9464,12 +9471,11 @@ settings:
         default-light: '#'
         default-dark: '#'
     - 
-        id: text-italic
-        title: Italic text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
+        id: bold-weight
+        title: Bold text weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
     -
         id: headings
         title: Headings
