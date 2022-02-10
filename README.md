@@ -83,7 +83,7 @@ The following settings can be accessed using [Minimal Theme Settings](https://gi
 ### Interface colors and fonts
 
 - **Background contrast** —  includes true black dark mode for OLED devices
-- **Color scheme** — includes Dracula, Gruvbox, Nord, Solarized, [and more](#color-schemes)
+- **Color scheme** — includes Dracula, Gruvbox, macOS, Nord, Solarized, [and more](#color-schemes)
 - **Accent color** — used for links and checkboxes and other elements
 - **Fonts** and **font size**
 - **Line width** — set normal line width and maximum width within a pane
@@ -112,7 +112,7 @@ Controls images, tables and iframes. These settings can also be enabled on a per
 
 ### Preset color schemes
 
-Minimal offers color schemes that can be separately selected for light and dark mode using the [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Color schemes include Dracula, Gruvbox, Nord, Notion, Solarized, and Things. 
+Minimal offers color schemes that can be separately selected for light and dark mode using the [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Color schemes include Dracula, Gruvbox, macOS, Nord, Notion, Solarized, and Things. 
 
 ![Minimal Theme Settings](https://kep-log.s3-us-west-2.amazonaws.com/minimal-color-schemes.gif)
 
