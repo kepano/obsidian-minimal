@@ -6733,7 +6733,7 @@ input.prompt-input {
   font-weight: 600; }
 
 .suggestion-prefix {
-  color: var(--text-muted); }
+  font-weight: 500; }
 
 /* In Editor autocomplete */
 .suggestion-container {
