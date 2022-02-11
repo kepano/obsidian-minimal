@@ -274,6 +274,15 @@ settings:
         id: hl1
         title: Selected text background
         type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: hl2
+        title: Highlighted text background
+        type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'

@@ -1,5 +1,10 @@
 /* Banner plugin */
-
+.obsidian-banner.solid {
+	border-bottom:var(--border-width) solid var(--background-divider);
+}
 .contextual-typography .markdown-preview-view div.has-banner-icon.obsidian-banner-wrapper {
 	overflow:visible;
+}
+.theme-dark .markdown-preview-view img.emoji {
+	opacity:1;
 }

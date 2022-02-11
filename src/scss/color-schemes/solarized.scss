@@ -36,7 +36,8 @@
 
   --ax1:#268bd2;
 
-  --hl1:#eee8d5;
+  --hl1:rgba(202,197,182,0.3);
+  --hl2:rgba(203,75,22,0.3);
 }
 .theme-light.minimal-solarized-light.minimal-light-tonal {
   --bg2:#fdf6e3;
@@ -73,9 +74,10 @@
   --ax1:#268bd2;
   --ax3:#268bd2;
 
-  --hl1:#073642;
+  --hl1:rgba(15,81,98,0.3);
+  --hl2:rgba(203, 75, 22, 0.35);
 }
 .theme-dark.minimal-solarized-dark.minimal-dark-black {
-  --hl1:#002b36;
+  --hl1:rgba(15,81,98,0.55);
   --ui1:#002b36;
 }

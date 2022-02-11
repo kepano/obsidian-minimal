@@ -243,7 +243,8 @@ body .excalidraw {
       50%,
       calc(var(--base-l) - 20%),
       30%
-    ); }
+    );
+  --hl2:rgba(255, 225, 0, 0.5); }
 
 .theme-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
@@ -342,6 +343,7 @@ body .excalidraw {
       40%,
       30%
     );
+  --hl2:rgba(255, 177, 80, 0.3);
   --sp1:#fff; }
 
 .theme-light.minimal-light-white {
@@ -432,6 +434,7 @@ body .excalidraw {
   --text-accent-hover: var(--ax2);
   --text-on-accent: white;
   --text-selection: var(--hl1);
+  --text-highlight-bg: var(--hl2);
   --background-primary: var(--bg1);
   --background-primary-alt: var(--bg2);
   --background-secondary: var(--bg2);
@@ -462,8 +465,6 @@ body .excalidraw {
   --interactive-normal: var(--bg1);
   --interactive-accent-rgb:220, 220, 220;
   --background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 50%),calc(var(--base-l) - 7%),0.7);
-  /* Highlights from search */
-  --text-highlight-bg:rgba(255, 225, 0, 0.5);
   --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
   /* Errors */
   --background-modifier-error:rgba(255,0,0,0.14);
@@ -477,8 +478,6 @@ body .excalidraw {
   --interactive-normal: var(--bg3);
   --interactive-accent-rgb:66, 66, 66;
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.8);
-  /* Highlights from search */
-  --text-highlight-bg:rgba(255, 177, 80, 0.3);
   --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
   /* Errors */
   --background-modifier-error:rgba(255,20,20,0.12);
@@ -7425,8 +7424,14 @@ body .sync-history-content-container textarea.sync-history-content:focus {
 
 /* Community plugins */
 /* Banner plugin */
+.obsidian-banner.solid {
+  border-bottom: var(--border-width) solid var(--background-divider); }
+
 .contextual-typography .markdown-preview-view div.has-banner-icon.obsidian-banner-wrapper {
   overflow: visible; }
+
+.theme-dark .markdown-preview-view img.emoji {
+  opacity: 1; }
 
 /* Buttons plugin */
 body.theme-dark .button-default,
@@ -8764,7 +8769,8 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx2:#949FBE;
   --tx3:#6272a4;
   --ax3:#ff79c6;
-  --hl1:#44475a; }
+  --hl1:rgba(134, 140, 170, 0.3);
+  --hl2:rgba(189, 147, 249, 0.35); }
 
 .theme-dark.minimal-dracula-dark.minimal-dark-black {
   --ui1:#282a36; }
@@ -8797,7 +8803,8 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --ax1:#d65d0e;
   --ax2:#af3a03;
   --ax3:#d65d0d;
-  --hl1:#ebdbb2; }
+  --hl1:rgba(192,165,125,.3);
+  --hl2:rgba(215,153,33,.4); }
 
 .theme-light.minimal-gruvbox-light.minimal-light-tonal {
   --bg2:#fcf2c7; }
@@ -8826,10 +8833,11 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --ax1:#d65d0e;
   --ax2:#fe8019;
   --ax3:#d65d0e;
-  --hl1:#504946; }
+  --hl1:rgba(173,149,139,0.3);
+  --hl2:rgba(215,153,33,.4); }
 
 .theme-dark.minimal-gruvbox-dark.minimal-dark-black {
-  --hl1:#3d3836;
+  --hl1:rgba(173,149,139,0.4);
   --ui1:#282828; }
 
 /* macOS */
@@ -8876,7 +8884,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --ax1:#027aff;
   --ax2:#3f9bff;
   --ax3:#007bff;
-  --hl1:#3f638b;
+  --hl1:rgba(98,169,252,0.5);
   --sp1:#fff; }
 
 .theme-dark.minimal-macos-dark.minimal-dark-black {
@@ -8911,7 +8919,8 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx2:#7D8697;
   --tx3:#ADB1B8;
   --ax1:#5e81ac;
-  --ax2:#81a1c1; }
+  --ax2:#81a1c1;
+  --hl2:rgba(208, 135, 112, 0.35); }
 
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-nord-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
@@ -8935,7 +8944,9 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx1:#d8dee9;
   --tx2:#9eafcc;
   --tx3:#4c566a;
-  --ax3:#5e81ac; }
+  --ax3:#5e81ac;
+  --hl1:rgba(129,142,180,0.3);
+  --hl2:rgba(208, 135, 112, 0.35); }
 
 .theme-dark.minimal-nord-dark.minimal-dark-black {
   --ui1:#2e3440; }
@@ -8956,7 +8967,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --ax1:#37352f;
   --ax2:#000;
   --ax3:#2eaadc;
-  --hl1:#d9eff8;
+  --hl1:rgba(131,201,229,0.3);
   --link-weight:500; }
 
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
@@ -8984,7 +8995,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --ax1:#ebebeb;
   --ax2:#fff;
   --ax3:#2eaadc;
-  --hl1:#314d58;
+  --hl1:rgba(57,134,164,0.3);
   --link-weight:500; }
 
 .theme-dark.minimal-notion-dark.minimal-dark-black {
@@ -9022,7 +9033,8 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx3:#ABB2AC;
   --tx4:#586e75;
   --ax1:#268bd2;
-  --hl1:#eee8d5; }
+  --hl1:rgba(202,197,182,0.3);
+  --hl2:rgba(203,75,22,0.3); }
 
 .theme-light.minimal-solarized-light.minimal-light-tonal {
   --bg2:#fdf6e3; }
@@ -9052,10 +9064,11 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --tx4:#657b83;
   --ax1:#268bd2;
   --ax3:#268bd2;
-  --hl1:#073642; }
+  --hl1:rgba(15,81,98,0.3);
+  --hl2:rgba(203, 75, 22, 0.35); }
 
 .theme-dark.minimal-solarized-dark.minimal-dark-black {
-  --hl1:#002b36;
+  --hl1:rgba(15,81,98,0.55);
   --ui1:#002b36; }
 
 /* Things */
@@ -9113,7 +9126,7 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   --ax1:#4d95f7;
   --ax2:#79a9ec;
   --ax3:#4d95f7;
-  --hl1:#254174;
+  --hl1:rgba(40,119,236,0.35);
   --h1-color:#4d95f7;
   --h2-color:#4d95f7;
   --h3-color:#4d95f7;
@@ -9440,6 +9453,15 @@ settings:
         id: hl1
         title: Selected text background
         type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: hl2
+        title: Highlighted text background
+        type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
