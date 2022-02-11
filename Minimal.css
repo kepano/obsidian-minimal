@@ -448,6 +448,7 @@ body .excalidraw {
   --background-modifier-border: var(--ui1);
   --background-modifier-border-hover: var(--ui2);
   --background-modifier-border-focus: var(--ui3);
+  --background-modifier-success: var(--green);
   --background-divider: var(--ui1);
   --quote-opening-modifier: var(--ui2);
   --modal-border: var(--ui2);
@@ -1204,8 +1205,10 @@ body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-
   border-radius: var(--radius-m);
   cursor: var(--cursor); }
 
-.nav-file-title.is-being-dragged,
 .nav-file-title.is-active,
+.nav-folder-title.is-active,
+.nav-file-title.is-being-dragged,
+body:not(.is-grabbing) .nav-folder-title:hover,
 body:not(.is-grabbing) .nav-file-title.is-active:hover {
   background-color: var(--background-tertiary);
   color: var(--text-normal); }

@@ -61,8 +61,10 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
   border-radius:var(--radius-m);
   cursor:var(--cursor);
 }
-.nav-file-title.is-being-dragged,
 .nav-file-title.is-active,
+.nav-folder-title.is-active,
+.nav-file-title.is-being-dragged,
+body:not(.is-grabbing) .nav-folder-title:hover,
 body:not(.is-grabbing) .nav-file-title.is-active:hover {
   background-color:var(--background-tertiary);
   color:var(--text-normal);
