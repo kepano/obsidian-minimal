@@ -36,6 +36,9 @@ input.prompt-input {
 .prompt-instruction-command {
   font-weight:600;
 }
+.suggestion-prefix {
+  color:var(--text-muted);
+}
 
 /* In Editor autocomplete */
 .suggestion-container {

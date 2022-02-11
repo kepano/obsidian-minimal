@@ -128,6 +128,14 @@ settings:
         default-light: '#'
         default-dark: '#'
     - 
+        id: blue
+        title: Blue
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
         id: purple
         title: Purple
         type: variable-themed-color

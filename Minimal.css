@@ -4983,7 +4983,7 @@ body.minimal-focus-mode.borders-title .workspace-leaf .workspace-leaf-content:no
 body.minimal-focus-mode.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type=graph]):not([data-type=empty]):not([data-type=localgraph]) .view-header:focus-within,
 body.minimal-focus-mode.borders-title .workspace-leaf .workspace-leaf-content:not([data-type=graph]):not([data-type=localgraph]) .view-header:hover,
 body.minimal-focus-mode.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type=graph]):not([data-type=empty]):not([data-type=localgraph]) .view-header:hover {
-  border-bottom: var(--border-width) solid var(--background-modifier-border); }
+  border-bottom: var(--border-width) solid var(--background-divider); }
 
 body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .app-container .workspace-split.mod-root > .workspace-leaf .view-header {
   transition: height linear 0.1s; }
@@ -6771,6 +6771,9 @@ input.prompt-input {
 
 .prompt-instruction-command {
   font-weight: 600; }
+
+.suggestion-prefix {
+  color: var(--text-muted); }
 
 /* In Editor autocomplete */
 .suggestion-container {
@@ -8737,6 +8740,81 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
   border: none; }
 
 /* Color schemes */
+/* Atom */
+.theme-dark.minimal-atom-dark {
+  --red:#e16d76;
+  --orange:#d19a66;
+  --yellow:#cec167;
+  --green:#98c379;
+  --cyan:#58b6c2;
+  --blue:#62afef;
+  --purple:#c678de;
+  --pink:#e16d76; }
+
+.theme-light.minimal-atom-light {
+  --red:#e45749;
+  --orange:#b76b02;
+  --yellow:#c18302;
+  --green:#50a150;
+  --cyan:#0d97b3;
+  --blue:#62afef;
+  --purple:#a626a4;
+  --pink:#e45749; }
+
+.theme-light.minimal-atom-light {
+  --base-h:106;
+  --base-s:0%;
+  --base-l:98%;
+  --accent-h:209;
+  --accent-s:100%;
+  --accent-l:55%;
+  --bg1:#fafafa;
+  --bg2:#eaeaeb;
+  --bg3:#dbdbdc;
+  --ui1:#dbdbdc;
+  --ui2:#d8d8d9;
+  --tx1:#232324;
+  --tx2:#8e8e90;
+  --tx3:#a0a1a8;
+  --ax1:#1a92ff;
+  --ax3:#566de8;
+  --hl1:rgba(180,180,183,0.3);
+  --hl2:rgba(209,154,102,0.35); }
+
+.theme-light.minimal-atom-light.minimal-light-white {
+  --bg3:#eaeaeb; }
+
+.theme-light.minimal-atom-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-atom-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
+.theme-light.minimal-atom-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-atom-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-atom-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-atom-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
+.theme-dark.minimal-atom-dark {
+  --base-h:220;
+  --base-s:12%;
+  --base-l:18%;
+  --accent-h:220;
+  --accent-s:86%;
+  --accent-l:65%;
+  --bg1:#282c34;
+  --bg2:#21252c;
+  --bg3:#3a3f4b;
+  --background-divider:#181a1f;
+  --tx1:#d8dae1;
+  --tx2:#898f9d;
+  --tx3:#5d6370;
+  --ax1:#578af2;
+  --ax3:#578af2;
+  --hl1:rgba(114,123,141,0.3);
+  --hl2:rgba(209,154,102,0.3);
+  --sp1:#fff; }
+
+.theme-dark.minimal-atom-dark.minimal-dark-black {
+  --base-d:5%;
+  --bg3:#282c34;
+  --background-divider:#282c34; }
+
 /* Dracula */
 .theme-dark.minimal-dracula-dark {
   --red:#ff5555;
@@ -9007,13 +9085,13 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-v
 .theme-dark.minimal-solarized-dark,
 .theme-light.minimal-solarized-light {
   --red:#dc322f;
+  --orange:#cb4b16;
   --yellow:#b58900;
   --green:#859900;
-  --orange:#cb4b16;
-  --purple:#6c71c4;
-  --pink:#d33682;
   --cyan:#2aa198;
-  --blue:#268bd2; }
+  --blue:#268bd2;
+  --purple:#6c71c4;
+  --pink:#d33682; }
 
 .theme-light.minimal-solarized-light {
   --base-h:44;
@@ -9301,6 +9379,14 @@ settings:
     - 
         id: cyan
         title: Cyan
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: blue
+        title: Blue
         type: variable-themed-color
         opacity: true
         format: hex
