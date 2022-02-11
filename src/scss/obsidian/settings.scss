@@ -70,14 +70,14 @@
   flex:0 0 270px;
 }
 .community-plugin-search-summary {
-  border-bottom:1px solid var(--background-modifier-border);
+  border-bottom:1px solid var(--background-divider);
   padding-bottom:10px;
 }
 .community-plugin-item {
   margin:0;
   cursor:var(--cursor);
   padding-top:15px;
-  border-bottom:1px solid var(--background-modifier-border);
+  border-bottom:1px solid var(--background-divider);
 }
 .community-plugin-item:hover {
   background-color:var(--background-tertiary);
