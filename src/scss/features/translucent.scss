@@ -13,7 +13,7 @@
   background:transparent;
 }
 .is-translucent.frosted-sidebar:not(.hider-ribbon) .workspace-ribbon.mod-left:after {
-  background:var(--bg2);
+  background:var(--background-secondary);
   opacity:var(--bg-translucency-light);
   top:0px;
   left:0px;
@@ -24,7 +24,7 @@
   z-index:-10;
 }
 .is-translucent.frosted-sidebar .mod-left-split .workspace-tabs:after {
-  background:var(--bg2);
+  background:var(--background-secondary);
   opacity:var(--bg-translucency-light);
   top:-50px;
   content:"";
