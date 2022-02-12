@@ -152,7 +152,7 @@ SOFTWARE.
   --red:#d04255;
   --yellow:#e5b567;
   --green:#a8c373;
-  --orange:#e57e43;
+  --orange:#d5763f;
   --cyan:#73bbb2;
   --blue:#6c99bb;
   --purple:#9e86c8;
@@ -2371,8 +2371,14 @@ body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
 /* Search and replace (in file) */
 .is-flashing {
   border-radius: 2px;
-  box-shadow: 0 2px 0 8px var(--text-highlight-bg);
+  box-shadow: 2px 1px 0 4px var(--text-highlight-bg);
   transition: all 0s ease-in-out; }
+
+.minimal-folding .is-flashing {
+  box-shadow: 5px 2px 0 6px var(--text-highlight-bg); }
+
+.footnotes .is-flashing {
+  box-shadow: -2px 0px 0 2px var(--text-highlight-bg); }
 
 .is-flashing .tag {
   border-color: var(--text-highlight-bg-active); }
@@ -5389,8 +5395,7 @@ https://github.com/sponsors/kepano
 
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   max-width: var(--max-width);
-  width: var(--line-width-adaptive);
-  overflow: hidden; }
+  width: var(--line-width-adaptive); }
 
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer > div {
   max-width: 100%; }
@@ -8380,6 +8385,13 @@ body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-
   --leaflet-buttons:var(--bg2);
   --leaflet-borders:rgba(255,255,255,0.1); }
 
+.leaflet-top {
+  transition: top 0.1s linear; }
+
+.mod-macos.minimal-focus-mode .mod-root .map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) .leaflet-top {
+  top: calc(18px + var(--ewt-traffic-light-y));
+  transition: top 0.1s linear; }
+
 body .leaflet-container {
   background-color: var(--background-secondary); }
 
@@ -8458,6 +8470,9 @@ body .leaflet-bar a:hover {
   background-color: var(--background-tertiary);
   color: var(--text-normal);
   border: none; }
+
+body .leaflet-touch .leaflet-control-layers {
+  background-color: var(--leaflet-buttons); }
 
 body .leaflet-touch .leaflet-control-layers,
 body .leaflet-touch .leaflet-bar {

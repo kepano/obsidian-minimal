@@ -8,6 +8,14 @@
   --leaflet-borders:rgba(255,255,255,0.1);
 }
 
+.leaflet-top {
+  transition:top 0.1s linear;
+}
+.mod-macos.minimal-focus-mode .mod-root .map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) .leaflet-top {
+  top:calc(18px + var(--ewt-traffic-light-y));
+  transition:top 0.1s linear;
+}
+
 body .leaflet-container {
   background-color:var(--background-secondary);
 }
@@ -92,6 +100,9 @@ body .leaflet-bar a:hover {
   background-color:var(--background-tertiary);
   color:var(--text-normal);
   border:none;
+}
+body .leaflet-touch .leaflet-control-layers {
+  background-color:var(--leaflet-buttons);
 }
 body .leaflet-touch .leaflet-control-layers,
 body .leaflet-touch .leaflet-bar {
