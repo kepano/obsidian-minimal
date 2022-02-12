@@ -2338,7 +2338,7 @@ body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
   box-shadow: 5px 1px 0 6px var(--text-highlight-bg); }
 
 .footnotes .is-flashing {
-  box-shadow: -2px 0px 0 3px var(--text-highlight-bg); }
+  box-shadow: -1px 0px 0 3px var(--text-highlight-bg); }
 
 .is-flashing .tag {
   border-color: var(--text-highlight-bg-active); }
