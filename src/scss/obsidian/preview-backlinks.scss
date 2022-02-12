@@ -50,5 +50,5 @@
   color:var(--text-muted);
 }
 .mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane .search-result-file-title {
-  font-size:var(--font-adaptive-small);
+  font-size:calc(var(--font-adaptive-normal) - 2px);
 }

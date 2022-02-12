@@ -1,0 +1,35 @@
+/* Footnotes */
+
+/* Preview mode */
+
+.footnotes-list {
+  margin-block-start:-10px;
+  padding-inline-start:20px;
+  font-size:var(--font-adaptive-small);
+}
+.footnotes-list p {
+  display:inline;
+  margin-block-end:0;
+  margin-block-start:0;
+}
+.footnote-ref a {
+  text-decoration:none;
+}
+.footnote-backref {
+  color:var(--text-faint);
+}
+
+ .footnotes .is-flashing,
+.minimal-folding .footnotes .is-flashing {
+  box-shadow:-1px 0px 0 3px var(--text-highlight-bg);
+}
+
+.cm-s-obsidian .HyperMD-footnote,
+.footnotes {
+  font-size:calc(var(--font-adaptive-normal) - 2px);
+}
+
+.markdown-preview-view .footnotes hr {
+  margin:0.5em 0 1em;
+  border-width:1px 0 0 0;
+}
