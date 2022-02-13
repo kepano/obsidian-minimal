@@ -1,7 +1,7 @@
 /* Title Bar */
 
 /* Alignment */
-.title-align-left:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='markdown'] .view-header-title-container {
+.title-align-left:not(.plugin-sliding-panes-rotate-header) .view-header-title-container {
   margin-left:calc(var(--traffic-x-space) + 30px);
 }
 .title-align-center:not(.plugin-sliding-panes-rotate-header) .view-header-title {

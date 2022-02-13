@@ -3193,7 +3193,7 @@ span.cm-hashtag.cm-hashtag-end {
 
 /* Title Bar */
 /* Alignment */
-.title-align-left:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='markdown'] .view-header-title-container {
+.title-align-left:not(.plugin-sliding-panes-rotate-header) .view-header-title-container {
   margin-left: calc(var(--traffic-x-space) + 30px); }
 
 .title-align-center:not(.plugin-sliding-panes-rotate-header) .view-header-title {
@@ -5641,7 +5641,7 @@ https://github.com/sponsors/kepano
   width: var(--line-width-adaptive);
   max-width: var(--max-width); }
 
-.workspace-leaf-content[data-type='markdown'] .view-header-title-container {
+.view-header-title-container {
   padding-left: 0;
   padding-right: 0px;
   position: absolute;
