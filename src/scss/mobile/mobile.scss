@@ -414,7 +414,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
 
 @media (max-width:400pt) {
 
-  .view-header-icon {
+  .is-mobile .view-header-icon {
     display:none;
   }
 

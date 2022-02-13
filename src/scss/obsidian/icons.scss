@@ -80,18 +80,6 @@ body .view-action svg.cross path {
   border-left:0;
   margin:0 6px 6px;
 }
-.view-header-icon {
-  opacity:0;
-  top:0;
-  left:6px;
-  z-index:15;
-}
-.view-header-icon:hover {
-  background:var(--background-tertiary);
-}
-.view-header-icon:active {
-  cursor:grabbing;
-}
 .nav-action-button,
 .workspace-leaf-content[data-type='search'] .nav-action-button,
 .workspace-leaf-content[data-type='backlink'] .nav-action-button {

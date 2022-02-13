@@ -198,7 +198,6 @@ settings:
     - 
         id: title-alignment
         title: Title alignment
-        description: For the "Text body" option you may need to also toggle "Folding offset" in Minimal Theme Settings if you notice a small misalignment
         type: class-select
         allowEmpty: false
         default: title-align-body
@@ -212,6 +211,12 @@ settings:
             -
                 label: Center
                 value: title-align-center
+    -
+        id: show-grabber
+        title: Always show grabber icon
+        description: Dragging handle is always visible
+        type: class-toggle
+        default: false
     - 
         id: title-size
         title: Title font size

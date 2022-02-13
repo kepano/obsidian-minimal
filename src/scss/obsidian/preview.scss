@@ -4,23 +4,6 @@
   height:1px;
   border-width:2px 0 0 0;
 }
-
-.footnotes-list {
-  margin-block-start:-10px;
-  padding-inline-start:20px;
-  font-size:var(--font-adaptive-small);
-}
-.footnotes-list p {
-  display:inline;
-  margin-block-end:0;
-  margin-block-start:0;
-}
-.footnote-ref a {
-  text-decoration:none;
-}
-.footnote-backref {
-  color:var(--text-faint);
-}
 iframe {
   border:0;
 }

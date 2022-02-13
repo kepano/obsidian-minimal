@@ -34,14 +34,11 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
 
 /* Frameless + no ribbon */
 .mod-macos.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
-  --traffic-x-space:75px;
+  --traffic-x-space:64px;
 }
 /* Frameless */
 .mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
-  --traffic-x-space:30px;
-}
-.view-header-icon {
-  margin-left:var(--traffic-x-space);
+  --traffic-x-space:22px;
 }
 
 /* Remove ribbon border on Mac when frameless */
