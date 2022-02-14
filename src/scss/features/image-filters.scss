@@ -31,3 +31,8 @@ span[src$="#round"] img {
   border-radius:50%;
   aspect-ratio:1/1;
 }
+
+/* Outline */
+span[src$="#outline"] img {
+  border:1px solid var(--ui1);
+}

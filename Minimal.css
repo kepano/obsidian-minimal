@@ -5200,6 +5200,10 @@ span[src$="#round"] img {
   border-radius: 50%;
   aspect-ratio: 1/1; }
 
+/* Outline */
+span[src$="#outline"] img {
+  border: 1px solid var(--ui1); }
+
 /* MIT License | Copyright (c) Stephan Ango (@kepano) 
 
 Image Grid snippet for Obsidian
@@ -7798,6 +7802,8 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .el-lang-dataview + .el-p {
   margin-top: 0.5rem; }
 
+.el-div + .el-h1,
+.el-pre + .el-h1,
 .el-lang-leaflet,
 .el-lang-leaflet + *,
 .el-iframe + .el-p,
@@ -8794,6 +8800,19 @@ body.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf.sta
 body.plugin-tabs .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf .view-header, .plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header {
   border: none; }
 
+/* Tracker */
+body.theme-light {
+  --color-axis-label:var(--tx1);
+  --color-tick-label:var(--tx2);
+  --color-dot-fill:var(--ax1);
+  --color-line:var(--ui1); }
+
+.tracker-axis-label {
+  font-family: var(--font-ui); }
+
+.tracker-axis {
+  color: var(--ui2); }
+
 /* Color schemes */
 /* Atom */
 .theme-dark.minimal-atom-dark {
@@ -9542,15 +9561,15 @@ settings:
         type: variable-number
         default: 600
     - 
-        id: title-color-inactive
-        title: Title font color (inactive)
+        id: title-color
+        title: Title font color (active)
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: title-color
-        title: Title font color (active)
+        id: title-color-inactive
+        title: Title font color (inactive)
         type: variable-themed-color
         format: hex
         default-light: '#'

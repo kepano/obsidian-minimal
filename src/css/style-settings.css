@@ -230,15 +230,15 @@ settings:
         type: variable-number
         default: 600
     - 
-        id: title-color-inactive
-        title: Title font color (inactive)
+        id: title-color
+        title: Title font color (active)
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: title-color
-        title: Title font color (active)
+        id: title-color-inactive
+        title: Title font color (inactive)
         type: variable-themed-color
         format: hex
         default-light: '#'
