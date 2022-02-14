@@ -286,7 +286,7 @@ This builds two files, the `obsidian.css` distribution file (for the community t
 
 Minimal is licensed under the MIT License which allows you to modify and redistribute the code, however you must preserve the copyright and license notice in your CSS file. This includes any code you may extract as standalone snippets.
 
-**If you would like to distribute a fork of Minimal please keep my [Buy me a coffee](https://www.buymeacoffee.com/kepano) link present in your Readme.**
+**If you would like to distribute a fork of Minimal or its features please keep my [Buy me a coffee](https://www.buymeacoffee.com/kepano) link present in your Readme.**
 
 Minimal is frequently updated to stay current with the latest version of Obsidian. To make it easy to stay current with the latest improvements, I recommend using [Github's fork feature](https://docs.github.com/en/get-started/quickstart/fork-a-repo) so that you can merge the latest changes into your fork. If you have any questions don't hesitate to reach me in the Obsidian Discord group. 
 
