@@ -1746,7 +1746,7 @@ ol > li {
   margin-left: -0.25em; }
 
 /* Live Preview */
-.cm-line {
+.cm-line:not(.HyperMD-codeblock) {
   tab-size: var(--list-padding); }
 
 body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
@@ -9275,10 +9275,6 @@ body.theme-light {
   --ax2:#79a9ec;
   --ax3:#4d95f7;
   --hl1:rgba(40,119,236,0.35);
-  --h1-color:#4d95f7;
-  --h2-color:#4d95f7;
-  --h3-color:#4d95f7;
-  --h4-color:#4d95f7;
   --sp1:#fff; }
 
 .theme-dark.minimal-things-dark.minimal-dark-black {

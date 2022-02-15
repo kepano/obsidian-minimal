@@ -28,7 +28,7 @@ ol > li {
 }
 
 /* Live Preview */
-.cm-line {
+.cm-line:not(.HyperMD-codeblock) {
   tab-size:var(--list-padding);
 }
 body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
