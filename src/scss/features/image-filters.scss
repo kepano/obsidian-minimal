@@ -11,6 +11,7 @@
 }
 
 /* Invert  */
+.theme-dark img[src$="#invert"],
 .theme-dark div[src$="#invert"] img,
 .theme-dark span[src$="#invert"] img {
   filter:invert(1) hue-rotate(180deg);
@@ -20,12 +21,14 @@
   background-color:var(--background-primary);
 }
 
+.theme-light img[src$="#invertW"],
 .theme-light div[src$="#invertW"] img,
 .theme-light span[src$="invertW"] img {
   filter:invert(1) hue-rotate(180deg);
 }
 
 /* Circle */
+img[src$="#circle"],
 span[src$="#circle"] img,
 span[src$="#round"] img {
   border-radius:50%;
@@ -33,6 +36,7 @@ span[src$="#round"] img {
 }
 
 /* Outline */
+img[src$="#outline"],
 span[src$="#outline"] img {
   border:1px solid var(--ui1);
 }
