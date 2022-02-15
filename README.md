@@ -150,7 +150,8 @@ Image filters can be added to create the following effects. Use them by adding t
 | :--------- | :--------------------------------------------------------------------------------- |
 | `#invert`  | Invert images in dark mode — ideal for charts and handwriting on light backgrounds |
 | `#invertW` | Invert images in light mode — ideal for charts and handwriting on dark backgrounds |
-| `#circle`  | Crop image to a circle |
+| `#circle`  | Crop image to a circle                                                             |
+| `#outline` | Add outline around image                                                           | 
 
 ## CSS helper classes
 
