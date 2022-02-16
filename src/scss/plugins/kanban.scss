@@ -26,6 +26,7 @@ body .kanban-plugin__grow-wrap > textarea,
 body .kanban-plugin__grow-wrap::after {
   padding:0;
   border:0;
+  border-radius:0;
 }
 body:not(.is-mobile) .kanban-plugin__grow-wrap > textarea:focus {
   box-shadow:none;
@@ -60,6 +61,7 @@ body .kanban-plugin__lane-input-wrapper  .kanban-plugin__grow-wrap > textarea {
 }
 body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea {
   padding:0;
+  border-radius:0;
 }
 body .kanban-plugin__item-form .kanban-plugin__grow-wrap {
   padding:6px 8px;
