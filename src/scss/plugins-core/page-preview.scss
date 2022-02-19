@@ -12,7 +12,12 @@
   border:1px solid var(--background-modifier-border);
 }
 .popover.hover-popover {
-  max-height:40vh;}
+  width:400px;
+  max-height:40vh;
+}
+.popover.hover-popover .markdown-embed {
+  padding:0;
+}
 .popover .markdown-embed-link {
   display:none;
 }

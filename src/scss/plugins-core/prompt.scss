@@ -36,9 +36,10 @@ input.prompt-input {
 .prompt-instruction-command {
   font-weight:600;
 }
+/*
 .suggestion-prefix {
   font-weight:500;
-}
+}*/
 
 /* In Editor autocomplete */
 .suggestion-container {
@@ -76,6 +77,33 @@ input.prompt-input {
 .prompt-results .suggestion-item {
   padding:5px 8px 5px 10px;
 }
+
+/*
+.prompt .prompt-results {
+  .suggestion-item {
+    display:flex;
+    align-items:center;
+    .suggestion-prefix {
+      white-space:pre;
+    }
+    .suggestion-content {
+      white-space:pre;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      flex-grow:1;
+      padding-right:1em;
+    }
+    .suggestion-hotkey {
+      white-space:pre;
+      margin-top:0;
+    }
+    .suggestion-hotkey:not(:last-child) {
+      margin:0 5px 0 0;
+    }
+  }
+}
+*/
+
 .modal-container .suggestion-item.is-selected {
   border-radius:var(--radius-m);
   background:var(--background-tertiary);

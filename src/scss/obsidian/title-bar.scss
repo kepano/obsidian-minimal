@@ -2,11 +2,17 @@
 
 /* Alignment */
 .title-align-left:not(.plugin-sliding-panes-rotate-header) .view-header-title-container {
-  margin-left:calc(var(--traffic-x-space) + 30px);
+  margin-left:5px;
 }
 .title-align-center:not(.plugin-sliding-panes-rotate-header) .view-header-title {
-  margin-left:5px;
+  margin-left:0;
+  padding-right:0;
   text-align:center;
+}
+.title-align-left:not(.plugin-sliding-panes-rotate-header) .view-header-title-container,
+.title-align-center:not(.plugin-sliding-panes-rotate-header) .view-header-title-container {
+  width:auto;
+  position:static;
 }
 .mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title-container  {
   max-width:calc(100% - (var(--traffic-x-space) * 2) - 30px);
@@ -44,13 +50,16 @@ body:not(.minimal-icons-off) div.view-header-icon svg {
 /* Right side title bar icon */
 .view-actions {
   margin-right:1px;
+  height:calc(var(--header-height) - 1px);
+  top:0;
+  align-items:center;
   z-index:15;
   background:var(--background-primary);
 }
 
 /* Title area */
 .view-header-title {
-  padding-right:0px;
+  padding-right:80px;
 }
 /* Fade out title
 body:not(.is-mobile) .view-header-title:before {
@@ -71,6 +80,16 @@ body:not(.is-mobile) .view-header-title:before {
   background-color:var(--background-primary) !important;
   border-top:none;
   border-bottom:none;
+}
+.view-header-title-container {
+  padding-left:0;
+  padding-right:0px;
+  position:absolute;
+  width:var(--line-width-adaptive);
+  max-width:var(--max-width);
+  margin:0 auto;
+  left:0;
+  right:0;
 }
 .view-header-title-container:after {
   display:none;

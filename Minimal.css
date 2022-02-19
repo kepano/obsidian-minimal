@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
 
-Minimal Obsidian 5.1.3 by @kepano
+Minimal Obsidian 5.1.6 by @kepano
 
 User interface replacement for Obsidian.
 
@@ -2234,10 +2234,18 @@ iframe {
 .embed-strict .internal-embed:not([src*="#^"]) .markdown-embed-link {
   width: 30px; }
 
+.contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer > div {
+  margin: 0;
+  width: 100%; }
+
+.markdown-embed .markdown-preview-view .markdown-preview-sizer {
+  padding-bottom: 0 !important; }
+
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width: 100%;
   width: 100%;
-  min-height: 0 !important; }
+  min-height: 0 !important;
+  padding-bottom: 0 !important; }
 
 .markdown-embed .markdown-preview-section div:last-child p,
 .markdown-embed .markdown-preview-section div:last-child ul {
@@ -3194,11 +3202,17 @@ span.cm-hashtag.cm-hashtag-end {
 /* Title Bar */
 /* Alignment */
 .title-align-left:not(.plugin-sliding-panes-rotate-header) .view-header-title-container {
-  margin-left: calc(var(--traffic-x-space) + 30px); }
+  margin-left: 5px; }
 
 .title-align-center:not(.plugin-sliding-panes-rotate-header) .view-header-title {
-  margin-left: 5px;
+  margin-left: 0;
+  padding-right: 0;
   text-align: center; }
+
+.title-align-left:not(.plugin-sliding-panes-rotate-header) .view-header-title-container,
+.title-align-center:not(.plugin-sliding-panes-rotate-header) .view-header-title-container {
+  width: auto;
+  position: static; }
 
 .mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title-container {
   max-width: calc(100% - (var(--traffic-x-space) * 2) - 30px); }
@@ -3233,12 +3247,15 @@ body:not(.minimal-icons-off) div.view-header-icon svg {
 /* Right side title bar icon */
 .view-actions {
   margin-right: 1px;
+  height: calc(var(--header-height) - 1px);
+  top: 0;
+  align-items: center;
   z-index: 15;
   background: var(--background-primary); }
 
 /* Title area */
 .view-header-title {
-  padding-right: 0px; }
+  padding-right: 80px; }
 
 /* Fade out title
 body:not(.is-mobile) .view-header-title:before {
@@ -3259,6 +3276,16 @@ body:not(.is-mobile) .view-header-title:before {
   background-color: var(--background-primary) !important;
   border-top: none;
   border-bottom: none; }
+
+.view-header-title-container {
+  padding-left: 0;
+  padding-right: 0px;
+  position: absolute;
+  width: var(--line-width-adaptive);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
 
 .view-header-title-container:after {
   display: none; }
@@ -5649,16 +5676,6 @@ https://github.com/sponsors/kepano
   width: var(--line-width-adaptive);
   max-width: var(--max-width); }
 
-.view-header-title-container {
-  padding-left: 0;
-  padding-right: 0px;
-  position: absolute;
-  width: var(--line-width-adaptive);
-  max-width: var(--max-width);
-  margin: 0 auto;
-  left: 0;
-  right: 0; }
-
 /* Links and underline handling*/
 body:not(.links-int-on) a[href*="obsidian://"],
 body:not(.links-int-on) .markdown-preview-view .internal-link,
@@ -6762,7 +6779,11 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
   border: 1px solid var(--background-modifier-border); }
 
 .popover.hover-popover {
+  width: 400px;
   max-height: 40vh; }
+
+.popover.hover-popover .markdown-embed {
+  padding: 0; }
 
 .popover .markdown-embed-link {
   display: none; }
@@ -6823,9 +6844,10 @@ input.prompt-input {
 .prompt-instruction-command {
   font-weight: 600; }
 
+/*
 .suggestion-prefix {
-  font-weight: 500; }
-
+  font-weight:500;
+}*/
 /* In Editor autocomplete */
 .suggestion-container {
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
@@ -6857,6 +6879,31 @@ input.prompt-input {
 .prompt-results .suggestion-item {
   padding: 5px 8px 5px 10px; }
 
+/*
+.prompt .prompt-results {
+  .suggestion-item {
+    display:flex;
+    align-items:center;
+    .suggestion-prefix {
+      white-space:pre;
+    }
+    .suggestion-content {
+      white-space:pre;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      flex-grow:1;
+      padding-right:1em;
+    }
+    .suggestion-hotkey {
+      white-space:pre;
+      margin-top:0;
+    }
+    .suggestion-hotkey:not(:last-child) {
+      margin:0 5px 0 0;
+    }
+  }
+}
+*/
 .modal-container .suggestion-item.is-selected {
   border-radius: var(--radius-m);
   background: var(--background-tertiary); }
@@ -8271,6 +8318,9 @@ body .kanban-plugin__item-title p {
 body .kanban-plugin__item {
   background-color: var(--background-primary); }
 
+.kanban-plugin__item-title-wrapper {
+  align-items: center; }
+
 body .kanban-plugin__lane-form-wrapper {
   border: 1px solid var(--background-modifier-border); }
 
@@ -8347,14 +8397,17 @@ body .kanban-plugin__item-button-wrapper > button {
   color: var(--text-muted);
   font-weight: 400;
   background: transparent;
-  height: 34px; }
+  height: 32px; }
 
 body .kanban-plugin__item-button-wrapper > button:hover {
   color: var(--text-normal);
   background: var(--background-tertiary); }
 
+body .kanban-plugin__item-button-wrapper > button:focus {
+  box-shadow: none; }
+
 body .kanban-plugin__item-button-wrapper {
-  padding: 2px 6px 6px;
+  padding: 1px 6px 5px;
   border-top: none; }
 
 body .kanban-plugin__lane-setting-wrapper > div:last-child {
@@ -8409,7 +8462,7 @@ body .kanban-plugin__item-button-wrapper {
   border-bottom-right-radius: 8px; }
 
 body .kanban-plugin__item-form {
-  padding: 0 4px 4px; }
+  padding: 0 4px 5px; }
 
 body .kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list,
 body .kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list,

@@ -11,10 +11,18 @@
   width:30px;
 }
 
+.contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer>div {
+  margin:0;
+  width:100%;
+}
+.markdown-embed .markdown-preview-view .markdown-preview-sizer {
+  padding-bottom:0 !important;
+}
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width:100%;
   width:100%;
   min-height:0 !important;
+  padding-bottom:0 !important;
 }
 
 .markdown-embed .markdown-preview-section div:last-child p,
