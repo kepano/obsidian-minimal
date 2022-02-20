@@ -218,6 +218,11 @@ settings:
         type: class-toggle
         default: false
     - 
+        id: header-height
+        title: Title bar height
+        type: variable-text
+        default: 42px
+    - 
         id: title-size
         title: Title font size
         description: Accepts any CSS font-size value

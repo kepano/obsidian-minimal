@@ -3452,13 +3452,14 @@ body.hider-frameless .titlebar {
   margin: 0 auto;
   padding-left: 5px; }
 
-.mod-right-split .workspace-tabs .workspace-tab-header-container {
-  border: none;
-  height: calc(var(--header-height) - 1px); }
+.workspace-tabs .workspace-tab-header-container {
+  border: none; }
+
+.workspace-sidedock-empty-state + .workspace-tabs .workspace-tab-header-container {
+  border-bottom: var(--border-width) solid var(--background-divider); }
 
 .mod-right-split .workspace-tabs .nav-buttons-container {
-  z-index: 1;
-  border-top: var(--border-width) solid var(--background-divider); }
+  z-index: 1; }
 
 .workspace-tab-header.is-before-active .workspace-tab-header-inner,
 .workspace-tab-header.is-active,
@@ -5335,7 +5336,8 @@ https://github.com/sponsors/kepano
   height: auto; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-container-inner {
   flex-direction: column;
-  padding: 8px 8px 4px 8px; }
+  padding: 8px 8px 4px 8px;
+  background-color: transparent; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header {
   padding: 0;
   margin-bottom: 2px;
@@ -5344,12 +5346,18 @@ https://github.com/sponsors/kepano
   .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header.is-active, .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header:hover {
     opacity: 1; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner {
-  padding: 0; }
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 6px; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon {
   border-radius: 6px;
   padding: 5px 6px;
   margin: 0;
+  height: 26px;
   width: 100%; }
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:hover {
+  background-color: var(--background-tertiary); }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-inner-icon {
   font-size: var(--font-small);
   font-weight: 500;
@@ -5361,7 +5369,8 @@ https://github.com/sponsors/kepano
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-inner-icon svg {
   margin-right: 6px; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
-  border: none; }
+  border: none;
+  padding: 0; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:after {
   content: "Plugin"; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="backlink"] .workspace-tab-header-inner-icon:after {
@@ -9042,7 +9051,7 @@ body.theme-light {
   --tx2:#808080;
   --tx3:#b0b0b0;
   --ax1:#027aff;
-  --ax1:#0463cc;
+  --ax2:#0463cc;
   --ax3:#007bff;
   --hl1:#b3d7ff; }
 

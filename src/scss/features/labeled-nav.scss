@@ -18,6 +18,7 @@ https://github.com/sponsors/kepano
   .workspace-tab-container-inner {
     flex-direction:column;
     padding:8px 8px 4px 8px;
+    background-color:transparent;
   }
   .workspace-tab-header {
     padding:0;
@@ -31,12 +32,19 @@ https://github.com/sponsors/kepano
   }
   .workspace-tab-header .workspace-tab-header-inner {
     padding:0;
+    box-shadow:none;
+    border:none;
+    border-radius:6px;
   }
   .workspace-tab-header .workspace-tab-header-inner-icon {
     border-radius:6px;
     padding:5px 6px;
     margin:0;
+    height:26px;
     width:100%;
+  }
+  .workspace-tab-header .workspace-tab-header-inner-icon:hover {
+    background-color:var(--background-tertiary);
   }
    .workspace-tab-header-inner-icon {
     font-size: var(--font-small);
@@ -52,7 +60,8 @@ https://github.com/sponsors/kepano
     margin-right:6px;
   }
   .workspace-tab-header-container {
-    border:none; 
+    border:none;
+    padding:0;
   }
 
   .workspace-tab-header .workspace-tab-header-inner-icon:after {
