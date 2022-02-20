@@ -1870,7 +1870,7 @@ body:not(.is-mobile) .modal {
     position: sticky;
     display: flex;
     height: 54px;
-    margin-top: 6px;
+    margin-top: 8px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -1947,12 +1947,14 @@ body:not(.is-mobile) .modal {
     font-size: 0;
     margin-left: 10px;
     justify-content: center;
-    color: white;
+    color: var(--text-muted);
     border: none;
     box-shadow: none;
-    background-color: transparent;
-    background: no-repeat center center url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="gray" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>');
-    background-size: 22px 22px; }
+    background-color: currentColor;
+    -webkit-mask: no-repeat center center url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="currentColor" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>');
+    -webkit-mask-size: 22px; }
+    .is-mobile .community-plugin-search .setting-item-control button:hover {
+      background-color: var(--text-normal); }
   .is-mobile .community-plugin-search .search-input-container {
     margin: 0; }
   .is-mobile .modal.mod-settings .vertical-tabs-container {
@@ -1960,6 +1962,8 @@ body:not(.is-mobile) .modal {
     overflow: hidden;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px; }
+  .is-mobile .community-plugin-details .modal-setting-back-button {
+    padding: 12px 20px; }
   .is-mobile .modal-setting-back-button {
     border-bottom: 1px solid var(--background-modifier-border);
     display: flex;
@@ -1976,6 +1980,10 @@ body:not(.is-mobile) .modal {
     flex-grow: 1;
     text-align: center;
     font-weight: 600;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text-normal); }
   .is-mobile .hotkey-list-container .setting-command-hotkeys {
     flex: unset; }
@@ -2018,7 +2026,10 @@ body:not(.is-mobile) .modal {
       width: 100%;
       margin: 0; }
     .is-mobile .modal-close-button {
-      top: 18px; }
+      top: 18px;
+      right: 0px;
+      padding: 4px 16px 2px 4px;
+      width: 46px; }
     .is-mobile .modal-close-button:hover {
       background: var(--background-primary); } }
 
@@ -5459,6 +5470,7 @@ https://github.com/sponsors/kepano
 .el-lang-dataview .block-language-dataview > h4,
 .el-lang-dataview .dataview.result-group,
 .el-lang-dataview .dataview.list-view-ul,
+.el-lang-dataview .block-language-dataview .contains-task-list,
 .el-lang-dataview .dataview.dataview-error {
   max-width: var(--max-width);
   width: var(--line-width-adaptive);
@@ -7853,6 +7865,12 @@ ul.dataview-ul {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden; }
+
+/* Lists */
+ul .dataview .task-list-item:hover,
+ul .dataview .task-list-basic-item:hover {
+  background-color: transparent;
+  box-shadow: none; }
 
 /* Inline fields */
 body .dataview.inline-field-key,
