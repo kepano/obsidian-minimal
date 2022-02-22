@@ -3262,7 +3262,7 @@ body:not(.is-mobile) .view-header-title:before {
   display: none; }
 
 .view-actions {
-  padding: 0px 5px;
+  padding: 0px 6px;
   margin-right: 0px;
   margin-left: auto;
   transition: opacity 0.25s ease-in-out; }
@@ -9071,7 +9071,7 @@ body.theme-light {
   --base-l:12%;
   --bg1:#1e1e1e;
   --bg2:#282828;
-  --bg3:#414141;
+  --bg3:rgba(255,255,255,0.11);
   --background-divider:#000;
   --ui1:#373737;
   --ui2:#515151;
