@@ -79,6 +79,10 @@ body .excalidraw {
 
   --background-divider:                var(--ui1);
 
+  --scrollbar-bg:                      transparent;
+  --scrollbar-thumb-bg:                var(--ui1);
+  --scrollbar-active-thumb-bg:         var(--ui3);
+
   --quote-opening-modifier:            var(--ui2);
 
   --modal-border:                      var(--ui2);

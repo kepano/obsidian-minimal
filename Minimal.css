@@ -454,6 +454,9 @@ body .excalidraw {
   --background-modifier-border-focus: var(--ui3);
   --background-modifier-success: var(--green);
   --background-divider: var(--ui1);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--ui1);
+  --scrollbar-active-thumb-bg: var(--ui3);
   --quote-opening-modifier: var(--ui2);
   --modal-border: var(--ui2);
   --icon-color: var(--tx2);
@@ -783,8 +786,8 @@ body.is-dragging {
 
 .markdown-source-view.mod-cm6 .edit-block-button svg {
   opacity: 0.5;
-  width: 18px;
-  height: 18px; }
+  width: var(--icon-size);
+  height: var(--icon-size); }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover svg {
   opacity: 1; }
@@ -4077,7 +4080,7 @@ https://github.com/sponsors/kepano
   position: absolute;
   right: 0;
   top: 0;
-  height: 18px;
+  height: var(--icon-size);
   background-repeat: no-repeat;
   cursor: var(--cursor);
   text-align: right;
@@ -4090,7 +4093,7 @@ https://github.com/sponsors/kepano
 .cards table.dataview thead:before {
   opacity: 0.25;
   background-position: center center;
-  background-size: 18px;
+  background-size: var(--icon-size);
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="white" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>'); }
 
 .theme-light .cards table.dataview thead:before {
