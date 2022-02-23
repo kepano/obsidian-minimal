@@ -98,6 +98,7 @@ SOFTWARE.
   /* Amount of padding around the text, use 90% for narrower padding */
   --max-col-width:18em;
   --icon-muted:0.5;
+  --icon-size:18px;
   --border-width:1px;
   --border-width-alt:1px;
   --folding-offset:16px;
@@ -4187,16 +4188,16 @@ body:not(.minimal-icons-off) .view-action svg,
 body:not(.minimal-icons-off) .workspace-tab-header-inner-icon svg,
 body:not(.minimal-icons-off) .nav-action-button svg,
 body:not(.minimal-icons-off) .graph-controls-button svg {
-  width: 18px;
-  height: 18px; }
+  width: var(--icon-size);
+  height: var(--icon-size); }
 
 body:not(.minimal-icons-off) .menu-item-icon svg {
   width: 16px;
   height: 16px; }
 
 body:not(.minimal-icons-off) .workspace-ribbon-collapse-btn svg {
-  width: 18px;
-  height: 18px; }
+  width: var(--icon-size);
+  height: var(--icon-size); }
 
 body:not(.minimal-icons-off) svg.any-key,
 body:not(.minimal-icons-off) svg.blocks,
@@ -4564,8 +4565,8 @@ body:not(.minimal-icons-off) svg.cross-in-box {
 
 body:not(.minimal-icons-off) svg.cross {
   -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12' /></svg>");
-  width: 18px;
-  height: 18px; }
+  width: var(--icon-size);
+  height: var(--icon-size); }
 
 body:not(.minimal-icons-off) svg.crossed-star {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M20.938 86.563A4.158 4.158 0 0 0 25 91.667a4.167 4.167 0 0 0 2.313 -0.7L50 75.842l22.688 15.125a4.171 4.171 0 0 0 6.321 -4.608l-7.621 -26.667l18.9 -17.008a4.167 4.167 0 0 0 -2.458 -7.25l-23.754 -1.892l-10.279 -22.754a4.158 4.158 0 0 0 -7.592 -0.004L35.925 33.542l-23.754 1.888a4.167 4.167 0 0 0 -2.579 7.138l17.558 17.113l-6.213 26.883zM50 22.621l8.508 18.838l2.45 0.196h0.004l16.55 1.313l-13.629 12.267l-0.004 0.008l-1.929 1.733l0.713 2.488v0.013l5.221 18.271L50 65.825V22.621z"></path></svg>'); }
@@ -7726,6 +7727,10 @@ body .button-default.blue {
 
 #calendar-container .active .task {
   stroke: var(--text-faint); }
+
+/* Charts */
+.block-language-dataviewjs canvas {
+  margin: 1em 0; }
 
 /* Checklist plugin */
 .checklist-plugin-main .group .classic,
