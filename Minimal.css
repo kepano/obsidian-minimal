@@ -727,10 +727,28 @@ body.is-dragging {
   cursor: -webkit-grabbing; }
 
 .workspace-drop-overlay:before,
-.mod-drag,
-.drag-ghost {
+.mod-drag {
   opacity: 0;
   border-radius: 0 !important; }
+
+.drag-ghost {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: var(--font-adaptive-small);
+  padding: 3px 8px 4px;
+  color: white;
+  font-weight: 500;
+  border-radius: 4px; }
+
+.drag-ghost-self svg {
+  margin-right: 4px;
+  opacity: 0.5;
+  display: none; }
+
+.drag-ghost-action {
+  padding: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--font-adaptive-smaller); }
 
 .mod-drag {
   opacity: 0;
