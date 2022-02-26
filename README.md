@@ -127,6 +127,7 @@ You can use the Style Settings plugin to customize your color scheme. To see you
 Most plugins work well with Minimal, but the following plugins have received special love and attention:
 
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
+- [Charts](https://github.com/phibr0/obsidian-charts)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
 - [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography) — required for image grids and layout control
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
