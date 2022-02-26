@@ -1128,6 +1128,9 @@ h1,
   color: var(--text-muted); }
 
 /* Preview mode */
+.frontmatter code.language-yaml {
+  padding: 0; }
+
 .frontmatter-collapse-indicator.collapse-indicator {
   display: none; }
 
@@ -8632,6 +8635,30 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
 
 body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type='map'] .leaflet-top.leaflet-right {
   top: var(--header-height); }
+
+/* Metatable */
+.obsidian-metatable {
+  --metatable-font-size:calc(var(--font-adaptive-normal) - 2px);
+  --metatable-font-family: var(--font-ui);
+  --metatable-background:transparent;
+  --metatable-foreground: var(--text-faint);
+  --metatable-key-background:transparent;
+  --metatable-key-border-width:0;
+  --metatable-key-border-color:transparent;
+  --metatable-value-background:transparent;
+  padding-bottom: 0.5rem; }
+  .obsidian-metatable::part(value), .obsidian-metatable::part(key) {
+    border-bottom: 0px solid var(--background-modifier-border);
+    padding: 0.1rem 0;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .obsidian-metatable::part(key) {
+    font-weight: 400;
+    color: var(--tx3);
+    font-size: calc(var(--font-adaptive-normal) - 2px); }
+  .obsidian-metatable::part(value) {
+    font-size: calc(var(--font-adaptive-normal) - 2px);
+    color: var(--tx1); }
 
 /* Outliner plugin (pre Live Preview) */
 body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {

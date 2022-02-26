@@ -36,6 +36,10 @@
 
 /* Preview mode */
 
+.frontmatter code.language-yaml {
+  padding:0;
+}
+
 .frontmatter-collapse-indicator.collapse-indicator {
   display:none;
 }
