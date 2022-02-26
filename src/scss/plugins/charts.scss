@@ -3,3 +3,16 @@
 .block-language-dataviewjs canvas {
   margin:1em 0;
 }
+
+.theme-light,
+.theme-dark {
+  --chart-color-1:var(--text-accent);
+  --chart-color-2:var(--red);
+  --chart-color-3:var(--blue);
+  --chart-color-4:var(--yellow);
+  --chart-color-5:var(--green);
+  --chart-color-6:var(--orange);
+  --chart-color-7:var(--purple);
+  --chart-color-8:var(--cyan);
+  --chart-color-9:var(--pink);
+}
