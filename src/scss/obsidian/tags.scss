@@ -2,9 +2,9 @@
 
 .frontmatter-container .tag,
 a.tag {
-  background-color:transparent;
-  border:1px solid var(--background-modifier-border);
-  color:var(--text-muted);
+  background-color:var(--tag-bg);
+  border:var(--tag-border-width) solid var(--background-modifier-border);
+  color:var(--tag-color);
   font-size:var(--font-adaptive-small);
   font-family:var(--font-ui);
   padding:1px 8px 1px;
@@ -13,16 +13,17 @@ a.tag {
   vertical-align:middle;
   display:inline-block;
   margin:1px 0;
-  border-radius:14px;
+  border-radius:var(--tag-radius);
 }
 a.tag:hover {
   color:var(--text-normal);
   border-color:var(--background-modifier-border-hover);
+  background-color:var(--tag-bg2);
 }
 .cm-s-obsidian span.cm-hashtag {
-  background-color:transparent;
-  border:1px solid var(--background-modifier-border);
-  color:var(--text-muted);
+  background-color:var(--tag-bg);
+  border:var(--tag-border-width) solid var(--background-modifier-border);
+  color:var(--tag-color);
   font-size:var(--font-adaptive-small);
   font-family:var(--font-ui);
   text-align:center;
@@ -35,17 +36,20 @@ a.tag:hover {
   padding-bottom:3px;
   cursor:text;
 }
+.cm-s-obsidian span.cm-hashtag:hover {
+  background-color:var(--tag-bg2);
+}
 span.cm-hashtag.cm-hashtag-begin {
-  border-top-left-radius:14px;
-  border-bottom-left-radius:14px;
+  border-top-left-radius:var(--tag-radius);
+  border-bottom-left-radius:var(--tag-radius);
   padding-left:8px;
   border-right:none;
-  border-left:1px solid var(--background-modifier-border);
+  border-left:var(--tag-border-width) solid var(--background-modifier-border);
 }
 span.cm-hashtag.cm-hashtag-end {
-  border-top-right-radius:14px;
-  border-bottom-right-radius:14px;
+  border-top-right-radius:var(--tag-radius);
+  border-bottom-right-radius:var(--tag-radius);
   border-left:none;
   padding-right:8px;
-  border-right:1px solid var(--background-modifier-border);
+  border-right:var(--tag-border-width) solid var(--background-modifier-border);
 }

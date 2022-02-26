@@ -115,7 +115,10 @@ SOFTWARE.
   --input-height:32px;
   --header-height:40px;
   --mobile-left-sidebar-width:280pt;
-  --mobile-right-sidebar-width:240pt; }
+  --mobile-right-sidebar-width:240pt;
+  /* Tags */
+  --tag-radius:14px;
+  --tag-border-width:1px; }
 
 /* Dynamic colors
 
@@ -462,7 +465,10 @@ body .excalidraw {
   --icon-color: var(--tx2);
   --icon-color-hover: var(--tx2);
   --icon-color-active: var(--tx1);
-  --icon-hex: var(--mono0); }
+  --icon-hex: var(--mono0);
+  --tag-color: var(--tx2);
+  --tag-bg: transparent;
+  --tag-bg2: transparent; }
 
 .theme-light,
 body .excalidraw {
@@ -3147,9 +3153,9 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
 /* Tags */
 .frontmatter-container .tag,
 a.tag {
-  background-color: transparent;
-  border: 1px solid var(--background-modifier-border);
-  color: var(--text-muted);
+  background-color: var(--tag-bg);
+  border: var(--tag-border-width) solid var(--background-modifier-border);
+  color: var(--tag-color);
   font-size: var(--font-adaptive-small);
   font-family: var(--font-ui);
   padding: 1px 8px 1px;
@@ -3158,16 +3164,17 @@ a.tag {
   vertical-align: middle;
   display: inline-block;
   margin: 1px 0;
-  border-radius: 14px; }
+  border-radius: var(--tag-radius); }
 
 a.tag:hover {
   color: var(--text-normal);
-  border-color: var(--background-modifier-border-hover); }
+  border-color: var(--background-modifier-border-hover);
+  background-color: var(--tag-bg2); }
 
 .cm-s-obsidian span.cm-hashtag {
-  background-color: transparent;
-  border: 1px solid var(--background-modifier-border);
-  color: var(--text-muted);
+  background-color: var(--tag-bg);
+  border: var(--tag-border-width) solid var(--background-modifier-border);
+  color: var(--tag-color);
   font-size: var(--font-adaptive-small);
   font-family: var(--font-ui);
   text-align: center;
@@ -3180,19 +3187,22 @@ a.tag:hover {
   padding-bottom: 3px;
   cursor: text; }
 
+.cm-s-obsidian span.cm-hashtag:hover {
+  background-color: var(--tag-bg2); }
+
 span.cm-hashtag.cm-hashtag-begin {
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
+  border-top-left-radius: var(--tag-radius);
+  border-bottom-left-radius: var(--tag-radius);
   padding-left: 8px;
   border-right: none;
-  border-left: 1px solid var(--background-modifier-border); }
+  border-left: var(--tag-border-width) solid var(--background-modifier-border); }
 
 span.cm-hashtag.cm-hashtag-end {
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
+  border-top-right-radius: var(--tag-radius);
+  border-bottom-right-radius: var(--tag-radius);
   border-left: none;
   padding-right: 8px;
-  border-right: 1px solid var(--background-modifier-border); }
+  border-right: var(--tag-border-width) solid var(--background-modifier-border); }
 
 /* Tag pane */
 .tag-container {
@@ -10302,6 +10312,66 @@ settings:
         id: node-unresolved
         title: Unresolved node color
         type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: tags
+        title: Tags
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: tag-radius
+        title: Tag shape
+        type: variable-select
+        default: 14px
+        options:
+            - 
+                label: Pill
+                value: 14px
+            - 
+                label: Rounded
+                value: 4px
+            - 
+                label: Square
+                value: 0px
+    -
+        id: tag-border-width
+        title: Tag border width
+        type: variable-select
+        default: 1px
+        options:
+            - 
+                label: None
+                value: 0
+            - 
+                label: Thin
+                value: 1px
+            - 
+                label: Thick
+                value: 2px
+    - 
+        id: tag-color
+        title: Tag text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tag-bg
+        title: Tag background color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tag-bg2
+        title: Tag background color (hover)
+        type: variable-themed-color
+        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'

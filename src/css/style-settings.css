@@ -843,6 +843,66 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
+        id: tags
+        title: Tags
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: tag-radius
+        title: Tag shape
+        type: variable-select
+        default: 14px
+        options:
+            - 
+                label: Pill
+                value: 14px
+            - 
+                label: Rounded
+                value: 4px
+            - 
+                label: Square
+                value: 0px
+    -
+        id: tag-border-width
+        title: Tag border width
+        type: variable-select
+        default: 1px
+        options:
+            - 
+                label: None
+                value: 0
+            - 
+                label: Thin
+                value: 1px
+            - 
+                label: Thick
+                value: 2px
+    - 
+        id: tag-color
+        title: Tag text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tag-bg
+        title: Tag background color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tag-bg2
+        title: Tag background color (hover)
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
         id: translucency
         title: Translucency
         type: heading
