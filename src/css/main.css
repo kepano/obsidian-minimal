@@ -1225,6 +1225,7 @@ body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-
 .nav-file-title.is-active,
 .nav-folder-title.is-active,
 .nav-file-title.is-being-dragged,
+body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 body:not(.is-grabbing) .nav-folder-title:hover,
 body:not(.is-grabbing) .nav-file-title.is-active:hover {
   background-color: var(--background-tertiary);
@@ -8874,9 +8875,16 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   border-bottom: 1px solid var(--background-modifier-border);
   padding: 10px 0 5px; }
 
+.workspace-leaf-content[data-type="style-settings"] .style-settings-heading[data-level="0"] .setting-item-name {
+  padding-left: 17px; }
 .workspace-leaf-content[data-type="style-settings"] .setting-item {
   max-width: var(--max-width);
   margin: 0 auto; }
+.workspace-leaf-content[data-type="style-settings"] .setting-item-name {
+  position: relative; }
+.workspace-leaf-content[data-type="style-settings"] .style-settings-collapse-indicator {
+  position: absolute;
+  left: 0; }
 
 .mod-root .workspace-leaf-content[data-type="style-settings"] .style-settings-container .setting-item:not(.setting-item-heading) {
   flex-direction: row;

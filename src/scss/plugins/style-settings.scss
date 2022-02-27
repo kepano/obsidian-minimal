@@ -22,9 +22,21 @@
   padding:10px 0 5px;
 }
 
-.workspace-leaf-content[data-type="style-settings"] .setting-item {
-  max-width:var(--max-width);
-  margin:0 auto;
+.workspace-leaf-content[data-type="style-settings"] {
+  .style-settings-heading[data-level="0"] .setting-item-name {
+    padding-left:17px;
+  }
+  .setting-item {
+    max-width:var(--max-width);
+    margin:0 auto;
+  }
+  .setting-item-name {
+    position:relative;
+  }
+  .style-settings-collapse-indicator {
+    position:absolute;
+    left:0;
+  }
 }
 .mod-root .workspace-leaf-content[data-type="style-settings"] .style-settings-container .setting-item:not(.setting-item-heading) {
   flex-direction:row;
