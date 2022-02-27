@@ -5378,21 +5378,24 @@ https://github.com/sponsors/kepano
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header {
   padding: 0;
   margin-bottom: 2px;
+  border: none;
   height: auto;
   opacity: 0.75; }
   .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header.is-active, .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header:hover {
+    opacity: 1;
+    background-color: transparent; }
+  .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner {
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 6px; }
+  .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon {
+    border-radius: 6px;
+    padding: 5px 6px;
+    margin: 0;
+    height: 26px;
+    width: 100%;
     opacity: 1; }
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner {
-  padding: 0;
-  box-shadow: none;
-  border: none;
-  border-radius: 6px; }
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon {
-  border-radius: 6px;
-  padding: 5px 6px;
-  margin: 0;
-  height: 26px;
-  width: 100%; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:hover {
   background-color: var(--background-tertiary); }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-inner-icon {

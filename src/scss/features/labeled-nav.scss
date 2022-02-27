@@ -23,25 +23,30 @@ https://github.com/sponsors/kepano
   .workspace-tab-header {
     padding:0;
     margin-bottom:2px;
+    border:none;
     height:auto;
     opacity:0.75;
+
     &.is-active,
     &:hover {
       opacity:1;
+      background-color:transparent;
     }
-  }
-  .workspace-tab-header .workspace-tab-header-inner {
-    padding:0;
-    box-shadow:none;
-    border:none;
-    border-radius:6px;
-  }
-  .workspace-tab-header .workspace-tab-header-inner-icon {
-    border-radius:6px;
-    padding:5px 6px;
-    margin:0;
-    height:26px;
-    width:100%;
+
+    .workspace-tab-header-inner {
+      padding:0;
+      box-shadow:none;
+      border:none;
+      border-radius:6px;
+    }
+    .workspace-tab-header-inner-icon {
+      border-radius:6px;
+      padding:5px 6px;
+      margin:0;
+      height:26px;
+      width:100%;
+      opacity:1;
+    }
   }
   .workspace-tab-header .workspace-tab-header-inner-icon:hover {
     background-color:var(--background-tertiary);
