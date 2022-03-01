@@ -2423,6 +2423,12 @@ body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
   mix-blend-mode: normal;
   box-shadow: 0 0 0px 3px var(--text-accent); }
 
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  background-color: transparent;
+  box-shadow: 0 0 0px 3px var(--text-accent);
+  mix-blend-mode: multiply;
+  border-radius: 2px; }
+
 body:not(.is-mobile).borders-title .document-search-container {
   padding-top: 0; }
 
