@@ -2463,6 +2463,7 @@ body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
   mix-blend-mode: normal;
   box-shadow: 0 0 0px 3px var(--text-accent); }
 
+/*  Live Preview */
 .cm-s-obsidian span.obsidian-search-match-highlight {
   background-color: transparent;
   box-shadow: 0 0 0px 3px var(--text-accent);
@@ -8818,6 +8819,9 @@ body.plugin-sliding-panes .view-header-title:before {
 
 body.plugin-sliding-panes .view-header {
   background: none; }
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
+  text-align: right; }
 
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container
 body.plugin-sliding-panes-rotate-header.plugin-sliding-panes-header-alt .workspace > .mod-root .view-header-title {
