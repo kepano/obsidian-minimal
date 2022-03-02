@@ -8780,22 +8780,19 @@ body.plugin-sliding-panes .view-header-title:before {
 body.plugin-sliding-panes .view-header {
   background: none; }
 
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
-  text-align: right; }
-
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container
 body.plugin-sliding-panes-rotate-header.plugin-sliding-panes-header-alt .workspace > .mod-root .view-header-title {
   margin-top: 0; }
 
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container {
-  margin-left: 0;
+  margin-left: auto;
   padding-top: 0; }
 
 body.plugin-sliding-panes-rotate-header .view-header-title-container {
   position: static; }
 
 body.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div {
-  margin-left: 0px;
+  margin-left: auto;
   bottom: 0; }
 
 body.plugin-sliding-panes-rotate-header .view-header-icon {
@@ -8814,7 +8811,9 @@ body.is-mobile.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspac
   height: 30px; }
 
 body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
-  padding-bottom: 33px; }
+  padding-bottom: 33px;
+  margin-left: 0;
+  height: auto; }
 
 /* Space for the hover ribbon in the bottom left */
 body.hider-ribbon.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
