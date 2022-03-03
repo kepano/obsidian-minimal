@@ -3246,8 +3246,7 @@ span.cm-hashtag.cm-hashtag-end {
   transition: none;
   text-align: left;
   animation: none;
-  opacity: 0.8;
-  backdrop-filter: blur(30px); }
+  opacity: 0.8; }
 
 .tooltip.mod-left,
 .tooltip.mod-right {
