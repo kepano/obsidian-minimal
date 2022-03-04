@@ -48,7 +48,7 @@
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   border-right:var(--border-width) solid var(--background-divider);
-  width:8px !important;
+  width:4px !important;
   background:transparent;
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
