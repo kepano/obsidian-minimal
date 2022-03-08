@@ -1009,7 +1009,6 @@ em,
 h1,
 .empty-state-title,
 .markdown-preview-view h1,
-.markdown-source-view.mod-cm6 .HyperMD-header-1 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-1 {
   font-variant: var(--h1-variant);
   letter-spacing: -0.01em;
@@ -1020,7 +1019,6 @@ h1,
   font-style: var(--h1-style); }
 
 .markdown-preview-view h2,
-.markdown-source-view.mod-cm6 .HyperMD-header-2 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-2 {
   font-variant: var(--h2-variant);
   letter-spacing: -0.02em;
@@ -1031,7 +1029,6 @@ h1,
   font-style: var(--h2-style); }
 
 .markdown-preview-view h3,
-.markdown-source-view.mod-cm6 .HyperMD-header-3 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-3 {
   font-variant: var(--h3-variant);
   letter-spacing: -0em;
@@ -1042,7 +1039,6 @@ h1,
   font-style: var(--h3-style); }
 
 .markdown-preview-view h4,
-.markdown-source-view.mod-cm6 .HyperMD-header-4 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-4 {
   font-variant: var(--h4-variant);
   letter-spacing: 0.02em;
@@ -1052,7 +1048,6 @@ h1,
   font-style: var(--h4-style); }
 
 .markdown-preview-view h5,
-.markdown-source-view.mod-cm6 .HyperMD-header-5 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-5 {
   font-variant: var(--h5-variant);
   letter-spacing: 0.02em;
@@ -1062,7 +1057,6 @@ h1,
   font-style: var(--h5-style); }
 
 .markdown-preview-view h6,
-.markdown-source-view.mod-cm6 .HyperMD-header-6 > .cm-fold-indicator,
 .cm-s-obsidian .cm-header-6 {
   font-variant: var(--h6-variant);
   letter-spacing: 0.02em;
