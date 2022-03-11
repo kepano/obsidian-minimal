@@ -20,6 +20,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 - [Color schemes](#color-schemes)
 - [Plugin support](#plugin-support)
 - [Helper classes](#helper-filters-and-classes)
+- [Alternate checkboxes](#alternate-checkboxes)
 - [Hotkeys](#hotkeys)
 - [Contributing](#contributing)
 - [Developers](#developers)
@@ -220,6 +221,35 @@ Controls the row and column styling for tables. [Learn more.](https://github.com
 | :------------- | :-------------------------------------------------- |
 | `embed-strict` | Transclusions appear seamlessly in the flow of text |
 
+
+## Alternate checkboxes
+
+Several checkbox styles are available. [See screenshots and details](https://minimal.guide/Block+types/Checklists)
+
+| Syntax | Description |
+| ------ | ----------- |
+| `[ ]`  | to-do       |
+| `[/]`  | incomplete  |
+| `[x]`  | done        |
+| `[-]`  | canceled    |
+| `[>]`  | forwarded   |
+| `[<]`  | scheduling  |
+| `[?]`  | question    |
+| `[!]`  | important   |
+| `[*]`  | star        |
+| `["]`  | quote       |
+| `[l]`  | location    |
+| `[b]`  | bookmark    |
+| `[i]`  | information |
+| `[S]`  | savings     |
+| `[I]`  | idea        |
+| `[p]`  | pros        |
+| `[c]`  | cons        |
+| `[f]`  | fire        |
+| `[k]`  | key         |
+| `[w]`  | win         |
+| `[u]`  | up          |
+| `[d]`  | down        |
 
 ## Hotkeys
 
