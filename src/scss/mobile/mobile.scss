@@ -238,10 +238,6 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
 .is-mobile .search-input-container input::placeholder {
   font-size:14px;
 }
-
-.is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox {
-  top:6px;
-}
 .is-mobile .workspace-drawer {
   border-width:var(--border-width);
 }
@@ -428,7 +424,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   .is-mobile .workspace-drawer-header-icon:hover {
     background:transparent;
   }
-  .workspace-drawer-header-icon .pin {
+  .is-mobile .workspace-drawer-header-icon {
     display:none;
   }
   .is-ios .workspace-drawer .workspace-drawer-header {

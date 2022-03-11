@@ -1,4 +1,17 @@
 /* macOS */
+
+.theme-dark.minimal-macos-dark,
+.theme-light.minimal-macos-light {
+  --red:#ff3b31;
+  --yellow:#ffcc00;
+  --green:#2acd41;
+  --orange:#ff9502;
+  --purple:#b051de;
+  --pink:#ff2e55;
+  --cyan:#02c7be;
+  --blue:#027aff;
+}
+
 .theme-light.minimal-macos-light {
   --base-h:106;
   --base-s:0%;

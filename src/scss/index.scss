@@ -54,6 +54,7 @@
 /* Minimal features */
 @import 'features/borders';
 @import 'features/cards';
+@import 'features/checklist-icons';
 @import 'features/colorful-active-states';
 @import 'features/colorful-headings';
 @import 'features/custom-icons';
@@ -117,6 +118,7 @@
 @import 'plugins/sortable';
 @import 'plugins/style-settings';
 @import 'plugins/tabs';
+@import 'plugins/todoist';
 @import 'plugins/tracker';
 
 /* Color schemes */

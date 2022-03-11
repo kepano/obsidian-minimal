@@ -1,6 +1,7 @@
 /* Checklists, task lists, checkboxes */
 :root {
   --checkbox-size:18px;
+  --checkbox-icon:20px;
   --checkbox-radius:50%;
   --checkbox-top:3px;
   --checkbox-left:0;
@@ -8,6 +9,7 @@
 }
 .checkbox-square {
   --checkbox-size:15px;
+  --checkbox-icon:17px;
   --checkbox-radius:4px;
   --checkbox-top:1px;
   --checkbox-left:1px;
@@ -31,9 +33,9 @@ input[type=checkbox]:focus {
 .checklist-plugin-main .group .compact > .toggle .checked,
 .is-flashing input[type=checkbox]:checked,
 input[type=checkbox]:checked {
-  background-color:var(--background-modifier-accent) !important;
+  background-color:var(--background-modifier-accent);
   border:1px solid var(--background-modifier-accent);
-  background-position:center;
+  background-position:44% 55%;
   background-size:70%;
   background-repeat:no-repeat;
   background-image:url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
@@ -48,6 +50,12 @@ body:not(.minimal-strike-lists) .markdown-preview-view ul > li.task-list-item.is
 }
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin:-2px 1px 0 -0.5em;
+}
+.is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
+  margin-left:0;
+}
+.is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox {
+  top:0.2em;
 }
 .task-list-item-checkbox,
 .markdown-preview-view .task-list-item-checkbox {
