@@ -9189,7 +9189,7 @@ ul.todoist-task-list {
   display: flex;
   color: var(--text-muted);
   justify-content: space-between;
-  margin-left: 0.1rem;
+  margin-left: 0.1em;
   margin-bottom: 0.25rem; }
 
 .is-live-preview .contains-task-list.todoist-task-list .task-metadata {

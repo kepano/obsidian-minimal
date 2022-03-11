@@ -140,6 +140,7 @@ Most plugins work well with Minimal, but the following plugins have received spe
 - [QuickAdd](https://github.com/chhoumann/quickadd)
 - [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
 - [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) — recommended for cards and tables
+- [Todoist](https://github.com/jamiebrynes7/obsidian-todoist-plugin)
 
 ## Helper filters and classes
 
