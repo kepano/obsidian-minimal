@@ -226,30 +226,30 @@ Controls the row and column styling for tables. [Learn more.](https://github.com
 
 Several checkbox styles are available. [See screenshots and details](https://minimal.guide/Block+types/Checklists)
 
-| Syntax | Description |
-| ------ | ----------- |
-| `[ ]`  | to-do       |
-| `[/]`  | incomplete  |
-| `[x]`  | done        |
-| `[-]`  | canceled    |
-| `[>]`  | forwarded   |
-| `[<]`  | scheduling  |
-| `[?]`  | question    |
-| `[!]`  | important   |
-| `[*]`  | star        |
-| `["]`  | quote       |
-| `[l]`  | location    |
-| `[b]`  | bookmark    |
-| `[i]`  | information |
-| `[S]`  | savings     |
-| `[I]`  | idea        |
-| `[p]`  | pros        |
-| `[c]`  | cons        |
-| `[f]`  | fire        |
-| `[k]`  | key         |
-| `[w]`  | win         |
-| `[u]`  | up          |
-| `[d]`  | down        |
+| Syntax   | Description |
+| -------- | ----------- |
+| `- [ ]`  | to-do       |
+| `- [/]`  | incomplete  |
+| `- [x]`  | done        |
+| `- [-]`  | canceled    |
+| `- [>]`  | forwarded   |
+| `- [<]`  | scheduling  |
+| `- [?]`  | question    |
+| `- [!]`  | important   |
+| `- [*]`  | star        |
+| `- ["]`  | quote       |
+| `- [l]`  | location    |
+| `- [b]`  | bookmark    |
+| `- [i]`  | information |
+| `- [S]`  | savings     |
+| `- [I]`  | idea        |
+| `- [p]`  | pros        |
+| `- [c]`  | cons        |
+| `- [f]`  | fire        |
+| `- [k]`  | key         |
+| `- [w]`  | win         |
+| `- [u]`  | up          |
+| `- [d]`  | down        |
 
 ## Hotkeys
 
