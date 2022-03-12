@@ -224,7 +224,7 @@ Controls the row and column styling for tables. [Learn more.](https://github.com
 
 ## Alternate checkboxes
 
-Several checkbox styles are available. [See screenshots and details](https://minimal.guide/Block+types/Checklists)
+Minimal supports a wide number of checkbox styles. These allow you to call out tasks that are incomplete, canceled, rescheduled, etc. [See screenshots and details](https://minimal.guide/Block+types/Checklists)
 
 | Syntax   | Description |
 | -------- | ----------- |
