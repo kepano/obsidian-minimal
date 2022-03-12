@@ -111,6 +111,8 @@ li[data-task="!"] > input {
 }
 
 /* ["] Quote */
+input[data-task="“"], 
+li[data-task="“"] > input,
 input[data-task="\""], 
 li[data-task="\""] > input {
   &:checked {
