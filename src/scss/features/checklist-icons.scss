@@ -5,48 +5,67 @@
   font-size:90%;
 }
 
-input[data-task=">"]:checked,
-li[data-task=">"] > input:checked,
-input[data-task="!"]:checked,
-li[data-task="!"] > input:checked,
-input[data-task="-"]:checked,
-li[data-task="-"] > input:checked,
-input[data-task="<"]:checked,
-li[data-task="<"] > input:checked,
-input[data-task="l"]:checked,
-li[data-task="l"] > input:checked,
-input[data-task="*"]:checked,
-li[data-task="*"] > input:checked,
-input[data-task="I"]:checked,
-li[data-task="I"] > input:checked,
-input[data-task="p"]:checked,
-li[data-task="p"] > input:checked,
-input[data-task="f"]:checked,
-li[data-task="f"] > input:checked,
-input[data-task="k"]:checked,
-li[data-task="k"] > input:checked,
-input[data-task="u"]:checked,
-li[data-task="u"] > input:checked,
-input[data-task="d"]:checked,
-li[data-task="d"] > input:checked,
-input[data-task="w"]:checked,
-li[data-task="w"] > input:checked,
-input[data-task="c"]:checked,
-li[data-task="c"] > input:checked,
-input[data-task="b"]:checked,
-li[data-task="b"] > input:checked {
-  border:none;
-  border-radius:0;
-  background-image:none;
-  background-color:currentColor;
-  -webkit-mask-size:var(--checkbox-icon);
-  -webkit-mask-position:50% 50%;
+
+input[data-task=">"],
+input[data-task="!"],
+input[data-task="-"],
+input[data-task="<"],
+input[data-task="l"],
+input[data-task="*"],
+input[data-task="I"],
+input[data-task="p"],
+input[data-task="f"],
+input[data-task="k"],
+input[data-task="u"],
+input[data-task="w"],
+input[data-task="c"],
+input[data-task="d"],
+input[data-task="b"],
+li[data-task=">"] > input,
+li[data-task="!"] > input,
+li[data-task="-"] > input,
+li[data-task="<"] > input,
+li[data-task="l"] > input,
+li[data-task="*"] > input,
+li[data-task="I"] > input,
+li[data-task="p"] > input,
+li[data-task="f"] > input,
+li[data-task="k"] > input,
+li[data-task="u"] > input,
+li[data-task="d"] > input,
+li[data-task="w"] > input,
+li[data-task="c"] > input,
+li[data-task="b"] > input,
+li[data-task=">"] > p > input,
+li[data-task="!"] > p > input,
+li[data-task="-"] > p > input,
+li[data-task="<"] > p > input,
+li[data-task="l"] > p > input,
+li[data-task="*"] > p > input,
+li[data-task="I"] > p > input,
+li[data-task="p"] > p > input,
+li[data-task="f"] > p > input,
+li[data-task="k"] > p > input,
+li[data-task="u"] > p > input,
+li[data-task="d"] > p > input,
+li[data-task="w"] > p > input,
+li[data-task="c"] > p > input,
+li[data-task="b"] > p > input {
+  &:checked {
+    border:none;
+    border-radius:0;
+    background-image:none;
+    background-color:currentColor;
+    -webkit-mask-size:var(--checkbox-icon);
+    -webkit-mask-position:50% 50%;
+  }
 }
 
 
 /* [>] Forwarded */
 input[data-task=">"],
-li[data-task=">"] > input {
+li[data-task=">"] > input,
+li[data-task=">"] > p > input, {
   &:checked {
     color:var(--text-faint);
     transform:rotate(90deg);
@@ -57,7 +76,8 @@ li[data-task=">"] > input {
 
 /* [<] Schedule */
 input[data-task="<"],
-li[data-task="<"] > input {
+li[data-task="<"] > input,
+li[data-task="<"] > p > input {
   &:checked {
     color:var(--text-faint);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z' clip-rule='evenodd' /%3E%3C/svg%3E");
@@ -67,7 +87,8 @@ li[data-task="<"] > input {
 
 /* [?] Question */
 input[data-task="?"],
-li[data-task="?"] > input {
+li[data-task="?"] > input,
+li[data-task="?"] > p > input, {
   &:checked {
     background-color:var(--yellow);
     border-color:var(--yellow);
@@ -84,7 +105,8 @@ li[data-task="?"] > input {
 
 /* [/] Incomplete */
 input[data-task="/"],
-li[data-task="/"] > input {
+li[data-task="/"] > input,
+li[data-task="/"] > p > input, {
   &:checked {
     background-image:none;
     background-color:transparent;
@@ -103,7 +125,8 @@ li[data-task="/"] > input {
 
 /* [!] Important */
 input[data-task="!"],
-li[data-task="!"] > input {
+li[data-task="!"] > input,
+li[data-task="!"] > p > input, {
   &:checked {
     color:var(--orange);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z' clip-rule='evenodd' /%3E%3C/svg%3E");
@@ -113,8 +136,10 @@ li[data-task="!"] > input {
 /* ["] Quote */
 input[data-task="“"], 
 li[data-task="“"] > input,
+li[data-task="“"] > p > input,
 input[data-task="\""], 
-li[data-task="\""] > input {
+li[data-task="\""] > input,
+li[data-task="\""] > p > input {
   &:checked {
     background-position:50% 50%;
     background-color:var(--cyan);
@@ -132,7 +157,8 @@ li[data-task="\""] > input {
 
 /* [-] Canceled */
 input[data-task="-"],
-li[data-task="-"] > input {
+li[data-task="-"] > input,
+li[data-task="-"] > p > input {
   &:checked {
     color:var(--text-faint);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' clip-rule='evenodd' /%3E%3C/svg%3E");;
@@ -148,7 +174,8 @@ body:not(.tasks) li[data-task="-"].task-list-item.is-checked  {
 
 /* [*] Star */
 input[data-task="*"],
-li[data-task="*"] > input {
+li[data-task="*"] > input,
+li[data-task="*"] > p > input {
   &:checked {
     color:var(--yellow);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z' /%3E%3C/svg%3E");
@@ -157,7 +184,8 @@ li[data-task="*"] > input {
 
 /* [l] Location */
 input[data-task="l"],
-li[data-task="l"] > input {
+li[data-task="l"] > input,
+li[data-task="l"] > p > input {
   &:checked {
     color:var(--red);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z' clip-rule='evenodd' /%3E%3C/svg%3E");
@@ -166,7 +194,8 @@ li[data-task="l"] > input {
 
 /* [i] Info */
 input[data-task="i"],
-li[data-task="i"] > input {
+li[data-task="i"] > input,
+li[data-task="i"] > p > input {
   &:checked {
     background-color:var(--blue);
     border-color:var(--blue);
@@ -184,7 +213,8 @@ li[data-task="i"] > input {
 
 /* [S] Amount/savings/money */
 input[data-task="S"],
-li[data-task="S"] > input {
+li[data-task="S"] > input,
+li[data-task="S"] > p > input {
   &:checked {
     border-color:var(--green);
     background-color:var(--green);
@@ -200,7 +230,8 @@ li[data-task="S"] > input {
 
 /* [I] Idea/lightbulb */
 input[data-task="I"], 
-li[data-task="I"] > input {
+li[data-task="I"] > input,
+li[data-task="I"] > p > input {
   &:checked {
     color:var(--yellow);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z' /%3E%3C/svg%3E");
@@ -209,7 +240,8 @@ li[data-task="I"] > input {
 
 /* [f] Fire */
 input[data-task="f"], 
-li[data-task="f"] > input {
+li[data-task="f"] > input,
+li[data-task="f"] > p > input {
   &:checked {
     color:var(--red);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z' clip-rule='evenodd' /%3E%3C/svg%3E");
@@ -218,7 +250,8 @@ li[data-task="f"] > input {
 
 /* [k] Key */
 input[data-task="k"], 
-li[data-task="k"] > input {
+li[data-task="k"] > input,
+li[data-task="k"] > p > input {
   &:checked {
     color:var(--yellow);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z' clip-rule='evenodd' /%3E%3C/svg%3E");
@@ -226,7 +259,8 @@ li[data-task="k"] > input {
 }
 /* [u] Up */
 input[data-task="u"], 
-li[data-task="u"] > input {
+li[data-task="u"] > input,
+li[data-task="u"] > p > input {
   &:checked {
     color:var(--green);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z' clip-rule='evenodd' /%3E%3C/svg%3E");
@@ -234,7 +268,8 @@ li[data-task="u"] > input {
 }
 /* [d] Down */
 input[data-task="d"], 
-li[data-task="d"] > input {
+li[data-task="d"] > input,
+li[data-task="d"] > p > input {
   &:checked {
     color:var(--red);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z' clip-rule='evenodd' /%3E%3C/svg%3E");
@@ -243,7 +278,8 @@ li[data-task="d"] > input {
 
 /* [w] Win */
 input[data-task="w"], 
-li[data-task="w"] > input {
+li[data-task="w"] > input,
+li[data-task="w"] > p > input {
   &:checked {
     color:var(--purple);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z' clip-rule='evenodd' /%3E%3C/svg%3E");
@@ -252,7 +288,8 @@ li[data-task="w"] > input {
 
 /* [p] Pros */
 input[data-task="p"], 
-li[data-task="p"] > input {
+li[data-task="p"] > input,
+li[data-task="p"] > p > input {
   &:checked {
     color:var(--green);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z' /%3E%3C/svg%3E");
@@ -261,7 +298,8 @@ li[data-task="p"] > input {
 
 /* [c] Cons */
 input[data-task="c"], 
-li[data-task="c"] > input {
+li[data-task="c"] > input,
+li[data-task="c"] > p > input {
   &:checked {
     color:var(--orange);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M18 9.5a1.5 1.5 0 11-3 0v-6a1.5 1.5 0 013 0v6zM14 9.667v-5.43a2 2 0 00-1.105-1.79l-.05-.025A4 4 0 0011.055 2H5.64a2 2 0 00-1.962 1.608l-1.2 6A2 2 0 004.44 12H8v4a2 2 0 002 2 1 1 0 001-1v-.667a4 4 0 01.8-2.4l1.4-1.866a4 4 0 00.8-2.4z' /%3E%3C/svg%3E");
@@ -270,7 +308,8 @@ li[data-task="c"] > input {
 
 /* [b] Bookmark */
 input[data-task="b"], 
-li[data-task="b"] > input {
+li[data-task="b"] > input,
+li[data-task="b"] > p > input {
   &:checked {
     color:var(--orange);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z' /%3E%3C/svg%3E");
