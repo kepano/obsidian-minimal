@@ -751,7 +751,8 @@ body.is-dragging {
   opacity: 0;
   border-radius: 0 !important; }
 
-.drag-ghost {
+.drag-ghost,
+.drag-ghost.mod-leaf {
   border: none;
   background-color: rgba(0, 0, 0, 0.7);
   font-size: var(--font-adaptive-small);
@@ -759,6 +760,9 @@ body.is-dragging {
   color: white;
   font-weight: 500;
   border-radius: 5px; }
+
+.drag-ghost-icon {
+  display: none; }
 
 .drag-ghost-self svg {
   margin-right: 4px;
