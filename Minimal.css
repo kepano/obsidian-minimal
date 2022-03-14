@@ -1716,6 +1716,13 @@ body .view-action svg.cross path {
   background-color: var(--background-tertiary);
   border-radius: var(--radius-m); }
 
+/* Indentation Guides (Obsidian 0.14.0+) */
+.markdown-rendered.show-indentation-guide li > ul::before {
+  left: -0.65em; }
+
+.markdown-rendered.show-indentation-guide li > ol::before {
+  left: -0.8em; }
+
 /* Links */
 a {
   color: var(--text-accent);
