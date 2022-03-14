@@ -6585,7 +6585,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   .is-mobile .workspace-drawer-header-icon:hover {
     background: transparent; }
 
-  .is-mobile .workspace-drawer-header-icon .pin {
+  .is-mobile .mod-left .workspace-drawer-header-icon {
     display: none; }
 
   .is-ios .workspace-drawer .workspace-drawer-header {
