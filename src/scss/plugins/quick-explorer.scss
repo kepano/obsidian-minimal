@@ -1,0 +1,39 @@
+div#quick-explorer {
+  display: flex;
+
+  span.explorable {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    font-size: 10px;
+    line-height: 16px;
+
+    &:last-of-type {
+      font-size: 10px;
+    }
+
+    &.selected,
+    &:hover {
+      background-color: unset !important;
+
+      .explorable-name {
+        background-color: var(--interactive-accent-hover);
+      }
+
+      .explorable-separator {
+        color: var(--interactive-accent-hover);
+      }
+    }
+  }
+
+  .explorable-name {
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+
+  .explorable-separator::before {
+    content: "\00a0›" !important;
+    font-size: 1.3em;
+    margin: 0 2px;
+  }
+}
