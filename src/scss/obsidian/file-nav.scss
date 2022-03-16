@@ -47,6 +47,16 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
   margin-left:-10px;
 }
 
+/* Fix :active state when right-clicking in file explorer */
+.nav-file-title.is-being-dragged,
+.nav-folder-title.is-being-dragged,
+body:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,
+body:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
+  background-color: var(--background-secondary-alt);
+  box-shadow: 0 0 0 2px var(--interactive-accent);
+  z-index: 1;
+}
+
 .nav-file {
   margin-left:12px;
   padding-right:4px;
