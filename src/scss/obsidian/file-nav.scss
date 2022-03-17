@@ -56,8 +56,9 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 .nav-folder-title.is-being-dragged,
 body:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,
 body:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
-  background-color: var(--background-secondary-alt);
-  box-shadow: 0 0 0 2px var(--interactive-accent);
+  background-color: var(--background-tertiary);
+  color:var(--text-normal);
+  box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
   z-index: 1;
 }
 

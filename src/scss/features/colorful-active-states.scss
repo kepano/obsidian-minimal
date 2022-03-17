@@ -9,7 +9,10 @@
 .colorful-active #calendar-container .active:hover,
 .colorful-active #calendar-container .day:active,
 .colorful-active .vertical-tab-nav-item.is-active,
-.colorful-active .nav-file-title.is-being-dragged, 
+.colorful-active .nav-file-title.is-being-dragged,
+.colorful-active .nav-folder-title.is-being-dragged,
+body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,
+body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover,
 body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,
 .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label),
 .colorful-active .menu-item:hover,
@@ -17,6 +20,7 @@ body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,
   background-color:var(--ax3);
   color:var(--sp1);
 }
+
 .colorful-active #calendar-container .day:active .dot,
 .colorful-active #calendar-container .active .dot,
 .colorful-active #calendar-container .today.active .dot {
