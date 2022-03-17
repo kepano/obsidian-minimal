@@ -1177,6 +1177,9 @@ h1,
   font-size: var(--font-adaptive-small); }
 
 /* File browser */
+.nav-file-tag {
+  font-weight: 400; }
+
 .nav-header {
   padding: 0; }
 
@@ -1222,6 +1225,15 @@ body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-
 .nav-folder-collapse-indicator {
   top: 1px;
   margin-left: -10px; }
+
+/* Fix :active state when right-clicking in file explorer */
+.nav-file-title.is-being-dragged,
+.nav-folder-title.is-being-dragged,
+body:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,
+body:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
+  background-color: var(--background-secondary-alt);
+  box-shadow: 0 0 0 2px var(--interactive-accent);
+  z-index: 1; }
 
 .nav-file {
   margin-left: 12px;
@@ -2096,7 +2108,7 @@ body:not(.is-mobile) .modal {
 .menu-item {
   font-size: var(--font-adaptive-small);
   border-radius: var(--radius-m);
-  padding: 3px 12px 3px 6px;
+  padding: 3px 6px 3px 6px;
   margin: 0 2px;
   cursor: var(--cursor);
   height: auto;
@@ -9008,6 +9020,37 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 
 .quickAddModal .modal-content {
   padding: 20px 2px 5px; }
+
+div#quick-explorer {
+  display: flex; }
+  div#quick-explorer span.explorable {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    font-size: var(--font-adaptive-smaller);
+    line-height: 16px; }
+    div#quick-explorer span.explorable:last-of-type {
+      font-size: var(--font-adaptive-smaller); }
+    div#quick-explorer span.explorable.selected, div#quick-explorer span.explorable:hover {
+      background-color: unset !important; }
+      div#quick-explorer span.explorable.selected .explorable-name, div#quick-explorer span.explorable:hover .explorable-name {
+        color: var(--text-normal); }
+      div#quick-explorer span.explorable.selected .explorable-separator, div#quick-explorer span.explorable:hover .explorable-separator {
+        color: var(--text-normal); }
+  div#quick-explorer .explorable-name {
+    padding: 0 4px;
+    border-radius: 4px; }
+  div#quick-explorer .explorable-separator::before {
+    content: "\00a0›" !important;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 0px; }
+
+body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover, body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected {
+  background-color: var(--background-tertiary);
+  color: var(--text-normal); }
+  body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover .menu-item-icon, body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected .menu-item-icon {
+    color: var(--text-normal); }
 
 /* Sliding Panes aka Andy Mode plugin */
 body.plugin-sliding-panes-rotate-header {
