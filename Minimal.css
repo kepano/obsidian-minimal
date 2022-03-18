@@ -3185,6 +3185,14 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
   font-size: calc(var(--font-adaptive-normal) - 2px); }
 
 /* Live Preview Tables */
+.is-live-preview .el-table {
+  width: 100%;
+  max-width: 100%; }
+
+.is-live-preview .cm-table-widget table {
+  max-width: 100% !important;
+  width: 100%; }
+
 .cm-s-obsidian .HyperMD-table-row {
   font-size: calc(var(--font-adaptive-normal) - 2px); }
 
