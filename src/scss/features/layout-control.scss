@@ -24,11 +24,6 @@ https://github.com/sponsors/kepano
   padding-left:0;
   padding-top:0;
 }
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-embed-content .markdown-preview-sizer > div,
-.contextual-typography.minimal-folding .allow-fold-headings.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer,
-.contextual-typography.minimal-folding .allow-fold-lists.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer {
-  padding:0;
-}
 .contextual-typography .markdown-preview-view .markdown-preview-sizer > div {
   width:var(--max-width);
   margin-left:auto;
@@ -85,16 +80,6 @@ https://github.com/sponsors/kepano
   margin-left:auto;
   margin-right:auto;
 }
-.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
-  padding-inline-start:calc(var(--list-padding) + var(--folding-offset));
-}
-/*
-.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
-  transform:translateX(calc(var(--folding-offset)/2));
-}*/
-.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
-  width:calc(var(--line-width-adaptive) - var(--folding-offset));
-}
 .el-table table,
 .el-lang-dataview .dataview.table-view-table {
   width:var(--max-width);
@@ -104,48 +89,6 @@ https://github.com/sponsors/kepano
 .markdown-embed .el-table table,
 .markdown-embed .el-lang-dataview .dataview.table-view-table {
   width:100%;
-}
-
-
-/* Folding offset */
-
-.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .block-language-dataview > h4,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  padding-left:var(--folding-offset);
-}
-.contextual-typography.minimal-folding:not(.is-mobile):not(.table-100):not(.table-wide):not(.table-max) .el-table table,
-.contextual-typography.minimal-folding:not(.is-mobile):not(.table-100):not(.table-wide):not(.table-max) .el-lang-dataview .dataview.table-view-table {
-  max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
-}
-.contextual-typography.minimal-folding:not(.is-mobile).map-100 .markdown-preview-view .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile).map-max .markdown-preview-view .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile).map-wide .markdown-preview-view .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.map-100 .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.map-max .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.map-wide .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile).table-100 .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile).table-max .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile).table-wide .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-100 .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-max .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-wide .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-100 .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-max .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile).table-100 .markdown-preview-view .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-wide .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile).table-max .markdown-preview-view .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile).table-wide .markdown-preview-view .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.iframe-100 .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.iframe-max .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile).iframe-100 .markdown-preview-view .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile).iframe-max .markdown-preview-view .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile).iframe-wide .markdown-preview-view .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.img-max .markdown-preview-sizer > .el-embed-image,
-.contextual-typography.minimal-folding:not(.is-mobile).img-100 .markdown-preview-view .markdown-preview-sizer > .el-embed-image,
-.contextual-typography.minimal-folding:not(.is-mobile).img-max .markdown-preview-view .markdown-preview-sizer > .el-embed-image,
-.contextual-typography.minimal-folding:not(.is-mobile).img-wide .markdown-preview-view .markdown-preview-sizer > .el-embed-image {
-  padding-left:0;
 }
 
 /* Dataview and tables */
@@ -212,6 +155,29 @@ https://github.com/sponsors/kepano
   width:100%;
   max-width:100%;
 }
+
+
+
+.table-max.is-live-preview table,
+.table-max .is-live-preview table,
+.img-max.is-live-preview .cm-content > .image-embed,
+.img-max .is-live-preview .cm-content > .image-embed {
+  width:var(--max-width);
+}
+.table-wide.is-live-preview table,
+.table-wide .is-live-preview table,
+.img-wide.is-live-preview .cm-content > .image-embed,
+.img-wide .is-live-preview .cm-content > .image-embed {
+  width:var(--line-width-wide);
+}
+.table-100.is-live-preview table,
+.table-100 .is-live-preview table,
+.img-100.is-live-preview .cm-content > .image-embed,
+.img-100 .is-live-preview .cm-content > .image-embed {
+  width:100%;
+  max-width:100%;
+}
+
 
 /* Mobile */
 @media (max-width:400pt) {

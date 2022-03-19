@@ -16,8 +16,8 @@
 }
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top:15px;
-  padding-left:calc((100% - var(--max-width)) / 2);
-  padding-right:calc((100% - var(--max-width)) / 2);
+  padding-left:0;
+  padding-right:0;
 }
 
 /* Code execution blocks, e.g. Dataview */
@@ -98,15 +98,18 @@ ul>li.is-collapsed::marker,
 }
 
 /* Live Preview text selection */
-.markdown-source-view.mod-cm6  .cm-line:not(.HyperMD-codeblock) .cm-selection {
-  background-color:transparent;
-}
+.markdown-source-view.mod-cm6  .cm-line .cm-selection,
 .markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
   background-color: var(--text-selection);
 }
+.cm-selectionBackground {
+  background-color:transparent !important;
+}
+
+
 body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
-  max-width:var(--line-width-adaptive);
+  max-width:100%;
 }
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
-  max-width:var(--line-width-adaptive);
+  max-width:100%;
 }
