@@ -29,8 +29,8 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 .nav-folder-title {
   margin:0 0 0 8px;
   min-width:auto;
-  width:calc(100% - var(--folding-offset));
-  padding:0 10px 0 var(--folding-offset);
+  width:calc(100% - 16px);
+  padding:0 10px 0 16px;
   line-height:1.5;
   cursor:var(--cursor);
 }
