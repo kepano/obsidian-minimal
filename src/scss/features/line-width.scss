@@ -31,7 +31,6 @@
   max-width:var(--max-width);
   margin:0 auto !important;
 }
-
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
   width:var(--line-width-adaptive);
 }
@@ -40,6 +39,8 @@
   max-width:var(--max-width);
   margin:0 auto;
 }
+
+.is-live-preview.is-readable-line-width .list-view-ul,
 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width:var(--line-width-adaptive);
   max-width:var(--max-width);

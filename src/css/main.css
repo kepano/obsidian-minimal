@@ -5971,6 +5971,7 @@ https://github.com/sponsors/kepano
   max-width: var(--max-width);
   margin: 0 auto; }
 
+.is-live-preview.is-readable-line-width .list-view-ul,
 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width: var(--line-width-adaptive);
   max-width: var(--max-width);
