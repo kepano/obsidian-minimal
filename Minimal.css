@@ -5923,22 +5923,22 @@ https://github.com/sponsors/kepano
   width: 100%;
   max-width: 100%; }
 
-.table-max.is-live-preview table,
-.table-max .is-live-preview table,
-.img-max.is-live-preview .cm-content > .image-embed,
-.img-max .is-live-preview .cm-content > .image-embed {
+.table-max.is-live-preview.is-readable-line-width table,
+.table-max .is-live-preview.is-readable-line-width table,
+.img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width: var(--max-width); }
 
-.table-wide.is-live-preview table,
-.table-wide .is-live-preview table,
-.img-wide.is-live-preview .cm-content > .image-embed,
-.img-wide .is-live-preview .cm-content > .image-embed {
+.table-wide.is-live-preview.is-readable-line-width table,
+.table-wide .is-live-preview.is-readable-line-width table,
+.img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width: var(--line-width-wide); }
 
-.table-100.is-live-preview table,
-.table-100 .is-live-preview table,
-.img-100.is-live-preview .cm-content > .image-embed,
-.img-100 .is-live-preview .cm-content > .image-embed {
+.table-100.is-live-preview.is-readable-line-width table,
+.table-100 .is-live-preview.is-readable-line-width table,
+.img-100.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width: 100%;
   max-width: 100%; }
 
