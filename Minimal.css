@@ -814,6 +814,14 @@ body.is-dragging {
   padding-left: 0;
   padding-right: 0; }
 
+/* Gutters */
+.markdown-source-view.mod-cm6 .cm-gutters {
+  position: absolute;
+  z-index: 0; }
+
+.cm-editor .cm-lineNumbers .cm-gutterElement {
+  min-width: 25px; }
+
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
   cursor: var(--cursor);
