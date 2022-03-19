@@ -61,6 +61,7 @@
   --icon-size:18px;
   --border-width:1px;
   --border-width-alt:1px;
+  --folding-offset:16px;
   --nested-padding:30px;
   /* Quotes and transclusions */
   --list-padding:2em;
@@ -1455,6 +1456,9 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   display: inline; }
 
 /* Folding icons in Edit mode */
+.markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+  padding-left: 0; }
+
 .CodeMirror-foldgutter-folded,
 .CodeMirror-foldgutter-open {
   cursor: var(--cursor); }
@@ -5947,17 +5951,19 @@ https://github.com/sponsors/kepano
   max-width: 100%; }
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
-  width: var(--line-width-adaptive);
+.markdown-source-view.mod-cm6 .cm-line {
   max-width: var(--max-width);
   margin: 0 auto !important; }
 
-.is-live-preview table {
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
+  width: var(--line-width-adaptive); }
+
+.is-live-preview.is-readable-line-width table {
   width: var(--line-width-adaptive);
   max-width: var(--max-width);
   margin: 0 auto; }
 
-.is-live-preview .cm-content > .image-embed {
+.is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width: var(--line-width-adaptive);
   max-width: var(--max-width);
   margin: 0 auto !important; }

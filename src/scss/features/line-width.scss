@@ -27,18 +27,20 @@
 }
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
-  width:var(--line-width-adaptive);
+.markdown-source-view.mod-cm6 .cm-line {
   max-width:var(--max-width);
   margin:0 auto !important;
 }
 
-.is-live-preview table {
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
+  width:var(--line-width-adaptive);
+}
+.is-live-preview.is-readable-line-width table {
   width:var(--line-width-adaptive);
   max-width:var(--max-width);
   margin:0 auto;
 }
-.is-live-preview .cm-content > .image-embed {
+.is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width:var(--line-width-adaptive);
   max-width:var(--max-width);
   margin:0 auto !important;
