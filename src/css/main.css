@@ -4552,6 +4552,7 @@ body:not(.minimal-icons-off) svg.indent-glyph,
 body:not(.minimal-icons-off) svg.info,
 body:not(.minimal-icons-off) svg.install,
 body:not(.minimal-icons-off) svg.keyboard-glyph,
+body:not(.minimal-icons-off) svg.ledger,
 body:not(.minimal-icons-off) svg.left-arrow-with-tail,
 body:not(.minimal-icons-off) svg.left-arrow,
 body:not(.minimal-icons-off) svg.left-chevron-glyph,
@@ -4988,6 +4989,9 @@ body:not(.minimal-icons-off) svg.left-chevron-glyph {
 body:not(.minimal-icons-off) svg.reading-glasses,
 body:not(.minimal-icons-off) svg.lines-of-text {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M83.333 12.5H16.667c-4.596 0 -8.333 3.738 -8.333 8.333v58.333c0 4.596 3.738 8.333 8.333 8.333h66.667c4.596 0 8.333 -3.738 8.333 -8.333V20.833c0 -4.596 -3.738 -8.333 -8.333 -8.333zM16.667 79.167V20.833h66.667l0.008 58.333H16.667z M25 29.167h50v8.333H25zm0 16.667h50v8.333H25zm0 16.667h25v8.333H25z"></path></svg>'); }
+
+body:not(.minimal-icons-off) svg.ledger {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /%3E%3C/svg%3E"); }
 
 body:not(.minimal-icons-off) svg.link-glyph {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="red" d="M35.271 47.054c4.721 -4.721 12.954 -4.721 17.675 0L55.892 50l5.892 -5.892l-2.946 -2.946c-3.929 -3.933 -9.162 -6.104 -14.729 -6.104S33.308 37.229 29.379 41.163L20.538 50c-8.117 8.121 -8.117 21.342 0 29.463c4.063 4.063 9.396 6.092 14.729 6.092c5.338 0 10.675 -2.029 14.733 -6.092l2.946 -2.946l-5.892 -5.892l-2.946 2.946c-4.875 4.863 -12.804 4.871 -17.679 0c-4.871 -4.875 -4.871 -12.804 0 -17.679L35.271 47.054z M50 20.538l-2.946 2.946l5.892 5.892l2.946 -2.946c4.871 -4.863 12.8 -4.871 17.679 0c4.871 4.875 4.871 12.804 0 17.679l-8.842 8.838c-4.721 4.721 -12.954 4.721 -17.675 0L44.108 50l-5.892 5.892l2.946 2.946c3.929 3.933 9.162 6.104 14.729 6.104s10.8 -2.171 14.729 -6.104L79.463 50c8.117 -8.121 8.117 -21.342 0 -29.463C71.338 12.413 58.117 12.417 50 20.538z"></path></svg>');
