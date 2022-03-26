@@ -36,8 +36,8 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active:after {
   background-color:var(--background-primary);
   opacity:0.9;
   content:" ";
-  height:100%;
-  width:calc(100% - 1px);
+  height:calc(100% + 1px);
+  width:100%;
   position:fixed;
   left:0;
   right:1px;

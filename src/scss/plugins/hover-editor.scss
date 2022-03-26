@@ -12,18 +12,18 @@
 }
 .theme-light {
 --popover-shadow:
-    0px 3.5px 4.7px rgba(0, 0, 0, 0.032),
-    0px 7.6px 13.5px rgba(0, 0, 0, 0.052),
-    0px 13.5px 28.1px rgba(0, 0, 0, 0.071),
-    0px 26px 62px rgba(0, 0, 0, 0.11)
+    0px 2.7px 3.1px rgba(0, 0, 0, 0.032),
+    0px 5.9px 8.7px rgba(0, 0, 0, 0.052),
+    0px 10.4px 18.1px rgba(0, 0, 0, 0.071),
+    0px 20px 40px rgba(0, 0, 0, 0.11)
   ;
 }
 .theme-dark {
 --popover-shadow:
-    0px 3.5px 4.7px rgba(0, 0, 0, 0.101),
-    0px 7.6px 13.5px rgba(0, 0, 0, 0.164),
-    0px 13.5px 28.1px rgba(0, 0, 0, 0.225),
-    0px 26px 62px rgba(0, 0, 0, 0.35)
+    0px 2.7px 3.1px rgba(0, 0, 0, 0.081),
+    0px 5.9px 8.7px rgba(0, 0, 0, 0.131),
+    0px 10.4px 18.1px rgba(0, 0, 0, 0.18),
+    0px 20px 40px rgba(0, 0, 0, 0.28)
   ;
 }
 .popover:not(.snap-to-viewport) {
