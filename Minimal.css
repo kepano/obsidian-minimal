@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
 
-Minimal Obsidian 5.1.8 by @kepano
+Minimal Obsidian 5.1.9 by @kepano
 
 User interface replacement for Obsidian.
 
@@ -2322,6 +2322,7 @@ iframe {
 .markdown-embed .markdown-preview-view .markdown-preview-sizer {
   padding-bottom: 0 !important; }
 
+.markdown-preview-view.markdown-embed .markdown-preview-sizer,
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width: 100%;
   width: 100%;
@@ -8651,6 +8652,84 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
 .hider-ribbon .workspace-ribbon {
   padding: 0; }
 
+/* Hover Editor */
+.theme-light,
+.theme-dark {
+  --he-title-bar-inactive-bg:var(--background-secondary);
+  --he-title-bar-inactive-pinned-bg:var(--background-secondary);
+  --he-title-bar-active-pinned-bg:var(--background-secondary);
+  --he-title-bar-active-bg:var(--background-secondary);
+  --he-title-bar-inactive-fg:var(--text-muted);
+  --he-title-bar-active-fg:var(--text-normal);
+  --he-title-bar-font-size:14px; }
+
+.theme-light {
+  --popover-shadow:
+      0px 3.5px 4.7px rgba(0, 0, 0, 0.032),
+      0px 7.6px 13.5px rgba(0, 0, 0, 0.052),
+      0px 13.5px 28.1px rgba(0, 0, 0, 0.071),
+      0px 26px 62px rgba(0, 0, 0, 0.11) ; }
+
+.theme-dark {
+  --popover-shadow:
+      0px 3.5px 4.7px rgba(0, 0, 0, 0.101),
+      0px 7.6px 13.5px rgba(0, 0, 0, 0.164),
+      0px 13.5px 28.1px rgba(0, 0, 0, 0.225),
+      0px 26px 62px rgba(0, 0, 0, 0.35) ; }
+
+.popover:not(.snap-to-viewport) {
+  --max-width:95%; }
+
+body .popover.hover-popover {
+  box-shadow: var(--popover-shadow); }
+  body .popover.hover-popover .markdown-preview-view {
+    padding: 15px 0 0 0; }
+  body .popover.hover-popover .view-content {
+    height: 100%;
+    background-color: var(--background-primary); }
+  body .popover.hover-popover .view-actions {
+    height: auto; }
+  body .popover.hover-popover .popover-content {
+    border: 1px solid var(--background-modifier-border-hover); }
+  body .popover.hover-popover .popover-titlebar {
+    padding: 0 4px; }
+    body .popover.hover-popover .popover-titlebar .popover-title {
+      padding-left: 4px;
+      letter-spacing: -.02em;
+      font-weight: var(--title-weight); }
+  body .popover.hover-popover .markdown-embed {
+    height: auto;
+    font-size: unset;
+    line-height: unset; }
+    body .popover.hover-popover .markdown-embed .markdown-preview-view {
+      padding: 0; }
+  body .popover.hover-popover.show-navbar .popover-titlebar {
+    border-bottom: var(--border-width) solid var(--background-modifier-border); }
+  body .popover.hover-popover .popover-action,
+  body .popover.hover-popover .popover-header-icon {
+    cursor: var(--cursor);
+    margin: 4px 0;
+    padding: 4px 3px;
+    border-radius: var(--radius-m);
+    color: var(--icon-color); }
+    body .popover.hover-popover .popover-action.mod-pin-popover,
+    body .popover.hover-popover .popover-header-icon.mod-pin-popover {
+      padding: 4px 2px; }
+    body .popover.hover-popover .popover-action svg,
+    body .popover.hover-popover .popover-header-icon svg {
+      opacity: var(--icon-muted); }
+    body .popover.hover-popover .popover-action:hover,
+    body .popover.hover-popover .popover-header-icon:hover {
+      background-color: var(--background-tertiary);
+      color: var(--icon-color-hover); }
+      body .popover.hover-popover .popover-action:hover svg,
+      body .popover.hover-popover .popover-header-icon:hover svg {
+        opacity: 1;
+        transition: opacity 0.1s ease-in-out; }
+    body .popover.hover-popover .popover-action.is-active,
+    body .popover.hover-popover .popover-header-icon.is-active {
+      color: var(--icon-color); }
+
 /* Indentation Guides plugin */
 body {
   --indentation-guide-adjust:0px;
@@ -9920,6 +9999,7 @@ community:
 - obsidian-excalidraw-plugin
 - obsidian-git
 - obsidian-hider
+- obsidian-hover-editor
 - obsidian-kanban
 - obsidian-metatable
 - obsidian-minimal-settings
