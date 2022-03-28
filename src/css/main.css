@@ -947,6 +947,7 @@ body, input, button {
 .cm-s-obsidian span.cm-error {
   color: var(--red); }
 
+.markdown-preview-view,
 .popover,
 .vertical-tab-content-container,
 .workspace-leaf-content[data-type=markdown] {
