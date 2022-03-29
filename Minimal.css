@@ -3163,8 +3163,14 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
   font-weight: 400;
   font-size: calc(var(--font-adaptive-normal) - 2px);
   color: var(--text-muted);
-  text-align: left;
-  border-top: none; }
+  border-top: none;
+  text-align: left; }
+  .markdown-source-view.mod-cm6 th[align="center"],
+  .markdown-preview-view th[align="center"] {
+    text-align: center; }
+  .markdown-source-view.mod-cm6 th[align="right"],
+  .markdown-preview-view th[align="right"] {
+    text-align: right; }
 
 .markdown-source-view.mod-cm6 th:last-child,
 .markdown-source-view.mod-cm6 td:last-child,
