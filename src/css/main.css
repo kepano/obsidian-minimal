@@ -9365,6 +9365,9 @@ body .todoist-query-title {
 body .is-live-preview .block-language-todoist {
   padding-left: 0; }
 
+ul.todoist-task-list > li.task-list-item .task-list-item-checkbox {
+  margin: 0; }
+
 body .todoist-refresh-button {
   display: inline;
   float: right;
