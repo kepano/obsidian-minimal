@@ -1,0 +1,37 @@
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:after {
+  content:"";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-icon:after {
+  content:"Nota";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="file-explorer"] .workspace-tab-header-inner-icon:after {
+  content:"Note";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon:after {
+  content:"Cerca";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="calendar"] .workspace-tab-header-inner-icon:after {
+  content:"Calendario";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="localgraph"] .workspace-tab-header-inner-icon:after,
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="graph"] .workspace-tab-header-inner-icon:after {
+  content:"Grafo";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="outline"] .workspace-tab-header-inner-icon:after {
+  content:"Struttura";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="starred"] .workspace-tab-header-inner-icon:after {
+  content:"Preferiti";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="dictionary-view"] .workspace-tab-header-inner-icon:after {
+  content:"Dizionario";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="tag"] .workspace-tab-header-inner-icon:after {
+  content:"Tags";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="backlink"] .workspace-tab-header-inner-icon:after {
+  content:"Riferimenti";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="outgoing-link"] .workspace-tab-header-inner-icon:after {
+  content:"Collegamenti in uscita";
+}
