@@ -30,7 +30,7 @@
   --max-width:95%;
 }
 
-body .popover.hover-popover {
+body .popover.hover-popover:not(.is-loaded) {
   box-shadow:var(--popover-shadow);
 
   .markdown-preview-view {

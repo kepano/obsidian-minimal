@@ -8681,54 +8681,54 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
 .popover:not(.snap-to-viewport) {
   --max-width:95%; }
 
-body .popover.hover-popover {
+body .popover.hover-popover:not(.is-loaded) {
   box-shadow: var(--popover-shadow); }
-  body .popover.hover-popover .markdown-preview-view {
+  body .popover.hover-popover:not(.is-loaded) .markdown-preview-view {
     padding: 15px 0 0 0; }
-  body .popover.hover-popover .view-content {
+  body .popover.hover-popover:not(.is-loaded) .view-content {
     height: 100%;
     background-color: var(--background-primary); }
-  body .popover.hover-popover .view-actions {
+  body .popover.hover-popover:not(.is-loaded) .view-actions {
     height: auto; }
-  body .popover.hover-popover .popover-content {
+  body .popover.hover-popover:not(.is-loaded) .popover-content {
     border: 1px solid var(--background-modifier-border-hover); }
-  body .popover.hover-popover .popover-titlebar {
+  body .popover.hover-popover:not(.is-loaded) .popover-titlebar {
     padding: 0 4px; }
-    body .popover.hover-popover .popover-titlebar .popover-title {
+    body .popover.hover-popover:not(.is-loaded) .popover-titlebar .popover-title {
       padding-left: 4px;
       letter-spacing: -.02em;
       font-weight: var(--title-weight); }
-  body .popover.hover-popover .markdown-embed {
+  body .popover.hover-popover:not(.is-loaded) .markdown-embed {
     height: auto;
     font-size: unset;
     line-height: unset; }
-    body .popover.hover-popover .markdown-embed .markdown-preview-view {
+    body .popover.hover-popover:not(.is-loaded) .markdown-embed .markdown-preview-view {
       padding: 0; }
-  body .popover.hover-popover.show-navbar .popover-titlebar {
+  body .popover.hover-popover:not(.is-loaded).show-navbar .popover-titlebar {
     border-bottom: var(--border-width) solid var(--background-modifier-border); }
-  body .popover.hover-popover .popover-action,
-  body .popover.hover-popover .popover-header-icon {
+  body .popover.hover-popover:not(.is-loaded) .popover-action,
+  body .popover.hover-popover:not(.is-loaded) .popover-header-icon {
     cursor: var(--cursor);
     margin: 4px 0;
     padding: 4px 3px;
     border-radius: var(--radius-m);
     color: var(--icon-color); }
-    body .popover.hover-popover .popover-action.mod-pin-popover,
-    body .popover.hover-popover .popover-header-icon.mod-pin-popover {
+    body .popover.hover-popover:not(.is-loaded) .popover-action.mod-pin-popover,
+    body .popover.hover-popover:not(.is-loaded) .popover-header-icon.mod-pin-popover {
       padding: 4px 2px; }
-    body .popover.hover-popover .popover-action svg,
-    body .popover.hover-popover .popover-header-icon svg {
+    body .popover.hover-popover:not(.is-loaded) .popover-action svg,
+    body .popover.hover-popover:not(.is-loaded) .popover-header-icon svg {
       opacity: var(--icon-muted); }
-    body .popover.hover-popover .popover-action:hover,
-    body .popover.hover-popover .popover-header-icon:hover {
+    body .popover.hover-popover:not(.is-loaded) .popover-action:hover,
+    body .popover.hover-popover:not(.is-loaded) .popover-header-icon:hover {
       background-color: var(--background-tertiary);
       color: var(--icon-color-hover); }
-      body .popover.hover-popover .popover-action:hover svg,
-      body .popover.hover-popover .popover-header-icon:hover svg {
+      body .popover.hover-popover:not(.is-loaded) .popover-action:hover svg,
+      body .popover.hover-popover:not(.is-loaded) .popover-header-icon:hover svg {
         opacity: 1;
         transition: opacity 0.1s ease-in-out; }
-    body .popover.hover-popover .popover-action.is-active,
-    body .popover.hover-popover .popover-header-icon.is-active {
+    body .popover.hover-popover:not(.is-loaded) .popover-action.is-active,
+    body .popover.hover-popover:not(.is-loaded) .popover-header-icon.is-active {
       color: var(--icon-color); }
 
 /* Indentation Guides plugin */
