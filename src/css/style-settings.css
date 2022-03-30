@@ -1,6 +1,6 @@
 /* @settings
 
-name: Minimal Color Scheme
+name: Minimal
 id: minimal-style
 settings:
     -
@@ -780,6 +780,18 @@ settings:
         max: 0.3
         step: 0.005
         format: em
+    -
+        id: embed-blocks
+        title: Embeds and transclusions
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: embed-strict
+        title: Use strict embed style globally
+        description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
+        type: class-toggle
+        default: false
     -
         id: code-blocks
         title: Code blocks
