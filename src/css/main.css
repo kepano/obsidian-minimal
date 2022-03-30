@@ -650,6 +650,7 @@ body.minimal-strike-lists li[data-task="x"].task-list-item.is-checked {
 
 /* Reading */
 .cm-s-obsidian span.cm-inline-code,
+.markdown-rendered code,
 .markdown-preview-view code {
   color: var(--text-code);
   font-size: var(--font-code); }
