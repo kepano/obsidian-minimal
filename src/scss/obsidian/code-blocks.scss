@@ -13,6 +13,12 @@
   color:var(--text-code);
   font-size:var(--font-code);
 }
+
+.markdown-preview-view td code ,
+.markdown-source-view.mod-cm6 td code  {
+  font-size:calc(var(--font-code) - 2px);
+}
+
 .markdown-preview-view pre code {
   background-color:transparent;
 }
