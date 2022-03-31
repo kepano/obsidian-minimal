@@ -5358,7 +5358,9 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
 
 .nav-folder-children .nav-folder-children {
   margin-left: 18px;
-  padding-left: 0;
+  padding-left: 0; }
+
+body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
   border-left: 1px solid var(--background-modifier-border); }
 
 .nav-folder-title {
@@ -11023,6 +11025,11 @@ settings:
         id: zoom-off
         title: Disable image zoom
         description: Turns off click/hold to zoom images
+        type: class-toggle
+    -
+        id: sidebar-lines-off
+        title: Disable sidebar relationship lines
+        description: Turns off lines in file navigation
         type: class-toggle
     -
         id: cursor

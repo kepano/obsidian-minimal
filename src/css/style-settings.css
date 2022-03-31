@@ -996,6 +996,11 @@ settings:
         description: Turns off click/hold to zoom images
         type: class-toggle
     -
+        id: sidebar-lines-off
+        title: Disable sidebar relationship lines
+        description: Turns off lines in file navigation
+        type: class-toggle
+    -
         id: cursor
         title: Cursor style
         description: The cursor style for UI elements

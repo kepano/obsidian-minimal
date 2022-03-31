@@ -5318,7 +5318,9 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
 
 .nav-folder-children .nav-folder-children {
   margin-left: 18px;
-  padding-left: 0;
+  padding-left: 0; }
+
+body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
   border-left: 1px solid var(--background-modifier-border); }
 
 .nav-folder-title {
