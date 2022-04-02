@@ -1,9 +1,7 @@
 /* Reader Mode Lists  */
 
-.markdown-rendered ul,
 ul {
   padding-inline-start:var(--list-indent); }
-.markdown-rendered ol,
 ol {
   padding-inline-start:calc(var(--list-indent) - 0.15em);
   margin-left:0;
@@ -24,9 +22,10 @@ ul > li::marker,
 ol > li {
   margin-left:0em;}
 
-.el-ol > ol,
-.el-ul > ul {
+div > ol,
+div > ul {
   margin-left:-0.25em;
+  padding-inline-start:2em;
 }
 
 .is-mobile {
@@ -36,12 +35,16 @@ ol > li {
   }
   .markdown-rendered ol,
   ol {
-    padding-inline-start:calc(var(--list-indent) - 0.15em);
+    padding-inline-start:var(--list-indent);
   }
   .el-ol > ol,
   .el-ul > ul {
-    margin-left:-0.25em;
+    margin-left:0.5em;
   }
+  .mod-cm6 .HyperMD-list-line.cm-line {
+      margin-left:0.25em !important;
+  }
+
 }
 
 /* Live Preview */
