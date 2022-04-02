@@ -1,9 +1,11 @@
 /* Reader Mode Lists  */
 
+.markdown-rendered ul,
 ul {
-  padding-inline-start:var(--list-padding); }
+  padding-inline-start:var(--list-indent); }
+.markdown-rendered ol,
 ol {
-  padding-inline-start:1.75em;
+  padding-inline-start:calc(var(--list-indent) - 0.15em);
   margin-left:0;
   list-style:default;
 }
@@ -22,14 +24,32 @@ ul > li::marker,
 ol > li {
   margin-left:0em;}
 
+.el-ol > ol,
 .el-ul > ul {
   margin-left:-0.25em;
 }
 
+.is-mobile {
+  .markdown-rendered ul,
+  ul {
+    padding-inline-start:var(--list-indent);
+  }
+  .markdown-rendered ol,
+  ol {
+    padding-inline-start:calc(var(--list-indent) - 0.15em);
+  }
+  .el-ol > ol,
+  .el-ul > ul {
+    margin-left:-0.25em;
+  }
+}
 
 /* Live Preview */
 .cm-line:not(.HyperMD-codeblock) {
-  tab-size:var(--list-padding);
+  tab-size:var(--list-indent);
+}
+.cm-formatting-list-ol {
+  margin-left:-6px;
 }
 body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
   margin-left:0.75em !important;

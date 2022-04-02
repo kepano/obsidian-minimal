@@ -80,10 +80,6 @@ body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .
   .workspace-drawer-active-tab-header:hover .workspace-drawer-active-tab-back-icon {
     color:var(--text-normal);
   }
-  .markdown-preview-view ul,
-  .markdown-preview-view ol {
-    padding-inline-start:var(--list-padding);
-  }
   .nav-file-title,
   .nav-folder-title,
   .outline,

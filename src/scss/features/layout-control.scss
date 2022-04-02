@@ -86,7 +86,7 @@ https://github.com/sponsors/kepano
   margin-right:auto;
 }
 .contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
-  padding-inline-start:calc(var(--list-padding) + var(--folding-offset));
+  padding-inline-start:calc(var(--list-indent) + var(--folding-offset));
 }
 /*
 .contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {

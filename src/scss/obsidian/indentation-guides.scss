@@ -6,7 +6,16 @@
 .markdown-rendered.show-indentation-guide li > ol::before {
   left:-0.8em;
 }
+/* Live Preview */
+.markdown-source-view.mod-cm6 .cm-indent::before {
+  transform:translateX(-1px);
+}
 
-.is-mobile .markdown-source-view.mod-cm6 .cm-indent::before {
-
+.is-mobile {
+  .markdown-rendered.show-indentation-guide li > ul::before {
+    left:-0.9em;
+  }
+  .markdown-rendered.show-indentation-guide li > ol::before {
+    left:-1em;
+  }
 }

@@ -104,7 +104,7 @@ SOFTWARE.
   --folding-offset:16px;
   --nested-padding:30px;
   /* Quotes and transclusions */
-  --list-padding:2em;
+  --list-indent:2em;
   /* List padding */
   --list-spacing:0.075em;
   /* Space between list items */
@@ -1798,6 +1798,7 @@ body .view-action svg.cross path {
 
 .graph-controls-button:hover,
 .view-action:hover,
+.view-action.is-active:hover,
 .view-header-icon:hover,
 .nav-action-button:hover,
 .nav-action-button.is-active:hover,
@@ -1826,6 +1827,15 @@ body .view-action svg.cross path {
 
 .markdown-rendered.show-indentation-guide li > ol::before {
   left: -0.8em; }
+
+/* Live Preview */
+.markdown-source-view.mod-cm6 .cm-indent::before {
+  transform: translateX(-1px); }
+
+.is-mobile .markdown-rendered.show-indentation-guide li > ul::before {
+  left: -0.9em; }
+.is-mobile .markdown-rendered.show-indentation-guide li > ol::before {
+  left: -1em; }
 
 /* Links */
 a {
@@ -1871,11 +1881,13 @@ a em,
   color: var(--text-muted); }
 
 /* Reader Mode Lists  */
+.markdown-rendered ul,
 ul {
-  padding-inline-start: var(--list-padding); }
+  padding-inline-start: var(--list-indent); }
 
+.markdown-rendered ol,
 ol {
-  padding-inline-start: 1.75em;
+  padding-inline-start: calc(var(--list-indent) - 0.15em);
   margin-left: 0;
   list-style: default; }
 
@@ -1894,12 +1906,26 @@ ul > li::marker,
 ol > li {
   margin-left: 0em; }
 
+.el-ol > ol,
 .el-ul > ul {
+  margin-left: -0.25em; }
+
+.is-mobile .markdown-rendered ul,
+.is-mobile ul {
+  padding-inline-start: var(--list-indent); }
+.is-mobile .markdown-rendered ol,
+.is-mobile ol {
+  padding-inline-start: calc(var(--list-indent) - 0.15em); }
+.is-mobile .el-ol > ol,
+.is-mobile .el-ul > ul {
   margin-left: -0.25em; }
 
 /* Live Preview */
 .cm-line:not(.HyperMD-codeblock) {
-  tab-size: var(--list-padding); }
+  tab-size: var(--list-indent); }
+
+.cm-formatting-list-ol {
+  margin-left: -6px; }
 
 body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
   margin-left: 0.75em !important; }
@@ -3422,8 +3448,8 @@ body:not(.is-mobile) .view-actions .view-action {
   height: 26px; }
 
 .view-action.is-active {
-  color: var(--text-faint);
-  opacity: 1; }
+  color: var(--icon-color);
+  opacity: var(--icon-muted); }
 
 body:not(.is-mobile) .view-actions .view-action:last-child {
   margin-left: -1px; }
@@ -3431,7 +3457,8 @@ body:not(.is-mobile) .view-actions .view-action:last-child {
 .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-actions,
 .minimal-focus-mode .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-header:hover .view-actions,
 .workspace-ribbon.mod-left.is-collapsed ~ .mod-root .view-header:hover .view-actions,
-.mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions {
+.mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions,
+.view-action.is-active:hover {
   opacity: 1;
   transition: opacity 0.25s ease-in-out; }
 
@@ -5893,7 +5920,7 @@ https://github.com/sponsors/kepano
   margin-right: auto; }
 
 .contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
-  padding-inline-start: calc(var(--list-padding) + var(--folding-offset)); }
+  padding-inline-start: calc(var(--list-indent) + var(--folding-offset)); }
 
 /*
 .contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
@@ -6091,7 +6118,7 @@ body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ol ul,
 body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul ol,
 body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ol ol {
   margin-left: -15px;
-  padding-left: var(--list-padding);
+  padding-left: var(--list-indent);
   border-left: 1px solid var(--background-modifier-border); }
 
 body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul li.is-flashing {
@@ -6370,9 +6397,6 @@ body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .
     color: var(--text-normal); }
   .is-mobile .workspace-drawer-active-tab-header:hover .workspace-drawer-active-tab-back-icon {
     color: var(--text-normal); }
-  .is-mobile .markdown-preview-view ul,
-  .is-mobile .markdown-preview-view ol {
-    padding-inline-start: var(--list-padding); }
   .is-mobile .nav-file-title,
   .is-mobile .nav-folder-title,
   .is-mobile .outline,
@@ -7906,7 +7930,19 @@ body .sync-history-content-container textarea.sync-history-content:focus {
   -webkit-appearance: none;
   border: 0;
   background-color: var(--background-secondary); }
+.is-mobile .modal.mod-sync-log .mod-toggle, .is-mobile .modal.mod-sync-log .modal-button-container {
+  flex: 0; }
 
+/* --------------- */
+/* Phone */
+@media (max-width: 400pt) {
+  .is-mobile .modal.mod-sync-log {
+    width: 100vw;
+    height: 100vh;
+    max-height: calc(100vh - 32px);
+    box-shadow: 0 -32px 0 32px var(--background-primary);
+    bottom: 0;
+    padding-bottom: 10px; } }
 /* Community plugins */
 /* Banner plugin */
 .obsidian-banner.solid {
@@ -10804,12 +10840,22 @@ settings:
     -
         id: list-spacing
         title: List item spacing
-        description: Space between list items in em units
+        description: Vertical space between list items in em units
         type: variable-number-slider
         default: 0.075
         min: 0
         max: 0.3
         step: 0.005
+        format: em
+    -
+        id: list-indent
+        title: List indentation
+        description: Horizontal space from left in em units
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 3.5
+        step: 0.1
         format: em
     -
         id: embed-blocks
