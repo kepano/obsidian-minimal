@@ -1436,12 +1436,12 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   background: transparent; }
 
 .tree-view-item-self:hover .tree-view-item-collapse,
-.collapsible-item-self.is-clickable:hover {
+.tree-item-self.is-clickable:hover {
   color: var(--text-muted);
   background: transparent;
   cursor: var(--cursor); }
 
-.collapsible-item-self.is-clickable {
+.tree-item-self.is-clickable {
   cursor: var(--cursor); }
 
 .search-result-collapse-indicator svg,
@@ -1482,7 +1482,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .tree-item-self .collapse-icon {
   padding-left: 0;
   width: 18px;
-  margin-left: -15px;
+  margin-left: -18px;
   justify-content: center; }
 
 .tree-item-self:hover .collapse-icon {
@@ -7151,25 +7151,25 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
   padding: 0 0 0 15px;
   width: 100%; }
 
-.outline .collapsible-item-self {
+.outline .tree-item-self {
   cursor: var(--cursor);
   line-height: 1.4;
   margin-bottom: 4px;
   font-size: var(--font-adaptive-small);
   padding-left: 15px; }
 
-.collapsible-item-collapse {
+.tree-item-collapse {
   opacity: 1;
   left: -5px;
   color: var(--text-faint); }
 
-.outline .collapsible-item-inner:hover {
+.outline .tree-item-inner:hover {
   color: var(--text-normal); }
 
-.collapsible-item-self.is-clickable:hover .collapsible-item-collapse {
+.tree-item-self.is-clickable:hover .tree-item-collapse {
   color: var(--text-normal); }
 
-.outline > .collapsible-item > .collapsible-item-self .right-triangle {
+.outline > .tree-item > .tree-item-self .right-triangle {
   opacity: 0; }
 
 /* Page Preview aka Popovers */
