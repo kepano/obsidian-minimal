@@ -1,5 +1,9 @@
 /* File browser */
 
+.is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  display:none;
+}
+
 .nav-file-tag {
   font-weight:400;
 }
