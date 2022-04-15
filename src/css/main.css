@@ -4508,6 +4508,9 @@ body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,
 .colorful-active .menu-item:hover .menu-item-icon {
   color: var(--sp1); }
 
+.colorful-active .nav-file-title-content.is-being-renamed {
+  color: var(--text-normal); }
+
 .is-mobile.colorful-active .nav-file-title.is-active {
   box-shadow: 0 0 0px 2px var(--ax3); }
 
