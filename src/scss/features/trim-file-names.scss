@@ -5,7 +5,13 @@
 .full-file-names .search-result-file-title {
     text-overflow:unset;
     white-space:normal;
-    line-height:1.4;
+    line-height:1.35;
+}
+
+.nav-file-title-content.is-being-renamed {
+    text-overflow:unset;
+    white-space:normal;
+    line-height:1.35;
 }
 
 .full-file-names .nav-file-title {

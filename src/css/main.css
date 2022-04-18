@@ -1888,9 +1888,6 @@ div > ul {
 .cm-line:not(.HyperMD-codeblock) {
   tab-size: var(--list-indent); }
 
-.cm-formatting-list-ol {
-  margin-left: -6px; }
-
 body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
   margin-left: 0.75em !important; }
 
@@ -6253,7 +6250,12 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 .full-file-names .search-result-file-title {
   text-overflow: unset;
   white-space: normal;
-  line-height: 1.4; }
+  line-height: 1.35; }
+
+.nav-file-title-content.is-being-renamed {
+  text-overflow: unset;
+  white-space: normal;
+  line-height: 1.35; }
 
 .full-file-names .nav-file-title {
   margin-bottom: 3px; }
