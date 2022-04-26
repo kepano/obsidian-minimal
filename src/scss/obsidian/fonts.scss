@@ -4,7 +4,7 @@ h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
 h1,h2,h3,h4 {letter-spacing:-0.02em;} 
 
 body, input, button  {
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
 }
 .cm-s-obsidian span.cm-error {
   color:var(--red);
@@ -31,7 +31,7 @@ body, input, button,
 .cm-s-obsidian,
 .cm-s-obsidian span.cm-formatting-task {
   line-height:var(--line-height);
-  font-family:var(--text-editor);
+  font-family:var(--font-text);
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
@@ -40,7 +40,7 @@ body, input, button,
   font-family:var(--text)
 }
 .cm-s-obsidian span.cm-formatting-task {
-  font-family:var(--text-editor);
+  font-family:var(--font-text);
   line-height:var(--line-height);
 }
 .cm-s-obsidian .cm-header,

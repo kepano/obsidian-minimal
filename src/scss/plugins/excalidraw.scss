@@ -7,7 +7,7 @@ body .excalidraw.theme--dark {
   --color-primary-chubb:var(--interactive-accent-hover);
   --color-primary-darker:var(--interactive-accent-hover);
   --color-primary-darkest:var(--interactive-accent-hover);
-  --ui-font:var(--font-ui);
+  --ui-font:var(--font-interface);
   --island-bg-color:var(--background-secondary);
   --button-gray-1:var(--background-tertiary);
   --button-gray-2:var(--background-tertiary);
@@ -53,7 +53,7 @@ body .excalidraw .Island {
 }
 body .excalidraw .ToolIcon {
   cursor:var(--cursor);
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
   background-color:transparent;
 }
 body .excalidraw label.ToolIcon {

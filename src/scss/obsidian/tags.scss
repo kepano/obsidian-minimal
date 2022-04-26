@@ -6,7 +6,7 @@ a.tag {
   border:var(--tag-border-width) solid var(--background-modifier-border);
   color:var(--tag-color);
   font-size:var(--font-adaptive-small);
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
   padding:1px 8px 1px;
   text-align:center;
   text-decoration:none;
@@ -25,7 +25,7 @@ a.tag:hover {
   border:var(--tag-border-width) solid var(--background-modifier-border);
   color:var(--tag-color);
   font-size:var(--font-adaptive-small);
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
   text-align:center;
   text-decoration:none;
   margin:0;
