@@ -4,7 +4,7 @@
 .theme-light pre.frontmatter[class*="language-yaml"] {
   padding:0 0 0px 0;
   background:transparent;
-  font-family:var(--text);
+  font-family:var(--font-text);
   line-height:1.2;
   border-radius:0;
   border-bottom:0px solid var(--background-modifier-border);
@@ -15,7 +15,7 @@
 .theme-dark .frontmatter .token,
 .theme-light .frontmatter .token,
 .markdown-preview-section .frontmatter code {
-  font-family:var(--text);
+  font-family:var(--font-text);
   color:var(--text-faint) !important;
 }
 

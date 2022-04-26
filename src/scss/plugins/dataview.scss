@@ -43,7 +43,7 @@ ul .dataview .task-list-basic-item:hover {
 body .dataview.inline-field-key,
 body .dataview.inline-field-value,
 body .dataview .inline-field-standalone-value {
-  font-family:var(--text);
+  font-family:var(--font-text);
   font-size:calc(var(--font-adaptive-normal) - 2px);
   background:transparent;
   color:var(--text-muted);
