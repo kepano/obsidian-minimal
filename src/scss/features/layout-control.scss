@@ -171,7 +171,7 @@ https://github.com/sponsors/kepano
 .markdown-preview-view.is-readable-line-width.table-wide .el-table table,
 .table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
-  max-width:var(--line-width-wide);
+  max-width:var(--line-width-wide)  !important;
 }
 .table-100 .el-table table th:first-child,
 .table-100 .el-table table td:first-child,

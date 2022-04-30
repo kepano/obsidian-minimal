@@ -5550,6 +5550,8 @@ body.is-mobile .markdown-source-view.mod-cm6.is-folding .cm-contentContainer,
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {
   border-right: 1px solid var(--background-modifier-border); }
 
+.table-small.markdown-source-view.mod-cm6 th,
+.table-small.markdown-source-view.mod-cm6 td,
 .table-small.markdown-preview-view .table-view-table > thead > tr > th,
 .table-small thead > tr > th,
 .table-small tbody > tr > td,
@@ -5557,6 +5559,8 @@ body.is-mobile .markdown-source-view.mod-cm6.is-folding .cm-contentContainer,
 .table-small .table-view-table a.tag {
   font-size: 85%; }
 
+.table-tiny.markdown-source-view.mod-cm6 th,
+.table-tiny.markdown-source-view.mod-cm6 td,
 .table-tiny.markdown-preview-view .table-view-table > thead > tr > th,
 .table-tiny thead > tr > th,
 .table-tiny tbody > tr > td,
@@ -5965,7 +5969,7 @@ https://github.com/sponsors/kepano
 .markdown-preview-view.is-readable-line-width.table-wide .el-table table,
 .table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
-  max-width: var(--line-width-wide); }
+  max-width: var(--line-width-wide) !important; }
 
 .table-100 .el-table table th:first-child,
 .table-100 .el-table table td:first-child,
