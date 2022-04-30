@@ -2,15 +2,15 @@
 
 /* Add padding to account for gutter in Edit mode when folding is on */
 
-body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title,
-.allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
+body.minimal-folding:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title,
+.minimal-folding .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
+.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
   padding-left:var(--folding-offset);
 }
-body:not(.is-mobile) .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
   padding-left:var(--folding-offset);
 }
 body.is-mobile .markdown-source-view.mod-cm6.is-folding .cm-contentContainer,
-.allow-fold-lists.markdown-preview-view .markdown-embed .markdown-preview-sizer {
+.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-embed .markdown-preview-sizer {
   padding-left:0;
 }
