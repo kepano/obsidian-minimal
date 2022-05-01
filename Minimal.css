@@ -837,6 +837,9 @@ body.is-dragging {
   transition: opacity 200ms;
   padding: 4px; }
 
+.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
+  width: 26px !important; }
+
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color: var(--background-tertiary); }
 
@@ -5519,6 +5522,8 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
 
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
+.row-alt.markdown-source-view.mod-cm6 th:first-child,
+.row-alt.markdown-source-view.mod-cm6 td:first-child,
 .row-alt th:first-child,
 .row-alt tbody > tr > td:first-child {
   padding-left: 10px; }
@@ -5542,6 +5547,8 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
   border-bottom: 1px solid var(--background-modifier-border);
   padding: 4px 10px; }
 
+.table-lines.markdown-source-view.mod-cm6 th:first-child,
+.table-lines.markdown-source-view.mod-cm6 td:first-child,
 .table-lines thead > tr > th:first-child,
 .table-lines tbody > tr > td:first-child {
   padding-left: 10px; }
@@ -6001,12 +6008,15 @@ https://github.com/sponsors/kepano
   width: 100%;
   max-width: 100%; }
 
+/* Live Preview */
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
   width: var(--line-width) !important;
   margin: 0 auto; }
 
 .map-max.is-live-preview.is-readable-line-width .block-language-leaflet,
 .map-max .is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-max.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-max .is-live-preview.is-readable-line-width .cm-table-widget > table,
 .table-max.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .table-max .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
@@ -6015,6 +6025,8 @@ https://github.com/sponsors/kepano
 
 .map-wide.is-live-preview.is-readable-line-width .block-language-leaflet,
 .map-wide .is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-wide.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-wide .is-live-preview.is-readable-line-width .cm-table-widget > table,
 .table-wide.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .table-wide .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,

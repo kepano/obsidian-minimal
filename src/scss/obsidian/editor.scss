@@ -40,6 +40,10 @@
   right:0;
   transition:opacity 200ms;
   padding:4px;
+
+}
+.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
+  width:26px !important;
 }
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color:var(--background-tertiary);
