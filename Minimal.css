@@ -5963,16 +5963,16 @@ https://github.com/sponsors/kepano
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
   max-width: var(--line-width-wide) !important; }
 
-.table-100 .el-table table th:first-child,
-.table-100 .el-table table td:first-child,
-.table-100 .el-lang-dataview .dataview.table-view-table th:first-child,
-.table-100 .el-lang-dataview .dataview.table-view-table td:first-child {
+.table-100 table th:first-child,
+.table-100 table td:first-child,
+.table-100 .dataview.table-view-table th:first-child,
+.table-100 .dataview.table-view-table td:first-child {
   padding-left: 20px; }
 
-.table-100 .el-table table th:last-child,
-.table-100 .el-table table td:last-child,
-.table-100 .el-lang-dataview .dataview.table-view-table th:last-child,
-.table-100 .el-lang-dataview .dataview.table-view-table td:last-child {
+.table-100 table th:last-child,
+.table-100 table td:last-child,
+.table-100 .dataview.table-view-table th:last-child,
+.table-100 .dataview.table-view-table td:last-child {
   padding-right: 20px; }
 
 /* Images and iframes */
@@ -6001,24 +6001,40 @@ https://github.com/sponsors/kepano
   width: 100%;
   max-width: 100%; }
 
-.table-max.is-live-preview.is-readable-line-width table,
-.table-max .is-live-preview.is-readable-line-width table,
+.is-live-preview.is-readable-line-width .cm-embed-block > div {
+  width: var(--line-width) !important;
+  margin: 0 auto; }
+
+.map-max.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-max .is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-max.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-max .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed {
-  width: var(--max-width); }
+  width: var(--max-width) !important; }
 
-.table-wide.is-live-preview.is-readable-line-width table,
-.table-wide .is-live-preview.is-readable-line-width table,
+.map-wide.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-wide .is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-wide.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-wide .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed {
-  width: var(--line-width-wide); }
+  width: var(--line-width-wide) !important; }
 
-.table-100.is-live-preview.is-readable-line-width table,
-.table-100 .is-live-preview.is-readable-line-width table,
-.img-100.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
+.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview table {
   width: 100%;
   max-width: 100%; }
+
+.map-100.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-100 .is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-100.is-live-preview.is-readable-line-width table,
+.table-100 .is-live-preview.is-readable-line-width table,
+.table-100.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-100 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.img-100.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
+  width: 100% !important;
+  max-width: 100% !important; }
 
 /* Mobile */
 @media (max-width: 400pt) {
@@ -9106,6 +9122,13 @@ body .block-language-leaflet .leaflet-distance-control {
   padding: 4px 10px;
   height: auto;
   cursor: var(--cursor) !important; }
+
+body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper > * {
+  font-size: var(--font-adaptive-small);
+  font-family: var(--font-ui); }
+
+body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper {
+  padding: 4px 10px !important; }
 
 .leaflet-marker-icon svg path {
   stroke: var(--background-primary);

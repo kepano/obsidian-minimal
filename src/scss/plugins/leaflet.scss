@@ -124,6 +124,15 @@ body .block-language-leaflet .leaflet-distance-control {
   cursor:var(--cursor) !important;
 }
 
+body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper > * {
+  font-size:var(--font-adaptive-small);
+  font-family:var(--font-ui);
+}
+
+body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper {
+  padding:4px 10px !important;
+}
+
 .leaflet-marker-icon svg path {
   stroke:var(--background-primary);
   stroke-width:18px;
