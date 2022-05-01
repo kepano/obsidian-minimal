@@ -1855,6 +1855,7 @@ a[href*="obsidian://search"] {
 .theme-dark a[href*="obsidian://search"] {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'><path fill='white' stroke='white' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'></path></svg>"); }
 
+.cm-s-obsidian span.cm-url:hover,
 .is-live-preview.cm-s-obsidian span.cm-hmd-internal-link:hover,
 .is-live-preview.cm-s-obsidian span.cm-url:hover,
 .is-live-preview.cm-s-obsidian span.cm-link:hover {
@@ -8734,8 +8735,11 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
       0px 10.4px 18.1px rgba(0, 0, 0, 0.18),
       0px 20px 40px rgba(0, 0, 0, 0.28) ; }
 
-.popover:not(.snap-to-viewport) {
+.popover.hover-editor:not(.snap-to-viewport) {
   --max-width:95%; }
+  .popover.hover-editor:not(.snap-to-viewport) .markdown-preview-view,
+  .popover.hover-editor:not(.snap-to-viewport) .markdown-source-view .cm-content {
+    font-size: 90%; }
 
 body .popover.hover-popover:not(.is-loaded) {
   box-shadow: var(--popover-shadow); }
@@ -9117,6 +9121,10 @@ body .block-language-leaflet .leaflet-distance-control {
   padding: 4px 10px;
   height: auto;
   cursor: var(--cursor) !important; }
+
+.leaflet-marker-icon svg path {
+  stroke: var(--background-primary);
+  stroke-width: 18px; }
 
 /* Map View plugin */
 .map-view-marker-name {

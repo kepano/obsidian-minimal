@@ -26,8 +26,12 @@
     0px 20px 40px rgba(0, 0, 0, 0.28)
   ;
 }
-.popover:not(.snap-to-viewport) {
+.popover.hover-editor:not(.snap-to-viewport) {
   --max-width:95%;
+  .markdown-preview-view,
+  .markdown-source-view .cm-content {
+    font-size:90%;
+  }
 }
 
 body .popover.hover-popover:not(.is-loaded) {
