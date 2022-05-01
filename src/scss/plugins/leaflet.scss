@@ -123,3 +123,8 @@ body .block-language-leaflet .leaflet-distance-control {
   height:auto;
   cursor:var(--cursor) !important;
 }
+
+.leaflet-marker-icon svg path {
+  stroke:var(--background-primary);
+  stroke-width:18px;
+}

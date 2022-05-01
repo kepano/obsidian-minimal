@@ -1,5 +1,6 @@
 /* Folding icons in Preview */
 
+.collapse-indicator svg,
 .markdown-preview-view .heading-collapse-indicator.collapse-indicator svg,
 .markdown-preview-view ol > li .collapse-indicator svg,
 .markdown-preview-view ul > li .collapse-indicator svg {
@@ -11,8 +12,10 @@ h2:hover .heading-collapse-indicator.collapse-indicator svg,
 h3:hover .heading-collapse-indicator.collapse-indicator svg,
 h4:hover .heading-collapse-indicator.collapse-indicator svg,
 h5:hover .heading-collapse-indicator.collapse-indicator svg,
+.HyperMD-header:hover .collapse-indicator svg,
 .markdown-preview-view .is-collapsed .collapse-indicator svg,
-.markdown-preview-view .collapse-indicator:hover svg {
+.markdown-preview-view .collapse-indicator:hover svg,
+.collapse-indicator:hover svg {
   opacity:1;
 }
 .markdown-preview-view div.is-collapsed h1::after,
@@ -29,7 +32,6 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 .markdown-preview-view ol > li.task-list-item .collapse-indicator,
 .markdown-preview-view ul > li.task-list-item .collapse-indicator {
   margin-left:-48px;
-  margin-top:5px;
   position:absolute;
 }
 .markdown-preview-view ol > li .collapse-indicator {

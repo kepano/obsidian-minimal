@@ -80,6 +80,19 @@ https://github.com/sponsors/kepano
   margin-left:auto;
   margin-right:auto;
 }
+
+/*
+.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
+  padding-inline-start:calc(var(--list-indent) + var(--folding-offset));
+}
+
+.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
+  transform:translateX(calc(var(--folding-offset)/2));
+}
+.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
+  width:calc(var(--line-width-adaptive) - var(--folding-offset));
+}*/
+
 .el-table table,
 .el-lang-dataview .dataview.table-view-table {
   width:var(--max-width);
@@ -114,7 +127,7 @@ https://github.com/sponsors/kepano
 .markdown-preview-view.is-readable-line-width.table-wide .el-table table,
 .table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
-  max-width:var(--line-width-wide);
+  max-width:var(--line-width-wide)  !important;
 }
 .table-100 .el-table table th:first-child,
 .table-100 .el-table table td:first-child,

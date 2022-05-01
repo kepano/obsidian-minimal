@@ -67,6 +67,8 @@
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {
   border-right:1px solid var(--background-modifier-border);
 }
+.table-small.markdown-source-view.mod-cm6 th,
+.table-small.markdown-source-view.mod-cm6 td,
 .table-small.markdown-preview-view .table-view-table > thead > tr > th,
 .table-small thead > tr > th,
 .table-small tbody > tr > td,
@@ -74,6 +76,8 @@
 .table-small .table-view-table a.tag {
   font-size:85%;
 }
+.table-tiny.markdown-source-view.mod-cm6 th,
+.table-tiny.markdown-source-view.mod-cm6 td,
 .table-tiny.markdown-preview-view .table-view-table > thead > tr > th,
 .table-tiny thead > tr > th,
 .table-tiny tbody > tr > td,

@@ -24,8 +24,10 @@
   font-weight:400;
   font-size:calc(var(--font-adaptive-normal) - 2px);
   color:var(--text-muted);
-  text-align:left;
   border-top:none;
+  text-align:left;
+  &[align="center"] {text-align:center;}
+  &[align="right"] {text-align:right;}
 }
 .markdown-source-view.mod-cm6 th:last-child,
 .markdown-source-view.mod-cm6 td:last-child,

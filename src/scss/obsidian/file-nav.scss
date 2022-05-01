@@ -1,5 +1,9 @@
 /* File browser */
 
+.is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  display:none;
+}
+
 .nav-file-tag {
   font-weight:400;
 }
@@ -140,12 +144,12 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   background:transparent;
 }
 .tree-view-item-self:hover .tree-view-item-collapse,
-.collapsible-item-self.is-clickable:hover {
+.tree-item-self.is-clickable:hover {
   color:var(--text-muted);
   background:transparent;
   cursor:var(--cursor);
 }
-.collapsible-item-self.is-clickable {
+.tree-item-self.is-clickable {
   cursor:var(--cursor);
 }
 .search-result-collapse-indicator svg,
@@ -189,7 +193,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .tree-item-self .collapse-icon {
   padding-left:0;
   width:18px;
-  margin-left:-15px;
+  margin-left:-18px;
   justify-content:center;
 }
 .tree-item-self:hover .collapse-icon {

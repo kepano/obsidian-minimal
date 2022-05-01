@@ -80,10 +80,6 @@ body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .
   .workspace-drawer-active-tab-header:hover .workspace-drawer-active-tab-back-icon {
     color:var(--text-normal);
   }
-  .markdown-preview-view ul,
-  .markdown-preview-view ol {
-    padding-inline-start:var(--list-padding);
-  }
   .nav-file-title,
   .nav-folder-title,
   .outline,
@@ -494,10 +490,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   }
   .is-mobile .setting-item-control input[type="range"] {
     margin-bottom:10px;
-  }
-  .is-mobile .markdown-preview-view ul,
-  .is-mobile .markdown-preview-view ol {
-    padding-inline-start:1.75em;
   }
 
 }

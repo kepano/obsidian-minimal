@@ -1,6 +1,6 @@
 /* @settings
 
-name: Minimal Color Scheme
+name: Minimal
 id: minimal-style
 settings:
     -
@@ -773,13 +773,35 @@ settings:
     -
         id: list-spacing
         title: List item spacing
-        description: Space between list items in em units
+        description: Vertical space between list items in em units
         type: variable-number-slider
         default: 0.075
         min: 0
         max: 0.3
         step: 0.005
         format: em
+    -
+        id: list-indent
+        title: List indentation
+        description: Horizontal space from left in em units
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 3.5
+        step: 0.1
+        format: em
+    -
+        id: embed-blocks
+        title: Embeds and transclusions
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: embed-strict
+        title: Use strict embed style globally
+        description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
+        type: class-toggle
+        default: false
     -
         id: code-blocks
         title: Code blocks
@@ -982,6 +1004,11 @@ settings:
         id: zoom-off
         title: Disable image zoom
         description: Turns off click/hold to zoom images
+        type: class-toggle
+    -
+        id: sidebar-lines-off
+        title: Disable sidebar relationship lines
+        description: Turns off lines in file navigation
         type: class-toggle
     -
         id: cursor

@@ -1,5 +1,7 @@
 /* Transcluded notes and embeds */
 
+/* Strict embeds (naked) */
+
 .embed-strict .internal-embed .markdown-embed {
   padding:0;
   border:none;
@@ -10,14 +12,18 @@
 .embed-strict .internal-embed:not([src*="#^"]) .markdown-embed-link {
   width:30px;
 }
-
+.embed-strict.contextual-typography .internal-embed .markdown-preview-view .markdown-preview-sizer>div,
 .contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer>div {
   margin:0;
   width:100%;
 }
+
+
+
 .markdown-embed .markdown-preview-view .markdown-preview-sizer {
   padding-bottom:0 !important;
 }
+.markdown-preview-view.markdown-embed .markdown-preview-sizer,
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
   max-width:100%;
   width:100%;
