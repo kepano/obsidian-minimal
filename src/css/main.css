@@ -4185,11 +4185,7 @@ https://github.com/sponsors/kepano
 /* Block button */
 .markdown-source-view.mod-cm6.cards .edit-block-button {
   top: 0px;
-  opacity: 1;
   background-color: transparent; }
-
-.table-100.markdown-source-view.mod-cm6.cards .edit-block-button {
-  right: 36px; }
 
 /* ------------------- */
 /* Sorting */
