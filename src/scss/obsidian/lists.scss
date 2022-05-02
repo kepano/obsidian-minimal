@@ -59,6 +59,8 @@ body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
 }
 
 /* Space between list items */
+.markdown-source-view ol>li,
+.markdown-source-view ul>li,
 .markdown-preview-view ol>li,
 .markdown-preview-view ul>li,
 .mod-cm6 .HyperMD-list-line.cm-line {

@@ -3,7 +3,7 @@
 Layout Control snippet for Obsidian
 
 author: @kepano
-version: 1.0.0
+version: 2.0.0
 
 Support my work:
 https://github.com/sponsors/kepano
@@ -82,18 +82,6 @@ https://github.com/sponsors/kepano
   margin-right:auto;
 }
 
-/*
-.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
-  padding-inline-start:calc(var(--list-indent) + var(--folding-offset));
-}
-
-.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
-  transform:translateX(calc(var(--folding-offset)/2));
-}
-.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
-  width:calc(var(--line-width-adaptive) - var(--folding-offset));
-}*/
-
 .el-table table,
 .el-lang-dataview .dataview.table-view-table {
   width:var(--max-width);
@@ -143,7 +131,9 @@ https://github.com/sponsors/kepano
   padding-right:20px;
 }
 
-/* Images and iframes */
+/* Maps, images and iframes */
+.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .markdown-preview-view.is-readable-line-width.chart-max .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography .markdown-preview-view.is-readable-line-width.map-max .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
@@ -152,6 +142,8 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-max .markdown-preview-sizer > .el-embed-image {
   width:100%;
 }
+.contextual-typography.chart-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .markdown-preview-view.is-readable-line-width.chart-wide .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography.map-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography .markdown-preview-view.is-readable-line-width.map-wide .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography.iframe-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
@@ -160,6 +152,8 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-wide .markdown-preview-sizer > .el-embed-image {
   width:var(--line-width-wide);
 }
+.contextual-typography.chart-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .markdown-preview-view.is-readable-line-width.chart-100 .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography.map-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography .markdown-preview-view.is-readable-line-width.map-100 .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography.iframe-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
@@ -171,12 +165,12 @@ https://github.com/sponsors/kepano
 }
 
 /* Live Preview */
-
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
   width:var(--line-width) !important;
   margin:0 auto;
 }
-
+.chart-max.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-max .is-live-preview.is-readable-line-width .block-language-chart,
 .map-max.is-live-preview.is-readable-line-width .block-language-leaflet,
 .map-max .is-live-preview.is-readable-line-width .block-language-leaflet,
 .table-max.is-live-preview.is-readable-line-width .cm-table-widget > table,
@@ -187,6 +181,8 @@ https://github.com/sponsors/kepano
 .img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width:var(--max-width) !important;
 }
+.chart-wide.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-wide .is-live-preview.is-readable-line-width .block-language-chart,
 .map-wide.is-live-preview.is-readable-line-width .block-language-leaflet,
 .map-wide .is-live-preview.is-readable-line-width .block-language-leaflet,
 .table-wide.is-live-preview.is-readable-line-width .cm-table-widget > table,
@@ -198,10 +194,15 @@ https://github.com/sponsors/kepano
   width:var(--line-width-wide) !important;
   max-width:var(--max-width);
 }
+/* Make sure the table fills the width of the parent dataview block,
+as opposed to regular tables */
+.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul,
 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview table {
   width:100%;
   max-width:100%;
 }
+.chart-100.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-100 .is-live-preview.is-readable-line-width .block-language-chart,
 .map-100.is-live-preview.is-readable-line-width .block-language-leaflet,
 .map-100 .is-live-preview.is-readable-line-width .block-language-leaflet,
 .table-100.is-live-preview.is-readable-line-width table,
