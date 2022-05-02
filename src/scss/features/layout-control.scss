@@ -165,9 +165,10 @@ https://github.com/sponsors/kepano
 }
 
 /* Live Preview */
+.is-live-preview.is-readable-line-width .mod-empty,
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
   width:var(--line-width) !important;
-  margin:0 auto;
+  margin:0 auto !important;
 }
 .chart-max.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-max .is-live-preview.is-readable-line-width .block-language-chart,
