@@ -4663,6 +4663,7 @@ body:not(.minimal-icons-off) svg.pane-layout,
 body:not(.minimal-icons-off) svg.paper-plane,
 body:not(.minimal-icons-off) svg.paused,
 body:not(.minimal-icons-off) svg.pencil,
+body:not(.minimal-icons-off) svg.pencil_icon,
 body:not(.minimal-icons-off) svg.pin,
 body:not(.minimal-icons-off) svg.plus-with-circle,
 body:not(.minimal-icons-off) svg.popup-open,
@@ -4816,6 +4817,7 @@ body:not(.minimal-icons-off) svg.pane-layout > path,
 body:not(.minimal-icons-off) svg.paper-plane > path,
 body:not(.minimal-icons-off) svg.paused > path,
 body:not(.minimal-icons-off) svg.pencil > path,
+body:not(.minimal-icons-off) svg.pencil_icon > path,
 body:not(.minimal-icons-off) svg.pin > path,
 body:not(.minimal-icons-off) svg.plus-with-circle > path,
 body:not(.minimal-icons-off) svg.popup-open > path,
@@ -5126,6 +5128,10 @@ body:not(.minimal-icons-off) svg.paper-plane {
 
 body:not(.minimal-icons-off) svg.paused {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M50 8.333C27.025 8.333 8.333 27.025 8.333 50s18.692 41.667 41.667 41.667s41.667 -18.692 41.667 -41.667S72.975 8.333 50 8.333zm0 75c-18.379 0 -33.333 -14.954 -33.333 -33.333s14.954 -33.333 33.333 -33.333s33.333 14.954 33.333 33.333s-14.954 33.333 -33.333 33.333z"/><path fill="black" d="M54.167 37.5h8.333v25h-8.333zM37.5 37.5h8.333v25H37.5z"></path></svg>'); }
+
+/* Text Generator plugin */
+body:not(.minimal-icons-off) svg.pencil_icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' /%3E%3C/svg%3E"); }
 
 body:not(.minimal-icons-off) svg.pencil {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M16.679 87.5c0.338 0 0.675 -0.042 1.008 -0.125l16.667 -4.167c0.733 -0.183 1.404 -0.563 1.938 -1.096L87.513 30.892c1.575 -1.575 2.442 -3.667 2.442 -5.892s-0.867 -4.317 -2.442 -5.892L80.904 12.5c-3.15 -3.15 -8.633 -3.15 -11.783 0L17.9 63.721a4.179 4.179 0 0 0 -1.096 1.933l-4.167 16.667A4.167 4.167 0 0 0 16.679 87.5zm58.333 -69.108L81.621 25l-6.608 6.608L68.404 25l6.608 -6.608zM24.608 68.796l37.904 -37.904L69.121 37.5l-37.908 37.904l-8.808 2.2l2.204 -8.808z"></path></svg>'); }
