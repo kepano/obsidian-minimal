@@ -434,6 +434,7 @@ body .excalidraw {
 body .excalidraw {
   --interactive-normal: var(--bg1);
   --interactive-accent-rgb:220, 220, 220;
+  --background-active-line:rgba(0,0,0,0.035);
   --background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 50%),calc(var(--base-l) - 7%),0.7);
   --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
   /* Errors */
@@ -447,6 +448,7 @@ body .excalidraw {
 .excalidraw.theme--dark {
   --interactive-normal: var(--bg3);
   --interactive-accent-rgb:66, 66, 66;
+  --background-active-line:rgba(255,255,255,0.035);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.8);
   --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
   /* Errors */
@@ -827,6 +829,9 @@ body.is-dragging {
 /* Line numbers */
 .cm-editor .cm-lineNumbers .cm-gutterElement {
   font-variant-numeric: tabular-nums; }
+
+.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active {
+  color: var(--text-muted); }
 
 /* Live Preview folding */
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
@@ -3960,6 +3965,12 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
   border-color: var(--interactive-accent); }
 
 /* Minimal features */
+/* Active line highlight */
+.active-line-on .cm-line.cm-active,
+.active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
+  background-color: var(--background-active-line);
+  box-shadow: -500px 0px var(--background-active-line), 500px 0 var(--background-active-line); }
+
 .borders-low {
   --border-width:0px;
   --border-width-alt:1px; }
