@@ -828,7 +828,7 @@ body.is-dragging {
 
 /* Gutters */
 .markdown-source-view.mod-cm6 .cm-gutters {
-  position: absolute;
+  position: absolute !important;
   z-index: 0; }
 
 .cm-editor .cm-lineNumbers .cm-gutterElement {
@@ -837,21 +837,29 @@ body.is-dragging {
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
   cursor: var(--cursor);
-  color: var(--text-muted);
-  background-color: transparent;
+  color: var(--text-faint);
+  background-color: var(--background-primary);
   top: 0;
-  right: 10px;
+  right: auto;
+  left: 5px;
+  opacity: 0;
   transition: opacity 200ms;
   padding: 4px; }
 
+/* if line numbers are on
+.markdown-source-view.mod-cm6 .edit-block-button {
+  left:30px;
+}
+ */
 .is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width: 26px !important; }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
-  background-color: var(--background-tertiary); }
+  background-color: var(--background-primary);
+  color: var(--text-muted); }
 
 .markdown-source-view.mod-cm6 .edit-block-button svg {
-  opacity: 0.5;
+  opacity: 1;
   width: var(--icon-size);
   height: var(--icon-size); }
 
@@ -873,9 +881,6 @@ body.is-dragging {
 .cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
 .cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
   color: var(--text-muted); }
-
-body .cm-heading-marker {
-  cursor: var(--cursor); }
 
 /* Live Preview folding */
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
@@ -9056,6 +9061,11 @@ body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-
   .kanban-plugin__lane {
     width: 100% !important;
     margin-bottom: 1rem !important; } }
+/* Lapel */
+body .cm-heading-marker {
+  cursor: var(--cursor);
+  padding-left: 10px; }
+
 /* Leaflet plugin */
 .theme-light {
   --leaflet-buttons:var(--bg1);
