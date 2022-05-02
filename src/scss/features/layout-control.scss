@@ -195,6 +195,7 @@ https://github.com/sponsors/kepano
 .img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width:var(--line-width-wide) !important;
+  max-width:var(--max-width);
 }
 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview table {
   width:100%;
