@@ -73,6 +73,9 @@
 .cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
   color:var(--text-muted);
 }
+body .cm-heading-marker {
+  cursor:var(--cursor);
+}
 
 /* Live Preview folding */
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
