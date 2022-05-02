@@ -55,7 +55,7 @@ div > ul {
 
 }
 body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
-  margin-left:0.75em !important;
+  transform: translateX(0.75em);
 }
 
 /* Space between list items */
