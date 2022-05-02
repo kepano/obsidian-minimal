@@ -1800,11 +1800,9 @@ body .view-action svg.cross path {
   border-radius: var(--radius-m); }
 
 /* Indentation Guides (Obsidian 0.14.0+) */
-.markdown-rendered.show-indentation-guide li > ul::before {
-  left: -0.65em; }
-
+.markdown-rendered.show-indentation-guide li > ul::before,
 .markdown-rendered.show-indentation-guide li > ol::before {
-  left: -0.8em; }
+  left: -0.66em; }
 
 /* Live Preview */
 .markdown-source-view.mod-cm6 .cm-indent::before {
@@ -1929,6 +1927,9 @@ body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
 
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   left: -5px; }
+
+body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+  margin-left: -5px; }
 
 /* Modals */
 .progress-bar-message {
@@ -5850,6 +5851,7 @@ https://github.com/sponsors/kepano
   margin-block-start: 0.5em;
   margin-block-end: 0.5em; }
 
+.contextual-typography .markdown-preview-view ul ol,
 .contextual-typography .markdown-preview-view ol ol,
 .contextual-typography .markdown-preview-view ol ul,
 .contextual-typography .markdown-preview-view ul ul {
