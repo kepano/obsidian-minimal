@@ -191,13 +191,13 @@ body .excalidraw {
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) - 12%)
+      calc(var(--base-l) - 14%)
     );
   --ui3:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) - 20%)
+      calc(var(--base-l) - 22%)
     );
   --tx1:
     hsl(
@@ -290,13 +290,13 @@ body .excalidraw {
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 8%)
+      calc(var(--base-l) + 12%)
     );
   --ui3:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 20%)
+      calc(var(--base-l) + 22%)
     );
   --tx1:
     hsl(
@@ -488,7 +488,7 @@ body .excalidraw {
 .excalidraw.theme--dark {
   --interactive-normal: var(--bg3);
   --interactive-accent-rgb:66, 66, 66;
-  --background-active-line:rgba(255,255,255,0.035);
+  --background-active-line:rgba(255,255,255,0.04);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.8);
   --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
   /* Errors */
@@ -515,6 +515,7 @@ body .excalidraw {
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
   --modal-border: var(--ui2);
+  --background-active-line:rgba(255,255,255,0.085);
   --background-modifier-form-field: var(--bg3);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
   --background-modifier-box-shadow:rgba(0, 0, 0, 1); }
@@ -601,7 +602,7 @@ body {
   --checkbox-icon:20px;
   --checkbox-radius:50%;
   --checkbox-top:3px;
-  --checkbox-left:0;
+  --checkbox-left:-1px;
   --checkbox-margin:0px 5px 0px -1.35em; }
 
 .checkbox-square {
@@ -609,7 +610,7 @@ body {
   --checkbox-icon:17px;
   --checkbox-radius:4px;
   --checkbox-top:1px;
-  --checkbox-left:1px;
+  --checkbox-left:0px;
   --checkbox-margin:0px 8px 0px -1.35em; }
 
 input[type=checkbox] {
@@ -652,7 +653,7 @@ body.minimal-strike-lists li[data-task="x"].task-list-item.is-checked {
   text-decoration: line-through solid var(--text-faint) 1px; }
 
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin: -2px 1px 0 -0.5em; }
+  margin: -2px 1px 0 -0.45em; }
 
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-left: -0.4em; }

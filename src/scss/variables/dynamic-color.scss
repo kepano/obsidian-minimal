@@ -71,14 +71,14 @@ body .excalidraw {
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) - 12%)
+      calc(var(--base-l) - 14%)
     );
 
   --ui3:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) - 20%)
+      calc(var(--base-l) - 22%)
     );
 
   --tx1:
@@ -188,14 +188,14 @@ body .excalidraw {
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 8%)
+      calc(var(--base-l) + 12%)
     );
 
   --ui3:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 20%)
+      calc(var(--base-l) + 22%)
     );
 
   --tx1:
