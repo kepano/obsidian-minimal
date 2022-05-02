@@ -8750,7 +8750,7 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
       0px 20px 40px rgba(0, 0, 0, 0.28) ; }
 
 .popover.hover-editor:not(.snap-to-viewport) {
-  --max-width:95%; }
+  --max-width:92%; }
   .popover.hover-editor:not(.snap-to-viewport) .markdown-preview-view,
   .popover.hover-editor:not(.snap-to-viewport) .markdown-source-view .cm-content {
     font-size: 90%; }
