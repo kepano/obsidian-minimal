@@ -830,7 +830,8 @@ body.is-dragging {
 .cm-editor .cm-lineNumbers .cm-gutterElement {
   font-variant-numeric: tabular-nums; }
 
-.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active {
+.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
+.cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
   color: var(--text-muted); }
 
 /* Live Preview folding */
