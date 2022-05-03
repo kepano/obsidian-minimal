@@ -18,12 +18,12 @@
 /* Live Preview */
 
 body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-line {
-  caret-color:transparent;
+  caret-color:var(--text-accent);
 }
 body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   width:0;
   border:none;
-  border-left:2px solid var(--text-accent);
+  border-right:2px solid var(--text-accent);
 }
 body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   margin-left:1px;
@@ -33,7 +33,6 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
 }
 
 /* Prompt */
-
 .fancy-cursor input.prompt-input {    
   caret-color: var(--text-accent);
 }
