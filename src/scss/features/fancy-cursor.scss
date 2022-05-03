@@ -23,7 +23,7 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-line {
 body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
   width:0;
   border:none;
-  border-right:1px solid var(--text-accent);
+  border-left:1px solid var(--text-accent);
 }
 body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
   margin-left:1px;
