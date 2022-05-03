@@ -892,6 +892,12 @@ settings:
         level: 2
         collapsed: true
     -
+        id: minimal-unstyled-tags
+        title: Turn off tag styling
+        description: Tags will render as normal links
+        type: class-toggle
+        default: false
+    -
         id: tag-radius
         title: Tag shape
         type: variable-select

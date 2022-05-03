@@ -3247,16 +3247,28 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
   font-weight: 400; }
 
 /* Tags */
-.frontmatter-container .tag,
-a.tag {
+body {
+  --tag-padding:1px 8px; }
+
+body.css-settings-manager.minimal-unstyled-tags {
+  --tag-padding:0;
+  --tag-bg:transparent;
+  --tag-border-width:0; }
+
+body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag,
+body:not(.minimal-unstyled-tags) .frontmatter-container .tag,
+body:not(.minimal-unstyled-tags) a.tag {
   background-color: var(--tag-bg);
   border: var(--tag-border-width) solid var(--background-modifier-border);
   color: var(--tag-color);
   font-size: var(--font-adaptive-small);
   font-family: var(--font-ui);
-  padding: 1px 8px 1px;
+  padding: var(--tag-padding);
   text-align: center;
-  text-decoration: none;
+  text-decoration: none; }
+
+.frontmatter-container .tag,
+a.tag {
   vertical-align: middle;
   display: inline-block;
   margin: 1px 0;
@@ -3267,14 +3279,7 @@ a.tag:hover {
   border-color: var(--background-modifier-border-hover);
   background-color: var(--tag-bg2); }
 
-.cm-s-obsidian span.cm-hashtag {
-  background-color: var(--tag-bg);
-  border: var(--tag-border-width) solid var(--background-modifier-border);
-  color: var(--tag-color);
-  font-size: var(--font-adaptive-small);
-  font-family: var(--font-ui);
-  text-align: center;
-  text-decoration: none;
+body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag {
   margin: 0;
   vertical-align: text-bottom;
   padding-top: 2px;
@@ -3286,14 +3291,14 @@ a.tag:hover {
 .cm-s-obsidian span.cm-hashtag:hover {
   background-color: var(--tag-bg2); }
 
-span.cm-hashtag.cm-hashtag-begin {
+body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-begin {
   border-top-left-radius: var(--tag-radius);
   border-bottom-left-radius: var(--tag-radius);
   padding-left: 8px;
   border-right: none;
   border-left: var(--tag-border-width) solid var(--background-modifier-border); }
 
-span.cm-hashtag.cm-hashtag-end {
+body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-end {
   border-top-right-radius: var(--tag-radius);
   border-bottom-right-radius: var(--tag-radius);
   border-left: none;
@@ -9286,6 +9291,10 @@ body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-l
   color: var(--text-normal); }
   body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover .menu-item-icon, body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected .menu-item-icon {
     color: var(--text-normal); }
+
+/* Obsidian Tabs plugin */
+.workspace-leaf-content[data-type="recent-files"] .view-content {
+  padding-top: 10px; }
 
 /* Sliding Panes aka Andy Mode plugin */
 body.plugin-sliding-panes-rotate-header {
