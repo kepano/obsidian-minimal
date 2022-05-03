@@ -3287,15 +3287,16 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
   font-weight: 400; }
 
 /* Tags */
-body {
-  --tag-padding:1px 8px; }
+body.minimal-unstyled-tags .frontmatter-container .tag,
+body.minimal-unstyled-tags a.tag,
+body.minimal-unstyled-tags .cm-s-obsidian span.cm-hashtag {
+  color: var(--tag-color);
+  text-decoration: none; }
+  body.minimal-unstyled-tags .frontmatter-container .tag:hover,
+  body.minimal-unstyled-tags a.tag:hover,
+  body.minimal-unstyled-tags .cm-s-obsidian span.cm-hashtag:hover {
+    color: var(--text-normal); }
 
-body.css-settings-manager.minimal-unstyled-tags {
-  --tag-padding:0;
-  --tag-bg:transparent;
-  --tag-border-width:0; }
-
-body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag,
 body:not(.minimal-unstyled-tags) .frontmatter-container .tag,
 body:not(.minimal-unstyled-tags) a.tag {
   background-color: var(--tag-bg);
@@ -3303,23 +3304,25 @@ body:not(.minimal-unstyled-tags) a.tag {
   color: var(--tag-color);
   font-size: var(--font-adaptive-small);
   font-family: var(--font-ui);
-  padding: var(--tag-padding);
+  padding: 1px 8px;
   text-align: center;
-  text-decoration: none; }
-
-.frontmatter-container .tag,
-a.tag {
+  text-decoration: none;
   vertical-align: middle;
   display: inline-block;
   margin: 1px 0;
   border-radius: var(--tag-radius); }
-
-a.tag:hover {
+body:not(.minimal-unstyled-tags) a.tag:hover {
   color: var(--text-normal);
   border-color: var(--background-modifier-border-hover);
   background-color: var(--tag-bg2); }
-
 body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag {
+  background-color: var(--tag-bg);
+  border: var(--tag-border-width) solid var(--background-modifier-border);
+  color: var(--tag-color);
+  font-size: var(--font-adaptive-small);
+  font-family: var(--font-ui);
+  text-align: center;
+  text-decoration: none;
   margin: 0;
   vertical-align: text-bottom;
   padding-top: 2px;
@@ -3327,17 +3330,14 @@ body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag {
   border-right: none;
   padding-bottom: 3px;
   cursor: text; }
-
-.cm-s-obsidian span.cm-hashtag:hover {
+body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag:hover {
   background-color: var(--tag-bg2); }
-
 body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-begin {
   border-top-left-radius: var(--tag-radius);
   border-bottom-left-radius: var(--tag-radius);
   padding-left: 8px;
   border-right: none;
   border-left: var(--tag-border-width) solid var(--background-modifier-border); }
-
 body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-end {
   border-top-right-radius: var(--tag-radius);
   border-bottom-right-radius: var(--tag-radius);
@@ -6308,6 +6308,124 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 
 .workspace > .workspace-split:not(.mod-root) .CodeMirror-sizer {
   padding-left: 10px; }
+
+/* Underline */
+.tab-style-2 .workspace-tab-header-container .workspace-tab-header {
+  flex-grow: 1;
+  height: var(--header-height); }
+
+.tab-style-2 .workspace-tab-container-inner {
+  padding: 0; }
+
+.tab-style-2 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--background-divider);
+  border-radius: 0;
+  transition: none; }
+
+.tab-style-2 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover {
+  background-color: var(--bg3); }
+
+.tab-style-2 .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  border-bottom: 2px solid var(--ax3);
+  padding-top: 1px;
+  color: var(--ax3); }
+
+.tab-style-2 .workspace-tab-header-inner-icon:hover {
+  background-color: transparent; }
+
+/* Wide */
+.tab-style-3 .workspace-sidedock-empty-state + .workspace-tabs .workspace-tab-header-container,
+.tab-style-3 .mod-right-split .workspace-sidedock-empty-state + .workspace-tabs .workspace-tab-header-container {
+  border-bottom: none; }
+
+.tab-style-3 .workspace-tab-header-container {
+  padding-left: 7px;
+  padding-right: 7px;
+  border: none; }
+
+.tab-style-3 .workspace-tab-header-container .workspace-tab-header {
+  flex-grow: 1; }
+
+.tab-style-3 .workspace-tab-container-inner {
+  padding: 3px;
+  background: var(--bg3);
+  border-radius: 6px; }
+
+.tab-style-3 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+  justify-content: center;
+  align-items: center;
+  transition: none;
+  border: 1px solid transparent; }
+
+.tab-style-3 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover {
+  background-color: transparent; }
+
+.tab-style-3:not(.minimal-dark-tonal) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background: var(--bg2); }
+
+.tab-style-3 .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background: var(--bg1);
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px; }
+
+.tab-style-3 .workspace-tab-header-inner-icon {
+  height: 18px;
+  padding: 0; }
+
+.tab-style-3 .workspace-tab-header-inner-icon:hover {
+  background-color: transparent; }
+
+/* Index */
+.tab-style-4 .workspace-sidedock-empty-state + .workspace-tabs .workspace-tab-header-container {
+  border: none; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header {
+  flex-grow: 1;
+  height: var(--header-height); }
+
+.tab-style-4 .workspace-tab-container-inner {
+  background-color: var(--background-secondary);
+  padding: 0; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+  justify-content: center;
+  align-items: center;
+  border-bottom: none;
+  border-radius: 0;
+  transition: none;
+  border-top: 1px solid transparent; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header {
+  border-bottom: 1px solid var(--background-modifier-border);
+  opacity: 1; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner-icon {
+  opacity: var(--icon-muted); }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  opacity: 1; }
+
+.tab-style-4.hider-frameless:not(.labeled-nav) .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  border-top: 1px solid var(--background-modifier-border); }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header.is-active {
+  border-bottom: 1px solid transparent; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header.is-active {
+  background-color: var(--background-primary);
+  border-radius: 0; }
+
+.tab-style-4 .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active {
+  background-color: var(--background-secondary); }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  box-shadow: 1px 0 var(--background-modifier-border), -1px 0 var(--background-modifier-border);
+  border-bottom: none; }
+
+.tab-style-4 .workspace-tab-header-inner-icon:hover {
+  background-color: transparent; }
 
 /* Translucent sidebars */
 :root {
@@ -10242,7 +10360,7 @@ settings:
         default-dark: '#'
     -
         id: extended-palette
-        title: Extended palette
+        title: Interface extended palette
         type: heading
         level: 2
         collapsed: true
@@ -10312,103 +10430,6 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
-        id: icons
-        title: Icons
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: icon-muted
-        title: Icon opacity (inactive)
-        type: variable-number-slider
-        default: 0.5
-        min: 0.25
-        max: 1
-        step: 0.05
-    - 
-        id: icon-color
-        title: Icon color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: icon-color-hover
-        title: Icon color (hover)
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: icon-color-active
-        title: Icon color (active)
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: titlebar
-        title: Title bar
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: title-alignment
-        title: Title alignment
-        type: class-select
-        allowEmpty: false
-        default: title-align-body
-        options:
-            - 
-                label: Text body
-                value: title-align-body
-            - 
-                label: Left
-                value: title-align-left
-            -
-                label: Center
-                value: title-align-center
-    -
-        id: show-grabber
-        title: Always show grabber icon
-        description: Dragging handle is always visible
-        type: class-toggle
-        default: false
-    - 
-        id: header-height
-        title: Title bar height
-        type: variable-text
-        default: 42px
-    - 
-        id: title-size
-        title: Title font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.1em
-    - 
-        id: title-weight
-        title: Title font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 600
-    - 
-        id: title-color
-        title: Title font color (active)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: title-color-inactive
-        title: Title font color (inactive)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
         id: active-line
         title: Active line
         type: heading
@@ -10430,97 +10451,111 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
-        id: links
-        title: Links
+        id: blockquotes
+        title: Blockquotes
         type: heading
         level: 2
         collapsed: true
     - 
-        id: ax1
-        title: Link color
+        id: text-blockquote
+        title: Blockquotes text color
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: ax2
-        title: Link color (hovering)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
+        id: blockquote-size
+        title: Blockquotes font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: ''
     - 
-        id: link-weight
-        title: Link font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 400
+        id: blockquote-style
+        title: Blockquotes font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
     -
-        id: text
-        title: Text
+        id: code-blocks
+        title: Code blocks
         type: heading
         level: 2
         collapsed: true
     - 
-        id: tx1
-        title: Normal text color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: hl1
-        title: Selected text background
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: hl2
-        title: Highlighted text background
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: tx2
-        title: Muted text color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: tx3
-        title: Faint text color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: text-italic
-        title: Italic text color
+        id: text-code
+        title: Code text color
+        description: Where syntax highlighting is not present
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: text-bold
-        title: Bold text color
+        id: font-code
+        title: Code font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 13px
+    -
+        id: embed-blocks
+        title: Embeds and transclusions
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: embed-strict
+        title: Use strict embed style globally
+        description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
+        type: class-toggle
+        default: false
+    -
+        id: graphs
+        title: Graphs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: node
+        title: Node color
+        description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
-    - 
-        id: bold-weight
-        title: Bold text weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 600
+    -
+        id: node-focused
+        title: Active node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-tag
+        title: Tag node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-attachment
+        title: Attachment node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-unresolved
+        title: Unresolved node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
         id: headings
         title: Headings
@@ -10888,37 +10923,69 @@ settings:
         description: Adds a border below the heading
         default: false
     -
-        id: blockquotes
-        title: Blockquotes
+        id: icons
+        title: Icons
         type: heading
         level: 2
         collapsed: true
     - 
-        id: text-blockquote
-        title: Blockquotes text color
+        id: icon-muted
+        title: Icon opacity (inactive)
+        type: variable-number-slider
+        default: 0.5
+        min: 0.25
+        max: 1
+        step: 0.05
+    - 
+        id: icon-color
+        title: Icon color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: icon-color-hover
+        title: Icon color (hover)
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: icon-color-active
+        title: Icon color (active)
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: links
+        title: Links
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: ax1
+        title: Link color
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: blockquote-size
-        title: Blockquotes font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: ''
+        id: ax2
+        title: Link color (hovering)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     - 
-        id: blockquote-style
-        title: Blockquotes font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Italic
-                value: italic
+        id: link-weight
+        title: Link font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 400
     -
         id: lists
         title: Lists and checkboxes
@@ -10972,79 +11039,49 @@ settings:
         step: 0.1
         format: em
     -
-        id: embed-blocks
-        title: Embeds and transclusions
+        id: sidebars
+        title: Sidebars
         type: heading
         level: 2
         collapsed: true
+    - 
+        id: tab-style
+        title: Tab style
+        type: class-select
+        allowEmpty: false
+        default: tab-style-1
+        options:
+            - 
+                label: Compact
+                value: tab-style-1
+            -
+                label: Pill
+                value: tab-style-3
+            - 
+                label: Underlined
+                value: tab-style-2
+            - 
+                label: Index
+                value: tab-style-4
     -
-        id: embed-strict
-        title: Use strict embed style globally
-        description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
+        id: sidebar-lines-off
+        title: Disable sidebar relationship lines
+        description: Turns off lines in file navigation
         type: class-toggle
-        default: false
-    -
-        id: code-blocks
-        title: Code blocks
-        type: heading
-        level: 2
-        collapsed: true
     - 
-        id: text-code
-        title: Code text color
-        description: Where syntax highlighting is not present
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
+        id: mobile-left-sidebar-width
+        title: Mobile left sidebar width
+        description: Maximum width for pinned left sidebar on mobile
+        type: variable-number
+        default: 280
+        format: pt
     - 
-        id: font-code
-        title: Code font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 13px
-    -
-        id: graphs
-        title: Graphs
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: node
-        title: Node color
-        description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: node-focused
-        title: Active node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -   
-        id: node-tag
-        title: Tag node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -   
-        id: node-attachment
-        title: Attachment node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -   
-        id: node-unresolved
-        title: Unresolved node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
+        id: mobile-right-sidebar-width
+        title: Mobile right sidebar width
+        description: Maximum width for pinned right sidebar on mobile
+        type: variable-number
+        default: 240
+        format: pt
     -
         id: tags
         title: Tags
@@ -11053,8 +11090,8 @@ settings:
         collapsed: true
     -
         id: minimal-unstyled-tags
-        title: Turn off tag styling
-        description: Tags will render as normal links
+        title: Plain tags
+        description: Tags will render as normal text, overrides settings below
         type: class-toggle
         default: false
     -
@@ -11108,6 +11145,131 @@ settings:
         title: Tag background color (hover)
         type: variable-themed-color
         opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: text
+        title: Text
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: tx1
+        title: Normal text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: hl1
+        title: Selected text background
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: hl2
+        title: Highlighted text background
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tx2
+        title: Muted text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tx3
+        title: Faint text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: text-italic
+        title: Italic text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: text-bold
+        title: Bold text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: bold-weight
+        title: Bold text weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    -
+        id: titlebar
+        title: Title bar
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: title-alignment
+        title: Title alignment
+        type: class-select
+        allowEmpty: false
+        default: title-align-body
+        options:
+            - 
+                label: Text body
+                value: title-align-body
+            - 
+                label: Left
+                value: title-align-left
+            -
+                label: Center
+                value: title-align-center
+    -
+        id: show-grabber
+        title: Always show grabber icon
+        description: Dragging handle is always visible
+        type: class-toggle
+        default: false
+    - 
+        id: header-height
+        title: Title bar height
+        type: variable-text
+        default: 42px
+    - 
+        id: title-size
+        title: Title font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.1em
+    - 
+        id: title-weight
+        title: Title font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    - 
+        id: title-color
+        title: Title font color (active)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: title-color-inactive
+        title: Title font color (inactive)
+        type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -11193,11 +11355,6 @@ settings:
         description: Turns off click/hold to zoom images
         type: class-toggle
     -
-        id: sidebar-lines-off
-        title: Disable sidebar relationship lines
-        description: Turns off lines in file navigation
-        type: class-toggle
-    -
         id: cursor
         title: Cursor style
         description: The cursor style for UI elements
@@ -11227,18 +11384,5 @@ settings:
         type: variable-number
         default: 10
         format: px
-    - 
-        id: mobile-left-sidebar-width
-        title: Mobile left sidebar width
-        description: Maximum width for pinned left sidebar on mobile
-        type: variable-number
-        default: 280
-        format: pt
-    - 
-        id: mobile-right-sidebar-width
-        title: Mobile right sidebar width
-        description: Maximum width for pinned right sidebar on mobile
-        type: variable-number
-        default: 240
-        format: pt
+
 */

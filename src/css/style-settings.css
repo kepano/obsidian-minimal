@@ -82,7 +82,7 @@ settings:
         default-dark: '#'
     -
         id: extended-palette
-        title: Extended palette
+        title: Interface extended palette
         type: heading
         level: 2
         collapsed: true
@@ -152,103 +152,6 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
-        id: icons
-        title: Icons
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: icon-muted
-        title: Icon opacity (inactive)
-        type: variable-number-slider
-        default: 0.5
-        min: 0.25
-        max: 1
-        step: 0.05
-    - 
-        id: icon-color
-        title: Icon color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: icon-color-hover
-        title: Icon color (hover)
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: icon-color-active
-        title: Icon color (active)
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: titlebar
-        title: Title bar
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: title-alignment
-        title: Title alignment
-        type: class-select
-        allowEmpty: false
-        default: title-align-body
-        options:
-            - 
-                label: Text body
-                value: title-align-body
-            - 
-                label: Left
-                value: title-align-left
-            -
-                label: Center
-                value: title-align-center
-    -
-        id: show-grabber
-        title: Always show grabber icon
-        description: Dragging handle is always visible
-        type: class-toggle
-        default: false
-    - 
-        id: header-height
-        title: Title bar height
-        type: variable-text
-        default: 42px
-    - 
-        id: title-size
-        title: Title font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.1em
-    - 
-        id: title-weight
-        title: Title font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 600
-    - 
-        id: title-color
-        title: Title font color (active)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: title-color-inactive
-        title: Title font color (inactive)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
         id: active-line
         title: Active line
         type: heading
@@ -270,97 +173,111 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
-        id: links
-        title: Links
+        id: blockquotes
+        title: Blockquotes
         type: heading
         level: 2
         collapsed: true
     - 
-        id: ax1
-        title: Link color
+        id: text-blockquote
+        title: Blockquotes text color
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: ax2
-        title: Link color (hovering)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
+        id: blockquote-size
+        title: Blockquotes font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: ''
     - 
-        id: link-weight
-        title: Link font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 400
+        id: blockquote-style
+        title: Blockquotes font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
     -
-        id: text
-        title: Text
+        id: code-blocks
+        title: Code blocks
         type: heading
         level: 2
         collapsed: true
     - 
-        id: tx1
-        title: Normal text color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: hl1
-        title: Selected text background
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: hl2
-        title: Highlighted text background
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: tx2
-        title: Muted text color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: tx3
-        title: Faint text color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: text-italic
-        title: Italic text color
+        id: text-code
+        title: Code text color
+        description: Where syntax highlighting is not present
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: text-bold
-        title: Bold text color
+        id: font-code
+        title: Code font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 13px
+    -
+        id: embed-blocks
+        title: Embeds and transclusions
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: embed-strict
+        title: Use strict embed style globally
+        description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
+        type: class-toggle
+        default: false
+    -
+        id: graphs
+        title: Graphs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: node
+        title: Node color
+        description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
-    - 
-        id: bold-weight
-        title: Bold text weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 600
+    -
+        id: node-focused
+        title: Active node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-tag
+        title: Tag node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-attachment
+        title: Attachment node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-unresolved
+        title: Unresolved node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
         id: headings
         title: Headings
@@ -728,37 +645,69 @@ settings:
         description: Adds a border below the heading
         default: false
     -
-        id: blockquotes
-        title: Blockquotes
+        id: icons
+        title: Icons
         type: heading
         level: 2
         collapsed: true
     - 
-        id: text-blockquote
-        title: Blockquotes text color
+        id: icon-muted
+        title: Icon opacity (inactive)
+        type: variable-number-slider
+        default: 0.5
+        min: 0.25
+        max: 1
+        step: 0.05
+    - 
+        id: icon-color
+        title: Icon color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: icon-color-hover
+        title: Icon color (hover)
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: icon-color-active
+        title: Icon color (active)
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: links
+        title: Links
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: ax1
+        title: Link color
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: blockquote-size
-        title: Blockquotes font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: ''
+        id: ax2
+        title: Link color (hovering)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     - 
-        id: blockquote-style
-        title: Blockquotes font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Italic
-                value: italic
+        id: link-weight
+        title: Link font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 400
     -
         id: lists
         title: Lists and checkboxes
@@ -812,79 +761,49 @@ settings:
         step: 0.1
         format: em
     -
-        id: embed-blocks
-        title: Embeds and transclusions
+        id: sidebars
+        title: Sidebars
         type: heading
         level: 2
         collapsed: true
+    - 
+        id: tab-style
+        title: Tab style
+        type: class-select
+        allowEmpty: false
+        default: tab-style-1
+        options:
+            - 
+                label: Compact
+                value: tab-style-1
+            -
+                label: Pill
+                value: tab-style-3
+            - 
+                label: Underlined
+                value: tab-style-2
+            - 
+                label: Index
+                value: tab-style-4
     -
-        id: embed-strict
-        title: Use strict embed style globally
-        description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
+        id: sidebar-lines-off
+        title: Disable sidebar relationship lines
+        description: Turns off lines in file navigation
         type: class-toggle
-        default: false
-    -
-        id: code-blocks
-        title: Code blocks
-        type: heading
-        level: 2
-        collapsed: true
     - 
-        id: text-code
-        title: Code text color
-        description: Where syntax highlighting is not present
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
+        id: mobile-left-sidebar-width
+        title: Mobile left sidebar width
+        description: Maximum width for pinned left sidebar on mobile
+        type: variable-number
+        default: 280
+        format: pt
     - 
-        id: font-code
-        title: Code font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 13px
-    -
-        id: graphs
-        title: Graphs
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: node
-        title: Node color
-        description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: node-focused
-        title: Active node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -   
-        id: node-tag
-        title: Tag node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -   
-        id: node-attachment
-        title: Attachment node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -   
-        id: node-unresolved
-        title: Unresolved node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
+        id: mobile-right-sidebar-width
+        title: Mobile right sidebar width
+        description: Maximum width for pinned right sidebar on mobile
+        type: variable-number
+        default: 240
+        format: pt
     -
         id: tags
         title: Tags
@@ -893,8 +812,8 @@ settings:
         collapsed: true
     -
         id: minimal-unstyled-tags
-        title: Turn off tag styling
-        description: Tags will render as normal links
+        title: Plain tags
+        description: Tags will render as normal text, overrides settings below
         type: class-toggle
         default: false
     -
@@ -948,6 +867,131 @@ settings:
         title: Tag background color (hover)
         type: variable-themed-color
         opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: text
+        title: Text
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: tx1
+        title: Normal text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: hl1
+        title: Selected text background
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: hl2
+        title: Highlighted text background
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tx2
+        title: Muted text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tx3
+        title: Faint text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: text-italic
+        title: Italic text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: text-bold
+        title: Bold text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: bold-weight
+        title: Bold text weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    -
+        id: titlebar
+        title: Title bar
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: title-alignment
+        title: Title alignment
+        type: class-select
+        allowEmpty: false
+        default: title-align-body
+        options:
+            - 
+                label: Text body
+                value: title-align-body
+            - 
+                label: Left
+                value: title-align-left
+            -
+                label: Center
+                value: title-align-center
+    -
+        id: show-grabber
+        title: Always show grabber icon
+        description: Dragging handle is always visible
+        type: class-toggle
+        default: false
+    - 
+        id: header-height
+        title: Title bar height
+        type: variable-text
+        default: 42px
+    - 
+        id: title-size
+        title: Title font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.1em
+    - 
+        id: title-weight
+        title: Title font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    - 
+        id: title-color
+        title: Title font color (active)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: title-color-inactive
+        title: Title font color (inactive)
+        type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -1033,11 +1077,6 @@ settings:
         description: Turns off click/hold to zoom images
         type: class-toggle
     -
-        id: sidebar-lines-off
-        title: Disable sidebar relationship lines
-        description: Turns off lines in file navigation
-        type: class-toggle
-    -
         id: cursor
         title: Cursor style
         description: The cursor style for UI elements
@@ -1067,18 +1106,5 @@ settings:
         type: variable-number
         default: 10
         format: px
-    - 
-        id: mobile-left-sidebar-width
-        title: Mobile left sidebar width
-        description: Maximum width for pinned left sidebar on mobile
-        type: variable-number
-        default: 280
-        format: pt
-    - 
-        id: mobile-right-sidebar-width
-        title: Mobile right sidebar width
-        description: Maximum width for pinned right sidebar on mobile
-        type: variable-number
-        default: 240
-        format: pt
+
 */
