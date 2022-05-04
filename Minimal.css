@@ -828,7 +828,7 @@ body.is-dragging {
   padding-right: 0; }
 
 /* Gutters */
-.markdown-source-view.mod-cm6 .cm-gutters {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters {
   position: absolute !important;
   z-index: 0; }
 
@@ -1189,6 +1189,7 @@ h1,
   font-variant: var(--h1-variant);
   letter-spacing: -0.01em;
   line-height: 1.3;
+  font-family: var(--h1-font);
   font-size: var(--h1);
   color: var(--h1-color);
   font-weight: var(--h1-weight);
@@ -1200,6 +1201,7 @@ h1,
   font-variant: var(--h2-variant);
   letter-spacing: -0.02em;
   line-height: 1.3;
+  font-family: var(--h2-font);
   font-size: var(--h2);
   color: var(--h2-color);
   font-weight: var(--h2-weight);
@@ -1211,6 +1213,7 @@ h1,
   font-variant: var(--h3-variant);
   letter-spacing: -0em;
   line-height: 1.4;
+  font-family: var(--h3-font);
   font-size: var(--h3);
   color: var(--h3-color);
   font-weight: var(--h3-weight);
@@ -1221,6 +1224,7 @@ h1,
 .cm-s-obsidian .cm-header-4 {
   font-variant: var(--h4-variant);
   letter-spacing: 0.02em;
+  font-family: var(--h4-font);
   font-size: var(--h4);
   color: var(--h4-color);
   font-weight: var(--h4-weight);
@@ -1231,6 +1235,7 @@ h1,
 .cm-s-obsidian .cm-header-5 {
   font-variant: var(--h5-variant);
   letter-spacing: 0.02em;
+  font-family: var(--h5-font);
   font-size: var(--h5);
   color: var(--h5-color);
   font-weight: var(--h5-weight);
@@ -1241,6 +1246,7 @@ h1,
 .cm-s-obsidian .cm-header-6 {
   font-variant: var(--h6-variant);
   letter-spacing: 0.02em;
+  font-family: var(--h6-font);
   font-size: var(--h6);
   color: var(--h6-color);
   font-weight: var(--h6-weight);
@@ -10569,6 +10575,12 @@ settings:
         level: 3
         collapsed: true
     - 
+        id: h1-font
+        title: H1 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
         id: h1
         title: H1 font size
         description: Accepts any CSS font-size value
@@ -10628,6 +10640,12 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        id: h2-font
+        title: H2 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
     - 
         id: h2
         title: H2 font size
@@ -10689,6 +10707,12 @@ settings:
         level: 3
         collapsed: true
     - 
+        id: h3-font
+        title: H3 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
         id: h3
         title: H3 font size
         description: Accepts any CSS font-size value
@@ -10749,6 +10773,12 @@ settings:
         level: 3
         collapsed: true
     - 
+        id: h4-font
+        title: H4 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
         id: h4
         title: H4 font size
         description: Accepts any CSS font-size value
@@ -10808,6 +10838,12 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        id: h5-font
+        title: H5 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
     -  
         id: h5
         title: H5 font size
@@ -10868,6 +10904,12 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        id: h6-font
+        title: H6 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
     - 
         id: h6
         title: H6 font size

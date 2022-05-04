@@ -291,6 +291,12 @@ settings:
         level: 3
         collapsed: true
     - 
+        id: h1-font
+        title: H1 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
         id: h1
         title: H1 font size
         description: Accepts any CSS font-size value
@@ -350,6 +356,12 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        id: h2-font
+        title: H2 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
     - 
         id: h2
         title: H2 font size
@@ -411,6 +423,12 @@ settings:
         level: 3
         collapsed: true
     - 
+        id: h3-font
+        title: H3 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
         id: h3
         title: H3 font size
         description: Accepts any CSS font-size value
@@ -471,6 +489,12 @@ settings:
         level: 3
         collapsed: true
     - 
+        id: h4-font
+        title: H4 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
         id: h4
         title: H4 font size
         description: Accepts any CSS font-size value
@@ -530,6 +554,12 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        id: h5-font
+        title: H5 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
     -  
         id: h5
         title: H5 font size
@@ -590,6 +620,12 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        id: h6-font
+        title: H6 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
     - 
         id: h6
         title: H6 font size
