@@ -62,6 +62,9 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 }
 
 /* Folding icons in Edit mode */
+.markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+  padding-left:0;
+}
 
 .CodeMirror-foldgutter-folded,
 .CodeMirror-foldgutter-open {

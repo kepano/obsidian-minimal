@@ -50,6 +50,12 @@ button.copy-code-button:hover {
   text-shadow:none;
 }
 
+.markdown-source-view.mod-cm6 .code-block-flair {
+  font-size:var(--font-smaller);
+  padding:5px 0;
+  color:var(--text-muted);
+}
+
 .cm-s-obsidian .hmd-fold-html-stub,
 .cm-s-obsidian .hmd-fold-code-stub,
 .cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code,

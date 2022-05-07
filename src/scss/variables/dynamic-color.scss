@@ -181,14 +181,14 @@ body .excalidraw {
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 5%)
+      calc(var(--base-l) + 6%)
     );
 
   --ui2:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 8%)
+      calc(var(--base-l) + 12%)
     );
 
   --ui3:

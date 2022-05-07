@@ -53,6 +53,7 @@
 @import 'components/toggles';
 
 /* Minimal features */
+@import 'features/active-line';
 @import 'features/borders';
 @import 'features/cards';
 @import 'features/checklist-icons';
@@ -75,6 +76,7 @@
 @import 'features/relationship-lines';
 @import 'features/scroll-indicator';
 @import 'features/sidebar-notes';
+@import 'features/tab-styles';
 @import 'features/translucent';
 @import 'features/trim-file-names';
 @import 'features/underline-headings';
@@ -111,12 +113,14 @@
 @import 'plugins/hover-editor';
 @import 'plugins/indentation-guides';
 @import 'plugins/kanban';
+@import 'plugins/lapel';
 @import 'plugins/leaflet';
 @import 'plugins/map-view';
 @import 'plugins/metatable';
 @import 'plugins/outliner';
 @import 'plugins/quickadd';
 @import 'plugins/quick-explorer';
+@import 'plugins/recent';
 @import 'plugins/sliding-panes';
 @import 'plugins/sortable';
 @import 'plugins/style-settings';

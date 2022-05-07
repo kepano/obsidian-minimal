@@ -93,58 +93,70 @@ em,
 }
 h1,
 .empty-state-title,
+.markdown-rendered h1,
 .markdown-preview-view h1,
 .cm-s-obsidian .cm-header-1 {
   font-variant:var(--h1-variant);
   letter-spacing:-0.01em;
   line-height:1.3;
+  font-family:var(--h1-font);
   font-size:var(--h1);
   color:var(--h1-color);
   font-weight:var(--h1-weight);
   font-style:var(--h1-style);
 }
+.markdown-rendered h2,
 .markdown-preview-view h2,
 .cm-s-obsidian .cm-header-2 {
   font-variant:var(--h2-variant);
   letter-spacing:-0.02em;
   line-height:1.3;
+  font-family:var(--h2-font);
   font-size:var(--h2);
   color:var(--h2-color);
   font-weight:var(--h2-weight);
   font-style:var(--h2-style);
 }
+.markdown-rendered h3,
 .markdown-preview-view h3,
 .cm-s-obsidian .cm-header-3 {
   font-variant:var(--h3-variant);
   letter-spacing:-0em;
   line-height:1.4;
+  font-family:var(--h3-font);
   font-size:var(--h3);
   color:var(--h3-color);
   font-weight:var(--h3-weight);
   font-style:var(--h3-style);
 }
+.markdown-rendered h4,
 .markdown-preview-view h4,
 .cm-s-obsidian .cm-header-4 {
   font-variant:var(--h4-variant);
   letter-spacing:0.02em;
+  font-family:var(--h4-font);
   font-size:var(--h4);
   color:var(--h4-color);
   font-weight:var(--h4-weight);
   font-style:var(--h4-style);
 }
+.markdown-rendered h5,
 .markdown-preview-view h5,
 .cm-s-obsidian .cm-header-5 {
   font-variant:var(--h5-variant);
   letter-spacing:0.02em;
+  font-family:var(--h5-font);
   font-size:var(--h5);
   color:var(--h5-color);
   font-weight:var(--h5-weight);
   font-style:var(--h5-style);
 }
+.markdown-rendered h6,
 .markdown-preview-view h6,
 .cm-s-obsidian .cm-header-6 {
   font-variant:var(--h6-variant);
   letter-spacing:0.02em;
+  font-family:var(--h6-font);
   font-size:var(--h6);
   color:var(--h6-color);
   font-weight:var(--h6-weight);

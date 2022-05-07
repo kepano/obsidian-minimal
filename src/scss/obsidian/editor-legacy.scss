@@ -44,10 +44,7 @@
 .internal-embed .markdown-preview-section {
   max-width:100%;
 }
-.cm-s-obsidian .HyperMD-header,
-.cm-s-obsidian pre.HyperMD-header {
-  padding-left:0 !important;
-}
+
 .CodeMirror-linenumber {
   font-size:var(--font-adaptive-small) !important;
   font-feature-settings:'tnum';

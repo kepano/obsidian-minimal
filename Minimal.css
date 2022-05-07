@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
 
-Minimal Obsidian 5.1.12 by @kepano
+Minimal Obsidian 5.2.0 by @kepano
 
 User interface replacement for Obsidian.
 
@@ -101,7 +101,6 @@ body {
   --icon-size:18px;
   --border-width:1px;
   --border-width-alt:1px;
-  --folding-offset:16px;
   --nested-padding:30px;
   /* Quotes and transclusions */
   --list-indent:2em;
@@ -284,13 +283,13 @@ body .excalidraw {
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 5%)
+      calc(var(--base-l) + 6%)
     );
   --ui2:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 8%)
+      calc(var(--base-l) + 12%)
     );
   --ui3:
     hsl(
@@ -474,6 +473,7 @@ body .excalidraw {
 body .excalidraw {
   --interactive-normal: var(--bg1);
   --interactive-accent-rgb:220, 220, 220;
+  --background-active-line:rgba(0,0,0,0.035);
   --background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 50%),calc(var(--base-l) - 7%),0.7);
   --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
   /* Errors */
@@ -487,6 +487,7 @@ body .excalidraw {
 .excalidraw.theme--dark {
   --interactive-normal: var(--bg3);
   --interactive-accent-rgb:66, 66, 66;
+  --background-active-line:rgba(255,255,255,0.04);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.8);
   --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
   /* Errors */
@@ -513,6 +514,7 @@ body .excalidraw {
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
   --modal-border: var(--ui2);
+  --background-active-line:rgba(255,255,255,0.085);
   --background-modifier-form-field: var(--bg3);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
   --background-modifier-box-shadow:rgba(0, 0, 0, 1); }
@@ -599,7 +601,7 @@ body {
   --checkbox-icon:20px;
   --checkbox-radius:50%;
   --checkbox-top:3px;
-  --checkbox-left:0;
+  --checkbox-left:-1px;
   --checkbox-margin:0px 5px 0px -1.35em; }
 
 .checkbox-square {
@@ -607,7 +609,7 @@ body {
   --checkbox-icon:17px;
   --checkbox-radius:4px;
   --checkbox-top:1px;
-  --checkbox-left:1px;
+  --checkbox-left:0px;
   --checkbox-margin:0px 8px 0px -1.35em; }
 
 input[type=checkbox] {
@@ -650,7 +652,7 @@ body.minimal-strike-lists li[data-task="x"].task-list-item.is-checked {
   text-decoration: line-through solid var(--text-faint) 1px; }
 
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin: -2px 1px 0 -0.5em; }
+  margin: -2px 1px 0 -0.45em; }
 
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-left: -0.4em; }
@@ -728,6 +730,11 @@ button.copy-code-button:hover {
 .theme-light code[class*="language-"],
 .theme-light pre[class*="language-"] {
   text-shadow: none; }
+
+.markdown-source-view.mod-cm6 .code-block-flair {
+  font-size: var(--font-smaller);
+  padding: 5px 0;
+  color: var(--text-muted); }
 
 .cm-s-obsidian .hmd-fold-html-stub,
 .cm-s-obsidian .hmd-fold-code-stub,
@@ -816,24 +823,44 @@ body.is-dragging {
 
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top: 15px;
-  padding-left: calc((100% - var(--max-width)) / 2);
-  padding-right: calc((100% - var(--max-width)) / 2); }
+  padding-left: 0;
+  padding-right: 0; }
+
+/* Gutters */
+body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters {
+  position: absolute !important;
+  z-index: 0; }
+
+.cm-editor .cm-lineNumbers .cm-gutterElement {
+  min-width: 25px; }
 
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
   cursor: var(--cursor);
-  color: var(--text-muted);
-  background-color: transparent;
+  color: var(--text-faint);
+  background-color: var(--background-primary);
   top: 0;
-  right: 0;
+  right: auto;
+  left: 5px;
+  opacity: 0;
   transition: opacity 200ms;
   padding: 4px; }
 
+/* if line numbers are on
+.markdown-source-view.mod-cm6 .edit-block-button {
+  left:30px;
+}
+ */
+.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
+  width: 26px !important;
+  padding-left: 4px !important; }
+
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
-  background-color: var(--background-tertiary); }
+  background-color: var(--background-primary);
+  color: var(--text-muted); }
 
 .markdown-source-view.mod-cm6 .edit-block-button svg {
-  opacity: 0.5;
+  opacity: 1;
   width: var(--icon-size);
   height: var(--icon-size); }
 
@@ -851,6 +878,10 @@ body.is-dragging {
 /* Line numbers */
 .cm-editor .cm-lineNumbers .cm-gutterElement {
   font-variant-numeric: tabular-nums; }
+
+.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
+.cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
+  color: var(--text-muted); }
 
 /* Live Preview folding */
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
@@ -893,17 +924,18 @@ ul > li.is-collapsed::marker,
   opacity: 1; }
 
 /* Live Preview text selection */
-.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock) .cm-selection {
-  background-color: transparent; }
-
+.markdown-source-view.mod-cm6 .cm-line .cm-selection,
 .markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
   background-color: var(--text-selection); }
 
+.cm-selectionBackground {
+  background-color: transparent !important; }
+
 body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
-  max-width: var(--line-width-adaptive); }
+  max-width: 100%; }
 
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer {
-  max-width: var(--line-width-adaptive); }
+  max-width: 100%; }
 
 /* Editor mode (Legacy) */
 .theme-light .token.operator,
@@ -948,10 +980,6 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
 .markdown-embed-title,
 .internal-embed .markdown-preview-section {
   max-width: 100%; }
-
-.cm-s-obsidian .HyperMD-header,
-.cm-s-obsidian pre.HyperMD-header {
-  padding-left: 0 !important; }
 
 .CodeMirror-linenumber {
   font-size: var(--font-adaptive-small) !important;
@@ -1151,58 +1179,70 @@ em,
 
 h1,
 .empty-state-title,
+.markdown-rendered h1,
 .markdown-preview-view h1,
 .cm-s-obsidian .cm-header-1 {
   font-variant: var(--h1-variant);
   letter-spacing: -0.01em;
   line-height: 1.3;
+  font-family: var(--h1-font);
   font-size: var(--h1);
   color: var(--h1-color);
   font-weight: var(--h1-weight);
   font-style: var(--h1-style); }
 
+.markdown-rendered h2,
 .markdown-preview-view h2,
 .cm-s-obsidian .cm-header-2 {
   font-variant: var(--h2-variant);
   letter-spacing: -0.02em;
   line-height: 1.3;
+  font-family: var(--h2-font);
   font-size: var(--h2);
   color: var(--h2-color);
   font-weight: var(--h2-weight);
   font-style: var(--h2-style); }
 
+.markdown-rendered h3,
 .markdown-preview-view h3,
 .cm-s-obsidian .cm-header-3 {
   font-variant: var(--h3-variant);
   letter-spacing: -0em;
   line-height: 1.4;
+  font-family: var(--h3-font);
   font-size: var(--h3);
   color: var(--h3-color);
   font-weight: var(--h3-weight);
   font-style: var(--h3-style); }
 
+.markdown-rendered h4,
 .markdown-preview-view h4,
 .cm-s-obsidian .cm-header-4 {
   font-variant: var(--h4-variant);
   letter-spacing: 0.02em;
+  font-family: var(--h4-font);
   font-size: var(--h4);
   color: var(--h4-color);
   font-weight: var(--h4-weight);
   font-style: var(--h4-style); }
 
+.markdown-rendered h5,
 .markdown-preview-view h5,
 .cm-s-obsidian .cm-header-5 {
   font-variant: var(--h5-variant);
   letter-spacing: 0.02em;
+  font-family: var(--h5-font);
   font-size: var(--h5);
   color: var(--h5-color);
   font-weight: var(--h5-weight);
   font-style: var(--h5-style); }
 
+.markdown-rendered h6,
 .markdown-preview-view h6,
 .cm-s-obsidian .cm-header-6 {
   font-variant: var(--h6-variant);
   letter-spacing: 0.02em;
+  font-family: var(--h6-font);
   font-size: var(--h6);
   color: var(--h6-color);
   font-weight: var(--h6-weight);
@@ -1582,6 +1622,9 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   display: inline; }
 
 /* Folding icons in Edit mode */
+.markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+  padding-left: 0; }
+
 .CodeMirror-foldgutter-folded,
 .CodeMirror-foldgutter-open {
   cursor: var(--cursor); }
@@ -1825,11 +1868,9 @@ body .view-action svg.cross path {
   border-radius: var(--radius-m); }
 
 /* Indentation Guides (Obsidian 0.14.0+) */
-.markdown-rendered.show-indentation-guide li > ul::before {
-  left: -0.65em; }
-
+.markdown-rendered.show-indentation-guide li > ul::before,
 .markdown-rendered.show-indentation-guide li > ol::before {
-  left: -0.8em; }
+  left: -0.66em; }
 
 /* Live Preview */
 .markdown-source-view.mod-cm6 .cm-indent::before {
@@ -1930,9 +1971,11 @@ div > ul {
   tab-size: var(--list-indent); }
 
 body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
-  margin-left: 0.75em !important; }
+  transform: translateX(calc(0.75em + var(--folding-offset))); }
 
 /* Space between list items */
+.markdown-source-view ol > li,
+.markdown-source-view ul > li,
 .markdown-preview-view ol > li,
 .markdown-preview-view ul > li,
 .mod-cm6 .HyperMD-list-line.cm-line {
@@ -1954,6 +1997,9 @@ body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
 
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   left: -5px; }
+
+body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+  margin-left: -5px; }
 
 /* Modals */
 .progress-bar-message {
@@ -3234,10 +3280,6 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
   width: 100%;
   max-width: 100%; }
 
-.is-live-preview .cm-table-widget table {
-  max-width: 100% !important;
-  width: 100%; }
-
 .cm-s-obsidian .HyperMD-table-row {
   font-size: calc(var(--font-adaptive-normal) - 2px); }
 
@@ -3247,27 +3289,35 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
   font-weight: 400; }
 
 /* Tags */
-.frontmatter-container .tag,
-a.tag {
+body.minimal-unstyled-tags .frontmatter-container .tag,
+body.minimal-unstyled-tags a.tag,
+body.minimal-unstyled-tags .cm-s-obsidian span.cm-hashtag {
+  color: var(--tag-color);
+  text-decoration: none; }
+  body.minimal-unstyled-tags .frontmatter-container .tag:hover,
+  body.minimal-unstyled-tags a.tag:hover,
+  body.minimal-unstyled-tags .cm-s-obsidian span.cm-hashtag:hover {
+    color: var(--text-normal); }
+
+body:not(.minimal-unstyled-tags) .frontmatter-container .tag,
+body:not(.minimal-unstyled-tags) a.tag {
   background-color: var(--tag-bg);
   border: var(--tag-border-width) solid var(--background-modifier-border);
   color: var(--tag-color);
   font-size: var(--font-adaptive-small);
   font-family: var(--font-ui);
-  padding: 1px 8px 1px;
+  padding: 1px 8px;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   display: inline-block;
   margin: 1px 0;
   border-radius: var(--tag-radius); }
-
-a.tag:hover {
+body:not(.minimal-unstyled-tags) a.tag:hover {
   color: var(--text-normal);
   border-color: var(--background-modifier-border-hover);
   background-color: var(--tag-bg2); }
-
-.cm-s-obsidian span.cm-hashtag {
+body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag {
   background-color: var(--tag-bg);
   border: var(--tag-border-width) solid var(--background-modifier-border);
   color: var(--tag-color);
@@ -3282,18 +3332,15 @@ a.tag:hover {
   border-right: none;
   padding-bottom: 3px;
   cursor: text; }
-
-.cm-s-obsidian span.cm-hashtag:hover {
+body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag:hover {
   background-color: var(--tag-bg2); }
-
-span.cm-hashtag.cm-hashtag-begin {
+body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-begin {
   border-top-left-radius: var(--tag-radius);
   border-bottom-left-radius: var(--tag-radius);
   padding-left: 8px;
   border-right: none;
   border-left: var(--tag-border-width) solid var(--background-modifier-border); }
-
-span.cm-hashtag.cm-hashtag-end {
+body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-end {
   border-top-right-radius: var(--tag-radius);
   border-bottom-right-radius: var(--tag-radius);
   border-left: none;
@@ -3975,6 +4022,12 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
   border-color: var(--interactive-accent); }
 
 /* Minimal features */
+/* Active line highlight */
+.active-line-on .cm-line.cm-active,
+.active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
+  background-color: var(--background-active-line);
+  box-shadow: -25vw 0px var(--background-active-line), 25vw 0 var(--background-active-line); }
+
 .borders-low {
   --border-width:0px;
   --border-width-alt:1px; }
@@ -4178,10 +4231,7 @@ https://github.com/sponsors/kepano
 /* ------------------- */
 /* Block button */
 .markdown-source-view.mod-cm6.cards .edit-block-button {
-  top: 0px;
-  right: 26px;
-  opacity: 1;
-  background-color: transparent; }
+  top: 0px; }
 
 /* ------------------- */
 /* Sorting */
@@ -4659,6 +4709,7 @@ body:not(.minimal-icons-off) svg.pane-layout,
 body:not(.minimal-icons-off) svg.paper-plane,
 body:not(.minimal-icons-off) svg.paused,
 body:not(.minimal-icons-off) svg.pencil,
+body:not(.minimal-icons-off) svg.pencil_icon,
 body:not(.minimal-icons-off) svg.pin,
 body:not(.minimal-icons-off) svg.plus-with-circle,
 body:not(.minimal-icons-off) svg.popup-open,
@@ -4812,6 +4863,7 @@ body:not(.minimal-icons-off) svg.pane-layout > path,
 body:not(.minimal-icons-off) svg.paper-plane > path,
 body:not(.minimal-icons-off) svg.paused > path,
 body:not(.minimal-icons-off) svg.pencil > path,
+body:not(.minimal-icons-off) svg.pencil_icon > path,
 body:not(.minimal-icons-off) svg.pin > path,
 body:not(.minimal-icons-off) svg.plus-with-circle > path,
 body:not(.minimal-icons-off) svg.popup-open > path,
@@ -5122,6 +5174,10 @@ body:not(.minimal-icons-off) svg.paper-plane {
 
 body:not(.minimal-icons-off) svg.paused {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M50 8.333C27.025 8.333 8.333 27.025 8.333 50s18.692 41.667 41.667 41.667s41.667 -18.692 41.667 -41.667S72.975 8.333 50 8.333zm0 75c-18.379 0 -33.333 -14.954 -33.333 -33.333s14.954 -33.333 33.333 -33.333s33.333 14.954 33.333 33.333s-14.954 33.333 -33.333 33.333z"/><path fill="black" d="M54.167 37.5h8.333v25h-8.333zM37.5 37.5h8.333v25H37.5z"></path></svg>'); }
+
+/* Text Generator plugin */
+body:not(.minimal-icons-off) svg.pencil_icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' /%3E%3C/svg%3E"); }
 
 body:not(.minimal-icons-off) svg.pencil {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M16.679 87.5c0.338 0 0.675 -0.042 1.008 -0.125l16.667 -4.167c0.733 -0.183 1.404 -0.563 1.938 -1.096L87.513 30.892c1.575 -1.575 2.442 -3.667 2.442 -5.892s-0.867 -4.317 -2.442 -5.892L80.904 12.5c-3.15 -3.15 -8.633 -3.15 -11.783 0L17.9 63.721a4.179 4.179 0 0 0 -1.096 1.933l-4.167 16.667A4.167 4.167 0 0 0 16.679 87.5zm58.333 -69.108L81.621 25l-6.608 6.608L68.404 25l6.608 -6.608zM24.608 68.796l37.904 -37.904L69.121 37.5l-37.908 37.904l-8.808 2.2l2.204 -8.808z"></path></svg>'); }
@@ -5503,18 +5559,11 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
   transition: opacity 0.2s ease-in-out; }
 
 /* Folding offset */
-/* Add padding to account for gutter in Edit mode when folding is on */
-body.minimal-folding:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title,
-.minimal-folding .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
-  padding-left: var(--folding-offset); }
+:root {
+  --folding-offset:16px; }
 
-body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
   padding-left: var(--folding-offset); }
-
-body.is-mobile .markdown-source-view.mod-cm6.is-folding .cm-contentContainer,
-.minimal-folding .allow-fold-lists.markdown-preview-view .markdown-embed .markdown-preview-sizer {
-  padding-left: 0; }
 
 /* Full width media  */
 .full-width-media .markdown-preview-view .image-embed img:not([width]),
@@ -5525,6 +5574,8 @@ body.is-mobile .markdown-source-view.mod-cm6.is-folding .cm-contentContainer,
 
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
+.row-alt.markdown-source-view.mod-cm6 th:first-child,
+.row-alt.markdown-source-view.mod-cm6 td:first-child,
 .row-alt th:first-child,
 .row-alt tbody > tr > td:first-child {
   padding-left: 10px; }
@@ -5548,6 +5599,8 @@ body.is-mobile .markdown-source-view.mod-cm6.is-folding .cm-contentContainer,
   border-bottom: 1px solid var(--background-modifier-border);
   padding: 4px 10px; }
 
+.table-lines.markdown-source-view.mod-cm6 th:first-child,
+.table-lines.markdown-source-view.mod-cm6 td:first-child,
 .table-lines thead > tr > th:first-child,
 .table-lines tbody > tr > td:first-child {
   padding-left: 10px; }
@@ -5848,7 +5901,7 @@ https://github.com/sponsors/kepano
 Layout Control snippet for Obsidian
 
 author: @kepano
-version: 1.0.0
+version: 2.0.0
 
 Support my work:
 https://github.com/sponsors/kepano
@@ -5866,11 +5919,6 @@ https://github.com/sponsors/kepano
   max-width: 100%;
   padding-left: 0;
   padding-top: 0; }
-
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-embed-content .markdown-preview-sizer > div,
-.contextual-typography.minimal-folding .allow-fold-headings.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer,
-.contextual-typography.minimal-folding .allow-fold-lists.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer {
-  padding: 0; }
 
 .contextual-typography .markdown-preview-view .markdown-preview-sizer > div {
   width: var(--max-width);
@@ -5894,6 +5942,7 @@ https://github.com/sponsors/kepano
   margin-block-start: 0.5em;
   margin-block-end: 0.5em; }
 
+.contextual-typography .markdown-preview-view ul ol,
 .contextual-typography .markdown-preview-view ol ol,
 .contextual-typography .markdown-preview-view ol ul,
 .contextual-typography .markdown-preview-view ul ul {
@@ -5928,16 +5977,6 @@ https://github.com/sponsors/kepano
   margin-left: auto;
   margin-right: auto; }
 
-.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview ul.dataview.list-view-ul {
-  padding-inline-start: calc(var(--list-indent) + var(--folding-offset)); }
-
-/*
-.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
-  transform:translateX(calc(var(--folding-offset)/2));
-}*/
-.minimal-folding:not(.is-mobile) .el-lang-dataview .dataview.dataview-error {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
-
 .el-table table,
 .el-lang-dataview .dataview.table-view-table {
   width: var(--max-width);
@@ -5947,45 +5986,6 @@ https://github.com/sponsors/kepano
 .markdown-embed .el-table table,
 .markdown-embed .el-lang-dataview .dataview.table-view-table {
   width: 100%; }
-
-/* Folding offset */
-.contextual-typography.minimal-folding:not(.is-mobile) .el-lang-dataview .block-language-dataview > h4,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  padding-left: var(--folding-offset); }
-
-.contextual-typography.minimal-folding:not(.is-mobile):not(.table-100):not(.table-wide):not(.table-max) .el-table table,
-.contextual-typography.minimal-folding:not(.is-mobile):not(.table-100):not(.table-wide):not(.table-max) .el-lang-dataview .dataview.table-view-table {
-  max-width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
-
-.contextual-typography.minimal-folding:not(.is-mobile).map-100 .markdown-preview-view .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile).map-max .markdown-preview-view .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile).map-wide .markdown-preview-view .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.map-100 .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.map-max .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.map-wide .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.minimal-folding:not(.is-mobile).table-100 .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile).table-max .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile).table-wide .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-100 .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-max .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-wide .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-100 .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-max .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile).table-100 .markdown-preview-view .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.table-wide .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile).table-max .markdown-preview-view .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile).table-wide .markdown-preview-view .markdown-preview-sizer > .el-table,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.iframe-100 .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.iframe-max .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile).iframe-100 .markdown-preview-view .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile).iframe-max .markdown-preview-view .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile).iframe-wide .markdown-preview-view .markdown-preview-sizer > .el-iframe,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image,
-.contextual-typography.minimal-folding:not(.is-mobile) .markdown-preview-view.img-max .markdown-preview-sizer > .el-embed-image,
-.contextual-typography.minimal-folding:not(.is-mobile).img-100 .markdown-preview-view .markdown-preview-sizer > .el-embed-image,
-.contextual-typography.minimal-folding:not(.is-mobile).img-max .markdown-preview-view .markdown-preview-sizer > .el-embed-image,
-.contextual-typography.minimal-folding:not(.is-mobile).img-wide .markdown-preview-view .markdown-preview-sizer > .el-embed-image {
-  padding-left: 0; }
 
 /* Dataview and tables */
 .table-100 .el-table table,
@@ -6012,19 +6012,50 @@ https://github.com/sponsors/kepano
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
   max-width: var(--line-width-wide) !important; }
 
-.table-100 .el-table table th:first-child,
-.table-100 .el-table table td:first-child,
-.table-100 .el-lang-dataview .dataview.table-view-table th:first-child,
-.table-100 .el-lang-dataview .dataview.table-view-table td:first-child {
+.table-100 table th:first-child,
+.table-100 table td:first-child,
+.table-100 .dataview.table-view-table th:first-child,
+.table-100 .dataview.table-view-table td:first-child {
   padding-left: 20px; }
 
-.table-100 .el-table table th:last-child,
-.table-100 .el-table table td:last-child,
-.table-100 .el-lang-dataview .dataview.table-view-table th:last-child,
-.table-100 .el-lang-dataview .dataview.table-view-table td:last-child {
+.table-100 table th:last-child,
+.table-100 table td:last-child,
+.table-100 .dataview.table-view-table th:last-child,
+.table-100 .dataview.table-view-table td:last-child {
   padding-right: 20px; }
 
-/* Images and iframes */
+/* Folding offset */
+.contextual-typography .el-lang-dataview .block-language-dataview > h4,
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  padding-left: var(--folding-offset); }
+
+.contextual-typography .el-table table,
+.contextual-typography .el-lang-dataview .dataview.table-view-table {
+  max-width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
+
+.map-100 .el-lang-leaflet,
+.map-max .el-lang-leaflet,
+.map-wide .el-lang-leaflet,
+.chart-100 .el-lang-chart,
+.chart-max .el-lang-chart,
+.chart-wide .el-lang-chart,
+.table-100 .el-lang-dataview,
+.table-max .el-lang-dataview,
+.table-wide .el-lang-dataview,
+.table-100 .el-table,
+.table-max .el-table,
+.table-wide .el-table,
+.iframe-100 .el-iframe,
+.iframe-max .el-iframe,
+.iframe-wide .el-iframe,
+.img-100 .el-embed-image,
+.img-max .el-embed-image,
+.img-wide .el-embed-image {
+  --folding-offset:0; }
+
+/* Maps, images and iframes */
+.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .markdown-preview-view.is-readable-line-width.chart-max .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography .markdown-preview-view.is-readable-line-width.map-max .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
@@ -6033,6 +6064,8 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-max .markdown-preview-sizer > .el-embed-image {
   width: 100%; }
 
+.contextual-typography.chart-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .markdown-preview-view.is-readable-line-width.chart-wide .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography.map-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography .markdown-preview-view.is-readable-line-width.map-wide .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography.iframe-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
@@ -6041,6 +6074,8 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-wide .markdown-preview-sizer > .el-embed-image {
   width: var(--line-width-wide); }
 
+.contextual-typography.chart-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .markdown-preview-view.is-readable-line-width.chart-100 .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography.map-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography .markdown-preview-view.is-readable-line-width.map-100 .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography.iframe-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
@@ -6049,6 +6084,60 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image {
   width: 100%;
   max-width: 100%; }
+
+/* Live Preview */
+.is-live-preview.is-readable-line-width .mod-empty,
+.is-live-preview.is-readable-line-width .cm-embed-block > div {
+  width: var(--line-width) !important;
+  margin: 0 auto !important;
+  padding-left: var(--folding-offset); }
+
+.chart-max.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-max .is-live-preview.is-readable-line-width .block-language-chart,
+.map-max.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-max .is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-max.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-max .is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-max.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-max .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed {
+  width: var(--max-width) !important;
+  padding-left: 0; }
+
+.chart-wide.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-wide .is-live-preview.is-readable-line-width .block-language-chart,
+.map-wide.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-wide .is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-wide.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-wide .is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-wide.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-wide .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed {
+  width: var(--line-width-wide) !important;
+  max-width: var(--max-width);
+  padding-left: 0; }
+
+/* Make sure the table fills the width of the parent dataview block,
+as opposed to regular tables */
+.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview table {
+  width: 100%;
+  max-width: 100%; }
+
+.chart-100.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-100 .is-live-preview.is-readable-line-width .block-language-chart,
+.map-100.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-100 .is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-100.is-live-preview.is-readable-line-width table,
+.table-100 .is-live-preview.is-readable-line-width table,
+.table-100.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-100 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.img-100.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0; }
 
 /* Mobile */
 @media (max-width: 400pt) {
@@ -6088,16 +6177,48 @@ https://github.com/sponsors/kepano
   max-width: var(--max-width);
   width: var(--line-width-adaptive); }
 
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
-  max-width: var(--line-width-adaptive); }
-
 .markdown-source-view.is-readable-line-width .CodeMirror {
   padding-left: 0;
   padding-right: 0;
   margin: 0 auto 0 auto;
   width: var(--line-width-adaptive);
   max-width: var(--max-width); }
+
+/* Liver Preview */
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
+  max-width: 100%; }
+
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
+.markdown-source-view.mod-cm6 .cm-line {
+  max-width: var(--max-width);
+  margin: 0 auto !important; }
+
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
+  width: var(--line-width-adaptive);
+  padding-left: var(--folding-offset); }
+  .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote {
+    transform: translateX(var(--folding-offset)); }
+
+.is-live-preview.is-readable-line-width table {
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  max-width: var(--max-width);
+  margin: 0 auto; }
+
+.is-live-preview.is-readable-line-width .el-table table {
+  transform: translateX(calc(var(--folding-offset)/2)); }
+
+.is-live-preview.is-readable-line-width .list-view-ul,
+.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
+  width: var(--line-width-adaptive);
+  max-width: 100%;
+  transform: translateX(0.75em);
+  margin: 0 auto !important; }
+
+.is-live-preview.is-readable-line-width .cm-content > .image-embed {
+  width: var(--line-width-adaptive);
+  max-width: var(--max-width);
+  margin: 0 auto !important;
+  padding-left: var(--folding-offset); }
 
 /* Links and underline handling*/
 body:not(.links-int-on) a[href*="obsidian://"],
@@ -6241,6 +6362,127 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 
 .workspace > .workspace-split:not(.mod-root) .CodeMirror-sizer {
   padding-left: 10px; }
+
+/* Underline */
+.tab-style-2 .workspace-tab-header-container .workspace-tab-header {
+  flex-grow: 1;
+  height: var(--header-height); }
+
+.tab-style-2 .workspace-tab-container-inner {
+  padding: 0; }
+
+.tab-style-2 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--background-divider);
+  border-radius: 0;
+  transition: none; }
+
+.tab-style-2 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover {
+  background-color: var(--bg3); }
+
+.tab-style-2 .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  border-bottom: 2px solid var(--ax3);
+  padding-top: 1px;
+  color: var(--ax3); }
+
+.tab-style-2 .workspace-tab-header-inner-icon:hover {
+  background-color: transparent; }
+
+/* Wide */
+.tab-style-3 .workspace-sidedock-empty-state + .workspace-tabs .workspace-tab-header-container,
+.tab-style-3 .mod-right-split .workspace-sidedock-empty-state + .workspace-tabs .workspace-tab-header-container {
+  border-bottom: none; }
+
+.tab-style-3 .workspace-tab-header-container {
+  padding-left: 7px;
+  padding-right: 7px;
+  border: none; }
+
+.tab-style-3 .workspace-tab-header-container .workspace-tab-header {
+  flex-grow: 1; }
+
+.tab-style-3 .workspace-tab-container-inner {
+  padding: 3px;
+  background: var(--bg3);
+  border-radius: 6px; }
+
+.tab-style-3 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+  justify-content: center;
+  align-items: center;
+  transition: none;
+  border: 1px solid transparent; }
+
+.tab-style-3 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover {
+  background-color: transparent; }
+
+.tab-style-3:not(.minimal-dark-tonal) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background: var(--bg2); }
+
+.tab-style-3 .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background: var(--bg1);
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px; }
+
+.tab-style-3.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background-color: transparent; }
+
+.tab-style-3 .workspace-tab-header-inner-icon {
+  height: 18px;
+  padding: 0; }
+
+.tab-style-3 .workspace-tab-header-inner-icon:hover {
+  background-color: transparent; }
+
+/* Index */
+.tab-style-4 .workspace-sidedock-empty-state + .workspace-tabs .workspace-tab-header-container {
+  border: none; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header {
+  flex-grow: 1;
+  height: var(--header-height); }
+
+.tab-style-4 .workspace-tab-container-inner {
+  background-color: var(--background-secondary);
+  padding: 0; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+  justify-content: center;
+  align-items: center;
+  border-bottom: none;
+  border-radius: 0;
+  transition: none;
+  border-top: 1px solid transparent; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header {
+  border-bottom: 1px solid var(--background-modifier-border);
+  opacity: 1; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner-icon {
+  opacity: var(--icon-muted); }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  opacity: 1; }
+
+.tab-style-4.hider-frameless:not(.labeled-nav) .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  border-top: 1px solid var(--background-modifier-border); }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header.is-active {
+  border-bottom: 1px solid transparent; }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header.is-active {
+  background-color: var(--background-primary);
+  border-radius: 0; }
+
+.tab-style-4 .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active {
+  background-color: var(--background-secondary); }
+
+.tab-style-4 .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  box-shadow: 1px 0 var(--background-modifier-border), -1px 0 var(--background-modifier-border);
+  border-bottom: none; }
+
+.tab-style-4 .workspace-tab-header-inner-icon:hover {
+  background-color: transparent; }
 
 /* Translucent sidebars */
 :root {
@@ -8522,9 +8764,6 @@ body .excalidraw label.ToolIcon {
   max-width: var(--max-width) !important;
   width: var(--line-width-adaptive) !important; }
 
-.embedded-note-titles.minimal-folding .is-readable-line-width.markdown-preview-view > h1 {
-  padding-left: var(--folding-offset) !important; }
-
 /* Attempting focus mode + embedded note titles
 
 .embedded-note-titles.minimal-focus-mode .markdown-preview-view > h1 {
@@ -8736,7 +8975,7 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
       0px 20px 40px rgba(0, 0, 0, 0.28) ; }
 
 .popover.hover-editor:not(.snap-to-viewport) {
-  --max-width:95%; }
+  --max-width:92%; }
   .popover.hover-editor:not(.snap-to-viewport) .markdown-preview-view,
   .popover.hover-editor:not(.snap-to-viewport) .markdown-source-view .cm-content {
     font-size: 90%; }
@@ -9005,6 +9244,11 @@ body .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-
   .kanban-plugin__lane {
     width: 100% !important;
     margin-bottom: 1rem !important; } }
+/* Lapel */
+body .cm-heading-marker {
+  cursor: var(--cursor);
+  padding-left: 10px; }
+
 /* Leaflet plugin */
 .theme-light {
   --leaflet-buttons:var(--bg1);
@@ -9121,6 +9365,13 @@ body .block-language-leaflet .leaflet-distance-control {
   padding: 4px 10px;
   height: auto;
   cursor: var(--cursor) !important; }
+
+body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper > * {
+  font-size: var(--font-adaptive-small);
+  font-family: var(--font-ui); }
+
+body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper {
+  padding: 4px 10px !important; }
 
 .leaflet-marker-icon svg path {
   stroke: var(--background-primary);
@@ -9255,6 +9506,10 @@ body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-l
   color: var(--text-normal); }
   body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover .menu-item-icon, body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected .menu-item-icon {
     color: var(--text-normal); }
+
+/* Obsidian Tabs plugin */
+.workspace-leaf-content[data-type="recent-files"] .view-content {
+  padding-top: 10px; }
 
 /* Sliding Panes aka Andy Mode plugin */
 body.plugin-sliding-panes-rotate-header {
@@ -10162,7 +10417,7 @@ settings:
         default-dark: '#'
     -
         id: extended-palette
-        title: Extended palette
+        title: Interface extended palette
         type: heading
         level: 2
         collapsed: true
@@ -10232,6 +10487,535 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
+        id: active-line
+        title: Active line
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: active-line-on
+        title: Highlight active line
+        description: Adds a background to current line in editor
+        type: class-toggle
+        default: false
+    - 
+        id: background-active-line
+        title: Active line background
+        description: Using a low opacity color is recommended to avoid conflicting with highlights
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: blockquotes
+        title: Blockquotes
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: text-blockquote
+        title: Blockquotes text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: blockquote-size
+        title: Blockquotes font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: ''
+    - 
+        id: blockquote-style
+        title: Blockquotes font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
+    -
+        id: code-blocks
+        title: Code blocks
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: text-code
+        title: Code text color
+        description: Where syntax highlighting is not present
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: font-code
+        title: Code font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 13px
+    -
+        id: embed-blocks
+        title: Embeds and transclusions
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: embed-strict
+        title: Use strict embed style globally
+        description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
+        type: class-toggle
+        default: false
+    -
+        id: graphs
+        title: Graphs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: node
+        title: Node color
+        description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: node-focused
+        title: Active node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-tag
+        title: Tag node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-attachment
+        title: Attachment node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -   
+        id: node-unresolved
+        title: Unresolved node color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: headings
+        title: Headings
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: level-1-headings
+        title: Level 1 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h1-font
+        title: H1 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
+        id: h1
+        title: H1 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.125em
+    - 
+        id: h1-weight
+        title: H1 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    - 
+        id: h1-color
+        title: H1 font color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: h1-variant
+        title: H1 font variant
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps 
+    - 
+        id: h1-style
+        title: H1 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
+    -
+        id: h1-l
+        title: H1 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false
+    -
+        id: level-2-headings
+        title: Level 2 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h2-font
+        title: H2 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
+        id: h2
+        title: H2 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1em
+    - 
+        id: h2-weight
+        title: H2 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    - 
+        id: h2-color
+        title: H2 font color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: h2-variant
+        title: H2 font variant
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
+    - 
+        id: h2-style
+        title: H2 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
+    -
+        id: h2-l
+        title: H2 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false
+    -
+        id: level-3-headings
+        title: Level 3 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h3-font
+        title: H3 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
+        id: h3
+        title: H3 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1em
+    - 
+        id: h3-weight
+        title: H3 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    - 
+        id: h3-color
+        title: H3 font color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: h3-variant
+        title: H3 font variant
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
+    - 
+        id: h3-style
+        title: H3 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
+    -
+        id: h3-l
+        title: H3 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false
+    -
+        id: level-4-headings
+        title: Level 4 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h4-font
+        title: H4 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
+        id: h4
+        title: H4 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 0.9em
+    - 
+        id: h4-weight
+        title: H4 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 500
+    - 
+        id: h4-color
+        title: H4 font color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: h4-variant
+        title: H4 font variant
+        type: variable-select
+        allowEmpty: false
+        default: small-caps
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps 
+    - 
+        id: h4-style
+        title: H4 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
+    -
+        id: h4-l
+        title: H4 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false   
+    - 
+        id: level-5-headings
+        title: Level 5 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h5-font
+        title: H5 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    -  
+        id: h5
+        title: H5 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 0.85em
+    - 
+        id: h5-weight
+        title: H5 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 500
+    -
+        id: h5-color
+        title: H5 font color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: h5-variant
+        title: H5 font variant
+        type: variable-select
+        allowEmpty: false
+        default: small-caps
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps 
+    - 
+        id: h5-style
+        title: H5 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
+    -
+        id: h5-l
+        title: H5 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false
+    -
+        id: level-6-headings
+        title: Level 6 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h6-font
+        title: H6 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    - 
+        id: h6
+        title: H6 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 0.85em
+    - 
+        id: h6-weight
+        title: H6 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 400
+    -
+        id: h6-color
+        title: H6 font color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: h6-variant
+        title: H6 font variant
+        type: variable-select
+        allowEmpty: false
+        default: small-caps
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
+    - 
+        id: h6-style
+        title: H6 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+                label: Normal
+                value: normal
+            - 
+                label: Italic
+                value: italic
+    -
+        id: h6-l
+        title: H6 divider line
+        type: class-toggle
+        description: Adds a border below the heading
+        default: false
+    -
         id: icons
         title: Icons
         type: heading
@@ -10270,65 +11054,6 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
-        id: titlebar
-        title: Title bar
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: title-alignment
-        title: Title alignment
-        type: class-select
-        allowEmpty: false
-        default: title-align-body
-        options:
-            - 
-                label: Text body
-                value: title-align-body
-            - 
-                label: Left
-                value: title-align-left
-            -
-                label: Center
-                value: title-align-center
-    -
-        id: show-grabber
-        title: Always show grabber icon
-        description: Dragging handle is always visible
-        type: class-toggle
-        default: false
-    - 
-        id: header-height
-        title: Title bar height
-        type: variable-text
-        default: 42px
-    - 
-        id: title-size
-        title: Title font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.1em
-    - 
-        id: title-weight
-        title: Title font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 600
-    - 
-        id: title-color
-        title: Title font color (active)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: title-color-inactive
-        title: Title font color (inactive)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
         id: links
         title: Links
         type: heading
@@ -10354,6 +11079,168 @@ settings:
         description: Accepts numbers representing the CSS font-weight
         type: variable-number
         default: 400
+    -
+        id: lists
+        title: Lists and checkboxes
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: ax3
+        title: Checkbox color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: checkbox-shape
+        title: Checkbox shape
+        type: class-select
+        allowEmpty: false
+        default: checkbox-circle
+        options:
+            - 
+                label: Circle
+                value: checkbox-circle
+            - 
+                label: Square
+                value: checkbox-square
+    -
+        id: minimal-strike-lists
+        title: Strike completed tasks
+        description: Use line through greyed text for completed tasks
+        type: class-toggle
+        default: false
+    -
+        id: list-spacing
+        title: List item spacing
+        description: Vertical space between list items in em units
+        type: variable-number-slider
+        default: 0.075
+        min: 0
+        max: 0.3
+        step: 0.005
+        format: em
+    -
+        id: list-indent
+        title: List indentation
+        description: Horizontal space from left in em units
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 3.5
+        step: 0.1
+        format: em
+    -
+        id: sidebars
+        title: Sidebars
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: tab-style
+        title: Tab style
+        type: class-select
+        allowEmpty: false
+        default: tab-style-1
+        options:
+            - 
+                label: Compact
+                value: tab-style-1
+            -
+                label: Pill
+                value: tab-style-3
+            - 
+                label: Underlined
+                value: tab-style-2
+            - 
+                label: Index
+                value: tab-style-4
+    -
+        id: sidebar-lines-off
+        title: Disable sidebar relationship lines
+        description: Turns off lines in file navigation
+        type: class-toggle
+    - 
+        id: mobile-left-sidebar-width
+        title: Mobile left sidebar width
+        description: Maximum width for pinned left sidebar on mobile
+        type: variable-number
+        default: 280
+        format: pt
+    - 
+        id: mobile-right-sidebar-width
+        title: Mobile right sidebar width
+        description: Maximum width for pinned right sidebar on mobile
+        type: variable-number
+        default: 240
+        format: pt
+    -
+        id: tags
+        title: Tags
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: minimal-unstyled-tags
+        title: Plain tags
+        description: Tags will render as normal text, overrides settings below
+        type: class-toggle
+        default: false
+    -
+        id: tag-radius
+        title: Tag shape
+        type: variable-select
+        default: 14px
+        options:
+            - 
+                label: Pill
+                value: 14px
+            - 
+                label: Rounded
+                value: 4px
+            - 
+                label: Square
+                value: 0px
+    -
+        id: tag-border-width
+        title: Tag border width
+        type: variable-select
+        default: 1px
+        options:
+            - 
+                label: None
+                value: 0
+            - 
+                label: Thin
+                value: 1px
+            - 
+                label: Thick
+                value: 2px
+    - 
+        id: tag-color
+        title: Tag text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tag-bg
+        title: Tag background color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: tag-bg2
+        title: Tag background color (hover)
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
         id: text
         title: Text
@@ -10421,586 +11308,61 @@ settings:
         type: variable-number
         default: 600
     -
-        id: headings
-        title: Headings
+        id: titlebar
+        title: Title bar
         type: heading
         level: 2
         collapsed: true
     - 
-        id: level-1-headings
-        title: Level 1 Headings
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: h1
-        title: H1 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.125em
-    - 
-        id: h1-weight
-        title: H1 font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 600
-    - 
-        id: h1-color
-        title: H1 font color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h1-variant
-        title: H1 font variant
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps 
-    - 
-        id: h1-style
-        title: H1 font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Italic
-                value: italic
-    -
-        id: h1-l
-        title: H1 divider line
-        description: Adds a border below the heading
-        type: class-toggle
-        default: false
-    -
-        id: level-2-headings
-        title: Level 2 Headings
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: h2
-        title: H2 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1em
-    - 
-        id: h2-weight
-        title: H2 font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 600
-    - 
-        id: h2-color
-        title: H2 font color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h2-variant
-        title: H2 font variant
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps
-    - 
-        id: h2-style
-        title: H2 font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Italic
-                value: italic
-    -
-        id: h2-l
-        title: H2 divider line
-        description: Adds a border below the heading
-        type: class-toggle
-        default: false
-    -
-        id: level-3-headings
-        title: Level 3 Headings
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: h3
-        title: H3 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1em
-    - 
-        id: h3-weight
-        title: H3 font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 600
-    - 
-        id: h3-color
-        title: H3 font color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h3-variant
-        title: H3 font variant
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps
-    - 
-        id: h3-style
-        title: H3 font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Italic
-                value: italic
-    -
-        id: h3-l
-        title: H3 divider line
-        description: Adds a border below the heading
-        type: class-toggle
-        default: false
-    -
-        id: level-4-headings
-        title: Level 4 Headings
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: h4
-        title: H4 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 0.9em
-    - 
-        id: h4-weight
-        title: H4 font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 500
-    - 
-        id: h4-color
-        title: H4 font color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h4-variant
-        title: H4 font variant
-        type: variable-select
-        allowEmpty: false
-        default: small-caps
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps 
-    - 
-        id: h4-style
-        title: H4 font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Italic
-                value: italic
-    -
-        id: h4-l
-        title: H4 divider line
-        description: Adds a border below the heading
-        type: class-toggle
-        default: false   
-    - 
-        id: level-5-headings
-        title: Level 5 Headings
-        type: heading
-        level: 3
-        collapsed: true
-    -  
-        id: h5
-        title: H5 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 0.85em
-    - 
-        id: h5-weight
-        title: H5 font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 500
-    -
-        id: h5-color
-        title: H5 font color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h5-variant
-        title: H5 font variant
-        type: variable-select
-        allowEmpty: false
-        default: small-caps
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps 
-    - 
-        id: h5-style
-        title: H5 font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Italic
-                value: italic
-    -
-        id: h5-l
-        title: H5 divider line
-        description: Adds a border below the heading
-        type: class-toggle
-        default: false
-    -
-        id: level-6-headings
-        title: Level 6 Headings
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: h6
-        title: H6 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 0.85em
-    - 
-        id: h6-weight
-        title: H6 font weight
-        description: Accepts numbers representing the CSS font-weight
-        type: variable-number
-        default: 400
-    -
-        id: h6-color
-        title: H6 font color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: h6-variant
-        title: H6 font variant
-        type: variable-select
-        allowEmpty: false
-        default: small-caps
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps
-    - 
-        id: h6-style
-        title: H6 font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Italic
-                value: italic
-    -
-        id: h6-l
-        title: H6 divider line
-        type: class-toggle
-        description: Adds a border below the heading
-        default: false
-    -
-        id: blockquotes
-        title: Blockquotes
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: text-blockquote
-        title: Blockquotes text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: blockquote-size
-        title: Blockquotes font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: ''
-    - 
-        id: blockquote-style
-        title: Blockquotes font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            - 
-                label: Normal
-                value: normal
-            - 
-                label: Italic
-                value: italic
-    -
-        id: lists
-        title: Lists and checkboxes
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: ax3
-        title: Checkbox color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: checkbox-shape
-        title: Checkbox shape
+        id: title-alignment
+        title: Title alignment
         type: class-select
         allowEmpty: false
-        default: checkbox-circle
+        default: title-align-body
         options:
             - 
-                label: Circle
-                value: checkbox-circle
+                label: Text body
+                value: title-align-body
             - 
-                label: Square
-                value: checkbox-square
+                label: Left
+                value: title-align-left
+            -
+                label: Center
+                value: title-align-center
     -
-        id: minimal-strike-lists
-        title: Strike completed tasks
-        description: Use line through greyed text for completed tasks
+        id: show-grabber
+        title: Always show grabber icon
+        description: Dragging handle is always visible
         type: class-toggle
         default: false
-    -
-        id: list-spacing
-        title: List item spacing
-        description: Vertical space between list items in em units
-        type: variable-number-slider
-        default: 0.075
-        min: 0
-        max: 0.3
-        step: 0.005
-        format: em
-    -
-        id: list-indent
-        title: List indentation
-        description: Horizontal space from left in em units
-        type: variable-number-slider
-        default: 2
-        min: 1
-        max: 3.5
-        step: 0.1
-        format: em
-    -
-        id: embed-blocks
-        title: Embeds and transclusions
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: embed-strict
-        title: Use strict embed style globally
-        description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
-        type: class-toggle
-        default: false
-    -
-        id: code-blocks
-        title: Code blocks
-        type: heading
-        level: 2
-        collapsed: true
     - 
-        id: text-code
-        title: Code text color
-        description: Where syntax highlighting is not present
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
+        id: header-height
+        title: Title bar height
+        type: variable-text
+        default: 42px
     - 
-        id: font-code
-        title: Code font size
+        id: title-size
+        title: Title font size
         description: Accepts any CSS font-size value
         type: variable-text
-        default: 13px
-    -
-        id: graphs
-        title: Graphs
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: node
-        title: Node color
-        description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: node-focused
-        title: Active node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -   
-        id: node-tag
-        title: Tag node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -   
-        id: node-attachment
-        title: Attachment node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -   
-        id: node-unresolved
-        title: Unresolved node color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: tags
-        title: Tags
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: tag-radius
-        title: Tag shape
-        type: variable-select
-        default: 14px
-        options:
-            - 
-                label: Pill
-                value: 14px
-            - 
-                label: Rounded
-                value: 4px
-            - 
-                label: Square
-                value: 0px
-    -
-        id: tag-border-width
-        title: Tag border width
-        type: variable-select
-        default: 1px
-        options:
-            - 
-                label: None
-                value: 0
-            - 
-                label: Thin
-                value: 1px
-            - 
-                label: Thick
-                value: 2px
+        default: 1.1em
     - 
-        id: tag-color
-        title: Tag text color
+        id: title-weight
+        title: Title font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    - 
+        id: title-color
+        title: Title font color (active)
         type: variable-themed-color
-        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: tag-bg
-        title: Tag background color
+        id: title-color-inactive
+        title: Title font color (inactive)
         type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: tag-bg2
-        title: Tag background color (hover)
-        type: variable-themed-color
-        opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
@@ -11086,11 +11448,6 @@ settings:
         description: Turns off click/hold to zoom images
         type: class-toggle
     -
-        id: sidebar-lines-off
-        title: Disable sidebar relationship lines
-        description: Turns off lines in file navigation
-        type: class-toggle
-    -
         id: cursor
         title: Cursor style
         description: The cursor style for UI elements
@@ -11120,18 +11477,5 @@ settings:
         type: variable-number
         default: 10
         format: px
-    - 
-        id: mobile-left-sidebar-width
-        title: Mobile left sidebar width
-        description: Maximum width for pinned left sidebar on mobile
-        type: variable-number
-        default: 280
-        format: pt
-    - 
-        id: mobile-right-sidebar-width
-        title: Mobile right sidebar width
-        description: Maximum width for pinned right sidebar on mobile
-        type: variable-number
-        default: 240
-        format: pt
+
 */

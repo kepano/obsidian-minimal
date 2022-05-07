@@ -16,25 +16,46 @@
 }
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top:15px;
-  padding-left:calc((100% - var(--max-width)) / 2);
-  padding-right:calc((100% - var(--max-width)) / 2);
+  padding-left:0;
+  padding-right:0;
+}
+
+/* Gutters */
+body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters {
+  position:absolute !important;
+  z-index:0;
+}
+.cm-editor .cm-lineNumbers .cm-gutterElement {
+  min-width:25px;
 }
 
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
   cursor:var(--cursor);
-  color:var(--text-muted);
-  background-color:transparent;
+  color:var(--text-faint);
+  background-color:var(--background-primary);
   top:0;
-  right:0;
+  right:auto;
+  left:5px;
+  opacity:0;
   transition:opacity 200ms;
   padding:4px;
 }
+/* if line numbers are on
+.markdown-source-view.mod-cm6 .edit-block-button {
+  left:30px;
+}
+ */
+.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
+  width:26px !important;
+  padding-left:4px !important;
+}
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
-  background-color:var(--background-tertiary);
+  background-color:var(--background-primary);
+  color:var(--text-muted);
 }
 .markdown-source-view.mod-cm6 .edit-block-button svg {
-  opacity:0.5;
+  opacity:1;
   width:var(--icon-size);
   height:var(--icon-size);
 }
@@ -53,6 +74,10 @@
 /* Line numbers */
 .cm-editor .cm-lineNumbers .cm-gutterElement {
   font-variant-numeric:tabular-nums;
+}
+.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
+.cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
+  color:var(--text-muted);
 }
 
 /* Live Preview folding */
@@ -98,15 +123,18 @@ ul>li.is-collapsed::marker,
 }
 
 /* Live Preview text selection */
-.markdown-source-view.mod-cm6  .cm-line:not(.HyperMD-codeblock) .cm-selection {
-  background-color:transparent;
-}
+.markdown-source-view.mod-cm6  .cm-line .cm-selection,
 .markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
   background-color: var(--text-selection);
 }
+.cm-selectionBackground {
+  background-color:transparent !important;
+}
+
+
 body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
-  max-width:var(--line-width-adaptive);
+  max-width:100%;
 }
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
-  max-width:var(--line-width-adaptive);
+  max-width:100%;
 }
