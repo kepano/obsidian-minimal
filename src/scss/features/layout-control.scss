@@ -69,6 +69,7 @@ https://github.com/sponsors/kepano
   width:100%;
   max-width:100%;
   overflow-x:scroll;
+  padding-left:0;
 }
 .el-table,
 .el-lang-dataview .block-language-dataview > h4,
@@ -131,6 +132,11 @@ https://github.com/sponsors/kepano
   padding-right:20px;
 }
 
+
+.contextual-typography .el-lang-dataview .block-language-dataview > h4,
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  padding-left:var(--folding-offset);
+}
 /* Maps, images and iframes */
 .contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography .markdown-preview-view.is-readable-line-width.chart-max .markdown-preview-sizer > .el-lang-chart,
@@ -141,6 +147,7 @@ https://github.com/sponsors/kepano
 .contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-max .markdown-preview-sizer > .el-embed-image {
   width:100%;
+  padding-left:0;
 }
 .contextual-typography.chart-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography .markdown-preview-view.is-readable-line-width.chart-wide .markdown-preview-sizer > .el-lang-chart,
@@ -151,6 +158,7 @@ https://github.com/sponsors/kepano
 .contextual-typography.img-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-wide .markdown-preview-sizer > .el-embed-image {
   width:var(--line-width-wide);
+  padding-left:0;
 }
 .contextual-typography.chart-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography .markdown-preview-view.is-readable-line-width.chart-100 .markdown-preview-sizer > .el-lang-chart,
@@ -162,6 +170,7 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image {
   width:100%;
   max-width:100%;
+  padding-left:0;
 }
 
 /* Live Preview */
