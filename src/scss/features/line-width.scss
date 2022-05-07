@@ -34,7 +34,9 @@
   max-width:var(--max-width);
   margin:0 auto !important;
 }
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed,
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed {
+  width:var(--line-width-adaptive);
+}
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
   width:var(--line-width-adaptive);
   padding-left:var(--folding-offset) !important;

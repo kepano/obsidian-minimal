@@ -5989,13 +5989,14 @@ https://github.com/sponsors/kepano
 
 /* Folding offset */
 .el-lang-dataview .block-language-dataview > h4,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:not(.el-embed-page) {
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   padding-left: var(--folding-offset); }
 
 .el-table table,
 .el-lang-dataview .dataview.table-view-table {
   max-width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
 
+.embed-strict .el-embed-page p,
 .map-100 .el-lang-leaflet,
 .map-max .el-lang-leaflet,
 .map-wide .el-lang-leaflet,
@@ -6157,12 +6158,13 @@ as opposed to regular tables */
   max-width: var(--max-width);
   margin: 0 auto !important; }
 
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed,
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed {
+  width: var(--line-width-adaptive); }
+
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
   width: var(--line-width-adaptive);
   padding-left: var(--folding-offset) !important;
   text-indent: 0 !important; }
-  .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed.HyperMD-quote,
   .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote {
     transform: translateX(var(--folding-offset)); }
 
