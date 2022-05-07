@@ -61,7 +61,6 @@ body {
   --icon-size:18px;
   --border-width:1px;
   --border-width-alt:1px;
-  --folding-offset:16px;
   --nested-padding:30px;
   /* Quotes and transclusions */
   --list-indent:2em;
@@ -940,10 +939,6 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
 .markdown-embed-title,
 .internal-embed .markdown-preview-section {
   max-width: 100%; }
-
-.cm-s-obsidian .HyperMD-header,
-.cm-s-obsidian pre.HyperMD-header {
-  padding-left: 0 !important; }
 
 .CodeMirror-linenumber {
   font-size: var(--font-adaptive-small) !important;
@@ -1935,7 +1930,7 @@ div > ul {
   tab-size: var(--list-indent); }
 
 body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
-  transform: translateX(0.75em); }
+  transform: translateX(calc(0.75em + var(--folding-offset))); }
 
 /* Space between list items */
 .markdown-source-view ol > li,
@@ -5523,6 +5518,13 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
   opacity: 1;
   transition: opacity 0.2s ease-in-out; }
 
+/* Folding offset */
+:root {
+  --folding-offset:20px; }
+
+body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
+  padding-left: var(--folding-offset); }
+
 /* Full width media  */
 .full-width-media .markdown-preview-view .image-embed img:not([width]),
 .full-width-media .image-embed img:not([width]),
@@ -6018,7 +6020,8 @@ https://github.com/sponsors/kepano
 .is-live-preview.is-readable-line-width .mod-empty,
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
   width: var(--line-width) !important;
-  margin: 0 auto !important; }
+  margin: 0 auto !important;
+  padding-left: var(--folding-offset); }
 
 .chart-max.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-max .is-live-preview.is-readable-line-width .block-language-chart,
@@ -6030,7 +6033,8 @@ https://github.com/sponsors/kepano
 .table-max .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed {
-  width: var(--max-width) !important; }
+  width: var(--max-width) !important;
+  padding-left: 0; }
 
 .chart-wide.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-wide .is-live-preview.is-readable-line-width .block-language-chart,
@@ -6043,7 +6047,8 @@ https://github.com/sponsors/kepano
 .img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width: var(--line-width-wide) !important;
-  max-width: var(--max-width); }
+  max-width: var(--max-width);
+  padding-left: 0; }
 
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
@@ -6063,7 +6068,8 @@ as opposed to regular tables */
 .img-100.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width: 100% !important;
-  max-width: 100% !important; }
+  max-width: 100% !important;
+  padding-left: 0; }
 
 /* Mobile */
 @media (max-width: 400pt) {
@@ -6110,6 +6116,7 @@ as opposed to regular tables */
   width: var(--line-width-adaptive);
   max-width: var(--max-width); }
 
+/* Liver Preview */
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width: 100%; }
 
@@ -6119,7 +6126,10 @@ as opposed to regular tables */
   margin: 0 auto !important; }
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
-  width: var(--line-width-adaptive); }
+  width: var(--line-width-adaptive);
+  padding-left: var(--folding-offset); }
+  .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote {
+    transform: translateX(var(--folding-offset)); }
 
 .is-live-preview.is-readable-line-width table {
   width: var(--line-width-adaptive);
@@ -6130,7 +6140,8 @@ as opposed to regular tables */
 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width: var(--line-width-adaptive);
   max-width: var(--max-width);
-  margin: 0 auto !important; }
+  margin: 0 auto !important;
+  padding-left: var(--folding-offset); }
 
 /* Links and underline handling*/
 body:not(.links-int-on) a[href*="obsidian://"],

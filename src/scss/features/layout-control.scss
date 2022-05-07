@@ -169,6 +169,7 @@ https://github.com/sponsors/kepano
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
   width:var(--line-width) !important;
   margin:0 auto !important;
+  padding-left:var(--folding-offset);
 }
 .chart-max.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-max .is-live-preview.is-readable-line-width .block-language-chart,
@@ -181,6 +182,7 @@ https://github.com/sponsors/kepano
 .img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width:var(--max-width) !important;
+  padding-left:0;
 }
 .chart-wide.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-wide .is-live-preview.is-readable-line-width .block-language-chart,
@@ -194,6 +196,7 @@ https://github.com/sponsors/kepano
 .img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width:var(--line-width-wide) !important;
   max-width:var(--max-width);
+  padding-left:0;
 }
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
@@ -214,6 +217,7 @@ as opposed to regular tables */
 .img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width:100% !important;
   max-width:100% !important;
+  padding-left:0;
 }
 
 
