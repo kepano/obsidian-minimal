@@ -5560,7 +5560,7 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
 
 /* Folding offset */
 :root {
-  --folding-offset:20px; }
+  --folding-offset:16px; }
 
 body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
   padding-left: var(--folding-offset); }
@@ -5964,8 +5964,7 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
   width: 100%;
   max-width: 100%;
-  overflow-x: scroll;
-  padding-left: 0; }
+  overflow-x: scroll; }
 
 .el-table,
 .el-lang-dataview .block-language-dataview > h4,
