@@ -166,7 +166,7 @@ settings:
     - 
         id: background-active-line
         title: Active line background
-        description: Using a low opacity color is recommended
+        description: Using a low opacity color is recommended to avoid conflicting with highlights
         type: variable-themed-color
         opacity: true
         format: hex

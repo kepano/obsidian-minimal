@@ -191,13 +191,13 @@ body .excalidraw {
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) - 14%)
+      calc(var(--base-l) - 12%)
     );
   --ui3:
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) - 22%)
+      calc(var(--base-l) - 20%)
     );
   --tx1:
     hsl(
@@ -284,7 +284,7 @@ body .excalidraw {
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 5%)
+      calc(var(--base-l) + 6%)
     );
   --ui2:
     hsl(
@@ -296,7 +296,7 @@ body .excalidraw {
     hsl(
       var(--base-h),
       var(--base-s),
-      calc(var(--base-l) + 22%)
+      calc(var(--base-l) + 20%)
     );
   --tx1:
     hsl(
@@ -829,7 +829,6 @@ body.is-dragging {
 
 /* Gutters */
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters {
-  position: absolute !important;
   z-index: 0; }
 
 .cm-editor .cm-lineNumbers .cm-gutterElement {
@@ -10450,7 +10449,7 @@ settings:
     - 
         id: background-active-line
         title: Active line background
-        description: Using a low opacity color is recommended
+        description: Using a low opacity color is recommended to avoid conflicting with highlights
         type: variable-themed-color
         opacity: true
         format: hex
