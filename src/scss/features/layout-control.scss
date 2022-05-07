@@ -131,15 +131,37 @@ https://github.com/sponsors/kepano
   padding-right:20px;
 }
 
-
+/* Folding offset */
 .contextual-typography .el-lang-dataview .block-language-dataview > h4,
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   padding-left:var(--folding-offset);
 }
-.contextual-typography:not(.table-100):not(.table-wide):not(.table-max) .el-table table,
-.contextual-typography:not(.table-100):not(.table-wide):not(.table-max) .el-lang-dataview .dataview.table-view-table {
+.contextual-typography .el-table table,
+.contextual-typography .el-lang-dataview .dataview.table-view-table {
   max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
 }
+.map-100 .el-lang-leaflet,
+.map-max .el-lang-leaflet,
+.map-wide .el-lang-leaflet,
+.chart-100 .el-lang-chart,
+.chart-max .el-lang-chart,
+.chart-wide .el-lang-chart,
+.table-100 .el-lang-dataview,
+.table-max .el-lang-dataview,
+.table-wide .el-lang-dataview,
+.table-100 .el-lang-table,
+.table-max .el-lang-table,
+.table-wide .el-lang-table,
+.iframe-100 .el-iframe,
+.iframe-max .el-iframe,
+.iframe-wide .el-iframe,
+.img-100 .el-embed-image,
+.img-max .el-embed-image,
+.img-wide .el-embed-image {
+  --folding-offset:0;
+}
+
+
 /* Maps, images and iframes */
 .contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography .markdown-preview-view.is-readable-line-width.chart-max .markdown-preview-sizer > .el-lang-chart,
@@ -150,7 +172,6 @@ https://github.com/sponsors/kepano
 .contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-max .markdown-preview-sizer > .el-embed-image {
   width:100%;
-  padding-left:0;
 }
 .contextual-typography.chart-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography .markdown-preview-view.is-readable-line-width.chart-wide .markdown-preview-sizer > .el-lang-chart,
@@ -161,7 +182,6 @@ https://github.com/sponsors/kepano
 .contextual-typography.img-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-wide .markdown-preview-sizer > .el-embed-image {
   width:var(--line-width-wide);
-  padding-left:0;
 }
 .contextual-typography.chart-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography .markdown-preview-view.is-readable-line-width.chart-100 .markdown-preview-sizer > .el-lang-chart,
@@ -173,7 +193,6 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image {
   width:100%;
   max-width:100%;
-  padding-left:0;
 }
 
 /* Live Preview */
