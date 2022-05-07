@@ -6003,9 +6003,9 @@ https://github.com/sponsors/kepano
 .table-100 .el-lang-dataview,
 .table-max .el-lang-dataview,
 .table-wide .el-lang-dataview,
-.table-100 .el-lang-table,
-.table-max .el-lang-table,
-.table-wide .el-lang-table,
+.table-100 .el-table,
+.table-max .el-table,
+.table-wide .el-table,
 .iframe-100 .el-iframe,
 .iframe-max .el-iframe,
 .iframe-wide .el-iframe,
@@ -6161,9 +6161,12 @@ as opposed to regular tables */
     transform: translateX(var(--folding-offset)); }
 
 .is-live-preview.is-readable-line-width table {
-  width: var(--line-width-adaptive);
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: var(--max-width);
   margin: 0 auto; }
+
+.is-live-preview.is-readable-line-width .el-table table {
+  transform: translateX(calc(var(--folding-offset)/2)); }
 
 .is-live-preview.is-readable-line-width .list-view-ul,
 .contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {

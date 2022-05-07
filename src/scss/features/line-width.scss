@@ -40,11 +40,13 @@
   }
 }
 .is-live-preview.is-readable-line-width table {
-  width:var(--line-width-adaptive);
+  width:calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width:var(--max-width);
   margin:0 auto;
 }
-
+.is-live-preview.is-readable-line-width .el-table table {
+  transform:translateX(calc(var(--folding-offset)/2));
+}
 .is-live-preview.is-readable-line-width .list-view-ul,
 .contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
   width:var(--line-width-adaptive);
