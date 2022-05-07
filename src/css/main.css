@@ -812,7 +812,8 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
 }
  */
 .is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
-  width: 26px !important; }
+  width: 26px !important;
+  padding-left: 4px !important; }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color: var(--background-primary);
@@ -6081,7 +6082,6 @@ https://github.com/sponsors/kepano
 
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
-.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul,
 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview table {
   width: 100%;
   max-width: 100%; }
@@ -6166,6 +6166,12 @@ as opposed to regular tables */
   margin: 0 auto; }
 
 .is-live-preview.is-readable-line-width .list-view-ul,
+.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
+  width: var(--line-width-adaptive);
+  max-width: 100%;
+  transform: translateX(0.75em);
+  margin: 0 auto !important; }
+
 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width: var(--line-width-adaptive);
   max-width: var(--max-width);

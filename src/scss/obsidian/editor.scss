@@ -48,6 +48,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
  */
 .is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width:26px !important;
+  padding-left:4px !important;
 }
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color:var(--background-primary);

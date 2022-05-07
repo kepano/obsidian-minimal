@@ -44,7 +44,14 @@
   max-width:var(--max-width);
   margin:0 auto;
 }
+
 .is-live-preview.is-readable-line-width .list-view-ul,
+.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
+  width:var(--line-width-adaptive);
+  max-width:100%;
+  transform:translateX(0.75em);
+  margin:0 auto !important;
+}
 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
   width:var(--line-width-adaptive);
   max-width:var(--max-width);

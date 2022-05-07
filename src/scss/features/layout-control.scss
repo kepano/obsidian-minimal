@@ -229,9 +229,9 @@ https://github.com/sponsors/kepano
   max-width:var(--max-width);
   padding-left:0;
 }
+
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
-.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul,
 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview table {
   width:100%;
   max-width:100%;
