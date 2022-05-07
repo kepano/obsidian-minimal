@@ -27,14 +27,18 @@
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width:100%;
 }
+
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
+.markdown-source-view.mod-cm6 .internal-embed,
 .markdown-source-view.mod-cm6 .cm-line {
   max-width:var(--max-width);
   margin:0 auto !important;
 }
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
   width:var(--line-width-adaptive);
-  padding-left:var(--folding-offset);
+  padding-left:var(--folding-offset) !important;
+  text-indent:0 !important;
   &.HyperMD-quote {
     transform:translateX(var(--folding-offset));
   }

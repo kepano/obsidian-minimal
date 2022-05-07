@@ -132,12 +132,12 @@ https://github.com/sponsors/kepano
 }
 
 /* Folding offset */
-.contextual-typography .el-lang-dataview .block-language-dataview > h4,
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+.el-lang-dataview .block-language-dataview > h4,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:not(.el-embed-page) {
   padding-left:var(--folding-offset);
 }
-.contextual-typography .el-table table,
-.contextual-typography .el-lang-dataview .dataview.table-view-table {
+.el-table table,
+.el-lang-dataview .dataview.table-view-table {
   max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
 }
 .map-100 .el-lang-leaflet,
@@ -160,7 +160,6 @@ https://github.com/sponsors/kepano
 .img-wide .el-embed-image {
   --folding-offset:0;
 }
-
 
 /* Maps, images and iframes */
 .contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,

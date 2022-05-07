@@ -6028,12 +6028,12 @@ https://github.com/sponsors/kepano
   padding-right: 20px; }
 
 /* Folding offset */
-.contextual-typography .el-lang-dataview .block-language-dataview > h4,
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+.el-lang-dataview .block-language-dataview > h4,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:not(.el-embed-page) {
   padding-left: var(--folding-offset); }
 
-.contextual-typography .el-table table,
-.contextual-typography .el-lang-dataview .dataview.table-view-table {
+.el-table table,
+.el-lang-dataview .dataview.table-view-table {
   max-width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
 
 .map-100 .el-lang-leaflet,
@@ -6192,13 +6192,17 @@ as opposed to regular tables */
   max-width: 100%; }
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
+.markdown-source-view.mod-cm6 .internal-embed,
 .markdown-source-view.mod-cm6 .cm-line {
   max-width: var(--max-width);
   margin: 0 auto !important; }
 
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
   width: var(--line-width-adaptive);
-  padding-left: var(--folding-offset); }
+  padding-left: var(--folding-offset) !important;
+  text-indent: 0 !important; }
+  .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed.HyperMD-quote,
   .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote {
     transform: translateX(var(--folding-offset)); }
 
