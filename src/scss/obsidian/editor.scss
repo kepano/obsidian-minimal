@@ -21,7 +21,8 @@
 }
 
 /* Gutters */
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters {
+body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters {
+  position:absolute !important;
   z-index:0;
 }
 .cm-editor .cm-lineNumbers .cm-gutterElement {
