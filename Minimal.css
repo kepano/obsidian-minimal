@@ -5562,6 +5562,9 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
 :root {
   --folding-offset:16px; }
 
+.is-mobile {
+  --folding-offset:0; }
+
 body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
   padding-left: var(--folding-offset); }
 
