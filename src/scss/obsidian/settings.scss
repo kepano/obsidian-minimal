@@ -293,6 +293,11 @@ body:not(.is-mobile) .theme-list {
           width:160px;
           height:36px;
           cursor:pointer;
+          border:none;
+          box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);
+          &:hover {
+            background-color:var(--ax2);
+          }
         }
         button:not(.mod-cta) {
           display:none;
@@ -341,14 +346,16 @@ body:not(.is-mobile) .theme-list {
   }
   .community-theme-info .clickable-icon {
     width:100%;
-    background-color:var(--background-tertiary);
+    background-color:var(--background-primary);
     border:1px solid var(--background-modifier-border);
+    color:var(--text-normal);
     cursor:pointer;
     display:block;
     text-align:center;
     grid-column:1/3;
     padding:7px 0;
     margin:20px 0 0;
+    height:36px;
     border-radius:5px;
     box-shadow:0 1px 1px 0px var(--btn-shadow-color);
   }

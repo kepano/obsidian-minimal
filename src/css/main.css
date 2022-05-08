@@ -8,7 +8,7 @@ body {
   --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   --font-monospace:var(--font-monospace-override);
   --font-ui:var(--font-interface-override);
-  --minimal-version:"You are currently using Minimal 5.2.3\a\aIf you run into any issues, try updating to the latest version of Minimal Theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
+  --minimal-version:"You are currently using Minimal 5.2.3\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
 
 :root {
   /* Cursor */
@@ -2931,7 +2931,11 @@ body:not(.is-mobile) .theme-list {
           margin: 0;
           width: 160px;
           height: 36px;
-          cursor: pointer; }
+          cursor: pointer;
+          border: none;
+          box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
+          body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-container button:hover {
+            background-color: var(--ax2); }
         body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-container button:not(.mod-cta) {
           display: none; }
       body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info::after {
@@ -2968,14 +2972,16 @@ body:not(.is-mobile) .theme-list {
     color: var(--text-muted); }
   .community-theme.is-selected .community-theme-info .clickable-icon {
     width: 100%;
-    background-color: var(--background-tertiary);
+    background-color: var(--background-primary);
     border: 1px solid var(--background-modifier-border);
+    color: var(--text-normal);
     cursor: pointer;
     display: block;
     text-align: center;
     grid-column: 1/3;
     padding: 7px 0;
     margin: 20px 0 0;
+    height: 36px;
     border-radius: 5px;
     box-shadow: 0 1px 1px 0px var(--btn-shadow-color); }
   .community-theme.is-selected .community-theme-info .clickable-icon:hover {
