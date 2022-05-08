@@ -6336,7 +6336,6 @@ https://github.com/sponsors/kepano
   transform: translateX(calc(var(--folding-offset)/2));
   padding-left: 0; }
 .markdown-source-view.mod-cm6.is-readable-line-width .dataview-error {
-  transform: translateX(calc(var(--folding-offset)/2));
   margin-top: 16px; }
 
 .is-live-preview.is-readable-line-width .mod-empty,
@@ -9395,7 +9394,8 @@ body .cm-heading-marker {
   transition: top 0.1s linear; }
 
 body .leaflet-container {
-  background-color: var(--background-secondary); }
+  background-color: var(--background-secondary);
+  font-family: var(--font-ui); }
 
 .map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) {
   margin-top: -16px; }
@@ -9731,34 +9731,11 @@ body.plugin-sliding-panes .mod-root .graph-controls {
   left: 30px; }
 
 /* Sortable plugin */
-.theme-dark .markdown-preview-view th,
-.theme-light .markdown-preview-view th {
-  background-image: none;
-  cursor: default; }
-
-.theme-light th[sortable-style="sortable-asc"] {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='black' fill-opacity='0.4' d='M6.5 4l4-4 4 4z'></path></svg>"); }
-
-.theme-light th[sortable-style="sortable-desc"] {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='black' fill-opacity='0.4' d='M14.5 0l-4 4-4-4z'></path></svg>"); }
-
-.theme-light th[sortable-style="sortable-asc"]:hover {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='black' fill-opacity='0.6' d='M6.5 4l4-4 4 4z'></path></svg>"); }
-
-.theme-light th[sortable-style="sortable-desc"]:hover {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='black' fill-opacity='0.6' d='M14.5 0l-4 4-4-4z'></path></svg>"); }
-
-.theme-dark th[sortable-style="sortable-asc"] {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='white' fill-opacity='0.4' d='M6.5 4l4-4 4 4z'></path></svg>"); }
-
-.theme-dark th[sortable-style="sortable-desc"] {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='white' fill-opacity='0.4' d='M14.5 0l-4 4-4-4z'></path></svg>"); }
-
-.theme-dark th[sortable-style="sortable-asc"]:hover {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='white' fill-opacity='0.6' d='M6.5 4l4-4 4 4z'></path></svg>"); }
-
-.theme-dark th[sortable-style="sortable-desc"]:hover {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='4' viewBox='0 0 21 4'><path fill='white' fill-opacity='0.6' d='M14.5 0l-4 4-4-4z'></path></svg>"); }
+body .markdown-preview-view th,
+body .table-view-table > thead > tr > th,
+body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
+  cursor: var(--cursor);
+  background-image: none; }
 
 /* Live preview */
 .markdown-source-view.mod-cm6 th {
