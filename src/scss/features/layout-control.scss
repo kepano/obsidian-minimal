@@ -234,7 +234,7 @@ https://github.com/sponsors/kepano
 }
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
-.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview table {
+.is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
   width:100%;
   max-width:100%;
 }
