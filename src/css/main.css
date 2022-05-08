@@ -1,11 +1,13 @@
 @charset "UTF-8";
 /* Variables */
 body {
-  /* Fonts */
-  --text:var(--font-text-override),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --font-text-override:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --font-monospace-override:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
+  --font-interface-override:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --text:var(--font-text-override);
   --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  --font-monospace:var(--font-monospace-override),Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
-  --font-ui:var(--font-interface-override),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --font-monospace:var(--font-monospace-override);
+  --font-ui:var(--font-interface-override);
   --minimal-version:"You are currently using Minimal 5.2.2\a\aIf you run into any issues, try updating to the latest version of Minimal Theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
 
 :root {
