@@ -1876,18 +1876,17 @@ body .view-action svg.cross path {
   border-radius: var(--radius-m); }
 
 /* Indentation Guides (Obsidian 0.14.0+) */
+body {
+  --ig-adjust-reading:-0.7em;
+  --ig-adjust-edit:-1px; }
+
 .markdown-rendered.show-indentation-guide li > ul::before,
 .markdown-rendered.show-indentation-guide li > ol::before {
-  left: -0.66em; }
+  left: var(--ig-adjust-reading); }
 
 /* Live Preview */
 .markdown-source-view.mod-cm6 .cm-indent::before {
-  transform: translateX(-1px); }
-
-.is-mobile .markdown-rendered.show-indentation-guide li > ul::before {
-  left: -0.9em; }
-.is-mobile .markdown-rendered.show-indentation-guide li > ol::before {
-  left: -1em; }
+  transform: translateX(var(--ig-adjust-edit)); }
 
 /* Links */
 a {
@@ -9156,16 +9155,6 @@ body .popover.hover-popover:not(.is-loaded) {
     body .popover.hover-popover:not(.is-loaded) .popover-header-icon.is-active {
       color: var(--icon-color); }
 
-/* Indentation Guides plugin */
-body {
-  --indentation-guide-adjust:0px;
-  --indentation-guide-adjust-preview:0.05em ; }
-
-body.theme-light,
-body.theme-dark {
-  --indentation-guide-color:var(--background-modifier-border);
-  --indentation-guide-active-color:var(--background-modifier-border-hover); }
-
 /* Kanban plugin */
 body .kanban-plugin__markdown-preview-view {
   font-family: var(----text); }
@@ -11179,6 +11168,30 @@ settings:
         format: hex
         default-light: '#'
         default-dark: '#'
+    -
+        id: indentation-guides
+        title: Indentation guides
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: ig-adjust-reading
+        title: Horizontal adjustment in reading mode
+        type: variable-number-slider
+        default: -0.7
+        min: -1.2
+        max: 0
+        step: 0.05
+        format: em
+    -
+        id: ig-adjust-edit
+        title: Horizontal adjustment in edit mode
+        type: variable-number-slider
+        default: -1
+        min: -10
+        max: 10
+        step: 1
+        format: px
     -
         id: links
         title: Links

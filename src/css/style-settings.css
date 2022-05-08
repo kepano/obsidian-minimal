@@ -719,6 +719,30 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
+        id: indentation-guides
+        title: Indentation guides
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: ig-adjust-reading
+        title: Horizontal adjustment in reading mode
+        type: variable-number-slider
+        default: -0.7
+        min: -1.2
+        max: 0
+        step: 0.05
+        format: em
+    -
+        id: ig-adjust-edit
+        title: Horizontal adjustment in edit mode
+        type: variable-number-slider
+        default: -1
+        min: -10
+        max: 10
+        step: 1
+        format: px
+    -
         id: links
         title: Links
         type: heading

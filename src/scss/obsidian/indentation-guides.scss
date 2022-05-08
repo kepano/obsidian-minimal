@@ -1,19 +1,15 @@
 /* Indentation Guides (Obsidian 0.14.0+) */
 
+body {
+  --ig-adjust-reading:-0.7em;
+  --ig-adjust-edit:-1px;
+}
+
 .markdown-rendered.show-indentation-guide li > ul::before,
 .markdown-rendered.show-indentation-guide li > ol::before {
-  left:-0.66em;
+  left:var(--ig-adjust-reading);
 }
 /* Live Preview */
 .markdown-source-view.mod-cm6 .cm-indent::before {
-  transform:translateX(-1px);
-}
-
-.is-mobile {
-  .markdown-rendered.show-indentation-guide li > ul::before {
-    left:-0.9em;
-  }
-  .markdown-rendered.show-indentation-guide li > ol::before {
-    left:-1em;
-  }
+  transform:translateX(var(--ig-adjust-edit));
 }
