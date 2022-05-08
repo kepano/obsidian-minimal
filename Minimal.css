@@ -5690,7 +5690,15 @@ body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .
 .row-alt.markdown-source-view.mod-cm6 th:first-child,
 .row-alt.markdown-source-view.mod-cm6 td:first-child,
 .row-alt th:first-child,
-.row-alt tbody > tr > td:first-child {
+.row-alt tbody > tr > td:first-child,
+.table-lines.markdown-source-view.mod-cm6 th:first-child,
+.table-lines.markdown-source-view.mod-cm6 td:first-child,
+.table-lines thead > tr > th:first-child,
+.table-lines tbody > tr > td:first-child,
+.table-nowrap.markdown-source-view.mod-cm6 th:first-child,
+.table-nowrap.markdown-source-view.mod-cm6 td:first-child,
+.table-nowrap thead > tr > th:first-child,
+.table-nowrap tbody > tr > td:first-child {
   padding-left: 10px; }
 
 .row-alt tbody > tr:nth-child(odd),
@@ -5712,23 +5720,11 @@ body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .
   border-bottom: 1px solid var(--background-modifier-border);
   padding: 4px 10px; }
 
-.table-lines.markdown-source-view.mod-cm6 th:first-child,
-.table-lines.markdown-source-view.mod-cm6 td:first-child,
-.table-lines thead > tr > th:first-child,
-.table-lines tbody > tr > td:first-child {
-  padding-left: 10px; }
-
 .table-nowrap thead > tr > th,
 .table-nowrap tbody > tr > td {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden; }
-
-.table-nowrap.markdown-source-view.mod-cm6 th:first-child,
-.table-nowrap.markdown-source-view.mod-cm6 td:first-child,
-.table-nowrap thead > tr > th:first-child,
-.table-nowrap tbody > tr > td:first-child {
-  padding-left: 10px; }
 
 .table-numbers table {
   counter-reset: section; }
@@ -6137,7 +6133,9 @@ https://github.com/sponsors/kepano
 .table-100 table th:first-child,
 .table-100 table td:first-child,
 .table-100 .dataview.table-view-table th:first-child,
-.table-100 .dataview.table-view-table td:first-child {
+.table-100 .dataview.table-view-table td:first-child,
+.table-100 .markdown-source-view.mod-cm6 td:first-child,
+.table-100 .markdown-source-view.mod-cm6 th:first-child {
   padding-left: 20px; }
 
 .table-100 table th:last-child,

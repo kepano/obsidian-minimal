@@ -122,7 +122,9 @@ https://github.com/sponsors/kepano
 .table-100 table th:first-child,
 .table-100 table td:first-child,
 .table-100 .dataview.table-view-table th:first-child,
-.table-100 .dataview.table-view-table td:first-child {
+.table-100 .dataview.table-view-table td:first-child,
+.table-100 .markdown-source-view.mod-cm6 td:first-child,
+.table-100 .markdown-source-view.mod-cm6 th:first-child {
   padding-left:20px;
 }
 .table-100 table th:last-child,
