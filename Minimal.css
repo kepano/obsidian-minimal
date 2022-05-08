@@ -1975,7 +1975,7 @@ div > ul {
 .cm-line:not(.HyperMD-codeblock) {
   tab-size: var(--list-indent); }
 
-body:not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line {
+body:not(.is-mobile) .is-readable-line-width.mod-cm6 .HyperMD-list-line.cm-line {
   transform: translateX(calc(0.75em + var(--folding-offset))); }
 
 /* Space between list items */
