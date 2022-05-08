@@ -55,7 +55,7 @@ div > ul {
 
 }
 body:not(.is-mobile) .is-readable-line-width.mod-cm6 .HyperMD-list-line.cm-line {
-  transform: translateX(calc(0.75em + var(--folding-offset)));
+  transform: translateX(calc(0.5em + var(--folding-offset)));
 }
 
 /* Space between list items */
