@@ -84,6 +84,7 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
 }
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
+.dataview .contains-task-list, 
 .is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
   width:100%;
   max-width:100%;

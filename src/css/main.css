@@ -818,8 +818,8 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
 }
  */
 .is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
-  width: 26px !important;
-  padding-left: 4px !important; }
+  width: 30px !important;
+  padding-left: 9px !important; }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color: var(--background-primary);
@@ -6039,12 +6039,14 @@ https://github.com/sponsors/kepano
 .el-lang-dataview .block-language-dataview > h4,
 .el-lang-dataview .dataview.result-group,
 .el-lang-dataview .dataview.list-view-ul,
-.el-lang-dataview .block-language-dataview .contains-task-list,
 .el-lang-dataview .dataview.dataview-error {
   max-width: var(--max-width);
-  width: var(--line-width-adaptive);
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
   margin-left: auto;
   margin-right: auto; }
+
+.el-lang-dataview .block-language-dataview .contains-task-list {
+  max-width: 100%; }
 
 .el-table table,
 .el-lang-dataview .dataview.table-view-table {
@@ -6126,7 +6128,6 @@ https://github.com/sponsors/kepano
   max-width: 100%; }
 
 /* Folding offset */
-.el-lang-dataview .block-language-dataview > h4,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   padding-left: var(--folding-offset); }
 
@@ -6156,15 +6157,6 @@ https://github.com/sponsors/kepano
   --folding-offset:0; }
 
 /* Live Preview */
-.is-live-preview.is-readable-line-width .cm-callout {
-  padding-left: var(--folding-offset); }
-
-.is-live-preview.is-readable-line-width .mod-empty,
-.is-live-preview.is-readable-line-width .cm-embed-block > div {
-  width: var(--line-width);
-  margin: 0 auto;
-  padding-left: var(--folding-offset); }
-
 .chart-max.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-max .is-live-preview.is-readable-line-width .block-language-chart,
 .map-max.is-live-preview.is-readable-line-width .block-language-leaflet,
@@ -6191,12 +6183,6 @@ https://github.com/sponsors/kepano
   width: var(--line-width-wide) !important;
   max-width: var(--max-width);
   padding-left: 0; }
-
-/* Make sure the table fills the width of the parent dataview block,
-as opposed to regular tables */
-.is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
-  width: 100%;
-  max-width: 100%; }
 
 .chart-100.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-100 .is-live-preview.is-readable-line-width .block-language-chart,
@@ -6318,6 +6304,7 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
 
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
+.dataview .contains-task-list,
 .is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
   width: 100%;
   max-width: 100%; }
