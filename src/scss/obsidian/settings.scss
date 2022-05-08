@@ -304,7 +304,7 @@ body:not(.is-mobile) .theme-list {
         padding-top:20px;
         align-self:flex-start;
         justify-self:flex-start;
-        content: "You are currently using Minimal 5.2.0\a\aIf you run into any issues, try updating to the latest version of Minimal Theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano";
+        content: var(--minimal-version);
         color: var(--text-normal);
         font-size:var(--font-adaptive-normal);
         line-height:1.4;

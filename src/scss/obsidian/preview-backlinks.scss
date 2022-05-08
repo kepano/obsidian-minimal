@@ -52,3 +52,7 @@
 .mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane .search-result-file-title {
   font-size:calc(var(--font-adaptive-normal) - 2px);
 }
+
+.mod-root .workspace-leaf-content[data-type=markdown] .markdown-source-view .embedded-backlinks .nav-header {
+  margin-top: 0;
+}
