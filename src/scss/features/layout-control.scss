@@ -212,6 +212,7 @@ https://github.com/sponsors/kepano
 .img-max .is-live-preview.is-readable-line-width .cm-content > img {
   width:var(--max-width) !important;
   transform:none !important;
+  padding-left:0;
 }
 .chart-wide.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-wide .is-live-preview.is-readable-line-width .block-language-chart,
@@ -228,6 +229,7 @@ https://github.com/sponsors/kepano
   width:var(--line-width-wide) !important;
   max-width:var(--max-width);
   transform:none !important;
+  padding-left:0;
 }
 .chart-100.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-100 .is-live-preview.is-readable-line-width .block-language-chart,
@@ -244,6 +246,7 @@ https://github.com/sponsors/kepano
   width:100% !important;
   max-width:100% !important;
   transform:none !important;
+  padding-left:0;
 }
 
 
