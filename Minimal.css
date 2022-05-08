@@ -6205,7 +6205,7 @@ https://github.com/sponsors/kepano
 .img-100 .el-embed-image,
 .img-max .el-embed-image,
 .img-wide .el-embed-image {
-  --folding-offset:0; }
+  --folding-offset:0px; }
 
 /* Live Preview */
 .chart-max.is-live-preview.is-readable-line-width .block-language-chart,
