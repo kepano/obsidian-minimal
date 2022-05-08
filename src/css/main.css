@@ -6260,7 +6260,7 @@ as opposed to regular tables */
 /* Live Preview */
 .is-live-preview.is-readable-line-width .mod-empty,
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
-  width: var(--line-width-adaptive);
+  width: var(--line-width-adaptive) !important;
   padding-left: var(--folding-offset);
   margin: 0 auto; }
 
