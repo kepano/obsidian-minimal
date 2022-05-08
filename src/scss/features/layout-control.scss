@@ -131,37 +131,6 @@ https://github.com/sponsors/kepano
   padding-right:20px;
 }
 
-/* Folding offset */
-.el-lang-dataview .block-language-dataview > h4,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  padding-left:var(--folding-offset);
-}
-.el-table table,
-.el-lang-dataview .dataview.table-view-table {
-  max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
-}
-.embed-strict .el-embed-page p,
-.map-100 .el-lang-leaflet,
-.map-max .el-lang-leaflet,
-.map-wide .el-lang-leaflet,
-.chart-100 .el-lang-chart,
-.chart-max .el-lang-chart,
-.chart-wide .el-lang-chart,
-.table-100 .el-lang-dataview,
-.table-max .el-lang-dataview,
-.table-wide .el-lang-dataview,
-.table-100 .el-table,
-.table-max .el-table,
-.table-wide .el-table,
-.iframe-100 .el-iframe,
-.iframe-max .el-iframe,
-.iframe-wide .el-iframe,
-.img-100 .el-embed-image,
-.img-max .el-embed-image,
-.img-wide .el-embed-image {
-  --folding-offset:0;
-}
-
 /* Maps, images and iframes */
 .contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography .markdown-preview-view.is-readable-line-width.chart-max .markdown-preview-sizer > .el-lang-chart,
@@ -195,11 +164,45 @@ https://github.com/sponsors/kepano
   max-width:100%;
 }
 
+/* Folding offset */
+.el-lang-dataview .block-language-dataview > h4,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  padding-left:var(--folding-offset);
+}
+.el-table table,
+.el-lang-dataview .dataview.table-view-table {
+  max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
+}
+.embed-strict .el-embed-page p,
+.map-100 .el-lang-leaflet,
+.map-max .el-lang-leaflet,
+.map-wide .el-lang-leaflet,
+.chart-100 .el-lang-chart,
+.chart-max .el-lang-chart,
+.chart-wide .el-lang-chart,
+.table-100 .el-lang-dataview,
+.table-max .el-lang-dataview,
+.table-wide .el-lang-dataview,
+.table-100 .el-table,
+.table-max .el-table,
+.table-wide .el-table,
+.iframe-100 .el-iframe,
+.iframe-max .el-iframe,
+.iframe-wide .el-iframe,
+.img-100 .el-embed-image,
+.img-max .el-embed-image,
+.img-wide .el-embed-image {
+  --folding-offset:0;
+}
+
 /* Live Preview */
+.is-live-preview.is-readable-line-width .cm-callout {
+  padding-left:var(--folding-offset);
+}
 .is-live-preview.is-readable-line-width .mod-empty,
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
-  width:var(--line-width) !important;
-  margin:0 auto !important;
+  width:var(--line-width);
+  margin:0 auto;
   padding-left:var(--folding-offset);
 }
 .chart-max.is-live-preview.is-readable-line-width .block-language-chart,
@@ -229,7 +232,6 @@ https://github.com/sponsors/kepano
   max-width:var(--max-width);
   padding-left:0;
 }
-
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview table {
