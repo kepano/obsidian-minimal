@@ -833,7 +833,7 @@ body.is-dragging {
   padding-right: 0; }
 
 /* Gutters */
-body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters {
+body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   position: absolute !important;
   z-index: 0; }
 
@@ -6302,9 +6302,11 @@ https://github.com/sponsors/kepano
   max-width: var(--max-width); }
 
 /* Max width for readable-line length off */
-.markdown-source-view.mod-cm6 .embedded-backlinks,
-.markdown-source-view.mod-cm6 .internal-embed,
-.markdown-source-view.mod-cm6 .cm-line {
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-embed-block > div,
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .el-table,
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .embedded-backlinks,
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .internal-embed,
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-line {
   max-width: var(--max-width);
   margin: 0 auto !important; }
 

@@ -30,7 +30,9 @@
 }
 
 /* Max width for readable-line length off */
-.markdown-source-view.mod-cm6 {
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) {
+  .cm-embed-block > div,
+  .el-table,
   .embedded-backlinks,
   .internal-embed,
   .cm-line {
