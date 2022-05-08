@@ -6277,9 +6277,8 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   width: var(--line-width-adaptive);
   padding-left: var(--folding-offset); }
 
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote {
-  transform: translateX(var(--folding-offset)); }
-
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
 .is-live-preview.is-readable-line-width .cm-embed-block.cm-callout .callout,
 .is-live-preview.is-readable-line-width table {
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
@@ -6287,6 +6286,8 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   margin: 0 auto;
   padding-left: 0; }
 
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
 .is-live-preview.is-readable-line-width .el-table table {
   transform: translateX(calc(var(--folding-offset)/2)); }
 
