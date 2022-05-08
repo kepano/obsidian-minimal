@@ -488,7 +488,7 @@ body .excalidraw {
   --interactive-normal: var(--bg3);
   --interactive-accent-rgb:66, 66, 66;
   --background-active-line:rgba(255,255,255,0.04);
-  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.8);
+  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.7);
   --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
   /* Errors */
   --background-modifier-error:rgba(255,20,20,0.12);
@@ -2833,6 +2833,13 @@ button.mod-cta,
 .plugin-list-plugins .clickable-icon {
   margin: 0 10px 0 0; }
 
+.hotkey-list-container {
+  padding-right: 0; }
+
+/* Themes */
+body .modal.mod-community-theme {
+  max-width: 1000px; }
+
 .community-theme-container {
   padding-top: 10px; }
 
@@ -2840,9 +2847,6 @@ button.mod-cta,
 .hotkey-settings-container {
   height: auto;
   overflow: visible; }
-
-.hotkey-list-container {
-  padding-right: 0; }
 
 .theme-list {
   justify-content: space-evenly; }
@@ -2859,7 +2863,7 @@ button.mod-cta,
 
 .community-theme {
   padding: 0;
-  margin: 0 0 4em 0;
+  margin: 0 0 2em 0;
   align-items: stretch;
   background: transparent; }
 
@@ -2871,50 +2875,9 @@ button.mod-cta,
   background-color: var(--background-secondary);
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 0;
   flex-grow: 1;
   border-radius: 20px; }
-
-.community-theme.is-selected {
-  padding-left: 0;
-  padding-right: 0;
-  background-color: transparent;
-  color: var(--text-normal); }
-
-.community-theme.is-selected .community-theme-info + div {
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1), inset 0 0 0 2px var(--text-accent); }
-
-.community-theme.is-selected .community-theme-downloads,
-.community-theme.is-selected .community-theme-info {
-  margin-bottom: 0;
-  color: var(--text-muted); }
-
-.community-theme.is-selected .community-theme-info .clickable-icon {
-  width: 100%;
-  background-color: var(--background-tertiary);
-  border: 1px solid var(--background-modifier-border);
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  padding: 7px 0;
-  margin: 20px 0 0;
-  border-radius: 5px;
-  box-shadow: 0 1px 1px 0px var(--btn-shadow-color); }
-
-.community-theme.is-selected .community-theme-info .clickable-icon:hover {
-  border: 1px solid var(--background-modifier-border-hover);
-  box-shadow: 0 2px 3px 0px var(--btn-shadow-color); }
-
-.community-theme.is-selected .community-theme-info .clickable-icon::after {
-  content: "Documentation";
-  padding-left: 4px; }
-
-.community-theme.is-selected .modal-button-container .mod-cta {
-  background-color: var(--interactive-accent);
-  color: white; }
-
-.community-theme.is-selected .modal-button-container .mod-cta:hover {
-  background-color: var(--interactive-accent-hover); }
 
 .community-theme-info {
   line-height: 1;
@@ -2932,6 +2895,131 @@ button.mod-cta,
 
 .community-theme .community-theme-screenshot {
   max-width: 100%; }
+
+body:not(.is-mobile) .theme-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 2em; }
+  body:not(.is-mobile) .theme-list .community-theme {
+    align-self: stretch;
+    justify-self: center;
+    max-width: 100%;
+    width: 100%;
+    background-color: var(--background-secondary);
+    padding: 18px;
+    border-radius: var(--radius-l);
+    border: 2px solid transparent; }
+    body:not(.is-mobile) .theme-list .community-theme:hover {
+      border: 2px solid var(--text-accent); }
+    body:not(.is-mobile) .theme-list .community-theme.is-selected {
+      grid-column: 1/4;
+      grid-row: 1;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 1.5fr 2fr;
+      padding: 20px 20px;
+      border-radius: var(--radius-xl);
+      border-color: transparent; }
+      body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 30px 50px 440px;
+        margin: 0 40px 0 0; }
+      body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-title {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        text-align: left;
+        font-size: 2em;
+        font-weight: 500;
+        margin: 0; }
+      body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info + div {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        box-shadow: none; }
+      body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-downloads {
+        text-align: right; }
+      body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-remove-button {
+        bottom: 20px;
+        left: 0px;
+        right: auto;
+        top: auto;
+        color: var(--text-faint);
+        display: flex;
+        align-items: center; }
+        body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-remove-button:after {
+          content: 'Delete theme';
+          padding-left: 5px; }
+        body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-remove-button:hover {
+          color: var(--text-error); }
+      body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-container {
+        grid-column: 2;
+        grid-row: 1/2;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: 0; }
+        body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-container button {
+          margin: 0;
+          width: 160px;
+          height: 36px;
+          cursor: pointer; }
+        body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-container button:not(.mod-cta) {
+          display: none; }
+      body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info::after {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        padding-top: 20px;
+        align-self: flex-start;
+        justify-self: flex-start;
+        content: "You are currently using Minimal 5.2.0\a\aIf you run into any issues, try updating to the latest version of Minimal Theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano";
+        color: var(--text-normal);
+        font-size: var(--font-adaptive-normal);
+        line-height: 1.4;
+        width: 100%;
+        position: relative;
+        white-space: pre-wrap;
+        text-align: left;
+        border: none; }
+
+.community-theme-remove-button {
+  top: 15px; }
+  .community-theme-remove-button:hover {
+    color: var(--text-error); }
+
+.community-theme.is-selected {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+  color: var(--text-normal); }
+  .community-theme.is-selected .community-theme-info + div {
+    box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1), inset 0 0 0 2px var(--text-accent); }
+  .community-theme.is-selected .community-theme-downloads,
+  .community-theme.is-selected .community-theme-info {
+    margin-bottom: 0;
+    color: var(--text-muted); }
+  .community-theme.is-selected .community-theme-info .clickable-icon {
+    width: 100%;
+    background-color: var(--background-tertiary);
+    border: 1px solid var(--background-modifier-border);
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    grid-column: 1/3;
+    padding: 7px 0;
+    margin: 20px 0 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0px var(--btn-shadow-color); }
+  .community-theme.is-selected .community-theme-info .clickable-icon:hover {
+    border: 1px solid var(--background-modifier-border-hover);
+    box-shadow: 0 2px 3px 0px var(--btn-shadow-color); }
+  .community-theme.is-selected .community-theme-info .clickable-icon::after {
+    content: "Learn more";
+    padding-left: 4px; }
+  .community-theme.is-selected .modal-button-container .mod-cta {
+    background-color: var(--interactive-accent);
+    color: white; }
+  .community-theme.is-selected .modal-button-container .mod-cta:hover {
+    background-color: var(--interactive-accent-hover); }
 
 .modal.mod-settings .vertical-tab-header {
   background: var(--background-secondary);
