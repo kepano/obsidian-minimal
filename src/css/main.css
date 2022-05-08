@@ -825,6 +825,8 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   opacity: 0;
   transition: opacity 200ms;
   padding: 4px 4px 4px 9px; }
+  .markdown-source-view.mod-cm6 .edit-block-button svg {
+    margin: 0 !important; }
 
 .is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width: 30px !important;
@@ -6291,9 +6293,11 @@ https://github.com/sponsors/kepano
 
 .is-live-preview.is-readable-line-width .mod-empty,
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
+  max-width: var(--max-width);
   margin: 0 auto;
-  transform: translateX(calc(var(--folding-offset)/2)); }
+  width: var(--line-width-adaptive); }
+.is-live-preview.is-readable-line-width .cm-embed-block > div > * {
+  margin-left: var(--folding-offset); }
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width: 100%; }
@@ -8645,12 +8649,14 @@ body .table-view-table > thead > tr > th,
   border-bottom: 1px solid var(--background-modifier-border);
   cursor: var(--cursor); }
 
+/*
 ul.dataview-ul {
-  list-style: none;
-  padding-inline-start: 0;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em; }
-
+  list-style:none;
+  padding-inline-start:0;
+  margin-block-start:0.5em;
+  margin-block-end:0.5em;
+}
+*/
 .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
 .markdown-preview-view .table-view-table > tbody > tr > td {
   max-width: var(--max-col-width); }
@@ -8668,6 +8674,9 @@ ul .dataview .task-list-item:hover,
 ul .dataview .task-list-basic-item:hover {
   background-color: transparent;
   box-shadow: none; }
+
+body .dataview.result-group {
+  padding-left: 0; }
 
 /* Inline fields */
 body .dataview.inline-field-key,

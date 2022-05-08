@@ -54,6 +54,9 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   opacity:0;
   transition:opacity 200ms;
   padding:4px 4px 4px 9px;
+  svg {
+    margin:0 !important;
+  }
 }
 .is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width:30px !important;

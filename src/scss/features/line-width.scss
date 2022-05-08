@@ -64,9 +64,12 @@
 .is-live-preview.is-readable-line-width {
   .mod-empty,
   .cm-embed-block > div {
-    width:calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
+    max-width:var(--max-width);
     margin:0 auto;
-    transform:translateX(calc(var(--folding-offset)/2));
+    width:var(--line-width-adaptive);
+  }
+  .cm-embed-block > div > * {
+    margin-left:var(--folding-offset);
   }
 }
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
