@@ -55,6 +55,7 @@
     max-width:var(--max-width);
     margin:0 auto !important;
     transform:translateX(calc(var(--folding-offset)/2));
+    padding-left:0;
   }
   .dataview-error {
     transform:translateX(calc(var(--folding-offset)/2));
@@ -67,9 +68,7 @@
     max-width:var(--max-width);
     margin:0 auto;
     width:var(--line-width-adaptive);
-  }
-  .cm-embed-block > div > * {
-    margin-left:var(--folding-offset);
+    padding-left:var(--folding-offset);
   }
 }
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
