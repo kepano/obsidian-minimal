@@ -24,50 +24,51 @@
 }
 
 /* Live Preview */
-.is-live-preview.is-readable-line-width .mod-empty,
-.is-live-preview.is-readable-line-width .cm-embed-block > div {
-  width:var(--line-width-adaptive) !important;
-  padding-left:var(--folding-offset);
-  margin:0 auto;
+
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
+  max-width:var(--max-width);
+}
+
+/* Max width for readable-line length off */
+.markdown-source-view.mod-cm6 {
+  .embedded-backlinks,
+  .internal-embed,
+  .cm-line {
+    max-width:var(--max-width);
+    margin:0 auto !important;
+  }
+}
+/* Nudge everything slightly to the left to make space for folding and gutters */
+.markdown-source-view.mod-cm6.is-readable-line-width { 
+  .internal-embed,
+  .cm-content > .image-embed,
+  .cm-line,
+  .embedded-backlinks,
+  .cm-line.HyperMD-quote,
+  .cm-line.HyperMD-codeblock,
+  .cm-embed-block.cm-callout .callout,
+  .cm-content > img,
+  table {
+    width:calc(var(--line-width-adaptive) - var(--folding-offset));
+    max-width:var(--max-width);
+    margin:0 auto !important;
+    transform:translateX(calc(var(--folding-offset)/2));
+  }
+  .dataview-error {
+    transform:translateX(calc(var(--folding-offset)/2));
+    margin-top:16px;
+  }
+}
+.is-live-preview.is-readable-line-width {
+  .mod-empty,
+  .cm-embed-block > div {
+    width:calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
+    margin:0 auto;
+    transform:translateX(calc(var(--folding-offset)/2));
+  }
 }
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width:100%;
-}
-.markdown-source-view .embedded-backlinks,
-body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
-.markdown-source-view.mod-cm6 .internal-embed,
-.markdown-source-view.mod-cm6 .cm-line {
-  max-width:var(--max-width);
-  margin:0 auto !important;
-}
-body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed {
-  width:var(--line-width-adaptive);
-}
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
-  width:var(--line-width-adaptive);
-  padding-left:var(--folding-offset);
-}
-.markdown-source-view .embedded-backlinks,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
-.is-live-preview.is-readable-line-width .cm-embed-block.cm-callout .callout,
-.is-live-preview.is-readable-line-width table {
-  width:calc(var(--line-width-adaptive) - var(--folding-offset));
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding-left:0;
-}
-.is-live-preview.is-readable-line-width .cm-callout {
-  padding-left:var(--folding-offset);
-}
-.markdown-source-view .embedded-backlinks,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
-.is-live-preview.is-readable-line-width .el-table table {
-  transform:translateX(calc(var(--folding-offset)/2));
 }
 .is-live-preview.is-readable-line-width .list-view-ul,
 .contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
@@ -76,16 +77,10 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   transform:translateX(calc(0.75em - var(--folding-offset)));
   margin:0 auto !important;
 }
-.is-live-preview.is-readable-line-width .cm-content > .image-embed {
-  width:var(--line-width-adaptive);
-  max-width:var(--max-width);
-  margin:0 auto !important;
-  padding-left:var(--folding-offset);
-}
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
-.dataview .contains-task-list, 
 .is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
   width:100%;
   max-width:100%;
+  transform:none;
 }

@@ -4,10 +4,21 @@
   --folding-offset:16px;
 }
 
-.is-mobile {
-  --folding-offset:0;
+@media (max-width:400pt) {
+  .is-mobile {
+    --folding-offset:0;
+  }
 }
 
 body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
   padding-left:var(--folding-offset);
 }
+
+/*
+.is-mobile .cm-editor .cm-line,
+.is-mobile .workspace-drawer-tab-container > *,
+body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .view-header-title,
+.minimal-folding.is-mobile .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
+.minimal-folding.is-mobile .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
+  padding:0;
+}*/

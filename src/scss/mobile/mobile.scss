@@ -23,14 +23,6 @@ body.is-mobile {
   padding:0 !important;
 }
 
-.is-mobile .cm-editor .cm-line,
-.is-mobile .workspace-drawer-tab-container > *,
-body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .view-header-title,
-.minimal-folding.is-mobile .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding.is-mobile .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
-  padding:0;
-}
-
 .is-mobile {
 
   .titlebar {

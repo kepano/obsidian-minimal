@@ -28,6 +28,20 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
 .cm-editor .cm-lineNumbers .cm-gutterElement {
   min-width:25px;
 }
+/* Line numbers */
+@media (max-width:400pt) {
+  .cm-editor .cm-lineNumbers .cm-gutterElement {
+    padding-right:4px;
+    padding-left:8px;
+  }
+}
+.cm-editor .cm-lineNumbers .cm-gutterElement {
+  font-variant-numeric:tabular-nums;
+}
+.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
+.cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
+  color:var(--text-muted);
+}
 
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
@@ -41,14 +55,10 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
   transition:opacity 200ms;
   padding:4px 4px 4px 9px;
 }
-/* if line numbers are on
-.markdown-source-view.mod-cm6 .edit-block-button {
-  left:30px;
-}
- */
 .is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width:30px !important;
   padding-left:9px !important;
+  transform:none !important;
 }
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color:var(--background-primary);
@@ -69,15 +79,6 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
 }
 .markdown-source-view.mod-cm6 .cm-embed-block:hover {
   border:0;
-}
-
-/* Line numbers */
-.cm-editor .cm-lineNumbers .cm-gutterElement {
-  font-variant-numeric:tabular-nums;
-}
-.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
-.cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
-  color:var(--text-muted);
 }
 
 /* Live Preview folding */

@@ -840,6 +840,18 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
 .cm-editor .cm-lineNumbers .cm-gutterElement {
   min-width: 25px; }
 
+/* Line numbers */
+@media (max-width: 400pt) {
+  .cm-editor .cm-lineNumbers .cm-gutterElement {
+    padding-right: 4px;
+    padding-left: 8px; } }
+.cm-editor .cm-lineNumbers .cm-gutterElement {
+  font-variant-numeric: tabular-nums; }
+
+.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
+.cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
+  color: var(--text-muted); }
+
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
   cursor: var(--cursor);
@@ -852,14 +864,10 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
   transition: opacity 200ms;
   padding: 4px 4px 4px 9px; }
 
-/* if line numbers are on
-.markdown-source-view.mod-cm6 .edit-block-button {
-  left:30px;
-}
- */
 .is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width: 30px !important;
-  padding-left: 9px !important; }
+  padding-left: 9px !important;
+  transform: none !important; }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color: var(--background-primary);
@@ -880,14 +888,6 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
 
 .markdown-source-view.mod-cm6 .cm-embed-block:hover {
   border: 0; }
-
-/* Line numbers */
-.cm-editor .cm-lineNumbers .cm-gutterElement {
-  font-variant-numeric: tabular-nums; }
-
-.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
-.cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
-  color: var(--text-muted); }
 
 /* Live Preview folding */
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
@@ -5661,12 +5661,20 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
 :root {
   --folding-offset:16px; }
 
-.is-mobile {
-  --folding-offset:0; }
-
+@media (max-width: 400pt) {
+  .is-mobile {
+    --folding-offset:0; } }
 body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
   padding-left: var(--folding-offset); }
 
+/*
+.is-mobile .cm-editor .cm-line,
+.is-mobile .workspace-drawer-tab-container > *,
+body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .view-header-title,
+.minimal-folding.is-mobile .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
+.minimal-folding.is-mobile .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
+  padding:0;
+}*/
 /* Full width media  */
 .full-width-media .markdown-preview-view .image-embed img:not([width]),
 .full-width-media .image-embed img:not([width]),
@@ -6206,9 +6214,11 @@ https://github.com/sponsors/kepano
 .table-max.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .table-max .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed {
+.img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-max.is-live-preview.is-readable-line-width .cm-content > img,
+.img-max .is-live-preview.is-readable-line-width .cm-content > img {
   width: var(--max-width) !important;
-  padding-left: 0; }
+  transform: none !important; }
 
 .chart-wide.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-wide .is-live-preview.is-readable-line-width .block-language-chart,
@@ -6219,10 +6229,12 @@ https://github.com/sponsors/kepano
 .table-wide.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .table-wide .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed {
+.img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-wide.is-live-preview.is-readable-line-width .cm-content > img,
+.img-wide .is-live-preview.is-readable-line-width .cm-content > img {
   width: var(--line-width-wide) !important;
   max-width: var(--max-width);
-  padding-left: 0; }
+  transform: none !important; }
 
 .chart-100.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-100 .is-live-preview.is-readable-line-width .block-language-chart,
@@ -6233,10 +6245,12 @@ https://github.com/sponsors/kepano
 .table-100.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .table-100 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
 .img-100.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed {
+.img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100.is-live-preview.is-readable-line-width .cm-content > img,
+.img-100 .is-live-preview.is-readable-line-width .cm-content > img {
   width: 100% !important;
   max-width: 100% !important;
-  padding-left: 0; }
+  transform: none !important; }
 
 /* Mobile */
 @media (max-width: 400pt) {
@@ -6284,50 +6298,42 @@ https://github.com/sponsors/kepano
   max-width: var(--max-width); }
 
 /* Live Preview */
-.is-live-preview.is-readable-line-width .mod-empty,
-.is-live-preview.is-readable-line-width .cm-embed-block > div {
-  width: var(--line-width-adaptive) !important;
-  padding-left: var(--folding-offset);
-  margin: 0 auto; }
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
+  max-width: var(--max-width); }
 
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
-  max-width: 100%; }
-
-.markdown-source-view .embedded-backlinks,
-body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
+/* Max width for readable-line length off */
+.markdown-source-view.mod-cm6 .embedded-backlinks,
 .markdown-source-view.mod-cm6 .internal-embed,
 .markdown-source-view.mod-cm6 .cm-line {
   max-width: var(--max-width);
   margin: 0 auto !important; }
 
-body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed {
-  width: var(--line-width-adaptive); }
-
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
-  width: var(--line-width-adaptive);
-  padding-left: var(--folding-offset); }
-
-.markdown-source-view .embedded-backlinks,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
-.is-live-preview.is-readable-line-width .cm-embed-block.cm-callout .callout,
-.is-live-preview.is-readable-line-width table {
+/* Nudge everything slightly to the left to make space for folding and gutters */
+.markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > .image-embed,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+.markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout .callout,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img,
+.markdown-source-view.mod-cm6.is-readable-line-width table {
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: var(--max-width);
-  margin: 0 auto;
-  padding-left: 0; }
-
-.is-live-preview.is-readable-line-width .cm-callout {
-  padding-left: var(--folding-offset); }
-
-.markdown-source-view .embedded-backlinks,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
-.is-live-preview.is-readable-line-width .el-table table {
+  margin: 0 auto !important;
   transform: translateX(calc(var(--folding-offset)/2)); }
+.markdown-source-view.mod-cm6.is-readable-line-width .dataview-error {
+  transform: translateX(calc(var(--folding-offset)/2));
+  margin-top: 16px; }
+
+.is-live-preview.is-readable-line-width .mod-empty,
+.is-live-preview.is-readable-line-width .cm-embed-block > div {
+  width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
+  margin: 0 auto;
+  transform: translateX(calc(var(--folding-offset)/2)); }
+
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
+  max-width: 100%; }
 
 .is-live-preview.is-readable-line-width .list-view-ul,
 .contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
@@ -6336,18 +6342,12 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   transform: translateX(calc(0.75em - var(--folding-offset)));
   margin: 0 auto !important; }
 
-.is-live-preview.is-readable-line-width .cm-content > .image-embed {
-  width: var(--line-width-adaptive);
-  max-width: var(--max-width);
-  margin: 0 auto !important;
-  padding-left: var(--folding-offset); }
-
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
-.dataview .contains-task-list,
 .is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  transform: none; }
 
 /* Links and underline handling*/
 body:not(.links-int-on) a[href*="obsidian://"],
@@ -6733,13 +6733,6 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 /* Padding reset */
 body.is-mobile {
   padding: 0 !important; }
-
-.is-mobile .cm-editor .cm-line,
-.is-mobile .workspace-drawer-tab-container > *,
-body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .view-header-title,
-.minimal-folding.is-mobile .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding.is-mobile .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
-  padding: 0; }
 
 .is-mobile {
   /* Folding on mobile */ }
