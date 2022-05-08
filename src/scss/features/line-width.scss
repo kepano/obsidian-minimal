@@ -36,7 +36,6 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   margin:0 auto !important;
 }
 
-.markdown-source-view .embedded-backlinks,
 body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed {
   width:var(--line-width-adaptive);
@@ -46,6 +45,7 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   width:var(--line-width-adaptive);
   padding-left:var(--folding-offset);
 }
+.markdown-source-view .embedded-backlinks,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
 .is-live-preview.is-readable-line-width .cm-embed-block.cm-callout .callout,
@@ -55,6 +55,7 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   margin:0 auto;
   padding-left:0;
 }
+.markdown-source-view .embedded-backlinks,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
 .is-live-preview.is-readable-line-width .el-table table {
