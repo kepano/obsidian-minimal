@@ -32,10 +32,17 @@
 .table-lines tbody > tr > td:first-child {
   padding-left:10px;
 }
+.table-nowrap thead > tr > th,
 .table-nowrap tbody > tr > td {
   white-space:nowrap;
   text-overflow:ellipsis;
   overflow:hidden;
+}
+.table-nowrap.markdown-source-view.mod-cm6 th:first-child,
+.table-nowrap.markdown-source-view.mod-cm6 td:first-child,
+.table-nowrap thead > tr > th:first-child,
+.table-nowrap tbody > tr > td:first-child {
+  padding-left:10px;
 }
 .table-numbers table {
   counter-reset:section;

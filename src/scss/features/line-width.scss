@@ -30,17 +30,20 @@
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
 .markdown-source-view.mod-cm6 .internal-embed,
+body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
 .markdown-source-view.mod-cm6 .cm-line {
   max-width:var(--max-width);
   margin:0 auto !important;
 }
+body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed {
   width:var(--line-width-adaptive);
 }
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
   width:var(--line-width-adaptive);
-  padding-left:var(--folding-offset) !important;
-  text-indent:0 !important;
+  padding-left:var(--folding-offset);
+  text-indent:0;
   &.HyperMD-quote {
     transform:translateX(var(--folding-offset));
   }

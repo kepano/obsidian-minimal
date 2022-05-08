@@ -841,10 +841,10 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
   background-color: var(--background-primary);
   top: 0;
   right: auto;
-  left: 5px;
+  left: 0px;
   opacity: 0;
   transition: opacity 200ms;
-  padding: 4px; }
+  padding: 4px 4px 4px 9px; }
 
 /* if line numbers are on
 .markdown-source-view.mod-cm6 .edit-block-button {
@@ -5608,10 +5608,17 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 .table-lines tbody > tr > td:first-child {
   padding-left: 10px; }
 
+.table-nowrap thead > tr > th,
 .table-nowrap tbody > tr > td {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden; }
+
+.table-nowrap.markdown-source-view.mod-cm6 th:first-child,
+.table-nowrap.markdown-source-view.mod-cm6 td:first-child,
+.table-nowrap thead > tr > th:first-child,
+.table-nowrap tbody > tr > td:first-child {
+  padding-left: 10px; }
 
 .table-numbers table {
   counter-reset: section; }
@@ -6194,17 +6201,21 @@ as opposed to regular tables */
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
 .markdown-source-view.mod-cm6 .internal-embed,
+body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
 .markdown-source-view.mod-cm6 .cm-line {
   max-width: var(--max-width);
   margin: 0 auto !important; }
 
+body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed {
   width: var(--line-width-adaptive); }
 
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line {
   width: var(--line-width-adaptive);
-  padding-left: var(--folding-offset) !important;
-  text-indent: 0 !important; }
+  padding-left: var(--folding-offset);
+  text-indent: 0; }
+  .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed.HyperMD-quote,
   .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote {
     transform: translateX(var(--folding-offset)); }
 

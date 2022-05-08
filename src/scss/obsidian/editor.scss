@@ -36,10 +36,10 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6.is-readable-line-width .cm-gu
   background-color:var(--background-primary);
   top:0;
   right:auto;
-  left:5px;
+  left:0px;
   opacity:0;
   transition:opacity 200ms;
-  padding:4px;
+  padding:4px 4px 4px 9px;
 }
 /* if line numbers are on
 .markdown-source-view.mod-cm6 .edit-block-button {
