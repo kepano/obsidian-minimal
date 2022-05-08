@@ -24,6 +24,12 @@
 }
 
 /* Live Preview */
+.is-live-preview.is-readable-line-width .mod-empty,
+.is-live-preview.is-readable-line-width .cm-embed-block > div {
+  width:var(--line-width-adaptive);
+  padding-left:var(--folding-offset);
+  margin:0 auto;
+}
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width:100%;
 }
@@ -35,7 +41,6 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   max-width:var(--max-width);
   margin:0 auto !important;
 }
-
 body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .internal-embed {
   width:var(--line-width-adaptive);
@@ -55,6 +60,9 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   margin:0 auto;
   padding-left:0;
 }
+.is-live-preview.is-readable-line-width .cm-callout {
+  padding-left:var(--folding-offset);
+}
 .markdown-source-view .embedded-backlinks,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
@@ -73,4 +81,10 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   max-width:var(--max-width);
   margin:0 auto !important;
   padding-left:var(--folding-offset);
+}
+/* Make sure the table fills the width of the parent dataview block,
+as opposed to regular tables */
+.is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
+  width:100%;
+  max-width:100%;
 }

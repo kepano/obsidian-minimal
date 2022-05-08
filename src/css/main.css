@@ -2414,20 +2414,22 @@ iframe {
   margin-top: 0; }
 
 /* Embedded searches */
-.markdown-preview-view .internal-query.is-embed {
+.internal-query {
   border-top: none;
   border-bottom: none; }
 
-.markdown-preview-view .internal-query.is-embed .internal-query-header {
-  justify-content: start; }
+.internal-query .internal-query-header {
+  padding-top: 10px;
+  justify-content: left;
+  border-top: 1px solid var(--ui1); }
 
-.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
+.internal-query .internal-query-header-title {
   font-weight: 500;
   color: var(--text-normal);
-  font-size: var(--h2); }
+  font-size: var(--text-adaptive-normal); }
 
-.internal-query.is-embed .search-result-file-matches {
-  border-bottom: 0; }
+.internal-query .search-result-container {
+  border-bottom: 1px solid var(--ui1); }
 
 /* Default ribbon sidedock icons */
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,
@@ -6256,6 +6258,12 @@ as opposed to regular tables */
   max-width: var(--max-width); }
 
 /* Live Preview */
+.is-live-preview.is-readable-line-width .mod-empty,
+.is-live-preview.is-readable-line-width .cm-embed-block > div {
+  width: var(--line-width-adaptive);
+  padding-left: var(--folding-offset);
+  margin: 0 auto; }
+
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width: 100%; }
 
@@ -6286,6 +6294,9 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   margin: 0 auto;
   padding-left: 0; }
 
+.is-live-preview.is-readable-line-width .cm-callout {
+  padding-left: var(--folding-offset); }
+
 .markdown-source-view .embedded-backlinks,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-quote,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line.HyperMD-codeblock,
@@ -6304,6 +6315,12 @@ body:not(.zoom-off) .markdown-source-view.mod-cm6 .cm-content > img,
   max-width: var(--max-width);
   margin: 0 auto !important;
   padding-left: var(--folding-offset); }
+
+/* Make sure the table fills the width of the parent dataview block,
+as opposed to regular tables */
+.is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
+  width: 100%;
+  max-width: 100%; }
 
 /* Links and underline handling*/
 body:not(.links-int-on) a[href*="obsidian://"],

@@ -1,17 +1,19 @@
 /* Embedded searches */
 
-.markdown-preview-view .internal-query.is-embed {
+.internal-query {
   border-top:none;
   border-bottom:none;
 }
-.markdown-preview-view .internal-query.is-embed .internal-query-header {
-  justify-content:start;
+.internal-query .internal-query-header {
+  padding-top:10px;
+  justify-content:left;
+  border-top:1px solid var(--ui1);
 }
-.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
+.internal-query .internal-query-header-title {
   font-weight:500;
   color:var(--text-normal);
-  font-size:var(--h2);
+  font-size:var(--text-adaptive-normal);
 }
-.internal-query.is-embed .search-result-file-matches {
-  border-bottom:0;
+.internal-query .search-result-container {
+  border-bottom:1px solid var(--ui1);
 }
