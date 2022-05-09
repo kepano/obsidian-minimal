@@ -1,5 +1,9 @@
 /* Preview mode tables */
 
+body {
+  --table-font-size:calc(var(--font-adaptive-normal) - 2px);
+}
+
 .markdown-source-view.mod-cm6 table {
   border-collapse:collapse; 
 }
@@ -16,13 +20,13 @@
 
 .markdown-source-view.mod-cm6 td,
 .markdown-preview-view td {
-  font-size:calc(var(--font-adaptive-normal) - 2px);
+  font-size:var(--table-font-size);
 }
 
 .markdown-source-view.mod-cm6 th,
 .markdown-preview-view th {
   font-weight:400;
-  font-size:calc(var(--font-adaptive-normal) - 2px);
+  font-size:var(--table-font-size);
   color:var(--text-muted);
   border-top:none;
   text-align:left;
@@ -49,10 +53,9 @@
 
 
 /* Legacy Editor Tables */
-
 .CodeMirror pre.HyperMD-table-row {
   font-family:var(--font-monospace);
-  font-size:calc(var(--font-adaptive-normal) - 2px);
+  font-size:var(--table-font-size);
 }
 
 /* Live Preview Tables */
@@ -62,7 +65,7 @@
 }
 
 .cm-s-obsidian .HyperMD-table-row {
-  font-size: calc(var(--font-adaptive-normal) - 2px);
+  font-size:var(--table-font-size);
 }
 .cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep,
 .cm-hmd-table-sep-dummy {

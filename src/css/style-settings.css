@@ -865,6 +865,66 @@ settings:
         default: 240
         format: pt
     -
+        id: tables
+        title: Tables
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: table-font-size
+        title: Table font size
+        description: All of the following settings apply to all tables globally. To turn on these features on a per-note basis use helper classes. See documentation.
+        type: variable-text
+        default: 1em
+    -
+        id: row-lines
+        title: Row lines
+        description: Display borders between table rows globally
+        type: class-toggle
+        default: false
+    -
+        id: col-lines
+        title: Column lines
+        description: Display borders between table columns globally
+        type: class-toggle
+        default: false
+    -
+        id: table-lines
+        title: Cell lines
+        description: Display borders around all table cells globally
+        type: class-toggle
+        default: false 
+    -
+        id: row-alt
+        title: Striped rows
+        description: Display striped background to alternating table rows globally
+        type: class-toggle
+        default: false
+    -
+        id: col-alt
+        title: Striped columns
+        description: Display striped background to alternating table columns globally
+        type: class-toggle
+        default: false
+    -
+        id: table-tabular
+        title: Tabular figures
+        description: Use fixed width numbers in tables globally
+        type: class-toggle
+        default: false
+    -
+        id: table-numbers
+        title: Row numbers
+        description: Display row numbers to tables globally
+        type: class-toggle
+        default: false
+    -
+        id: table-nowrap
+        title: Turn off line wrap
+        description: Disable line wrapping in table cells globally
+        type: class-toggle
+        default: false
+    -
         id: tags
         title: Tags
         type: heading
