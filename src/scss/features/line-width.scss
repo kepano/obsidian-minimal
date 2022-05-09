@@ -23,8 +23,15 @@
   max-width:var(--max-width);
 }
 
-/* Live Preview */
+/* Readable line width turned off, requires Minimal plugin 5.2.1+ */
+.minimal-readable-off .view-header-title-container {
+  width:var(--max-width);
+}
+body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
+  padding-left:0;
+}
 
+/* Live Preview */
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   max-width:var(--max-width);
 }
