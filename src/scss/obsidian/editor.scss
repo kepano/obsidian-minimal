@@ -96,7 +96,6 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   cursor:var(--cursor);
 }
-
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
   right:6px;
 }
@@ -122,7 +121,8 @@ ul>li.is-collapsed::marker,
 .markdown-source-view.mod-cm6 .cm-line:hover .cm-fold-indicator .collapse-indicator,
 .markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
-.markdown-source-view.mod-cm6 .fold-gutter:hover {
+.markdown-source-view.mod-cm6 .fold-gutter:hover,
+.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator svg {
   opacity:1;
 }
 

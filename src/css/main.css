@@ -890,7 +890,8 @@ ul > li.is-collapsed::marker,
 .markdown-source-view.mod-cm6 .cm-line:hover .cm-fold-indicator .collapse-indicator,
 .markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
-.markdown-source-view.mod-cm6 .fold-gutter:hover {
+.markdown-source-view.mod-cm6 .fold-gutter:hover,
+.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator svg {
   opacity: 1; }
 
 /* Live Preview text selection */
