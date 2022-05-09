@@ -6085,7 +6085,6 @@ https://github.com/sponsors/kepano
   max-width: 100%;
   overflow-x: scroll; }
 
-.el-table,
 .el-lang-dataview .block-language-dataview > h4,
 .el-lang-dataview .dataview.result-group,
 .el-lang-dataview .dataview.list-view-ul,
@@ -6093,7 +6092,8 @@ https://github.com/sponsors/kepano
   max-width: var(--max-width);
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  --folding-offset:16px; }
 
 .el-lang-dataview .block-language-dataview .contains-task-list {
   max-width: 100%; }
