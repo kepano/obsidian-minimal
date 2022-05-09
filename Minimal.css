@@ -9356,7 +9356,8 @@ body .kanban-plugin__lane-items {
 
 body .kanban-plugin__item-input-wrapper {
   border: 0;
-  padding-top: 1px; }
+  padding-top: 1px;
+  flex-grow: 1; }
 
 body .kanban-plugin__item-form,
 body .kanban-plugin__item-button-wrapper {
