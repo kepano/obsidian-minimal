@@ -1,4 +1,9 @@
 /* Banner plugin */
+.cm-line.has-banner {
+	width:100% !important;
+	max-width:100% !important;
+	transform:none !important;
+}
 .obsidian-banner.solid {
 	border-bottom:var(--border-width) solid var(--background-divider);
 }
