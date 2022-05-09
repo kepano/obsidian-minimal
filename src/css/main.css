@@ -6273,7 +6273,7 @@ body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.p
 
 /* Live Preview */
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
-  max-width: var(--max-width); }
+  max-width: calc(var(--max-width) - var(--folding-offset)); }
 
 /* Max width for readable-line length off */
 .markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-embed-block > div,
@@ -6292,6 +6292,7 @@ body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.p
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout .callout,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img,
 .markdown-source-view.mod-cm6.is-readable-line-width table {
   width: calc(var(--line-width-adaptive) - var(--folding-offset));

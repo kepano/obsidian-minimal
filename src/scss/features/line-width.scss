@@ -33,7 +33,7 @@ body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.p
 
 /* Live Preview */
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
-  max-width:var(--max-width);
+  max-width:calc(var(--max-width) - var(--folding-offset));
 }
 
 /* Max width for readable-line length off */
@@ -56,6 +56,7 @@ body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.p
   .cm-line.HyperMD-quote,
   .cm-line.HyperMD-codeblock,
   .cm-embed-block.cm-callout .callout,
+  .cm-html-embed,
   .cm-content > img,
   table {
     width:calc(var(--line-width-adaptive) - var(--folding-offset));
