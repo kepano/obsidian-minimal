@@ -1197,6 +1197,11 @@ settings:
         description: Turns off click/hold to zoom images
         type: class-toggle
     -
+        id: window-title-on
+        title: Display window title
+        description: Display title in the window frame
+        type: class-toggle
+    -
         id: cursor
         title: Cursor style
         description: The cursor style for UI elements

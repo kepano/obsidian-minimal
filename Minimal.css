@@ -3661,11 +3661,13 @@ body.hider-frameless .titlebar {
   opacity: 1; }
 
 .titlebar-text {
-  display: none;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 6px;
-  color: var(--text-muted);
+  color: var(--text-normal);
   letter-spacing: inherit; }
+
+body:not(.window-title-on) .titlebar-text {
+  display: none; }
 
 .titlebar-button:hover {
   opacity: 1;
@@ -11647,6 +11649,11 @@ settings:
         id: zoom-off
         title: Disable image zoom
         description: Turns off click/hold to zoom images
+        type: class-toggle
+    -
+        id: window-title-on
+        title: Display window title
+        description: Display title in the window frame
         type: class-toggle
     -
         id: cursor

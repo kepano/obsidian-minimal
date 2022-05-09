@@ -34,11 +34,13 @@ body.hider-frameless .titlebar {
   opacity:1;
 }
 .titlebar-text {
-  display:none;
-  font-weight:500;
+  font-weight:600;
   padding-top:6px;
-  color:var(--text-muted);
+  color:var(--text-normal);
   letter-spacing:inherit;
+}
+body:not(.window-title-on) .titlebar-text {
+  display:none;
 }
 .titlebar-button:hover {
   opacity:1;
