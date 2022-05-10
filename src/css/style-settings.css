@@ -164,7 +164,7 @@ settings:
         type: class-toggle
         default: false
     - 
-        id: background-active-line
+        id: active-line-bg
         title: Active line background
         description: Using a low opacity color is recommended to avoid conflicting with highlights
         type: variable-themed-color
@@ -920,8 +920,8 @@ settings:
         default: false
     -
         id: table-nowrap
-        title: Turn off line wrap
-        description: Disable line wrapping in table cells globally
+        title: Disable line wrap
+        description: Turn off line wrapping in table cells globally
         type: class-toggle
         default: false
     -

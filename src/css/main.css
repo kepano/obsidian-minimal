@@ -436,7 +436,7 @@ body .excalidraw {
 body .excalidraw {
   --interactive-normal: var(--bg1);
   --interactive-accent-rgb:220, 220, 220;
-  --background-active-line:rgba(0,0,0,0.035);
+  --active-line-bg:rgba(0,0,0,0.035);
   --background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 50%),calc(var(--base-l) - 7%),0.7);
   --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
   /* Errors */
@@ -450,7 +450,7 @@ body .excalidraw {
 .excalidraw.theme--dark {
   --interactive-normal: var(--bg3);
   --interactive-accent-rgb:66, 66, 66;
-  --background-active-line:rgba(255,255,255,0.04);
+  --active-line-bg:rgba(255,255,255,0.04);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.7);
   --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
   /* Errors */
@@ -477,7 +477,7 @@ body .excalidraw {
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
   --modal-border: var(--ui2);
-  --background-active-line:rgba(255,255,255,0.085);
+  --active-line-bg:rgba(255,255,255,0.085);
   --background-modifier-form-field: var(--bg3);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
   --background-modifier-box-shadow:rgba(0, 0, 0, 1); }
@@ -4106,8 +4106,8 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
 /* Active line highlight */
 .active-line-on .cm-line.cm-active,
 .active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
-  background-color: var(--background-active-line);
-  box-shadow: -25vw 0px var(--background-active-line), 25vw 0 var(--background-active-line); }
+  background-color: var(--active-line-bg);
+  box-shadow: -25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg); }
 
 .borders-low {
   --border-width:0px;
