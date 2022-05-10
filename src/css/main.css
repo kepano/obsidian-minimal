@@ -5792,6 +5792,15 @@ img[src$="#outline"],
 span[src$="#outline"] img {
   border: 1px solid var(--ui1); }
 
+/* Interface */
+img[src$="#interface"],
+span[src$="#interface"] img {
+  border: 1px solid var(--ui1);
+  box-shadow: 0px 0.5px 0.9px rgba(0, 0, 0, 0.021), 0px 1.3px 2.5px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.039), 0px 10px 20px rgba(0, 0, 0, 0.06);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  radius: var(--radius-m); }
+
 /* MIT License | Copyright (c) Stephan Ango (@kepano) 
 
 Image Grid snippet for Obsidian
