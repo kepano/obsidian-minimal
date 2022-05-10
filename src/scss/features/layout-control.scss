@@ -144,7 +144,7 @@ https://github.com/sponsors/kepano
 }
 
 /* Folding offset */
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   padding-left:var(--folding-offset);
 }
 .is-readable-line-width .el-table table,
