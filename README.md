@@ -22,6 +22,7 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 - [Hotkeys](#hotkeys)
 - [Contributing](#contributing)
 - [Developers](#developers)
+- [License](#license)
 - [Disclaimer](#disclaimer)
 
 ## Goals
@@ -313,9 +314,9 @@ npx grunt
 
 This builds two files, the `obsidian.css` distribution file (for the community themes store) which is minified and also copied to your vault for live reload, and the `Minimal.css` file which is an unminified copy saved to the project root.
 
-### License
+## License
 
-#### Minimal for Desktop and Mobile
+### Minimal for Desktop and Mobile
 
 Minimal for Obsidian apps is licensed under the MIT License which allows you to modify and redistribute the code, however you must preserve the copyright and license notice in your CSS file. This includes any code you may extract as standalone snippets.
 
@@ -323,7 +324,7 @@ Minimal for Obsidian apps is licensed under the MIT License which allows you to 
 
 Minimal is frequently updated to stay current with the latest version of Obsidian. To make it easy to stay current with the latest improvements, I recommend using [Github's fork feature](https://docs.github.com/en/get-started/quickstart/fork-a-repo) so that you can merge the latest changes into your fork. If you have any questions don't hesitate to reach me in the Obsidian Discord group. 
 
-#### Minimal for Obsidian Publish
+### Minimal for Obsidian Publish
 
 Minimal for Obsidian Publish is a separate version of Minimal, which follows the same design guidelines but is optimized for web. Licensing Minimal for web-based publishing requires a paid license. Licenses are not yet available, but you can test Minimal for Obsidian Publish on [the Minimal site](https://minimal.guide/Home).
 
