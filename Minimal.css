@@ -9292,6 +9292,9 @@ body .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
   border: 1px dashed var(--background-modifier-border);
   height: 2em; }
 
+body .kanban-plugin__item-postfix-button-wrapper {
+  align-self: flex-start; }
+
 body .kanban-plugin__item button.kanban-plugin__item-prefix-button.is-enabled,
 body .kanban-plugin__item button.kanban-plugin__item-postfix-button.is-enabled,
 body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled {
