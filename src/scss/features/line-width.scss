@@ -1,14 +1,6 @@
 /* Custom line width */
 
-/* Readable line width off */
-.markdown-preview-view .markdown-preview-sizer,
-.markdown-source-view .CodeMirror {
-  max-width:90%;
-  margin:0 auto;
-}
-.is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
-  padding-right:0;
-}
+
 
 /* With readable line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
@@ -23,12 +15,30 @@
   max-width:var(--max-width);
 }
 
-/* Readable line width turned off, requires Minimal plugin 5.2.1+ */
+
+/* Readable line width off */
+.markdown-preview-view .markdown-preview-sizer {
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding-left:var(--folding-offset);
+}
+.is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
+  padding-right:0;
+}
+
+/* Requires Minimal plugin 5.2.1+ */
 .minimal-readable-off .view-header-title-container {
   width:var(--max-width);
 }
-body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
-  padding-left:0;
+
+/* Max width for readable-line length off */
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-contentContainer {
+  max-width:var(--max-width);
+  margin:0 0 0 calc(50% - var(--max-width)/2) !important;
+  padding-left:var(--folding-offset);
+}
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+  contain:unset;
 }
 
 /* Live Preview */
@@ -36,17 +46,6 @@ body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.p
   max-width:calc(var(--max-width) - var(--folding-offset));
 }
 
-/* Max width for readable-line length off */
-.markdown-source-view.mod-cm6:not(.is-readable-line-width) {
-  .cm-embed-block > div,
-  .el-table,
-  .embedded-backlinks,
-  .internal-embed,
-  .cm-line {
-    max-width:var(--max-width);
-    margin:0 auto !important;
-  }
-}
 /* Nudge everything slightly to the left to make space for folding and gutters */
 .markdown-source-view.mod-cm6.is-readable-line-width { 
   .internal-embed,
@@ -57,7 +56,7 @@ body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.p
   .cm-line.HyperMD-codeblock,
   .cm-embed-block.cm-callout .callout,
   .cm-html-embed,
-  .cm-content > img,
+  .cm-content > img:not([width]),
   table {
     width:calc(var(--line-width-adaptive) - var(--folding-offset));
     max-width:var(--max-width);
@@ -67,6 +66,12 @@ body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.p
   }
   .dataview-error {
     margin-top:16px;
+  }
+  .cm-content > img[width] {
+    margin-left:max(
+      calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
+      calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
+    max-width:var(--max-width);
   }
 }
 .is-live-preview.is-readable-line-width {

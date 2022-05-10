@@ -8,7 +8,7 @@ body {
   --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   --font-monospace:var(--font-monospace-override);
   --font-ui:var(--font-interface-override);
-  --minimal-version:"You are currently using Minimal 5.2.4\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
+  --minimal-version:"You are currently using Minimal 5.2.5\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
 
 :root {
   /* Cursor */
@@ -559,7 +559,7 @@ body {
   color: var(--text-faint); }
 
 /* Callouts */
-.is-live-preview .cm-callout .callout {
+.is-live-preview.is-readable-line-width .cm-callout .callout {
   max-width: var(--max-width);
   margin: 0 auto; }
 
@@ -654,6 +654,7 @@ body.minimal-strike-lists li[data-task="x"].task-list-item.is-checked {
 
 /* Code blocks */
 /* Live Preview */
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-editor .HyperMD-codeblock.cm-line,
 .mod-cm6 .cm-editor .HyperMD-codeblock.cm-line {
   padding-left: 10px;
   padding-right: 10px; }
@@ -832,6 +833,12 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   width: 30px !important;
   padding-left: 9px !important;
   transform: none !important; }
+
+.is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
+  width: 30px !important;
+  padding-left: 0px !important;
+  transform: none !important;
+  left: calc(var(--folding-offset) * -2); }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color: var(--background-primary);
@@ -5748,10 +5755,12 @@ tbody > tr > td,
 
 /* Dark mode images  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
+.theme-dark .markdown-source-view img,
 .theme-dark .markdown-preview-view img {
   opacity: 0.75;
   transition: opacity 0.25s linear; }
 
+.theme-dark .markdown-source-view img:hover,
 .theme-dark .markdown-preview-view img:hover {
   opacity: 1;
   transition: opacity 0.25s linear; }
@@ -5996,7 +6005,7 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-reading-view > .markdown-preview-view {
   padding-top: 15px; }
 
-.contextual-typography .markdown-preview-view.markdown-preview-view .markdown-preview-sizer {
+.contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -6004,7 +6013,7 @@ https://github.com/sponsors/kepano
   padding-left: 0;
   padding-top: 0; }
 
-.contextual-typography .markdown-preview-view .markdown-preview-sizer > div {
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   width: var(--max-width);
   margin-left: auto;
   margin-right: auto; }
@@ -6020,40 +6029,16 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer > div {
   max-width: 100%; }
 
-.contextual-typography .markdown-preview-view p,
-.contextual-typography .markdown-preview-view ol,
-.contextual-typography .markdown-preview-view ul {
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em; }
-
-.contextual-typography .markdown-preview-view ul ol,
-.contextual-typography .markdown-preview-view ol ol,
-.contextual-typography .markdown-preview-view ol ul,
-.contextual-typography .markdown-preview-view ul ul {
-  margin-block-start: 0em;
-  margin-block-end: 0em; }
-
-.contextual-typography .markdown-preview-view h1,
-.contextual-typography .markdown-preview-view h2,
-.contextual-typography .markdown-preview-view h3,
-.contextual-typography .markdown-preview-view h4,
-.contextual-typography .markdown-preview-view h5,
-.contextual-typography .markdown-preview-view h6 {
-  margin-block-start: 0.4em;
-  margin-block-end: 0.4em; }
-
-.contextual-typography .markdown-preview-view .markdown-preview-sizer > .el-table,
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-.contextual-typography .markdown-preview-view .markdown-preview-sizer > .el-lang-dataview,
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
   width: 100%;
   max-width: 100%;
   overflow-x: scroll; }
 
-.el-lang-dataview .block-language-dataview > h4,
-.el-lang-dataview .dataview.result-group,
-.el-lang-dataview .dataview.list-view-ul,
-.el-lang-dataview .dataview.dataview-error {
+.el-lang-dataview .is-readable-line-width .block-language-dataview > h4,
+.el-lang-dataview .is-readable-line-width .dataview.result-group,
+.el-lang-dataview .is-readable-line-width .dataview.list-view-ul,
+.el-lang-dataview .is-readable-line-width .dataview.dataview-error {
   max-width: var(--max-width);
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   margin-left: auto;
@@ -6063,8 +6048,8 @@ https://github.com/sponsors/kepano
 .el-lang-dataview .block-language-dataview .contains-task-list {
   max-width: 100%; }
 
-.el-table table,
-.el-lang-dataview .dataview.table-view-table {
+.is-readable-line-width .el-table table,
+.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
   width: var(--max-width);
   max-width: var(--line-width-adaptive);
   margin: 0 auto 0.5rem; }
@@ -6079,8 +6064,8 @@ https://github.com/sponsors/kepano
   max-width: 100%;
   width: 100%; }
 
-.markdown-preview-view.table-100 .el-table table,
-.markdown-preview-view.table-100 .el-lang-dataview .dataview.table-view-table {
+.markdown-preview-view.table-100.is-readable-line-width .el-table table,
+.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
   max-width: 100% !important;
   width: 100% !important; }
 
@@ -6148,8 +6133,8 @@ https://github.com/sponsors/kepano
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   padding-left: var(--folding-offset); }
 
-.el-table table,
-.el-lang-dataview .dataview.table-view-table {
+.is-readable-line-width .el-table table,
+.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
   max-width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
 
 .embed-strict .el-embed-page p,
@@ -6248,15 +6233,6 @@ https://github.com/sponsors/kepano
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
     width: 100%; } }
 /* Custom line width */
-/* Readable line width off */
-.markdown-preview-view .markdown-preview-sizer,
-.markdown-source-view .CodeMirror {
-  max-width: 90%;
-  margin: 0 auto; }
-
-.is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
-  padding-right: 0; }
-
 /* With readable line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: var(--max-width);
@@ -6269,25 +6245,31 @@ https://github.com/sponsors/kepano
   width: var(--line-width-adaptive);
   max-width: var(--max-width); }
 
-/* Readable line width turned off, requires Minimal plugin 5.2.1+ */
+/* Readable line width off */
+.markdown-preview-view .markdown-preview-sizer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--folding-offset); }
+
+.is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
+  padding-right: 0; }
+
+/* Requires Minimal plugin 5.2.1+ */
 .minimal-readable-off .view-header-title-container {
   width: var(--max-width); }
 
-body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
-  padding-left: 0; }
+/* Max width for readable-line length off */
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-contentContainer {
+  max-width: var(--max-width);
+  margin: 0 0 0 calc(50% - var(--max-width)/2) !important;
+  padding-left: var(--folding-offset); }
+
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+  contain: unset; }
 
 /* Live Preview */
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   max-width: calc(var(--max-width) - var(--folding-offset)); }
-
-/* Max width for readable-line length off */
-.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-embed-block > div,
-.markdown-source-view.mod-cm6:not(.is-readable-line-width) .el-table,
-.markdown-source-view.mod-cm6:not(.is-readable-line-width) .embedded-backlinks,
-.markdown-source-view.mod-cm6:not(.is-readable-line-width) .internal-embed,
-.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-line {
-  max-width: var(--max-width);
-  margin: 0 auto !important; }
 
 /* Nudge everything slightly to the left to make space for folding and gutters */
 .markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
@@ -6298,7 +6280,7 @@ body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.p
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout .callout,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img:not([width]),
 .markdown-source-view.mod-cm6.is-readable-line-width table {
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: var(--max-width);
@@ -6307,6 +6289,9 @@ body.minimal-readable-off:not(.title-align-center):not(.title-align-left):not(.p
   padding-left: 0; }
 .markdown-source-view.mod-cm6.is-readable-line-width .dataview-error {
   margin-top: 16px; }
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
+  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
+  max-width: var(--max-width); }
 
 .is-live-preview.is-readable-line-width .mod-empty,
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
@@ -8656,6 +8641,28 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .el-p:not(.el-embed-image) + .el-embed-image,
 .el-embed-image + .el-p:not(.el-embed-image) {
   margin-top: 1rem; }
+
+.contextual-typography .markdown-preview-view p,
+.contextual-typography .markdown-preview-view ol,
+.contextual-typography .markdown-preview-view ul {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em; }
+
+.contextual-typography .markdown-preview-view ul ol,
+.contextual-typography .markdown-preview-view ol ol,
+.contextual-typography .markdown-preview-view ol ul,
+.contextual-typography .markdown-preview-view ul ul {
+  margin-block-start: 0em;
+  margin-block-end: 0em; }
+
+.contextual-typography .markdown-preview-view h1,
+.contextual-typography .markdown-preview-view h2,
+.contextual-typography .markdown-preview-view h3,
+.contextual-typography .markdown-preview-view h4,
+.contextual-typography .markdown-preview-view h5,
+.contextual-typography .markdown-preview-view h6 {
+  margin-block-start: 0.4em;
+  margin-block-end: 0.4em; }
 
 /* Dataview plugin */
 body .table-view-table > thead > tr > th,

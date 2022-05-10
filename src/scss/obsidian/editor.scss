@@ -63,6 +63,12 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   padding-left:9px !important;
   transform:none !important;
 }
+.is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
+  width:30px !important;
+  padding-left:0px !important;
+  transform:none !important;
+  left:calc(var(--folding-offset) * -2);
+}
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color:var(--background-primary);
   color:var(--text-muted);

@@ -1,10 +1,12 @@
 /* Dark mode images  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
+.theme-dark .markdown-source-view img,
 .theme-dark .markdown-preview-view img {
   opacity:0.75;
   transition:opacity 0.25s linear;
 }
+.theme-dark .markdown-source-view img:hover,
 .theme-dark .markdown-preview-view img:hover {
   opacity:1;
   transition:opacity 0.25s linear;
