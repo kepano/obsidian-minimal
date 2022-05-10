@@ -19,7 +19,7 @@ settings:
     - 
         id: base
         title: Base color
-        description: Defines all background and border colors unless overridden below
+        description: Defines all background and border colors unless overridden in more granular settings
         type: variable-themed-color
         format: hsl-split
         default-light: '#'
@@ -27,7 +27,7 @@ settings:
     - 
         id: accent
         title: Accent color
-        description: Defines link and checkbox colors unless overridden below
+        description: Defines link and checkbox colors unless overridden in more granular settings
         type: variable-themed-color
         format: hsl-split
         default-light: '#'

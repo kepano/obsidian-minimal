@@ -6035,10 +6035,10 @@ https://github.com/sponsors/kepano
   max-width: 100%;
   overflow-x: scroll; }
 
-.el-lang-dataview .is-readable-line-width .block-language-dataview > h4,
-.el-lang-dataview .is-readable-line-width .dataview.result-group,
-.el-lang-dataview .is-readable-line-width .dataview.list-view-ul,
-.el-lang-dataview .is-readable-line-width .dataview.dataview-error {
+.is-readable-line-width .el-lang-dataview .block-language-dataview > h4,
+.is-readable-line-width .el-lang-dataview .dataview.result-group,
+.is-readable-line-width .el-lang-dataview .dataview.list-view-ul,
+.is-readable-line-width .el-lang-dataview .dataview.dataview-error {
   max-width: var(--max-width);
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   margin-left: auto;
