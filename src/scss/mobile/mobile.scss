@@ -291,7 +291,11 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   width:16px;
 }
 .is-mobile .view-header-title {
-  font-size:125%;
+  font-size:var(--title-size);
+}
+.is-mobile .view-header-title:-webkit-autofill:focus {
+  font-family:var(--font-ui);
+  color:red;
 }
 .is-mobile .view-header-icon {
   padding:16px 6px 16px 7px;
@@ -431,9 +435,13 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   .is-ios .workspace-drawer-ribbon {
     padding:50px 0 30px 0;
   }
+  .is-mobile .view-header-title-container {
+    margin-left:0;
+  }
   .is-mobile .view-header-title {
     max-width:calc(100vw - 90px);
     padding-right:20px;
+    padding-left:calc(50% - var(--max-width)/2 + var(--folding-offset)) !important;
     font-size:var(--font-settings-title);
     letter-spacing:-0.015em;
   }

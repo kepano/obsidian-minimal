@@ -73,8 +73,8 @@ https://github.com/sponsors/kepano
 /* Dataview and tables */
 .table-100 .el-table table,
 .table-100 .el-lang-dataview .dataview.table-view-table {
-  max-width:100%;
-  width:100%;
+  max-width:100% !important;
+  width:100% !important;
 }
 .markdown-preview-view.table-100.is-readable-line-width .el-table table,
 .markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
@@ -83,7 +83,7 @@ https://github.com/sponsors/kepano
 }
 .table-max .el-table table,
 .table-max .el-lang-dataview .dataview.table-view-table {
-  max-width:100%;
+  max-width:100% !important;
 }
 .markdown-preview-view.table-max .el-table table,
 .markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table {
@@ -93,7 +93,7 @@ https://github.com/sponsors/kepano
 .markdown-preview-view.is-readable-line-width.table-wide .el-table table,
 .table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
-  max-width:var(--line-width-wide)  !important;
+  max-width:var(--line-width-wide) !important;
 }
 .table-100 table th:first-child,
 .table-100 table td:first-child,

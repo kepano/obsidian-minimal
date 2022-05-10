@@ -5775,9 +5775,6 @@ tbody > tr > td,
   color: var(--text-faint);
   font-variant-numeric: tabular-nums; }
 
-.table-numbers table:not(.calendar) > tbody > tr > td:first-child {
-  white-space: nowrap; }
-
 .row-highlight table:not(.calendar) tbody > tr:hover td {
   background-color: var(--background-table-rows); }
 
@@ -6110,8 +6107,8 @@ https://github.com/sponsors/kepano
 /* Dataview and tables */
 .table-100 .el-table table,
 .table-100 .el-lang-dataview .dataview.table-view-table {
-  max-width: 100%;
-  width: 100%; }
+  max-width: 100% !important;
+  width: 100% !important; }
 
 .markdown-preview-view.table-100.is-readable-line-width .el-table table,
 .markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
@@ -6120,7 +6117,7 @@ https://github.com/sponsors/kepano
 
 .table-max .el-table table,
 .table-max .el-lang-dataview .dataview.table-view-table {
-  max-width: 100%; }
+  max-width: 100% !important; }
 
 .markdown-preview-view.table-max .el-table table,
 .markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table {
@@ -6980,7 +6977,11 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   width: 16px; }
 
 .is-mobile .view-header-title {
-  font-size: 125%; }
+  font-size: var(--title-size); }
+
+.is-mobile .view-header-title:-webkit-autofill:focus {
+  font-family: var(--font-ui);
+  color: red; }
 
 .is-mobile .view-header-icon {
   padding: 16px 6px 16px 7px;
@@ -7115,9 +7116,13 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   .is-ios .workspace-drawer-ribbon {
     padding: 50px 0 30px 0; }
 
+  .is-mobile .view-header-title-container {
+    margin-left: 0; }
+
   .is-mobile .view-header-title {
     max-width: calc(100vw - 90px);
     padding-right: 20px;
+    padding-left: calc(50% - var(--max-width)/2 + var(--folding-offset)) !important;
     font-size: var(--font-settings-title);
     letter-spacing: -0.015em; }
 
