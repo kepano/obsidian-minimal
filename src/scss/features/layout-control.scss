@@ -46,10 +46,10 @@ https://github.com/sponsors/kepano
   max-width:100%;
   overflow-x:scroll;
 }
- .is-readable-line-width .el-lang-dataview .block-language-dataview > h4,
- .is-readable-line-width .el-lang-dataview .dataview.result-group,
- .is-readable-line-width .el-lang-dataview .dataview.list-view-ul,
- .is-readable-line-width .el-lang-dataview .dataview.dataview-error {
+.is-readable-line-width .el-lang-dataview .block-language-dataview > h4,
+.is-readable-line-width .el-lang-dataview .dataview.result-group,
+.is-readable-line-width .el-lang-dataview .dataview.list-view-ul,
+.is-readable-line-width .el-lang-dataview .dataview.dataview-error {
   max-width:var(--max-width);
   width:calc(var(--line-width-adaptive) - var(--folding-offset));
   margin-left:auto;

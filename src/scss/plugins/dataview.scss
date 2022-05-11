@@ -27,6 +27,21 @@ body .dataview.small-text {
   color:var(--text-faint);
 }
 
+/* Remove hover effect */
+body .table-view-table > tbody > tr:hover {
+  background-color:transparent;
+}
+
+/* New error box as of 2022-05 */
+body div.dataview-error-box {
+  min-height:0;
+  border:none;
+  background-color:var(--background-secondary);
+  font-size:var(--font-adaptive-small);
+  border-radius:var(--radius-m);
+  padding:20px 0;
+}
+
 /* Trim columns feature */
 .trim-cols .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
 .trim-cols .markdown-preview-view .table-view-table > tbody > tr > td,
