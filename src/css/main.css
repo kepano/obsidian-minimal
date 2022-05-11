@@ -8300,13 +8300,19 @@ body .sync-history-content-container textarea.sync-history-content:focus {
     padding-bottom: 10px; } }
 /* Community plugins */
 /* Banner plugin */
-.cm-line.has-banner {
+.markdown-source-view.mod-cm6 .cm-line.has-banner {
   width: 100% !important;
   max-width: 100% !important;
   transform: none !important; }
-  .cm-line.has-banner .cm-def.cm-hmd-frontmatter {
-    width: 100px;
+  .markdown-source-view.mod-cm6 .cm-line.has-banner .cm-fold-indicator,
+  .markdown-source-view.mod-cm6 .cm-line.has-banner .cm-def.cm-hmd-frontmatter {
     margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset)) !important; }
+  .markdown-source-view.mod-cm6 .cm-line.has-banner .obsidian-banner-icon {
+    width: calc(var(--line-width-adaptive) - var(--folding-offset));
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(calc(var(--folding-offset)/2)); }
 
 .obsidian-banner.solid {
   border-bottom: var(--border-width) solid var(--background-divider); }
