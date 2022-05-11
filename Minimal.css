@@ -8753,6 +8753,9 @@ table.dataview ul.dataview-ul {
 .markdown-preview-view .table-view-table > tbody > tr > td {
   max-width: var(--max-col-width); }
 
+body .dataview.small-text {
+  color: var(--text-faint); }
+
 /* Trim columns feature */
 .trim-cols .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
 .trim-cols .markdown-preview-view .table-view-table > tbody > tr > td,
