@@ -11296,7 +11296,7 @@ settings:
         format: em
     -
         id: list-indent
-        title: List indentation
+        title: Nested list indentation
         description: Horizontal space from left in em units
         type: variable-number-slider
         default: 2
