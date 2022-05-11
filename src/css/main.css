@@ -8304,6 +8304,9 @@ body .sync-history-content-container textarea.sync-history-content:focus {
   width: 100% !important;
   max-width: 100% !important;
   transform: none !important; }
+  .cm-line.has-banner .cm-def.cm-hmd-frontmatter {
+    width: 100px;
+    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset)) !important; }
 
 .obsidian-banner.solid {
   border-bottom: var(--border-width) solid var(--background-divider); }
