@@ -152,6 +152,7 @@ settings:
     - 
         id: ui2
         title: Border color (highlighted)
+        description: For selected lines and empty checkboxes
         type: variable-themed-color
         opacity: true
         format: hex
