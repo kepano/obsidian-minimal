@@ -116,7 +116,7 @@
 }
 #calendar-container .day {
   padding:2px 4px 4px;
-  font-size:var(--font-adaptive-small);
+  font-size:calc(var(--font-adaptive-normal) - 2px);
 }
 #calendar-container .active,
 #calendar-container .active.today,
