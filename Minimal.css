@@ -8469,7 +8469,8 @@ body .button-default.blue {
 
 #calendar-container tr th {
   padding: 2px 0 4px;
-  font-weight: 500; }
+  font-weight: 500;
+  font-size: var(--font-adaptive-smallest); }
 
 #calendar-container tr td {
   padding: 2px 0 0 0;
@@ -8530,7 +8531,8 @@ body .button-default.blue {
   opacity: 1; }
 
 #calendar-container .day {
-  padding: 2px 4px 4px; }
+  padding: 2px 4px 4px;
+  font-size: var(--font-adaptive-small); }
 
 #calendar-container .active,
 #calendar-container .active.today,
