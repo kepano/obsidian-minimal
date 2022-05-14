@@ -5715,8 +5715,8 @@ body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .
 .markdown-source-view.mod-cm6 th,
 .markdown-source-view.mod-cm6 td,
 .markdown-preview-view .table-view-table > thead > tr > th,
-thead > tr > th,
-tbody > tr > td,
+table:not(.calendar) thead > tr > th,
+table:not(.calendar) tbody > tr > td,
 .table-view-table .tag,
 .table-view-table a.tag {
   font-size: var(--table-font-size); }
@@ -6370,8 +6370,7 @@ as opposed to regular tables */
   --folding-offset:16px;
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: var(--max-width);
-  margin: 0 auto !important;
-  transform: translateX(calc(var(--folding-offset)/2)); }
+  margin: 0 auto !important; }
   .is-readable-line-width .block-language-dataview div.dataview-error-box p {
     margin-block-start: 0;
     margin-block-end: 0; }

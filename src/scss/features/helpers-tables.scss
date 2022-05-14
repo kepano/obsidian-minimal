@@ -11,8 +11,8 @@
 .markdown-source-view.mod-cm6 th,
 .markdown-source-view.mod-cm6 td,
 .markdown-preview-view .table-view-table > thead > tr > th,
-thead > tr > th,
-tbody > tr > td,
+table:not(.calendar) thead > tr > th,
+table:not(.calendar) tbody > tr > td,
 .table-view-table .tag,
 .table-view-table a.tag {
   font-size:var(--table-font-size);
