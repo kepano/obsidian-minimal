@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
 
-Minimal Obsidian 5.2.5 by @kepano
+Minimal Obsidian 5.2.6 by @kepano
 
 User interface replacement for Obsidian.
 
@@ -48,7 +48,7 @@ body {
   --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   --font-monospace:var(--font-monospace-override);
   --font-ui:var(--font-interface-override);
-  --minimal-version:"You are currently using Minimal 5.2.5\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
+  --minimal-version:"You are currently using Minimal 5.2.6\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
 
 :root {
   /* Cursor */
@@ -524,7 +524,7 @@ body .excalidraw {
 
 /* Desktop font sizes */
 body {
-  --font-adaptive-normal:var(--font-normal);
+  --font-adaptive-normal:var(--font-text-size);
   --font-adaptive-small:var(--font-small);
   --font-adaptive-smaller:var(--font-smaller);
   --font-adaptive-smallest:var(--font-smallest);
@@ -542,7 +542,7 @@ body {
 /* Tablet font sizes */
 @media (min-width: 400pt) {
   .is-mobile {
-    --font-adaptive-normal:calc(var(--font-normal) + 2px);
+    --font-adaptive-normal:calc(var(--font-text-size) + 2px);
     --font-adaptive-small:calc(var(--font-small) + 3px);
     --font-adaptive-smaller:calc(var(--font-smaller) + 2px);
     --font-adaptive-smallest:calc(var(--font-smallest) + 2px);
@@ -9638,7 +9638,7 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
 body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
   background-image: linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px);
   background-position-x: 2px;
-  background-size: var(--font-normal) 1px; }
+  background-size: var(--font-text-size) 1px; }
 
 body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list {
   letter-spacing: unset; }

@@ -3,7 +3,7 @@
 body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
   background-image:linear-gradient(to right, var(--background-modifier-border) 1px, transparent 1px);
   background-position-x:2px;
-  background-size:var(--font-normal) 1px;
+  background-size:var(--font-text-size) 1px;
 }
 body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list {
   letter-spacing:unset;

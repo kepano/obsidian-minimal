@@ -1,6 +1,6 @@
 /* Desktop font sizes */
 body {
-  --font-adaptive-normal:var(--font-normal);
+  --font-adaptive-normal:var(--font-text-size);
   --font-adaptive-small:var(--font-small);
   --font-adaptive-smaller:var(--font-smaller);
   --font-adaptive-smallest:var(--font-smallest);
@@ -23,7 +23,7 @@ body {
 /* Tablet font sizes */
 @media (min-width:400pt) {
   .is-mobile {
-    --font-adaptive-normal:calc(var(--font-normal) + 2px);
+    --font-adaptive-normal:calc(var(--font-text-size) + 2px);
     --font-adaptive-small:calc(var(--font-small) + 3px);
     --font-adaptive-smaller:calc(var(--font-smaller) + 2px);
     --font-adaptive-smallest:calc(var(--font-smallest) + 2px);
