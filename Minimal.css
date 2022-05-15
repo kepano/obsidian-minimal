@@ -3841,16 +3841,25 @@ audio::-webkit-media-controls-enclosure {
 
 audio::-webkit-media-controls-current-time-display {
   color: var(--text-normal);
-  filter: invert(1);
+  font-family: var(--font-ui);
+  font-size: var(--font-adaptive-small);
   text-shadow: none; }
 
 audio::-webkit-media-controls-time-remaining-display {
-  color: var(--text-faint);
-  filter: invert(1);
+  color: var(--text-muted);
+  font-family: var(--font-ui);
+  font-size: var(--font-adaptive-small);
   text-shadow: none; }
 
 audio::-webkit-media-controls-panel {
-  padding: 0; }
+  padding: 2px 1.5px; }
+
+audio::-webkit-media-controls input[pseudo="-internal-media-controls-overflow-button" i]:enabled:hover::-internal-media-controls-button-hover-background {
+  background-color: transparent; }
+
+.theme-dark audio::-webkit-media-controls-current-time-display,
+.theme-dark audio::-webkit-media-controls-time-remaining-display {
+  filter: invert(1); }
 
 /* Buttons */
 button {
