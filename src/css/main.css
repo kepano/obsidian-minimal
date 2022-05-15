@@ -539,13 +539,13 @@ body {
     z-index: 999;
     position: fixed;
     pointer-events: none; }
-  .minimal-dev-block-width .mod-root .view-header:after {
+  .minimal-dev-block-width.minimal-readable .mod-root .view-header:after {
     display: flex;
     align-items: flex-end;
     color: green;
     font-size: 12px;
     font-family: var(--font-monospace);
-    content: "\00a0normal";
+    content: " ";
     width: var(--folding-offset);
     height: 100vh;
     border-left: 1px solid green;
@@ -553,6 +553,23 @@ body {
     background-color: rgba(0, 128, 0, 0.1);
     top: 0;
     left: max(calc(50% - var(--line-width-adaptive)/2 - 1px), calc(50% - var(--max-width)/2 - 1px));
+    z-index: 999;
+    position: fixed;
+    pointer-events: none; }
+  .minimal-dev-block-width.minimal-readable-off .mod-root .view-header:after {
+    display: flex;
+    align-items: flex-end;
+    color: green;
+    font-size: 12px;
+    font-family: var(--font-monospace);
+    content: " ";
+    width: var(--folding-offset);
+    height: 100vh;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+    background-color: rgba(0, 128, 0, 0.1);
+    top: 0;
+    left: calc(50% - var(--max-width)/2 - 1px);
     z-index: 999;
     position: fixed;
     pointer-events: none; }
@@ -572,7 +589,7 @@ body {
     z-index: 999;
     position: fixed;
     pointer-events: none; }
-  .minimal-dev-block-width .mod-root .view-header:before {
+  .minimal-dev-block-width.minimal-readable .mod-root .view-header:before {
     display: flex;
     align-items: flex-end;
     content: "\00a0wide\00a0";
@@ -591,7 +608,7 @@ body {
     z-index: 999;
     position: fixed;
     pointer-events: none; }
-  .minimal-dev-block-width .mod-root .view-content:after {
+  .minimal-dev-block-width.minimal-readable .mod-root .view-content:after {
     display: flex;
     align-items: flex-end;
     color: blue;
@@ -2004,13 +2021,9 @@ a em,
   color: var(--text-muted); }
 
 /* Reader Mode Lists  */
-ul {
-  padding-inline-start: var(--list-indent); }
-
-ol {
-  padding-inline-start: calc(var(--list-indent) - 0.15em);
-  margin-left: 0;
-  list-style: default; }
+div > ol,
+div > ul {
+  padding-inline-start: 1.5em; }
 
 ul > li {
   min-height: 1.4em; }
@@ -2018,9 +2031,13 @@ ul > li {
 ol > li {
   margin-left: 0em; }
 
-div > ol,
-div > ul {
-  padding-inline-start: 1em; }
+ul {
+  padding-inline-start: var(--list-indent); }
+
+ol {
+  padding-inline-start: var(--list-indent);
+  margin-left: 0;
+  list-style: default; }
 
 .is-mobile {
   /* first level */ }
@@ -6404,20 +6421,24 @@ https://github.com/sponsors/kepano
 .markdown-source-view.mod-cm6.is-readable-line-width table {
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: calc(var(--max-width) - var(--folding-offset));
-  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
+  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important;
   padding-left: 0; }
 .markdown-source-view.mod-cm6.is-readable-line-width .dataview-error {
   margin-top: 16px; }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
-  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
+  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important;
   max-width: var(--max-width); }
 
-.is-live-preview.is-readable-line-width .mod-empty,
-.is-live-preview.is-readable-line-width .cm-embed-block > mjx-container,
-.is-live-preview.is-readable-line-width .cm-embed-block > div {
+.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .mod-empty,
+.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > mjx-container,
+.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > div {
   max-width: var(--max-width);
-  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset));
+  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2));
   width: var(--line-width-adaptive); }
+.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width.is-line-wrap .HyperMD-list-line {
+  max-width: calc(var(--max-width) - var(--folding-offset) - 0.5em);
+  width: calc(var(--line-width-adaptive) - var(--folding-offset) - 0.5em);
+  margin: 0 auto 0 max(calc(50% + 0.5em + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + 0.5em + var(--folding-offset) - var(--max-width)/2)) !important; }
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width: 100%; }

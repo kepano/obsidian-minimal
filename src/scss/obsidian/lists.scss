@@ -1,26 +1,25 @@
 /* Reader Mode Lists  */
 
-ul {
-  padding-inline-start:var(--list-indent);
-}
-ol {
-  padding-inline-start:calc(var(--list-indent) - 0.15em);
-  margin-left:0;
-  list-style:default;
+
+div > ol,
+div > ul {
+  padding-inline-start:1.5em;
 }
 ul > li {
   min-height:1.4em;
 }
 ol > li {
   margin-left:0em;}
-
-div > ol,
-div > ul {
-  padding-inline-start:1em;
+ul {
+  padding-inline-start:var(--list-indent);
+}
+ol {
+  padding-inline-start:var(--list-indent);
+  margin-left:0;
+  list-style:default;
 }
 
 .is-mobile {
-
   .markdown-rendered ul,
   .markdown-rendered ol {
     padding-inline-start:var(--list-indent);
