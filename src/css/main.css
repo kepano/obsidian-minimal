@@ -6849,6 +6849,8 @@ body.is-mobile {
     border-right: none; }
   .is-mobile .workspace-leaf-content[data-type=starred] .item-list {
     padding-left: 5px; }
+  .is-mobile .workspace-drawer-tab-container > * {
+    padding: 0; }
   .is-mobile .workspace-drawer-tab-option-item-title,
   .is-mobile .workspace-drawer-active-tab-title {
     font-size: var(--font-adaptive-small); }

@@ -61,6 +61,9 @@ body.is-mobile {
   .workspace-leaf-content[data-type=starred] .item-list {
     padding-left:5px;
   }
+  .workspace-drawer-tab-container > * {
+    padding:0;
+  }
   .workspace-drawer-tab-option-item-title,
   .workspace-drawer-active-tab-title {
     font-size:var(--font-adaptive-small);
