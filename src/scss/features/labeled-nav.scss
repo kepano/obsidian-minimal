@@ -100,6 +100,9 @@ https://github.com/sponsors/kepano
   .workspace-tab-header[data-type="recent-files"] .workspace-tab-header-inner-icon:after {
     content:"Recent";
   }
+  .workspace-tab-header[data-type="reminder-list"] .workspace-tab-header-inner-icon:after {
+    content:"Reminders";
+  }
   .workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon:after {
     content:"Search";
   }

@@ -7,6 +7,7 @@ button,
   font-family:var(--font-ui);
   font-size:var(--font-inputs);
   font-weight:400;
+  border-radius:var(--radius-m);
 }
 button:active,
 button:focus {

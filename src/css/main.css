@@ -1931,15 +1931,9 @@ div > ul {
   margin-left: -0.25em;
   padding-inline-start: 2em; }
 
-.is-mobile .markdown-rendered ul,
-.is-mobile ul {
-  padding-inline-start: var(--list-indent); }
-.is-mobile .markdown-rendered ol,
-.is-mobile ol {
-  padding-inline-start: var(--list-indent); }
 .is-mobile .el-ol > ol,
 .is-mobile .el-ul > ul {
-  margin-left: 0.5em; }
+  margin-left: 0; }
 .is-mobile .mod-cm6 .HyperMD-list-line.cm-line {
   margin-left: 0.25em !important; }
 
@@ -3826,7 +3820,8 @@ button,
 .setting-item-control button {
   font-family: var(--font-ui);
   font-size: var(--font-inputs);
-  font-weight: 400; }
+  font-weight: 400;
+  border-radius: var(--radius-m); }
 
 button:active,
 button:focus {
@@ -3887,7 +3882,8 @@ select {
   border-color: var(--background-modifier-border);
   transition: border-color 0.1s linear;
   height: var(--input-height);
-  font-family: var(--font-ui); }
+  font-family: var(--font-ui);
+  border-radius: var(--radius-m); }
 
 .dropdown {
   background-image: url("data:image/svg+xml;charset=US-ASCII,<svg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22><path%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F><%2Fsvg>"); }
@@ -5986,6 +5982,8 @@ https://github.com/sponsors/kepano
   content: "Outline"; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="recent-files"] .workspace-tab-header-inner-icon:after {
   content: "Recent"; }
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="reminder-list"] .workspace-tab-header-inner-icon:after {
+  content: "Reminders"; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon:after {
   content: "Search"; }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="starred"] .workspace-tab-header-inner-icon:after {
@@ -8430,6 +8428,7 @@ body .button-default.blue {
 #calendar-container tr th {
   padding: 2px 0 4px;
   font-weight: 500;
+  letter-spacing: 0.1em;
   font-size: var(--font-adaptive-smallest); }
 
 #calendar-container tr td {
@@ -9678,6 +9677,76 @@ body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-l
 /* Obsidian Tabs plugin */
 .workspace-leaf-content[data-type="recent-files"] .view-content {
   padding-top: 10px; }
+
+/* Reminder Plugin */
+.mod-root .workspace-leaf-content[data-type="reminder-list"] main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0; }
+
+/* Popup */
+.modal .reminder-actions .later-select {
+  font-size: var(--font-settings-small);
+  vertical-align: bottom;
+  margin-left: 3px; }
+.modal .reminder-actions .icon {
+  line-height: 1; }
+
+/* In sidebar */
+:not(.mod-root) .workspace-leaf-content[data-type="reminder-list"] main {
+  margin: 0 auto;
+  padding: 15px; }
+  :not(.mod-root) .workspace-leaf-content[data-type="reminder-list"] main .group-name {
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: var(--font-adaptive-small);
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid var(--background-modifier-border); }
+  :not(.mod-root) .workspace-leaf-content[data-type="reminder-list"] main .reminder-group .reminder-list-item {
+    line-height: 1.3;
+    font-size: var(--font-adaptive-small); }
+  :not(.mod-root) .workspace-leaf-content[data-type="reminder-list"] main .reminder-group .no-reminders {
+    color: var(--text-faint); }
+  :not(.mod-root) .workspace-leaf-content[data-type="reminder-list"] main .reminder-group .reminder-time {
+    font-family: var(--text);
+    font-size: var(--font-adaptive-small); }
+  :not(.mod-root) .workspace-leaf-content[data-type="reminder-list"] main .reminder-group .reminder-file {
+    color: var(--text-faint); }
+
+/* Calendar picker */
+body .modal .dtchooser {
+  background-color: transparent; }
+  body .modal .dtchooser .reminder-calendar .year-month {
+    font-weight: 400;
+    font-size: var(--font-adaptive-normal);
+    padding-bottom: 10px; }
+    body .modal .dtchooser .reminder-calendar .year-month .month,
+    body .modal .dtchooser .reminder-calendar .year-month .year {
+      color: var(--text-normal); }
+    body .modal .dtchooser .reminder-calendar .year-month .month-nav {
+      color: var(--text-faint);
+      cursor: var(--cursor);
+      border-radius: var(--radius-m);
+      padding: 1px 8px 2px; }
+      body .modal .dtchooser .reminder-calendar .year-month .month-nav:hover {
+        background-color: var(--background-tertiary);
+        color: var(--text-muted); }
+  body .modal .dtchooser .reminder-calendar th {
+    padding: 0.5em 0;
+    font-size: var(--font-adaptive-smallest);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; }
+  body .modal .dtchooser .reminder-calendar .calendar-date {
+    transition: background-color 0.1s ease-in;
+    padding: 0.25em 0; }
+    body .modal .dtchooser .reminder-calendar .calendar-date:hover, body .modal .dtchooser .reminder-calendar .calendar-date.is-selected {
+      transition: background-color 0.1s ease-in;
+      background-color: var(--background-tertiary) !important;
+      border-radius: var(--radius-m); }
+    body .modal .dtchooser .reminder-calendar .calendar-date.is-selected {
+      font-weight: var(--bold-weight);
+      color: var(--text-accent) !important; }
 
 /* Sliding Panes aka Andy Mode plugin */
 body.plugin-sliding-panes-rotate-header {

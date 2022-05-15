@@ -29,17 +29,10 @@ div > ul {
 }
 
 .is-mobile {
-  .markdown-rendered ul,
-  ul {
-    padding-inline-start:var(--list-indent);
-  }
-  .markdown-rendered ol,
-  ol {
-    padding-inline-start:var(--list-indent);
-  }
+
   .el-ol > ol,
   .el-ul > ul {
-    margin-left:0.5em;
+    margin-left:0;
   }
   .mod-cm6 .HyperMD-list-line.cm-line {
       margin-left:0.25em !important;
