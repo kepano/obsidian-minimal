@@ -28,8 +28,11 @@ body .dataview.small-text {
 }
 
 /* Remove hover effect */
+body .dataview.task-list-item:hover,
+body .dataview.task-list-basic-item:hover,
 body .table-view-table > tbody > tr:hover {
   background-color:transparent;
+  box-shadow:none;
 }
 
 /* New error box as of 2022-05 */

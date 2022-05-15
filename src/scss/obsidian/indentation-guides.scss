@@ -13,3 +13,15 @@ body {
 .markdown-source-view.mod-cm6 .cm-indent::before {
   transform:translateX(var(--ig-adjust-edit));
 }
+
+.is-mobile {
+
+  .markdown-rendered.show-indentation-guide li > ul::before,
+  .markdown-rendered.show-indentation-guide li > ol::before {
+    left:calc(0em + var(--ig-adjust-reading));
+  }
+  .markdown-source-view.mod-cm6 .cm-indent::before {
+    transform:translateX(calc(2px + var(--ig-adjust-edit)));
+  }
+
+}

@@ -59,9 +59,11 @@
   .cm-content > img:not([width]),
   table {
     width:calc(var(--line-width-adaptive) - var(--folding-offset));
-    max-width:var(--max-width);
-    margin:0 auto !important;
-    transform:translateX(calc(var(--folding-offset)/2));
+    max-width:calc(var(--max-width) - var(--folding-offset));
+    margin:0 auto 0
+      max(
+      calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
+      calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
     padding-left:0;
   }
   .dataview-error {
@@ -79,19 +81,22 @@
   .cm-embed-block > mjx-container,
   .cm-embed-block > div {
     max-width:var(--max-width);
-    margin:0 auto;
+    margin:0 auto 0
+      max(
+      calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
+      calc(50% - var(--max-width)/2) + var(--folding-offset));
     width:var(--line-width-adaptive);
-    padding-left:var(--folding-offset);
+
   }
 }
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width:100%;
 }
 .is-live-preview.is-readable-line-width .list-view-ul,
+.is-live-preview.is-readable-line-width .contains-task-list,
 .contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
   width:var(--line-width-adaptive);
   max-width:100%;
-  transform:translateX(calc(0.75em - var(--folding-offset)));
   margin:0 auto !important;
 }
 /* Make sure the table fills the width of the parent dataview block,
@@ -102,6 +107,7 @@ as opposed to regular tables */
   width:100%;
   max-width:100%;
   transform:none;
+  margin-left:auto !important;
   padding-left:0;
 }
 

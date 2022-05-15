@@ -925,11 +925,13 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 .is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width: 30px !important;
   padding-left: 9px !important;
-  transform: none !important; }
+  transform: none !important;
+  margin-left: 0 !important; }
 
 .is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
   width: 30px !important;
   padding-left: 0px !important;
+  margin-left: 0 !important;
   transform: none !important;
   left: calc(var(--folding-offset) * -2); }
 
@@ -1951,6 +1953,12 @@ body {
 .markdown-source-view.mod-cm6 .cm-indent::before {
   transform: translateX(var(--ig-adjust-edit)); }
 
+.is-mobile .markdown-rendered.show-indentation-guide li > ul::before,
+.is-mobile .markdown-rendered.show-indentation-guide li > ol::before {
+  left: calc(0em + var(--ig-adjust-reading)); }
+.is-mobile .markdown-source-view.mod-cm6 .cm-indent::before {
+  transform: translateX(calc(2px + var(--ig-adjust-edit))); }
+
 /* Links */
 a {
   color: var(--text-accent);
@@ -2007,35 +2015,28 @@ ol {
 ul > li {
   min-height: 1.4em; }
 
-ul > li::marker,
-ol > li::marker {
-  color: var(--text-faint); }
-
-ul > li::marker,
-.mod-cm6 .HyperMD-list-line .list-bullet::after,
-.mod-cm6 span.list-bullet::after {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-
 ol > li {
   margin-left: 0em; }
 
 div > ol,
 div > ul {
-  margin-left: -0.25em;
-  padding-inline-start: 2em; }
+  padding-inline-start: 1em; }
 
-.is-mobile .el-ol > ol,
-.is-mobile .el-ul > ul {
-  margin-left: 0; }
-.is-mobile .mod-cm6 .HyperMD-list-line.cm-line {
-  margin-left: 0.25em !important; }
+.is-mobile {
+  /* first level */ }
+  .is-mobile .markdown-rendered ul,
+  .is-mobile .markdown-rendered ol {
+    padding-inline-start: var(--list-indent); }
+  .is-mobile .markdown-rendered div > ol,
+  .is-mobile .markdown-rendered div > ul {
+    padding-inline-start: 1.5em; }
+  .is-mobile .el-ol > ol,
+  .is-mobile .el-ul > ul {
+    margin-left: 0; }
 
 /* Live Preview */
 .cm-line:not(.HyperMD-codeblock) {
   tab-size: var(--list-indent); }
-
-body:not(.is-mobile) .is-readable-line-width.mod-cm6 .HyperMD-list-line.cm-line {
-  transform: translateX(calc(0.5em + var(--folding-offset))); }
 
 /* Space between list items */
 .markdown-source-view ol > li,
@@ -2051,6 +2052,14 @@ body:not(.is-mobile) .is-readable-line-width.mod-cm6 .HyperMD-list-line.cm-line 
   color: var(--text-faint) !important; }
 
 /* Bullets */
+ul > li::marker,
+ol > li::marker {
+  color: var(--text-faint); }
+
+ul > li::marker {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size: 0.85em; }
+
 .mod-cm6 .HyperMD-list-line .list-bullet::after,
 .mod-cm6 span.list-bullet::after {
   line-height: 0.95em;
@@ -6144,6 +6153,7 @@ https://github.com/sponsors/kepano
 .is-readable-line-width .el-lang-dataview .block-language-dataview > h4,
 .is-readable-line-width .el-lang-dataview .dataview.result-group,
 .is-readable-line-width .el-lang-dataview .dataview.list-view-ul,
+.is-readable-line-width .el-lang-dataview .dataview .contains-task-list,
 .is-readable-line-width .el-lang-dataview .dataview.dataview-error {
   max-width: var(--max-width);
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
@@ -6265,54 +6275,58 @@ https://github.com/sponsors/kepano
   --folding-offset:0px; }
 
 /* Live Preview */
-.chart-max.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-max .is-live-preview.is-readable-line-width .block-language-chart,
-.map-max.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-max .is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-max.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-max .is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-max.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-max .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-max.is-live-preview.is-readable-line-width .cm-content > img,
-.img-max .is-live-preview.is-readable-line-width .cm-content > img {
+.chart-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.map-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
+.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
   width: var(--max-width) !important;
+  max-width: var(--max-width) !important;
   transform: none !important;
-  padding-left: 0; }
+  padding-left: 0;
+  margin: 0 auto !important; }
 
-.chart-wide.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-wide .is-live-preview.is-readable-line-width .block-language-chart,
-.map-wide.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-wide .is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-wide.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-wide .is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-wide.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-wide .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-wide.is-live-preview.is-readable-line-width .cm-content > img,
-.img-wide .is-live-preview.is-readable-line-width .cm-content > img {
+.chart-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.map-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
+.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
   width: var(--line-width-wide) !important;
   max-width: var(--max-width);
   transform: none !important;
-  padding-left: 0; }
+  padding-left: 0;
+  margin: 0 auto !important; }
 
-.chart-100.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-100 .is-live-preview.is-readable-line-width .block-language-chart,
-.map-100.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-100 .is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-100.is-live-preview.is-readable-line-width table,
-.table-100 .is-live-preview.is-readable-line-width table,
-.table-100.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-100 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.img-100.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100.is-live-preview.is-readable-line-width .cm-content > img,
-.img-100 .is-live-preview.is-readable-line-width .cm-content > img {
+.chart-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.map-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table,
+.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table,
+.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
+.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
   width: 100% !important;
   max-width: 100% !important;
   transform: none !important;
+  margin: 0 auto !important;
   padding-left: 0; }
 
 /* Mobile */
@@ -6389,9 +6403,8 @@ https://github.com/sponsors/kepano
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img:not([width]),
 .markdown-source-view.mod-cm6.is-readable-line-width table {
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  max-width: var(--max-width);
-  margin: 0 auto !important;
-  transform: translateX(calc(var(--folding-offset)/2));
+  max-width: calc(var(--max-width) - var(--folding-offset));
+  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
   padding-left: 0; }
 .markdown-source-view.mod-cm6.is-readable-line-width .dataview-error {
   margin-top: 16px; }
@@ -6403,18 +6416,17 @@ https://github.com/sponsors/kepano
 .is-live-preview.is-readable-line-width .cm-embed-block > mjx-container,
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
   max-width: var(--max-width);
-  margin: 0 auto;
-  width: var(--line-width-adaptive);
-  padding-left: var(--folding-offset); }
+  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset));
+  width: var(--line-width-adaptive); }
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width: 100%; }
 
 .is-live-preview.is-readable-line-width .list-view-ul,
+.is-live-preview.is-readable-line-width .contains-task-list,
 .contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
   width: var(--line-width-adaptive);
   max-width: 100%;
-  transform: translateX(calc(0.75em - var(--folding-offset)));
   margin: 0 auto !important; }
 
 /* Make sure the table fills the width of the parent dataview block,
@@ -6425,6 +6437,7 @@ as opposed to regular tables */
   width: 100%;
   max-width: 100%;
   transform: none;
+  margin-left: auto !important;
   padding-left: 0; }
 
 .is-readable-line-width .block-language-dataview div.dataview-error-box {
@@ -6458,67 +6471,6 @@ body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
   background-position-y: center;
   text-decoration: underline; }
 
-/* Relationship lines */
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul ul,
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ol ul,
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul ol,
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ol ol {
-  margin-left: -15px;
-  padding-left: var(--list-indent);
-  border-left: 1px solid var(--background-modifier-border); }
-
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul li.is-flashing {
-  background-color: var(--text-highlight-bg); }
-
-/* Relationship lines in Legacy Editor */
-.ig-lists .cm-hmd-list-indent > .cm-tab,
-body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab {
-  display: inline-block; }
-
-.ig-lists .cm-hmd-list-indent > .cm-tab:after,
-body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
-  content: " ";
-  display: block;
-  width: 1px;
-  position: absolute;
-  top: 1px;
-  border-right: 1px solid var(--background-modifier-border);
-  height: 100%; }
-
-/* Relationship lines in Live Preview, disabled now that Indentation Guides is available
-
-:root {
-  --indent-font-family:var(--text-editor);
-  --indent-font-size:var(--font-adaptive-normal);
-}
-
-body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-list-line-1) {
-  overflow:hidden;
-}
-body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
-  position:relative;
-  font-family:var(--indent-font-family) !important;
-  font-size:var(--indent-font-size) !important;
-}
-body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
-  content:'';
-  font-family:var(--indent-font-family) !important;
-  font-size:var(--indent-font-size) !important;
-  display:block;
-  position:absolute;
-  width:100%;
-  top:-1.6em;
-  padding-bottom:999em;
-  background:linear-gradient(
-    to right,
-    var(--background-modifier-border) 1px,
-    transparent 1px)
-    repeat;
-  background-size:1.8ch 1px;
-  left:3.5px;
-}
-
-*/
 /* Scroll indicator for sidebar containers */
 body:not(.is-translucent):not(.is-mobile) .mod-left-split .item-list,
 body:not(.is-translucent):not(.is-mobile) .mod-left-split .nav-files-container,
@@ -8832,8 +8784,11 @@ body .dataview.small-text {
   color: var(--text-faint); }
 
 /* Remove hover effect */
+body .dataview.task-list-item:hover,
+body .dataview.task-list-basic-item:hover,
 body .table-view-table > tbody > tr:hover {
-  background-color: transparent; }
+  background-color: transparent;
+  box-shadow: none; }
 
 /* New error box as of 2022-05 */
 body div.dataview-error-box {
