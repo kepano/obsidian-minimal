@@ -6,12 +6,17 @@
 }
 
 .embedded-note-titles .markdown-preview-view > h1 {
-  /* ...preview mode styles... */
+  padding-left:var(--folding-offset) !important;
 }
 
 .embedded-note-titles .is-readable-line-width.markdown-preview-view > h1 {
   max-width:var(--max-width) !important;
   width:var(--line-width-adaptive) !important;
+}
+
+.mod-cm6 .cm-editor h1.cm-line.embedded-note-title {
+    padding-top: var(--embedded-note-title-padding-top);
+    padding-bottom: var(--embedded-note-title-padding-bottom);
 }
 
 /* Attempting focus mode + embedded note titles
