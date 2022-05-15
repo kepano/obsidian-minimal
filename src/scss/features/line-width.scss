@@ -76,6 +76,7 @@
 }
 .is-live-preview.is-readable-line-width {
   .mod-empty,
+  .cm-embed-block > mjx-container,
   .cm-embed-block > div {
     max-width:var(--max-width);
     margin:0 auto;

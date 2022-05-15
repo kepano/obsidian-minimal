@@ -6440,6 +6440,7 @@ https://github.com/sponsors/kepano
   max-width: var(--max-width); }
 
 .is-live-preview.is-readable-line-width .mod-empty,
+.is-live-preview.is-readable-line-width .cm-embed-block > mjx-container,
 .is-live-preview.is-readable-line-width .cm-embed-block > div {
   max-width: var(--max-width);
   margin: 0 auto;
