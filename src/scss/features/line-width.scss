@@ -101,10 +101,9 @@
   max-width:100%;
 }
 .is-live-preview.is-readable-line-width .list-view-ul,
-.is-live-preview.is-readable-line-width .contains-task-list,
-.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
-  width:var(--line-width-adaptive);
-  max-width:100%;
+.is-live-preview.is-readable-line-width .contains-task-list {
+  width:calc(var(--line-width-adaptive) - var(--folding-offset) - 0.5em);
+  max-width:calc(var(--max-width) - var(--folding-offset) - 0.5em);
   margin:0 auto !important;
 }
 /* Make sure the table fills the width of the parent dataview block,

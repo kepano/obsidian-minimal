@@ -2075,7 +2075,7 @@ ol > li::marker {
 
 ul > li::marker {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  font-size: 0.85em; }
+  font-size: 0.8em; }
 
 .mod-cm6 .HyperMD-list-line .list-bullet::after,
 .mod-cm6 span.list-bullet::after {
@@ -6444,10 +6444,9 @@ https://github.com/sponsors/kepano
   max-width: 100%; }
 
 .is-live-preview.is-readable-line-width .list-view-ul,
-.is-live-preview.is-readable-line-width .contains-task-list,
-.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
-  width: var(--line-width-adaptive);
-  max-width: 100%;
+.is-live-preview.is-readable-line-width .contains-task-list {
+  width: calc(var(--line-width-adaptive) - var(--folding-offset) - 0.5em);
+  max-width: calc(var(--max-width) - var(--folding-offset) - 0.5em);
   margin: 0 auto !important; }
 
 /* Make sure the table fills the width of the parent dataview block,
