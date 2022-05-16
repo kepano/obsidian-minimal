@@ -5,6 +5,8 @@ body {
   --ig-adjust-edit:-1px;
 }
 
+.markdown-rendered.show-indentation-guide li.task-list-item > ul::before,
+.markdown-rendered.show-indentation-guide li.task-list-item > ol::before,
 .markdown-rendered.show-indentation-guide li > ul::before,
 .markdown-rendered.show-indentation-guide li > ol::before {
   left:var(--ig-adjust-reading);

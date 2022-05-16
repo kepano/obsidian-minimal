@@ -718,7 +718,7 @@ body {
   --checkbox-icon:20px;
   --checkbox-radius:50%;
   --checkbox-top:3px;
-  --checkbox-left:-1px;
+  --checkbox-left:0px;
   --checkbox-margin:0px 5px 0px -1.35em; }
 
 .checkbox-square {
@@ -768,6 +768,11 @@ body.minimal-strike-lists li[data-task="x"].task-list-item.is-checked {
   color: var(--text-faint);
   text-decoration: line-through solid var(--text-faint) 1px; }
 
+/* Preview offset */
+ul > li.task-list-item .task-list-item-checkbox {
+  margin-left: -1.35em; }
+
+/* Editor */
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin: -2px 1px 0 -0.6em; }
 
@@ -1998,6 +2003,8 @@ body {
   --ig-adjust-reading:-0.65em;
   --ig-adjust-edit:-1px; }
 
+.markdown-rendered.show-indentation-guide li.task-list-item > ul::before,
+.markdown-rendered.show-indentation-guide li.task-list-item > ol::before,
 .markdown-rendered.show-indentation-guide li > ul::before,
 .markdown-rendered.show-indentation-guide li > ol::before {
   left: var(--ig-adjust-reading); }
@@ -6205,17 +6212,6 @@ https://github.com/sponsors/kepano
   max-width: 100%;
   overflow-x: scroll; }
 
-.is-readable-line-width .el-lang-dataview .block-language-dataview > h4,
-.is-readable-line-width .el-lang-dataview .dataview.result-group,
-.is-readable-line-width .el-lang-dataview .dataview.list-view-ul,
-.is-readable-line-width .el-lang-dataview .dataview .contains-task-list,
-.is-readable-line-width .el-lang-dataview .dataview.dataview-error {
-  max-width: var(--max-width);
-  width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  margin-left: auto;
-  margin-right: auto;
-  --folding-offset:16px; }
-
 .el-lang-dataview .block-language-dataview .contains-task-list {
   max-width: 100%; }
 
@@ -6299,10 +6295,6 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image {
   width: 100%;
   max-width: 100%; }
-
-/* Folding offset */
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  padding-left: var(--folding-offset); }
 
 .is-readable-line-width .el-table table,
 .is-readable-line-width .el-lang-dataview .dataview.table-view-table {
@@ -6409,7 +6401,7 @@ https://github.com/sponsors/kepano
     width: 100%; } }
 /* Custom line width */
 :root {
-  --list-offset:0.5em; }
+  --list-edit-offset:0.5em; }
 
 /* With readable line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
@@ -6445,66 +6437,19 @@ https://github.com/sponsors/kepano
 .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
   contain: unset; }
 
+/* Folding offset */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  padding-left: var(--folding-offset); }
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataview"] {
+  padding-left: var(--folding-offset); }
+
 /* Live Preview */
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width: 100%; }
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   max-width: calc(var(--max-width) - var(--folding-offset)); }
-
-/* Nudge everything slightly to the left to make space for folding and gutters */
-.markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .mod-empty,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > mjx-container,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > div,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > .image-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
-.markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout .callout,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img:not([width]),
-.markdown-source-view.mod-cm6.is-readable-line-width table {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  max-width: calc(var(--max-width) - var(--folding-offset));
-  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
-  max-width: var(--max-width);
-  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
-
-/* Needs a couple more top-level rules to override default styling */
-.markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap .HyperMD-list-line {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-offset));
-  max-width: calc(var(--max-width) - var(--folding-offset) - var(--list-offset));
-  margin: 0 auto 0 max(calc(50% + var(--list-offset) + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--list-offset) + var(--folding-offset) - var(--max-width)/2)) !important; }
-
-/* Force Dataview Lists to use readable line width */
-.is-live-preview.is-readable-line-width .list-view-ul,
-.is-live-preview.is-readable-line-width .contains-task-list,
-.markdown-preview-view.is-readable-line-width .block-language-dataview > h4,
-.markdown-preview-view.is-readable-line-width .dataview.result-group,
-.markdown-preview-view.is-readable-line-width .dataview.list-view-ul,
-.markdown-preview-view.is-readable-line-width .dataview .contains-task-list,
-.markdown-preview-view.is-readable-line-width .dataview.dataview-error {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-offset));
-  max-width: calc(var(--max-width) - var(--folding-offset) - var(--list-offset));
-  transform: translateX(calc(var(--folding-offset)/2 - var(--list-offset)/2));
-  margin: 0 auto !important; }
-
-/* Fill the length of Dataview Lists when in normal length since parent container has the width we want */
-body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .list-view-ul,
-body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .contains-task-list {
-  width: 100%;
-  max-width: 100%;
-  transform: none; }
-
-/* Same but in Reading mode */
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .list-view-ul,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .contains-task-list {
-  width: calc(var(--line-width-adaptive) - var(--list-offset));
-  max-width: calc(var(--max-width) - var(--list-offset));
-  margin: 0 auto !important; }
 
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
@@ -6515,6 +6460,93 @@ as opposed to regular tables */
   max-width: 100%;
   transform: none;
   margin-left: auto !important; }
+
+/* Line width for Live Preview / Editor mode
+   Gets complicated.
+   -------------------------------------------*/
+/* Nudge everything slightly to the left to make space for folding and gutters */
+/* This is the big daddy rule for most editor content line types */
+.markdown-source-view.mod-cm6.is-readable-line-width {
+  /* Don't force width for images that have a width */ }
+  .markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > .image-embed,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
+  .markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout .callout,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img:not([width]),
+  .markdown-source-view.mod-cm6.is-readable-line-width table {
+    width: calc(var(--line-width-adaptive) - var(--folding-offset));
+    max-width: calc(var(--max-width) - var(--folding-offset));
+    margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
+    max-width: var(--max-width);
+    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
+
+.markdown-source-view.mod-cm6.is-readable-line-width .mod-empty,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > div,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > mjx-container {
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  max-width: calc(var(--max-width) - var(--folding-offset));
+  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
+
+/* For lists adding an extra offset value in Edit mode */
+/* Needs .is-line-wrap to override default styling */
+.markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap .HyperMD-list-line {
+  width: calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
+  max-width: calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));
+  margin: 0 auto 0 max(calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--max-width)/2)) !important; }
+
+/* Dataview lists/checklists
+   A nightmare mainly because there is no selector that indicates
+   a list is present inside the dataview block
+   -------------------------------------------*/
+/* Normal block width */
+/* ------------------ */
+body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul,
+body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview .contains-task-list {
+  max-width: 100%;
+  margin: 0 auto;
+  transform: none; }
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview .contains-task-list,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview > h4,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.result-group,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-error {
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  max-width: var(--max-width);
+  margin: 0 auto; }
+
+/* Wider block widths */
+/* ------------------ */
+.is-live-preview.is-readable-line-width .dataview.list-view-ul,
+.is-live-preview.is-readable-line-width .dataview .contains-task-list {
+  --folding-offset:16px;
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  max-width: calc(100% - var(--folding-offset));
+  transform: translateX(calc(var(--folding-offset)/2));
+  margin: 0 auto; }
+
+.table-100 .is-live-preview.is-readable-line-width .dataview.list-view-ul,
+.table-100 .is-live-preview.is-readable-line-width .dataview .contains-task-list,
+.table-100.is-live-preview.is-readable-line-width .dataview.list-view-ul,
+.table-100.is-live-preview.is-readable-line-width .dataview .contains-task-list {
+  max-width: calc(var(--max-width) - var(--folding-offset)); }
+
+.markdown-preview-view.is-readable-line-width .dataview.list-view-ul,
+.markdown-preview-view.is-readable-line-width .dataview .contains-task-list,
+.markdown-preview-view.is-readable-line-width .block-language-dataview > h4,
+.markdown-preview-view.is-readable-line-width .dataview.result-group,
+.markdown-preview-view.is-readable-line-width .dataview.dataview-error {
+  --folding-offset:16px;
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  max-width: calc(var(--max-width) - var(--folding-offset));
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: max(calc(50% - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2)); }
 
 /* Links and underline handling*/
 body:not(.links-int-on) a[href*="obsidian://"],
@@ -8431,20 +8463,26 @@ body .sync-history-content-container textarea.sync-history-content:focus {
     padding-bottom: 10px; } }
 /* Community plugins */
 /* Banner plugin */
+/*
 .markdown-source-view.mod-cm6 .cm-line.has-banner {
-  width: 100% !important;
-  max-width: 100% !important;
-  transform: none !important; }
-  .markdown-source-view.mod-cm6 .cm-line.has-banner .cm-fold-indicator,
-  .markdown-source-view.mod-cm6 .cm-line.has-banner .cm-def.cm-hmd-frontmatter {
-    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset)) !important; }
-  .markdown-source-view.mod-cm6 .cm-line.has-banner .obsidian-banner-icon {
-    width: calc(var(--line-width-adaptive) - var(--folding-offset));
-    max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateX(calc(var(--folding-offset)/2)); }
+	width:100% !important;
+	max-width:100% !important;
+	transform:none !important;
 
+	.cm-fold-indicator,
+	.cm-def.cm-hmd-frontmatter {
+		margin-left:max(
+      calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
+      calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
+	}
+	.obsidian-banner-icon {
+		width:calc(var(--line-width-adaptive) - var(--folding-offset));
+    max-width:var(--max-width);
+    margin-left:auto;
+    margin-right:auto;
+    transform:translateX(calc(var(--folding-offset)/2));
+	}
+} */
 .obsidian-banner.solid {
   border-bottom: var(--border-width) solid var(--background-divider); }
 
