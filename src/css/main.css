@@ -6404,7 +6404,6 @@ https://github.com/sponsors/kepano
   padding-left: var(--folding-offset); }
 
 .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
-  contain: unset;
   overflow: scroll; }
 
 /* Folding offset */
