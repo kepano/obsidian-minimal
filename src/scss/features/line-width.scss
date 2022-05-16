@@ -75,7 +75,7 @@ as opposed to regular tables */
 
   /* Nudge everything slightly to the left to make space for folding and gutters */
   /* This is the big daddy rule for most editor content line types */
-  .markdown-source-view.mod-cm6.is-readable-line-width { 
+  .markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap { 
     .internal-embed,
     .cm-content > .image-embed,
     .cm-line,
