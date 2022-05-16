@@ -7,7 +7,7 @@ body .table-view-table > thead > tr > th,
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
   font-weight:400;
-  font-size:calc(var(--font-adaptive-normal) - 2px);
+  font-size:var(--table-font-size);
   color:var(--text-muted);
   border-bottom:1px solid var(--background-modifier-border);
   cursor:var(--cursor);
