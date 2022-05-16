@@ -3,7 +3,7 @@
 
 div > ol,
 div > ul {
-  padding-inline-start:1.5em;
+  padding-inline-start:1.4em;
 }
 ul > li {
   min-height:1.4em;
@@ -20,6 +20,9 @@ ol {
 }
 
 .is-mobile {
+  ul > li:not(.task-list-item)::marker {
+    font-size:0.8em;
+  }
   .markdown-rendered ul,
   .markdown-rendered ol {
     padding-inline-start:var(--list-indent);
@@ -27,7 +30,7 @@ ol {
   /* first level */
   .markdown-rendered div > ol,
   .markdown-rendered div > ul {
-    padding-inline-start:1.5em;
+    padding-inline-start:2em;
   }
   .el-ol > ol,
   .el-ul > ul {
@@ -60,10 +63,10 @@ ul > li::marker,
 ol > li::marker {
   color:var(--text-faint);
 }
-ul > li::marker {
+ul > li:not(.task-list-item)::marker {
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  font-size:0.8em;
-}  
+  font-size:0.9em;
+}
 .mod-cm6 .HyperMD-list-line .list-bullet::after,
 .mod-cm6 span.list-bullet::after {
   line-height:0.95em;

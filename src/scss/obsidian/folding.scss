@@ -1,5 +1,4 @@
 /* Folding icons in Preview */
-
 .collapse-indicator svg,
 .markdown-preview-view .heading-collapse-indicator.collapse-indicator svg,
 .markdown-preview-view ol > li .collapse-indicator svg,
@@ -48,8 +47,6 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
   padding-top:0px;}
 .markdown-preview-view ul > li:not(.task-list-item) .collapse-indicator {
   padding-right:20px;}
-.markdown-preview-view ul > li:not(.task-list-item)::marker {
-  font-size:0.9em;}
 
 .list-collapse-indicator .collapse-indicator .collapse-icon {
   opacity:0;

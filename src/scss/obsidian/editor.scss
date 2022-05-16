@@ -58,7 +58,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
     margin:0 !important;
   }
 }
-.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
+.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width:30px !important;
   padding-left:9px !important;
   transform:none !important;
@@ -105,7 +105,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   cursor:var(--cursor);
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
-  right:6px;
+  right:8px;
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-task-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
   right:0px;

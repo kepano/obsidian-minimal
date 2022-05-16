@@ -34,15 +34,21 @@ body .table-view-table > tbody > tr:hover {
   background-color:transparent;
   box-shadow:none;
 }
-
+body .dataview-error {
+  margin-top:16px;
+} 
 /* New error box as of 2022-05 */
 body div.dataview-error-box {
   min-height:0;
   border:none;
-  background-color:var(--background-secondary);
+  background-color:transparent;
   font-size:var(--font-adaptive-small);
   border-radius:var(--radius-m);
-  padding:20px 0;
+  padding:15px 0;
+  p {
+    margin-block-start:0;
+    margin-block-end:0;
+  }
 }
 
 /* Trim columns feature */
