@@ -6419,9 +6419,6 @@ https://github.com/sponsors/kepano
   margin: 0 0 0 calc(50% - var(--max-width)/2) !important;
   padding-left: var(--folding-offset); }
 
-.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
-  contain: unset; }
-
 /* Live Preview */
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   max-width: calc(var(--max-width) - var(--folding-offset)); }
