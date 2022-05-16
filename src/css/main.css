@@ -5814,6 +5814,15 @@ table:not(.calendar) tbody > tr > td,
   text-overflow: ellipsis;
   overflow: hidden; }
 
+.trim-cols .markdown-preview-view.table-wrap .table-view-table > tbody > tr > td,
+.trim-cols .markdown-preview-view.table-wrap .table-view-table > thead > tr > th,
+.trim-cols .markdown-source-view.mod-cm6.table-wrap .table-view-table > tbody > tr > td,
+.trim-cols .markdown-source-view.mod-cm6.table-wrap .table-view-table > thead > tr > th,
+.table-nowrap .table-wrap thead > tr > th,
+.table-nowrap .table-wrap tbody > tr > td {
+  white-space: normal;
+  overflow: auto; }
+
 .table-numbers table:not(.calendar) {
   counter-reset: section; }
 
