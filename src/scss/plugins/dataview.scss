@@ -42,13 +42,17 @@ body div.dataview-error-box {
   min-height:0;
   border:none;
   background-color:transparent;
-  font-size:var(--font-adaptive-small);
+  font-size:var(--table-font-size);
   border-radius:var(--radius-m);
   padding:15px 0;
   p {
     margin-block-start:0;
     margin-block-end:0;
+    color:var(--text-faint);
   }
+}
+.markdown-source-view div.dataview-error-box {
+  margin-top:15px;
 }
 
 /* Trim columns feature */

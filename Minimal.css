@@ -985,7 +985,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 
 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width: 30px !important;
-  padding-left: 9px !important;
+  padding-left: 7px !important;
   transform: none !important;
   margin-left: 0 !important; }
 
@@ -6435,7 +6435,8 @@ https://github.com/sponsors/kepano
   padding-left: var(--folding-offset); }
 
 .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
-  contain: unset; }
+  contain: unset;
+  overflow: scroll; }
 
 /* Folding offset */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
@@ -8903,12 +8904,16 @@ body div.dataview-error-box {
   min-height: 0;
   border: none;
   background-color: transparent;
-  font-size: var(--font-adaptive-small);
+  font-size: var(--table-font-size);
   border-radius: var(--radius-m);
   padding: 15px 0; }
   body div.dataview-error-box p {
     margin-block-start: 0;
-    margin-block-end: 0; }
+    margin-block-end: 0;
+    color: var(--text-faint); }
+
+.markdown-source-view div.dataview-error-box {
+  margin-top: 15px; }
 
 /* Trim columns feature */
 .trim-cols .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
