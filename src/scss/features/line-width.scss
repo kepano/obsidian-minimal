@@ -61,8 +61,8 @@
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
 .is-live-preview.is-readable-line-width.embed-strict .internal-embed .markdown-preview-sizer,
-.is-readable-line-width.is-line-wrap .block-language-dataview table.dataview,
-.is-live-preview.is-readable-line-width.is-line-wrap .cm-embed-block table.dataview {
+.is-readable-line-width .block-language-dataview table.dataview,
+.is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
   width:100%;
   max-width:100%;
   transform:none;
@@ -75,7 +75,7 @@ as opposed to regular tables */
 
   /* Nudge everything slightly to the left to make space for folding and gutters */
   /* This is the big daddy rule for most editor content line types */
-  .markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap { 
+  .markdown-source-view.mod-cm6.is-readable-line-width { 
     .internal-embed,
     .cm-content > .image-embed,
     .cm-line,
@@ -100,15 +100,6 @@ as opposed to regular tables */
         calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
         calc(50% + var(--folding-offset) - var(--max-width)/2)) !important;
     }
-    /* For lists adding an extra offset value in Edit mode */
-    .HyperMD-list-line {
-      width:calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
-      max-width:calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));
-      margin:0 auto 0
-        max(
-        calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--line-width-adaptive)/2),
-        calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--max-width)/2)) !important;
-    }
   }
   .markdown-source-view.mod-cm6.is-readable-line-width {
     .mod-empty,
@@ -120,6 +111,18 @@ as opposed to regular tables */
         max(
         calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
         calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
+    }
+  }
+  /* For lists adding an extra offset value in Edit mode */
+  /* Needs .is-line-wrap to override default styling */
+  .markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap {
+    .HyperMD-list-line {
+      width:calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
+      max-width:calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));
+      margin:0 auto 0
+        max(
+        calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--line-width-adaptive)/2),
+        calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--max-width)/2)) !important;
     }
   }
 
