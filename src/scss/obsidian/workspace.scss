@@ -14,6 +14,13 @@
   color:var(--text-normal);
   font-size:var(--font-adaptive-normal);
 }
+/* Empty side pane */
+.pane-empty {
+  text-align:center;
+  color:var(--text-faint);
+  font-size:var(--font-adaptive-small);
+}
+
 .workspace-split.mod-root {
   background-color:var(--background-primary);
 }
