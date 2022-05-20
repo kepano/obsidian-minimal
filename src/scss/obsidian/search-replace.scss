@@ -123,13 +123,13 @@ body:not(.is-mobile) .document-replace {
 .markdown-reading-view.is-searching {
   flex-direction:column-reverse;
 }
-input.document-search-input,
-input.document-replace-input {
+body input.document-search-input,
+body input.document-replace-input {
   margin-top:2px;
-  font-size:var(--font-adaptive-small) !important;
+  font-size:var(--font-adaptive-small);
   border:1px solid var(--background-modifier-border);
   border-radius:var(--radius-m);
-  height:28px !important;
+  height:28px;
   background:var(--background-primary);
   transition:border-color 0.1s ease-in-out;
 }

@@ -2760,13 +2760,13 @@ body:not(.is-mobile) .document-replace {
 .markdown-reading-view.is-searching {
   flex-direction: column-reverse; }
 
-input.document-search-input,
-input.document-replace-input {
+body input.document-search-input,
+body input.document-replace-input {
   margin-top: 2px;
-  font-size: var(--font-adaptive-small) !important;
+  font-size: var(--font-adaptive-small);
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-m);
-  height: 28px !important;
+  height: 28px;
   background: var(--background-primary);
   transition: border-color 0.1s ease-in-out; }
 
@@ -7121,29 +7121,46 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   background-color: var(--background-primary);
   border-top: 1px solid var(--background-modifier-border); }
 
+/* Document search / replace */
 .is-mobile .document-search,
 .is-mobile .document-replace {
   flex-direction: row; }
-
 .is-mobile .document-search-container {
-  height: 56px;
-  padding: 0px 15px; }
-
+  padding: 8px 0 7px 0;
+  background-color: var(--background-secondary);
+  margin: 0 auto 0 auto;
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid var(--background-modifier-border); }
+.is-mobile .document-search,
+.is-mobile .document-replace {
+  margin: 0 auto;
+  max-width: calc(var(--max-width) + 2%);
+  width: var(--line-width-adaptive);
+  padding-left: var(--folding-offset); }
 .is-mobile .document-search-container input[type='text'] {
   width: auto;
   margin: 0 5px 0 0;
   height: 32px;
-  padding: 5px 7px;
+  padding: 5px 10px 5px 10px;
   border-radius: 50px;
+  min-width: 90px;
   border: 1px solid var(--background-modifier-border);
   background-color: var(--background-primary); }
-
-.is-mobile .document-search-container button {
+.is-mobile .document-search .document-search-buttons,
+.is-mobile .document-replace button {
+  flex-grow: 0; }
+.is-mobile .document-search-container button.document-search-button {
   width: auto;
   margin: 0px;
   background: transparent;
   font-size: 14px;
-  height: 32px; }
+  height: 32px;
+  padding: 0 5px; }
+.is-mobile .document-search .document-search-close-button,
+.is-mobile .document-replace .document-search-close-button {
+  height: 32px;
+  line-height: 32px; }
 
 .pull-out-action {
   top: 0;
