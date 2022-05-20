@@ -524,7 +524,7 @@ body .excalidraw {
 
 /* Desktop font sizes */
 body {
-  --font-adaptive-normal:var(--font-text-size);
+  --font-adaptive-normal:var(--font-text-size,var(--editor-font-size));
   --font-adaptive-small:var(--font-small);
   --font-adaptive-smaller:var(--font-smaller);
   --font-adaptive-smallest:var(--font-smallest);
