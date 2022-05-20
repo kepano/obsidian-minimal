@@ -523,7 +523,7 @@ body .excalidraw {
 
 /* Desktop font sizes */
 body {
-  --font-adaptive-normal:var(--font-text-size);
+  --font-adaptive-normal:var(--font-text-size,var(--editor-font-size));
   --font-adaptive-small:var(--font-small);
   --font-adaptive-smaller:var(--font-smaller);
   --font-adaptive-smallest:var(--font-smallest);
@@ -3833,6 +3833,12 @@ body:not(.window-title-on) .titlebar-text {
 .empty-state-action-list {
   color: var(--text-normal);
   font-size: var(--font-adaptive-normal); }
+
+/* Empty side pane */
+.pane-empty {
+  text-align: center;
+  color: var(--text-faint);
+  font-size: var(--font-adaptive-small); }
 
 .workspace-split.mod-root {
   background-color: var(--background-primary); }
