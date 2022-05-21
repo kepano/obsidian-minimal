@@ -7,7 +7,7 @@ body .table-view-table > thead > tr > th,
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
   font-weight:400;
-  font-size:calc(var(--font-adaptive-normal) - 2px);
+  font-size:var(--table-font-size);
   color:var(--text-muted);
   border-bottom:1px solid var(--background-modifier-border);
   cursor:var(--cursor);
@@ -28,18 +28,32 @@ body .dataview.small-text {
 }
 
 /* Remove hover effect */
+body .dataview.task-list-item:hover,
+body .dataview.task-list-basic-item:hover,
 body .table-view-table > tbody > tr:hover {
   background-color:transparent;
+  box-shadow:none;
 }
-
+body .dataview-error {
+  margin-top:16px;
+  background-color:transparent;
+} 
 /* New error box as of 2022-05 */
 body div.dataview-error-box {
   min-height:0;
   border:none;
-  background-color:var(--background-secondary);
-  font-size:var(--font-adaptive-small);
+  background-color:transparent;
+  font-size:var(--table-font-size);
   border-radius:var(--radius-m);
-  padding:20px 0;
+  padding:15px 0;
+  p {
+    margin-block-start:0;
+    margin-block-end:0;
+    color:var(--text-faint);
+  }
+}
+.markdown-source-view div.dataview-error-box {
+  margin-top:15px;
 }
 
 /* Trim columns feature */

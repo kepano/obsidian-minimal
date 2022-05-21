@@ -11,6 +11,14 @@
   --input-height:40px;
   --radius-m:8px;
 }
+
+@media (min-width:400pt) {
+  .is-mobile {
+    --input-height:36px;
+    --radius-m:6px;
+  }
+}
+
 .hider-tooltips .follow-link-popover {
   display:none;
 }
@@ -345,31 +353,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   overflow:scroll;
   background-color:var(--background-primary);
   border-top:1px solid var(--background-modifier-border);
-}
-
-.is-mobile .document-search,
-.is-mobile .document-replace {
-  flex-direction:row;
-}
-.is-mobile .document-search-container {
-  height:56px;
-  padding:0px 15px;
-}
-.is-mobile .document-search-container input[type='text'] {
-  width:auto;
-  margin:0 5px 0 0;
-  height:32px;
-  padding:5px 7px;
-  border-radius:50px;
-  border:1px solid var(--background-modifier-border);
-  background-color:var(--background-primary);
-}
-.is-mobile .document-search-container button {
-  width:auto;
-  margin:0px;
-  background:transparent;
-  font-size:14px;
-  height:32px;
 }
 
 .pull-out-action {

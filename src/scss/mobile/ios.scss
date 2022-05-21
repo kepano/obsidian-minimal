@@ -2,6 +2,7 @@
 
 :root {
   --ios-radius:10px;
+  --ios-input-radius:8px;
   --ios-shadow:0 5px 100px rgba(0,0,0,0.15);
   --ios-muted:#8e8e93;
 }
@@ -95,6 +96,21 @@
     }
     .modal-button-container>button:last-child:hover {
       background-color:var(--ios-bg-translucent);
+    }
+  }
+
+  &.is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input,
+  .document-search-container input[type='text'] {
+    border-radius:var(--ios-input-radius);
+    border:0px;
+    background-color:var(--background-tertiary);
+    &:active, &:hover, &:focus {
+      border-radius:var(--ios-input-radius);
+      border:0px;
+      background-color:var(--background-tertiary);
+    }
+    &::placeholder {
+      color:var(--text-muted);
     }
   }
 

@@ -2,7 +2,6 @@
 
 .minimal-dev-block-width {
 
-
   .mod-root .workspace-leaf-content:after {
     display:flex;
     align-items:flex-end;
@@ -19,13 +18,13 @@
     pointer-events:none;
   }
   /* Green — Folding offset width */
-  .mod-root .view-header:after {
+  &.minimal-readable .mod-root .view-header:after {
     display:flex;
     align-items:flex-end;
     color:green;
     font-size:12px;
     font-family:var(--font-monospace);
-    content:"\00a0normal";
+    content:" ";
     width:var(--folding-offset);
     height:100vh;
     border-left:1px solid green;
@@ -35,6 +34,24 @@
     left:max(
       calc(50% - var(--line-width-adaptive)/2 - 1px),
       calc(50% - var(--max-width)/2 - 1px));
+    z-index:999;
+    position:fixed;
+    pointer-events:none;
+  }
+  &.minimal-readable-off .mod-root .view-header:after {
+    display:flex;
+    align-items:flex-end;
+    color:green;
+    font-size:12px;
+    font-family:var(--font-monospace);
+    content:" ";
+    width:var(--folding-offset);
+    height:100vh;
+    border-left:1px solid green;
+    border-right:1px solid green;
+    background-color:rgba(0,128,0,0.1);
+    top:0;
+    left:calc(50% - var(--max-width)/2 - 1px);
     z-index:999;
     position:fixed;
     pointer-events:none;
@@ -58,7 +75,7 @@
     pointer-events:none;
   }
   /* Orange — Wide line width*/
-  .mod-root .view-header:before {
+  &.minimal-readable .mod-root .view-header:before {
     display:flex;
     align-items:flex-end;
     content:"\00a0wide\00a0";
@@ -79,7 +96,7 @@
     pointer-events:none;
   } 
   /* Blue — Normal line width */
-  .mod-root .view-content:after {
+  &.minimal-readable .mod-root .view-content:after {
     display:flex;
     align-items:flex-end;
     color:blue;

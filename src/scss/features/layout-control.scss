@@ -41,26 +41,20 @@ https://github.com/sponsors/kepano
   max-width:100%;
 }
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
   width:100%;
   max-width:100%;
   overflow-x:scroll;
 }
-.is-readable-line-width .el-lang-dataview .block-language-dataview > h4,
-.is-readable-line-width .el-lang-dataview .dataview.result-group,
-.is-readable-line-width .el-lang-dataview .dataview.list-view-ul,
-.is-readable-line-width .el-lang-dataview .dataview.dataview-error {
-  max-width:var(--max-width);
-  width:calc(var(--line-width-adaptive) - var(--folding-offset));
-  margin-left:auto;
-  margin-right:auto;
-  --folding-offset:16px;
-}
+
+.el-lang-dataviewjs .block-language-dataviewjs .contains-task-list,
 .el-lang-dataview .block-language-dataview .contains-task-list {
   max-width:100%;
 }
 .is-readable-line-width .el-table table,
-.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
+.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
+.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
   width:var(--max-width);
   max-width:var(--line-width-adaptive);
   margin:0 auto 0.5rem;
@@ -72,27 +66,33 @@ https://github.com/sponsors/kepano
 
 /* Dataview and tables */
 .table-100 .el-table table,
+.table-100 .el-lang-dataviewjs .dataview.table-view-table,
 .table-100 .el-lang-dataview .dataview.table-view-table {
   max-width:100% !important;
   width:100% !important;
 }
 .markdown-preview-view.table-100.is-readable-line-width .el-table table,
-.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
+.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
+.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
   max-width:100% !important;
   width:100% !important;
 }
 .table-max .el-table table,
-.table-max .el-lang-dataview .dataview.table-view-table {
+.table-max .el-lang-dataview .dataview.table-view-table,
+.table-max .el-lang-dataviewjs .dataview.table-view-table {
   max-width:100% !important;
 }
 .markdown-preview-view.table-max .el-table table,
-.markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table {
+.markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table
+.markdown-preview-view.table-max .el-lang-dataviewjs .dataview.table-view-table, {
   max-width:100% !important;
 }
 .table-wide .markdown-preview-view.is-readable-line-width .el-table table,
 .markdown-preview-view.is-readable-line-width.table-wide .el-table table,
 .table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
-.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
+.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table,
+.table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table,
+.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataviewjs .dataview.table-view-table {
   max-width:var(--line-width-wide) !important;
 }
 .table-100 table th:first-child,
@@ -143,12 +143,9 @@ https://github.com/sponsors/kepano
   max-width:100%;
 }
 
-/* Folding offset */
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  padding-left:var(--folding-offset);
-}
 .is-readable-line-width .el-table table,
-.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
+.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
+.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
   max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
 }
 .embed-strict .el-embed-page p,
@@ -161,6 +158,9 @@ https://github.com/sponsors/kepano
 .table-100 .el-lang-dataview,
 .table-max .el-lang-dataview,
 .table-wide .el-lang-dataview,
+.table-100 .el-lang-dataviewjs,
+.table-max .el-lang-dataviewjs,
+.table-wide .el-lang-dataviewjs,
 .table-100 .el-table,
 .table-max .el-table,
 .table-wide .el-table,
@@ -174,54 +174,64 @@ https://github.com/sponsors/kepano
 }
 
 /* Live Preview */
-.chart-max.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-max .is-live-preview.is-readable-line-width .block-language-chart,
-.map-max.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-max .is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-max.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-max .is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-max.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-max .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-max.is-live-preview.is-readable-line-width .cm-content > img,
-.img-max .is-live-preview.is-readable-line-width .cm-content > img {
+.chart-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.map-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
+.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
   width:var(--max-width) !important;
+  max-width:var(--max-width) !important;
   transform:none !important;
   padding-left:0;
+  margin:0 auto !important;
 }
-.chart-wide.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-wide .is-live-preview.is-readable-line-width .block-language-chart,
-.map-wide.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-wide .is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-wide.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-wide .is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-wide.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-wide .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-wide.is-live-preview.is-readable-line-width .cm-content > img,
-.img-wide .is-live-preview.is-readable-line-width .cm-content > img {
+.chart-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.map-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
+.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
   width:var(--line-width-wide) !important;
   max-width:var(--max-width);
   transform:none !important;
   padding-left:0;
+  margin:0 auto !important;
 }
-.chart-100.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-100 .is-live-preview.is-readable-line-width .block-language-chart,
-.map-100.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-100 .is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-100.is-live-preview.is-readable-line-width table,
-.table-100 .is-live-preview.is-readable-line-width table,
-.table-100.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-100 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.img-100.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100.is-live-preview.is-readable-line-width .cm-content > img,
-.img-100 .is-live-preview.is-readable-line-width .cm-content > img {
+.chart-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.map-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table,
+.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table,
+.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
+.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
   width:100% !important;
   max-width:100% !important;
   transform:none !important;
+  margin:0 auto !important;
   padding-left:0;
 }
 
@@ -231,23 +241,29 @@ https://github.com/sponsors/kepano
   .markdown-preview-view .el-table th:first-child,
   .markdown-preview-view .el-table td:first-child,
   .markdown-preview-view .el-lang-dataview th:first-child,
-  .markdown-preview-view .el-lang-dataview td:first-child {
+  .markdown-preview-view .el-lang-dataview td:first-child
+  .markdown-preview-view .el-lang-dataviewjs th:first-child,
+  .markdown-preview-view .el-lang-dataviewjs td:first-child {
     padding-left:6vw;
   }
   .markdown-preview-view .el-table th:last-child,
   .markdown-preview-view .el-table td:last-child,
   .markdown-preview-view .el-lang-dataview th:last-child,
-  .markdown-preview-view .el-lang-dataview td:last-child {
+  .markdown-preview-view .el-lang-dataview td:last-child,
+  .markdown-preview-view .el-lang-dataviewjs th:last-child,
+  .markdown-preview-view .el-lang-dataviewjs td:last-child {
     padding-right:6vw;
   }
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
     padding-left:0;
     padding-right:0;
   }
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
   .markdown-preview-view .table-view-table table,
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
     width:100%;
   }
 }

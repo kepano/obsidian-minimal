@@ -1,10 +1,12 @@
 /* Indentation Guides (Obsidian 0.14.0+) */
 
 body {
-  --ig-adjust-reading:-0.7em;
+  --ig-adjust-reading:-0.65em;
   --ig-adjust-edit:-1px;
 }
 
+.markdown-rendered.show-indentation-guide li.task-list-item > ul::before,
+.markdown-rendered.show-indentation-guide li.task-list-item > ol::before,
 .markdown-rendered.show-indentation-guide li > ul::before,
 .markdown-rendered.show-indentation-guide li > ol::before {
   left:var(--ig-adjust-reading);
@@ -12,4 +14,16 @@ body {
 /* Live Preview */
 .markdown-source-view.mod-cm6 .cm-indent::before {
   transform:translateX(var(--ig-adjust-edit));
+}
+
+.is-mobile {
+
+  .markdown-rendered.show-indentation-guide li > ul::before,
+  .markdown-rendered.show-indentation-guide li > ol::before {
+    left:calc(0em + var(--ig-adjust-reading));
+  }
+  .markdown-source-view.mod-cm6 .cm-indent::before {
+    transform:translateX(calc(2px + var(--ig-adjust-edit)));
+  }
+
 }

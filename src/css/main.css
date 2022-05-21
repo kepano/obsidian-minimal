@@ -14,7 +14,6 @@ body {
   /* Cursor */
   --cursor:default;
   /* Font sizes */
-  --font-normal:16px;
   --font-small:13px;
   --font-smaller:11px;
   --font-smallest:10px;
@@ -538,13 +537,13 @@ body {
     z-index: 999;
     position: fixed;
     pointer-events: none; }
-  .minimal-dev-block-width .mod-root .view-header:after {
+  .minimal-dev-block-width.minimal-readable .mod-root .view-header:after {
     display: flex;
     align-items: flex-end;
     color: green;
     font-size: 12px;
     font-family: var(--font-monospace);
-    content: "\00a0normal";
+    content: " ";
     width: var(--folding-offset);
     height: 100vh;
     border-left: 1px solid green;
@@ -552,6 +551,23 @@ body {
     background-color: rgba(0, 128, 0, 0.1);
     top: 0;
     left: max(calc(50% - var(--line-width-adaptive)/2 - 1px), calc(50% - var(--max-width)/2 - 1px));
+    z-index: 999;
+    position: fixed;
+    pointer-events: none; }
+  .minimal-dev-block-width.minimal-readable-off .mod-root .view-header:after {
+    display: flex;
+    align-items: flex-end;
+    color: green;
+    font-size: 12px;
+    font-family: var(--font-monospace);
+    content: " ";
+    width: var(--folding-offset);
+    height: 100vh;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+    background-color: rgba(0, 128, 0, 0.1);
+    top: 0;
+    left: calc(50% - var(--max-width)/2 - 1px);
     z-index: 999;
     position: fixed;
     pointer-events: none; }
@@ -571,7 +587,7 @@ body {
     z-index: 999;
     position: fixed;
     pointer-events: none; }
-  .minimal-dev-block-width .mod-root .view-header:before {
+  .minimal-dev-block-width.minimal-readable .mod-root .view-header:before {
     display: flex;
     align-items: flex-end;
     content: "\00a0wide\00a0";
@@ -590,7 +606,7 @@ body {
     z-index: 999;
     position: fixed;
     pointer-events: none; }
-  .minimal-dev-block-width .mod-root .view-content:after {
+  .minimal-dev-block-width.minimal-readable .mod-root .view-content:after {
     display: flex;
     align-items: flex-end;
     color: blue;
@@ -661,7 +677,7 @@ body {
   --checkbox-icon:20px;
   --checkbox-radius:50%;
   --checkbox-top:3px;
-  --checkbox-left:-1px;
+  --checkbox-left:0px;
   --checkbox-margin:0px 5px 0px -1.35em; }
 
 .checkbox-square {
@@ -711,8 +727,13 @@ body.minimal-strike-lists li[data-task="x"].task-list-item.is-checked {
   color: var(--text-faint);
   text-decoration: line-through solid var(--text-faint) 1px; }
 
+/* Preview offset */
+ul > li.task-list-item .task-list-item-checkbox {
+  margin-left: -1.35em; }
+
+/* Editor */
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin: -2px 1px 0 -0.45em; }
+  margin: -2px 1px 0 -0.6em; }
 
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-left: -0.4em; }
@@ -921,14 +942,16 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   .markdown-source-view.mod-cm6 .edit-block-button svg {
     margin: 0 !important; }
 
-.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
+.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width: 30px !important;
-  padding-left: 9px !important;
-  transform: none !important; }
+  padding-left: 7px !important;
+  transform: none !important;
+  margin-left: 0 !important; }
 
 .is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
   width: 30px !important;
   padding-left: 0px !important;
+  margin-left: 0 !important;
   transform: none !important;
   left: calc(var(--folding-offset) * -2); }
 
@@ -965,7 +988,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   cursor: var(--cursor); }
 
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
-  right: 6px; }
+  right: 8px; }
 
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-task-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
   right: 0px; }
@@ -1679,9 +1702,6 @@ h5:hover .heading-collapse-indicator.collapse-indicator svg,
 .markdown-preview-view ul > li:not(.task-list-item) .collapse-indicator {
   padding-right: 20px; }
 
-.markdown-preview-view ul > li:not(.task-list-item)::marker {
-  font-size: 0.9em; }
-
 .list-collapse-indicator .collapse-indicator .collapse-icon {
   opacity: 0; }
 
@@ -1939,9 +1959,11 @@ body .view-action svg.cross path {
 
 /* Indentation Guides (Obsidian 0.14.0+) */
 body {
-  --ig-adjust-reading:-0.7em;
+  --ig-adjust-reading:-0.65em;
   --ig-adjust-edit:-1px; }
 
+.markdown-rendered.show-indentation-guide li.task-list-item > ul::before,
+.markdown-rendered.show-indentation-guide li.task-list-item > ol::before,
 .markdown-rendered.show-indentation-guide li > ul::before,
 .markdown-rendered.show-indentation-guide li > ol::before {
   left: var(--ig-adjust-reading); }
@@ -1949,6 +1971,12 @@ body {
 /* Live Preview */
 .markdown-source-view.mod-cm6 .cm-indent::before {
   transform: translateX(var(--ig-adjust-edit)); }
+
+.is-mobile .markdown-rendered.show-indentation-guide li > ul::before,
+.is-mobile .markdown-rendered.show-indentation-guide li > ol::before {
+  left: calc(0em + var(--ig-adjust-reading)); }
+.is-mobile .markdown-source-view.mod-cm6 .cm-indent::before {
+  transform: translateX(calc(2px + var(--ig-adjust-edit))); }
 
 /* Links */
 a {
@@ -1995,46 +2023,41 @@ a em,
   color: var(--text-muted); }
 
 /* Reader Mode Lists  */
-ul {
-  padding-inline-start: var(--list-indent); }
-
-ol {
-  padding-inline-start: calc(var(--list-indent) - 0.15em);
-  margin-left: 0;
-  list-style: default; }
+div > ol,
+div > ul {
+  padding-inline-start: 1.4em; }
 
 ul > li {
   min-height: 1.4em; }
 
-ul > li::marker,
-ol > li::marker {
-  color: var(--text-faint); }
-
-ul > li::marker,
-.mod-cm6 .HyperMD-list-line .list-bullet::after,
-.mod-cm6 span.list-bullet::after {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-
 ol > li {
   margin-left: 0em; }
 
-div > ol,
-div > ul {
-  margin-left: -0.25em;
-  padding-inline-start: 2em; }
+ul {
+  padding-inline-start: var(--list-indent); }
 
-.is-mobile .el-ol > ol,
-.is-mobile .el-ul > ul {
-  margin-left: 0; }
-.is-mobile .mod-cm6 .HyperMD-list-line.cm-line {
-  margin-left: 0.25em !important; }
+ol {
+  padding-inline-start: var(--list-indent);
+  margin-left: 0;
+  list-style: default; }
+
+.is-mobile {
+  /* first level */ }
+  .is-mobile ul > li:not(.task-list-item)::marker {
+    font-size: 0.8em; }
+  .is-mobile .markdown-rendered ul,
+  .is-mobile .markdown-rendered ol {
+    padding-inline-start: var(--list-indent); }
+  .is-mobile .markdown-rendered div > ol,
+  .is-mobile .markdown-rendered div > ul {
+    padding-inline-start: 2em; }
+  .is-mobile .el-ol > ol,
+  .is-mobile .el-ul > ul {
+    margin-left: 0; }
 
 /* Live Preview */
 .cm-line:not(.HyperMD-codeblock) {
   tab-size: var(--list-indent); }
-
-body:not(.is-mobile) .is-readable-line-width.mod-cm6 .HyperMD-list-line.cm-line {
-  transform: translateX(calc(0.5em + var(--folding-offset))); }
 
 /* Space between list items */
 .markdown-source-view ol > li,
@@ -2050,6 +2073,14 @@ body:not(.is-mobile) .is-readable-line-width.mod-cm6 .HyperMD-list-line.cm-line 
   color: var(--text-faint) !important; }
 
 /* Bullets */
+ul > li::marker,
+ol > li::marker {
+  color: var(--text-faint); }
+
+ul > li:not(.task-list-item)::marker {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size: 0.9em; }
+
 .mod-cm6 .HyperMD-list-line .list-bullet::after,
 .mod-cm6 span.list-bullet::after {
   line-height: 0.95em;
@@ -2143,7 +2174,7 @@ body:not(.is-mobile) .modal {
   right: 7px;
   padding: 0; }
 
-.document-search-close-button:hover,
+body:not(.is-mobile) .document-search-close-button:hover,
 .modal-close-button:hover {
   color: var(--text-normal);
   background: var(--background-tertiary); }
@@ -2376,7 +2407,8 @@ body:not(.is-mobile) .modal {
   height: auto;
   line-height: 20px;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
   .menu-item:hover, .menu-item:hover:not(.is-disabled):not(.is-label), .menu-item.selected:not(.is-disabled):not(.is-label) {
     background-color: var(--background-tertiary); }
 
@@ -2678,6 +2710,7 @@ body:not(.is-mobile) .document-search-buttons {
 .document-search-buttons {
   height: 30px;
   padding-top: 0;
+  gap: 5px;
   display: flex; }
 
 .document-search-button,
@@ -2704,7 +2737,7 @@ body .document-search-close-button {
   line-height: 24px; }
 
 .document-search-button {
-  margin: 0 4px 0 0;
+  margin: 0;
   padding-left: 0.75em;
   padding-right: 0.75em; }
 
@@ -2716,25 +2749,29 @@ body .document-search-container {
   border-top: none;
   width: 100%; }
 
-body:not(.is-mobile) .document-search,
-body:not(.is-mobile) .document-replace {
+.document-search,
+.document-replace {
   max-width: var(--max-width);
   width: var(--line-width);
   margin: 0 auto;
   padding: 0 5px; }
+
+.minimal-readable-off .document-search,
+.minimal-readable-off .document-replace {
+  width: 100%; }
 
 .markdown-source-view.is-searching,
 .markdown-source-view.is-replacing,
 .markdown-reading-view.is-searching {
   flex-direction: column-reverse; }
 
-input.document-search-input,
-input.document-replace-input {
+body input.document-search-input,
+body input.document-replace-input {
   margin-top: 2px;
-  font-size: var(--font-adaptive-small) !important;
+  font-size: var(--font-adaptive-small);
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-m);
-  height: 28px !important;
+  height: 28px;
   background: var(--background-primary);
   transition: border-color 0.1s ease-in-out; }
 
@@ -2752,6 +2789,56 @@ input.document-replace-input:focus {
 
 .document-search-button {
   font-size: var(--font-adaptive-small); }
+
+/* Mobile */
+.is-mobile .document-search,
+.is-mobile .document-replace {
+  flex-direction: row; }
+.is-mobile .document-replace {
+  padding-top: 6px; }
+  .is-mobile .document-replace .document-replace-buttons {
+    flex-shrink: 1;
+    flex-grow: 0; }
+.is-mobile .document-search-container {
+  padding: 8px 0 8px 0;
+  background-color: var(--background-primary);
+  margin: 0 auto 0 auto;
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid var(--background-modifier-border); }
+.is-mobile .document-search,
+.is-mobile .document-replace {
+  margin: 0 auto;
+  max-width: calc(var(--max-width) + 2%);
+  width: var(--line-width-adaptive);
+  padding-left: var(--folding-offset); }
+.is-mobile.minimal-readable-off .document-search,
+.is-mobile.minimal-readable-off .document-replace {
+  width: 100%; }
+.is-mobile .document-search-container input[type='text'] {
+  width: auto;
+  margin: 0 8px 0 0;
+  height: 32px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+  min-width: 90px;
+  border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-primary); }
+.is-mobile .document-search .document-search-buttons,
+.is-mobile .document-replace button {
+  flex-grow: 0; }
+.is-mobile .document-search-container button.document-search-button {
+  width: auto;
+  margin: 0px;
+  background: transparent;
+  font-size: 14px;
+  height: 32px;
+  padding: 0 2px;
+  white-space: nowrap; }
+.is-mobile .document-search .document-search-close-button,
+.is-mobile .document-replace .document-search-close-button {
+  height: 30px;
+  line-height: 30px; }
 
 /* Settings */
 .modal.mod-sync-history,
@@ -3148,7 +3235,8 @@ body:not(.minimal-icons) .setting-hotkey-icon.setting-delete-hotkey svg {
   padding-top: 4px; }
 
 .setting-item-control {
-  margin-right: 0; }
+  margin-right: 0;
+  gap: 8px; }
 
 /* Status bar */
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
@@ -6150,26 +6238,19 @@ https://github.com/sponsors/kepano
   max-width: 100%; }
 
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview,
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
   width: 100%;
   max-width: 100%;
   overflow-x: scroll; }
 
-.is-readable-line-width .el-lang-dataview .block-language-dataview > h4,
-.is-readable-line-width .el-lang-dataview .dataview.result-group,
-.is-readable-line-width .el-lang-dataview .dataview.list-view-ul,
-.is-readable-line-width .el-lang-dataview .dataview.dataview-error {
-  max-width: var(--max-width);
-  width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  margin-left: auto;
-  margin-right: auto;
-  --folding-offset:16px; }
-
+.el-lang-dataviewjs .block-language-dataviewjs .contains-task-list,
 .el-lang-dataview .block-language-dataview .contains-task-list {
   max-width: 100%; }
 
 .is-readable-line-width .el-table table,
-.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
+.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
+.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
   width: var(--max-width);
   max-width: var(--line-width-adaptive);
   margin: 0 auto 0.5rem; }
@@ -6180,27 +6261,33 @@ https://github.com/sponsors/kepano
 
 /* Dataview and tables */
 .table-100 .el-table table,
+.table-100 .el-lang-dataviewjs .dataview.table-view-table,
 .table-100 .el-lang-dataview .dataview.table-view-table {
   max-width: 100% !important;
   width: 100% !important; }
 
 .markdown-preview-view.table-100.is-readable-line-width .el-table table,
-.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
+.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
+.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
   max-width: 100% !important;
   width: 100% !important; }
 
 .table-max .el-table table,
-.table-max .el-lang-dataview .dataview.table-view-table {
+.table-max .el-lang-dataview .dataview.table-view-table,
+.table-max .el-lang-dataviewjs .dataview.table-view-table {
   max-width: 100% !important; }
 
 .markdown-preview-view.table-max .el-table table,
-.markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table {
+.markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table
+.markdown-preview-view.table-max .el-lang-dataviewjs .dataview.table-view-table {
   max-width: 100% !important; }
 
 .table-wide .markdown-preview-view.is-readable-line-width .el-table table,
 .markdown-preview-view.is-readable-line-width.table-wide .el-table table,
 .table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
-.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table {
+.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table,
+.table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table,
+.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataviewjs .dataview.table-view-table {
   max-width: var(--line-width-wide) !important; }
 
 .table-100 table th:first-child,
@@ -6249,12 +6336,9 @@ https://github.com/sponsors/kepano
   width: 100%;
   max-width: 100%; }
 
-/* Folding offset */
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  padding-left: var(--folding-offset); }
-
 .is-readable-line-width .el-table table,
-.is-readable-line-width .el-lang-dataview .dataview.table-view-table {
+.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
+.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
   max-width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
 
 .embed-strict .el-embed-page p,
@@ -6267,6 +6351,9 @@ https://github.com/sponsors/kepano
 .table-100 .el-lang-dataview,
 .table-max .el-lang-dataview,
 .table-wide .el-lang-dataview,
+.table-100 .el-lang-dataviewjs,
+.table-max .el-lang-dataviewjs,
+.table-wide .el-lang-dataviewjs,
 .table-100 .el-table,
 .table-max .el-table,
 .table-wide .el-table,
@@ -6279,54 +6366,64 @@ https://github.com/sponsors/kepano
   --folding-offset:0px; }
 
 /* Live Preview */
-.chart-max.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-max .is-live-preview.is-readable-line-width .block-language-chart,
-.map-max.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-max .is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-max.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-max .is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-max.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-max .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.img-max.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-max .is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-max.is-live-preview.is-readable-line-width .cm-content > img,
-.img-max .is-live-preview.is-readable-line-width .cm-content > img {
+.chart-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.map-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
+.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
   width: var(--max-width) !important;
+  max-width: var(--max-width) !important;
   transform: none !important;
-  padding-left: 0; }
+  padding-left: 0;
+  margin: 0 auto !important; }
 
-.chart-wide.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-wide .is-live-preview.is-readable-line-width .block-language-chart,
-.map-wide.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-wide .is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-wide.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-wide .is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-wide.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-wide .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.img-wide.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-wide .is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-wide.is-live-preview.is-readable-line-width .cm-content > img,
-.img-wide .is-live-preview.is-readable-line-width .cm-content > img {
+.chart-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.map-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
+.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
+.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
   width: var(--line-width-wide) !important;
   max-width: var(--max-width);
   transform: none !important;
-  padding-left: 0; }
+  padding-left: 0;
+  margin: 0 auto !important; }
 
-.chart-100.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-100 .is-live-preview.is-readable-line-width .block-language-chart,
-.map-100.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-100 .is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-100.is-live-preview.is-readable-line-width table,
-.table-100 .is-live-preview.is-readable-line-width table,
-.table-100.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-100 .is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.img-100.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100 .is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100.is-live-preview.is-readable-line-width .cm-content > img,
-.img-100 .is-live-preview.is-readable-line-width .cm-content > img {
+.chart-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.chart-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
+.map-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.map-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
+.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table,
+.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table,
+.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
+.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
+.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
+.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
+.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
   width: 100% !important;
   max-width: 100% !important;
   transform: none !important;
+  margin: 0 auto !important;
   padding-left: 0; }
 
 /* Mobile */
@@ -6334,25 +6431,34 @@ https://github.com/sponsors/kepano
   .markdown-preview-view .el-table th:first-child,
   .markdown-preview-view .el-table td:first-child,
   .markdown-preview-view .el-lang-dataview th:first-child,
-  .markdown-preview-view .el-lang-dataview td:first-child {
+  .markdown-preview-view .el-lang-dataview td:first-child
+  .markdown-preview-view .el-lang-dataviewjs th:first-child,
+  .markdown-preview-view .el-lang-dataviewjs td:first-child {
     padding-left: 6vw; }
 
   .markdown-preview-view .el-table th:last-child,
   .markdown-preview-view .el-table td:last-child,
   .markdown-preview-view .el-lang-dataview th:last-child,
-  .markdown-preview-view .el-lang-dataview td:last-child {
+  .markdown-preview-view .el-lang-dataview td:last-child,
+  .markdown-preview-view .el-lang-dataviewjs th:last-child,
+  .markdown-preview-view .el-lang-dataviewjs td:last-child {
     padding-right: 6vw; }
 
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
     padding-left: 0;
     padding-right: 0; }
 
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
   .markdown-preview-view .table-view-table table,
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview {
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
     width: 100%; } }
 /* Custom line width */
+:root {
+  --list-edit-offset:0.5em; }
+
 /* With readable line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: var(--max-width);
@@ -6384,68 +6490,121 @@ https://github.com/sponsors/kepano
   margin: 0 0 0 calc(50% - var(--max-width)/2) !important;
   padding-left: var(--folding-offset); }
 
-/* Live Preview */
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
-  max-width: calc(var(--max-width) - var(--folding-offset)); }
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+  overflow: scroll; }
 
-/* Nudge everything slightly to the left to make space for folding and gutters */
-.markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > .image-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
-.markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout .callout,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img:not([width]),
-.markdown-source-view.mod-cm6.is-readable-line-width table {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  max-width: var(--max-width);
-  margin: 0 auto !important;
-  transform: translateX(calc(var(--folding-offset)/2));
-  padding-left: 0; }
-.markdown-source-view.mod-cm6.is-readable-line-width .dataview-error {
-  margin-top: 16px; }
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
-  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
-  max-width: var(--max-width); }
-
-.is-live-preview.is-readable-line-width .mod-empty,
-.is-live-preview.is-readable-line-width .cm-embed-block > mjx-container,
-.is-live-preview.is-readable-line-width .cm-embed-block > div {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  width: var(--line-width-adaptive);
+/* Folding offset */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
   padding-left: var(--folding-offset); }
 
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataview"],
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataviewjs"] {
+  padding-left: var(--folding-offset); }
+
+/* Live Preview */
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width: 100%; }
 
-.is-live-preview.is-readable-line-width .list-view-ul,
-.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
-  width: var(--line-width-adaptive);
-  max-width: 100%;
-  transform: translateX(calc(0.75em - var(--folding-offset)));
-  margin: 0 auto !important; }
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
+  max-width: calc(var(--max-width) - var(--folding-offset)); }
 
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
 .is-live-preview.is-readable-line-width.embed-strict .internal-embed .markdown-preview-sizer,
 .is-readable-line-width .block-language-dataview table.dataview,
+.is-readable-line-width .block-language-dataviewjs table.dataview,
 .is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
   width: 100%;
   max-width: 100%;
   transform: none;
-  padding-left: 0; }
+  margin-left: auto !important; }
 
-.is-readable-line-width .block-language-dataview div.dataview-error-box {
-  --folding-offset:16px;
+/* Line width for Live Preview / Editor mode
+   Gets complicated.
+   -------------------------------------------*/
+/* Nudge everything slightly to the left to make space for folding and gutters */
+/* This is the big daddy rule for most editor content line types */
+.markdown-source-view.mod-cm6.is-readable-line-width {
+  /* Don't force width for images that have a width */ }
+  .markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > .image-embed,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
+  .markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout .callout,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img:not([width]),
+  .markdown-source-view.mod-cm6.is-readable-line-width table {
+    width: calc(var(--line-width-adaptive) - var(--folding-offset));
+    max-width: calc(var(--max-width) - var(--folding-offset));
+    margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
+    max-width: var(--max-width);
+    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
+
+.markdown-source-view.mod-cm6.is-readable-line-width .mod-empty,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > div,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > mjx-container {
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  max-width: calc(var(--max-width) - var(--folding-offset));
+  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
+
+/* For lists adding an extra offset value in Edit mode */
+/* Needs .is-line-wrap to override default styling */
+.markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap .HyperMD-list-line {
+  width: calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
+  max-width: calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));
+  margin: 0 auto 0 max(calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--max-width)/2)) !important; }
+
+/* Dataview lists/checklists
+   A nightmare mainly because there is no selector that indicates
+   a list is present inside the dataview block
+   -------------------------------------------*/
+/* Normal block width */
+/* ------------------ */
+body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul,
+body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview .contains-task-list {
+  max-width: 100%;
+  margin: 0 auto;
+  transform: none; }
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview .contains-task-list,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview > h4,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.result-group,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-error {
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: var(--max-width);
-  margin: 0 auto !important; }
-  .is-readable-line-width .block-language-dataview div.dataview-error-box p {
-    margin-block-start: 0;
-    margin-block-end: 0; }
+  margin: 0 auto; }
+
+/* Wider block widths */
+/* ------------------ */
+.is-live-preview.is-readable-line-width .dataview.list-view-ul,
+.is-live-preview.is-readable-line-width .dataview .contains-task-list {
+  --folding-offset:16px;
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  max-width: calc(100% - var(--folding-offset));
+  transform: translateX(calc(var(--folding-offset)/2));
+  margin: 0 auto; }
+
+.table-100 .is-live-preview.is-readable-line-width .dataview.list-view-ul,
+.table-100 .is-live-preview.is-readable-line-width .dataview .contains-task-list,
+.table-100.is-live-preview.is-readable-line-width .dataview.list-view-ul,
+.table-100.is-live-preview.is-readable-line-width .dataview .contains-task-list {
+  max-width: calc(var(--max-width) - var(--folding-offset)); }
+
+.markdown-preview-view.is-readable-line-width .dataview.list-view-ul,
+.markdown-preview-view.is-readable-line-width .dataview .contains-task-list,
+.markdown-preview-view.is-readable-line-width .block-language-dataview > h4,
+.markdown-preview-view.is-readable-line-width .dataview.result-group,
+.markdown-preview-view.is-readable-line-width .dataview.dataview-error {
+  --folding-offset:16px;
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  max-width: calc(var(--max-width) - var(--folding-offset));
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: max(calc(50% - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2)); }
 
 /* Links and underline handling*/
 body:not(.links-int-on) a[href*="obsidian://"],
@@ -6469,67 +6628,6 @@ body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
   background-position-y: center;
   text-decoration: underline; }
 
-/* Relationship lines */
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul ul,
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ol ul,
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul ol,
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ol ol {
-  margin-left: -15px;
-  padding-left: var(--list-indent);
-  border-left: 1px solid var(--background-modifier-border); }
-
-body.minimal-rel-preview:not(.ig-lists-preview) .markdown-preview-view ul li.is-flashing {
-  background-color: var(--text-highlight-bg); }
-
-/* Relationship lines in Legacy Editor */
-.ig-lists .cm-hmd-list-indent > .cm-tab,
-body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab {
-  display: inline-block; }
-
-.ig-lists .cm-hmd-list-indent > .cm-tab:after,
-body.minimal-rel-edit .cm-hmd-list-indent > .cm-tab:after {
-  content: " ";
-  display: block;
-  width: 1px;
-  position: absolute;
-  top: 1px;
-  border-right: 1px solid var(--background-modifier-border);
-  height: 100%; }
-
-/* Relationship lines in Live Preview, disabled now that Indentation Guides is available
-
-:root {
-  --indent-font-family:var(--text-editor);
-  --indent-font-size:var(--font-adaptive-normal);
-}
-
-body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-list-line-1) {
-  overflow:hidden;
-}
-body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
-  position:relative;
-  font-family:var(--indent-font-family) !important;
-  font-size:var(--indent-font-size) !important;
-}
-body.minimal-rel-edit .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
-  content:'';
-  font-family:var(--indent-font-family) !important;
-  font-size:var(--indent-font-size) !important;
-  display:block;
-  position:absolute;
-  width:100%;
-  top:-1.6em;
-  padding-bottom:999em;
-  background:linear-gradient(
-    to right,
-    var(--background-modifier-border) 1px,
-    transparent 1px)
-    repeat;
-  background-size:1.8ch 1px;
-  left:3.5px;
-}
-
-*/
 /* Scroll indicator for sidebar containers */
 body:not(.is-translucent):not(.is-mobile) .mod-left-split .item-list,
 body:not(.is-translucent):not(.is-mobile) .mod-left-split .nav-files-container,
@@ -6822,6 +6920,10 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
   --input-height:40px;
   --radius-m:8px; }
 
+@media (min-width: 400pt) {
+  .is-mobile {
+    --input-height:36px;
+    --radius-m:6px; } }
 .hider-tooltips .follow-link-popover {
   display: none; }
 
@@ -7112,30 +7214,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   background-color: var(--background-primary);
   border-top: 1px solid var(--background-modifier-border); }
 
-.is-mobile .document-search,
-.is-mobile .document-replace {
-  flex-direction: row; }
-
-.is-mobile .document-search-container {
-  height: 56px;
-  padding: 0px 15px; }
-
-.is-mobile .document-search-container input[type='text'] {
-  width: auto;
-  margin: 0 5px 0 0;
-  height: 32px;
-  padding: 5px 7px;
-  border-radius: 50px;
-  border: 1px solid var(--background-modifier-border);
-  background-color: var(--background-primary); }
-
-.is-mobile .document-search-container button {
-  width: auto;
-  margin: 0px;
-  background: transparent;
-  font-size: 14px;
-  height: 32px; }
-
 .pull-out-action {
   top: 0;
   height: 100vh;
@@ -7326,6 +7404,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
 /* iOS style modals */
 :root {
   --ios-radius:10px;
+  --ios-input-radius:8px;
   --ios-shadow:0 5px 100px rgba(0,0,0,0.15);
   --ios-muted:#8e8e93; }
 
@@ -7408,6 +7487,21 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
       border-bottom-right-radius: var(--ios-radius); }
     .is-ios .mod-confirmation .modal .modal-button-container > button:last-child:hover {
       background-color: var(--ios-bg-translucent); }
+  .is-ios.is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input,
+  .is-ios .document-search-container input[type='text'] {
+    border-radius: var(--ios-input-radius);
+    border: 0px;
+    background-color: var(--background-tertiary); }
+    .is-ios.is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input:active, .is-ios.is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input:hover, .is-ios.is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input:focus,
+    .is-ios .document-search-container input[type='text']:active,
+    .is-ios .document-search-container input[type='text']:hover,
+    .is-ios .document-search-container input[type='text']:focus {
+      border-radius: var(--ios-input-radius);
+      border: 0px;
+      background-color: var(--background-tertiary); }
+    .is-ios.is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input::placeholder,
+    .is-ios .document-search-container input[type='text']::placeholder {
+      color: var(--text-muted); }
 
 /* Core plugins */
 /* Backlink pane */
@@ -8423,20 +8517,26 @@ body .sync-history-content-container textarea.sync-history-content:focus {
     padding-bottom: 10px; } }
 /* Community plugins */
 /* Banner plugin */
+/*
 .markdown-source-view.mod-cm6 .cm-line.has-banner {
-  width: 100% !important;
-  max-width: 100% !important;
-  transform: none !important; }
-  .markdown-source-view.mod-cm6 .cm-line.has-banner .cm-fold-indicator,
-  .markdown-source-view.mod-cm6 .cm-line.has-banner .cm-def.cm-hmd-frontmatter {
-    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2) + var(--folding-offset)) !important; }
-  .markdown-source-view.mod-cm6 .cm-line.has-banner .obsidian-banner-icon {
-    width: calc(var(--line-width-adaptive) - var(--folding-offset));
-    max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateX(calc(var(--folding-offset)/2)); }
+	width:100% !important;
+	max-width:100% !important;
+	transform:none !important;
 
+	.cm-fold-indicator,
+	.cm-def.cm-hmd-frontmatter {
+		margin-left:max(
+      calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
+      calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
+	}
+	.obsidian-banner-icon {
+		width:calc(var(--line-width-adaptive) - var(--folding-offset));
+    max-width:var(--max-width);
+    margin-left:auto;
+    margin-right:auto;
+    transform:translateX(calc(var(--folding-offset)/2));
+	}
+} */
 .obsidian-banner.solid {
   border-bottom: var(--border-width) solid var(--background-divider); }
 
@@ -8586,7 +8686,7 @@ body .button-default.blue {
 #calendar-container .reset-button {
   text-transform: none;
   letter-spacing: 0;
-  font-size: var(--font-adaptive-smaller);
+  font-size: var(--font-adaptive-small);
   font-weight: 500;
   color: var(--text-muted);
   border-radius: 4px;
@@ -8778,9 +8878,13 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .el-ol + .el-lang-dataview,
 .el-ul + .el-lang-dataview,
 .el-p:not(.el-lang-dataview) + .el-lang-dataview,
+.el-ol + .el-lang-dataviewjs,
+.el-ul + .el-lang-dataviewjs,
+.el-p:not(.el-lang-dataviewjs) + .el-lang-dataviewjs,
 .el-ol + .el-table,
 .el-ul + .el-table,
 .el-p + .el-table,
+.el-lang-dataviewjs + .el-p,
 .el-lang-dataview + .el-p {
   margin-top: 0.5rem; }
 
@@ -8824,7 +8928,7 @@ body .table-view-table > thead > tr > th,
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
   font-weight: 400;
-  font-size: calc(var(--font-adaptive-normal) - 2px);
+  font-size: var(--table-font-size);
   color: var(--text-muted);
   border-bottom: 1px solid var(--background-modifier-border);
   cursor: var(--cursor); }
@@ -8843,17 +8947,31 @@ body .dataview.small-text {
   color: var(--text-faint); }
 
 /* Remove hover effect */
+body .dataview.task-list-item:hover,
+body .dataview.task-list-basic-item:hover,
 body .table-view-table > tbody > tr:hover {
+  background-color: transparent;
+  box-shadow: none; }
+
+body .dataview-error {
+  margin-top: 16px;
   background-color: transparent; }
 
 /* New error box as of 2022-05 */
 body div.dataview-error-box {
   min-height: 0;
   border: none;
-  background-color: var(--background-secondary);
-  font-size: var(--font-adaptive-small);
+  background-color: transparent;
+  font-size: var(--table-font-size);
   border-radius: var(--radius-m);
-  padding: 20px 0; }
+  padding: 15px 0; }
+  body div.dataview-error-box p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: var(--text-faint); }
+
+.markdown-source-view div.dataview-error-box {
+  margin-top: 15px; }
 
 /* Trim columns feature */
 .trim-cols .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
@@ -9843,13 +9961,23 @@ body .modal .dtchooser {
     body .modal .dtchooser .reminder-calendar .year-month .month,
     body .modal .dtchooser .reminder-calendar .year-month .year {
       color: var(--text-normal); }
+    body .modal .dtchooser .reminder-calendar .year-month .month-nav:first-child {
+      background-color: currentColor;
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z' clip-rule='evenodd' /%3E%3C/svg%3E"); }
+    body .modal .dtchooser .reminder-calendar .year-month .month-nav:last-child {
+      background-color: currentColor;
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd' /%3E%3C/svg%3E"); }
     body .modal .dtchooser .reminder-calendar .year-month .month-nav {
+      -webkit-mask-size: 20px 20px;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: 50% 50%;
       color: var(--text-faint);
       cursor: var(--cursor);
       border-radius: var(--radius-m);
-      padding: 1px 8px 2px; }
+      padding: 0;
+      width: 30px;
+      display: inline-block; }
       body .modal .dtchooser .reminder-calendar .year-month .month-nav:hover {
-        background-color: var(--background-tertiary);
         color: var(--text-muted); }
   body .modal .dtchooser .reminder-calendar th {
     padding: 0.5em 0;
@@ -9859,11 +9987,11 @@ body .modal .dtchooser {
     letter-spacing: 0.1em; }
   body .modal .dtchooser .reminder-calendar .calendar-date {
     transition: background-color 0.1s ease-in;
-    padding: 0.25em 0; }
+    padding: 0.3em 0;
+    border-radius: var(--radius-m); }
     body .modal .dtchooser .reminder-calendar .calendar-date:hover, body .modal .dtchooser .reminder-calendar .calendar-date.is-selected {
       transition: background-color 0.1s ease-in;
-      background-color: var(--background-tertiary) !important;
-      border-radius: var(--radius-m); }
+      background-color: var(--background-tertiary) !important; }
     body .modal .dtchooser .reminder-calendar .calendar-date.is-selected {
       font-weight: var(--bold-weight);
       color: var(--text-accent) !important; }

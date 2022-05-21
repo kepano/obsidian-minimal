@@ -17,9 +17,13 @@
 .el-ol + .el-lang-dataview,
 .el-ul + .el-lang-dataview,
 .el-p:not(.el-lang-dataview) + .el-lang-dataview,
+.el-ol + .el-lang-dataviewjs,
+.el-ul + .el-lang-dataviewjs,
+.el-p:not(.el-lang-dataviewjs) + .el-lang-dataviewjs,
 .el-ol + .el-table,
 .el-ul + .el-table,
 .el-p + .el-table,
+.el-lang-dataviewjs + .el-p,
 .el-lang-dataview + .el-p {
   margin-top:0.5rem;
 }

@@ -97,7 +97,7 @@ body:not(.is-mobile) .modal {
   right:7px;
   padding:0;
 }
-.document-search-close-button:hover,
+body:not(.is-mobile) .document-search-close-button:hover,
 .modal-close-button:hover {
   color:var(--text-normal);
   background:var(--background-tertiary);

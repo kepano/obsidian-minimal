@@ -307,8 +307,11 @@ settings:
         id: h1-weight
         title: H1 font weight
         description: Accepts numbers representing the CSS font-weight
-        type: variable-number
+        type: variable-number-slider
         default: 600
+        min: 100
+        max: 900
+        step: 100
     - 
         id: h1-color
         title: H1 font color
@@ -373,8 +376,11 @@ settings:
         id: h2-weight
         title: H2 font weight
         description: Accepts numbers representing the CSS font-weight
-        type: variable-number
+        type: variable-number-slider
         default: 600
+        min: 100
+        max: 900
+        step: 100
     - 
         id: h2-color
         title: H2 font color
@@ -439,8 +445,11 @@ settings:
         id: h3-weight
         title: H3 font weight
         description: Accepts numbers representing the CSS font-weight
-        type: variable-number
+        type: variable-number-slider
         default: 600
+        min: 100
+        max: 900
+        step: 100
     - 
         id: h3-color
         title: H3 font color
@@ -505,8 +514,11 @@ settings:
         id: h4-weight
         title: H4 font weight
         description: Accepts numbers representing the CSS font-weight
-        type: variable-number
+        type: variable-number-slider
         default: 500
+        min: 100
+        max: 900
+        step: 100
     - 
         id: h4-color
         title: H4 font color
@@ -571,8 +583,11 @@ settings:
         id: h5-weight
         title: H5 font weight
         description: Accepts numbers representing the CSS font-weight
-        type: variable-number
+        type: variable-number-slider
         default: 500
+        min: 100
+        max: 900
+        step: 100
     -
         id: h5-color
         title: H5 font color
@@ -637,8 +652,11 @@ settings:
         id: h6-weight
         title: H6 font weight
         description: Accepts numbers representing the CSS font-weight
-        type: variable-number
+        type: variable-number-slider
         default: 400
+        min: 100
+        max: 900
+        step: 100
     -
         id: h6-color
         title: H6 font color
@@ -729,7 +747,7 @@ settings:
         id: ig-adjust-reading
         title: Horizontal adjustment in reading mode
         type: variable-number-slider
-        default: -0.7
+        default: -0.65
         min: -1.2
         max: 0
         step: 0.05
@@ -767,8 +785,11 @@ settings:
         id: link-weight
         title: Link font weight
         description: Accepts numbers representing the CSS font-weight
-        type: variable-number
+        type: variable-number-slider
         default: 400
+        min: 100
+        max: 900
+        step: 100
     -
         id: lists
         title: Lists and checkboxes
@@ -1055,8 +1076,11 @@ settings:
         id: bold-weight
         title: Bold text weight
         description: Accepts numbers representing the CSS font-weight
-        type: variable-number
+        type: variable-number-slider
         default: 600
+        min: 100
+        max: 900
+        step: 100
     -
         id: titlebar
         title: Title bar
@@ -1100,8 +1124,11 @@ settings:
         id: title-weight
         title: Title font weight
         description: Accepts numbers representing the CSS font-weight
-        type: variable-number
+        type: variable-number-slider
         default: 600
+        min: 100
+        max: 900
+        step: 100
     - 
         id: title-color
         title: Title font color (active)

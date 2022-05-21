@@ -1,6 +1,8 @@
 /* Custom line width */
 
-
+:root {
+  --list-edit-offset:0.5em;
+}
 
 /* With readable line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
@@ -14,7 +16,6 @@
   width:var(--line-width-adaptive);
   max-width:var(--max-width);
 }
-
 
 /* Readable line width off */
 .markdown-preview-view .markdown-preview-sizer {
@@ -38,80 +39,163 @@
   padding-left:var(--folding-offset);
 }
 .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+  overflow:scroll;
+}
 
+/* Folding offset */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  padding-left:var(--folding-offset);
+}
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataview"],
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataviewjs"] {
+  padding-left:var(--folding-offset);
 }
 
 /* Live Preview */
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
-  max-width:calc(var(--max-width) - var(--folding-offset));
-}
-
-/* Nudge everything slightly to the left to make space for folding and gutters */
-.markdown-source-view.mod-cm6.is-readable-line-width { 
-  .internal-embed,
-  .cm-content > .image-embed,
-  .cm-line,
-  .embedded-backlinks,
-  .cm-line.HyperMD-quote,
-  .cm-line.HyperMD-codeblock,
-  .cm-embed-block.cm-callout .callout,
-  .cm-html-embed,
-  .cm-content > img:not([width]),
-  table {
-    width:calc(var(--line-width-adaptive) - var(--folding-offset));
-    max-width:var(--max-width);
-    margin:0 auto !important;
-    transform:translateX(calc(var(--folding-offset)/2));
-    padding-left:0;
-  }
-  .dataview-error {
-    margin-top:16px;
-  }
-  .cm-content > img[width] {
-    margin-left:max(
-      calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
-      calc(50% - var(--max-width)/2) + var(--folding-offset)) !important;
-    max-width:var(--max-width);
-  }
-}
-.is-live-preview.is-readable-line-width {
-  .mod-empty,
-  .cm-embed-block > mjx-container,
-  .cm-embed-block > div {
-    max-width:var(--max-width);
-    margin:0 auto;
-    width:var(--line-width-adaptive);
-    padding-left:var(--folding-offset);
-  }
-}
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width:100%;
 }
-.is-live-preview.is-readable-line-width .list-view-ul,
-.contextual-typography .is-live-preview.is-readable-line-width .list-view-ul {
-  width:var(--line-width-adaptive);
-  max-width:100%;
-  transform:translateX(calc(0.75em - var(--folding-offset)));
-  margin:0 auto !important;
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
+  max-width:calc(var(--max-width) - var(--folding-offset));
 }
 /* Make sure the table fills the width of the parent dataview block,
 as opposed to regular tables */
 .is-live-preview.is-readable-line-width.embed-strict .internal-embed .markdown-preview-sizer,
 .is-readable-line-width .block-language-dataview table.dataview,
+.is-readable-line-width .block-language-dataviewjs table.dataview,
 .is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
   width:100%;
   max-width:100%;
   transform:none;
-  padding-left:0;
+  margin-left:auto !important;
 }
 
-.is-readable-line-width .block-language-dataview div.dataview-error-box {
-  --folding-offset:16px;
-  width:calc(var(--line-width-adaptive) - var(--folding-offset));
-  max-width:var(--max-width);
-  margin:0 auto !important;
-  p {
-    margin-block-start:0;
-    margin-block-end:0;
+/* Line width for Live Preview / Editor mode
+   Gets complicated.
+   -------------------------------------------*/
+
+  /* Nudge everything slightly to the left to make space for folding and gutters */
+  /* This is the big daddy rule for most editor content line types */
+  .markdown-source-view.mod-cm6.is-readable-line-width { 
+    .internal-embed,
+    .cm-content > .image-embed,
+    .cm-line,
+    .cm-line.HyperMD-quote,
+    .cm-line.HyperMD-codeblock,
+    .embedded-backlinks,
+    .cm-embed-block.cm-callout .callout,
+    .cm-html-embed,
+    .cm-content > img:not([width]),
+    table {
+      width:calc(var(--line-width-adaptive) - var(--folding-offset));
+      max-width:calc(var(--max-width) - var(--folding-offset));
+      margin:0 auto 0
+        max(
+        calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
+        calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
+    }
+    /* Don't force width for images that have a width */
+    .cm-content > img[width] {
+      max-width:var(--max-width);
+      margin-left:max(
+        calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
+        calc(50% + var(--folding-offset) - var(--max-width)/2)) !important;
+    }
   }
-}
+  .markdown-source-view.mod-cm6.is-readable-line-width {
+    .mod-empty,
+    .cm-embed-block > div,
+    .cm-embed-block > mjx-container {
+      width:calc(var(--line-width-adaptive) - var(--folding-offset));
+      max-width:calc(var(--max-width) - var(--folding-offset));
+      margin:0 auto 0
+        max(
+        calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
+        calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
+    }
+  }
+  /* For lists adding an extra offset value in Edit mode */
+  /* Needs .is-line-wrap to override default styling */
+  .markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap {
+    .HyperMD-list-line {
+      width:calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
+      max-width:calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));
+      margin:0 auto 0
+        max(
+        calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--line-width-adaptive)/2),
+        calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--max-width)/2)) !important;
+    }
+  }
+
+/* Dataview lists/checklists
+   A nightmare mainly because there is no selector that indicates
+   a list is present inside the dataview block
+   -------------------------------------------*/
+
+  /* Normal block width */
+  /* ------------------ */
+
+  body:not(.table-100):not(.table-max):not(.table-wide) {
+    // Live Preview
+    .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) {
+      .dataview.list-view-ul,
+      .dataview .contains-task-list {
+        max-width:100%;
+        margin:0 auto;
+        transform:none;
+      }
+    }
+    // Reading view
+    .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) {
+      .dataview.list-view-ul,
+      .dataview .contains-task-list,
+      .block-language-dataview > h4,
+      .dataview.result-group,
+      .dataview.dataview-error {
+        width:calc(var(--line-width-adaptive) - var(--folding-offset));
+        max-width:var(--max-width);
+        margin:0 auto; // Right margin trick
+      }
+    }
+  }
+
+  /* Wider block widths */
+  /* ------------------ */
+
+  // Live Preview
+  .is-live-preview.is-readable-line-width {
+    .dataview.list-view-ul,
+    .dataview .contains-task-list {
+      --folding-offset:16px;
+      width:calc(var(--line-width-adaptive) - var(--folding-offset));
+      max-width:calc(100% - var(--folding-offset));
+      transform:translateX(calc(var(--folding-offset)/2));
+      margin:0 auto;
+    }
+  }
+  // Inside 100% width table block
+  .table-100 .is-live-preview.is-readable-line-width,
+  .table-100.is-live-preview.is-readable-line-width {
+    .dataview.list-view-ul,
+    .dataview .contains-task-list {
+      max-width:calc(var(--max-width) - var(--folding-offset));
+    }
+  }
+  // Reading view
+  .markdown-preview-view.is-readable-line-width {
+    .dataview.list-view-ul,
+    .dataview .contains-task-list,
+    .block-language-dataview > h4,
+    .dataview.result-group,
+    .dataview.dataview-error {
+      --folding-offset:16px;
+      width:calc(var(--line-width-adaptive) - var(--folding-offset));
+      max-width:calc(var(--max-width) - var(--folding-offset));
+      margin-top:0;
+      margin-bottom:0;
+      margin-left:auto;
+      margin-right:max(
+        calc(50% - var(--line-width-adaptive)/2),
+        calc(50% - var(--max-width)/2));  // Right margin trick
+    }
+  }
