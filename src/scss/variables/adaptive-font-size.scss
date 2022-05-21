@@ -6,7 +6,6 @@ body {
   --font-adaptive-smallest:var(--font-smallest);
   --line-width-adaptive:var(--line-width);
   --line-width-wide:calc(var(--line-width) + 12.5%);
-
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
 }
 
@@ -23,7 +22,6 @@ body {
 /* Tablet font sizes */
 @media (min-width:400pt) {
   .is-mobile {
-    --font-adaptive-normal:calc(var(--font-text-size) + 2px);
     --font-adaptive-small:calc(var(--font-small) + 3px);
     --font-adaptive-smaller:calc(var(--font-smaller) + 2px);
     --font-adaptive-smallest:calc(var(--font-smallest) + 2px);
