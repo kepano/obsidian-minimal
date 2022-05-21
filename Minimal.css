@@ -10416,6 +10416,80 @@ body.theme-light {
 .theme-dark.minimal-dracula-dark.minimal-dark-black {
   --ui1:#282a36; }
 
+/* Everforest */
+.theme-light.minimal-everforest-light {
+  --red:#f85552;
+  --orange:#f57d26;
+  --yellow:#dfa000;
+  --green:#8da101;
+  --purple:#df69ba;
+  --pink:#df69ba;
+  --cyan:#35a77c;
+  --blue:#7fbbb3; }
+
+.theme-dark.minimal-everforest-dark {
+  --red:#e67e80;
+  --orange:#e69875;
+  --yellow:#dbbc7f;
+  --green:#a7c080;
+  --purple:#d699b6;
+  --pink:#d699b6;
+  --cyan:#83c092;
+  --blue:#7fbbb3; }
+
+.theme-light.minimal-everforest-light {
+  --base-h:50;
+  --base-s:42%;
+  --base-l:88%;
+  --bg1:#FDF7E3;
+  --bg2:#EEEAD5;
+  --bg3:#dfdbc8;
+  --ui1:#dfdbc8;
+  --ui2:#bdc3af;
+  --ui3:#bdc3af;
+  --tx1:#5C6A72;
+  --tx2:#829181;
+  --tx3:#a6b0a0;
+  --ax1:#93b259;
+  --ax2:#708089;
+  --ax3:#93b259;
+  --hl1:rgba(198,214,152,.4);
+  --hl2:rgba(222,179,51,.3); }
+
+.theme-light.minimal-everforest-light.minimal-light-tonal {
+  --bg2:#EEEAD5; }
+
+.theme-light.minimal-everforest-light.minimal-light-white {
+  --bg3:#f3efda;
+  --ui1:#edead5; }
+
+.theme-light.minimal-everforest-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-everforest-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
+.theme-light.minimal-everforest-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-everforest-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-everforest-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-everforest-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
+.theme-dark.minimal-everforest-dark {
+  --bg1:#323D44;
+  --bg2:#2A343A;
+  --bg3:#414C54;
+  --bg3:rgba(78,91,100,0.5);
+  --ui1:#404c51;
+  --ui2:#4A555C;
+  --ui3:#525c62;
+  --tx1:#d3c6aa;
+  --tx2:#9da9a0;
+  --tx3:#7a8478;
+  --ax1:#A7C080;
+  --ax2:#708089;
+  --ax3:#93b259;
+  --hl1:rgba(134,70,93,.5);
+  --hl2:rgba(147,185,96,.3); }
+
+.theme-dark.minimal-everforest-dark.minimal-dark-black {
+  --hl1:rgba(134,70,93,.4);
+  --ui1:#2b3339; }
+
 /* Gruvbox */
 .theme-dark.minimal-gruvbox-dark,
 .theme-light.minimal-gruvbox-light {
