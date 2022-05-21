@@ -160,7 +160,6 @@ input.document-replace-input:focus {
 
 
 /* Mobile */
-
 .is-mobile {
 
   .document-search,
@@ -181,13 +180,15 @@ input.document-replace-input:focus {
     height:auto;
     width:100%;
     border-bottom:1px solid var(--background-modifier-border);
+    padding-left:var(--folding-offset);
   }
   .document-search,
   .document-replace {
     margin:0 auto;
+    padding-left:0;
+    padding-right:0;
     max-width:calc(var(--max-width) + 2%);
     width:var(--line-width-adaptive);
-    padding-left:var(--folding-offset);
   }
   &.minimal-readable-off {
     .document-search,
@@ -198,12 +199,15 @@ input.document-replace-input:focus {
   .document-search-container input[type='text'] {
     width:auto;
     margin:0 8px 0 0;
-    height:32px;
+    height:36px;
     padding:5px 10px 5px 10px;
     border-radius:6px;
     min-width:90px;
     border:1px solid var(--background-modifier-border);
     background-color:var(--background-primary);
+  }
+  .document-search-container .document-search-input[type='text'] {
+    padding-left:30px;
   }
   .document-search .document-search-buttons,
   .document-replace button {
@@ -214,7 +218,7 @@ input.document-replace-input:focus {
     margin:0px;
     background:transparent;
     font-size:14px;
-    height:32px;
+    height:36px;
     padding:0 2px;
     white-space:nowrap;
   }

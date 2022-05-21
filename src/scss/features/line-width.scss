@@ -94,6 +94,9 @@ as opposed to regular tables */
         calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
         calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
     }
+    .cm-line > .cm-html-embed {
+      --folding-offset:0;
+    }
     /* Don't force width for images that have a width */
     .cm-content > img[width] {
       max-width:var(--max-width);
