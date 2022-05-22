@@ -11874,13 +11874,13 @@ settings:
     -
         id: row-alt
         title: Striped rows
-        description: Display striped background to alternating table rows globally
+        description: Display striped background in alternating table rows globally
         type: class-toggle
         default: false
     -
         id: col-alt
         title: Striped columns
-        description: Display striped background to alternating table columns globally
+        description: Display striped background in alternating table columns globally
         type: class-toggle
         default: false
     -
