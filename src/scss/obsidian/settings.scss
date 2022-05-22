@@ -137,14 +137,18 @@ button.mod-cta,
 .plugin-list-plugins {
   overflow:visible;
 }
+
+.clickable-icon {
+  margin:0;
+}
 .installed-plugins-container .clickable-icon {
-  margin:0 5px;
+  margin:0;
 }
 .installed-plugins-container .clickable-icon[aria-label="Uninstall"] {
-  margin:0 5px 0 3px;
+  margin:0;
 }
 .plugin-list-plugins .clickable-icon {
-  margin:0 10px 0 0;
+  margin:0;
 }
 
 .hotkey-list-container {

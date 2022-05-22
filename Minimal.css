@@ -3038,14 +3038,17 @@ button.mod-cta,
 .plugin-list-plugins {
   overflow: visible; }
 
+.clickable-icon {
+  margin: 0; }
+
 .installed-plugins-container .clickable-icon {
-  margin: 0 5px; }
+  margin: 0; }
 
 .installed-plugins-container .clickable-icon[aria-label="Uninstall"] {
-  margin: 0 5px 0 3px; }
+  margin: 0; }
 
 .plugin-list-plugins .clickable-icon {
-  margin: 0 10px 0 0; }
+  margin: 0; }
 
 .hotkey-list-container {
   padding-right: 0; }
@@ -10163,6 +10166,29 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   background-position: right; }
 
 /* Style Settings preferences */
+.style-settings-container[data-level="2"] {
+  background: var(--background-secondary);
+  border: 1px solid var(--ui1);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 2px 0 2px -20px; }
+
+.workspace-leaf-content[data-type="style-settings"] .view-content {
+  padding: 0 0 20px var(--folding-offset);
+  width: var(--line-width-adaptive);
+  max-width: var(--max-width);
+  margin: 0 auto; }
+.workspace-leaf-content[data-type="style-settings"] .style-settings-heading[data-level="0"] .setting-item-name {
+  padding-left: 17px; }
+.workspace-leaf-content[data-type="style-settings"] .setting-item {
+  max-width: 100%;
+  margin: 0 auto; }
+.workspace-leaf-content[data-type="style-settings"] .setting-item-name {
+  position: relative; }
+.workspace-leaf-content[data-type="style-settings"] .style-settings-collapse-indicator {
+  position: absolute;
+  left: 0; }
+
 .setting-item-heading.style-settings-heading,
 .style-settings-container .style-settings-heading {
   cursor: var(--cursor); }
@@ -10179,20 +10205,13 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   box-shadow: none;
   border: none; }
 
-.workspace-leaf-content .setting-item.setting-item-heading {
-  border-bottom: 1px solid var(--background-modifier-border);
-  padding: 10px 0 5px; }
+.setting-item.setting-item-heading.style-settings-heading.is-collapsed {
+  border-bottom: 1px solid var(--background-modifier-border); }
 
-.workspace-leaf-content[data-type="style-settings"] .style-settings-heading[data-level="0"] .setting-item-name {
-  padding-left: 17px; }
-.workspace-leaf-content[data-type="style-settings"] .setting-item {
-  max-width: var(--max-width);
-  margin: 0 auto; }
-.workspace-leaf-content[data-type="style-settings"] .setting-item-name {
-  position: relative; }
-.workspace-leaf-content[data-type="style-settings"] .style-settings-collapse-indicator {
-  position: absolute;
-  left: 0; }
+.setting-item.setting-item-heading.style-settings-heading {
+  border: 0;
+  padding: 10px 0 5px;
+  margin-bottom: 0; }
 
 .mod-root .workspace-leaf-content[data-type="style-settings"] .style-settings-container .setting-item:not(.setting-item-heading) {
   flex-direction: row;
