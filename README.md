@@ -112,7 +112,7 @@ Controls images, tables and iframes. These settings can also be enabled on a per
 
 ### Preset color schemes
 
-Minimal offers color schemes that can be separately selected for light and dark mode using the [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Color schemes include Dracula, Gruvbox, macOS, Nord, Notion, Solarized, and Things. 
+Minimal offers color schemes that can be separately selected for light and dark mode using the [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Color schemes include Dracula, Everforest, Gruvbox, macOS, Nord, Notion, Solarized, and Things. 
 
 ![Minimal Theme Settings](https://kep-log.s3-us-west-2.amazonaws.com/minimal-color-schemes.gif)
 
@@ -167,7 +167,7 @@ cssClasses: cards
 ```
 
 ### Image grids
-Turns consecutive images into columns. To make a new row, add an extra line break between images. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
+Turns consecutive images into columns. To make a new row, add an extra line break between images. [Learn more.](https://minimal.guide/Block+types/Image+grids)
 
 | Class          | Description                                         |
 | :------------- | :-------------------------------------------------- |
@@ -184,7 +184,7 @@ Controls the width of elements by type. [Learn more.](https://github.com/kepano/
 
 ### Cards
 
-Using `cards` transforms Dataview tables into cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable). Compatible with table width classes.  Note that `cards` must be present for the other classes to work.
+Using `cards` transforms Dataview tables into cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable). Compatible with table width classes.  Note that `cards` must be present for the other classes to work. [Learn more.]([url](https://minimal.guide/Block+types/Cards))
 
 | Class                 | Description                                      |
 | :-------------------- | :----------------------------------------------- |
@@ -204,6 +204,7 @@ Controls the row and column styling for tables. [Learn more.](https://github.com
 | Class           | Description                                         |
 | :-------------- | :-------------------------------------------------- |
 | `table-nowrap`  | Disable line wrapping in table cells                |
+| `table-wrap`    | Force line wrapping in table cells                  |
 | `table-numbers` | Add row numbers to tables                           |
 | `table-tabular` | Use tabular figures in tables                       |
 | `table-small`   | Use small font size in tables                       |
