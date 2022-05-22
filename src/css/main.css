@@ -489,7 +489,8 @@ body {
   --font-adaptive-smallest:var(--font-smallest);
   --line-width-adaptive:var(--line-width);
   --line-width-wide:calc(var(--line-width) + 12.5%);
-  --font-code:calc(var(--font-adaptive-normal) * 0.9); }
+  --font-code:calc(var(--font-adaptive-normal) * 0.9);
+  --table-font-size:calc(var(--font-adaptive-normal) - 2px); }
 
 /* Phone font sizes */
 @media (max-width: 400pt) {
@@ -3500,9 +3501,6 @@ body.plugin-sliding-panes-rotate-header:not(.minimal-status-off) .status-bar {
   color: var(--orange); }
 
 /* Preview mode tables */
-body {
-  --table-font-size:calc(var(--font-adaptive-normal) - 2px); }
-
 .markdown-source-view.mod-cm6 table {
   border-collapse: collapse; }
 
@@ -8948,10 +8946,10 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
   margin-block-end: 0.4em; }
 
 /* Dataview plugin */
-body .table-view-table > thead > tr > th,
+/*body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table {
-  font-size: calc(var(--font-adaptive-normal) - 1px); }
-
+  font-size:calc(var(--font-adaptive-normal) - 1px);
+}*/
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
   font-weight: 400;

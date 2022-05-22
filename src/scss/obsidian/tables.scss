@@ -1,9 +1,5 @@
 /* Preview mode tables */
 
-body {
-  --table-font-size:calc(var(--font-adaptive-normal) - 2px);
-}
-
 .markdown-source-view.mod-cm6 table {
   border-collapse:collapse; 
 }

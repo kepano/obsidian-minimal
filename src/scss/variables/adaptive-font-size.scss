@@ -7,6 +7,7 @@ body {
   --line-width-adaptive:var(--line-width);
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
+  --table-font-size:calc(var(--font-adaptive-normal) - 2px);
 }
 
 /* Phone font sizes */

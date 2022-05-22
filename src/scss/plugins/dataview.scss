@@ -1,9 +1,10 @@
 /* Dataview plugin */
 
-body .table-view-table > thead > tr > th,
+/*body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table {
   font-size:calc(var(--font-adaptive-normal) - 1px);
-}
+}*/
+
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
   font-weight:400;
