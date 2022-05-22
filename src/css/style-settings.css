@@ -937,7 +937,7 @@ settings:
     -
         id: table-numbers
         title: Row numbers
-        description: Display row numbers to tables globally
+        description: Display row numbers in tables globally
         type: class-toggle
         default: false
     -
