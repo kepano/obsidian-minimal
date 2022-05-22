@@ -21,7 +21,7 @@ div:not(.el-embed-image) + .el-embed-image {
   margin-block-start:0;
   margin-block-end:0;
 }
-.img-grid .markdown-preview-section .el-embed-image img:not([width]),
+.img-grid .markdown-preview-section .el-embed-image img:not(.emoji):not([width]),
 .img-grid .markdown-preview-section video {
    width:100%;
 }
