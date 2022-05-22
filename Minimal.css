@@ -10462,12 +10462,13 @@ body.theme-light {
   --blue:#7fbbb3; }
 
 .theme-light.minimal-everforest-light {
-  --base-h:50;
-  --base-s:42%;
-  --base-l:88%;
+  --base-h:46;
+  --base-s:87%;
+  --base-l:94%;
   --bg1:#FDF7E3;
   --bg2:#EEEAD5;
   --bg3:#dfdbc8;
+  --bg3:rgba(206,207,182,.5);
   --ui1:#dfdbc8;
   --ui2:#bdc3af;
   --ui3:#bdc3af;
