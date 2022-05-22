@@ -83,7 +83,7 @@ The following settings can be accessed using [Minimal Theme Settings](https://gi
 ### Interface colors and fonts
 
 - **Background contrast** —  includes true black dark mode for OLED devices
-- **Color scheme** — includes Dracula, Gruvbox, macOS, Nord, Solarized, [and more](#color-schemes)
+- **Color scheme** — includes Dracula, Everforest, Gruvbox, macOS, Nord, Solarized, [and more](#color-schemes)
 - **Accent color** — used for links and checkboxes and other elements
 - **Fonts** and **font size**
 - **Line width** — set normal line width and maximum width within a pane
