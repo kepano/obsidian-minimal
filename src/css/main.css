@@ -953,7 +953,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   padding-left: 0px !important;
   margin-left: 0 !important;
   transform: none !important;
-  left: calc(var(--folding-offset) * -2); }
+  left: 0; }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color: var(--background-primary);
