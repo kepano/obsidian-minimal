@@ -63,7 +63,8 @@ as opposed to regular tables */
 .is-live-preview.is-readable-line-width.embed-strict .internal-embed .markdown-preview-sizer,
 .is-readable-line-width .block-language-dataview table.dataview,
 .is-readable-line-width .block-language-dataviewjs table.dataview,
-.is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
+.is-live-preview.is-readable-line-width .cm-embed-block table.dataview,
+.markdown-source-view.is-live-preview.is-readable-line-width table.NLT__table {
   width:100%;
   max-width:100%;
   transform:none;

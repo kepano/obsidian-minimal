@@ -1,0 +1,90 @@
+/* NL tables  */
+
+body .NLT__header-menu-header-container {
+  font-size:85%;
+}
+
+body .NLT__button {
+  background:transparent;
+  box-shadow:none;
+  color:var(--text-muted);
+  &:hover,
+  &:active,
+  &:focus {
+    background:transparent;
+    color:var(--text-normal);
+    box-shadow:none;
+  }
+}
+
+.NLT__app {
+  .NLT__button {
+    background:transparent;
+    border:1px solid var(--background-modifier-border);
+    box-shadow:0 0px 1px 0 var(--btn-shadow-color);
+    color:var(--text-muted);
+    padding:2px 8px;
+    &:hover,
+    &:active,
+    &:focus {
+      background:transparent;
+      border-color:var(--background-modifier-border-hover);
+      color:var(--text-normal);
+    }
+  }
+}
+
+.NLT__app {
+  .NLT__th:not(.NLT__selectable):hover {
+    background-image:none !important;
+  }
+  th.NLT__selectable:hover {
+    background-color:var(--background-secondary);
+    cursor:var(--cursor);
+  }
+  th:first-child, td:first-child {
+  }
+}
+
+.NLT__menu {
+  .NLT__menu-container {
+    background-color:var(--background-secondary);
+  }
+  .NLT__header-menu-item {
+    font-size:var(--font-adaptive-small);
+  }
+  .NLT__header-menu {
+    padding:6px 4px;
+  }
+  .NLT__drag-menu {
+    font-size:var(--font-adaptive-small);
+    padding:6px 4px;
+  }
+  svg {
+    color:var(--text-faint);
+    margin-right:6px;
+  }
+  .NLT__selected,
+  .NLT__selectable:hover {
+    background:transparent;
+  }
+  .NLT__selected > .NLT__selectable {
+    background-color:var(--background-tertiary);
+  }
+  div.NLT__selectable {
+    min-width:110px;
+    border-radius:var(--radius-m);
+    padding:3px 8px 3px 4px;
+    margin:1px 2px 1px;
+    cursor:var(--cursor);
+    height:auto;
+    width:100%;
+    line-height:20px;
+    &:hover {
+      background-color:var(--background-tertiary);
+    }
+  }
+  .NLT__textarea {
+    font-size:var(--table-font-size)
+  }
+}

@@ -6538,7 +6538,8 @@ as opposed to regular tables */
 .is-live-preview.is-readable-line-width.embed-strict .internal-embed .markdown-preview-sizer,
 .is-readable-line-width .block-language-dataview table.dataview,
 .is-readable-line-width .block-language-dataviewjs table.dataview,
-.is-live-preview.is-readable-line-width .cm-embed-block table.dataview {
+.is-live-preview.is-readable-line-width .cm-embed-block table.dataview,
+.markdown-source-view.is-live-preview.is-readable-line-width table.NLT__table {
   width: 100%;
   max-width: 100%;
   transform: none;
@@ -9866,6 +9867,67 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
   .obsidian-metatable::part(value) {
     font-size: calc(var(--font-adaptive-normal) - 2px);
     color: var(--tx1); }
+
+/* NL tables  */
+body .NLT__header-menu-header-container {
+  font-size: 85%; }
+
+body .NLT__button {
+  background: transparent;
+  box-shadow: none;
+  color: var(--text-muted); }
+  body .NLT__button:hover, body .NLT__button:active, body .NLT__button:focus {
+    background: transparent;
+    color: var(--text-normal);
+    box-shadow: none; }
+
+.NLT__app .NLT__button {
+  background: transparent;
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: 0 0px 1px 0 var(--btn-shadow-color);
+  color: var(--text-muted);
+  padding: 2px 8px; }
+  .NLT__app .NLT__button:hover, .NLT__app .NLT__button:active, .NLT__app .NLT__button:focus {
+    background: transparent;
+    border-color: var(--background-modifier-border-hover);
+    color: var(--text-normal); }
+
+.NLT__app .NLT__th:not(.NLT__selectable):hover {
+  background-image: none !important; }
+.NLT__app th.NLT__selectable:hover {
+  background-color: var(--background-secondary);
+  cursor: var(--cursor); }
+
+.NLT__menu .NLT__menu-container {
+  background-color: var(--background-secondary); }
+.NLT__menu .NLT__header-menu-item {
+  font-size: var(--font-adaptive-small); }
+.NLT__menu .NLT__header-menu {
+  padding: 6px 4px; }
+.NLT__menu .NLT__drag-menu {
+  font-size: var(--font-adaptive-small);
+  padding: 6px 4px; }
+.NLT__menu svg {
+  color: var(--text-faint);
+  margin-right: 6px; }
+.NLT__menu .NLT__selected,
+.NLT__menu .NLT__selectable:hover {
+  background: transparent; }
+.NLT__menu .NLT__selected > .NLT__selectable {
+  background-color: var(--background-tertiary); }
+.NLT__menu div.NLT__selectable {
+  min-width: 110px;
+  border-radius: var(--radius-m);
+  padding: 3px 8px 3px 4px;
+  margin: 1px 2px 1px;
+  cursor: var(--cursor);
+  height: auto;
+  width: 100%;
+  line-height: 20px; }
+  .NLT__menu div.NLT__selectable:hover {
+    background-color: var(--background-tertiary); }
+.NLT__menu .NLT__textarea {
+  font-size: var(--table-font-size); }
 
 /* Outliner plugin (pre Live Preview) */
 body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
