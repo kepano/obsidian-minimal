@@ -152,6 +152,11 @@ as opposed to regular tables */
     .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) {
       .dataview.list-view-ul,
       .dataview .contains-task-list,
+      .block-language-dataviewjs > p,
+      .block-language-dataviewjs > h1,
+      .block-language-dataviewjs > h2,
+      .block-language-dataviewjs > h3,
+      .block-language-dataviewjs > h4,
       .block-language-dataview > h4,
       .dataview.result-group,
       .dataview.dataview-error {
@@ -188,6 +193,11 @@ as opposed to regular tables */
   .markdown-preview-view.is-readable-line-width {
     .dataview.list-view-ul,
     .dataview .contains-task-list,
+    .block-language-dataviewjs > p,
+    .block-language-dataviewjs > h1,
+    .block-language-dataviewjs > h2,
+    .block-language-dataviewjs > h3,
+    .block-language-dataviewjs > h4,
     .block-language-dataview > h4,
     .dataview.result-group,
     .dataview.dataview-error {

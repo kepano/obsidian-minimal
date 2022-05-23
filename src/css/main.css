@@ -6597,6 +6597,11 @@ body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readab
   transform: none; }
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview .contains-task-list,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > p,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h1,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h2,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h3,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h4,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview > h4,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.result-group,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-error {
@@ -6622,6 +6627,11 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
 
 .markdown-preview-view.is-readable-line-width .dataview.list-view-ul,
 .markdown-preview-view.is-readable-line-width .dataview .contains-task-list,
+.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > p,
+.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h1,
+.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h2,
+.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h3,
+.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h4,
 .markdown-preview-view.is-readable-line-width .block-language-dataview > h4,
 .markdown-preview-view.is-readable-line-width .dataview.result-group,
 .markdown-preview-view.is-readable-line-width .dataview.dataview-error {
