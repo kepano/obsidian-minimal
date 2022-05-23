@@ -674,12 +674,12 @@ body {
 
 /* Checklists, task lists, checkboxes */
 :root {
-  --checkbox-size:18px;
+  --checkbox-size:17px;
   --checkbox-icon:20px;
   --checkbox-radius:50%;
-  --checkbox-top:3px;
+  --checkbox-top:2px;
   --checkbox-left:0px;
-  --checkbox-margin:0px 5px 0px -1.35em; }
+  --checkbox-margin:0px 6px 0px -1.35em; }
 
 .checkbox-square {
   --checkbox-size:15px;
@@ -693,7 +693,7 @@ input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
   border-radius: var(--checkbox-radius);
-  border: 1px solid var(--background-modifier-border-hover);
+  border: 1px solid var(--text-faint);
   padding: 0;
   margin: 0 6px 0 0;
   width: var(--checkbox-size);
@@ -702,7 +702,7 @@ input[type=checkbox] {
 input[type=checkbox]:hover,
 input[type=checkbox]:focus {
   outline: 0;
-  border-color: var(--background-modifier-border-focus); }
+  border-color: var(--text-muted); }
 
 .checklist-plugin-main .group .compact > .toggle .checked,
 .is-flashing input[type=checkbox]:checked,
@@ -10267,7 +10267,8 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   margin: 2px 0 2px -20px; }
 
 .workspace-leaf-content[data-type="style-settings"] .view-content {
-  padding: 0 0 20px var(--folding-offset);
+  padding: 0 0 20px var(--folding-offset); }
+.workspace-leaf-content[data-type="style-settings"] .view-content > div {
   width: var(--line-width-adaptive);
   max-width: var(--max-width);
   margin: 0 auto; }

@@ -11,6 +11,8 @@
 .workspace-leaf-content[data-type="style-settings"] {
   .view-content {
     padding:0 0 20px var(--folding-offset);
+  }
+  .view-content > div {
     width:var(--line-width-adaptive);
     max-width:var(--max-width);
     margin:0 auto;
