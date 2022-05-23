@@ -18,6 +18,8 @@ table:not(.calendar) tbody > tr > td,
   font-size:var(--table-font-size);
 }
 
+.row-hover th:first-child,
+.row-hover td:first-child,
 .row-alt.markdown-source-view.mod-cm6 th:first-child,
 .row-alt.markdown-source-view.mod-cm6 td:first-child,
 .row-alt table:not(.calendar) th:first-child,
@@ -95,4 +97,28 @@ table:not(.calendar) tbody > tr > td,
 .col-lines .table-view-table thead > tr > th:not(:last-child),
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {
   border-right:1px solid var(--background-modifier-border);
+}
+
+/* Highlight rows on hover */
+.row-hover {
+  --row-color-hover:
+    hsla(
+      var(--accent-h),
+      50%,
+      80%, 
+      20%
+    );
+
+}
+.theme-dark.row-hover {
+  --row-color-hover:
+    hsla(
+      var(--accent-h),
+      30%,
+      40%, 
+      20%
+    );
+}
+.row-hover tr:hover td {
+  background-color:var(--row-color-hover);
 }

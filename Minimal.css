@@ -5937,6 +5937,8 @@ table:not(.calendar) tbody > tr > td,
 .table-view-table a.tag {
   font-size: var(--table-font-size); }
 
+.row-hover th:first-child,
+.row-hover td:first-child,
 .row-alt.markdown-source-view.mod-cm6 th:first-child,
 .row-alt.markdown-source-view.mod-cm6 td:first-child,
 .row-alt table:not(.calendar) th:first-child,
@@ -6014,6 +6016,28 @@ table:not(.calendar) tbody > tr > td,
 .col-lines .table-view-table thead > tr > th:not(:last-child),
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {
   border-right: 1px solid var(--background-modifier-border); }
+
+/* Highlight rows on hover */
+.row-hover {
+  --row-color-hover:
+    hsla(
+      var(--accent-h),
+      50%,
+      80%,
+      20%
+    ); }
+
+.theme-dark.row-hover {
+  --row-color-hover:
+    hsla(
+      var(--accent-h),
+      30%,
+      40%,
+      20%
+    ); }
+
+.row-hover tr:hover td {
+  background-color: var(--row-color-hover); }
 
 /* Dark mode images  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
@@ -9965,6 +9989,8 @@ body .NLT__button {
   background: transparent; }
 .NLT__menu .NLT__selected > .NLT__selectable {
   background-color: var(--background-tertiary); }
+.NLT__menu .NLT__selectable {
+  cursor: var(--cursor); }
 .NLT__menu div.NLT__selectable {
   min-width: 110px;
   border-radius: var(--radius-m);
@@ -9977,6 +10003,9 @@ body .NLT__button {
     background-color: var(--background-tertiary); }
 .NLT__menu .NLT__textarea {
   font-size: var(--table-font-size); }
+
+.NLT__tfoot tr:hover td {
+  background-color: transparent; }
 
 /* Outliner plugin (pre Live Preview) */
 body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
@@ -10563,6 +10592,9 @@ body.theme-light {
   --base-h:46;
   --base-s:87%;
   --base-l:94%;
+  --accent-h:81;
+  --accent-s:37%;
+  --accent-l:52%;
   --bg1:#FDF7E3;
   --bg2:#EEEAD5;
   --bg3:rgba(206,207,182,.5);
@@ -10595,6 +10627,9 @@ body.theme-light {
   --base-h:203;
   --base-s:15%;
   --base-l:23%;
+  --accent-h:81;
+  --accent-s:34%;
+  --accent-l:63%;
   --bg1:#323D44;
   --bg2:#2A343A;
   --bg3:#414C54;
@@ -10631,6 +10666,9 @@ body.theme-light {
   --base-h:49;
   --base-s:92%;
   --base-l:89%;
+  --accent-h:24;
+  --accent-s:88%;
+  --accent-l:45%;
   --bg1:#fcf2c7;
   --bg2:#f2e6bd;
   --bg3:#ebd9b3;
@@ -10660,6 +10698,9 @@ body.theme-light {
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-gruvbox-dark {
+  --accent-h:24;
+  --accent-s:88%;
+  --accent-l:45%;
   --bg1:#282828;
   --bg2:#1e2021;
   --bg3:#3d3836;
@@ -10696,6 +10737,9 @@ body.theme-light {
   --base-h:106;
   --base-s:0%;
   --base-l:94%;
+  --accent-h:212;
+  --accent-s:100%;
+  --accent-l:50%;
   --bg1:#fff;
   --bg2:#f0f0f0;
   --bg3:#d7d7d7;
@@ -10722,6 +10766,9 @@ body.theme-light {
   --base-h:106;
   --base-s:0%;
   --base-l:12%;
+  --accent-h:212;
+  --accent-s:100%;
+  --accent-l:50%;
   --bg1:#1e1e1e;
   --bg2:#282828;
   --bg3:rgba(255,255,255,0.11);
@@ -10807,6 +10854,9 @@ body.theme-light {
   --base-h:39;
   --base-s:18%;
   --base-d:96%;
+  --accent-h:197;
+  --accent-s:65%;
+  --accent-l:71%;
   --bg2:#f7f6f4;
   --bg3:#e8e7e4;
   --ui1:#ededec;
@@ -10831,9 +10881,9 @@ body.theme-light {
   --base-h:203;
   --base-s:8%;
   --base-d:20%;
-  --accent-h:18;
-  --accent-s:80%;
-  --accent-l:44%;
+  --accent-h:197;
+  --accent-s:48%;
+  --accent-l:43%;
   --bg1:#2f3437;
   --bg2:#373c3f;
   --bg3:#4b5053;
@@ -10940,6 +10990,9 @@ body.theme-light {
   --blue:#4d95f7; }
 
 .theme-light.minimal-things-light {
+  --accent-h:215;
+  --accent-s:76%;
+  --accent-l:43%;
   --bg1:white;
   --bg2:#f5f6f8;
   --bg3:rgba(162,177,187,0.25);
@@ -10970,6 +11023,9 @@ body.theme-light {
   --base-h:218;
   --base-s:9%;
   --base-l:15%;
+  --accent-h:215;
+  --accent-s:91%;
+  --accent-l:64%;
   --bg1:#24262a;
   --bg2:#202225;
   --bg3:#3d3f41;
@@ -11982,6 +12038,20 @@ settings:
         description: Turn off line wrapping in table cells globally
         type: class-toggle
         default: false
+    -
+        id: row-hover
+        title: Highlight active row
+        description: Highlight rows on hover
+        type: class-toggle
+        default: false
+    - 
+        id: row-color-hover
+        title: Active row background
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#'
+        default-dark: '#'
     -
         id: tags
         title: Tags

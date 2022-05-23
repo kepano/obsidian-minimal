@@ -17,6 +17,10 @@
   --base-s:92%;
   --base-l:89%;
 
+  --accent-h:24;
+  --accent-s:88%;
+  --accent-l:45%;
+
   --bg1:#fcf2c7;
   --bg2:#f2e6bd;
   --bg3:#ebd9b3;
@@ -51,6 +55,10 @@
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-gruvbox-dark {
+  --accent-h:24;
+  --accent-s:88%;
+  --accent-l:45%; 
+
   --bg1:#282828;
   --bg2:#1e2021;
   --bg3:#3d3836;

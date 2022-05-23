@@ -19,6 +19,10 @@
 }
 
 .theme-light.minimal-things-light {
+  --accent-h:215;
+  --accent-s:76%;
+  --accent-l:43%;
+
   --bg1:white;
   --bg2:#f5f6f8;
   --bg3:rgba(162,177,187,0.25);
@@ -53,6 +57,10 @@
   --base-h:218;
   --base-s:9%;
   --base-l:15%;
+
+  --accent-h:215;
+  --accent-s:91%;
+  --accent-l:64%;
 
   --bg1:#24262a;
   --bg2:#202225;

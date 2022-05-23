@@ -77,6 +77,9 @@ body .NLT__button {
   .NLT__selected > .NLT__selectable {
     background-color:var(--background-tertiary);
   }
+  .NLT__selectable {
+    cursor:var(--cursor);
+  }
   div.NLT__selectable {
     min-width:110px;
     border-radius:var(--radius-m);
@@ -91,5 +94,11 @@ body .NLT__button {
   }
   .NLT__textarea {
     font-size:var(--table-font-size)
+  }
+}
+
+.NLT__tfoot {
+  tr:hover td {
+    background-color:transparent;
   }
 }

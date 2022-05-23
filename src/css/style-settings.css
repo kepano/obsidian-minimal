@@ -947,6 +947,20 @@ settings:
         type: class-toggle
         default: false
     -
+        id: row-hover
+        title: Highlight active row
+        description: Highlight rows on hover
+        type: class-toggle
+        default: false
+    - 
+        id: row-color-hover
+        title: Active row background
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#'
+        default-dark: '#'
+    -
         id: tags
         title: Tags
         type: heading
