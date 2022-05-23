@@ -21,7 +21,7 @@ body .NLT__button {
   .NLT__button {
     background:transparent;
     border:1px solid var(--background-modifier-border);
-    box-shadow:0 0px 1px 0 var(--btn-shadow-color);
+    box-shadow:0 0.5px 1px 0 var(--btn-shadow-color);
     color:var(--text-muted);
     padding:2px 8px;
     &:hover,
@@ -30,11 +30,17 @@ body .NLT__button {
       background:transparent;
       border-color:var(--background-modifier-border-hover);
       color:var(--text-normal);
+      box-shadow:0 0.5px 1px 0 var(--btn-shadow-color);
     }
   }
 }
 
 .NLT__app {
+
+  .NLT__td:last-child,
+  .NLT__th:last-child {
+    padding-right:0;
+  }
   .NLT__th:not(.NLT__selectable):hover {
     background-image:none !important;
   }
