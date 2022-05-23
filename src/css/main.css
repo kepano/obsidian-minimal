@@ -3571,6 +3571,7 @@ body.minimal-unstyled-tags .frontmatter-container .tag,
 body.minimal-unstyled-tags a.tag,
 body.minimal-unstyled-tags .cm-s-obsidian span.cm-hashtag {
   color: var(--tag-color);
+  font-weight: var(--link-weight);
   text-decoration: none; }
   body.minimal-unstyled-tags .frontmatter-container .tag:hover,
   body.minimal-unstyled-tags a.tag:hover,
@@ -3583,6 +3584,7 @@ body:not(.minimal-unstyled-tags) a.tag {
   border: var(--tag-border-width) solid var(--background-modifier-border);
   color: var(--tag-color);
   font-size: var(--font-adaptive-small);
+  font-weight: var(--link-weight);
   font-family: var(--font-ui);
   padding: 1px 8px;
   text-align: center;
@@ -3601,6 +3603,7 @@ body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag {
   color: var(--tag-color);
   font-size: var(--font-adaptive-small);
   font-family: var(--font-ui);
+  font-weight: var(--link-weight);
   text-align: center;
   text-decoration: none;
   margin: 0;

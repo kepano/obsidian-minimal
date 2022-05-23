@@ -5,6 +5,7 @@ body.minimal-unstyled-tags {
   a.tag,
   .cm-s-obsidian span.cm-hashtag {
     color:var(--tag-color);
+    font-weight:var(--link-weight);
     text-decoration:none;
     &:hover {
       color:var(--text-normal);
@@ -19,6 +20,7 @@ body:not(.minimal-unstyled-tags) {
     border:var(--tag-border-width) solid var(--background-modifier-border);
     color:var(--tag-color);
     font-size:var(--font-adaptive-small);
+    font-weight:var(--link-weight);
     font-family:var(--font-ui);
     padding:1px 8px;
     text-align:center;
@@ -39,6 +41,7 @@ body:not(.minimal-unstyled-tags) {
     color:var(--tag-color);
     font-size:var(--font-adaptive-small);
     font-family:var(--font-ui);
+    font-weight:var(--link-weight);
     text-align:center;
     text-decoration:none;
     margin:0;
