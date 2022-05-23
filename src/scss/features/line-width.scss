@@ -64,7 +64,8 @@ as opposed to regular tables */
 .is-readable-line-width .block-language-dataview table.dataview,
 .is-readable-line-width .block-language-dataviewjs table.dataview,
 .is-live-preview.is-readable-line-width .cm-embed-block table.dataview,
-.markdown-source-view.is-live-preview.is-readable-line-width table.NLT__table {
+.markdown-source-view.is-live-preview.is-readable-line-width table.NLT__table,
+.markdown-preview-view.is-readable-line-width .dataview.result-group .contains-task-list {
   width:100%;
   max-width:100%;
   transform:none;
@@ -143,7 +144,9 @@ as opposed to regular tables */
     // Live Preview
     .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) {
       .dataview.list-view-ul,
-      .dataview .contains-task-list {
+      .dataview > h4,
+      .dataview.result-group > .contains-task-list,
+      .dataview.dataview-container > .contains-task-list {
         max-width:100%;
         margin:0 auto;
         transform:none;
@@ -152,13 +155,14 @@ as opposed to regular tables */
     // Reading view
     .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) {
       .dataview.list-view-ul,
-      .dataview .contains-task-list,
+      .dataview.dataview-container > .contains-task-list,
       .block-language-dataviewjs > p,
       .block-language-dataviewjs > h1,
       .block-language-dataviewjs > h2,
       .block-language-dataviewjs > h3,
       .block-language-dataviewjs > h4,
       .block-language-dataview > h4,
+      .block-language-dataview h4,
       .dataview.result-group,
       .dataview.dataview-error {
         width:calc(var(--line-width-adaptive) - var(--folding-offset));
@@ -174,7 +178,8 @@ as opposed to regular tables */
   // Live Preview
   .is-live-preview.is-readable-line-width {
     .dataview.list-view-ul,
-    .dataview .contains-task-list {
+    .dataview > h4,
+    .dataview.dataview-container .contains-task-list {
       --folding-offset:16px;
       width:calc(var(--line-width-adaptive) - var(--folding-offset));
       max-width:calc(100% - var(--folding-offset));
@@ -182,10 +187,11 @@ as opposed to regular tables */
       margin:0 auto;
     }
   }
-  // Inside 100% width table block
+  // Live Preview inside 100% width table block
   .table-100 .is-live-preview.is-readable-line-width,
   .table-100.is-live-preview.is-readable-line-width {
     .dataview.list-view-ul,
+    .dataview > h4,
     .dataview .contains-task-list {
       max-width:calc(var(--max-width) - var(--folding-offset));
     }
@@ -200,6 +206,7 @@ as opposed to regular tables */
     .block-language-dataviewjs > h3,
     .block-language-dataviewjs > h4,
     .block-language-dataview > h4,
+    .block-language-dataview h4,
     .dataview.result-group,
     .dataview.dataview-error {
       --folding-offset:16px;
