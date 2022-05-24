@@ -3,6 +3,15 @@
 :root {
   --list-edit-offset:0.5em;
 }
+.markdown-source-view.wide,
+.markdown-preview-view.wide {
+  --line-width-adaptive:var(--line-width-wide);
+}
+.markdown-source-view.max,
+.markdown-preview-view.max {
+  --line-width-adaptive:300em;
+  --line-width-wide:300em;
+}
 
 /* With readable line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
