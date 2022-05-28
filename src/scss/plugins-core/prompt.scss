@@ -28,7 +28,11 @@ input.prompt-input {
   }
 }
 .prompt-results {
-  padding-bottom:10px;
+  padding-bottom:0;
+  .suggestion-item:last-child,
+  .suggestion-empty {
+    margin-bottom:10px;
+  }
 }
 .prompt-instructions {
   color:var(--text-muted);

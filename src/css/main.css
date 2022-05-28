@@ -7906,7 +7906,10 @@ input.prompt-input {
     line-height: 4; }
 
 .prompt-results {
-  padding-bottom: 10px; }
+  padding-bottom: 0; }
+  .prompt-results .suggestion-item:last-child,
+  .prompt-results .suggestion-empty {
+    margin-bottom: 10px; }
 
 .prompt-instructions {
   color: var(--text-muted); }
