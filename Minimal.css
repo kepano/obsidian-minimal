@@ -708,7 +708,7 @@ body {
   color: var(--text-faint); }
 
 /* Callouts */
-.is-live-preview.is-readable-line-width .cm-callout .callout {
+.is-live-preview.is-readable-line-width > .cm-callout .callout {
   max-width: var(--max-width);
   margin: 0 auto; }
 
@@ -6645,7 +6645,7 @@ as opposed to regular tables */
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
   .markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout .callout,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout > .callout,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img:not([width]),
   .markdown-source-view.mod-cm6.is-readable-line-width table {

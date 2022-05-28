@@ -99,7 +99,7 @@ as opposed to regular tables */
     .cm-line.HyperMD-quote,
     .cm-line.HyperMD-codeblock,
     .embedded-backlinks,
-    .cm-embed-block.cm-callout .callout,
+    .cm-embed-block.cm-callout > .callout,
     .cm-html-embed,
     .cm-content > img:not([width]),
     table {
