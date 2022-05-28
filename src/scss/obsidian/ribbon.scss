@@ -50,5 +50,5 @@
   padding-bottom:20px;
 }
 body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
-  padding-top:24px;
+  padding-top:var(--top-left-padding-y);
 }

@@ -1,10 +1,4 @@
 /* Hider plugin */
-:root {
-  --top-left-padding-y:0px;
-}
-.mod-macos {
-  --top-left-padding-y:24px;
-}
 
 /* Frameless mode */
 body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {

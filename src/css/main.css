@@ -79,7 +79,11 @@ body {
   --mobile-right-sidebar-width:240pt;
   /* Tags */
   --tag-radius:14px;
-  --tag-border-width:1px; }
+  --tag-border-width:1px;
+  --top-left-padding-y:0px; }
+
+.mod-macos {
+  --top-left-padding-y:24px; }
 
 /* Dynamic colors
 
@@ -2632,7 +2636,7 @@ iframe {
   padding-bottom: 20px; }
 
 body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
-  padding-top: 24px; }
+  padding-top: var(--top-left-padding-y); }
 
 /* Scroll bars */
 ::-webkit-scrollbar {
@@ -9350,12 +9354,6 @@ div[data-type="git-view"] .search-input-clear-button {
   bottom: 5.5px; }
 
 /* Hider plugin */
-:root {
-  --top-left-padding-y:0px; }
-
-.mod-macos {
-  --top-left-padding-y:24px; }
-
 /* Frameless mode */
 body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
   padding-top: var(--top-left-padding-y);

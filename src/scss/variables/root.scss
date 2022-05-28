@@ -97,5 +97,9 @@ body {
   --tag-radius:14px;
   --tag-border-width:1px;
 
+  --top-left-padding-y:0px;
+}
 
+.mod-macos {
+  --top-left-padding-y:24px;
 }
