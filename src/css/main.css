@@ -8,7 +8,7 @@ body {
   --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   --font-monospace:var(--font-monospace-override);
   --font-ui:var(--font-interface-override);
-  --minimal-version:"You are currently using Minimal 5.2.8\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
+  --minimal-version:"You are currently using Minimal 5.2.9\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
 
 :root {
   /* Cursor */
@@ -9350,18 +9350,24 @@ div[data-type="git-view"] .search-input-clear-button {
   bottom: 5.5px; }
 
 /* Hider plugin */
+:root {
+  --top-left-padding-y:0px; }
+
+.mod-macos {
+  --top-left-padding-y:24px; }
+
 /* Frameless mode */
 body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
-  padding-top: 24px;
+  padding-top: var(--top-left-padding-y);
   transition: padding-top 0.2s linear; }
 
 /* Include support for Electron Window Tweaker */
 body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs:nth-child(3) {
-  padding-top: calc(24px + var(--ewt-traffic-light-y));
+  padding-top: calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y));
   transition: padding-top 0.2s linear; }
 
 body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mobile) .workspace-ribbon .side-dock-actions {
-  padding-top: calc(24px + var(--ewt-traffic-light-y)); }
+  padding-top: calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y)); }
 
 .hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
 .hider-frameless:not(.is-mobile) .workspace-split.mod-root .view-header {

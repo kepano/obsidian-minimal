@@ -1,17 +1,23 @@
 /* Hider plugin */
+:root {
+  --top-left-padding-y:0px;
+}
+.mod-macos {
+  --top-left-padding-y:24px;
+}
 
 /* Frameless mode */
 body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
-  padding-top:24px;
+  padding-top:var(--top-left-padding-y);
   transition:padding-top 0.2s linear;
 }
 /* Include support for Electron Window Tweaker */
 body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs:nth-child(3) {
-  padding-top:calc(24px + var(--ewt-traffic-light-y));
+  padding-top:calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y));
   transition:padding-top 0.2s linear;
 }
 body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mobile) .workspace-ribbon .side-dock-actions {
-  padding-top:calc(24px + var(--ewt-traffic-light-y));
+  padding-top:calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y));
 }
 
 .hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
