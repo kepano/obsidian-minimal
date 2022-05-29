@@ -1293,7 +1293,7 @@ h1,
 .markdown-preview-view h2,
 .cm-s-obsidian .cm-header-2 {
   font-variant: var(--h2-variant);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.3;
   font-family: var(--h2-font);
   font-size: var(--h2);
@@ -1305,7 +1305,7 @@ h1,
 .markdown-preview-view h3,
 .cm-s-obsidian .cm-header-3 {
   font-variant: var(--h3-variant);
-  letter-spacing: -0em;
+  letter-spacing: -0.01em;
   line-height: 1.4;
   font-family: var(--h3-font);
   font-size: var(--h3);
@@ -7846,6 +7846,9 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
 .theme-dark.minimal-dark-black .popover {
   background: var(--bg2); }
 
+.popover:not(.hover-editor) {
+  --folding-offset:0; }
+
 .popover,
 .popover.hover-popover {
   min-height: 40px;
@@ -9458,6 +9461,9 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
   padding: 0; }
 
 /* Hover Editor */
+.popover.hover-editor {
+  --folding-offset:10px; }
+
 .theme-light,
 .theme-dark {
   --he-title-bar-inactive-bg:var(--background-secondary);
@@ -9488,54 +9494,54 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
   .popover.hover-editor:not(.snap-to-viewport) .markdown-source-view .cm-content {
     font-size: 90%; }
 
-body .popover.hover-popover:not(.is-loaded) {
+body .popover.hover-editor:not(.is-loaded) {
   box-shadow: var(--popover-shadow); }
-  body .popover.hover-popover:not(.is-loaded) .markdown-preview-view {
+  body .popover.hover-editor:not(.is-loaded) .markdown-preview-view {
     padding: 15px 0 0 0; }
-  body .popover.hover-popover:not(.is-loaded) .view-content {
+  body .popover.hover-editor:not(.is-loaded) .view-content {
     height: 100%;
     background-color: var(--background-primary); }
-  body .popover.hover-popover:not(.is-loaded) .view-actions {
+  body .popover.hover-editor:not(.is-loaded) .view-actions {
     height: auto; }
-  body .popover.hover-popover:not(.is-loaded) .popover-content {
+  body .popover.hover-editor:not(.is-loaded) .popover-content {
     border: 1px solid var(--background-modifier-border-hover); }
-  body .popover.hover-popover:not(.is-loaded) .popover-titlebar {
+  body .popover.hover-editor:not(.is-loaded) .popover-titlebar {
     padding: 0 4px; }
-    body .popover.hover-popover:not(.is-loaded) .popover-titlebar .popover-title {
+    body .popover.hover-editor:not(.is-loaded) .popover-titlebar .popover-title {
       padding-left: 4px;
       letter-spacing: -.02em;
       font-weight: var(--title-weight); }
-  body .popover.hover-popover:not(.is-loaded) .markdown-embed {
+  body .popover.hover-editor:not(.is-loaded) .markdown-embed {
     height: auto;
     font-size: unset;
     line-height: unset; }
-    body .popover.hover-popover:not(.is-loaded) .markdown-embed .markdown-preview-view {
+    body .popover.hover-editor:not(.is-loaded) .markdown-embed .markdown-preview-view {
       padding: 0; }
-  body .popover.hover-popover:not(.is-loaded).show-navbar .popover-titlebar {
+  body .popover.hover-editor:not(.is-loaded).show-navbar .popover-titlebar {
     border-bottom: var(--border-width) solid var(--background-modifier-border); }
-  body .popover.hover-popover:not(.is-loaded) .popover-action,
-  body .popover.hover-popover:not(.is-loaded) .popover-header-icon {
+  body .popover.hover-editor:not(.is-loaded) .popover-action,
+  body .popover.hover-editor:not(.is-loaded) .popover-header-icon {
     cursor: var(--cursor);
     margin: 4px 0;
     padding: 4px 3px;
     border-radius: var(--radius-m);
     color: var(--icon-color); }
-    body .popover.hover-popover:not(.is-loaded) .popover-action.mod-pin-popover,
-    body .popover.hover-popover:not(.is-loaded) .popover-header-icon.mod-pin-popover {
+    body .popover.hover-editor:not(.is-loaded) .popover-action.mod-pin-popover,
+    body .popover.hover-editor:not(.is-loaded) .popover-header-icon.mod-pin-popover {
       padding: 4px 2px; }
-    body .popover.hover-popover:not(.is-loaded) .popover-action svg,
-    body .popover.hover-popover:not(.is-loaded) .popover-header-icon svg {
+    body .popover.hover-editor:not(.is-loaded) .popover-action svg,
+    body .popover.hover-editor:not(.is-loaded) .popover-header-icon svg {
       opacity: var(--icon-muted); }
-    body .popover.hover-popover:not(.is-loaded) .popover-action:hover,
-    body .popover.hover-popover:not(.is-loaded) .popover-header-icon:hover {
+    body .popover.hover-editor:not(.is-loaded) .popover-action:hover,
+    body .popover.hover-editor:not(.is-loaded) .popover-header-icon:hover {
       background-color: var(--background-tertiary);
       color: var(--icon-color-hover); }
-      body .popover.hover-popover:not(.is-loaded) .popover-action:hover svg,
-      body .popover.hover-popover:not(.is-loaded) .popover-header-icon:hover svg {
+      body .popover.hover-editor:not(.is-loaded) .popover-action:hover svg,
+      body .popover.hover-editor:not(.is-loaded) .popover-header-icon:hover svg {
         opacity: 1;
         transition: opacity 0.1s ease-in-out; }
-    body .popover.hover-popover:not(.is-loaded) .popover-action.is-active,
-    body .popover.hover-popover:not(.is-loaded) .popover-header-icon.is-active {
+    body .popover.hover-editor:not(.is-loaded) .popover-action.is-active,
+    body .popover.hover-editor:not(.is-loaded) .popover-header-icon.is-active {
       color: var(--icon-color); }
 
 /* Kanban plugin */

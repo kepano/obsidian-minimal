@@ -1,5 +1,9 @@
 /* Hover Editor */
 
+.popover.hover-editor {
+  --folding-offset:10px;
+}
+
 .theme-light,
 .theme-dark {
   --he-title-bar-inactive-bg:var(--background-secondary);
@@ -34,7 +38,7 @@
   }
 }
 
-body .popover.hover-popover:not(.is-loaded) {
+body .popover.hover-editor:not(.is-loaded) {
   box-shadow:var(--popover-shadow);
 
   .markdown-preview-view {
