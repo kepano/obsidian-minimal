@@ -6573,7 +6573,8 @@ https://github.com/sponsors/kepano
 /* With readable line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: var(--max-width);
-  width: var(--line-width-adaptive); }
+  width: var(--line-width-adaptive);
+  padding-left: 0; }
 
 .markdown-source-view.is-readable-line-width .CodeMirror {
   padding-left: 0;
@@ -6583,7 +6584,7 @@ https://github.com/sponsors/kepano
   max-width: var(--max-width); }
 
 /* Readable line width off */
-.markdown-preview-view .markdown-preview-sizer {
+.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding-left: var(--folding-offset); }
