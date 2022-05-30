@@ -213,6 +213,8 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
   .is-live-preview.is-readable-line-width {
     .dataview.list-view-ul,
     .dataview > h4,
+    .block-language-dataviewjs h4,
+    .dataview .contains-task-list,
     .dataview.dataview-container .contains-task-list {
       --folding-offset:16px;
       width:calc(var(--line-width-adaptive) - var(--folding-offset));
@@ -240,6 +242,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
     .block-language-dataviewjs > h2,
     .block-language-dataviewjs > h3,
     .block-language-dataviewjs > h4,
+    .block-language-dataviewjs h4,
     .block-language-dataview > h4,
     .block-language-dataview h4,
     .dataview.result-group,
@@ -247,8 +250,6 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
       --folding-offset:16px;
       width:calc(var(--line-width-adaptive) - var(--folding-offset));
       max-width:calc(var(--max-width) - var(--folding-offset));
-      margin-top:0;
-      margin-bottom:0;
       margin-left:auto;
       margin-right:max(
         calc(50% - var(--line-width-adaptive)/2),

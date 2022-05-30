@@ -6707,6 +6707,8 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
 /* ------------------ */
 .is-live-preview.is-readable-line-width .dataview.list-view-ul,
 .is-live-preview.is-readable-line-width .dataview > h4,
+.is-live-preview.is-readable-line-width .block-language-dataviewjs h4,
+.is-live-preview.is-readable-line-width .dataview .contains-task-list,
 .is-live-preview.is-readable-line-width .dataview.dataview-container .contains-task-list {
   --folding-offset:16px;
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
@@ -6730,6 +6732,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
 .markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h2,
 .markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h3,
 .markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h4,
+.markdown-preview-view.is-readable-line-width .block-language-dataviewjs h4,
 .markdown-preview-view.is-readable-line-width .block-language-dataview > h4,
 .markdown-preview-view.is-readable-line-width .block-language-dataview h4,
 .markdown-preview-view.is-readable-line-width .dataview.result-group,
@@ -6737,8 +6740,6 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
   --folding-offset:16px;
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: calc(var(--max-width) - var(--folding-offset));
-  margin-top: 0;
-  margin-bottom: 0;
   margin-left: auto;
   margin-right: max(calc(50% - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2)); }
 
