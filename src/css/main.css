@@ -1273,7 +1273,7 @@ em,
 .mod-cm6 .cm-editor .HyperMD-header-4,
 .mod-cm6 .cm-editor .HyperMD-header-5,
 .mod-cm6 .cm-editor .HyperMD-header-6 {
-  padding-top: 0.4em; }
+  padding-top: 0.5em; }
 
 h1,
 .empty-state-title,
@@ -6996,32 +6996,38 @@ Needs some work
 .h1-l .markdown-reading-view h1:not(.embedded-note-title),
 .h1-l .mod-cm6 .cm-editor .HyperMD-header-1 {
   border-bottom: 1px solid var(--h1l);
-  padding-bottom: 0.4em; }
+  padding-bottom: 0.4em;
+  margin-block-end: 0.6em; }
 
 .h2-l .markdown-reading-view h2,
 .h2-l .mod-cm6 .cm-editor .HyperMD-header-2 {
   border-bottom: 1px solid var(--h2l);
-  padding-bottom: 0.4em; }
+  padding-bottom: 0.4em;
+  margin-block-end: 0.6em; }
 
 .h3-l .markdown-reading-view h3,
 .h3-l .mod-cm6 .cm-editor .HyperMD-header-3 {
   border-bottom: 1px solid var(--h3l);
-  padding-bottom: 0.4em; }
+  padding-bottom: 0.4em;
+  margin-block-end: 0.6em; }
 
 .h4-l .markdown-reading-view h4,
 .h4-l .mod-cm6 .cm-editor .HyperMD-header-4 {
   border-bottom: 1px solid var(--h4l);
-  padding-bottom: 0.4em; }
+  padding-bottom: 0.4em;
+  margin-block-end: 0.6em; }
 
 .h5-l .markdown-reading-view h5,
 .h5-l .mod-cm6 .cm-editor .HyperMD-header-5 {
   border-bottom: 1px solid var(--h5l);
-  padding-bottom: 0.4em; }
+  padding-bottom: 0.4em;
+  margin-block-end: 0.6em; }
 
 .h6-l .markdown-reading-view h6,
 .h6-l .mod-cm6 .cm-editor .HyperMD-header-6 {
   border-bottom: 1px solid var(--h6l);
-  padding-bottom: 0.4em; }
+  padding-bottom: 0.4em;
+  margin-block-end: 0.6em; }
 
 /* Mobile */
 /* Mobile styling
@@ -9033,8 +9039,8 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .contextual-typography .markdown-preview-view h4,
 .contextual-typography .markdown-preview-view h5,
 .contextual-typography .markdown-preview-view h6 {
-  margin-block-start: 0.4em;
-  margin-block-end: 0.4em; }
+  margin-block-start: 1em;
+  margin-block-end: 0.5em; }
 
 /* Dataview plugin */
 /*body .table-view-table > thead > tr > th,
