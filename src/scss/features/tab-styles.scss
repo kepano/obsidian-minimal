@@ -1,3 +1,29 @@
+/* Hidden tabs
+Needs some work
+
+.mod-right-split {
+  .workspace-tab-header-container:not(:hover) {
+    height:0;
+    opacity:0;
+    z-index:999;
+    width:100%;
+    transition:height 0.1s linear, opacity 0.1s linear;
+    &::after {
+      width:100%;
+      content:" ";
+      background-color:transparent;
+      height:20px;
+      position:absolute;
+      z-index:99;
+      top:0;
+    }
+  }
+}
+.workspace-tab-header-container {
+  transition:height 0.1s linear, opacity 0.1s linear;
+}
+ */
+
 /* Underline */
 
 .tab-style-2 .workspace-tab-header-container .workspace-tab-header {

@@ -1321,7 +1321,7 @@ h1,
 .markdown-preview-view h1,
 .cm-s-obsidian .cm-header-1 {
   font-variant: var(--h1-variant);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   line-height: 1.3;
   font-family: var(--h1-font);
   font-size: var(--h1);
@@ -6657,6 +6657,7 @@ as opposed to regular tables */
     width: calc(var(--line-width-adaptive) - var(--folding-offset));
     max-width: calc(var(--max-width) - var(--folding-offset));
     margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
+  .markdown-source-view.mod-cm6.is-readable-line-width .internal-embed > .markdown-embed,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-line > .cm-html-embed {
     --folding-offset:0; }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
@@ -6825,6 +6826,31 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 .workspace > .workspace-split:not(.mod-root) .CodeMirror-sizer {
   padding-left: 10px; }
 
+/* Hidden tabs
+Needs some work
+
+.mod-right-split {
+  .workspace-tab-header-container:not(:hover) {
+    height:0;
+    opacity:0;
+    z-index:999;
+    width:100%;
+    transition:height 0.1s linear, opacity 0.1s linear;
+    &::after {
+      width:100%;
+      content:" ";
+      background-color:transparent;
+      height:20px;
+      position:absolute;
+      z-index:99;
+      top:0;
+    }
+  }
+}
+.workspace-tab-header-container {
+  transition:height 0.1s linear, opacity 0.1s linear;
+}
+ */
 /* Underline */
 .tab-style-2 .workspace-tab-header-container .workspace-tab-header {
   flex-grow: 1;

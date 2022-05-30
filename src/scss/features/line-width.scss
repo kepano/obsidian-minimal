@@ -111,6 +111,7 @@ as opposed to regular tables */
         calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
         calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
     }
+    .internal-embed > .markdown-embed,
     .cm-line > .cm-html-embed {
       --folding-offset:0;
     }
