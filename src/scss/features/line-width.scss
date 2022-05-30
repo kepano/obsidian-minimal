@@ -65,9 +65,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 }
 
 /* Folding offset */
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  padding-left:var(--folding-offset);
-}
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataview"],
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataviewjs"] {
   padding-left:var(--folding-offset);
@@ -124,8 +122,8 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
     table {
       width:calc(var(--line-width-adaptive) - var(--folding-offset));
       max-width:calc(var(--max-width) - var(--folding-offset));
-      margin:0 auto 0
-        max(
+      margin-right:auto;
+      margin-left:max(
         calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
         calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
     }
@@ -146,8 +144,8 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
     .cm-embed-block > mjx-container {
       width:calc(var(--line-width-adaptive) - var(--folding-offset));
       max-width:calc(var(--max-width) - var(--folding-offset));
-      margin:0 auto 0
-        max(
+      margin-right:auto;
+      margin-left:max(
         calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
         calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
     }
@@ -158,8 +156,8 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
     .HyperMD-list-line {
       width:calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
       max-width:calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));
-      margin:0 auto 0
-        max(
+      margin-right:auto;
+      margin-left:max(
         calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--line-width-adaptive)/2),
         calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--max-width)/2)) !important;
     }
@@ -181,7 +179,8 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
       .dataview.result-group > .contains-task-list,
       .dataview.dataview-container > .contains-task-list {
         max-width:100%;
-        margin:0 auto;
+        margin-right:auto;
+        margin-left:auto;
         transform:none;
       }
     }
@@ -194,13 +193,15 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
       .block-language-dataviewjs > h2,
       .block-language-dataviewjs > h3,
       .block-language-dataviewjs > h4,
+      .block-language-dataviewjs h4,
       .block-language-dataview > h4,
       .block-language-dataview h4,
       .dataview.result-group,
       .dataview.dataview-error {
         width:calc(var(--line-width-adaptive) - var(--folding-offset));
         max-width:var(--max-width);
-        margin:0 auto; // Right margin trick
+        margin-right:auto;
+        margin-left:auto;
       }
     }
   }
@@ -217,7 +218,8 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
       width:calc(var(--line-width-adaptive) - var(--folding-offset));
       max-width:calc(100% - var(--folding-offset));
       transform:translateX(calc(var(--folding-offset)/2));
-      margin:0 auto;
+      margin-right:auto;
+      margin-left:auto;
     }
   }
   // Live Preview inside 100% width table block

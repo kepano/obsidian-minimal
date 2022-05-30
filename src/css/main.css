@@ -6556,9 +6556,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
   overflow: scroll; }
 
 /* Folding offset */
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  padding-left: var(--folding-offset); }
-
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataview"],
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataviewjs"] {
   padding-left: var(--folding-offset); }
@@ -6610,7 +6608,8 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
   .markdown-source-view.mod-cm6.is-readable-line-width table {
     width: calc(var(--line-width-adaptive) - var(--folding-offset));
     max-width: calc(var(--max-width) - var(--folding-offset));
-    margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
+    margin-right: auto;
+    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-line > .cm-html-embed {
     --folding-offset:0; }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
@@ -6622,14 +6621,16 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > mjx-container {
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: calc(var(--max-width) - var(--folding-offset));
-  margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
+  margin-right: auto;
+  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
 
 /* For lists adding an extra offset value in Edit mode */
 /* Needs .is-line-wrap to override default styling */
 .markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap .HyperMD-list-line {
   width: calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
   max-width: calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));
-  margin: 0 auto 0 max(calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--max-width)/2)) !important; }
+  margin-right: auto;
+  margin-left: max(calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--max-width)/2)) !important; }
 
 /* Dataview lists/checklists
    A nightmare mainly because there is no selector that indicates
@@ -6642,7 +6643,8 @@ body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readab
 body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.result-group > .contains-task-list,
 body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-container > .contains-task-list {
   max-width: 100%;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   transform: none; }
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-container > .contains-task-list,
@@ -6651,13 +6653,15 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h2,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h3,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h4,
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs h4,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview > h4,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview h4,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.result-group,
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-error {
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: var(--max-width);
-  margin: 0 auto; }
+  margin-right: auto;
+  margin-left: auto; }
 
 /* Wider block widths */
 /* ------------------ */
@@ -6668,7 +6672,8 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: calc(100% - var(--folding-offset));
   transform: translateX(calc(var(--folding-offset)/2));
-  margin: 0 auto; }
+  margin-right: auto;
+  margin-left: auto; }
 
 .table-100 .is-live-preview.is-readable-line-width .dataview.list-view-ul,
 .table-100 .is-live-preview.is-readable-line-width .dataview > h4,
