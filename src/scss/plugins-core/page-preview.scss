@@ -4,10 +4,6 @@
   background:var(--bg2);
 }
 
-.popover:not(.hover-editor) {
-  --folding-offset:0;
-}
-
 .popover,
 .popover.hover-popover {
   min-height:40px;

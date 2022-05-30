@@ -5862,24 +5862,6 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
   opacity: 1;
   transition: opacity 0.2s ease-in-out; }
 
-/* Folding offset */
-:root {
-  --folding-offset:16px; }
-
-@media (max-width: 400pt) {
-  .is-mobile {
-    --folding-offset:0px; } }
-body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
-  padding-left: var(--folding-offset); }
-
-/*
-.is-mobile .cm-editor .cm-line,
-.is-mobile .workspace-drawer-tab-container > *,
-body.minimal-folding.is-mobile:not(.title-align-center):not(.title-align-left) .view-header-title,
-.minimal-folding.is-mobile .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
-.minimal-folding.is-mobile .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
-  padding:0;
-}*/
 /* Full width media  */
 .full-width-media .markdown-preview-view .image-embed img:not(.emoji):not([width]),
 .full-width-media .image-embed img:not(.emoji):not([width]),
@@ -6517,9 +6499,17 @@ https://github.com/sponsors/kepano
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
     width: 100%; } }
-/* Custom line width */
+/* Custom line width with folding offset */
 :root {
+  --folding-offset:16px;
   --list-edit-offset:0.5em; }
+
+@media (max-width: 400pt) {
+  .is-mobile {
+    --folding-offset:0px; } }
+/* Nudge titlebar */
+body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
+  padding-left: var(--folding-offset); }
 
 .markdown-source-view.wide,
 .markdown-preview-view.wide {
@@ -6544,7 +6534,7 @@ https://github.com/sponsors/kepano
   max-width: var(--max-width); }
 
 /* Readable line width off */
-.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer {
+.markdown-reading-view .markdown-preview-view:not(.is-readable-line-width) > .markdown-preview-sizer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding-left: var(--folding-offset); }
@@ -6573,6 +6563,10 @@ https://github.com/sponsors/kepano
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataviewjs"] {
   padding-left: var(--folding-offset); }
 
+.internal-embed > .markdown-embed,
+.popover:not(.hover-editor) {
+  --folding-offset:0; }
+
 /* Live Preview */
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width: 100%; }
@@ -6580,8 +6574,7 @@ https://github.com/sponsors/kepano
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   max-width: calc(var(--max-width) - var(--folding-offset)); }
 
-/* Make sure the table fills the width of the parent dataview block,
-as opposed to regular tables */
+/* Fill the width of the parent block for nested elements */
 .is-live-preview.is-readable-line-width.embed-strict .internal-embed .markdown-preview-sizer,
 .is-readable-line-width .block-language-dataview table.dataview,
 .is-readable-line-width .block-language-dataviewjs table.dataview,
@@ -6617,7 +6610,6 @@ as opposed to regular tables */
     width: calc(var(--line-width-adaptive) - var(--folding-offset));
     max-width: calc(var(--max-width) - var(--folding-offset));
     margin: 0 auto 0 max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
-  .markdown-source-view.mod-cm6.is-readable-line-width .internal-embed > .markdown-embed,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-line > .cm-html-embed {
     --folding-offset:0; }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
@@ -7871,9 +7863,6 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
 /* Page Preview aka Popovers */
 .theme-dark.minimal-dark-black .popover {
   background: var(--bg2); }
-
-.popover:not(.hover-editor) {
-  --folding-offset:0; }
 
 .popover,
 .popover.hover-popover {
