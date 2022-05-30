@@ -6587,6 +6587,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
   margin-left: auto !important; }
 
 /* Remove margins when nested */
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-list-line .internal-embed,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-list-line .internal-embed.image-embed {
   margin-left: 0 !important; }
 
