@@ -29,7 +29,7 @@ Use this snippet to translate labeled navigation setting into other languages
   content:"Избранное";
 }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="dictionary-view"] .workspace-tab-header-inner-icon:after {
-  content:"Словадь";
+  content:"Словарь";
 }
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="tag"] .workspace-tab-header-inner-icon:after {
   content:"Теги";
