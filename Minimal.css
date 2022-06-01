@@ -770,7 +770,7 @@ body.minimal-strike-lists .markdown-source-view.mod-cm6 .HyperMD-task-line[data-
 body.minimal-strike-lists .markdown-preview-view ul li[data-task="x"].task-list-item.is-checked,
 body.minimal-strike-lists li[data-task="x"].task-list-item.is-checked {
   color: var(--text-faint);
-  text-decoration: line-through solid var(--text-faint) 1px; }
+  text-decoration: line-through; }
 
 /* Preview offset */
 ul > li.task-list-item .task-list-item-checkbox {
