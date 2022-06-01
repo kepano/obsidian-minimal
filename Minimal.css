@@ -534,7 +534,7 @@ body {
   --line-width-adaptive:var(--line-width);
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
-  --table-font-size:calc(var(--font-adaptive-normal) - 2px); }
+  --table-font-size:calc(var(--font-adaptive-normal) * 0.875); }
 
 /* Phone font sizes */
 @media (max-width: 400pt) {
@@ -3627,7 +3627,7 @@ body:not(.minimal-unstyled-tags) a.tag {
   background-color: var(--tag-bg);
   border: var(--tag-border-width) solid var(--background-modifier-border);
   color: var(--tag-color);
-  font-size: var(--font-adaptive-small);
+  font-size: calc(var(--font-adaptive-normal) * 0.8);
   font-weight: var(--link-weight);
   font-family: var(--font-ui);
   padding: 1px 8px;
@@ -3645,7 +3645,7 @@ body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag {
   background-color: var(--tag-bg);
   border: var(--tag-border-width) solid var(--background-modifier-border);
   color: var(--tag-color);
-  font-size: var(--font-adaptive-small);
+  font-size: calc(var(--font-adaptive-normal) * 0.8);
   font-family: var(--font-ui);
   font-weight: var(--link-weight);
   text-align: center;
