@@ -60,6 +60,7 @@ div.menu-item:hover .menu-item-icon svg path {
   }
   .menu-item {
     padding:5px 10px;
+    margin:0;
   }
   .menu-item-icon {
     margin-right:10px;
@@ -81,7 +82,7 @@ div.menu-item:hover .menu-item-icon svg path {
       left:auto;
       margin:0 auto;
       width:360px;
-      padding:10px 10px 20px;
+      padding:10px 10px 10px;
       border-radius:15px;
       box-shadow:0 0 100vh 100vh rgba(0,0,0,0.5);
     }

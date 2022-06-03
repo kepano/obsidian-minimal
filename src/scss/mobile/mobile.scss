@@ -350,15 +350,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   border:none;
   box-shadow:0 5px 200px var(--background-modifier-box-shadow);
 }
-.mobile-toolbar {
-  width:100%;
-  text-align:center;
-  display:flex;
-  overflow:scroll;
-  background-color:var(--background-primary);
-  border-top:1px solid var(--background-modifier-border);
-}
-
 .pull-out-action {
   top:0;
   height:100vh;
@@ -498,13 +489,6 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
     opacity:1;
   }
   .mod-left:not(.is-pinned) + .mod-root .view-header-icon:hover {
-    background-color:var(--background-tertiary);
-  }
-  .mobile-toolbar-option {
-    border-radius:8px;
-    margin:6px 0;
-  }
-  .mobile-toolbar-option:hover {
     background-color:var(--background-tertiary);
   }
   .is-mobile.is-ios .safe-area-top-cover {

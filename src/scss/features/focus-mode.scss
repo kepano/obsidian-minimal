@@ -31,8 +31,8 @@ body.minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
 }
 
 /* Collapse header bar */
-body.minimal-focus-mode.borders-title .workspace-leaf .workspace-leaf-content:not([data-type=graph]):not([data-type=localgraph]) .view-header, 
-body.minimal-focus-mode.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type=graph]):not([data-type=empty]):not([data-type=localgraph]) .view-header {
+body.minimal-focus-mode.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='empty']):not([data-type='map']):not([data-type='graph']):not([data-type='localgraph']) .view-header, 
+body.minimal-focus-mode.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type='empty']):not([data-type='map']):not([data-type='graph']):not([data-type='localgraph']) .view-header {
   border-bottom:var(--border-width) solid transparent;
 }
 body.minimal-focus-mode.borders-title .workspace-leaf .workspace-leaf-content:not([data-type=graph]):not([data-type=localgraph]) .view-header:focus-within, 
