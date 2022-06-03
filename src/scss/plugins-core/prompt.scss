@@ -67,6 +67,17 @@ input.prompt-input {
   }
 }
 
+.is-mobile .suggestion-container {
+  .suggestion-item {
+      &:first-child {
+        margin-top:0;
+      }
+      &:last-child {
+        margin-bottom:10px;
+      }
+  }
+}
+
 .suggestion-hotkey {
   margin-top:0.25em;
 }
@@ -151,8 +162,8 @@ input.prompt-input {
   }
   input[type='text'].prompt-input,
   input[type='text'].prompt-input:hover {
-    line-height:2;
     padding:8px;
+    height:4.5ex;
     font-size:var(--font-adaptive-normal);
   }
 
@@ -176,7 +187,7 @@ input.prompt-input {
       border:1px solid var(--background-modifier-border);
     }
     .modal-container .suggestion-item {
-      padding:10px 5px 10px 10px;
+      padding:8px 5px 8px 8px;
       border-radius:var(--radius-m);
     }
     .suggestion-flair {

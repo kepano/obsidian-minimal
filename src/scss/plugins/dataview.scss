@@ -38,6 +38,10 @@ body .table-view-table > tbody > tr:hover {
 body .dataview-error {
   margin-top:16px;
   background-color:transparent;
+}
+.markdown-source-view.mod-cm6 .cm-content .dataview.dataview-error,
+.dataview.dataview-error {
+  color:var(--text-muted);
 } 
 /* New error box as of 2022-05 */
 body div.dataview-error-box {

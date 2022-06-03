@@ -138,6 +138,7 @@ body .view-action svg.cross path {
 .is-mobile .document-search-container .document-search {
   position:relative;
 }
+.is-mobile .search-input-container:before,
 .is-mobile .workspace-leaf-content[data-type='search'] .search-input-container:before,
 .is-mobile .document-search-container .document-search:before {
   content:" ";

@@ -99,7 +99,8 @@
     }
   }
 
-  &.is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input,
+  .search-input-container input,
+  .workspace-leaf-content[data-type='search'] .search-input-container input,
   .document-search-container input[type='text'] {
     border-radius:var(--ios-input-radius);
     border:0px;
@@ -114,4 +115,17 @@
     }
   }
 
+}
+
+/* iPad tablet */
+
+@media (min-width:400pt) {
+.is-ios {  
+  .mobile-toolbar {
+    height:70px;
+  }
+  .mobile-toolbar-options-container {
+    justify-content:center;
+  }
+}
 }

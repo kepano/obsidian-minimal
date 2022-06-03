@@ -226,6 +226,13 @@ body.is-mobile.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   font-size:14px;
   height:var(--input-height)
 }
+.is-mobile .setting-item-control .search-input-container input {
+  display:inline-block;
+  width:100%;
+}
+.is-mobile .search-input-container input,
+.is-mobile .search-input-container input:hover,
+.is-mobile .search-input-container input:focus,
 .is-mobile .search-input-container input[type='text'],
 .is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input{ 
   -webkit-appearance:none;
@@ -526,6 +533,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
     flex-direction:row;
     align-items:center;
   }
+  .is-mobile button,
   .is-mobile .setting-item-control select,
   .is-mobile .setting-item-control input,
   .is-mobile .setting-item-control button {
