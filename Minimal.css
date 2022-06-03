@@ -7117,7 +7117,7 @@ body.is-mobile {
     position: relative !important;
     border-bottom: none; }
   .is-mobile .safe-area-top-cover {
-    background-color: var(--background-primary); }
+    background-color: transparent; }
   .is-mobile .horizontal-main-container {
     background-color: var(--background-primary); }
   .is-mobile .workspace {
@@ -8125,6 +8125,7 @@ input.prompt-input {
     display: none; }
   .is-mobile input[type='text'].prompt-input,
   .is-mobile input[type='text'].prompt-input:hover {
+    line-height: 2;
     padding: 8px;
     height: 4.5ex;
     font-size: var(--font-adaptive-normal); }

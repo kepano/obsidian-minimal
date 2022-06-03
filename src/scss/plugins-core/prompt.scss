@@ -162,6 +162,7 @@ input.prompt-input {
   }
   input[type='text'].prompt-input,
   input[type='text'].prompt-input:hover {
+    line-height:2;
     padding:8px;
     height:4.5ex;
     font-size:var(--font-adaptive-normal);

@@ -32,7 +32,6 @@ body.is-mobile {
 }
 
 .is-mobile {
-
   .titlebar {
     height:0 !important;
     padding:0 !important;
@@ -40,7 +39,7 @@ body.is-mobile {
     border-bottom:none;
   }
   .safe-area-top-cover {
-    background-color:var(--background-primary);
+    background-color:transparent;
   }
   .horizontal-main-container {
     background-color:var(--background-primary);
