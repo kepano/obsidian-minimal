@@ -15,19 +15,15 @@
   width:5px; 
 }
 
-/* Live Preview */
+/* Reset to default for iOS */
+body .markdown-source-view.mod-cm6 .cm-content {
+  caret-color:unset;
+}
 
+/* Live Preview */
 body.fancy-cursor .markdown-source-view.mod-cm6 .cm-content,
 body.fancy-cursor .mod-cm6 .cm-line {
   caret-color:var(--text-accent);
-}
-body.fancy-cursor .mod-cm6 .cm-cursor {
-  width:0;
-  border:none;
-  border-left:1px solid var(--text-accent);
-}
-body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
-  margin-left:1px;
 }
 
 /* Prompt */
