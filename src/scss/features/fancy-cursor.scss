@@ -16,6 +16,8 @@
 }
 
 /* Live Preview */
+
+body.fancy-cursor .markdown-source-view.mod-cm6 .cm-content,
 body.fancy-cursor .mod-cm6 .cm-line {
   caret-color:var(--text-accent);
 }
