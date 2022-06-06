@@ -94,7 +94,7 @@ settings:
         type: heading
         level: 2
         collapsed: true
-        description: Use the Minimal Theme Settings plugin to access hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization.
+        description: Use the Minimal Theme Settings plugin to access hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization. Visit minimal.guide for documentation.
     -
         id: interface
         title: Interface colors
@@ -119,14 +119,16 @@ settings:
         default-dark: '#'
     - 
         id: bg1
-        title: Main window background
+        title: Primary background
+        description: Background color for the main window
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
         id: bg2
-        title: Sidebar background
+        title: Secondary background
+        description: Background color for left sidebar and menus
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -134,7 +136,7 @@ settings:
     - 
         id: bg3
         title: Active background
-        description: For hovered buttons and current file
+        description: Background color for hovered buttons and currently selected file
         type: variable-themed-color
         opacity: true
         format: hex
@@ -144,15 +146,15 @@ settings:
         id: ui1
         title: Border color
         type: variable-themed-color
-        description: For divider lines and outlined elements
+        description: For buttons, divider lines, and outlined elements
         opacity: true
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
         id: ui2
-        title: Border color (highlighted)
-        description: For selected lines and empty checkboxes
+        title: Highlighted border color
+        description: Used when hovering over buttons, dividers, and outlined elements
         type: variable-themed-color
         opacity: true
         format: hex
@@ -160,7 +162,8 @@ settings:
         default-dark: '#'
     - 
         id: ui3
-        title: Border color (focused)
+        title: Active border color
+        description: Used when clicking buttons and outlined elements
         type: variable-themed-color
         opacity: true
         format: hex
@@ -299,7 +302,7 @@ settings:
     - 
         id: text-code
         title: Code text color
-        description: Where syntax highlighting is not present
+        description: Color of code when syntax highlighting is not present
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -391,7 +394,6 @@ settings:
     - 
         id: h1-weight
         title: H1 font weight
-        description: Accepts numbers representing the CSS font-weight
         type: variable-number-slider
         default: 600
         min: 100
@@ -399,7 +401,7 @@ settings:
         step: 100
     - 
         id: h1-color
-        title: H1 font color
+        title: H1 text color
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -460,7 +462,6 @@ settings:
     - 
         id: h2-weight
         title: H2 font weight
-        description: Accepts numbers representing the CSS font-weight
         type: variable-number-slider
         default: 600
         min: 100
@@ -468,7 +469,7 @@ settings:
         step: 100
     - 
         id: h2-color
-        title: H2 font color
+        title: H2 text color
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -529,7 +530,6 @@ settings:
     - 
         id: h3-weight
         title: H3 font weight
-        description: Accepts numbers representing the CSS font-weight
         type: variable-number-slider
         default: 600
         min: 100
@@ -537,7 +537,7 @@ settings:
         step: 100
     - 
         id: h3-color
-        title: H3 font color
+        title: H3 text color
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -598,7 +598,6 @@ settings:
     - 
         id: h4-weight
         title: H4 font weight
-        description: Accepts numbers representing the CSS font-weight
         type: variable-number-slider
         default: 500
         min: 100
@@ -606,7 +605,7 @@ settings:
         step: 100
     - 
         id: h4-color
-        title: H4 font color
+        title: H4 text color
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -667,7 +666,6 @@ settings:
     - 
         id: h5-weight
         title: H5 font weight
-        description: Accepts numbers representing the CSS font-weight
         type: variable-number-slider
         default: 500
         min: 100
@@ -675,7 +673,7 @@ settings:
         step: 100
     -
         id: h5-color
-        title: H5 font color
+        title: H5 text color
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -736,7 +734,6 @@ settings:
     - 
         id: h6-weight
         title: H6 font weight
-        description: Accepts numbers representing the CSS font-weight
         type: variable-number-slider
         default: 400
         min: 100
@@ -744,7 +741,7 @@ settings:
         step: 100
     -
         id: h6-color
-        title: H6 font color
+        title: H6 text color
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -869,7 +866,6 @@ settings:
     - 
         id: link-weight
         title: Link font weight
-        description: Accepts numbers representing the CSS font-weight
         type: variable-number-slider
         default: 400
         min: 100
@@ -884,6 +880,7 @@ settings:
     - 
         id: ax3
         title: Checkbox color
+        description: Background color for completed tasks
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -904,7 +901,7 @@ settings:
     -
         id: minimal-strike-lists
         title: Strike completed tasks
-        description: Use line through greyed text for completed tasks
+        description: Adds strikethrough line and greyed text for completed tasks
         type: class-toggle
         default: false
     -
@@ -936,6 +933,7 @@ settings:
     - 
         id: tab-style
         title: Tab style
+        description: See documentation for screenshots
         type: class-select
         allowEmpty: false
         default: tab-style-1
@@ -1040,6 +1038,7 @@ settings:
     - 
         id: row-color-hover
         title: Active row background
+        description: Background color for hovered tables rows
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1121,6 +1120,7 @@ settings:
         id: tx1
         title: Normal text color
         type: variable-themed-color
+        description: Primary text color used by default across all elements
         opacity: true
         format: hex
         default-light: '#'
@@ -1144,6 +1144,7 @@ settings:
     - 
         id: tx2
         title: Muted text color
+        description: Secondary text such as sidebar note titles and table headings
         type: variable-themed-color
         opacity: true
         format: hex
@@ -1152,6 +1153,7 @@ settings:
     - 
         id: tx3
         title: Faint text color
+        description: tertiary text such as input placeholders, empty checkboxes, and disabled statuses
         type: variable-themed-color
         opacity: true
         format: hex
@@ -1174,7 +1176,6 @@ settings:
     - 
         id: bold-weight
         title: Bold text weight
-        description: Accepts numbers representing the CSS font-weight
         type: variable-number-slider
         default: 600
         min: 100
@@ -1189,6 +1190,7 @@ settings:
     - 
         id: title-alignment
         title: Title alignment
+        description: Position of the text within the title bar
         type: class-select
         allowEmpty: false
         default: title-align-body
@@ -1205,7 +1207,7 @@ settings:
     -
         id: show-grabber
         title: Always show grabber icon
-        description: Dragging handle is always visible
+        description: Make the dragging handle always visible in the top left corner of a pane
         type: class-toggle
         default: false
     - 
@@ -1222,7 +1224,6 @@ settings:
     - 
         id: title-weight
         title: Title font weight
-        description: Accepts numbers representing the CSS font-weight
         type: variable-number-slider
         default: 600
         min: 100
@@ -1230,14 +1231,14 @@ settings:
         step: 100
     - 
         id: title-color
-        title: Title font color (active)
+        title: Title text color (active)
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
         id: title-color-inactive
-        title: Title font color (inactive)
+        title: Title text color (inactive)
         type: variable-themed-color
         format: hex
         default-light: '#'
