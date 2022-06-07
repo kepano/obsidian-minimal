@@ -6003,6 +6003,7 @@ table:not(.calendar) tbody > tr > td,
   opacity: 0.75;
   transition: opacity 0.25s linear; }
 
+.theme-dark .print-preview img,
 .theme-dark .markdown-source-view img:hover,
 .theme-dark .markdown-preview-view img:hover {
   opacity: 1;
