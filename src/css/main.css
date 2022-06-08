@@ -7641,13 +7641,14 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   .is-ios .mobile-toolbar {
     height: 70px; }
   .is-ios .mobile-toolbar-options-container {
-    justify-content: center; } }
+    margin: 0 auto;
+    display: inline-flex;
+    width: auto; } }
 .mobile-toolbar-off .mobile-toolbar {
   display: none; }
 
 .mobile-toolbar {
   width: 100%;
-  text-align: center;
   display: flex;
   overflow: scroll;
   background-color: var(--background-primary);

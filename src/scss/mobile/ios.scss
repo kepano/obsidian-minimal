@@ -124,7 +124,9 @@
     height:70px;
   }
   .mobile-toolbar-options-container {
-    justify-content:center;
+    margin:0 auto;
+    display:inline-flex;
+    width:auto;
   }
 }
 }
