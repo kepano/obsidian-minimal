@@ -71,17 +71,23 @@ body {
   --max-width:88%;
   --max-col-width:18em;
 
+  /* Icons */
   --icon-muted:0.5;
   --icon-size:18px;
 
   --border-width:1px;
   --border-width-alt:1px;
+  
+  /* Quotes and transclusions */
+  --nested-padding:1.1em;
 
-  --nested-padding:1.1em; /* Quotes and transclusions */
+  /* List padding */
+  --list-indent:2em;
 
-  --list-indent:2em;    /* List padding */
-  --list-spacing:0.075em;  /* Space between list items */
+  /* Space between list items */
+  --list-spacing:0.075em;
 
+  /* Radiuses */
   --radius-s:2px;
   --radius-m:5px;
   --radius-l:12px;
@@ -90,6 +96,7 @@ body {
   --input-height:32px;
   --header-height:40px;
 
+  /* Mobile sidebars */
   --mobile-left-sidebar-width:280pt;
   --mobile-right-sidebar-width:240pt;
 
@@ -98,6 +105,10 @@ body {
   --tag-border-width:1px;
 
   --top-left-padding-y:0px;
+
+  /* Image opacity in dark mode */
+  --image-muted:0.7;
+
 }
 
 .mod-macos {

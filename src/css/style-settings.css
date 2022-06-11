@@ -735,6 +735,26 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
+        id: images
+        title: Images
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: image-muted
+        title: Image opacity in dark mode
+        description: Level of fading for images in dark mode. Hover over images to display at full brightness.
+        type: variable-number-slider
+        default: 0.7
+        min: 0.25
+        max: 1
+        step: 0.05
+    -
+        id: zoom-off
+        title: Disable image zoom
+        description: Turns off click + hold to zoom images
+        type: class-toggle
+    -
         id: indentation-guides
         title: Indentation guides
         type: heading
@@ -788,7 +808,7 @@ settings:
         step: 100
     -
         id: lists
-        title: Lists and checkboxes
+        title: Lists and tasks
         type: heading
         level: 2
         collapsed: true
@@ -1245,11 +1265,6 @@ settings:
 name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
-    -
-        id: zoom-off
-        title: Disable image zoom
-        description: Turns off click/hold to zoom images
-        type: class-toggle
     -
         id: window-title-on
         title: Display window title

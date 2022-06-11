@@ -38,6 +38,9 @@
     border-top-right-radius:0px;
     border-top-left-radius:0px;
 }
+
+/* Resize handles */
+
 .workspace-split.mod-root.mod-horizontal .workspace-leaf-resize-handle,
 .workspace-split.mod-root.mod-vertical .workspace-leaf-resize-handle {
   border-width:1px;
@@ -66,7 +69,6 @@
   transition:border-color 0.1s ease-in-out 0.05s, border-width 0.1s ease-in-out 0.05s;
   border-width:2px;
 }
-
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:active,
@@ -74,6 +76,7 @@
   border-color:var(--background-modifier-border-focus);
   border-width:2px;
 }
+
 .workspace-tab-container-before,
 .workspace-tab-container-after{
   width:0;

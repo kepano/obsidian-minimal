@@ -59,28 +59,33 @@ body {
   --line-height:1.5;
   --max-width:88%;
   --max-col-width:18em;
+  /* Icons */
   --icon-muted:0.5;
   --icon-size:18px;
   --border-width:1px;
   --border-width-alt:1px;
-  --nested-padding:1.1em;
   /* Quotes and transclusions */
-  --list-indent:2em;
+  --nested-padding:1.1em;
   /* List padding */
-  --list-spacing:0.075em;
+  --list-indent:2em;
   /* Space between list items */
+  --list-spacing:0.075em;
+  /* Radiuses */
   --radius-s:2px;
   --radius-m:5px;
   --radius-l:12px;
   --radius-xl:16px;
   --input-height:32px;
   --header-height:40px;
+  /* Mobile sidebars */
   --mobile-left-sidebar-width:280pt;
   --mobile-right-sidebar-width:240pt;
   /* Tags */
   --tag-radius:14px;
   --tag-border-width:1px;
-  --top-left-padding-y:0px; }
+  --top-left-padding-y:0px;
+  /* Image opacity in dark mode */
+  --image-muted:0.7; }
 
 .mod-macos {
   --top-left-padding-y:24px; }
@@ -3910,6 +3915,7 @@ body:not(.window-title-on) .titlebar-text {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px; }
 
+/* Resize handles */
 .workspace-split.mod-root.mod-horizontal .workspace-leaf-resize-handle,
 .workspace-split.mod-root.mod-vertical .workspace-leaf-resize-handle {
   border-width: 1px; }
@@ -6000,7 +6006,7 @@ table:not(.calendar) tbody > tr > td,
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 .theme-dark .markdown-source-view img,
 .theme-dark .markdown-preview-view img {
-  opacity: 0.75;
+  opacity: var(--image-muted);
   transition: opacity 0.25s linear; }
 
 .theme-dark .print-preview img,

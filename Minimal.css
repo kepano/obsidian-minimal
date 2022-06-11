@@ -99,28 +99,33 @@ body {
   --line-height:1.5;
   --max-width:88%;
   --max-col-width:18em;
+  /* Icons */
   --icon-muted:0.5;
   --icon-size:18px;
   --border-width:1px;
   --border-width-alt:1px;
-  --nested-padding:1.1em;
   /* Quotes and transclusions */
-  --list-indent:2em;
+  --nested-padding:1.1em;
   /* List padding */
-  --list-spacing:0.075em;
+  --list-indent:2em;
   /* Space between list items */
+  --list-spacing:0.075em;
+  /* Radiuses */
   --radius-s:2px;
   --radius-m:5px;
   --radius-l:12px;
   --radius-xl:16px;
   --input-height:32px;
   --header-height:40px;
+  /* Mobile sidebars */
   --mobile-left-sidebar-width:280pt;
   --mobile-right-sidebar-width:240pt;
   /* Tags */
   --tag-radius:14px;
   --tag-border-width:1px;
-  --top-left-padding-y:0px; }
+  --top-left-padding-y:0px;
+  /* Image opacity in dark mode */
+  --image-muted:0.7; }
 
 .mod-macos {
   --top-left-padding-y:24px; }
@@ -3950,6 +3955,7 @@ body:not(.window-title-on) .titlebar-text {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px; }
 
+/* Resize handles */
 .workspace-split.mod-root.mod-horizontal .workspace-leaf-resize-handle,
 .workspace-split.mod-root.mod-vertical .workspace-leaf-resize-handle {
   border-width: 1px; }
@@ -6040,7 +6046,7 @@ table:not(.calendar) tbody > tr > td,
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 .theme-dark .markdown-source-view img,
 .theme-dark .markdown-preview-view img {
-  opacity: 0.75;
+  opacity: var(--image-muted);
   transition: opacity 0.25s linear; }
 
 .theme-dark .print-preview img,
@@ -11961,6 +11967,26 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
+        id: images
+        title: Images
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: image-muted
+        title: Image opacity in dark mode
+        description: Level of fading for images in dark mode. Hover over images to display at full brightness.
+        type: variable-number-slider
+        default: 0.7
+        min: 0.25
+        max: 1
+        step: 0.05
+    -
+        id: zoom-off
+        title: Disable image zoom
+        description: Turns off click + hold to zoom images
+        type: class-toggle
+    -
         id: indentation-guides
         title: Indentation guides
         type: heading
@@ -12014,7 +12040,7 @@ settings:
         step: 100
     -
         id: lists
-        title: Lists and checkboxes
+        title: Lists and tasks
         type: heading
         level: 2
         collapsed: true
@@ -12471,11 +12497,6 @@ settings:
 name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
-    -
-        id: zoom-off
-        title: Disable image zoom
-        description: Turns off click/hold to zoom images
-        type: class-toggle
     -
         id: window-title-on
         title: Display window title

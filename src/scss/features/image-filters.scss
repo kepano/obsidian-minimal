@@ -3,7 +3,7 @@
 
 .theme-dark .markdown-source-view img,
 .theme-dark .markdown-preview-view img {
-  opacity:0.75;
+  opacity:var(--image-muted);
   transition:opacity 0.25s linear;
 }
 
