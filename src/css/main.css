@@ -2161,7 +2161,8 @@ body:not(.is-mobile) .modal {
   font-size: var(--font-adaptive-small); }
 
 .modal-button-container {
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-bottom: 2px; }
   .modal-button-container button {
     margin-top: 10px; }
 
@@ -7955,7 +7956,7 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
 /* Prompt */
 /* Used for command palette and quick switcher */
 .prompt {
-  box-shadow: 0 5px 100px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2.7px 6.7px rgba(0, 0, 0, 0.04), 0px 8.9px 22.3px rgba(0, 0, 0, 0.06), 0px 40px 100px rgba(0, 0, 0, 0.1);
   padding-bottom: 0;
   border: 1px solid var(--modal-border); }
 
