@@ -1627,6 +1627,8 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   color: var(--text-faint);
   cursor: var(--cursor); }
 
+.is-collapsed .search-result-file-title:hover,
+.search-result-file-title:hover,
 .nav-folder-title.is-being-dragged-over .nav-folder-collapse-indicator svg {
   color: var(--text-normal); }
 
