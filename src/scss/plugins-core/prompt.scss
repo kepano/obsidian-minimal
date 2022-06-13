@@ -2,10 +2,7 @@
 /* Used for command palette and quick switcher */
 
 .prompt {
-  box-shadow:
-    0px 2.7px 6.7px rgba(0, 0, 0, 0.04),
-    0px 8.9px 22.3px rgba(0, 0, 0, 0.06),
-    0px 40px 100px rgba(0, 0, 0, 0.1);
+  box-shadow:var(--shadow-m);
   padding-bottom:0;
   border:1px solid var(--modal-border);
 }
