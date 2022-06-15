@@ -1487,7 +1487,8 @@ body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-
   width: calc(100% - 16px);
   padding: 0 10px 0 16px;
   line-height: 1.5;
-  cursor: var(--cursor); }
+  cursor: var(--cursor);
+  border: none; }
 
 .nav-folder.mod-root > .nav-folder-title.is-being-dragged-over {
   background-color: var(--text-selection); }
@@ -1515,9 +1516,15 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
   box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
   z-index: 1; }
 
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
+.workspace-leaf.mod-active .nav-file.has-focus {
+  border: none;
+  background-color: transparent; }
+
 .nav-file {
   margin-left: 12px;
-  padding-right: 4px; }
+  padding-right: 4px;
+  border: none; }
 
 .nav-file-title {
   width: calc(100% - 30px);
@@ -3972,6 +3979,10 @@ body:not(.window-title-on) .titlebar-text {
 .workspace-leaf {
   border-left: 0px; }
 
+.workspace-tabs .workspace-leaf,
+.workspace-tabs .workspace-leaf.mod-active {
+  border: none; }
+
 .mod-horizontal .workspace-leaf {
   border-bottom: 0px;
   background-color: transparent;
@@ -4332,27 +4343,23 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
   width: 40px;
   height: 22px;
   cursor: var(--cursor); }
-
-.checkbox-container.is-enabled:after {
-  transform: translate3d(20px, 0, 0); }
-
-.checkbox-container:after {
-  background: white;
-  border: none;
-  margin: 2px 0 0 0;
-  height: 18px;
-  width: 18px;
-  border-radius: 26px;
-  transform: translate3d(2px, 0, 0);
-  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
-  transition: all 0.1s linear; }
-
-.checkbox-container:hover:after {
-  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.1);
-  transition: all 0.1s linear; }
-
-.checkbox-container.is-enabled {
-  border-color: var(--interactive-accent); }
+  .checkbox-container.is-enabled {
+    border-color: var(--interactive-accent); }
+    .checkbox-container.is-enabled:after {
+      transform: translate3d(20px, 0, 0); }
+  .checkbox-container:after {
+    background: white;
+    border: none;
+    margin: 2px 0 0 0;
+    height: 18px;
+    width: 18px;
+    border-radius: 26px;
+    transform: translate3d(2px, 0, 0);
+    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s linear; }
+  .checkbox-container:hover:after {
+    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s linear; }
 
 /* Minimal features */
 /* Active line highlight */

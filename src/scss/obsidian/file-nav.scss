@@ -37,6 +37,7 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
   padding:0 10px 0 16px;
   line-height:1.5;
   cursor:var(--cursor);
+  border:none;
 }
 .nav-folder.mod-root > .nav-folder-title.is-being-dragged-over {
   background-color:var(--text-selection);
@@ -66,9 +67,16 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
   z-index: 1;
 }
 
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
+.workspace-leaf.mod-active .nav-file.has-focus {
+  border:none;
+  background-color:transparent;
+}
+
 .nav-file {
   margin-left:12px;
   padding-right:4px;
+  border:none;
 }
 .nav-file-title {
   width:calc(100% - 30px);

@@ -40,7 +40,6 @@
 }
 
 /* Resize handles */
-
 .workspace-split.mod-root.mod-horizontal .workspace-leaf-resize-handle,
 .workspace-split.mod-root.mod-vertical .workspace-leaf-resize-handle {
   border-width:1px;
@@ -83,6 +82,10 @@
 }
 .workspace-leaf {
   border-left:0px;
+}
+.workspace-tabs .workspace-leaf,
+.workspace-tabs .workspace-leaf.mod-active {
+  border:none;
 }
 .mod-horizontal .workspace-leaf {
   border-bottom:0px;
