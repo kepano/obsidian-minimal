@@ -1497,10 +1497,10 @@ body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-
   background-color: var(--text-selection);
   border-color: var(--text-selection);
   border-radius: var(--radius-m);
-  border: 1px solid transparent; }
+  border: 0px solid transparent; }
 
 .nav-folder-title-content {
-  padding: 0px 4px 1px 0; }
+  padding: 1px 4px; }
 
 .nav-folder-collapse-indicator {
   top: 1px;
@@ -1529,7 +1529,7 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
 .nav-file-title {
   width: calc(100% - 30px);
   margin: 0 8px 0 -4px;
-  padding: 2px 2px;
+  padding: 0;
   border-width: 0;
   line-height: 1.6;
   border-color: var(--background-secondary);
@@ -1550,7 +1550,8 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 5px;
+  padding: 2px 7px;
+  border: 0;
   vertical-align: middle;
   cursor: var(--cursor); }
 
@@ -5788,9 +5789,6 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 .nav-folder-title {
   margin-left: 6px; }
 
-.nav-folder-title-content {
-  padding-left: 4px; }
-
 .nav-file {
   margin-left: 10px; }
 
@@ -6148,7 +6146,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
   height: calc(100% + 1px);
   width: 100%;
   object-fit: contain;
-  margin: -0.5px auto 0;
+  margin: -0.5px auto 0 !important;
   text-align: center;
   padding: 0;
   left: 0;

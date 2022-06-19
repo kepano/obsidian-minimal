@@ -21,7 +21,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
   height:calc(100% + 1px);
   width:100%;
   object-fit:contain;
-  margin:-0.5px auto 0;
+  margin:-0.5px auto 0 !important;
   text-align:center;
   padding:0;
   left:0;
