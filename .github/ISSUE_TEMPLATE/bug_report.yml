@@ -1,8 +1,6 @@
 name: Bug report
 description: "Report a bug with Minimal"
 labels: ["bug"]
-assignees:
-  - kepano
 body:
   - type: markdown
     attributes:
