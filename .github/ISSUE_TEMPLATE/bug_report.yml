@@ -30,7 +30,7 @@ body:
     id: description
     attributes:
       label: Describe the bug
-      description: Provide a description of the bug and steps to reproduce
+      description: Provide a description of the bug and steps to reproduce. If applicable, add screenshots to help explain your problem.
       placeholder: 
     validations:
       required: true
