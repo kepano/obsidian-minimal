@@ -12,11 +12,11 @@ body:
     id: default-present
     attributes:
       label: Is the bug present when using the default theme?
+      options:
+        - "Yes"
+        - "No"
     validations:
       required: true
-    options:
-      - "Yes"
-      - "No"
   - type: textarea
     id: description
     attributes:
