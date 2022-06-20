@@ -23,7 +23,7 @@ body:
     attributes:
       label: Minimal theme version
       description: What version of Minimal theme are you using? Can be found by going to `Appearance > Manage`. Make sure you have updated to the latest version of the theme.
-      placeholder: 5.2.10
+      placeholder: e.g. 5.2.10
     validations:
       required: true
   - type: textarea
@@ -38,7 +38,7 @@ body:
     id: debug-info
     attributes:
       label: Debug info
-      description: Paste your debug info below, which can be accessed in Obsidian with Ctrl/Cmd-P, enter `Show debug info`, and select `Copy to clipboard`
+      description: Copy and paste your debug info below. It can be accessed in Obsidian with Ctrl/Cmd-P, enter `Show debug info`, and select `Copy to clipboard`
       placeholder: 
     validations:
       required: true
