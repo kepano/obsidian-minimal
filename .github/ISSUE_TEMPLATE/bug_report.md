@@ -1,32 +1,34 @@
----
 name: Bug report
-about: Report a bug with Minimal
-title: 
-labels: bug
-assignees: ''
-
----
-
-**Before you open a bug report**
-Disable plugins and snippets that could be causing a conflict. Update to the latest versions of the following, and restart Obsidian:
-
-- Minimal Theme
-- Minimal Theme Settings plugin
-- Contextual Typography plugin
-
-**Confirm that the bug is not present when Minimal theme is off**
-
-**Describe the bug**
-A clear and concise description of the bug
-
-**To reproduce**
-Provide steps to reproduce the behavior
-
-**Expected behavior**
-A clear and concise description of what you expected to happen
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem
-
-**Debug info (required):**
-Paste your debug info below, which can be accessed in Obsidian with Ctrl/Cmd-P, enter "Show debug info", and click "Copy to clipboard"
+description: "Report a bug with Minimal"
+title: "Bug report"
+labels: ["bug"]
+assignees:
+  - kepano
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Disable plugins and snippets that could be causing a conflict. Update to the latest versions of the following, and restart Obsidian
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: Provide a description of the bug and steps to reproduce
+      placeholder: 
+    validations:
+      required: true
+  - type: input 
+    id: version
+    attributes:
+      label: Minimal version
+      description: What version of Minimal are you using? Can be found by going to Appearance > Manage
+      placeholder: 5.2.10
+    validations:
+      required: true
+  - type: input 
+    id: obsidian-version 
+    attributes:
+      label: Obsidian Version
+      placeholder: 0.15.2
+    validations:
+      required: true
