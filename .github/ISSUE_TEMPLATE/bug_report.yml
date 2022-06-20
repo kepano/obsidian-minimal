@@ -7,11 +7,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Disable plugins and snippets that could be causing a conflict. Update to the latest versions of the following, and restart Obsidian
+        Thanks for taking the time to fill out this bug report!
   - type: dropdown
     id: default-present
     attributes:
-      label: Is the bug present when using the default theme?
+      label: Is the bug present when using the default Obsidian theme?
+      description: Disable plugins and snippets that could be causing a conflict, and test using the default theme
       options:
         - "Yes"
         - "No"
@@ -21,7 +22,7 @@ body:
     id: version
     attributes:
       label: Minimal theme version
-      description: What version of Minimal are you using? Can be found by going to Appearance > Manage
+      description: What version of Minimal theme are you using? Can be found by going to `Appearance > Manage`
       placeholder: 5.2.10
     validations:
       required: true
