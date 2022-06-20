@@ -17,6 +17,14 @@ body:
         - "No"
     validations:
       required: true
+  - type: input 
+    id: version
+    attributes:
+      label: Minimal theme version
+      description: What version of Minimal are you using? Can be found by going to Appearance > Manage
+      placeholder: 5.2.10
+    validations:
+      required: true
   - type: textarea
     id: description
     attributes:
@@ -25,18 +33,11 @@ body:
       placeholder: 
     validations:
       required: true
-  - type: input 
-    id: version
+  - type: textarea
+    id: debug-info
     attributes:
-      label: Minimal version
-      description: What version of Minimal are you using? Can be found by going to Appearance > Manage
-      placeholder: 5.2.10
-    validations:
-      required: true
-  - type: input 
-    id: obsidian-version 
-    attributes:
-      label: Obsidian Version
-      placeholder: 0.15.2
+      label: Debug info
+      description: Paste your debug info below, which can be accessed in Obsidian with Ctrl/Cmd-P, enter `Show debug info`, and select `Copy to clipboard`
+      placeholder: 
     validations:
       required: true
