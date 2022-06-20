@@ -22,7 +22,7 @@ body:
     id: version
     attributes:
       label: Minimal theme version
-      description: What version of Minimal theme are you using? Can be found by going to `Appearance > Manage`
+      description: What version of Minimal theme are you using? Can be found by going to `Appearance > Manage`. Make sure you have updated to the latest version of the theme.
       placeholder: 5.2.10
     validations:
       required: true
