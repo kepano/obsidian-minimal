@@ -8,12 +8,15 @@ body:
     attributes:
       value: |
         Disable plugins and snippets that could be causing a conflict. Update to the latest versions of the following, and restart Obsidian
-  - type: boolean
+  - type: dropdown
     id: default-present
     attributes:
       label: Is the bug present when using the default theme?
     validations:
       required: true
+    options:
+      - "Yes"
+      - "No"
   - type: textarea
     id: description
     attributes:
