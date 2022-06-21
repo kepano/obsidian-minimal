@@ -36,6 +36,11 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
 .mod-macos.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
   --traffic-x-space:64px;
 }
+
+/* Frameless + popout */
+.mod-macos.is-popout-window.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:first-of-type  {
+  --traffic-x-space:64px;
+}
 /* Frameless */
 .mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
   --traffic-x-space:22px;

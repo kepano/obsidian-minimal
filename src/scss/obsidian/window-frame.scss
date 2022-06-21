@@ -33,10 +33,12 @@ body.hider-frameless .titlebar {
 .titlebar:hover .titlebar-button-container.mod-left {
   opacity:1;
 }
+.is-focused .titlebar-text {
+  color: var(--text-normal);
+}
 .titlebar-text {
   font-weight:600;
-  padding-top:6px;
-  color:var(--text-normal);
+  color:var(--text-faint);
   letter-spacing:inherit;
 }
 body:not(.window-title-on) .titlebar-text {

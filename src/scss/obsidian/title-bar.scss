@@ -17,6 +17,9 @@
 .mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title-container  {
   max-width:calc(100% - (var(--traffic-x-space) * 2) - 30px);
 }
+.mod-macos.is-popout-window.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:first-of-type .view-header-title-container  {
+  max-width:calc(100% - (var(--traffic-x-space) * 2) - 30px);
+}
 .view-header {
   height:var(--header-height);
   align-items:center;

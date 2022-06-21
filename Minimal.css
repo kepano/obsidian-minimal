@@ -3763,6 +3763,9 @@ body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-end {
 .mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header-title-container {
   max-width: calc(100% - (var(--traffic-x-space) * 2) - 30px); }
 
+.mod-macos.is-popout-window.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:first-of-type .view-header-title-container {
+  max-width: calc(100% - (var(--traffic-x-space) * 2) - 30px); }
+
 .view-header {
   height: var(--header-height);
   align-items: center; }
@@ -3905,10 +3908,12 @@ body.hider-frameless .titlebar {
 .titlebar:hover .titlebar-button-container.mod-left {
   opacity: 1; }
 
+.is-focused .titlebar-text {
+  color: var(--text-normal); }
+
 .titlebar-text {
   font-weight: 600;
-  padding-top: 6px;
-  color: var(--text-normal);
+  color: var(--text-faint);
   letter-spacing: inherit; }
 
 body:not(.window-title-on) .titlebar-text {
@@ -9530,6 +9535,10 @@ body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mo
 
 /* Frameless + no ribbon */
 .mod-macos.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type {
+  --traffic-x-space:64px; }
+
+/* Frameless + popout */
+.mod-macos.is-popout-window.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:first-of-type {
   --traffic-x-space:64px; }
 
 /* Frameless */
