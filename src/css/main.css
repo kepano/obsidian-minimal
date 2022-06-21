@@ -2669,7 +2669,7 @@ body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
 
 /* Scroll bars */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 11px;
   background-color: transparent; }
 
 ::-webkit-scrollbar-track {
@@ -2679,7 +2679,7 @@ body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
   background-clip: padding-box;
   border: 3px solid transparent;
   background-color: var(--background-modifier-border);
-  border-width: 3px 4px 3px 3px;
+  border-width: 3px 3px 3px 3px;
   min-height: 45px; }
 
 .modal .vertical-tab-header::-webkit-scrollbar-thumb:hover,
@@ -8738,6 +8738,12 @@ body .sync-history-content-container textarea.sync-history-content:focus {
 .theme-dark .markdown-preview-view img.emoji {
   opacity: 1; }
 
+/* Breadcrumbs plugin 
+body .BC-trail {
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+}
+*/
 /* Buttons plugin */
 body.theme-dark .button-default,
 body.theme-light .button-default {
