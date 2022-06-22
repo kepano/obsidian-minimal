@@ -18,7 +18,7 @@
 
 body .leaflet-container {
   background-color:var(--background-secondary);
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
 }
 
 .map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) {
@@ -85,6 +85,7 @@ body .leaflet-bar a {
   background-color:var(--leaflet-buttons);
   color:var(--text-muted);
   border:none;
+  user-select: none;
 }
 body .leaflet-bar a.leaflet-disabled,
 body .leaflet-bar a.leaflet-disabled:hover {
@@ -127,7 +128,7 @@ body .block-language-leaflet .leaflet-distance-control {
 
 body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper > * {
   font-size:var(--font-adaptive-small);
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
 }
 
 body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper {

@@ -21,7 +21,7 @@ body:not(.minimal-unstyled-tags) {
     color:var(--tag-color);
     font-size:calc(var(--font-adaptive-normal) * 0.8);
     font-weight:var(--link-weight);
-    font-family:var(--font-ui);
+    font-family:var(--font-interface);
     padding:1px 8px;
     text-align:center;
     text-decoration:none;
@@ -40,7 +40,7 @@ body:not(.minimal-unstyled-tags) {
     border:var(--tag-border-width) solid var(--background-modifier-border);
     color:var(--tag-color);
     font-size:calc(var(--font-adaptive-normal) * 0.8);
-    font-family:var(--font-ui);
+    font-family:var(--font-interface);
     font-weight:var(--link-weight);
     text-align:center;
     text-decoration:none;

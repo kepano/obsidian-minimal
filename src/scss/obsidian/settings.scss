@@ -115,16 +115,22 @@ button.mod-cta,
   font-size:var(--font-settings-small);
   height:var(--input-height);
   cursor:var(--cursor);
-  margin-right:3px;
-  margin-left:3px;
+  margin-right:0px;
+  margin-left:0px;
 }
 
 /* Settings */
-.modal.mod-settings .vertical-tab-content-container {
-  padding-top:0;
-}
-.modal.mod-settings .vertical-tab-content-container .vertical-tab-content { 
-  padding-top:30px;
+.modal.mod-settings { 
+    .modal-content {
+      padding: 0;
+    }
+
+    .vertical-tab-content-container {
+      padding-top:0;
+      .vertical-tab-content { 
+        padding-top:30px;
+      }
+  }
 }
 
 .horizontal-tab-content,
@@ -138,6 +144,13 @@ button.mod-cta,
 .vertical-tab-content { 
   padding-bottom:100px;
 }
+
+.modal.mod-community-plugin {
+  .modal-content {
+    padding:0;
+  }
+}
+
 .plugin-list-plugins {
   overflow:visible;
 }

@@ -1,14 +1,12 @@
 @charset "UTF-8";
 /* Variables */
 body {
-  --font-text-override:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  --font-monospace-override:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
-  --font-interface-override:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  --text:var(--font-text-override);
-  --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  --font-monospace:var(--font-monospace-override);
-  --font-ui:var(--font-interface-override);
-  --minimal-version:"You are currently using Minimal 5.2.10\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano" ; }
+  --font-text-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
+  --font-editor-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
+  --font-monospace-theme:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
+  --font-interface-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
+  --font-editor:var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --minimal-version:"You are currently using Minimal 5.3.0\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano"; }
 
 :root {
   /* Cursor */
@@ -1205,16 +1203,15 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em; }
 
 body, input, button {
-  font-family: var(--font-ui); }
+  font-family: var(--font-interface); }
 
 .cm-s-obsidian span.cm-error {
   color: var(--red); }
 
 .markdown-preview-view,
 .popover,
-.vertical-tab-content-container,
 .workspace-leaf-content[data-type=markdown] {
-  font-family: var(--text); }
+  font-family: var(--font-text); }
 
 body, input, button,
 .markdown-preview-view,
@@ -1232,15 +1229,15 @@ body, input, button,
 .cm-s-obsidian,
 .cm-s-obsidian span.cm-formatting-task {
   line-height: var(--line-height);
-  font-family: var(--text-editor);
+  font-family: var(--font-editor);
   -webkit-font-smoothing: subpixel-antialiased; }
 
 /* Use reading font in live preview */
 .lp-reading-font .markdown-source-view.mod-cm6.is-live-preview .cm-scroller {
-  font-family: var(--text); }
+  font-family: var(--font-text); }
 
 .cm-s-obsidian span.cm-formatting-task {
-  font-family: var(--text-editor);
+  font-family: var(--font-editor);
   line-height: var(--line-height); }
 
 .cm-s-obsidian .cm-header,
@@ -1397,7 +1394,7 @@ h1,
 .theme-light pre.frontmatter[class*="language-yaml"] {
   padding: 0 0 0px 0;
   background: transparent;
-  font-family: var(--text);
+  font-family: var(--font-text);
   line-height: 1.2;
   border-radius: 0;
   border-bottom: 0px solid var(--background-modifier-border); }
@@ -1408,11 +1405,11 @@ h1,
 .theme-dark .frontmatter .token,
 .theme-light .frontmatter .token,
 .markdown-preview-section .frontmatter code {
-  font-family: var(--text);
+  font-family: var(--font-text);
   color: var(--text-faint) !important; }
 
 .markdown-source-view .cm-s-obsidian .cm-hmd-frontmatter {
-  font-family: var(--text-editor);
+  font-family: var(--font-editor);
   color: var(--text-muted); }
 
 .markdown-preview-section .frontmatter code {
@@ -2174,7 +2171,7 @@ body:not(.is-mobile) .modal {
 
 .modal-content {
   margin-top: 0px;
-  padding: 0;
+  padding: 2px;
   font-size: var(--font-adaptive-small); }
 
 .modal-content .u-center-text {
@@ -2183,7 +2180,8 @@ body:not(.is-mobile) .modal {
 
 .modal-button-container {
   margin-top: 10px;
-  margin-bottom: 2px; }
+  gap: 8px;
+  display: flex; }
   .modal-button-container button {
     margin-top: 10px; }
 
@@ -2193,6 +2191,8 @@ body:not(.is-mobile) .modal {
   min-width: 0; }
 .modal-container.mod-confirmation .modal-content {
   margin-top: 10px; }
+  .modal-container.mod-confirmation .modal-content .setting-item {
+    margin-top: 10px; }
 .modal-container.mod-confirmation .modal-button-container {
   display: flex; }
   .modal-container.mod-confirmation .modal-button-container > .mod-warning:nth-last-child(3) {
@@ -3011,15 +3011,16 @@ button.mod-cta,
   font-size: var(--font-settings-small);
   height: var(--input-height);
   cursor: var(--cursor);
-  margin-right: 3px;
-  margin-left: 3px; }
+  margin-right: 0px;
+  margin-left: 0px; }
 
 /* Settings */
+.modal.mod-settings .modal-content {
+  padding: 0; }
 .modal.mod-settings .vertical-tab-content-container {
   padding-top: 0; }
-
-.modal.mod-settings .vertical-tab-content-container .vertical-tab-content {
-  padding-top: 30px; }
+  .modal.mod-settings .vertical-tab-content-container .vertical-tab-content {
+    padding-top: 30px; }
 
 .horizontal-tab-content,
 .vertical-tab-content {
@@ -3031,6 +3032,9 @@ button.mod-cta,
 .vertical-tab-header,
 .vertical-tab-content {
   padding-bottom: 100px; }
+
+.modal.mod-community-plugin .modal-content {
+  padding: 0; }
 
 .plugin-list-plugins {
   overflow: visible; }
@@ -3621,7 +3625,7 @@ body:not(.minimal-unstyled-tags) a.tag {
   color: var(--tag-color);
   font-size: calc(var(--font-adaptive-normal) * 0.8);
   font-weight: var(--link-weight);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   padding: 1px 8px;
   text-align: center;
   text-decoration: none;
@@ -3638,7 +3642,7 @@ body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag {
   border: var(--tag-border-width) solid var(--background-modifier-border);
   color: var(--tag-color);
   font-size: calc(var(--font-adaptive-normal) * 0.8);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   font-weight: var(--link-weight);
   text-align: center;
   text-decoration: none;
@@ -4061,13 +4065,13 @@ audio::-webkit-media-controls-enclosure {
 
 audio::-webkit-media-controls-current-time-display {
   color: var(--text-normal);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   font-size: var(--font-adaptive-small);
   text-shadow: none; }
 
 audio::-webkit-media-controls-time-remaining-display {
   color: var(--text-muted);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   font-size: var(--font-adaptive-small);
   text-shadow: none; }
 
@@ -4087,7 +4091,7 @@ button {
 
 button,
 .setting-item-control button {
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   font-size: var(--font-inputs);
   font-weight: 400;
   border-radius: var(--radius-m); }
@@ -4141,7 +4145,7 @@ button:hover,
 /* Dropdowns */
 .dropdown,
 body .addChoiceBox #addChoiceTypeSelector {
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   font-size: var(--font-inputs); }
 
 .dropdown,
@@ -4151,7 +4155,7 @@ select {
   border-color: var(--background-modifier-border);
   transition: border-color 0.1s linear;
   height: var(--input-height);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   border-radius: var(--radius-m); }
 
 .dropdown {
@@ -4187,7 +4191,7 @@ input[type='search'],
 input[type='email'],
 input[type='password'],
 input[type='number'] {
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   font-size: var(--font-inputs); }
 
 textarea {
@@ -5925,7 +5929,7 @@ table:not(.calendar) tbody > tr > td,
   font-size: var(--table-font-size); }
 
 .row-hover th:first-child,
-.row-hover td:first-child,
+.row-hover th:first-child,
 .row-alt.markdown-source-view.mod-cm6 th:first-child,
 .row-alt.markdown-source-view.mod-cm6 td:first-child,
 .row-alt table:not(.calendar) th:first-child,
@@ -7095,7 +7099,7 @@ Needs some work
   display: none; }
 
 .is-mobile .follow-link-popover {
-  font-family: var(--font-ui); }
+  font-family: var(--font-interface); }
 
 /* Padding reset */
 body.is-mobile {
@@ -7337,7 +7341,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   font-size: var(--title-size); }
 
 .is-mobile .view-header-title:-webkit-autofill:focus {
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   color: red; }
 
 .is-mobile .view-header-icon {
@@ -7606,6 +7610,21 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
       .is-ios .mod-confirmation .modal .modal-content p {
         margin-block-start: 0;
         margin-block-end: 0; }
+    .is-ios .mod-confirmation .modal .setting-item {
+      margin-top: 15px;
+      border-top: 0;
+      flex-direction: column; }
+      .is-ios .mod-confirmation .modal .setting-item .setting-item-info {
+        padding-bottom: 5px; }
+      .is-ios .mod-confirmation .modal .setting-item .setting-item-control {
+        margin: 0;
+        flex-direction: column; }
+        .is-ios .mod-confirmation .modal .setting-item .setting-item-control button {
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+          background: transparent;
+          padding: 20px 0 10px;
+          border-top: 0; }
     .is-ios .mod-confirmation .modal button {
       background-color: var(--ios-bg-translucent);
       backdrop-filter: blur(2px);
@@ -7619,12 +7638,15 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
       color: var(--ios-blue);
       font-weight: 400;
       border-radius: 0;
-      font-size: 18px; }
+      font-size: 18px;
+      border-top: 1px solid var(--ios-border); }
     .is-ios .mod-confirmation .modal button:hover {
       background-color: transparent;
       border: none;
       box-shadow: none;
       border-top: 1px solid var(--ios-border); }
+    .is-ios .mod-confirmation .modal .modal-button-container {
+      gap: 0; }
     .is-ios .mod-confirmation .modal .modal-button-container > .mod-warning:nth-last-child(3),
     .is-ios .mod-confirmation .modal button.mod-warning {
       border-top: 1px solid var(--ios-border);
@@ -7640,6 +7662,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
       font-weight: 600;
       border-radius: var(--ios-radius);
       background-color: var(--ios-bg); }
+    .is-ios .mod-confirmation .modal .modal-button-container > button:nth-last-child(2),
     .is-ios .mod-confirmation .modal .modal-button-container > .mod-warning:nth-last-child(2) {
       border-bottom-left-radius: var(--ios-radius);
       border-bottom-right-radius: var(--ios-radius); }
@@ -9201,7 +9224,7 @@ body .dataview.result-group {
 body .dataview.inline-field-key,
 body .dataview.inline-field-value,
 body .dataview .inline-field-standalone-value {
-  font-family: var(--text);
+  font-family: var(--font-text);
   font-size: calc(var(--font-adaptive-normal) - 2px);
   background: transparent;
   color: var(--text-muted); }
@@ -9309,7 +9332,7 @@ body .excalidraw.theme--dark {
   --color-primary-chubb:var(--interactive-accent-hover);
   --color-primary-darker:var(--interactive-accent-hover);
   --color-primary-darkest:var(--interactive-accent-hover);
-  --ui-font:var(--font-ui);
+  --ui-font:var(--font-interface);
   --island-bg-color:var(--background-secondary);
   --button-gray-1:var(--background-tertiary);
   --button-gray-2:var(--background-tertiary);
@@ -9354,7 +9377,7 @@ body .excalidraw .Island {
 
 body .excalidraw .ToolIcon {
   cursor: var(--cursor);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface);
   background-color: transparent; }
 
 body .excalidraw label.ToolIcon {
@@ -9885,7 +9908,7 @@ body .cm-heading-marker {
 
 body .leaflet-container {
   background-color: var(--background-secondary);
-  font-family: var(--font-ui); }
+  font-family: var(--font-interface); }
 
 .map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) {
   margin-top: -16px; }
@@ -9945,7 +9968,8 @@ body .leaflet-bar,
 body .leaflet-bar a {
   background-color: var(--leaflet-buttons);
   color: var(--text-muted);
-  border: none; }
+  border: none;
+  user-select: none; }
 
 body .leaflet-bar a.leaflet-disabled,
 body .leaflet-bar a.leaflet-disabled:hover {
@@ -9987,7 +10011,7 @@ body .block-language-leaflet .leaflet-distance-control {
 
 body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper > * {
   font-size: var(--font-adaptive-small);
-  font-family: var(--font-ui); }
+  font-family: var(--font-interface); }
 
 body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content-wrapper {
   padding: 4px 10px !important; }
@@ -10025,7 +10049,7 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
 /* Metatable */
 .obsidian-metatable {
   --metatable-font-size:calc(var(--font-adaptive-normal) - 2px);
-  --metatable-font-family: var(--font-ui);
+  --metatable-font-family: var(--font-interface);
   --metatable-background:transparent;
   --metatable-foreground: var(--text-faint);
   --metatable-key-background:transparent;
@@ -10254,7 +10278,7 @@ body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-l
   :not(.mod-root) .workspace-leaf-content[data-type="reminder-list"] main .reminder-group .no-reminders {
     color: var(--text-faint); }
   :not(.mod-root) .workspace-leaf-content[data-type="reminder-list"] main .reminder-group .reminder-time {
-    font-family: var(--text);
+    font-family: var(--font-text);
     font-size: var(--font-adaptive-small); }
   :not(.mod-root) .workspace-leaf-content[data-type="reminder-list"] main .reminder-group .reminder-file {
     color: var(--text-faint); }
@@ -10582,7 +10606,7 @@ body.theme-light {
   --color-line:var(--ui1); }
 
 .tracker-axis-label {
-  font-family: var(--font-ui); }
+  font-family: var(--font-interface); }
 
 .tracker-axis {
   color: var(--ui2); }

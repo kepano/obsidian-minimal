@@ -15,13 +15,13 @@ audio::-webkit-media-controls-enclosure {
 }
 audio::-webkit-media-controls-current-time-display {
   color:var(--text-normal);
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
   font-size:var(--font-adaptive-small);
   text-shadow:none;
 }
 audio::-webkit-media-controls-time-remaining-display {
   color:var(--text-muted);
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
   font-size:var(--font-adaptive-small);
   text-shadow:none;
 }

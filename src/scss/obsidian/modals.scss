@@ -26,17 +26,18 @@ body:not(.is-mobile) .modal {
 }
 .modal-content {
   margin-top:0px;
-  padding:0;
+  padding:2px;
   font-size:var(--font-adaptive-small);
 }
-
 .modal-content .u-center-text {
   text-align:left;
   font-size:var(--font-adaptive-small);
 }
 .modal-button-container {
   margin-top:10px;
-  margin-bottom:2px;
+  gap: 8px;
+  display: flex;
+
   button {
     margin-top:10px
   }
@@ -52,6 +53,10 @@ body:not(.is-mobile) .modal {
 
   .modal-content {
     margin-top:10px;
+
+    .setting-item {
+      margin-top:10px;
+    }
   }
 
   .modal-button-container {

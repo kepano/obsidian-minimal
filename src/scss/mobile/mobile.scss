@@ -23,7 +23,7 @@
   display:none;
 }
 .is-mobile .follow-link-popover {
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
 }
 
 /* Padding reset */
@@ -308,7 +308,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   font-size:var(--title-size);
 }
 .is-mobile .view-header-title:-webkit-autofill:focus {
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
   color:red;
 }
 .is-mobile .view-header-icon {

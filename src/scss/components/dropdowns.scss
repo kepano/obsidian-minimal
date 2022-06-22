@@ -1,7 +1,7 @@
 /* Dropdowns */
 .dropdown,
 body .addChoiceBox #addChoiceTypeSelector {
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
   font-size:var(--font-inputs);
 }
 .dropdown,
@@ -11,7 +11,7 @@ select {
   border-color:var(--background-modifier-border);
   transition:border-color 0.1s linear;
   height:var(--input-height);
-  font-family:var(--font-ui);
+  font-family:var(--font-interface);
   border-radius:var(--radius-m);
 }
 .dropdown {
