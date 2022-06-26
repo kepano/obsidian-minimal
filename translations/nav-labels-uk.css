@@ -1,0 +1,41 @@
+/* Minimal Theme by @kepano
+Use this snippet to translate labeled navigation setting into other languages
+*/
+
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:after {
+  content:"";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-icon:after {
+  content:"Нотатка";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="file-explorer"] .workspace-tab-header-inner-icon:after {
+  content:"Файли";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon:after {
+  content:"Пошук";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="calendar"] .workspace-tab-header-inner-icon:after {
+  content:"Календар";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="localgraph"] .workspace-tab-header-inner-icon:after,
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="graph"] .workspace-tab-header-inner-icon:after {
+  content:"Граф";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="outline"] .workspace-tab-header-inner-icon:after {
+  content:"Зміст";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="starred"] .workspace-tab-header-inner-icon:after {
+  content:"Обране";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="dictionary-view"] .workspace-tab-header-inner-icon:after {
+  content:"Словник";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="tag"] .workspace-tab-header-inner-icon:after {
+  content:"Теги";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="backlink"] .workspace-tab-header-inner-icon:after {
+  content:"Зворотні посилання";
+}
+.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="outgoing-link"] .workspace-tab-header-inner-icon:after {
+  content:"Вихідні посилання";
+}
