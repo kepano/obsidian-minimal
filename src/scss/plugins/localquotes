@@ -1,0 +1,5 @@
+// Local Quotes plugin
+body .block-language-localquote blockquote p:first-child,
+body .block-language-localquote div p:first-child {
+  padding-right: 27px;
+}
