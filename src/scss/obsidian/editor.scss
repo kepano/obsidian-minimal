@@ -108,7 +108,8 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   right:8px;
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-task-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-  right:0px;
+  right:8px;
+  width:auto;
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
   right:-8px;
