@@ -1011,11 +1011,12 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   margin-left: 0 !important; }
 
 .is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
-  width: 30px !important;
   padding-left: 0px !important;
   margin-left: 0 !important;
   transform: none !important;
-  left: 0; }
+  right: 0;
+  left: auto;
+  padding: 4px; }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color: var(--background-primary);
