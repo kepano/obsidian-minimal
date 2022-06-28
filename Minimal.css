@@ -962,6 +962,9 @@ body.is-dragging {
 .cm-editor .cm-content {
   padding-top: 0.5em; }
 
+.markdown-source-view {
+  color: var(--text-normal); }
+
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top: 15px;
   padding-left: 0;
@@ -6843,19 +6846,18 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
   font-size: var(--font-adaptive-small);
   line-height: 1.25; }
-
 .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .markdown-preview-view {
   padding: 0 15px; }
-
 .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .markdown-embed .markdown-preview-view {
   padding: 0; }
-
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-section,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-sizer {
   max-width: 100%;
   padding: 0;
   width: auto; }
+.workspace > .workspace-split:not(.mod-root) .cm-editor {
+  --folding-offset: 0px; }
 
 .minimal-folding .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .allow-fold-headings.markdown-preview-view .markdown-preview-sizer,
 .minimal-folding .workspace > .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=markdown] .allow-fold-lists.markdown-preview-view .markdown-preview-sizer {
