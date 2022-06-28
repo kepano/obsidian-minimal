@@ -3015,6 +3015,9 @@ input.document-replace-input:focus {
   border-bottom: 1px solid var(--background-divider);
   padding-bottom: 10px; }
 
+.community-plugin-info p button {
+  margin-right: 8px; }
+
 .community-plugin-item {
   margin: 0;
   cursor: var(--cursor);
