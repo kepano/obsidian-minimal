@@ -5,12 +5,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thank you for taking the time to fill out this bug report!
   - type: dropdown
     id: default-present
     attributes:
       label: Is the bug present when using the default Obsidian theme?
-      description: Test using the default theme
+      description: Try using the default theme to check if the bug is still present
       options:
         - "Yes"
         - "No"
@@ -31,7 +31,7 @@ body:
     attributes:
       label: Minimal theme version
       description: What version of Minimal theme are you using? Can be found by going to `Appearance > Manage`. Make sure you have updated to the latest version of the theme.
-      placeholder: e.g. 5.2.10
+      placeholder: e.g. 5.3.0
     validations:
       required: true
   - type: textarea
