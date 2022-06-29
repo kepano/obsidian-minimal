@@ -10,7 +10,17 @@ body:
     id: default-present
     attributes:
       label: Is the bug present when using the default Obsidian theme?
-      description: Disable plugins and snippets that could be causing a conflict, and test using the default theme
+      description: Test using the default theme
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: default-present
+    attributes:
+      label: Is the bug present when snippets and plugins are disabled?
+      description: Try disabling plugins and snippets that could be causing a conflict
       options:
         - "Yes"
         - "No"
