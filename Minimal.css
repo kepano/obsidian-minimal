@@ -104,9 +104,10 @@ body {
   --border-width-alt:1px;
   /* Quotes and transclusions */
   --nested-padding:1.1em;
-  /* List padding */
+  /* Lists */
+  --folding-offset:16px;
+  --list-edit-offset:0.5em;
   --list-indent:2em;
-  /* Space between list items */
   --list-spacing:0.075em;
   /* Radiuses */
   --radius-s:2px;
@@ -2152,6 +2153,9 @@ ol {
 /* Live Preview */
 .cm-line:not(.HyperMD-codeblock) {
   tab-size: var(--list-indent); }
+
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line {
+  margin-left: var(--list-edit-offset) !important; }
 
 /* Space between list items */
 .markdown-source-view ol > li,
@@ -6584,10 +6588,6 @@ https://github.com/sponsors/kepano
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
     width: 100%; } }
 /* Custom line width with folding offset */
-:root {
-  --folding-offset:16px;
-  --list-edit-offset:0.5em; }
-
 @media (max-width: 400pt) {
   .is-mobile {
     --folding-offset:0px; } }

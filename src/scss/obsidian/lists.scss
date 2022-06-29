@@ -43,6 +43,10 @@ ol {
   tab-size:var(--list-indent);
 }
 
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line {
+  margin-left:var(--list-edit-offset) !important;
+}
+
 /* Space between list items */
 .markdown-source-view ol>li,
 .markdown-source-view ul>li,

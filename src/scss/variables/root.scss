@@ -79,10 +79,10 @@ body {
   /* Quotes and transclusions */
   --nested-padding:1.1em;
 
-  /* List padding */
+  /* Lists */
+  --folding-offset:16px;
+  --list-edit-offset:0.5em;
   --list-indent:2em;
-
-  /* Space between list items */
   --list-spacing:0.075em;
 
   /* Radiuses */

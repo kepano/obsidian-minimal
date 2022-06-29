@@ -1,9 +1,5 @@
 /* Custom line width with folding offset */
 
-:root {
-  --folding-offset:16px;
-  --list-edit-offset:0.5em;
-}
 @media (max-width:400pt) {
   .is-mobile {
     --folding-offset:0px;
