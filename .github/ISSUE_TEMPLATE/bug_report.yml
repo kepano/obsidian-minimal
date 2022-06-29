@@ -17,7 +17,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: default-present
+    id: plugin-present
     attributes:
       label: Is the bug present when snippets and plugins are disabled?
       description: Try disabling plugins and snippets that could be causing a conflict
