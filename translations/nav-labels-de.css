@@ -1,0 +1,37 @@
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header .workspace-tab-header-inner-icon:after {
+  content:"";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-icon:after {
+  content:"Notiz";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="file-explorer"] .workspace-tab-header-inner-icon:after {
+  content:"Notizen";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon:after {
+  content:"Suchen";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="calendar"] .workspace-tab-header-inner-icon:after {
+  content:"Kalender";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="localgraph"] .workspace-tab-header-inner-icon:after,
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="graph"] .workspace-tab-header-inner-icon:after {
+  content:"Graph";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type*="outline"] .workspace-tab-header-inner-icon:after {
+  content:"Gliederung";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="starred"] .workspace-tab-header-inner-icon:after {
+  content:"Mit Stern";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="dictionary-view"] .workspace-tab-header-inner-icon:after {
+  content:"Wörterbuch";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="tag"] .workspace-tab-header-inner-icon:after {
+  content:"Tags";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="backlink"] .workspace-tab-header-inner-icon:after {
+  content:"Rückverweise";
+}
+body.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="outgoing-link"] .workspace-tab-header-inner-icon:after {
+  content:"Links";
+}
