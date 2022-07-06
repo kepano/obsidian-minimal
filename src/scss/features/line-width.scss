@@ -56,8 +56,9 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
   margin:0 0 0 calc(50% - var(--max-width)/2) !important;
   padding-left:var(--folding-offset);
 }
-.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
-  overflow:scroll;
+
+.markdown-source-view.mod-cm6 .cm-content > .cm-embed-block[contenteditable=false] {
+  overflow-x:scroll;
 }
 
 /* Folding offset */

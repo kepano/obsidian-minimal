@@ -4,17 +4,20 @@
   width:11px;
   background-color:transparent;
 }
+::-webkit-scrollbar-corner {
+  background-color:transparent;
+}
 ::-webkit-scrollbar-track {
   background-color:transparent;
 }
 ::-webkit-scrollbar-thumb {
   background-clip:padding-box;
+  border-radius: 20px;
   border:3px solid transparent;
   background-color:var(--background-modifier-border);
   border-width:3px 3px 3px 3px;
   min-height:45px;
 }
-
 .modal .vertical-tab-header::-webkit-scrollbar-thumb:hover,
 .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:hover {
