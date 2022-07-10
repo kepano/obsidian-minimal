@@ -6,7 +6,7 @@ body {
   --font-monospace-theme:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
   --font-interface-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
   --font-editor:var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
-  --minimal-version:"You are currently using Minimal 5.3.0\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano"; }
+  --minimal-version:"You are currently using Minimal 5.3.1\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano"; }
 
 :root {
   /* Cursor */
