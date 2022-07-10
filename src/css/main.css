@@ -9162,8 +9162,8 @@ body .table-view-table > thead > tr > th,
 table.dataview ul.dataview-ul {
   list-style: none;
   padding-inline-start: 0;
-  margin-block-start: 0em;
-  margin-block-end: 0em; }
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important; }
 
 .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
 .markdown-preview-view .table-view-table > tbody > tr > td {
