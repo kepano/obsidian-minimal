@@ -58,7 +58,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 }
 
 .markdown-source-view.mod-cm6 .cm-content > .cm-embed-block[contenteditable=false] {
-  overflow-x:scroll;
+  overflow-x: auto;
 }
 
 /* Folding offset */

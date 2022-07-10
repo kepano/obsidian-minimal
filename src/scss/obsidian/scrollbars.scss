@@ -1,5 +1,5 @@
 /* Scroll bars */
-
+body:not(.hider-scrollbars).styled-scrollbars,
 body:not(.native-scrollbars) {
 
   ::-webkit-scrollbar {

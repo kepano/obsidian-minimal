@@ -2717,13 +2717,17 @@ body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
   padding-top: var(--top-left-padding-y); }
 
 /* Scroll bars */
+body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar,
 body:not(.native-scrollbars) ::-webkit-scrollbar {
   width: 11px;
   background-color: transparent; }
+body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar-corner,
 body:not(.native-scrollbars) ::-webkit-scrollbar-corner {
   background-color: transparent; }
+body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar-track,
 body:not(.native-scrollbars) ::-webkit-scrollbar-track {
   background-color: transparent; }
+body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar-thumb,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
   background-clip: padding-box;
   border-radius: 20px;
@@ -2731,10 +2735,16 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
   background-color: var(--background-modifier-border);
   border-width: 3px 3px 3px 3px;
   min-height: 45px; }
+body:not(.hider-scrollbars).styled-scrollbars .modal .vertical-tab-header::-webkit-scrollbar-thumb:hover,
+body:not(.hider-scrollbars).styled-scrollbars .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb:hover,
+body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar-thumb:hover,
 body:not(.native-scrollbars) .modal .vertical-tab-header::-webkit-scrollbar-thumb:hover,
 body:not(.native-scrollbars) .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb:hover,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
   background-color: var(--background-modifier-border-hover); }
+body:not(.hider-scrollbars).styled-scrollbars .modal .vertical-tab-header::-webkit-scrollbar-thumb:active,
+body:not(.hider-scrollbars).styled-scrollbars .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb:active,
+body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) .modal .vertical-tab-header::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
@@ -6367,7 +6377,7 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
   width: 100%;
   max-width: 100%;
-  overflow-x: scroll; }
+  overflow-x: auto; }
 
 .el-lang-dataviewjs .block-language-dataviewjs .contains-task-list,
 .el-lang-dataview .block-language-dataview .contains-task-list {
@@ -6636,7 +6646,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
   padding-left: var(--folding-offset); }
 
 .markdown-source-view.mod-cm6 .cm-content > .cm-embed-block[contenteditable=false] {
-  overflow-x: scroll; }
+  overflow-x: auto; }
 
 /* Folding offset */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
@@ -12540,6 +12550,11 @@ settings:
         id: window-title-on
         title: Display window title
         description: Display title in the window frame
+        type: class-toggle
+    -
+        id: styled-scrollbars
+        title: Styled scrollbars
+        description: Use styled scrollbars (replaces native scrollbars)
         type: class-toggle
     -
         id: cursor

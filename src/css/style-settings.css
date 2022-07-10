@@ -1271,6 +1271,11 @@ settings:
         description: Display title in the window frame
         type: class-toggle
     -
+        id: styled-scrollbars
+        title: Styled scrollbars
+        description: Use styled scrollbars (replaces native scrollbars)
+        type: class-toggle
+    -
         id: cursor
         title: Cursor style
         description: The cursor style for UI elements
