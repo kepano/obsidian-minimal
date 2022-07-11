@@ -24,16 +24,18 @@ https://github.com/sponsors/kepano
   padding-left:0;
   padding-top:0;
 }
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  width:var(--max-width);
-  margin-left:auto;
-  margin-right:auto;
-}
+
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   align-items:center;
   padding-left:0;
 }
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  width:var(--max-width);
+
+}
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  margin-left:auto;
+  margin-right:auto;
   max-width:var(--max-width);
   width:var(--line-width-adaptive);
 }

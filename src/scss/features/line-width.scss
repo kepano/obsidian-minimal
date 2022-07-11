@@ -213,7 +213,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
     .block-language-dataviewjs h4,
     .dataview .contains-task-list,
     .dataview.dataview-container .contains-task-list {
-      --folding-offset:16px;
+      --folding-offset:10px;
       width:calc(var(--line-width-adaptive) - var(--folding-offset));
       max-width:calc(100% - var(--folding-offset));
       transform:translateX(calc(var(--folding-offset)/2));
@@ -244,7 +244,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
     .block-language-dataview h4,
     .dataview.result-group,
     .dataview.dataview-error {
-      --folding-offset:16px;
+      --folding-offset:10px;
       width:calc(var(--line-width-adaptive) - var(--folding-offset));
       max-width:calc(var(--max-width) - var(--folding-offset));
       margin-left:auto;

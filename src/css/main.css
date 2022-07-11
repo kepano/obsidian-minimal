@@ -6342,16 +6342,16 @@ https://github.com/sponsors/kepano
   padding-left: 0;
   padding-top: 0; }
 
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  width: var(--max-width);
-  margin-left: auto;
-  margin-right: auto; }
-
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   align-items: center;
   padding-left: 0; }
 
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  width: var(--max-width); }
+
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+  margin-left: auto;
+  margin-right: auto;
   max-width: var(--max-width);
   width: var(--line-width-adaptive); }
 
@@ -6749,7 +6749,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
 .is-live-preview.is-readable-line-width .block-language-dataviewjs h4,
 .is-live-preview.is-readable-line-width .dataview .contains-task-list,
 .is-live-preview.is-readable-line-width .dataview.dataview-container .contains-task-list {
-  --folding-offset:16px;
+  --folding-offset:10px;
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: calc(100% - var(--folding-offset));
   transform: translateX(calc(var(--folding-offset)/2));
@@ -6776,7 +6776,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
 .markdown-preview-view.is-readable-line-width .block-language-dataview h4,
 .markdown-preview-view.is-readable-line-width .dataview.result-group,
 .markdown-preview-view.is-readable-line-width .dataview.dataview-error {
-  --folding-offset:16px;
+  --folding-offset:10px;
   width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: calc(var(--max-width) - var(--folding-offset));
   margin-left: auto;
