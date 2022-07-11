@@ -1347,6 +1347,12 @@ h1,
   color: var(--h1-color);
   font-weight: var(--h1-weight);
   font-style: var(--h1-style); }
+  h1 a,
+  .empty-state-title a,
+  .markdown-rendered h1 a,
+  .markdown-preview-view h1 a,
+  .cm-s-obsidian .cm-header-1 a {
+    font-weight: var(--h1-weight); }
 
 .markdown-rendered h2,
 .markdown-preview-view h2,
@@ -1359,6 +1365,10 @@ h1,
   color: var(--h2-color);
   font-weight: var(--h2-weight);
   font-style: var(--h2-style); }
+  .markdown-rendered h2 a,
+  .markdown-preview-view h2 a,
+  .cm-s-obsidian .cm-header-2 a {
+    font-weight: var(--h2-weight); }
 
 .markdown-rendered h3,
 .markdown-preview-view h3,
@@ -1371,6 +1381,10 @@ h1,
   color: var(--h3-color);
   font-weight: var(--h3-weight);
   font-style: var(--h3-style); }
+  .markdown-rendered h3 a,
+  .markdown-preview-view h3 a,
+  .cm-s-obsidian .cm-header-3 a {
+    font-weight: var(--h3-weight); }
 
 .markdown-rendered h4,
 .markdown-preview-view h4,
@@ -1382,6 +1396,10 @@ h1,
   color: var(--h4-color);
   font-weight: var(--h4-weight);
   font-style: var(--h4-style); }
+  .markdown-rendered h4 a,
+  .markdown-preview-view h4 a,
+  .cm-s-obsidian .cm-header-4 a {
+    font-weight: var(--h4-weight); }
 
 .markdown-rendered h5,
 .markdown-preview-view h5,
@@ -1393,6 +1411,10 @@ h1,
   color: var(--h5-color);
   font-weight: var(--h5-weight);
   font-style: var(--h5-style); }
+  .markdown-rendered h5 a,
+  .markdown-preview-view h5 a,
+  .cm-s-obsidian .cm-header-5 a {
+    font-weight: var(--h5-weight); }
 
 .markdown-rendered h6,
 .markdown-preview-view h6,
@@ -1404,6 +1426,10 @@ h1,
   color: var(--h6-color);
   font-weight: var(--h6-weight);
   font-style: var(--h6-style); }
+  .markdown-rendered h6 a,
+  .markdown-preview-view h6 a,
+  .cm-s-obsidian .cm-header-6 a {
+    font-weight: var(--h6-weight); }
 
 /* Footnotes */
 /* Preview mode */

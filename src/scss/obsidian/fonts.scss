@@ -103,6 +103,9 @@ h1,
   color:var(--h1-color);
   font-weight:var(--h1-weight);
   font-style:var(--h1-style);
+  a {
+    font-weight:var(--h1-weight);
+  }
 }
 .markdown-rendered h2,
 .markdown-preview-view h2,
@@ -115,6 +118,9 @@ h1,
   color:var(--h2-color);
   font-weight:var(--h2-weight);
   font-style:var(--h2-style);
+  a {
+    font-weight:var(--h2-weight);
+  }
 }
 .markdown-rendered h3,
 .markdown-preview-view h3,
@@ -127,6 +133,9 @@ h1,
   color:var(--h3-color);
   font-weight:var(--h3-weight);
   font-style:var(--h3-style);
+  a {
+    font-weight:var(--h3-weight);
+  }
 }
 .markdown-rendered h4,
 .markdown-preview-view h4,
@@ -138,6 +147,9 @@ h1,
   color:var(--h4-color);
   font-weight:var(--h4-weight);
   font-style:var(--h4-style);
+  a {
+    font-weight:var(--h4-weight);
+  }
 }
 .markdown-rendered h5,
 .markdown-preview-view h5,
@@ -149,6 +161,9 @@ h1,
   color:var(--h5-color);
   font-weight:var(--h5-weight);
   font-style:var(--h5-style);
+  a {
+    font-weight:var(--h5-weight);
+  }
 }
 .markdown-rendered h6,
 .markdown-preview-view h6,
@@ -160,4 +175,7 @@ h1,
   color:var(--h6-color);
   font-weight:var(--h6-weight);
   font-style:var(--h6-style);
+  a {
+    font-weight:var(--h6-weight);
+  }
 }
