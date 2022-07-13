@@ -2,8 +2,16 @@
 .theme-dark audio {
   filter:none;
 }
-.theme-dark audio::-webkit-media-controls-panel {
-  filter:invert(1);
+.theme-dark {
+  audio::-webkit-media-controls-play-button,
+  audio::-internal-media-controls-overflow-button,
+  audio::-webkit-media-controls-timeline,
+  audio::-webkit-media-controls-volume-control-container,
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display,
+  audio::-internal-media-controls-overflow-button {
+    filter:invert(1);
+  }
 }
 audio {
   height:36px;
@@ -33,9 +41,3 @@ audio::-webkit-media-controls input[pseudo="-internal-media-controls-overflow-bu
   background-color:transparent;
 }
 
-.theme-dark {
-  audio::-webkit-media-controls-current-time-display,
-  audio::-webkit-media-controls-time-remaining-display {
-    filter:invert(1);
-  }
-}

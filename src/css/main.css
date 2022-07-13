@@ -4092,7 +4092,13 @@ body:not(.window-title-on) .titlebar-text {
 .theme-dark audio {
   filter: none; }
 
-.theme-dark audio::-webkit-media-controls-panel {
+.theme-dark audio::-webkit-media-controls-play-button,
+.theme-dark audio::-internal-media-controls-overflow-button,
+.theme-dark audio::-webkit-media-controls-timeline,
+.theme-dark audio::-webkit-media-controls-volume-control-container,
+.theme-dark audio::-webkit-media-controls-current-time-display,
+.theme-dark audio::-webkit-media-controls-time-remaining-display,
+.theme-dark audio::-internal-media-controls-overflow-button {
   filter: invert(1); }
 
 audio {
@@ -4120,10 +4126,6 @@ audio::-webkit-media-controls-panel {
 
 audio::-webkit-media-controls input[pseudo="-internal-media-controls-overflow-button" i]:enabled:hover::-internal-media-controls-button-hover-background {
   background-color: transparent; }
-
-.theme-dark audio::-webkit-media-controls-current-time-display,
-.theme-dark audio::-webkit-media-controls-time-remaining-display {
-  filter: invert(1); }
 
 /* Buttons */
 button {
