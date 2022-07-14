@@ -2747,6 +2747,9 @@ body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar,
 body:not(.native-scrollbars) ::-webkit-scrollbar {
   width: 11px;
   background-color: transparent; }
+body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar:horizontal,
+body:not(.native-scrollbars) ::-webkit-scrollbar:horizontal {
+  height: 11px; }
 body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar-corner,
 body:not(.native-scrollbars) ::-webkit-scrollbar-corner {
   background-color: transparent; }

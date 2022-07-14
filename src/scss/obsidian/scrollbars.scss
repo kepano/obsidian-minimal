@@ -6,6 +6,9 @@ body:not(.native-scrollbars) {
     width:11px;
     background-color:transparent;
   }
+  ::-webkit-scrollbar:horizontal{
+    height:11px;
+  }
   ::-webkit-scrollbar-corner {
     background-color:transparent;
   }
