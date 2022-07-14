@@ -25,6 +25,7 @@
 .is-ios {
   --text-error:#ff453a;
 
+  /*
   .mod-confirmation .modal {
     width:400px;
     max-width:95vw;
@@ -121,7 +122,7 @@
     .modal-button-container>button:last-child:hover {
       background-color:var(--ios-bg-translucent);
     }
-  }
+  } */
 
   .search-input-container input,
   .workspace-leaf-content[data-type='search'] .search-input-container input,

@@ -7626,89 +7626,105 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   --ios-border:rgba(255,255,255,0.15); }
 
 .is-ios {
-  --text-error:#ff453a; }
-  .is-ios .mod-confirmation .modal {
-    width: 400px;
-    max-width: 95vw;
-    overflow: visible;
-    background-color: rgba(0, 0, 0, 0.07);
-    padding: 0;
-    border-radius: var(--ios-radius);
-    box-shadow: var(--ios-shadow); }
-    .is-ios .mod-confirmation .modal .modal-title {
-      text-align: center;
-      display: none; }
-    .is-ios .mod-confirmation .modal .modal-content {
-      border-radius: var(--ios-radius) var(--ios-radius) 0 0;
-      background-color: var(--ios-bg-translucent);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-      font-size: 13px;
-      margin: 0;
-      text-align: center;
-      color: var(--ios-muted);
-      padding: 15px; }
-      .is-ios .mod-confirmation .modal .modal-content p {
-        margin-block-start: 0;
-        margin-block-end: 0; }
-    .is-ios .mod-confirmation .modal .setting-item {
+  --text-error:#ff453a;
+  /*
+  .mod-confirmation .modal {
+    width:400px;
+    max-width:95vw;
+    overflow:visible;
+    background-color:rgba(0,0,0,0.07);
+    padding:0;
+    border-radius:var(--ios-radius);
+    box-shadow:var(--ios-shadow);
+    .modal-title {
+      text-align:center;
+      display:none;
+    }
+    .modal-content {
+      border-radius:var(--ios-radius) var(--ios-radius) 0 0;
+      background-color:var(--ios-bg-translucent);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+      font-size:13px;
+      margin:0;
+      text-align:center;
+      color:var(--ios-muted);
+      padding:15px;
+      p {
+        margin-block-start:0;
+        margin-block-end:0;
+      }
+    }
+    .setting-item {
       margin-top: 15px;
       border-top: 0;
-      flex-direction: column; }
-      .is-ios .mod-confirmation .modal .setting-item .setting-item-info {
-        padding-bottom: 5px; }
-      .is-ios .mod-confirmation .modal .setting-item .setting-item-control {
-        margin: 0;
-        flex-direction: column; }
-        .is-ios .mod-confirmation .modal .setting-item .setting-item-control button {
+      flex-direction: column;
+      .setting-item-info {
+        padding-bottom:5px;
+      }
+      .setting-item-control {
+        margin:0;
+        flex-direction: column;
+        button {
           backdrop-filter: none;
           -webkit-backdrop-filter: none;
           background: transparent;
           padding: 20px 0 10px;
-          border-top: 0; }
-    .is-ios .mod-confirmation .modal button {
-      background-color: var(--ios-bg-translucent);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-      margin: 0;
-      border: none;
-      height: auto;
-      padding: 28px 0;
-      line-height: 0;
-      box-shadow: none;
-      color: var(--ios-blue);
-      font-weight: 400;
-      border-radius: 0;
-      font-size: 18px;
-      border-top: 1px solid var(--ios-border); }
-    .is-ios .mod-confirmation .modal button:hover {
-      background-color: transparent;
-      border: none;
-      box-shadow: none;
-      border-top: 1px solid var(--ios-border); }
-    .is-ios .mod-confirmation .modal .modal-button-container {
-      gap: 0; }
-    .is-ios .mod-confirmation .modal .modal-button-container > .mod-warning:nth-last-child(3),
-    .is-ios .mod-confirmation .modal button.mod-warning {
-      border-top: 1px solid var(--ios-border);
-      background-color: var(--ios-bg-translucent);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-      color: var(--ios-red);
-      font-weight: 400;
-      text-decoration: none; }
-    .is-ios .mod-confirmation .modal .modal-button-container > button:last-child {
-      border-top: none;
-      margin-top: 10px;
-      font-weight: 600;
-      border-radius: var(--ios-radius);
-      background-color: var(--ios-bg); }
-    .is-ios .mod-confirmation .modal .modal-button-container > button:nth-last-child(2),
-    .is-ios .mod-confirmation .modal .modal-button-container > .mod-warning:nth-last-child(2) {
-      border-bottom-left-radius: var(--ios-radius);
-      border-bottom-right-radius: var(--ios-radius); }
-    .is-ios .mod-confirmation .modal .modal-button-container > button:last-child:hover {
-      background-color: var(--ios-bg-translucent); }
+          border-top: 0;
+        }
+      }
+    }
+    button {
+      background-color:var(--ios-bg-translucent);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+      margin:0;
+      border:none;
+      height:auto;
+      padding:28px 0;
+      line-height:0;
+      box-shadow:none;
+      color:var(--ios-blue);
+      font-weight:400;
+      border-radius:0;
+      font-size:18px;
+      border-top:1px solid var(--ios-border);
+    }
+    button:hover {
+      background-color:transparent;
+      border:none;
+      box-shadow:none;
+      border-top:1px solid var(--ios-border);
+    }
+    .modal-button-container {
+      gap:0;
+    }
+    .modal-button-container>.mod-warning:nth-last-child(3),
+    button.mod-warning {
+      border-top:1px solid var(--ios-border);
+      background-color:var(--ios-bg-translucent);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+      color:var(--ios-red);
+      font-weight:400;
+      text-decoration:none;
+    }
+    .modal-button-container>button:last-child {
+      border-top:none;
+      margin-top:10px;
+      font-weight:600;
+      border-radius:var(--ios-radius);
+      background-color:var(--ios-bg);
+    }
+    .modal-button-container>button:nth-last-child(2),
+    .modal-button-container>.mod-warning:nth-last-child(2) {
+      border-bottom-left-radius:var(--ios-radius);
+      border-bottom-right-radius:var(--ios-radius);
+    }
+    .modal-button-container>button:last-child:hover {
+      background-color:var(--ios-bg-translucent);
+    }
+  } */ }
   .is-ios .search-input-container input,
   .is-ios .workspace-leaf-content[data-type='search'] .search-input-container input,
   .is-ios .document-search-container input[type='text'] {
