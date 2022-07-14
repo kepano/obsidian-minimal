@@ -42,7 +42,9 @@ body .sync-history-content-container textarea.sync-history-content:focus {
 }
 
 /* Sync history */
-
+.modal.mod-sync-history .modal-content {
+  padding:0;
+}
 .sync-history-content-empty {
   padding:5px 20px;
   color:var(--text-muted);
