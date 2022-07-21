@@ -1116,6 +1116,12 @@ settings:
         min: 100
         max: 900
         step: 100
+    - 
+        id: spacing-p
+        title: Paragraph spacing
+        description: Space between paragraphs in reading mode
+        type: variable-text
+        default: 0.75em
     -
         id: titlebar
         title: Title bar

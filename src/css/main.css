@@ -84,7 +84,9 @@ body {
   --tag-border-width:1px;
   --top-left-padding-y:0px;
   /* Image opacity in dark mode */
-  --image-muted:0.7; }
+  --image-muted:0.7;
+  /* Spacing */
+  --spacing-p: 0.75em; }
 
 .mod-macos {
   --top-left-padding-y:24px; }
@@ -2563,6 +2565,26 @@ div.menu-item:hover .menu-item-icon svg path {
       font-size: var(--font-settings-title); } }
 
 /* Preview mode  */
+.markdown-preview-view p,
+.markdown-preview-view ol,
+.markdown-preview-view ul {
+  margin-block-start: var(--spacing-p);
+  margin-block-end: var(--spacing-p); }
+.markdown-preview-view ul ol,
+.markdown-preview-view ol ol,
+.markdown-preview-view ol ul,
+.markdown-preview-view ul ul {
+  margin-block-start: 0em;
+  margin-block-end: 0em; }
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  margin-block-start: 1em;
+  margin-block-end: var(--spacing-p); }
+
 .markdown-preview-view hr {
   height: 1px;
   border-width: 2px 0 0 0; }
@@ -9172,7 +9194,7 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .el-p + .el-table,
 .el-lang-dataviewjs + .el-p,
 .el-lang-dataview + .el-p {
-  margin-top: 0.5rem; }
+  margin-top: var(--spacing-p); }
 
 .el-div + .el-h1,
 .el-pre + .el-h1,
@@ -9183,28 +9205,6 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .el-p:not(.el-embed-image) + .el-embed-image,
 .el-embed-image + .el-p:not(.el-embed-image) {
   margin-top: 1rem; }
-
-.contextual-typography .markdown-preview-view p,
-.contextual-typography .markdown-preview-view ol,
-.contextual-typography .markdown-preview-view ul {
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em; }
-
-.contextual-typography .markdown-preview-view ul ol,
-.contextual-typography .markdown-preview-view ol ol,
-.contextual-typography .markdown-preview-view ol ul,
-.contextual-typography .markdown-preview-view ul ul {
-  margin-block-start: 0em;
-  margin-block-end: 0em; }
-
-.contextual-typography .markdown-preview-view h1,
-.contextual-typography .markdown-preview-view h2,
-.contextual-typography .markdown-preview-view h3,
-.contextual-typography .markdown-preview-view h4,
-.contextual-typography .markdown-preview-view h5,
-.contextual-typography .markdown-preview-view h6 {
-  margin-block-start: 1em;
-  margin-block-end: 0.5em; }
 
 /* Dataview plugin */
 /*body .table-view-table > thead > tr > th,
