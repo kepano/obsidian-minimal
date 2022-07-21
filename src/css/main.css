@@ -2565,7 +2565,8 @@ div.menu-item:hover .menu-item-icon svg path {
       font-size: var(--font-settings-title); } }
 
 /* Preview mode  */
-.markdown-preview-view p,
+.markdown-preview-view blockquote
+p,
 .markdown-preview-view ol,
 .markdown-preview-view ul {
   margin-block-start: var(--spacing-p);
