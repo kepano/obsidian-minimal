@@ -1,0 +1,12 @@
+/* Commander plugin */
+
+// Adjusting "Save" button
+.cmdr-name-input-wrapper button.mod-cta {
+  margin: 5px 15px 0 0;
+}
+
+// Adjusting "toggle" and change its cursor to "pointer"
+.cmdr-accordion-chevron.clickable-icon {
+  margin-top: -2px;
+  cursor: pointer;
+}
