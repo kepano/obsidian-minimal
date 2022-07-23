@@ -85,8 +85,8 @@ body.plugin-sliding-panes {
 
 }
 
-body.is-frameless.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title,
-body.is-frameless.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
+body:not(.plugin-sliding-panes-header-alt).plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title,
+body:not(.plugin-sliding-panes-header-alt).plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
   padding-top: 5px;
 }
 
