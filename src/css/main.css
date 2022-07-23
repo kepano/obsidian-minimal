@@ -10396,52 +10396,57 @@ body.plugin-sliding-panes-rotate-header {
   body.plugin-sliding-panes-rotate-header .view-header-title:before {
     display: none; }
 
-body:not(.is-popout-window).plugin-sliding-panes .workspace-split.mod-root {
+body.plugin-sliding-panes .workspace-split.mod-root {
   background-color: var(--background-primary); }
-body:not(.is-popout-window).plugin-sliding-panes .mod-horizontal .workspace-leaf {
+body.plugin-sliding-panes .mod-horizontal .workspace-leaf {
   box-shadow: none !important; }
-body:not(.is-popout-window).plugin-sliding-panes:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
+body.plugin-sliding-panes:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
   transition: padding 0.1s ease; }
-body:not(.is-popout-window).plugin-sliding-panes .view-header-title:before {
+body.plugin-sliding-panes .view-header-title:before {
   background: none; }
-body:not(.is-popout-window).plugin-sliding-panes .view-header {
+body.plugin-sliding-panes .view-header {
   background: none; }
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
   border: none; }
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
   border: none;
   text-orientation: sideways; }
-  body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
+  body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
     padding: 4px 1px;
     margin: 5px 0 0 0;
     left: 0;
     width: 26px; }
-  body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
+  body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
     padding-bottom: 33px;
     margin-left: 0;
     height: auto; }
-  body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-action {
+  body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-action {
     margin: 3px 0;
     padding: 4px 1px;
     width: 26px; }
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
   background: none !important; }
 .workspace > .mod-root .view-header-title-container
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header.plugin-sliding-panes-header-alt .workspace > .mod-root .view-header-title {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header.plugin-sliding-panes-header-alt .workspace > .mod-root .view-header-title {
   margin-top: 0; }
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header-title-container {
   margin-left: 0;
   padding-top: 0; }
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .view-header-title-container {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .view-header-title-container {
   position: static; }
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div {
   margin-left: 0;
+  margin-right: 0;
   bottom: 0; }
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .view-header-icon {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header.show-grabber .view-header-icon {
   opacity: var(--icon-muted); }
-body:not(.is-popout-window).plugin-sliding-panes.plugin-sliding-panes-rotate-header .view-header-icon:hover {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .view-header-icon:hover {
   opacity: 1; }
+
+body.is-frameless.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title,
+body.is-frameless.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
+  padding-top: 5px; }
 
 body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
