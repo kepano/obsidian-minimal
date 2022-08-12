@@ -6,7 +6,7 @@
 .nav-file-title-content.is-being-renamed {
     text-overflow:unset;
     white-space:normal;
-    line-height:1.35;
+    line-height:var(--line-height-tight);
 }
 
 .full-file-names .nav-file-title {

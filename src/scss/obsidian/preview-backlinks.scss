@@ -1,19 +1,5 @@
 /* Backlinks in Preview */
 
-.mod-root .workspace-leaf-content[data-type='markdown']  .nav-header {
-  border-top:1px solid var(--background-modifier-border);
-  margin-top:3em;
-  position:relative;
-}
-.mod-root .workspace-leaf-content[data-type='markdown'] .nav-buttons-container,
-.mod-root .workspace-leaf-content[data-type='markdown'].backlink-pane,
-.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane .search-result-container,
-.mod-root .workspace-leaf-content[data-type='markdown'] .search-input-container,
-.mod-root .workspace-leaf-content[data-type='markdown'] .tree-item,
-.mod-root .workspace-leaf-content[data-type='markdown'] .search-empty-state {
-  padding-left:0;
-  margin-left:0;
-}
 .is-mobile .workspace-leaf-content:not([data-type='search']) .workspace-leaf-content[data-type='markdown'] .nav-buttons-container {
   border-bottom:none;
   padding-top:5px;
@@ -43,16 +29,6 @@
   font-weight:500;
   letter-spacing:unset;
 }
-.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane > .tree-item-self.is-collapsed {
-  color:var(--text-faint);
-}
-.mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane > .tree-item-self.is-collapsed:hover {
-  color:var(--text-muted);
-}
 .mod-root .workspace-leaf-content[data-type='markdown'] .backlink-pane .search-result-file-title {
   font-size:calc(var(--font-adaptive-normal) - 2px);
-}
-
-.mod-root .workspace-leaf-content[data-type=markdown] .markdown-source-view .embedded-backlinks .nav-header {
-  margin-top: 0;
 }

@@ -8,7 +8,7 @@ body {
   --minimal-version:"You are currently using Minimal 5.3.2\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano";
 }
 
-:root {
+body {
 
   /* Cursor */
   --cursor:default;
@@ -32,12 +32,12 @@ body {
   --title-weight:600;
 
   /* Headings */
-  --h1:1.125em;
-  --h2:1.05em;
-  --h3:1em;
-  --h4:0.90em;
-  --h5:0.85em;
-  --h6:0.85em;
+  --h1-size:1.125em;
+  --h2-size:1.05em;
+  --h3-size:1em;
+  --h4-size:0.90em;
+  --h5-size:0.85em;
+  --h6-size:0.85em;
 
   --h1-weight:600;
   --h2-weight:600;
@@ -85,11 +85,6 @@ body {
   --list-indent:2em;
   --list-spacing:0.075em;
 
-  /* Radiuses */
-  --radius-s:2px;
-  --radius-m:5px;
-  --radius-l:12px;
-  --radius-xl:16px;
 
   --input-height:32px;
   --header-height:40px;

@@ -9,16 +9,9 @@
 .markdown-preview-view progress {
   -webkit-writing-mode:horizontal-tb;
   writing-mode:horizontal-tb;
-  appearance:none;
-  box-sizing:border-box;
-  display:inline-block;
-  height:5px;
   margin-bottom:4px;
   width:220px;
   max-width:100%;
-  overflow:hidden;
-  border-radius:0px;
-  border:0;
   vertical-align:-0.2rem;
 
   &[value]::-webkit-progress-bar {

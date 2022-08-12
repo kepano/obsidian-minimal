@@ -1,48 +1,5 @@
 /* Modals */
 
-.progress-bar-message {
-  color:var(--text-faint);
-}
-.modal {
-  box-shadow:var(--shadow-l);
-  border:none;
-  background:var(--background-primary);
-  border-radius:var(--radius-l);
-  overflow:hidden;
-  padding:20px;
-}
-body:not(.is-mobile) .modal {
-  border:1px solid var(--modal-border);
-}
-.modal.mod-settings .vertical-tab-content-container {
-  border-left:1px solid var(--background-divider);
-  padding-bottom:0;
-  padding-right:0;
-}
-.modal-title {
-  text-align:left;
-  font-size:var(--h2);
-  line-height:1.4;
-}
-.modal-content {
-  margin-top:0px;
-  padding:2px;
-  font-size:var(--font-adaptive-small);
-}
-.modal-content .u-center-text {
-  text-align:left;
-  font-size:var(--font-adaptive-small);
-}
-.modal-button-container {
-  margin-top:10px;
-  gap: 8px;
-  display: flex;
-
-  button {
-    margin-top:10px
-  }
-}
-
 /* Confirm delete */
 .modal-container.mod-confirmation {
 
@@ -85,34 +42,6 @@ body:not(.is-mobile) .modal {
 }
 
 
-/* Close buttons */
-
-.document-search-close-button,
-.modal-close-button {
-  cursor:var(--cursor);
-  line-height:20px;
-  text-align:center;
-  height:24px;
-  width:24px;
-  font-size:24px;
-  color:var(--text-faint);
-  border-radius:var(--radius-m);
-}
-.modal-close-button {
-  top:7px;
-  right:7px;
-  padding:0;
-}
-body:not(.is-mobile) .document-search-close-button:hover,
-.modal-close-button:hover {
-  color:var(--text-normal);
-  background:var(--background-tertiary);
-}
-.document-search-close-button:before,
-.modal-close-button:before {
-  font-family:Inter,sans-serif;
-  font-weight:200;
-}
 
 /* Mobile modals */
 

@@ -301,7 +301,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h1
+        id: h1-size
         title: H1 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -369,7 +369,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h2
+        id: h2-size
         title: H2 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -437,7 +437,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h3
+        id: h3-size
         title: H3 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -505,7 +505,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h4
+        id: h4-size
         title: H4 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -573,7 +573,7 @@ settings:
         type: variable-text
         default: ''
     -  
-        id: h5
+        id: h5-size
         title: H5 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -641,7 +641,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h6
+        id: h6-size
         title: H6 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -1145,12 +1145,6 @@ settings:
             -
                 label: Center
                 value: title-align-center
-    -
-        id: show-grabber
-        title: Always show grabber icon
-        description: Make the dragging handle always visible in the top left corner of a pane
-        type: class-toggle
-        default: false
     - 
         id: header-height
         title: Title bar height
