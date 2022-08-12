@@ -1,0 +1,12 @@
+.mod-right-split {
+  --background-secondary: var(--background-primary);
+  .workspace-tab-header-container {
+    --tab-background: var(--background-primary);
+  }
+}
+
+.mod-left-split {
+  .mod-top .workspace-tab-header-container {
+    --tab-background: var(--background-secondary);
+  }
+}
