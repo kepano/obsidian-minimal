@@ -2,18 +2,6 @@
 
 /* Alignment */
 
-/* Left side title bar icon */
-body:not(.minimal-icons-off) div.view-header-icon svg {
--webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M10 6h4v4h-4zm8 0h4v4h-4zm-8 8h4v4h-4zm8 0h4v4h-4zm-8 8h4v4h-4zm8 0h4v4h-4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E")
-}
-.view-header-icon {
-  margin-left:var(--traffic-x-space);
-  opacity:0;
-  top:0;
-  left:4px;
-  z-index:20;
-}
-
 body:not(.is-mobile) .view-actions .view-action:last-child  {
   margin-left:-1px;
 }

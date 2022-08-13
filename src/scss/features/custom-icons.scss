@@ -6,22 +6,6 @@ Thank you to Matthew Meyers and Chetachi Ezikeuzor */
 	width:20px;
 }
 
-body:not(.minimal-icons-off) .view-action svg,
-body:not(.minimal-icons-off) .workspace-tab-header-inner-icon svg,
-body:not(.minimal-icons-off) .nav-action-button svg,
-body:not(.minimal-icons-off) .graph-controls-button svg {
-	width:var(--icon-size);
-	height:var(--icon-size);
-}
-body:not(.minimal-icons-off) .menu-item-icon svg {
-	width:16px;
-	height:16px;
-}
-body:not(.minimal-icons-off) .workspace-ribbon-collapse-btn svg {
-	width:var(--icon-size);
-	height:var(--icon-size);
-}
-
 body:not(.minimal-icons-off) svg.calendar-day,
 body:not(.minimal-icons-off) svg.excalidraw-icon,ine,
 body:not(.minimal-icons-off) svg.globe,

@@ -1,10 +1,12 @@
 /* Colorful headings */
 
 body.colorful-headings {
-	--h1-color:var(--red);
-	--h2-color:var(--orange);
-	--h3-color:var(--yellow);
-	--h4-color:var(--green);
-	--h5-color:var(--blue);
-	--h6-color:var(--purple);
+	.view-content {
+		--h1-color:var(--red);
+		--h2-color:var(--orange);
+		--h3-color:var(--yellow);
+		--h4-color:var(--green);
+		--h5-color:var(--blue);
+		--h6-color:var(--purple);
+	}
 }

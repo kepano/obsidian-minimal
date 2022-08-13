@@ -36,12 +36,6 @@ body.plugin-sliding-panes {
 			border:none;
 			text-orientation:sideways;
 
-			.view-header-icon {
-				padding:4px 1px;
-				margin:5px 0 0 0;
-				left:0;
-				width:26px;
-			}
 			.view-actions {
 				padding-bottom:33px;
 				margin-left:0;
@@ -72,13 +66,6 @@ body.plugin-sliding-panes {
 			margin-left:0;
 			margin-right: 0;
 			bottom:0;
-		}
-
-		&.show-grabber .view-header-icon {
-			opacity:var(--icon-muted);
-		}
-		.view-header-icon:hover {
-			opacity:1;
 		}
 
 	}
