@@ -446,6 +446,7 @@ body .excalidraw {
   --background-table-rows: var(--bg2);
   --divider-color: var(--ui1);
   --icon-color-active: var(--tx1);
+  --icon-color-focus: var(--tx1);
   --icon-color-hover: var(--tx2);
   --icon-color: var(--tx2);
   --icon-hex: var(--mono0);
@@ -453,7 +454,11 @@ body .excalidraw {
   --interactive-accent: var(--ax3);
   --interactive-hover: var(--ui1);
   --modal-border-color: var(--ui2);
+  --nav-item-background-active: var(--bg3);
+  --nav-item-background-hover: var(--bg3);
+  --nav-item-color: var(--tx2);
   --nav-item-color-active: var(--tx1);
+  --nav-item-color-hover: var(--tx1);
   --prompt-border-color: var(--ui3);
   --quote-opening-modifier: var(--ui2);
   --ribbon-background: var(--bg2);
@@ -2006,31 +2011,23 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 .status-bar {
   transition: color 200ms linear;
   color: var(--text-faint);
-  font-size: var(--font-adaptive-smaller);
-  line-height: 1;
-  max-height: 24px; }
+  font-size: var(--font-adaptive-smaller); }
 
 .minimal-status-off .status-bar {
-  background-color: var(--background-secondary);
-  border-width: var(--border-width);
-  padding: 2px 6px 4px; }
+  --status-bar-position: static;
+  --status-bar-radius: 0;
+  --status-bar-border-widths: 1px 0 0 0;
+  --status-bar-background: var(--background-secondary);
+  --status-bar-border-color: var(--ui1);
+  gap: var(--size-4-1); }
 
 body:not(.minimal-status-off) .status-bar {
   background-color: var(--background-primary);
-  border-top-left-radius: 5px;
-  width: auto;
-  position: absolute;
-  left: auto;
-  border: 0;
-  bottom: 0;
-  right: 0;
-  max-height: 26px;
-  padding: 2px 8px 6px 3px; }
+  --status-bar-border-widths: 0; }
 
 .sync-status-icon.mod-working,
 .sync-status-icon.mod-success {
-  color: var(--text-faint);
-  cursor: var(--cursor); }
+  color: var(--text-faint); }
 
 .status-bar:hover .sync-status-icon.mod-working,
 .status-bar:hover .sync-status-icon.mod-success,
@@ -2044,12 +2041,9 @@ body:not(.minimal-status-off) .status-bar {
 
 .status-bar-item {
   cursor: var(--cursor) !important; }
-  .status-bar-item .status-bar-item-icon {
-    line-height: 0; }
   .status-bar-item.plugin-editor-status:hover, .status-bar-item.plugin-sync:hover, .status-bar-item.cMenu-statusbar-button:hover, .status-bar-item.mod-clickable:hover {
     text-align: center;
-    background-color: var(--background-modifier-hover) !important;
-    border-radius: 4px; }
+    background-color: var(--background-modifier-hover) !important; }
 
 /* Preview mode tables */
 .markdown-source-view.mod-cm6 table {
@@ -2137,9 +2131,6 @@ body:not(.minimal-unstyled-tags) a.tag {
   font-size: calc(var(--font-adaptive-normal) * 0.8);
   font-weight: var(--link-weight);
   font-family: var(--font-interface);
-  padding: 1px 8px;
-  text-align: center;
-  text-decoration: none;
   vertical-align: middle;
   display: inline-block;
   margin: 1px 0;
@@ -2212,6 +2203,16 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
 /* Window frame */
 body:not(.window-title-on) .titlebar-text {
   display: none; }
+
+/* Trying for a smoother animation */
+.is-hidden-frameless .workspace .sidebar-toggle-button.mod-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: var(--layer-popover);
+  background-color: var(--titlebar-background); }
+.is-hidden-frameless .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+  padding-right: 36px; }
 
 body.is-focused {
   --titlebar-background-focused: var(--bg2); }
@@ -3361,6 +3362,10 @@ https://github.com/sponsors/kepano
 */
 .labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
   padding-left: 0; }
+.labeled-nav.is-hidden-frameless .workspace-ribbon.mod-left {
+  padding-top: 0; }
+  .labeled-nav.is-hidden-frameless .workspace-ribbon.mod-left:before {
+    border: none; }
 
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-spacer {
   display: none; }
@@ -3375,22 +3380,18 @@ https://github.com/sponsors/kepano
   padding-top: var(--header-height);
   flex-grow: 1;
   flex-direction: column;
-  background-color: transparent;
   gap: 0; }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header {
   padding: 0;
   margin-bottom: 2px;
   border: none;
-  height: auto;
-  opacity: 0.75; }
+  height: auto; }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active, .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover {
-    opacity: 1;
-    background-color: transparent; }
+    opacity: 1; }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header .workspace-tab-header-inner {
-    padding: 0;
+    padding: var(--size-4-1) var(--size-4-2);
     box-shadow: none;
-    border: none;
-    border-radius: 6px; }
+    border: none; }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover .workspace-tab-header-inner-icon,
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
   color: var(--icon-color-active); }
@@ -8736,7 +8737,7 @@ settings:
     -
         id: window-title-on
         title: Display window title
-        description: Display title in the window frame
+        description: Display title in the custom window frame
         type: class-toggle
     -
         id: styled-scrollbars

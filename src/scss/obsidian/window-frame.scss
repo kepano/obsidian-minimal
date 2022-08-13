@@ -3,6 +3,23 @@ body:not(.window-title-on) .titlebar-text {
   display:none;
 }
 
+/* Trying for a smoother animation */
+.is-hidden-frameless {
+	.workspace {
+		.sidebar-toggle-button.mod-right {
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: var(--layer-popover);
+			background-color: var(--titlebar-background);
+		}
+		.workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+			padding-right: 36px;
+		}
+	}
+}
+
+
 body {
 	&.is-focused {
 		--titlebar-background-focused: var(--bg2);

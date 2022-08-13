@@ -1268,7 +1268,7 @@ settings:
     -
         id: window-title-on
         title: Display window title
-        description: Display title in the window frame
+        description: Display title in the custom window frame
         type: class-toggle
     -
         id: styled-scrollbars

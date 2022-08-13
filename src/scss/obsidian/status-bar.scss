@@ -1,60 +1,42 @@
 /* Status bar */
-
 .status-bar {
-  transition:color 200ms linear;
-  color:var(--text-faint);
-  font-size:var(--font-adaptive-smaller);
-  line-height:1;
-  max-height:24px;
+	transition:color 200ms linear;
+	color:var(--text-faint);
+	font-size:var(--font-adaptive-smaller);
 }
 .minimal-status-off .status-bar {
-  background-color:var(--background-secondary);
-  border-width:var(--border-width);
-  padding:2px 6px 4px;
+	--status-bar-position: static;
+	--status-bar-radius: 0;
+	--status-bar-border-widths: 1px 0 0 0;
+	--status-bar-background: var(--background-secondary);
+	--status-bar-border-color: var(--ui1);
+	gap: var(--size-4-1);
 }
 body:not(.minimal-status-off) .status-bar {
-  background-color:var(--background-primary);
-  border-top-left-radius:5px;
-  width:auto;
-  position:absolute;
-  left:auto;
-  border:0;
-  bottom:0;
-  right:0;
-  max-height:26px;
-  padding:2px 8px 6px 3px;
+	background-color:var(--background-primary);
+	--status-bar-border-widths: 0;
 }
-
 .sync-status-icon.mod-working,
 .sync-status-icon.mod-success {
-  color:var(--text-faint);
-  cursor:var(--cursor);
+	color:var(--text-faint);
 }
 .status-bar:hover .sync-status-icon.mod-working,
 .status-bar:hover .sync-status-icon.mod-success,
 .status-bar:hover {
-  color:var(--text-muted);
-  transition:color 200ms linear;
+	color:var(--text-muted);
+	transition:color 200ms linear;
 }
 .status-bar .plugin-sync:hover .sync-status-icon.mod-working,
 .status-bar .plugin-sync:hover .sync-status-icon.mod-success {
-  color:var(--text-normal);
+	color:var(--text-normal);
 }
-
 .status-bar-item {
-  cursor:var(--cursor) !important;
-
-  .status-bar-item-icon {
-    line-height:0;
-  }
-
-  &.plugin-editor-status:hover,
-  &.plugin-sync:hover,
-  &.cMenu-statusbar-button:hover,
-  &.mod-clickable:hover {
-    text-align:center;
-    background-color:var(--background-modifier-hover) !important;
-    border-radius:4px;
-  }
-
+	cursor:var(--cursor) !important;
+	&.plugin-editor-status:hover,
+	&.plugin-sync:hover,
+	&.cMenu-statusbar-button:hover,
+	&.mod-clickable:hover {
+		text-align:center;
+		background-color:var(--background-modifier-hover) !important;
+	}
 }

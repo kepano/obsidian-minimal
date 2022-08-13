@@ -51,6 +51,7 @@ body .excalidraw {
 	--divider-color:                     var(--ui1);
 
 	--icon-color-active:                 var(--tx1);
+	--icon-color-focus:                  var(--tx1);
 	--icon-color-hover:                  var(--tx2);
 	--icon-color:                        var(--tx2);
 	--icon-hex:                          var(--mono0);
@@ -60,7 +61,13 @@ body .excalidraw {
 	--interactive-hover:                 var(--ui1);
 
 	--modal-border-color:                var(--ui2);
+
+	--nav-item-background-active:        var(--bg3);
+	--nav-item-background-hover:         var(--bg3);
+	--nav-item-color:                    var(--tx2);
 	--nav-item-color-active:             var(--tx1);
+	--nav-item-color-hover:              var(--tx1);
+
 	--prompt-border-color:               var(--ui3);
 	--quote-opening-modifier:            var(--ui2);
 
