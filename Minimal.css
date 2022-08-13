@@ -3243,6 +3243,8 @@ https://github.com/sponsors/kepano
   margin-bottom: 2px;
   border: none;
   height: auto; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active {
+    background-color: transparent; }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active, .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover {
     opacity: 1; }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header .workspace-tab-header-inner {

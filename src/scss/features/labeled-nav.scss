@@ -68,6 +68,10 @@ https://github.com/sponsors/kepano
 		border:none;
 		height:auto;
 
+		&.is-active {
+			background-color: transparent;
+		}
+
 		&.is-active,
 		&:hover {
 			opacity:1;
