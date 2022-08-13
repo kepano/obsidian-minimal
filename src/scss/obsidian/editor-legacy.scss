@@ -9,47 +9,47 @@
 .theme-light .cm-string,
 .theme-light .cm-string-2,
 .theme-light .cm-link {
-  background-color:transparent;
+	background-color:transparent;
 }
 
 .markdown-source-view.mod-cm6,
 .markdown-source-view.mod-cm5,
 .markdown-source-view {
-  padding:0;
+	padding:0;
 }
 .cm-s-obsidian .CodeMirror-code {
-  padding-right:0;
+	padding-right:0;
 }
 .CodeMirror-lines {
-  padding-bottom:170px;
+	padding-bottom:170px;
 }
 .CodeMirror pre.CodeMirror-line,
 .CodeMirror pre.CodeMirror-line-like {
-  padding-left:0;
-  padding-right:0;
+	padding-left:0;
+	padding-right:0;
 }
 .cm-s-obsidian pre.HyperMD-list-line {
-  padding-top:0;
+	padding-top:0;
 }
 .workspace .markdown-preview-view {
-  padding:0;
+	padding:0;
 }
 .workspace .markdown-preview-view .markdown-embed {
-  margin:0;
+	margin:0;
 }
 .workspace .markdown-preview-view .markdown-embed-content {
-  max-height:none;
+	max-height:none;
 }
 .markdown-embed-title,
 .internal-embed .markdown-preview-section {
-  max-width:100%;
+	max-width:100%;
 }
 
 .CodeMirror-linenumber {
-  font-size:var(--font-adaptive-small) !important;
-  font-feature-settings:'tnum';
-  color:var(--text-faint);
-  padding-top:3px;
+	font-size:var(--font-adaptive-small) !important;
+	font-feature-settings:'tnum';
+	color:var(--text-faint);
+	padding-top:3px;
 }
 
 
@@ -59,19 +59,19 @@ span.cm-image-marker,
 .cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
 .cm-s-obsidian span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
 .cm-s-obsidian span.cm-formatting-link {
-  color:var(--text-faint);
+	color:var(--text-faint);
 }
 
 /* Editor Mode Footnotes */
 .cm-s-obsidian span.cm-footref {
-  font-size:var(--font-adaptive-normal);
+	font-size:var(--font-adaptive-normal);
 }
 .cm-s-obsidian pre.HyperMD-footnote {
-  font-size:var(--font-adaptive-small);
-  padding-left:20px;
+	font-size:var(--font-adaptive-small);
+	padding-left:20px;
 }
 
 /* Editor Mode Quotes */
 .cm-formatting-quote {
-  color:var(--text-faint) !important;
+	color:var(--text-faint) !important;
 }

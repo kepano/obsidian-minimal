@@ -1,113 +1,113 @@
 /* Sliding Panes aka Andy Mode plugin */
 
 body.plugin-sliding-panes-rotate-header {
-  --header-width:40px;
-  .view-header-title:before {
-    display:none;
-  }
+	--header-width:40px;
+	.view-header-title:before {
+		display:none;
+	}
 }
 
 body.plugin-sliding-panes {
 
-  .workspace-split.mod-root {
-    background-color:var(--background-primary);
-  }
-  .mod-horizontal .workspace-leaf {
-    box-shadow:none !important;
-  }
-  &:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
-    transition:padding 0.1s ease;
-  }
-  .view-header-title:before {
-    background:none;
-  }
-  .view-header {
-    background:none;
-  }
+	.workspace-split.mod-root {
+		background-color:var(--background-primary);
+	}
+	.mod-horizontal .workspace-leaf {
+		box-shadow:none !important;
+	}
+	&:not(.is-fullscreen) .workspace-split.is-collapsed ~ .workspace-split.mod-root .view-header {
+		transition:padding 0.1s ease;
+	}
+	.view-header-title:before {
+		background:none;
+	}
+	.view-header {
+		background:none;
+	}
 
 
-  &.plugin-sliding-panes-rotate-header {
+	&.plugin-sliding-panes-rotate-header {
 
-    .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
-      border:none;
-    }
+		.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+			border:none;
+		}
 
-    .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
-      border:none;
-      text-orientation:sideways;
+		.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+			border:none;
+			text-orientation:sideways;
 
-      .view-header-icon {
-        padding:4px 1px;
-        margin:5px 0 0 0;
-        left:0;
-        width:26px;
-      }
-      .view-actions {
-        padding-bottom:33px;
-        margin-left:0;
-        height:auto;
-      }
-      .view-action {
-        margin:3px 0;
-        padding:4px 1px;
-        width:26px;
-      }
-    }
-    .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
-    .app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
-      background:none !important;
-    }
-    .workspace > .mod-root .view-header-title-container
-    &.plugin-sliding-panes-header-alt .workspace > .mod-root .view-header-title {
-      margin-top:0;
-    }
-    .workspace > .mod-root .view-header-title-container {
-      margin-left:0;
-      padding-top:0;
-    }
-    .view-header-title-container {
-      position:static;
-    }
-    .app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div {
-      margin-left:0;
-      margin-right: 0;
-      bottom:0;
-    }
+			.view-header-icon {
+				padding:4px 1px;
+				margin:5px 0 0 0;
+				left:0;
+				width:26px;
+			}
+			.view-actions {
+				padding-bottom:33px;
+				margin-left:0;
+				height:auto;
+			}
+			.view-action {
+				margin:3px 0;
+				padding:4px 1px;
+				width:26px;
+			}
+		}
+		.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+		.app-container .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+			background:none !important;
+		}
+		.workspace > .mod-root .view-header-title-container
+		&.plugin-sliding-panes-header-alt .workspace > .mod-root .view-header-title {
+			margin-top:0;
+		}
+		.workspace > .mod-root .view-header-title-container {
+			margin-left:0;
+			padding-top:0;
+		}
+		.view-header-title-container {
+			position:static;
+		}
+		.app-container .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div {
+			margin-left:0;
+			margin-right: 0;
+			bottom:0;
+		}
 
-    &.show-grabber .view-header-icon {
-      opacity:var(--icon-muted);
-    }
-    .view-header-icon:hover {
-      opacity:1;
-    }
+		&.show-grabber .view-header-icon {
+			opacity:var(--icon-muted);
+		}
+		.view-header-icon:hover {
+			opacity:1;
+		}
 
-  }
+	}
 
 }
 
 body:not(.plugin-sliding-panes-header-alt).plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title,
 body:not(.plugin-sliding-panes-header-alt).plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
-  padding-top: 5px;
+	padding-top: 5px;
 }
 
 body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
-  box-shadow:0 0 0 1px var(--background-modifier-border),1px 0px 15px 0px var(--shadow-color)!important;
+	box-shadow:0 0 0 1px var(--background-modifier-border),1px 0px 15px 0px var(--shadow-color)!important;
 }
 
 body.is-mobile.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
-  height:30px;
+	height:30px;
 }
 
 /* Space for the hover ribbon in the bottom left */
 body.hider-ribbon.plugin-sliding-panes.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
-  padding-bottom:50px;
+	padding-bottom:50px;
 }
 body.plugin-sliding-panes.is-fullscreen .view-header-icon {
-  padding-top:8px;
+	padding-top:8px;
 }
 
 body.plugin-sliding-panes .mod-root .graph-controls {
-  top:20px;
-  left:30px;
+	top:20px;
+	left:30px;
 }

@@ -2,44 +2,44 @@
 
 body.theme-dark .button-default,
 body.theme-light .button-default {
-  border:none;
-  box-shadow:none;
-  height:var(--input-height);
-  background:var(--background-tertiary);
-  color:var(--text-normal);
-  font-size:revert;
-  font-weight:500;
-  transform:none;
-  transition:all 0.1s linear;
-  padding:0 20px;
+	border:none;
+	box-shadow:none;
+	height:var(--input-height);
+	background:var(--background-tertiary);
+	color:var(--text-normal);
+	font-size:revert;
+	font-weight:500;
+	transform:none;
+	transition:all 0.1s linear;
+	padding:0 20px;
 }
 body.theme-dark .button-default:hover,
 body.theme-light .button-default:hover {
-  border:none;
-  background:var(--background-modifier-border-hover);
-  box-shadow:none;
-  transform:none;
-  transition:all 0.1s linear;
+	border:none;
+	background:var(--background-modifier-border-hover);
+	box-shadow:none;
+	transform:none;
+	transition:all 0.1s linear;
 }
 body.theme-light .button-default:focus,
 body.theme-light .button-default:active,
 body.theme-dark .button-default:focus,
 body.theme-dark .button-default:active {
-  box-shadow:none;
+	box-shadow:none;
 }
 
 body .button-default.blue {
-  background-color:var(--blue) !important;
+	background-color:var(--blue) !important;
 }
 .button-default.red {
-  background-color:var(--red) !important; 
+	background-color:var(--red) !important; 
 }
 .button-default.green {
-  background-color:var(--green) !important;
+	background-color:var(--green) !important;
 }
 .button-default.yellow {
-  background-color:var(--yellow) !important;
+	background-color:var(--yellow) !important;
 }
 .button-default.purple {
-  background-color:var(--purple) !important;
+	background-color:var(--purple) !important;
 }

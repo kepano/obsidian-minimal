@@ -28,71 +28,58 @@
 .theme-light,
 .excalidraw.theme--dark,
 body .excalidraw {
-
-  --text-normal:                       var(--tx1);
-  --text-bold:                         var(--tx1);
-  --text-italic:                       var(--tx1);
-  --text-muted:                        var(--tx2);
-  --text-faint:                        var(--tx3);
-
-  --title-color:                       var(--tx1);
-  --title-color-inactive:              var(--tx2);
-
-  --text-code:                         var(--tx4);
-  --text-error:                        var(--red);
-  --text-blockquote:                   var(--tx2);
-
-  --text-accent:                       var(--ax1);
-  --text-accent-hover:                 var(--ax2);
-
-  --text-on-accent:                    white;
-
-  --text-selection:                    var(--hl1);
-  --text-highlight-bg:                 var(--hl2);
-
-  --background-primary:                var(--bg1);
+  --background-divider:                var(--ui1);
+  --background-modifier-accent:        var(--ax3);  
+  --background-modifier-border-focus:  var(--ui3);
+  --background-modifier-border-hover:  var(--ui2);
+  --background-modifier-border:        var(--ui1);
+  --background-modifier-form-field-highlighted: var(--bg1);
+  --background-modifier-form-field:    var(--bg1);
+  --background-modifier-success:       var(--green);
+  --background-modifier-hover:         var(--bg3);
   --background-primary-alt:            var(--bg2);
-
-  --background-secondary:              var(--bg2);
+  --background-primary:                var(--bg1);
   --background-secondary-alt:          var(--bg1);
-
+  --background-secondary:              var(--bg2);
+  --background-table-rows:             var(--bg2);
   --background-tertiary:               var(--bg3);
 
-  --background-table-rows:             var(--bg2);
+  --icon-color-active:                 var(--tx1);
+  --icon-color-hover:                  var(--tx2);
+  --icon-color:                        var(--tx2);
+  --icon-hex:                          var(--mono0);
 
-  --background-modifier-form-field:    var(--bg1);
-  --background-modifier-form-field-highlighted:
-                                       var(--bg1);
-
+  --interactive-accent-hover:          var(--ax3);
+  --interactive-accent:                var(--ax3);
   --interactive-hover:                 var(--ui1);
 
-  --interactive-accent:                var(--ax3);
-  --interactive-accent-hover:          var(--ax3);
-
-  --background-modifier-accent:        var(--ax3);  
-
-  --background-modifier-border:        var(--ui1);
-  --background-modifier-border-hover:  var(--ui2);
-  --background-modifier-border-focus:  var(--ui3);
-
-  --background-modifier-success:       var(--green);
-
-  --background-divider:                var(--ui1);
-
-  --scrollbar-bg:                      transparent;
-  --scrollbar-thumb-bg:                var(--ui1);
-  --scrollbar-active-thumb-bg:         var(--ui3);
-
+  --modal-border-color:                var(--ui3);
+  --nav-item-color-active:             var(--tx1);
+  --prompt-border-color:               var(--ui3);
   --quote-opening-modifier:            var(--ui2);
 
-  --prompt-border-color:               var(--ui3);
-  --modal-border-color:                var(--ui3);
+  --scrollbar-active-thumb-bg:         var(--ui3);
+  --scrollbar-bg:                      transparent;
+  --scrollbar-thumb-bg:                var(--ui1);
 
-  --icon-color:                        var(--tx2);
-  --icon-color-hover:                  var(--tx2);
-  --icon-color-active:                 var(--tx1);
+  --tab-text-color-focused-active:     var(--tx1);
 
-  --icon-hex:                          var(--mono0);
+  --text-accent-hover:                 var(--ax2);
+  --text-accent:                       var(--ax1);
+  --text-blockquote:                   var(--tx2);
+  --text-bold:                         var(--tx1);
+  --text-code:                         var(--tx4);
+  --text-error:                        var(--red);
+  --text-faint:                        var(--tx3);
+  --text-highlight-bg:                 var(--hl2);
+  --text-italic:                       var(--tx1);
+  --text-muted:                        var(--tx2);
+  --text-normal:                       var(--tx1);
+  --text-on-accent:                    white;
+  --text-selection:                    var(--hl1);
+
+  --title-color-inactive:              var(--tx2);
+  --title-color:                       var(--tx1);
 
   --tag-color:                         var(--tx2);
   --tag-bg:                            transparent;

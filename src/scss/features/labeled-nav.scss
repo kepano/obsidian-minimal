@@ -11,64 +11,64 @@ https://github.com/sponsors/kepano
 */
 
 .is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space {
-  .workspace-tab-header-container {
-    padding-left: 0;
-  }
+	.workspace-tab-header-container {
+		padding-left: 0;
+	}
 }
 
 .labeled-nav .mod-left-split .mod-top {
 
-  .workspace-tab-header-spacer {
-    display:none
-  }
-  .workspace-tab-header-inner-title {
-    display: inline-block;
-    font-weight: 500;
-    font-size: var(--font-small);
-  }
-  .workspace-tab-header-container {
-    height: auto;
-    width: 100%;
-  }
-  .workspace-tab-container-inner {
-    padding-top: var(--header-height);
-    flex-grow: 1;
-    flex-direction:column;
-    background-color:transparent;
-    gap: 0;
-  }
-  .workspace-tab-header {
-    padding:0;
-    margin-bottom:2px;
-    border:none;
-    height:auto;
-    opacity:0.75;
+	.workspace-tab-header-spacer {
+		display:none
+	}
+	.workspace-tab-header-inner-title {
+		display: inline-block;
+		font-weight: 500;
+		font-size: var(--font-small);
+	}
+	.workspace-tab-header-container {
+		height: auto;
+		width: 100%;
+	}
+	.workspace-tab-container-inner {
+		padding-top: var(--header-height);
+		flex-grow: 1;
+		flex-direction:column;
+		background-color:transparent;
+		gap: 0;
+	}
+	.workspace-tab-header {
+		padding:0;
+		margin-bottom:2px;
+		border:none;
+		height:auto;
+		opacity:0.75;
 
-    &.is-active,
-    &:hover {
-      opacity:1;
-      background-color:transparent;
-    }
+		&.is-active,
+		&:hover {
+			opacity:1;
+			background-color:transparent;
+		}
 
-    .workspace-tab-header-inner {
-      padding:0;
-      box-shadow:none;
-      border:none;
-      border-radius:6px;
-    }
-    .workspace-tab-header-inner-icon {
-      padding: 4px;
-    }
-  }
-  .workspace-tab-header .workspace-tab-header-inner-icon:hover {
-    background-color:var(--background-tertiary);
-  }
-  .workspace-tab-header:hover .workspace-tab-header-inner-icon,
-  .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-    color:var(--icon-color-active);
-  }
-  .workspace-tab-header-container {
-    border:none;
-    padding:0;
-  }
+		.workspace-tab-header-inner {
+			padding:0;
+			box-shadow:none;
+			border:none;
+			border-radius:6px;
+		}
+		.workspace-tab-header-inner-icon {
+			padding: 4px;
+		}
+	}
+	.workspace-tab-header .workspace-tab-header-inner-icon:hover {
+		background-color:var(--background-tertiary);
+	}
+	.workspace-tab-header:hover .workspace-tab-header-inner-icon,
+	.workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+		color:var(--icon-color-active);
+	}
+	.workspace-tab-header-container {
+		border:none;
+		padding:0;
+	}
 }

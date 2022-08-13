@@ -3,12 +3,12 @@
 body .markdown-preview-view th,
 body .table-view-table > thead > tr > th,
 body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
-  cursor:var(--cursor);
-  background-image:none;
+	cursor:var(--cursor);
+	background-image:none;
 }
 
 /* Live preview */
 .markdown-source-view.mod-cm6 th {
-  background-repeat:no-repeat;
-  background-position:right;
+	background-repeat:no-repeat;
+	background-position:right;
 }

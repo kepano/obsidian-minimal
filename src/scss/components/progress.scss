@@ -1,61 +1,61 @@
 /* Progress bars */
 .theme-light {
-  --progress-outline:rgba(0,0,0,0.05);
+	--progress-outline:rgba(0,0,0,0.05);
 }
 .theme-dark {
-  --progress-outline:rgba(255,255,255,0.04);
+	--progress-outline:rgba(255,255,255,0.04);
 }
 .markdown-source-view.is-live-preview progress,
 .markdown-preview-view progress {
-  -webkit-writing-mode:horizontal-tb;
-  writing-mode:horizontal-tb;
-  margin-bottom:4px;
-  width:220px;
-  max-width:100%;
-  vertical-align:-0.2rem;
+	-webkit-writing-mode:horizontal-tb;
+	writing-mode:horizontal-tb;
+	margin-bottom:4px;
+	width:220px;
+	max-width:100%;
+	vertical-align:-0.2rem;
 
-  &[value]::-webkit-progress-bar {
-    background-color:var(--background-tertiary);
-    box-shadow:inset 0px 0px 0px var(--border-width) var(--progress-outline);
-    border-radius:5px;
-    overflow:hidden;
-  }
-  &[value]::-webkit-progress-value {
-    background-color:var(--text-accent);
-    overflow:hidden;
-  }
+	&[value]::-webkit-progress-bar {
+		background-color:var(--background-tertiary);
+		box-shadow:inset 0px 0px 0px var(--border-width) var(--progress-outline);
+		border-radius:5px;
+		overflow:hidden;
+	}
+	&[value]::-webkit-progress-value {
+		background-color:var(--text-accent);
+		overflow:hidden;
+	}
 
-  &[value^='1']::-webkit-progress-value,
-  &[value^='2']::-webkit-progress-value,
-  &[value^='3']::-webkit-progress-value {
-      background-color:var(--red);
-  }
-  &[value^='4']::-webkit-progress-value,
-  &[value^='5']::-webkit-progress-value {
-      background-color:var(--orange);
-  }
-  &[value^='6']::-webkit-progress-value,
-  &[value^='7']::-webkit-progress-value {
-      background-color:var(--yellow);
-  }
-  &[value^='8']::-webkit-progress-value,
-  &[value^='9']::-webkit-progress-value {
-      background-color:var(--green);
-  }
-  &[value='1']::-webkit-progress-value,
-  &[value='100']::-webkit-progress-value {
-      background-color:var(--text-accent);
-  }
+	&[value^='1']::-webkit-progress-value,
+	&[value^='2']::-webkit-progress-value,
+	&[value^='3']::-webkit-progress-value {
+		background-color:var(--red);
+	}
+	&[value^='4']::-webkit-progress-value,
+	&[value^='5']::-webkit-progress-value {
+		background-color:var(--orange);
+	}
+	&[value^='6']::-webkit-progress-value,
+	&[value^='7']::-webkit-progress-value {
+		background-color:var(--yellow);
+	}
+	&[value^='8']::-webkit-progress-value,
+	&[value^='9']::-webkit-progress-value {
+		background-color:var(--green);
+	}
+	&[value='1']::-webkit-progress-value,
+	&[value='100']::-webkit-progress-value {
+		background-color:var(--text-accent);
+	}
 
-  &[value='0']::-webkit-progress-value,
-  &[value='2']::-webkit-progress-value,
-  &[value='3']::-webkit-progress-value,
-  &[value='4']::-webkit-progress-value,
-  &[value='5']::-webkit-progress-value,
-  &[value='6']::-webkit-progress-value,
-  &[value='7']::-webkit-progress-value,
-  &[value='8']::-webkit-progress-value,
-  &[value='9']::-webkit-progress-value {
-      background-color:var(--red);
-  }
+	&[value='0']::-webkit-progress-value,
+	&[value='2']::-webkit-progress-value,
+	&[value='3']::-webkit-progress-value,
+	&[value='4']::-webkit-progress-value,
+	&[value='5']::-webkit-progress-value,
+	&[value='6']::-webkit-progress-value,
+	&[value='7']::-webkit-progress-value,
+	&[value='8']::-webkit-progress-value,
+	&[value='9']::-webkit-progress-value {
+		background-color:var(--red);
+	}
 }

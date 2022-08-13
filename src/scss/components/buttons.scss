@@ -2,19 +2,19 @@
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
 .modal button:not(.mod-warning),
 .modal.mod-settings button:not(.mod-warning) {
-  white-space:nowrap;
-  transition:background-color 0.2s ease-out, border-color 0.2s ease-out;
+	white-space:nowrap;
+	transition:background-color 0.2s ease-out, border-color 0.2s ease-out;
 }
 button.mod-warning {
-  border:1px solid var(--background-modifier-error);
-  color:var(--text-error);
-  box-shadow:0 1px 1px 0px var(--btn-shadow-color);
-  transition:background-color 0.2s ease-out;
+	border:1px solid var(--background-modifier-error);
+	color:var(--text-error);
+	box-shadow:0 1px 1px 0px var(--btn-shadow-color);
+	transition:background-color 0.2s ease-out;
 }
 button.mod-warning:hover {
-  border:1px solid var(--background-modifier-error);
-  color:var(--text-error);
-  box-shadow:0 2px 3px 0px var(--btn-shadow-color);
-  transition:background-color 0.2s ease-out;
+	border:1px solid var(--background-modifier-error);
+	color:var(--text-error);
+	box-shadow:0 2px 3px 0px var(--btn-shadow-color);
+	transition:background-color 0.2s ease-out;
 }
 

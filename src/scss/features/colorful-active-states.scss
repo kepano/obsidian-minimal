@@ -1,6 +1,6 @@
 /* Colorful active states */
 .colorful-active {
-  --sp1:var(--bg1);
+	--sp1:var(--bg1);
 }
 
 .colorful-active .nav-file-title.is-active, 
@@ -17,26 +17,26 @@ body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,
 .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label),
 .colorful-active .menu-item:hover,
 .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label) {
-  background-color:var(--ax3);
-  color:var(--sp1);
+	background-color:var(--ax3);
+	color:var(--sp1);
 }
 
 .colorful-active #calendar-container .day:active .dot,
 .colorful-active #calendar-container .active .dot,
 .colorful-active #calendar-container .today.active .dot {
-  fill:var(--sp1);
+	fill:var(--sp1);
 }
 .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label) .menu-item-icon,
 .colorful-active .menu-item:hover .menu-item-icon {
-  color:var(--sp1);
+	color:var(--sp1);
 }
 
 .colorful-active .nav-file-title-content.is-being-renamed {
-  color:var(--text-normal);
+	color:var(--text-normal);
 }
 
 .is-mobile.colorful-active .nav-file-title.is-active {
-  box-shadow:0 0 0px 2px var(--ax3);
+	box-shadow:0 0 0px 2px var(--ax3);
 }
 /*
 .colorful-active .suggestion-container .suggestion-item:hover,

@@ -1,18 +1,18 @@
 /* Contextual Typography */
 
 .el-hr hr {
-  margin:1rem 0;
+	margin:1rem 0;
 }
 .el-p + .el-h1,
 .el-p + .el-h2 {
-  margin-top:0.75rem;
+	margin-top:0.75rem;
 }
 .el-hr + .el-h1,
 .el-hr + .el-h2,
 .el-h1 + .el-h1,
 .el-h1 + .el-h2,
 .el-h2 + .el-h2 {
-  margin-top:0rem;
+	margin-top:0rem;
 }
 .el-ol + .el-lang-dataview,
 .el-ul + .el-lang-dataview,
@@ -25,7 +25,7 @@
 .el-p + .el-table,
 .el-lang-dataviewjs + .el-p,
 .el-lang-dataview + .el-p {
-  margin-top:var(--spacing-p);
+	margin-top:var(--spacing-p);
 }
 .el-div + .el-h1,
 .el-pre + .el-h1,
@@ -35,5 +35,5 @@
 .el-p + .el-iframe,
 .el-p:not(.el-embed-image) + .el-embed-image,
 .el-embed-image + .el-p:not(.el-embed-image) {
-  margin-top:1rem;
+	margin-top:1rem;
 }

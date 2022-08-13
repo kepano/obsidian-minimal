@@ -1,17 +1,17 @@
 /* File browser */
 
 .is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
-  display:none;
+	display:none;
 }
 
 body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
-  font-weight:500;
-  text-transform:uppercase;
-  letter-spacing:0.05em;
-  color:var(--text-muted);
-  font-size:var(--font-adaptive-smaller);
+	font-weight:500;
+	text-transform:uppercase;
+	letter-spacing:0.05em;
+	color:var(--text-muted);
+	font-size:var(--font-adaptive-smaller);
 }
 
 .nav-buttons-container {
-  justify-content:flex-start;
+	justify-content:flex-start;
 }
