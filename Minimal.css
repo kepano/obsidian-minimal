@@ -46,7 +46,7 @@ body {
   --font-monospace-theme:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
   --font-interface-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
   --font-editor:var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
-  --minimal-version:"You are currently using Minimal 5.3.2\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano"; }
+  --minimal-version:"You are currently using Minimal 6.0\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano"; }
 
 body {
   /* Cursor */
@@ -466,6 +466,7 @@ body .excalidraw {
   --scrollbar-thumb-bg: var(--ui1);
   --scrollbar-active-thumb-bg: var(--ui3);
   --quote-opening-modifier: var(--ui2);
+  --prompt-border-color: var(--ui3);
   --modal-border-color: var(--ui3);
   --icon-color: var(--tx2);
   --icon-color-hover: var(--tx2);
@@ -1994,6 +1995,9 @@ iframe {
 
 .internal-query .search-result-container {
   border-bottom: 1px solid var(--ui1); }
+
+.workspace-ribbon {
+  border: none; }
 
 /* Scroll bars */
 body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar,
