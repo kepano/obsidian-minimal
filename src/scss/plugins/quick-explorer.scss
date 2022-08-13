@@ -45,7 +45,7 @@ body:not(.colorful-active) .qe-popup-menu {
 	.menu-item:not(.is-disabled):not(.is-label) {
 		&:hover,
 		&.selected {
-			background-color:var(--background-tertiary);
+			background-color:var(--background-modifier-hover);
 			color:var(--text-normal);
 			.menu-item-icon {
 				color:var(--text-normal);

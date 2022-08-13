@@ -10,7 +10,7 @@ https://github.com/sponsors/kepano
 
 */
 
-.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space {
+.labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space {
 	.workspace-tab-header-container {
 		padding-left: 0;
 	}
@@ -49,19 +49,13 @@ https://github.com/sponsors/kepano
 			opacity:1;
 			background-color:transparent;
 		}
-
 		.workspace-tab-header-inner {
 			padding:0;
 			box-shadow:none;
 			border:none;
 			border-radius:6px;
 		}
-		.workspace-tab-header-inner-icon {
-			padding: 4px;
-		}
-	}
-	.workspace-tab-header .workspace-tab-header-inner-icon:hover {
-		background-color:var(--background-tertiary);
+
 	}
 	.workspace-tab-header:hover .workspace-tab-header-inner-icon,
 	.workspace-tab-header.is-active .workspace-tab-header-inner-icon {

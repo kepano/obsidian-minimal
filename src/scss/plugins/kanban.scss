@@ -5,7 +5,7 @@ body .kanban-plugin__markdown-preview-view {
 }
 body .kanban-plugin {
 	--interactive-accent:var(--text-selection);
-	--interactive-accent-hover:var(--background-tertiary);
+	--interactive-accent-hover:var(--background-modifier-hover);
 	--text-on-accent:var(--text-normal);
 	background-color:var(--background-primary);
 }
@@ -116,7 +116,7 @@ body .kanban-plugin button {
 body .kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
 body .kanban-plugin__item button.kanban-plugin__item-postfix-button:hover,
 body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
-	background-color:var(--background-tertiary);
+	background-color:var(--background-modifier-hover);
 }
 body:not(.minimal-icons-off) .kanban-plugin svg.cross {
 	height:14px;
@@ -131,7 +131,7 @@ body .kanban-plugin__item-button-wrapper > button {
 }
 body .kanban-plugin__item-button-wrapper > button:hover {
 	color:var(--text-normal);
-	background:var(--background-tertiary);
+	background:var(--background-modifier-hover);
 }
 body .kanban-plugin__item-button-wrapper > button:focus {
 	box-shadow:none;

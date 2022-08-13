@@ -100,7 +100,7 @@ th.NLT__selectable .NLT__header-content:after {
   		background:transparent;
   	}
   	.NLT__selected > .NLT__selectable {
-  		background-color:var(--background-tertiary);
+  		background-color:var(--background-modifier-hover);
   	}
   	.NLT__selectable {
   		cursor:var(--cursor);
@@ -114,7 +114,7 @@ th.NLT__selectable .NLT__header-content:after {
   		height:auto;
   		line-height:20px;
   		&:hover {
-  			background-color:var(--background-tertiary);
+  			background-color:var(--background-modifier-hover);
   		}
   	}
   	.NLT__textarea {

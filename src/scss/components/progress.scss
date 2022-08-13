@@ -15,7 +15,6 @@
 	vertical-align:-0.2rem;
 
 	&[value]::-webkit-progress-bar {
-		background-color:var(--background-tertiary);
 		box-shadow:inset 0px 0px 0px var(--border-width) var(--progress-outline);
 		border-radius:5px;
 		overflow:hidden;

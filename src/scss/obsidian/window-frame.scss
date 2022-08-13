@@ -3,3 +3,28 @@ body:not(.window-title-on) .titlebar-text {
   display:none;
 }
 
+body {
+	&.is-focused {
+		--titlebar-background-focused: var(--bg2);
+	}
+	.mod-right-split {
+		--background-secondary: var(--background-primary);
+
+		:not(.mod-top) .workspace-tab-header-container {
+			--tab-container-background: var(--background-primary);
+		}
+	}
+}
+
+.is-hidden-frameless {
+	.mod-left-split {
+		.mod-top .workspace-tab-header-container {
+			--tab-container-background: var(--background-secondary);
+		}
+	}
+	/*.mod-right-split {
+		.workspace-tab-header-container {
+			--tab-container-background: var(--background-primary);
+		}
+	}*/
+}

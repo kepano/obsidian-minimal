@@ -265,6 +265,7 @@ body .excalidraw {
 	--background-primary:         white;
 	--background-secondary:       white;
 	--background-secondary-alt:   white;
+	--ribbon-background:          white;
 }
 
 .theme-dark.minimal-dark-black {
@@ -273,8 +274,9 @@ body .excalidraw {
 	--background-primary:        black;
 	--background-secondary:      black;
 	--background-secondary-alt:  black;
+	--ribbon-background:         black;
 
-	--background-tertiary:
+	--background-modifier-hover:
 	hsl(
 		var(--base-h),
 		var(--base-s),

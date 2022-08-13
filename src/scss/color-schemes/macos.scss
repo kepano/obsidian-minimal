@@ -60,7 +60,9 @@
 	--bg2:#282828;
 	--bg3:rgba(255,255,255,0.11);
 
-	--background-divider:#000;
+	--divider-color:#000;
+	--tab-outline-color:#000;
+
 	--ui1:#373737;
 	--ui2:#515151;
 	--ui3:#595959;
@@ -78,5 +80,6 @@
 	--sp1:#fff;
 }
 .theme-dark.minimal-macos-dark.minimal-dark-black {
-	--background-divider:#1e1e1e;
+	--divider-color:#1e1e1e;
+	--tab-outline-color:#1e1e1e;
 }

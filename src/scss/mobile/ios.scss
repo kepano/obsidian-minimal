@@ -129,11 +129,11 @@
   .document-search-container input[type='text'] {
     border-radius:var(--ios-input-radius);
     border:0px;
-    background-color:var(--background-tertiary);
+    background-color:var(--background-modifier-hover);
     &:active, &:hover, &:focus {
       border-radius:var(--ios-input-radius);
       border:0px;
-      background-color:var(--background-tertiary);
+      background-color:var(--background-modifier-hover);
     }
     &::placeholder {
       color:var(--text-muted);

@@ -100,7 +100,7 @@ body .modal .dtchooser {
 			&:hover,
 			&.is-selected {
 				transition: background-color 0.1s ease-in;
-				background-color:var(--background-tertiary) !important;
+				background-color:var(--background-modifier-hover) !important;
 			}
 			&.is-selected {
 				font-weight:var(--bold-weight);

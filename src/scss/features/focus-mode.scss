@@ -42,41 +42,6 @@
 		transition:opacity 0.2s ease-in-out;
 	}
 
-	/* Hide tab bar 
-	.mod-root .workspace-tabs {
-		.workspace-leaf-resize-handle {
-			display: block;
-			position: absolute;
-			width: 100%;
-			height: var(--header-height);
-			opacity: 0;
-			left: 0;
-			right: 0;
-			top: 0;
-			z-index: 9;
-
-			+ .workspace-tab-header-container {
-				height: 0;
-				opacity: 0;
-				&:hover {
-					height: var(--header-height);
-					opacity: 1;
-				}
-			}
-
-			&:hover {
-				+ .workspace-tab-header-container {
-					height: var(--header-height);
-					opacity: 1;
-				}
-			}
-		}
-	}
-	.mod-root .workspace-tab-header-container:hover {
-		height: var(--header-height);
-		opacity: 1;
-		z-index: 999;
-	} */
 	.mod-root .workspace-tab-header-container {
 		top: 0;
 		width: 100%;
@@ -90,19 +55,7 @@
 			opacity: 1;
 		}
 	}
-	/*
-	.mod-root .workspace-tab-container-inner::before {
-		content: "";
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: var(--header-height);
-		opacity: 1;
-		left: 0;
-		right: 0;
-		top: 0;
-		z-index: 9999;
-	}*/
+
 }
 
 /* Collapse pane header */

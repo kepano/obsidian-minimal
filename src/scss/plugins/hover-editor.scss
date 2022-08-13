@@ -95,7 +95,7 @@ body .popover.hover-editor:not(.is-loaded) {
 		}
 
 		&:hover {
-			background-color:var(--background-tertiary);
+			background-color:var(--background-modifier-hover);
 			color:var(--icon-color-hover);
 			svg {
 				opacity:1;

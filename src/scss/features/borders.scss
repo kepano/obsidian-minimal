@@ -1,14 +1,15 @@
 .borders-none {
-	--border-width:0px;
+	--divider-width:0px;
+	--tab-outline-width:0px;
 }
 
 /* Title borders */
 body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type='empty']):not([data-type='map']):not([data-type='graph']):not([data-type='localgraph']) .view-header,
 body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type='map']):not([data-type='graph']):not([data-type='empty']):not([data-type='localgraph']) .view-header {
-	border-bottom:var(--border-width) solid var(--background-divider);
+	border-bottom:var(--divider-width) solid var(--divider-color);
 }
 body.borders-title .workspace-ribbon.mod-left.is-collapsed {
-	border-right:var(--border-width) solid var(--background-divider);
+	border-right:var(--divider-width) solid var(--divider-color);
 }
 body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
 	border:none; 

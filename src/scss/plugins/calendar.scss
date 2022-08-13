@@ -6,8 +6,8 @@
 #calendar-container {
 	padding:0 15px 5px;
 	--color-background-day-empty:var(--background-secondary-alt);
-	--color-background-day-active:var(--background-tertiary);
-	--color-background-day-hover:var(--background-tertiary);
+	--color-background-day-active:var(--background-modifier-hover);
+	--color-background-day-hover:var(--background-modifier-hover);
 	--color-dot:var(--text-faint);
 	--color-text-title:var(--text-normal);
 	--color-text-heading:var(--text-muted);
@@ -45,7 +45,7 @@
 #calendar-container .arrow:hover {
 	fill:var(--text-muted);
 	color:var(--text-muted);
-	background-color:var(--background-tertiary);
+	background-color:var(--background-modifier-hover);
 }
 #calendar-container .arrow:hover svg {
 	color:var(--text-muted);
@@ -105,7 +105,7 @@
 }
 #calendar-container .reset-button:hover {
 	color:var(--text-normal);
-	background-color:var(--background-tertiary);
+	background-color:var(--background-modifier-hover);
 }
 #calendar-container .reset-button,
 #calendar-container .day {

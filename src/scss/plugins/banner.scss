@@ -1,7 +1,7 @@
 /* Banner plugin */
 
 .obsidian-banner.solid {
-	border-bottom:var(--border-width) solid var(--background-divider);
+	border-bottom:var(--divider-width) solid var(--divider-color);
 }
 .contextual-typography .markdown-preview-view div.has-banner-icon.obsidian-banner-wrapper {
 	overflow:visible;

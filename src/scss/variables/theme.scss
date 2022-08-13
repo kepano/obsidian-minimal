@@ -28,8 +28,6 @@
 .theme-light,
 .excalidraw.theme--dark,
 body .excalidraw {
-	--background-divider:                var(--ui1);
-
 	--background-modifier-accent:        var(--ax3);  
 	--background-modifier-border-focus:  var(--ui3);
 	--background-modifier-border-hover:  var(--ui2);
@@ -49,7 +47,8 @@ body .excalidraw {
 	--background-secondary-alt:          var(--bg1);
 
 	--background-table-rows:             var(--bg2);
-	--background-tertiary:               var(--bg3);
+
+	--divider-color:                     var(--ui1);
 
 	--icon-color-active:                 var(--tx1);
 	--icon-color-hover:                  var(--tx2);
@@ -60,16 +59,19 @@ body .excalidraw {
 	--interactive-accent:                var(--ax3);
 	--interactive-hover:                 var(--ui1);
 
-	--modal-border-color:                var(--ui3);
+	--modal-border-color:                var(--ui2);
 	--nav-item-color-active:             var(--tx1);
 	--prompt-border-color:               var(--ui3);
 	--quote-opening-modifier:            var(--ui2);
+
+	--ribbon-background:                 var(--bg2);
 
 	--scrollbar-active-thumb-bg:         var(--ui3);
 	--scrollbar-bg:                      transparent;
 	--scrollbar-thumb-bg:                var(--ui1);
 
 	--tab-text-color-focused-active:     var(--tx1);
+	--tab-outline-color:                 var(--ui1);
 
 	--text-accent-hover:                 var(--ax2);
 	--text-accent:                       var(--ax1);
