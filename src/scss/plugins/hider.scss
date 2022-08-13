@@ -1,54 +1,12 @@
 /* Hider plugin */
 
-/* Frameless mode */
-body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
-	padding-top:var(--top-left-padding-y);
-	transition:padding-top 0.2s linear;
-}
-/* Include support for Electron Window Tweaker */
-body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs:nth-child(3) {
-	padding-top:calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y));
-	transition:padding-top 0.2s linear;
-}
-body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mobile) .workspace-ribbon .side-dock-actions {
-	padding-top:calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y));
-}
-
-.hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
-.hider-frameless:not(.is-mobile) .workspace-split.mod-root .view-header {
-	padding-top:0px;
-}
-.hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
-.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
-	padding-top:0px;
-}
-.hider-frameless.is-fullscreen:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs,
-.hider-frameless.is-fullscreen:not(.is-mobile) .workspace-split.mod-root .view-header {
-	padding-top:0px;
-}
-
-/* Adjustments to title bar for traffic light icons */
-:root {
-	--traffic-x-space:0px;
-}
-
-/* Frameless + no ribbon */
-.mod-macos.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
-	--traffic-x-space:64px;
-}
-
-/* Frameless + popout */
-.mod-macos.is-popout-window.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:first-of-type  {
-	--traffic-x-space:64px;
-}
-/* Frameless */
-.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
-	--traffic-x-space:22px;
-}
-
 /* Remove ribbon border on Mac when frameless */
 .mod-macos.hider-frameless .workspace-ribbon {
 	border:none;
+}
+
+.mod-macos.hider-ribbon:not(.is-popout-window) {
+	--frame-left-space: 72px;
 }
 
 /* --------------- */

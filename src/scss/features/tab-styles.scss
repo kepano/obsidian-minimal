@@ -24,6 +24,10 @@ Needs some work
 }
 */
 
+.workspace > .workspace-split:not(.mod-root) .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+	--tab-outline-width: 0;
+}
+
 /* Underline */
 
 .tab-style-2 .workspace-tab-header-container .workspace-tab-header {

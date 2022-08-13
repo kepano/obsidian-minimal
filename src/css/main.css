@@ -2164,14 +2164,19 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
 body:not(.window-title-on) .titlebar-text {
   display: none; }
 
+.is-hidden-frameless {
+  --titlebar-background: var(--bg-1); }
+  .is-hidden-frameless.is-focused .sidebar-toggle-button.mod-right, .is-hidden-frameless.is-focused .workspace-ribbon.mod-left, .is-hidden-frameless.is-focused .workspace-tabs.mod-top {
+    --titlebar-background-focused: var(--bg1); }
+
 /* Trying for a smoother animation */
-.is-hidden-frameless .workspace .sidebar-toggle-button.mod-right {
+.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
   position: fixed;
   top: 0;
   right: 0;
   z-index: var(--layer-popover);
   background-color: var(--titlebar-background); }
-.is-hidden-frameless .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+.is-hidden-frameless:not(.is-popout-window) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
   padding-right: 36px; }
 
 body.is-focused {
@@ -3322,10 +3327,11 @@ https://github.com/sponsors/kepano
 */
 .labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
   padding-left: 0; }
-.labeled-nav.is-hidden-frameless .workspace-ribbon.mod-left {
-  padding-top: 0; }
-  .labeled-nav.is-hidden-frameless .workspace-ribbon.mod-left:before {
-    border: none; }
+.labeled-nav.is-hidden-frameless .workspace-ribbon.mod-left:not(.is-collapsed):before {
+  border: none; }
+
+.labeled-nav .mod-left-split.is-sidedock-collapsed .mod-top .workspace-tab-container-inner {
+  margin-top: calc(var(--header-height) - 1px); }
 
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-spacer {
   display: none; }
@@ -3334,13 +3340,18 @@ https://github.com/sponsors/kepano
   font-weight: 500;
   font-size: var(--font-small); }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
+  flex-direction: column-reverse !important;
   height: auto;
   width: 100%; }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-container-inner {
-  padding-top: var(--header-height);
-  flex-grow: 1;
-  flex-direction: column;
-  gap: 0; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .sidebar-toggle-button.mod-left {
+    flex-shrink: 1;
+    width: 46px;
+    margin-left: auto; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-container-inner {
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 0;
+    padding: var(--size-4-2) var(--size-4-3); }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header {
   padding: 0;
   margin-bottom: 2px;
@@ -3951,6 +3962,9 @@ Needs some work
   transition:height 0.1s linear, opacity 0.1s linear;
 }
 */
+.workspace > .workspace-split:not(.mod-root) .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  --tab-outline-width: 0; }
+
 /* Underline */
 .tab-style-2 .workspace-tab-header-container .workspace-tab-header {
   flex-grow: 1;
@@ -5688,50 +5702,12 @@ div[data-type="git-view"] .search-input-clear-button {
   bottom: 5.5px; }
 
 /* Hider plugin */
-/* Frameless mode */
-body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
-  padding-top: var(--top-left-padding-y);
-  transition: padding-top 0.2s linear; }
-
-/* Include support for Electron Window Tweaker */
-body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs:nth-child(3) {
-  padding-top: calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y));
-  transition: padding-top 0.2s linear; }
-
-body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mobile) .workspace-ribbon .side-dock-actions {
-  padding-top: calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y)); }
-
-.hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
-.hider-frameless:not(.is-mobile) .workspace-split.mod-root .view-header {
-  padding-top: 0px; }
-
-.hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs ~ .workspace-tabs,
-.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs ~ .workspace-tabs {
-  padding-top: 0px; }
-
-.hider-frameless.is-fullscreen:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs,
-.hider-frameless.is-fullscreen:not(.is-mobile) .workspace-split.mod-root .view-header {
-  padding-top: 0px; }
-
-/* Adjustments to title bar for traffic light icons */
-:root {
-  --traffic-x-space:0px; }
-
-/* Frameless + no ribbon */
-.mod-macos.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type {
-  --traffic-x-space:64px; }
-
-/* Frameless + popout */
-.mod-macos.is-popout-window.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:first-of-type {
-  --traffic-x-space:64px; }
-
-/* Frameless */
-.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type {
-  --traffic-x-space:22px; }
-
 /* Remove ribbon border on Mac when frameless */
 .mod-macos.hider-frameless .workspace-ribbon {
   border: none; }
+
+.mod-macos.hider-ribbon:not(.is-popout-window) {
+  --frame-left-space: 72px; }
 
 /* --------------- */
 /* App ribbon moved to the bottom edge */
