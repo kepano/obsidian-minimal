@@ -4842,7 +4842,7 @@ body .button-default.blue {
   padding: 5px 0 0 0; }
 
 #calendar-container {
-  padding: 0 15px 5px;
+  padding: 0 var(--size-4-4) var(--size-4-1);
   --color-background-day-empty:var(--background-secondary-alt);
   --color-background-day-active:var(--background-modifier-hover);
   --color-background-day-hover:var(--background-modifier-hover);
@@ -4904,7 +4904,7 @@ body .button-default.blue {
 
 #calendar-container .nav {
   padding: 0;
-  margin: 10px 5px 10px 5px; }
+  margin: var(--size-4-2) var(--size-4-1); }
 
 #calendar-container .dot {
   margin: 0; }

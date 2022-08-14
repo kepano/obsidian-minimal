@@ -4,7 +4,7 @@
 	padding:5px 0 0 0;
 }
 #calendar-container {
-	padding:0 15px 5px;
+	padding:0 var(--size-4-4) var(--size-4-1);
 	--color-background-day-empty:var(--background-secondary-alt);
 	--color-background-day-active:var(--background-modifier-hover);
 	--color-background-day-hover:var(--background-modifier-hover);
@@ -52,7 +52,7 @@
 	opacity:1;
 }
 #calendar-container tr th {
-	padding:2px 0 4px;
+	padding: 2px 0 4px;
 	font-weight:500;
 	letter-spacing:0.1em;
 	font-size:var(--font-adaptive-smallest);
@@ -66,7 +66,7 @@
 }
 #calendar-container .nav {
 	padding:0;
-	margin:10px 5px 10px 5px;
+	margin: var(--size-4-2) var(--size-4-1);
 }
 #calendar-container .dot {
 	margin:0;
