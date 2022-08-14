@@ -10,7 +10,7 @@
 
 .workspace-leaf-content[data-type="style-settings"] {
 	.view-content {
-		padding:0 0 20px var(--folding-offset);
+		padding: var(--size-4-4) 0 var(--size-4-4) var(--folding-offset);
 	}
 	.view-content > div {
 		width:var(--line-width-adaptive);
@@ -67,7 +67,7 @@
 .setting-item .style-settings-import,
 .setting-item .style-settings-export {
 	text-decoration:none;
-	font-size:var(--font-settings-small);
+	font-size:var(--font-ui-small);
 	font-weight:500;
 	color:var(--text-muted);
 	margin:0;

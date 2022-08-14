@@ -9,18 +9,17 @@ body {
 }
 
 body {
+	/* Blockquotes */
+	--blockquote-style:normal;
 
-	/* Cursor */
-	--cursor:default;
+	/* Embeds */
+	--embed-block-shadow-hover: none;
 
 	/* Font sizes */
-	--font-small:13px;
-	--font-smaller:11px;
-	--font-smallest:10px;
+	--font-ui-smaller: 11px;
 
-	--font-inputs:13px;
-	--font-settings:15px;
-	--font-settings-small:12px;
+	/* File */
+	--file-margins: 0;
 
 	/* Font weights */
 	--normal-weight:400;
@@ -60,40 +59,37 @@ body {
 	--h5-style:normal;
 	--h6-style:normal;
 
-	/* Blockquotes */
-	--blockquote-style:normal;
-
 	/* Line widths */
-	--line-width:40rem;
-	--line-height:1.5;
+	--line-width: 40rem;
+	--line-height: 1.5;
 	--max-width:88%;
-	--max-col-width:18em;
+	--max-col-width: 18em;
 
 	/* Icons */
-	--icon-muted:0.5;
+	--icon-muted: 0.5;
 
-	--border-width:1px;
+	--border-width: 1px;
 
 	/* Quotes and transclusions */
 	--nested-padding:1.1em;
 
 	/* Lists */
-	--folding-offset:10px;
-	--list-edit-offset:0.5em;
-	--list-indent:2em;
-	--list-spacing:0.075em;
+	--folding-offset :10px;
+	--list-edit-offset: 0.5em;
+	--list-indent: 2em;
+	--list-spacing: 0.075em;
 
 
-	--input-height:32px;
-	--header-height:40px;
+	--input-height: 32px;
+	--header-height: 40px;
 
 	/* Mobile sidebars */
-	--mobile-left-sidebar-width:280pt;
-	--mobile-right-sidebar-width:240pt;
+	--mobile-left-sidebar-width: 280pt;
+	--mobile-right-sidebar-width: 240pt;
 
 	/* Tags */
-	--tag-radius:14px;
-	--tag-border-width:1px;
+	--tag-radius: 14px;
+	--tag-border-width: 1px;
 
 	--top-left-padding-y:0px;
 

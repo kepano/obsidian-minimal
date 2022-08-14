@@ -49,15 +49,14 @@ body {
   --minimal-version:"You are currently using Minimal 6.0\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano"; }
 
 body {
-  /* Cursor */
-  --cursor:default;
+  /* Blockquotes */
+  --blockquote-style:normal;
+  /* Embeds */
+  --embed-block-shadow-hover: none;
   /* Font sizes */
-  --font-small:13px;
-  --font-smaller:11px;
-  --font-smallest:10px;
-  --font-inputs:13px;
-  --font-settings:15px;
-  --font-settings-small:12px;
+  --font-ui-smaller: 11px;
+  /* File */
+  --file-margins: 0;
   /* Font weights */
   --normal-weight:400;
   --bold-weight:600;
@@ -90,31 +89,29 @@ body {
   --h4-style:normal;
   --h5-style:normal;
   --h6-style:normal;
-  /* Blockquotes */
-  --blockquote-style:normal;
   /* Line widths */
-  --line-width:40rem;
-  --line-height:1.5;
+  --line-width: 40rem;
+  --line-height: 1.5;
   --max-width:88%;
-  --max-col-width:18em;
+  --max-col-width: 18em;
   /* Icons */
-  --icon-muted:0.5;
-  --border-width:1px;
+  --icon-muted: 0.5;
+  --border-width: 1px;
   /* Quotes and transclusions */
   --nested-padding:1.1em;
   /* Lists */
   --folding-offset:10px;
-  --list-edit-offset:0.5em;
-  --list-indent:2em;
-  --list-spacing:0.075em;
-  --input-height:32px;
-  --header-height:40px;
+  --list-edit-offset: 0.5em;
+  --list-indent: 2em;
+  --list-spacing: 0.075em;
+  --input-height: 32px;
+  --header-height: 40px;
   /* Mobile sidebars */
-  --mobile-left-sidebar-width:280pt;
-  --mobile-right-sidebar-width:240pt;
+  --mobile-left-sidebar-width: 280pt;
+  --mobile-right-sidebar-width: 240pt;
   /* Tags */
-  --tag-radius:14px;
-  --tag-border-width:1px;
+  --tag-radius: 14px;
+  --tag-border-width: 1px;
   --top-left-padding-y:0px;
   /* Image opacity in dark mode */
   --image-muted:0.7;
@@ -444,6 +441,7 @@ body .excalidraw {
   --background-secondary: var(--bg2);
   --background-secondary-alt: var(--bg1);
   --background-table-rows: var(--bg2);
+  --code-normal: var(--tx1);
   --divider-color: var(--ui1);
   --icon-color-active: var(--tx1);
   --icon-color-focus: var(--tx1);
@@ -539,9 +537,9 @@ body .excalidraw {
 /* Desktop font sizes */
 body {
   --font-adaptive-normal:var(--font-text-size,var(--editor-font-size));
-  --font-adaptive-small:var(--font-small);
-  --font-adaptive-smaller:var(--font-smaller);
-  --font-adaptive-smallest:var(--font-smallest);
+  --font-adaptive-small: var(--font-ui-medium);
+  --font-adaptive-smaller: var(--font-ui-small);
+  --font-adaptive-smallest: var(--font-ui-smaller);
   --line-width-adaptive:var(--line-width);
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
@@ -550,16 +548,16 @@ body {
 /* Phone font sizes */
 @media (max-width: 400pt) {
   .is-mobile {
-    --font-adaptive-small:calc(var(--font-small) + 2px);
-    --font-adaptive-smaller:calc(var(--font-smaller) + 2px);
-    --font-adaptive-smallest:calc(var(--font-smallest) + 2px);
+    --font-adaptive-small:calc(var(--font-ui-medium) + 2px);
+    --font-adaptive-smaller:calc(var(--font-ui-smaller) + 2px);
+    --font-adaptive-smallest:calc(var(--font-ui-smaller) + 2px);
     --max-width:88%; } }
 /* Tablet font sizes */
 @media (min-width: 400pt) {
   .is-mobile {
-    --font-adaptive-small:calc(var(--font-small) + 3px);
-    --font-adaptive-smaller:calc(var(--font-smaller) + 2px);
-    --font-adaptive-smallest:calc(var(--font-smallest) + 2px);
+    --font-adaptive-small:calc(var(--font-ui-medium) + 3px);
+    --font-adaptive-smaller:calc(var(--font-ui-smaller) + 2px);
+    --font-adaptive-smallest:calc(var(--font-ui-smallest) + 2px);
     --line-width-adaptive:calc(var(--line-width) + 6rem);
     --max-width:90%; } }
 /* Disabled features */
@@ -1646,9 +1644,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatt
       background-color: var(--background-modifier-hover); } }
   @media (max-width: 400pt) {
     .is-mobile .menu {
-      padding-bottom: 30px; }
-    .is-mobile .menu-item.is-label {
-      font-size: var(--font-settings-title); } }
+      padding-bottom: 30px; } }
 
 /* Preview mode  */
 .markdown-preview-view blockquote,
@@ -3565,11 +3561,12 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
   --folding-offset:0; }
 
 /* Live Preview */
+/* Inline title */
 .markdown-source-view.mod-cm6.is-readable-line-width .inline-title {
-  width: var(--line-width);
-  padding-left: var(--folding-offset);
+  width: calc(var(--line-width-adaptive) - var(--folding-offset));
   max-width: calc(var(--max-width) - var(--folding-offset));
-  margin: 0 auto; }
+  margin-right: auto;
+  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
@@ -6168,10 +6165,10 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
   text-align: left !important; }
 
 .modal .quickAddYesNoPrompt button {
-  font-size: var(--font-settings-small); }
+  font-size: var(--font-ui-small); }
 
 .modal .yesNoPromptButtonContainer {
-  font-size: var(--font-settings-small);
+  font-size: var(--font-ui-small);
   justify-content: flex-end; }
 
 .quickAddModal .modal-content {
@@ -6380,7 +6377,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   margin: 2px 0 2px -20px; }
 
 .workspace-leaf-content[data-type="style-settings"] .view-content {
-  padding: 0 0 20px var(--folding-offset); }
+  padding: var(--size-4-4) 0 var(--size-4-4) var(--folding-offset); }
 .workspace-leaf-content[data-type="style-settings"] .view-content > div {
   width: var(--line-width-adaptive);
   max-width: var(--max-width);
@@ -6431,7 +6428,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 .setting-item .style-settings-import,
 .setting-item .style-settings-export {
   text-decoration: none;
-  font-size: var(--font-settings-small);
+  font-size: var(--font-ui-small);
   font-weight: 500;
   color: var(--text-muted);
   margin: 0;
@@ -8506,18 +8503,18 @@ settings:
                 label: Crosshair
                 value: crosshair
     - 
-        id: font-smaller
-        title: Smaller font size
+        id: font-ui-small
+        title: Small font size
         description: Font size in px of smaller text
         type: variable-number
-        default: 11
+        default: 13
         format: px
     - 
-        id: font-smallest
-        title: Smallest font size
+        id: font-ui-smaller
+        title: Smaller font size
         description: Font size in px of smallest text
         type: variable-number
-        default: 10
+        default: 11
         format: px
     - 
         id: folding-offset
