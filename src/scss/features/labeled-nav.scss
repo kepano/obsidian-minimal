@@ -54,9 +54,11 @@ https://github.com/sponsors/kepano
 			width: 46px;
 			margin-left: auto;
 		}
+		.workspace-tab-header-container-inner {
+			flex-direction: column !important;
+		}
 		.workspace-tab-container-inner {
 			flex-grow: 1;
-			flex-direction:column;
 			gap: 0;
 			padding: var(--size-4-2) var(--size-4-3);
 		}

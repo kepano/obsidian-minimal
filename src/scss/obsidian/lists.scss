@@ -1,6 +1,4 @@
 /* Reader Mode Lists  */
-
-
 div > ol,
 div > ul {
   padding-inline-start:1.4em;
@@ -17,25 +15,6 @@ ol {
   padding-inline-start:var(--list-indent);
   margin-left:0;
   list-style:default;
-}
-
-.is-mobile {
-  ul > li:not(.task-list-item)::marker {
-    font-size:0.8em;
-  }
-  .markdown-rendered ul,
-  .markdown-rendered ol {
-    padding-inline-start:var(--list-indent);
-  }
-  /* first level */
-  .markdown-rendered div > ol,
-  .markdown-rendered div > ul {
-    padding-inline-start:2em;
-  }
-  .el-ol > ol,
-  .el-ul > ul {
-    margin-left:0;
-  }
 }
 
 /* Live Preview */
@@ -57,31 +36,38 @@ ol {
   padding-bottom:var(--list-spacing);
 }
 
-/* Legacy Editor Mode Lists */
-.cm-formatting-list {
-  color:var(--text-faint) !important;
-}
-
 /* Bullets */
-ul > li::marker,
-ol > li::marker {
-  color:var(--text-faint);
-}
 ul > li:not(.task-list-item)::marker {
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  font-size:0.9em;
 }
 .mod-cm6 .HyperMD-list-line .list-bullet::after,
 .mod-cm6 span.list-bullet::after {
-  line-height:0.95em;
-  font-size:1.4em;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  vertical-align:middle;
-  color:var(--text-faint);
 }
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   left:-5px;
 }
 body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
   margin-left:-5px;
+}
+
+
+
+.is-mobile {
+  ul > li:not(.task-list-item)::marker {
+    font-size:0.8em;
+  }
+  .markdown-rendered ul,
+  .markdown-rendered ol {
+    padding-inline-start:var(--list-indent);
+  }
+  /* first level */
+  .markdown-rendered div > ol,
+  .markdown-rendered div > ul {
+    padding-inline-start:2em;
+  }
+  .el-ol > ol,
+  .el-ul > ul {
+    margin-left:0;
+  }
 }

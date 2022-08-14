@@ -444,18 +444,7 @@ body .excalidraw {
   --title-color: var(--tx1);
   --tag-color: var(--tx2);
   --tag-bg: transparent;
-  --tag-bg2: transparent;
-  --shadow-m:
-  0px 2.7px 6.7px rgba(0, 0, 0, 0.04),
-  0px 8.9px 22.3px rgba(0, 0, 0, 0.06),
-  0px 40px 100px rgba(0, 0, 0, 0.1);
-  --shadow-l:
-  0px 0.8px 4.2px rgba(0, 0, 0, 0.014),
-  0px 2px 10px rgba(0, 0, 0, 0.02),
-  0px 3.8px 18.8px rgba(0, 0, 0, 0.025),
-  0px 6.7px 33.5px rgba(0, 0, 0, 0.03),
-  0px 12.5px 62.7px rgba(0, 0, 0, 0.036),
-  0px 30px 150px rgba(0, 0, 0, 0.05); }
+  --tag-bg2: transparent; }
 
 .theme-light,
 body .excalidraw {
@@ -1297,20 +1286,6 @@ ol {
   margin-left: 0;
   list-style: default; }
 
-.is-mobile {
-  /* first level */ }
-  .is-mobile ul > li:not(.task-list-item)::marker {
-    font-size: 0.8em; }
-  .is-mobile .markdown-rendered ul,
-  .is-mobile .markdown-rendered ol {
-    padding-inline-start: var(--list-indent); }
-  .is-mobile .markdown-rendered div > ol,
-  .is-mobile .markdown-rendered div > ul {
-    padding-inline-start: 2em; }
-  .is-mobile .el-ol > ol,
-  .is-mobile .el-ul > ul {
-    margin-left: 0; }
-
 /* Live Preview */
 .cm-line:not(.HyperMD-codeblock) {
   tab-size: var(--list-indent); }
@@ -1327,32 +1302,33 @@ ol {
   padding-top: var(--list-spacing);
   padding-bottom: var(--list-spacing); }
 
-/* Legacy Editor Mode Lists */
-.cm-formatting-list {
-  color: var(--text-faint) !important; }
-
 /* Bullets */
-ul > li::marker,
-ol > li::marker {
-  color: var(--text-faint); }
-
 ul > li:not(.task-list-item)::marker {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  font-size: 0.9em; }
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 
 .mod-cm6 .HyperMD-list-line .list-bullet::after,
 .mod-cm6 span.list-bullet::after {
-  line-height: 0.95em;
-  font-size: 1.4em;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  vertical-align: middle;
-  color: var(--text-faint); }
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   left: -5px; }
 
 body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
   margin-left: -5px; }
+
+.is-mobile {
+  /* first level */ }
+  .is-mobile ul > li:not(.task-list-item)::marker {
+    font-size: 0.8em; }
+  .is-mobile .markdown-rendered ul,
+  .is-mobile .markdown-rendered ol {
+    padding-inline-start: var(--list-indent); }
+  .is-mobile .markdown-rendered div > ol,
+  .is-mobile .markdown-rendered div > ul {
+    padding-inline-start: 2em; }
+  .is-mobile .el-ol > ol,
+  .is-mobile .el-ul > ul {
+    margin-left: 0; }
 
 /* Modals */
 /* Confirm delete */
@@ -3196,9 +3172,10 @@ https://github.com/sponsors/kepano
     flex-shrink: 1;
     width: 46px;
     margin-left: auto; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
+    flex-direction: column !important; }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-container-inner {
     flex-grow: 1;
-    flex-direction: column;
     gap: 0;
     padding: var(--size-4-2) var(--size-4-3); }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header {
@@ -3548,6 +3525,14 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
   --folding-offset:0; }
 
 /* Live Preview */
+.markdown-source-view.mod-cm6.is-readable-line-width .inline-title {
+  width: var(--line-width);
+  padding-left: var(--folding-offset);
+  max-width: calc(var(--max-width) - var(--folding-offset));
+  margin: 0 auto; }
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
   max-width: 100%; }
 
