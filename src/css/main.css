@@ -2012,17 +2012,19 @@ body:not(.window-title-on) .titlebar-text {
 
 .is-hidden-frameless {
   --titlebar-background: var(--bg-1); }
-  .is-hidden-frameless.is-focused .sidebar-toggle-button.mod-right, .is-hidden-frameless.is-focused .workspace-ribbon.mod-left, .is-hidden-frameless.is-focused .workspace-tabs.mod-top {
+  .is-hidden-frameless.is-focused .sidebar-toggle-button.mod-right,
+  .is-hidden-frameless.is-focused .workspace-ribbon.mod-left,
+  .is-hidden-frameless.is-focused .workspace-tabs.mod-top {
     --titlebar-background-focused: var(--bg1); }
 
 /* Trying for a smoother animation */
-.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
+.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
   position: fixed;
   top: 0;
   right: 0;
   z-index: var(--layer-popover);
   background-color: var(--titlebar-background); }
-.is-hidden-frameless:not(.is-popout-window) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+.mod-macos.is-hidden-frameless:not(.is-popout-window) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
   padding-right: 36px; }
 
 body.is-focused {
@@ -2832,12 +2834,13 @@ body.fancy-cursor .mod-cm6 .cm-line {
     width: 100%;
     left: 0;
     right: 0;
-    transition: all 0.1s ease-in-out !important;
+    transition: opacity 0.1s ease-in-out !important;
     position: absolute;
     z-index: var(--layer-popover);
     opacity: 0; }
     .minimal-focus-mode .mod-root .workspace-tab-header-container:hover {
-      opacity: 1; }
+      opacity: 1;
+      position: static; }
 
 /* Collapse pane header */
 body:not(.plugin-sliding-panes-rotate-header).show-view-header .app-container .workspace-split.mod-root > .workspace-leaf .view-header {
@@ -3785,31 +3788,39 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 .workspace > .workspace-split:not(.mod-root) .CodeMirror-sizer {
   padding-left: 10px; }
 
-/* Hidden tabs
-Needs some work
+/* Main tabs */
+.tabs-square .mod-root {
+  --tab-curve: 0;
+  --tab-radius: 0;
+  --tab-radius-active: 0; }
+  .tabs-square .mod-root .workspace-tab-container-inner {
+    padding: 0;
+    margin: 0 0 -1px 0; }
+  .tabs-square .mod-root .workspace-tab-header {
+    padding: 2px 4px 0 4px; }
 
-.mod-right-split {
-  .workspace-tab-header-container:not(:hover) {
-    height:0;
-    opacity:0;
-    z-index:999;
-    width:100%;
-    transition:height 0.1s linear, opacity 0.1s linear;
-    &::after {
-      width:100%;
-      content:" ";
-      background-color:transparent;
-      height:20px;
-      position:absolute;
-      z-index:99;
-      top:0;
-    }
-  }
-}
-.workspace-tab-header-container {
-  transition:height 0.1s linear, opacity 0.1s linear;
-}
-*/
+.tabs-underline .mod-root {
+  --tab-curve: 0;
+  --tab-radius: 0;
+  --tab-radius-active: 0;
+  --tab-outline-width: 0px;
+  --tab-text-color-focused-active: var(--ax2); }
+  .tabs-underline .mod-root .workspace-tab-header-container {
+    border-bottom: 1px solid var(--divider-color); }
+  .tabs-underline .mod-root .workspace-tab-container-inner {
+    padding: 0 1px 0 0;
+    margin: 0 0 -1px 0; }
+  .tabs-underline .mod-root .workspace-tab-header {
+    padding: 1px 4px 0 4px;
+    border-bottom: 2px solid transparent; }
+    .tabs-underline .mod-root .workspace-tab-header:hover {
+      border-bottom: 2px solid var(--ui3); }
+    .tabs-underline .mod-root .workspace-tab-header.is-active {
+      border-bottom: 2px solid var(--ax3); }
+  .tabs-underline .mod-root .workspace-tab-header-inner:hover {
+    background-color: transparent; }
+
+/* Sidebar tabs */
 .workspace > .workspace-split:not(.mod-root) .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   --tab-outline-width: 0; }
 
@@ -5481,10 +5492,12 @@ div[data-type="git-view"] .search-input-clear-button {
   z-index: 17;
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
-  filter: drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2)); }
+  filter: drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
+  gap: 0; }
 
 .hider-ribbon:not(.is-mobile) .side-dock-actions,
 .hider-ribbon:not(.is-mobile) .side-dock-settings {
+  flex-direction: row;
   display: flex;
   border-top: var(--border-width) solid var(--background-modifier-border);
   background: var(--background-secondary);
@@ -5492,17 +5505,16 @@ div[data-type="git-view"] .search-input-clear-button {
   position: relative; }
 
 .hider-ribbon:not(.is-mobile) .side-dock-actions {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 .hider-ribbon:not(.is-mobile) .side-dock-settings {
   border-right: var(--border-width) solid var(--background-modifier-border);
-  border-top-right-radius: 5px;
-  padding-right: 10px; }
+  border-top-right-radius: var(--radius-m);
+  padding-right: 6px; }
 
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display: flex;
-  padding: 4px;
-  margin: 6px 0px 5px 7px; }
+  margin: 7px 0px 8px; }
 
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left:hover {
   opacity: 1;

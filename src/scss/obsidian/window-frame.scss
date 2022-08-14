@@ -6,14 +6,16 @@ body:not(.window-title-on) .titlebar-text {
 .is-hidden-frameless {
 	--titlebar-background: var(--bg-1);
 	&.is-focused {
-		.sidebar-toggle-button.mod-right, .workspace-ribbon.mod-left, .workspace-tabs.mod-top {
+		.sidebar-toggle-button.mod-right,
+		.workspace-ribbon.mod-left,
+		.workspace-tabs.mod-top {
 			--titlebar-background-focused: var(--bg1);
 		}
 	}
 }
 
 /* Trying for a smoother animation */
-.is-hidden-frameless:not(.is-popout-window) {
+.mod-macos.is-hidden-frameless:not(.is-popout-window) {
 	.sidebar-toggle-button.mod-right {
 		position: fixed;
 		top: 0;

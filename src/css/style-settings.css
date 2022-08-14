@@ -980,6 +980,28 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
+        id: tabs
+        title: Tabs
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: tabs-style
+        title: Tabs
+        type: class-select
+        allowEmpty: false
+        default: tabs-default
+        options:
+            - 
+                label: Default
+                value: tabs-default
+            -
+                label: Square
+                value: tabs-square
+            -
+                label: Underline
+                value: tabs-underline
+    -
         id: tags
         title: Tags
         type: heading

@@ -1,28 +1,54 @@
-/* Hidden tabs
-Needs some work
+/* Main tabs */
 
-.mod-right-split {
-  .workspace-tab-header-container:not(:hover) {
-    height:0;
-    opacity:0;
-    z-index:999;
-    width:100%;
-    transition:height 0.1s linear, opacity 0.1s linear;
-    &::after {
-      width:100%;
-      content:" ";
-      background-color:transparent;
-      height:20px;
-      position:absolute;
-      z-index:99;
-      top:0;
-    }
-  }
+.tabs-square .mod-root {
+	--tab-curve: 0;
+	--tab-radius: 0;
+	--tab-radius-active: 0;
+
+	.workspace-tab-container-inner {
+		padding: 0;
+		margin: 0 0 -1px 0;
+	}
+	.workspace-tab-header {
+		padding: 2px 4px 0 4px;
+		&.is-active {
+		}
+	}
+	.workspace-tab-header-inner:hover {
+
+	}
 }
-.workspace-tab-header-container {
-  transition:height 0.1s linear, opacity 0.1s linear;
+.tabs-underline .mod-root {
+	--tab-curve: 0;
+	--tab-radius: 0;
+	--tab-radius-active: 0;
+	--tab-outline-width: 0px;
+
+	--tab-text-color-focused-active: var(--ax2);
+
+	.workspace-tab-header-container {
+		border-bottom: 1px solid var(--divider-color);
+	}
+	.workspace-tab-container-inner {
+		padding: 0 1px 0 0;
+		margin: 0 0 -1px 0;
+	}
+	.workspace-tab-header {
+		padding: 1px 4px 0 4px;
+		border-bottom: 2px solid transparent;
+		&:hover {
+			border-bottom: 2px solid var(--ui3);
+		}
+		&.is-active {
+			border-bottom: 2px solid var(--ax3);
+		}
+	}
+	.workspace-tab-header-inner:hover {
+		background-color: transparent;
+	}
 }
-*/
+
+/* Sidebar tabs */
 
 .workspace > .workspace-split:not(.mod-root) .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
 	--tab-outline-width: 0;
