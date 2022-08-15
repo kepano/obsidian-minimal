@@ -137,16 +137,6 @@ ul>li.is-collapsed::marker,
 	opacity:1;
 }
 
-/* Live Preview text selection */
-.markdown-source-view.mod-cm6  .cm-line .cm-selection,
-.markdown-source-view.mod-cm6 .cm-line .cm-inline-code .cm-selection {
-	background-color: var(--text-selection);
-}
-.cm-selectionBackground {
-	background-color:transparent !important;
-}
-
-
 body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
 	max-width:100%;
 }
