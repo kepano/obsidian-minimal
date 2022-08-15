@@ -411,6 +411,7 @@ body .excalidraw {
   --interactive-accent-hover: var(--ax3);
   --interactive-accent: var(--ax3);
   --interactive-hover: var(--ui1);
+  --list-marker-color: var(--tx3);
   --modal-border-color: var(--ui2);
   --nav-item-background-active: var(--bg3);
   --nav-item-background-hover: var(--bg3);
@@ -5476,7 +5477,8 @@ div[data-type="git-view"] .search-input-clear-button {
   border-top: var(--border-width) solid var(--background-modifier-border);
   background: var(--background-secondary);
   margin: 0;
-  position: relative; }
+  position: relative;
+  gap: var(--size-2-2); }
 
 .hider-ribbon:not(.is-mobile) .side-dock-actions {
   padding-left: 8px; }
@@ -5484,7 +5486,7 @@ div[data-type="git-view"] .search-input-clear-button {
 .hider-ribbon:not(.is-mobile) .side-dock-settings {
   border-right: var(--border-width) solid var(--background-modifier-border);
   border-top-right-radius: var(--radius-m);
-  padding-right: 6px; }
+  padding: 0 var(--size-2-2); }
 
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display: flex;
