@@ -1171,7 +1171,7 @@ settings:
         id: header-height
         title: Title bar height
         type: variable-text
-        default: 42px
+        default: 40px
     - 
         id: title-size
         title: Title font size

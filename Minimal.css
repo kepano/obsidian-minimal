@@ -4924,7 +4924,7 @@ body .button-default.blue {
 #calendar-container .reset-button {
   text-transform: none;
   letter-spacing: 0;
-  font-size: var(--font-adaptive-small);
+  font-size: var(--font-adaptive-smaller);
   font-weight: 500;
   color: var(--text-muted);
   border-radius: 4px;
@@ -8316,7 +8316,7 @@ settings:
         id: header-height
         title: Title bar height
         type: variable-text
-        default: 42px
+        default: 40px
     - 
         id: title-size
         title: Title font size
