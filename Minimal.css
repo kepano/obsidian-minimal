@@ -919,9 +919,6 @@ iframe {
   background-color: var(--text-selection);
   color: inherit; }
 
-.workspace-ribbon {
-  border: none; }
-
 /* Status bar */
 .status-bar {
   transition: color 200ms linear;
@@ -1029,6 +1026,60 @@ button.mod-warning:hover {
   color: var(--text-error);
   box-shadow: 0 2px 3px 0px var(--btn-shadow-color);
   transition: background-color 0.2s ease-out; }
+
+/* Mobile */
+.is-mobile .document-search,
+.is-mobile .document-replace {
+  flex-direction: row; }
+.is-mobile .document-replace {
+  padding-top: 6px; }
+  .is-mobile .document-replace .document-replace-buttons {
+    flex-shrink: 1;
+    flex-grow: 0; }
+.is-mobile .document-search-container {
+  padding: 8px 0 8px 0;
+  background-color: var(--background-primary);
+  margin: 0 auto 0 auto;
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-left: var(--folding-offset); }
+.is-mobile .document-search,
+.is-mobile .document-replace {
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: calc(var(--max-width) + 2%);
+  width: var(--line-width-adaptive); }
+.is-mobile.minimal-readable-off .document-search,
+.is-mobile.minimal-readable-off .document-replace {
+  width: 100%; }
+.is-mobile .document-search-container input[type='text'] {
+  width: auto;
+  margin: 0 8px 0 0;
+  height: 36px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+  min-width: 90px;
+  border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-primary); }
+.is-mobile .document-search-container .document-search-input[type='text'] {
+  padding-left: 30px; }
+.is-mobile .document-search .document-search-buttons,
+.is-mobile .document-replace button {
+  flex-grow: 0; }
+.is-mobile .document-search-container button.document-search-button {
+  width: auto;
+  margin: 0px;
+  background: transparent;
+  font-size: 14px;
+  height: 36px;
+  padding: 0 2px;
+  white-space: nowrap; }
+.is-mobile .document-search .document-search-close-button,
+.is-mobile .document-replace .document-search-close-button {
+  height: 30px;
+  line-height: 30px; }
 
 .is-mobile span[title="Fold line"]:after,
 .is-mobile .CodeMirror-foldgutter-open:after {
@@ -1462,61 +1513,6 @@ body:not(.native-scrollbars) .mod-left-split .workspace-tabs ::-webkit-scrollbar
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   background-color: var(--background-modifier-border-focus); }
 
-/* Mobile */
-.is-mobile .document-search,
-.is-mobile .document-replace {
-  flex-direction: row; }
-.is-mobile .document-replace {
-  padding-top: 6px; }
-  .is-mobile .document-replace .document-replace-buttons {
-    flex-shrink: 1;
-    flex-grow: 0; }
-.is-mobile .document-search-container {
-  padding: 8px 0 8px 0;
-  background-color: var(--background-primary);
-  margin: 0 auto 0 auto;
-  height: auto;
-  width: 100%;
-  border-bottom: 1px solid var(--background-modifier-border);
-  padding-left: var(--folding-offset); }
-.is-mobile .document-search,
-.is-mobile .document-replace {
-  margin: 0 auto;
-  padding-left: 0;
-  padding-right: 0;
-  max-width: calc(var(--max-width) + 2%);
-  width: var(--line-width-adaptive); }
-.is-mobile.minimal-readable-off .document-search,
-.is-mobile.minimal-readable-off .document-replace {
-  width: 100%; }
-.is-mobile .document-search-container input[type='text'] {
-  width: auto;
-  margin: 0 8px 0 0;
-  height: 36px;
-  padding: 5px 10px 5px 10px;
-  border-radius: 6px;
-  min-width: 90px;
-  border: 1px solid var(--background-modifier-border);
-  background-color: var(--background-primary); }
-.is-mobile .document-search-container .document-search-input[type='text'] {
-  padding-left: 30px; }
-.is-mobile .document-search .document-search-buttons,
-.is-mobile .document-replace button {
-  flex-grow: 0; }
-.is-mobile .document-search-container button.document-search-button {
-  width: auto;
-  margin: 0px;
-  background: transparent;
-  font-size: 14px;
-  height: 36px;
-  padding: 0 2px;
-  white-space: nowrap; }
-.is-mobile .document-search .document-search-close-button,
-.is-mobile .document-replace .document-search-close-button {
-  height: 30px;
-  line-height: 30px; }
-
-/* Range slider input */
 /* Tooltips */
 .tooltip {
   font-size: var(--font-adaptive-smaller);
