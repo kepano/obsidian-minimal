@@ -25,7 +25,6 @@
 /* Components */
 @import 'components/buttons';
 @import 'components/dropdowns';
-@import 'components/file-nav';
 @import 'components/folding';
 @import 'components/icons';
 @import 'components/indentation-guides';
@@ -34,7 +33,7 @@
 @import 'components/modals';
 @import 'components/progress';
 @import 'components/scrollbars';
-@import 'components/search-replace';
+@import 'components/document-search';
 @import 'components/slider';
 @import 'components/toggles';
 @import 'components/tooltips';
@@ -46,7 +45,6 @@
 @import 'content/checklists';
 @import 'content/code-blocks';
 @import 'content/embeds-transclusions';
-@import 'content/fonts';
 @import 'content/footnotes';
 @import 'content/frontmatter';
 @import 'content/links';
@@ -55,6 +53,7 @@
 @import 'content/preview-embedded-search';
 @import 'content/tables';
 @import 'content/tags';
+@import 'content/text';
 
 /* Minimal features */
 @import 'features/active-line';
@@ -90,6 +89,7 @@
 
 /* Core plugins */
 @import 'plugins-core/backlinks-outlinks';
+@import 'plugins-core/file-explorer';
 @import 'plugins-core/graph';
 @import 'plugins-core/outline';
 @import 'plugins-core/page-preview';

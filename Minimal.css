@@ -1030,20 +1030,6 @@ button.mod-warning:hover {
   box-shadow: 0 2px 3px 0px var(--btn-shadow-color);
   transition: background-color 0.2s ease-out; }
 
-/* File browser */
-.is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
-  display: none; }
-
-body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-  font-size: var(--font-adaptive-smaller); }
-
-.nav-buttons-container {
-  justify-content: flex-start; }
-
 .is-mobile span[title="Fold line"]:after,
 .is-mobile .CodeMirror-foldgutter-open:after {
   transform: translateX(-2px) !important; }
@@ -1751,99 +1737,6 @@ ul > li.task-list-item .task-list-item-checkbox {
   border-left: 1px solid var(--quote-opening-modifier);
   border-radius: 0; }
 
-/* Headings and fonts */
-h1, h2, h3, h4, h5, strong {
-  font-weight: var(--bold-weight); }
-
-h1, h2, h3, h4 {
-  letter-spacing: -0.02em; }
-
-body, input, button {
-  font-family: var(--font-interface); }
-
-.cm-s-obsidian span.cm-error {
-  color: var(--red); }
-
-.markdown-preview-view,
-.popover,
-.workspace-leaf-content[data-type=markdown] {
-  font-family: var(--font-text); }
-
-body,
-.markdown-preview-view,
-.markdown-source-view.mod-cm6.is-live-preview .cm-scroller,
-.cm-s-obsidian,
-.cm-s-obsidian .cm-formatting-hashtag {
-  font-size: var(--font-adaptive-normal);
-  font-weight: var(--normal-weight);
-  line-height: var(--line-height);
-  -webkit-font-smoothing: subpixel-antialiased; }
-
-.markdown-source-view.mod-cm6 .cm-scroller,
-.markdown-source-view,
-.cm-s-obsidian .cm-formatting-hashtag,
-.cm-s-obsidian,
-.cm-s-obsidian span.cm-formatting-task {
-  line-height: var(--line-height);
-  font-family: var(--font-editor);
-  -webkit-font-smoothing: subpixel-antialiased; }
-
-/* Use reading font in live preview */
-.lp-reading-font .markdown-source-view.mod-cm6.is-live-preview .cm-scroller {
-  font-family: var(--font-text); }
-
-.cm-s-obsidian span.cm-formatting-task {
-  font-family: var(--font-editor);
-  line-height: var(--line-height); }
-
-.cm-s-obsidian .cm-header,
-.cm-s-obsidian .cm-strong {
-  font-weight: var(--bold-weight); }
-
-strong,
-.cm-s-obsidian .cm-strong {
-  color: var(--text-bold); }
-
-em,
-.cm-s-obsidian .cm-em {
-  color: var(--text-italic); }
-
-.cm-formatting-header,
-.cm-s-obsidian .cm-formatting-header.cm-header-1,
-.cm-s-obsidian .cm-formatting-header.cm-header-2,
-.cm-s-obsidian .cm-formatting-header.cm-header-3,
-.cm-s-obsidian .cm-formatting-header.cm-header-4,
-.cm-s-obsidian .cm-formatting-header.cm-header-5,
-.cm-s-obsidian .cm-formatting-header.cm-header-6 {
-  color: var(--text-faint); }
-
-.view-header-title,
-.file-embed-title,
-.markdown-embed-title {
-  letter-spacing: -0.02em;
-  text-align: left;
-  font-size: var(--title-size);
-  font-weight: var(--title-weight); }
-
-.view-header-title {
-  color: var(--title-color-inactive); }
-
-.file-embed-title,
-.markdown-embed-title,
-.workspace-leaf.mod-active .view-header-title {
-  color: var(--title-color); }
-
-.cm-s-obsidian .HyperMD-header {
-  line-height: 1.3; }
-
-.mod-cm6 .cm-editor .HyperMD-header-1,
-.mod-cm6 .cm-editor .HyperMD-header-2,
-.mod-cm6 .cm-editor .HyperMD-header-3,
-.mod-cm6 .cm-editor .HyperMD-header-4,
-.mod-cm6 .cm-editor .HyperMD-header-5,
-.mod-cm6 .cm-editor .HyperMD-header-6 {
-  padding-top: 0.5em; }
-
 /* Links */
 a {
   color: var(--text-accent);
@@ -2126,6 +2019,89 @@ body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-end {
   border-left: none;
   padding-right: 8px;
   border-right: var(--tag-border-width) solid var(--background-modifier-border); }
+
+/* Headings and fonts */
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em; }
+
+body, input, button {
+  font-family: var(--font-interface); }
+
+.cm-s-obsidian span.cm-error {
+  color: var(--red); }
+
+.markdown-preview-view,
+.popover,
+.workspace-leaf-content[data-type=markdown] {
+  font-family: var(--font-text); }
+
+body,
+.markdown-preview-view,
+.markdown-source-view.mod-cm6.is-live-preview .cm-scroller,
+.cm-s-obsidian,
+.cm-s-obsidian .cm-formatting-hashtag {
+  font-size: var(--font-adaptive-normal);
+  font-weight: var(--normal-weight);
+  line-height: var(--line-height);
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-source-view,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian,
+.cm-s-obsidian span.cm-formatting-task {
+  line-height: var(--line-height);
+  font-family: var(--font-editor);
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+.cm-s-obsidian span.cm-formatting-task {
+  font-family: var(--font-editor);
+  line-height: var(--line-height); }
+
+.cm-s-obsidian .cm-header,
+.cm-s-obsidian .cm-strong {
+  font-weight: var(--bold-weight); }
+
+strong,
+.cm-s-obsidian .cm-strong {
+  color: var(--text-bold); }
+
+em,
+.cm-s-obsidian .cm-em {
+  color: var(--text-italic); }
+
+.cm-formatting-header,
+.cm-s-obsidian .cm-formatting-header.cm-header-1,
+.cm-s-obsidian .cm-formatting-header.cm-header-2,
+.cm-s-obsidian .cm-formatting-header.cm-header-3,
+.cm-s-obsidian .cm-formatting-header.cm-header-4,
+.cm-s-obsidian .cm-formatting-header.cm-header-5,
+.cm-s-obsidian .cm-formatting-header.cm-header-6 {
+  color: var(--text-faint); }
+
+.view-header-title,
+.file-embed-title,
+.markdown-embed-title {
+  letter-spacing: -0.02em;
+  text-align: left;
+  font-size: var(--title-size);
+  font-weight: var(--title-weight); }
+
+.view-header-title {
+  color: var(--title-color-inactive); }
+
+.file-embed-title,
+.markdown-embed-title,
+.workspace-leaf.mod-active .view-header-title {
+  color: var(--title-color); }
+
+.mod-cm6 .cm-editor .HyperMD-header-1,
+.mod-cm6 .cm-editor .HyperMD-header-2,
+.mod-cm6 .cm-editor .HyperMD-header-3,
+.mod-cm6 .cm-editor .HyperMD-header-4,
+.mod-cm6 .cm-editor .HyperMD-header-5,
+.mod-cm6 .cm-editor .HyperMD-header-6 {
+  padding-top: 0.5em; }
 
 /* Minimal features */
 /* Active line highlight */
@@ -4604,6 +4580,20 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   letter-spacing: 0.05em;
   font-size: var(--font-adaptive-smallest);
   font-weight: 500; }
+
+/* File browser */
+.is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  display: none; }
+
+body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-size: var(--font-adaptive-smaller); }
+
+.nav-buttons-container {
+  justify-content: flex-start; }
 
 .is-mobile .suggestion-container .suggestion-item:first-child {
   margin-top: 0; }
