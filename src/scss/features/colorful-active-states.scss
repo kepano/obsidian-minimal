@@ -21,5 +21,11 @@
 }
 
 body:not(.colorful-active) {
-	
+
+	.horizontal-tab-nav-item.is-active,
+	.vertical-tab-nav-item.is-active {
+		background-color: var(--background-modifier-hover);
+		color: var(--text-normal);
+	}
+
 }

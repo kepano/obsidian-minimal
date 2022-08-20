@@ -1,16 +1,14 @@
-.is-mobile .suggestion-container {
-	.suggestion-item {
-		&:first-child {
-			margin-top:0;
-		}
-		&:last-child {
-			margin-bottom:10px;
+.is-mobile {
+	.suggestion-container {
+		.suggestion-item {
+			&:first-child {
+				margin-top:0;
+			}
+			&:last-child {
+				margin-bottom:10px;
+			}
 		}
 	}
-}
-
-/* Mobile */
-.is-mobile {
 
 	.prompt,
 	.suggestion-container {
