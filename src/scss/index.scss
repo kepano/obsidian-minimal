@@ -5,56 +5,56 @@
 @import 'variables/adaptive-font-size';
 
 /* Disabled features */
-@import 'obsidian/disabled';
+@import 'features/disabled';
 
 /* Obsidian */
 @import 'dev/dev-block-width';
 
-/* Obsidian */
-@import 'obsidian/blockquotes';
-@import 'obsidian/callouts';
-@import 'obsidian/checklists';
-@import 'obsidian/code-blocks';
-@import 'obsidian/dragging';
-@import 'obsidian/editor';
-@import 'obsidian/editor-legacy';
-@import 'obsidian/embeds-transclusions';
-@import 'obsidian/fonts';
-@import 'obsidian/footnotes';
-@import 'obsidian/frontmatter';
-@import 'obsidian/file-nav';
-@import 'obsidian/folding';
-@import 'obsidian/icons';
-@import 'obsidian/indentation-guides';
-@import 'obsidian/links';
-@import 'obsidian/lists';
-@import 'obsidian/modals';
-@import 'obsidian/menus';
-@import 'obsidian/preview';
-@import 'obsidian/preview-backlinks';
-@import 'obsidian/preview-embedded-search';
-@import 'obsidian/ribbon';
-@import 'obsidian/scrollbars';
-@import 'obsidian/search-replace';
-@import 'obsidian/settings';
-@import 'obsidian/status-bar';
-@import 'obsidian/syntax';
-@import 'obsidian/tables';
-@import 'obsidian/tags';
-@import 'obsidian/tag-pane';
-@import 'obsidian/tooltips';
-@import 'obsidian/title-bar';
-@import 'obsidian/window-frame';
-@import 'obsidian/workspace';
+/* Obsidian app */
+@import 'app/dragging';
+@import 'app/editor';
+@import 'app/editor-legacy';
+@import 'app/preview';
+@import 'app/ribbon';
+@import 'app/settings';
+@import 'app/status-bar';
+@import 'app/title-bar';
+@import 'app/window-frame';
+@import 'app/workspace';
 
 /* Components */
-@import 'components/audio';
 @import 'components/buttons';
 @import 'components/dropdowns';
+@import 'components/file-nav';
+@import 'components/folding';
+@import 'components/icons';
+@import 'components/indentation-guides';
 @import 'components/inputs';
+@import 'components/menus';
+@import 'components/modals';
 @import 'components/progress';
+@import 'components/scrollbars';
+@import 'components/search-replace';
 @import 'components/slider';
 @import 'components/toggles';
+@import 'components/tooltips';
+
+/* Content */
+@import 'content/audio';
+@import 'content/blockquotes';
+@import 'content/callouts';
+@import 'content/checklists';
+@import 'content/code-blocks';
+@import 'content/embeds-transclusions';
+@import 'content/fonts';
+@import 'content/footnotes';
+@import 'content/frontmatter';
+@import 'content/links';
+@import 'content/lists';
+@import 'content/preview-backlinks';
+@import 'content/preview-embedded-search';
+@import 'content/tables';
+@import 'content/tags';
 
 /* Minimal features */
 @import 'features/active-line';
@@ -97,6 +97,7 @@
 @import 'plugins-core/publish';
 @import 'plugins-core/search';
 @import 'plugins-core/sync';
+@import 'plugins-core/tag-pane';
 
 /* Community plugins */
 @import 'plugins/banner';
