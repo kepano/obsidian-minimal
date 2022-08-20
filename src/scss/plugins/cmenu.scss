@@ -9,3 +9,8 @@ body #cMenuModalBar .cMenuCommandItem {
 body #cMenuModalBar button.cMenuCommandItem:hover {
 	background-color:var(--background-modifier-hover);
 }
+
+.MiniSettings-statusbar-button {
+	padding-top:0;
+	padding-bottom:0;
+}

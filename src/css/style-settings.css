@@ -1117,14 +1117,14 @@ settings:
         default-light: '#'
         default-dark: '#'
     - 
-        id: text-italic
+        id: italic-color
         title: Italic text color
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: text-bold
+        id: bold-color
         title: Bold text color
         type: variable-themed-color
         format: hex

@@ -907,55 +907,41 @@ span.cm-image-marker,
   margin-block-start: 1em;
   margin-block-end: var(--spacing-p); }
 
-.markdown-preview-view hr {
-  height: 1px;
-  border-width: 2px 0 0 0; }
-
-iframe {
-  border: 0; }
-
 .markdown-preview-view .mod-highlighted {
   transition: background-color 0.3s ease;
   background-color: var(--text-selection);
   color: inherit; }
 
 /* Status bar */
-.status-bar {
-  transition: color 200ms linear;
-  color: var(--text-faint);
-  font-size: var(--font-adaptive-smaller); }
-
 .minimal-status-off .status-bar {
   --status-bar-position: static;
   --status-bar-radius: 0;
-  --status-bar-border-widths: 1px 0 0 0;
+  --status-bar-border-width: 1px 0 0 0;
   --status-bar-background: var(--background-secondary);
-  --status-bar-border-color: var(--ui1);
-  gap: var(--size-4-1); }
+  --status-bar-border-color: var(--ui1); }
 
 body:not(.minimal-status-off) .status-bar {
   background-color: var(--background-primary);
-  --status-bar-border-widths: 0; }
+  --status-bar-border-width: 0; }
 
-.sync-status-icon.mod-working,
-.sync-status-icon.mod-success {
-  color: var(--text-faint); }
-
-.status-bar:hover .sync-status-icon.mod-working,
-.status-bar:hover .sync-status-icon.mod-success,
-.status-bar:hover {
-  color: var(--text-muted);
-  transition: color 200ms linear; }
-
-.status-bar .plugin-sync:hover .sync-status-icon.mod-working,
-.status-bar .plugin-sync:hover .sync-status-icon.mod-success {
-  color: var(--text-normal); }
-
-.status-bar-item {
-  cursor: var(--cursor) !important; }
-  .status-bar-item.plugin-editor-status:hover, .status-bar-item.plugin-sync:hover, .status-bar-item.cMenu-statusbar-button:hover, .status-bar-item.mod-clickable:hover {
-    text-align: center;
-    background-color: var(--background-modifier-hover) !important; }
+.status-bar {
+  transition: color 200ms linear;
+  color: var(--text-faint);
+  font-size: var(--font-adaptive-smallest); }
+  .status-bar .sync-status-icon.mod-working,
+  .status-bar .sync-status-icon.mod-success {
+    color: var(--text-faint); }
+  .status-bar:hover .sync-status-icon.mod-working, .status-bar:hover .sync-status-icon.mod-success, .status-bar:hover {
+    color: var(--text-muted);
+    transition: color 200ms linear; }
+  .status-bar .plugin-sync:hover .sync-status-icon.mod-working,
+  .status-bar .plugin-sync:hover .sync-status-icon.mod-success {
+    color: var(--text-normal); }
+  .status-bar .status-bar-item {
+    cursor: var(--cursor) !important; }
+    .status-bar .status-bar-item.plugin-editor-status:hover, .status-bar .status-bar-item.plugin-sync:hover, .status-bar .status-bar-item.cMenu-statusbar-button:hover, .status-bar .status-bar-item.mod-clickable:hover {
+      text-align: center;
+      background-color: var(--background-modifier-hover) !important; }
 
 /* Title Bar */
 /* Alignment */
@@ -1596,26 +1582,16 @@ body {
 body.minimal-strike-lists {
   --checklist-done-decoration: line-through; }
 
-body.minimal-strike-lists {
-  --checklist-done-decoration: none; }
+body:not(.minimal-strike-lists) {
+  --checklist-done-decoration: none;
+  --checklist-done-color: var(--text-normal); }
 
 input[type=checkbox] {
-  -webkit-appearance: none;
-  appearance: none;
-  border: 1px solid var(--text-faint);
   padding: 0;
   margin: 0 6px 0 0; }
 
-input[type=checkbox]:hover,
-input[type=checkbox]:focus {
-  outline: 0;
-  border-color: var(--text-muted); }
-
-.checklist-plugin-main .group .compact > .toggle .checked,
 .is-flashing input[type=checkbox]:checked,
 input[type=checkbox]:checked {
-  background-color: var(--background-modifier-accent);
-  border: 1px solid var(--background-modifier-accent);
   background-position: 44% 55%;
   background-size: 70%;
   background-repeat: no-repeat;
@@ -1623,11 +1599,6 @@ input[type=checkbox]:checked {
 
 .markdown-preview-section > .contains-task-list {
   padding-bottom: 0.5em; }
-
-body .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
-body .markdown-preview-view ul > li.task-list-item.is-checked {
-  text-decoration: none;
-  color: var(--text-normal); }
 
 /* Preview offset */
 ul > li.task-list-item .task-list-item-checkbox {
@@ -2038,8 +2009,7 @@ body,
 .cm-s-obsidian .cm-formatting-hashtag {
   font-size: var(--font-adaptive-normal);
   font-weight: var(--normal-weight);
-  line-height: var(--line-height);
-  -webkit-font-smoothing: subpixel-antialiased; }
+  line-height: var(--line-height); }
 
 .markdown-source-view.mod-cm6 .cm-scroller,
 .markdown-source-view,
@@ -2047,33 +2017,11 @@ body,
 .cm-s-obsidian,
 .cm-s-obsidian span.cm-formatting-task {
   line-height: var(--line-height);
-  font-family: var(--font-editor);
-  -webkit-font-smoothing: subpixel-antialiased; }
+  font-family: var(--font-editor); }
 
 .cm-s-obsidian span.cm-formatting-task {
   font-family: var(--font-editor);
   line-height: var(--line-height); }
-
-.cm-s-obsidian .cm-header,
-.cm-s-obsidian .cm-strong {
-  font-weight: var(--bold-weight); }
-
-strong,
-.cm-s-obsidian .cm-strong {
-  color: var(--text-bold); }
-
-em,
-.cm-s-obsidian .cm-em {
-  color: var(--text-italic); }
-
-.cm-formatting-header,
-.cm-s-obsidian .cm-formatting-header.cm-header-1,
-.cm-s-obsidian .cm-formatting-header.cm-header-2,
-.cm-s-obsidian .cm-formatting-header.cm-header-3,
-.cm-s-obsidian .cm-formatting-header.cm-header-4,
-.cm-s-obsidian .cm-formatting-header.cm-header-5,
-.cm-s-obsidian .cm-formatting-header.cm-header-6 {
-  color: var(--text-faint); }
 
 .view-header-title,
 .file-embed-title,
@@ -5051,6 +4999,10 @@ body #cMenuModalBar .cMenuCommandItem {
 
 body #cMenuModalBar button.cMenuCommandItem:hover {
   background-color: var(--background-modifier-hover); }
+
+.MiniSettings-statusbar-button {
+  padding-top: 0;
+  padding-bottom: 0; }
 
 /* Contextual Typography */
 .el-hr hr {
@@ -8182,14 +8134,14 @@ settings:
         default-light: '#'
         default-dark: '#'
     - 
-        id: text-italic
+        id: italic-color
         title: Italic text color
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: text-bold
+        id: bold-color
         title: Bold text color
         type: variable-themed-color
         format: hex

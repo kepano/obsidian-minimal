@@ -18,26 +18,16 @@ body {
 body.minimal-strike-lists {
 	--checklist-done-decoration: line-through;
 }
-body.minimal-strike-lists {
+body:not(.minimal-strike-lists) {
 	--checklist-done-decoration: none;
+	--checklist-done-color: var(--text-normal);
 }
 input[type=checkbox] {
-	-webkit-appearance: none;
-	appearance: none;
-	border: 1px solid var(--text-faint);
 	padding: 0;
 	margin: 0 6px 0 0;
 }
-input[type=checkbox]:hover,
-input[type=checkbox]:focus {
-	outline: 0;
-	border-color: var(--text-muted);
-}
-.checklist-plugin-main .group .compact > .toggle .checked,
 .is-flashing input[type=checkbox]:checked,
 input[type=checkbox]:checked {
-	background-color: var(--background-modifier-accent);
-	border: 1px solid var(--background-modifier-accent);
 	background-position: 44% 55%;
 	background-size: 70%;
 	background-repeat: no-repeat;
@@ -45,11 +35,6 @@ input[type=checkbox]:checked {
 }
 .markdown-preview-section > .contains-task-list {
 	padding-bottom: 0.5em;
-}
-body .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
-body .markdown-preview-view ul > li.task-list-item.is-checked {
-	text-decoration: none;
-	color: var(--text-normal);
 }
 
 /* Preview offset */
@@ -60,7 +45,6 @@ ul > li.task-list-item .task-list-item-checkbox {
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
 	margin: -2px 1px 0 -0.6em;
 }
-
 .markdown-preview-view .task-list-item-checkbox {
 	position: relative;
 	top: var(--checkbox-top);
@@ -75,8 +59,6 @@ ul > li.task-list-item .task-list-item-checkbox {
 .markdown-preview-view .task-list-item {
 	padding-inline-start: 0;
 }
-
-
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
 	margin-left: -0.4em;
 }

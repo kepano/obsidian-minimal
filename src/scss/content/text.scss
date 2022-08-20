@@ -22,7 +22,6 @@ body,
 	font-size:var(--font-adaptive-normal);
 	font-weight:var(--normal-weight);
 	line-height:var(--line-height);
-	-webkit-font-smoothing:subpixel-antialiased;
 }
 
 .markdown-source-view.mod-cm6 .cm-scroller,
@@ -32,34 +31,13 @@ body,
 .cm-s-obsidian span.cm-formatting-task {
 	line-height:var(--line-height);
 	font-family:var(--font-editor);
-	-webkit-font-smoothing:subpixel-antialiased;
 }
 
 .cm-s-obsidian span.cm-formatting-task {
 	font-family:var(--font-editor);
 	line-height:var(--line-height);
 }
-.cm-s-obsidian .cm-header,
-.cm-s-obsidian .cm-strong {
-	font-weight:var(--bold-weight);
-}
-strong,
-.cm-s-obsidian .cm-strong {
-	color:var(--text-bold);
-}
-em,
-.cm-s-obsidian .cm-em {
-	color:var(--text-italic);
-}
-.cm-formatting-header,
-.cm-s-obsidian .cm-formatting-header.cm-header-1,
-.cm-s-obsidian .cm-formatting-header.cm-header-2,
-.cm-s-obsidian .cm-formatting-header.cm-header-3,
-.cm-s-obsidian .cm-formatting-header.cm-header-4,
-.cm-s-obsidian .cm-formatting-header.cm-header-5,
-.cm-s-obsidian .cm-formatting-header.cm-header-6 {
-	color:var(--text-faint);
-}
+
 .view-header-title,
 .file-embed-title,
 .markdown-embed-title {
