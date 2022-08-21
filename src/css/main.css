@@ -2968,7 +2968,7 @@ https://github.com/sponsors/kepano
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-inner-title {
   display: inline-block;
   font-weight: 500;
-  font-size: var(--font-small); }
+  font-size: var(--font-adaptive-smaller); }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
   flex-direction: column-reverse !important;
   height: auto;
@@ -5128,38 +5128,29 @@ body .excalidraw.theme--dark {
 
 body .excalidraw .App-toolbar-container .ToolIcon_type_floating:not(.is-mobile) .ToolIcon__icon {
   box-shadow: none; }
-
 body .excalidraw button,
 body .excalidraw .buttonList label {
   cursor: var(--cursor); }
-
 body .excalidraw .Dialog__title {
   font-variant: normal; }
-
 body .excalidraw .reset-zoom-button,
 body .excalidraw .HintViewer {
   color: var(--text-muted);
-  font-size: var(--font-small); }
-
+  font-size: var(--font-adaptive-smaller); }
 body .excalidraw .reset-zoom-button {
   padding-left: 1em;
   padding-right: 1em; }
-
 body .excalidraw .HintViewer > span {
   background-color: transparent; }
-
 body .excalidraw button:hover {
   box-shadow: none; }
-
 body .excalidraw .Island {
   box-shadow: none;
   border: 1px solid var(--background-modifier-border); }
-
 body .excalidraw .ToolIcon {
   cursor: var(--cursor);
   font-family: var(--font-interface);
   background-color: transparent; }
-
 body .excalidraw label.ToolIcon {
   cursor: var(--cursor);
   background-color: transparent; }
@@ -6106,7 +6097,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   padding: 0.5em 0; }
 
 .workspace-split:not(.mod-root) .workspace-leaf-content[data-type="style-settings"] .setting-item-name {
-  font-size: var(--font-small); }
+  font-size: var(--font-adaptive-smaller); }
 
 .setting-item .style-settings-import,
 .setting-item .style-settings-export {

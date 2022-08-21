@@ -22,41 +22,45 @@ body .excalidraw.theme--dark {
 .workspace-leaf-content[data-type=excalidraw] .view-header .view-header-title-container {
 	width:auto;
 }
-body .excalidraw .App-toolbar-container .ToolIcon_type_floating:not(.is-mobile) .ToolIcon__icon {
-	box-shadow:none;
-}
-body .excalidraw button,
-body .excalidraw .buttonList label {
-	cursor:var(--cursor);
-}
-body .excalidraw .Dialog__title {
-	font-variant:normal;
-}
-body .excalidraw .reset-zoom-button,
-body .excalidraw .HintViewer {
-	color:var(--text-muted);
-	font-size:var(--font-small);
-}
-body .excalidraw .reset-zoom-button {
-	padding-left:1em;
-	padding-right:1em;
-}
-body .excalidraw .HintViewer>span {
-	background-color:transparent;
-}
-body .excalidraw button:hover {
-	box-shadow:none;
-}
-body .excalidraw .Island {
-	box-shadow:none;
-	border:1px solid var(--background-modifier-border);
-}
-body .excalidraw .ToolIcon {
-	cursor:var(--cursor);
-	font-family:var(--font-interface);
-	background-color:transparent;
-}
-body .excalidraw label.ToolIcon {
-	cursor:var(--cursor);
-	background-color:transparent;
+
+body .excalidraw {
+
+	.App-toolbar-container .ToolIcon_type_floating:not(.is-mobile) .ToolIcon__icon {
+		box-shadow:none;
+	}
+	button,
+	.buttonList label {
+		cursor:var(--cursor);
+	}
+	.Dialog__title {
+		font-variant:normal;
+	}
+	.reset-zoom-button,
+	.HintViewer {
+		color:var(--text-muted);
+		font-size:var(--font-adaptive-smaller);
+	}
+	.reset-zoom-button {
+		padding-left:1em;
+		padding-right:1em;
+	}
+	.HintViewer>span {
+		background-color:transparent;
+	}
+	button:hover {
+		box-shadow:none;
+	}
+	.Island {
+		box-shadow:none;
+		border:1px solid var(--background-modifier-border);
+	}
+	.ToolIcon {
+		cursor:var(--cursor);
+		font-family:var(--font-interface);
+		background-color:transparent;
+	}
+	label.ToolIcon {
+		cursor:var(--cursor);
+		background-color:transparent;
+	}
 }
