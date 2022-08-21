@@ -1,4 +1,4 @@
-![](cover.png)
+![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/cover.png)
 
 Find detailed documentation at [minimal.guide](https://minimal.guide)
 
@@ -36,23 +36,23 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 **Background styles** include low contrast, high contrast, and a true black option ideal for OLED devices
 
-![](assets/minimal-variants.png)
+![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-variants.png)
 
 **Helper classes** for tables and card layouts allow you to create powerful workflows
 
-![](assets/minimal-movies.png)
+![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-movies.png)
 
 Combining **focus mode** with **image grid** and **image width** options allows you to immerse yourself in visual projects
 
-![](assets/minimal-img-grid.png)
+![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-img-grid.png)
 
 Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, **Sliding Panes**, [and more](#plugin-support)
 
-![](assets/minimal-plugins.png)
+![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-plugins.png)
 
 Every screen in the Obsidian app has been revised to create a cohesive experience, including **settings**, **plugin browser**, **sync**, **publish**, and **file recovery**
 
-![](assets/minimal-modals.png)
+![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-modals.png)
 
 ## Installation
 
