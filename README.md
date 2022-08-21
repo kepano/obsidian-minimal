@@ -331,6 +331,6 @@ Minimal for Obsidian Publish is a separate version of Minimal which follows the 
 
 ## Disclaimer
 
-This theme is provided as is, and is designed for my personal use of Obsidian on Mac OS. As such it is not thoroughly tested across all operating systems and use cases. 
+This theme is provided as is, and is designed for my personal use of Obsidian on macOS. As such it is not thoroughly tested across all operating systems and use cases. 
 
 This theme modifies significant parts of the Obsidian interface, so it may break with future updates. It may also be incompatible with other bits of custom CSS you have.
