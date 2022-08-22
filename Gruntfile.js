@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         concat_css: {
             dist: {
                 files: {
-                  'obsidian.css': ['src/css/license.css','src/css/main.min.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
+                  'theme.css': ['src/css/license.css','src/css/main.min.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
                 }
             },
             unminified: {
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
         copy: {
             local: { 
                 expand: true,
-                src: 'obsidian.css',
+                src: 'theme.css',
                 dest: process.env.HOME + process.env.OBSIDIAN_PATH,
                 rename: function(dest, src) {
                    return dest + 'Minimal.css';
