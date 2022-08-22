@@ -84,7 +84,7 @@ module.exports = function(grunt) {
                 src: 'theme.css',
                 dest: process.env.HOME + process.env.OBSIDIAN_PATH,
                 rename: function(dest, src) {
-                   return dest + 'Minimal.css';
+                   return dest + 'theme.css';
                 } 
             }
         },

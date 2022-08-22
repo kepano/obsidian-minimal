@@ -97,37 +97,31 @@ The colors use HSL (hue, saturation, lightness)
 - Lightness (0-100%):0% is black, 100% is white
 
 */
-:root {
-  --base-h:0;
+body {
+  --base-h: 0;
   /* Base hue */
-  --base-s:0%;
+  --base-s: 0%;
   /* Base saturation */
-  --base-d:15%;
-  /* Base lightness Dark Mode  - 0 is black */
-  --base-l:96%;
-  /* Base lightness Light Mode  - 100 is white */
-  --accent-h:201;
+  --base-l: 96%;
+  /* Base lightness - 100 is white */
+  --accent-h: 201;
   /* Accent hue */
-  --accent-s:17%;
+  --accent-s: 17%;
   /* Accent saturation */
-  --accent-d:60%;
-  /* Accent lightness Dark Mode */
-  --accent-l:50%;
-  /* Accent lightness Light Mode */
-  --red:#d04255;
-  --yellow:#e5b567;
-  --green:#a8c373;
-  --orange:#d5763f;
-  --cyan:#73bbb2;
-  --blue:#6c99bb;
-  --purple:#9e86c8;
-  --pink:#b05279; }
+  --accent-l: 50%;
+  /* Accent lightness */
+  --red: #d04255;
+  --yellow: #e5b567;
+  --green: #a8c373;
+  --orange: #d5763f;
+  --cyan: #73bbb2;
+  --blue: #6c99bb;
+  --purple: #9e86c8;
+  --pink: #b05279; }
 
 .theme-light,
 .theme-light.minimal-default-light,
 body .excalidraw {
-  --accent-l:50%;
-  --base-l:96%;
   --bg1:white;
   --bg2:
   hsl(
@@ -1665,48 +1659,11 @@ ul > li.task-list-item .task-list-item-checkbox {
   border-radius: 0; }
 
 /* Links */
-a {
-  color: var(--text-accent);
-  font-weight: var(--link-weight); }
-
-strong a {
-  color: var(--text-accent);
-  font-weight: var(--bold-weight); }
-
 a[href*="obsidian://search"] {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'><path fill='black' stroke='black' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'></path></svg>"); }
 
 .theme-dark a[href*="obsidian://search"] {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'><path fill='white' stroke='white' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'></path></svg>"); }
-
-.cm-s-obsidian span.cm-url:hover,
-.is-live-preview.cm-s-obsidian span.cm-hmd-internal-link:hover,
-.is-live-preview.cm-s-obsidian span.cm-url:hover,
-.is-live-preview.cm-s-obsidian span.cm-link:hover {
-  color: var(--text-accent-hover); }
-
-a em,
-.cm-s-obsidian span.cm-url,
-.cm-s-obsidian .cm-url,
-.cm-s-obsidian .cm-active .cm-url,
-.is-live-preview.cm-s-obsidian .cm-link,
-.cm-s-obsidian.mod-cm6 .cm-hmd-internal-link {
-  color: var(--text-accent); }
-
-.cm-url,
-.cm-link,
-.cm-hmd-internal-link {
-  font-weight: var(--link-weight); }
-
-.cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink,
-.cm-s-obsidian span.cm-link.cm-hmd-barelink,
-.cm-s-obsidian span.cm-link.cm-hmd-barelink:hover {
-  color: var(--text-normal); }
-
-.cm-s-obsidian .cm-active .cm-formatting.cm-formatting-link,
-.cm-s-obsidian span.cm-image-alt-text.cm-link,
-.cm-s-obsidian:not(.is-live-preview) .cm-formatting-link + span.cm-link {
-  color: var(--text-muted); }
 
 /* Reader Mode Lists  */
 div > ol,
@@ -3481,24 +3438,15 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
 /* Links and underline handling*/
 body:not(.links-int-on) a[href*="obsidian://"],
 body:not(.links-int-on) .markdown-preview-view .internal-link,
-body:not(.links-ext-on) .external-link,
-body:not(.links-ext-on) .cm-link .cm-underline,
-body:not(.links-ext-on) .cm-s-obsidian span.cm-url,
 body:not(.links-int-on) .cm-hmd-internal-link .cm-underline,
 body:not(.links-int-on) a.internal-link,
 body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
-  text-decoration: none; }
+  --link-decoration: none; }
 
-.links-int-on .is-live-preview .cm-hmd-internal-link,
-.links-int-on .markdown-preview-view .internal-link,
-.links-int-on .cm-s-obsidian span.cm-hmd-internal-link,
-.markdown-preview-view .internal-link {
-  text-decoration: underline; }
-
-.links-ext-on .external-link,
-.external-link {
-  background-position-y: center;
-  text-decoration: underline; }
+body:not(.links-ext-on) .external-link,
+body:not(.links-ext-on) .cm-link .cm-underline,
+body:not(.links-ext-on) .cm-s-obsidian span.cm-url {
+  --link-external-decoration: none; }
 
 /* Scroll indicator for sidebar containers
 body:not(.is-translucent):not(.is-mobile) .mod-left-split .item-list,

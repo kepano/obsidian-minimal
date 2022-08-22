@@ -15,33 +15,28 @@ The colors use HSL (hue, saturation, lightness)
 
 */
 
-:root {
-	--base-h:0;       /* Base hue */
-	--base-s:0%;      /* Base saturation */
-	--base-d:15%;     /* Base lightness Dark Mode  - 0 is black */
-	--base-l:96%;     /* Base lightness Light Mode  - 100 is white */
+body {
+	--base-h: 0;       /* Base hue */
+	--base-s: 0%;      /* Base saturation */
+	--base-l: 96%;     /* Base lightness - 100 is white */
 
-	--accent-h:201;   /* Accent hue */
-	--accent-s:17%;   /* Accent saturation */
-	--accent-d:60%;   /* Accent lightness Dark Mode */
-	--accent-l:50%;   /* Accent lightness Light Mode */
+	--accent-h: 201;   /* Accent hue */
+	--accent-s: 17%;   /* Accent saturation */
+	--accent-l: 50%;   /* Accent lightness */
 
-	--red:#d04255;
-	--yellow:#e5b567;
-	--green:#a8c373;
-	--orange:#d5763f;
-	--cyan:#73bbb2;
-	--blue:#6c99bb;
-	--purple:#9e86c8;
-	--pink:#b05279;
+	--red: #d04255;
+	--yellow: #e5b567;
+	--green: #a8c373;
+	--orange: #d5763f;
+	--cyan: #73bbb2;
+	--blue: #6c99bb;
+	--purple: #9e86c8;
+	--pink: #b05279;
 }
 
 .theme-light,
 .theme-light.minimal-default-light,
 body .excalidraw {
-
-	--accent-l:50%;
-	--base-l:96%;
 
 	--bg1:white;
 
