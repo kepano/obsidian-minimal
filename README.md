@@ -1,8 +1,8 @@
-![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/cover.png)
+[![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/cover.png)](https://minimal.guide)
 
 Find detailed documentation at [minimal.guide](https://minimal.guide)
 
-Minimal is an [Obsidian](https://obsidian.md/) interface replacement meticulously designed to feel native on desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider). Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217) ✨ 
+Minimal is an [Obsidian](https://obsidian.md/) theme for desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider). Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217) ✨ 
 
 Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or [Buy me a coffee](https://www.buymeacoffee.com/kepano)
 
@@ -10,7 +10,6 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 ## About Minimal
 
-- [Goals](#goals)
 - [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Companion plugins](#companion-plugins)
@@ -24,13 +23,6 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 - [Developers](#developers)
 - [License](#license)
 - [Disclaimer](#disclaimer)
-
-## Goals
-
-- Simplify the Obsidian UI for a more focused editing experience
-- Follow native interface guidelines for MacOS, iOS and iPadOS
-- Make it easy to customize colors, fonts, and display features
-- Add advanced layout options for data-rich notes, such as card view, image grids, and full-width tables
 
 ## Screenshots
 
@@ -282,14 +274,6 @@ If you would like add support for a plugin, or have found a bug you'd like to he
 ### Plugin support
 
 Plugin authors and developers can add support for Minimal theme by submitting a pull request. See the [src/scss/plugins](https://github.com/kepano/obsidian-minimal/tree/master/src/scss/plugins) folder with examples of snippets for plugins that are currently supported.
-
-### Localization
-
-By default the **Text labels for primary navigation** feature uses English labels. To use this feature in another language, you will need to install a translation snippet such as the ones found in the [translations folder](https://github.com/kepano/obsidian-minimal/tree/master/translations). If your language is not yet supported you can contribute a new translation. Create a snippet that matches the `aria-label` values to your language, and add the two letter language code suffix added to the file name. [Here is an example of the French translation](https://github.com/kepano/obsidian-minimal/blob/master/translations/nav-labels-fr.css).
-
-Localization can also be added to Style Settings, [see instructions](https://github.com/mgmeyers/obsidian-style-settings#localization-support).
-
-Feel free to submit your contribution as a pull request, or send them to me directly.
 
 ## Developers
 
