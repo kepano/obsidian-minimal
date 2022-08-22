@@ -1584,13 +1584,6 @@ input[type=checkbox] {
   padding: 0;
   margin: 0 6px 0 0; }
 
-.is-flashing input[type=checkbox]:checked,
-input[type=checkbox]:checked {
-  background-position: 44% 55%;
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>'); }
-
 .markdown-preview-section > .contains-task-list {
   padding-bottom: 0.5em; }
 
@@ -2279,6 +2272,7 @@ li[data-task="d"] > p > input:checked,
 li[data-task="w"] > p > input:checked,
 li[data-task="c"] > p > input:checked,
 li[data-task="b"] > p > input:checked {
+  --checkbox-marker-color: transparent;
   border: none;
   border-radius: 0;
   background-image: none;
@@ -2307,6 +2301,7 @@ li[data-task="<"] > p > input:checked {
 input[data-task="?"]:checked,
 li[data-task="?"] > input:checked,
 li[data-task="?"] > p > input:checked {
+  --checkbox-marker-color: transparent;
   background-color: var(--yellow);
   border-color: var(--yellow);
   background-position: 50% 50%;
@@ -2328,12 +2323,15 @@ li[data-task="/"] > p > input:checked {
   input[data-task="/"]:checked:after,
   li[data-task="/"] > input:checked:after,
   li[data-task="/"] > p > input:checked:after {
+    top: 0;
+    left: 0;
     content: " ";
     display: block;
     position: absolute;
     background-color: var(--background-modifier-accent);
     width: calc(50% - 0.5px);
-    height: 100%; }
+    height: 100%;
+    -webkit-mask-image: none; }
 
 /* [!] Important */
 input[data-task="!"]:checked,
@@ -2349,10 +2347,12 @@ li[data-task="“"] > p > input:checked,
 input[data-task="\""]:checked,
 li[data-task="\""] > input:checked,
 li[data-task="\""] > p > input:checked {
+  --checkbox-marker-color: transparent;
   background-position: 50% 50%;
   background-color: var(--cyan);
   border-color: var(--cyan);
   background-size: 75%;
+  background-repeat: no-repeat;
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="white" d="M6.5 10c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.318.142-.686.238-1.028.466c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.945c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 6.5 10zm11 0c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.317.143-.686.238-1.028.467c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.944c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 17.5 10z"%2F%3E%3C%2Fsvg%3E'); }
 .theme-dark input[data-task="“"]:checked,
 .theme-dark li[data-task="“"] > input:checked,
@@ -2393,6 +2393,7 @@ li[data-task="l"] > p > input:checked {
 input[data-task="i"]:checked,
 li[data-task="i"] > input:checked,
 li[data-task="i"] > p > input:checked {
+  --checkbox-marker-color: transparent;
   background-color: var(--blue);
   border-color: var(--blue);
   background-position: 50%;
@@ -2407,6 +2408,7 @@ li[data-task="i"] > p > input:checked {
 input[data-task="S"]:checked,
 li[data-task="S"] > input:checked,
 li[data-task="S"] > p > input:checked {
+  --checkbox-marker-color: transparent;
   border-color: var(--green);
   background-color: var(--green);
   background-size: 100%;
