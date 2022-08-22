@@ -1,0 +1,42 @@
+/* Blockquotes */
+
+/* Preview */
+.markdown-preview-view blockquote {
+	border-radius:0;
+	border:solid var(--quote-opening-modifier);
+	border-width:0px 0px 0px 1px;
+	background-color:transparent;
+	padding:0 0 0 var(--nested-padding);
+	margin-inline-start:0;
+	margin-inline-end:0;
+	font-size:var(--blockquote-size);
+	font-style:var(--blockquote-style);
+	color:var(--text-blockquote);
+}
+.cm-s-obsidian span.cm-quote,
+.markdown-preview-view blockquote em,
+.markdown-preview-view blockquote strong {
+	color:var(--text-blockquote);
+}
+
+/* Editor */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote,
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+	background-color:transparent;
+	color:var(--text-blockquote);
+	font-size:var(--blockquote-size);
+	font-style:var(--blockquote-style);
+	border-left:1px solid var(--quote-opening-modifier);
+}
+.markdown-source-view.mod-cm6 .cm-blockquote-border {
+	width:20px;
+	display:inline-block;
+	border-left:none;
+	border-right:1px solid var(--quote-opening-modifier);
+}
+.markdown-source-view.mod-cm6 .cm-hmd-indent-in-quote {
+	margin-left:10px;
+}
+.is-live-preview .cm-hmd-indent-in-quote {
+	color:var(--text-faint);
+}

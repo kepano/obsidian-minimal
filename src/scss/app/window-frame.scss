@@ -1,0 +1,55 @@
+/* Window frame */
+body:not(.window-title-on) .titlebar-text {
+  display:none;
+}
+
+.is-hidden-frameless {
+	--titlebar-background: var(--bg-1);
+	&.is-focused {
+		.sidebar-toggle-button.mod-right,
+		.workspace-ribbon.mod-left,
+		.workspace-tabs.mod-top {
+			--titlebar-background-focused: var(--bg1);
+		}
+	}
+}
+
+/* Trying for a smoother animation */
+.mod-macos.is-hidden-frameless:not(.is-popout-window) {
+	.sidebar-toggle-button.mod-right {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: var(--layer-popover);
+		background-color: var(--titlebar-background);
+	}
+	.workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+		padding-right: 36px;
+	}
+}
+
+body {
+	&.is-focused {
+		--titlebar-background-focused: var(--bg2);
+	}
+	.mod-right-split {
+		--background-secondary: var(--background-primary);
+
+		:not(.mod-top) .workspace-tab-header-container {
+			--tab-container-background: var(--background-primary);
+		}
+	}
+}
+
+.is-hidden-frameless {
+	.mod-left-split {
+		.mod-top .workspace-tab-header-container {
+			--tab-container-background: var(--background-secondary);
+		}
+	}
+	/*.mod-right-split {
+		.workspace-tab-header-container {
+			--tab-container-background: var(--background-primary);
+		}
+	}*/
+}

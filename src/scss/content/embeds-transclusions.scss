@@ -1,0 +1,82 @@
+/* Transcluded notes and embeds */
+
+/* Strict embeds (naked) */
+
+.embed-strict .internal-embed .markdown-embed {
+	padding:0;
+	border:none;
+}
+.embed-strict .internal-embed .markdown-embed .markdown-embed-title {
+	display:none;
+}
+.embed-strict .internal-embed:not([src*="#^"]) .markdown-embed-link {
+	width:30px;
+}
+.embed-strict.contextual-typography .internal-embed .markdown-preview-view .markdown-preview-sizer>div,
+.contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer>div {
+	margin:0;
+	width:100%;
+}
+
+
+
+.markdown-embed .markdown-preview-view .markdown-preview-sizer {
+	padding-bottom:0 !important;
+}
+.markdown-preview-view.markdown-embed .markdown-preview-sizer,
+.markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
+	max-width:100%;
+	width:100%;
+	min-height:0 !important;
+	padding-bottom:0 !important;
+}
+
+.markdown-embed .markdown-preview-section div:last-child p,
+.markdown-embed .markdown-preview-section div:last-child ul {
+	margin-block-end:2px;
+}
+
+.markdown-preview-view .markdown-embed {
+	margin-top:var(--nested-padding);
+	padding:0 calc(var(--nested-padding) / 2) 0 var(--nested-padding);
+}
+.markdown-embed-title {
+	line-height:18px;
+	height:24px;
+}
+.internal-embed:not([src*="#^"]) .markdown-embed-link {
+	right:0;
+	width:100%;
+}
+.markdown-embed-link,
+.file-embed-link {
+	top:0px;
+	right:0;
+	text-align:right;
+}
+.file-embed-link svg,
+.markdown-embed-link svg {
+	width:16px;
+	height:16px;
+	opacity:0; 
+}
+.markdown-embed .file-embed-link:hover svg,
+.markdown-embed .markdown-embed-link:hover svg {
+	opacity:1;
+}
+.markdown-embed-link:hover, .file-embed-link:hover {
+	color:var(--text-muted);
+}
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+	max-height:none !important;
+}
+.markdown-embed-content {
+	max-height:none !important;
+}
+.markdown-embed .markdown-preview-view {
+	padding:0;}
+	.internal-embed .markdown-embed {
+		border:0;
+		border-left:1px solid var(--quote-opening-modifier);
+		border-radius:0;
+	}

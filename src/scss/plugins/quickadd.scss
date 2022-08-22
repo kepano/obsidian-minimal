@@ -2,22 +2,22 @@
 
 .modal .quickAddPrompt > h1,
 .modal .quickAddYesNoPrompt h1 {
-  margin-top:0;
-  text-align:left !important;
-  font-size:var(--h1);
-  font-weight:600;
+	margin-top:0;
+	text-align:left !important;
+	font-size:var(--h1);
+	font-weight:600;
 }
 .modal .quickAddYesNoPrompt p {
-  text-align:left !important;
+	text-align:left !important;
 }
 .modal .quickAddYesNoPrompt button {
-  font-size: var(--font-settings-small);
+	font-size: var(--font-ui-small);
 }
 .modal .yesNoPromptButtonContainer {
-  font-size: var(--font-settings-small);
-  justify-content:flex-end;
+	font-size: var(--font-ui-small);
+	justify-content:flex-end;
 }
 
 .quickAddModal .modal-content {
-  padding:20px 2px 5px;
+	padding:20px 2px 5px;
 } 

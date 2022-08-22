@@ -1,0 +1,15 @@
+/* Title Bar */
+
+/* Alignment */
+
+body:not(.is-mobile) .view-actions .view-action:last-child  {
+  margin-left:-1px;
+}
+body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-actions,
+.minimal-focus-mode .workspace-ribbon:not(.is-collapsed) ~ .mod-root .view-header:hover .view-actions,
+.workspace-ribbon.mod-left.is-collapsed ~ .mod-root .view-header:hover .view-actions,
+.mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions,
+.view-action.is-active:hover {
+  opacity:1;
+  transition:opacity 0.25s ease-in-out;
+}

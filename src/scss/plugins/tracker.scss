@@ -1,14 +1,14 @@
 /* Tracker */
 body.theme-light {
-  --color-axis-label:var(--tx1);
-  --color-tick-label:var(--tx2);
-  --color-dot-fill:var(--ax1);
-  --color-line:var(--ui1);
+	--color-axis-label:var(--tx1);
+	--color-tick-label:var(--tx2);
+	--color-dot-fill:var(--ax1);
+	--color-line:var(--ui1);
 }
 
 .tracker-axis-label {
-  font-family:var(--font-interface);
+	font-family:var(--font-interface);
 }
 .tracker-axis {
-  color:var(--ui2);
+	color:var(--ui2);
 }

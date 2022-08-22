@@ -1,0 +1,69 @@
+/* Tags */
+
+body.minimal-unstyled-tags {
+  .frontmatter-container .tag,
+  a.tag,
+  .cm-s-obsidian span.cm-hashtag {
+    color:var(--tag-color);
+    font-weight:var(--link-weight);
+    text-decoration:none;
+    &:hover {
+      color:var(--text-normal);
+    }
+  }
+}
+
+body:not(.minimal-unstyled-tags) {
+  .frontmatter-container .tag,
+  a.tag {
+    background-color:var(--tag-bg);
+    border:var(--tag-border-width) solid var(--background-modifier-border);
+    color:var(--tag-color);
+    font-size:calc(var(--font-adaptive-normal) * 0.8);
+    font-weight:var(--link-weight);
+    font-family:var(--font-interface);
+    vertical-align:middle;
+    display:inline-block;
+    margin:1px 0;
+    border-radius:var(--tag-radius);
+  }
+  a.tag:hover {
+    color:var(--text-normal);
+    border-color:var(--background-modifier-border-hover);
+    background-color:var(--tag-bg2);
+  }
+  .cm-s-obsidian span.cm-hashtag {
+    background-color:var(--tag-bg);
+    border:var(--tag-border-width) solid var(--background-modifier-border);
+    color:var(--tag-color);
+    font-size:calc(var(--font-adaptive-normal) * 0.8);
+    font-family:var(--font-interface);
+    font-weight:var(--link-weight);
+    text-align:center;
+    text-decoration:none;
+    margin:0;
+    vertical-align:text-bottom;
+    padding-top:2px;
+    border-left:none;
+    border-right:none;
+    padding-bottom:3px;
+    cursor:text;
+  }
+  .cm-s-obsidian span.cm-hashtag:hover {
+    background-color:var(--tag-bg2);
+  }
+  span.cm-hashtag.cm-hashtag-begin {
+    border-top-left-radius:var(--tag-radius);
+    border-bottom-left-radius:var(--tag-radius);
+    padding-left:8px;
+    border-right:none;
+    border-left:var(--tag-border-width) solid var(--background-modifier-border);
+  }
+  span.cm-hashtag.cm-hashtag-end {
+    border-top-right-radius:var(--tag-radius);
+    border-bottom-right-radius:var(--tag-radius);
+    border-left:none;
+    padding-right:8px;
+    border-right:var(--tag-border-width) solid var(--background-modifier-border);
+  }
+}

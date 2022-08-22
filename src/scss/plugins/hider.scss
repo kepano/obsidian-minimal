@@ -1,115 +1,76 @@
 /* Hider plugin */
 
-/* Frameless mode */
-body.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs {
-  padding-top:var(--top-left-padding-y);
-  transition:padding-top 0.2s linear;
-}
-/* Include support for Electron Window Tweaker */
-body.mod-macos.hider-frameless:not(.is-fullscreen):not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs:nth-child(3) {
-  padding-top:calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y));
-  transition:padding-top 0.2s linear;
-}
-body.mod-macos.hider-frameless:not(.hider-ribbon):not(.is-fullscreen):not(.is-mobile) .workspace-ribbon .side-dock-actions {
-  padding-top:calc(var(--top-left-padding-y) + var(--ewt-traffic-light-y));
-}
-
-.hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs,
-.hider-frameless:not(.is-mobile) .workspace-split.mod-root .view-header {
-  padding-top:0px;
-}
-.hider-frameless:not(.is-mobile) .workspace-split.mod-right-split > .workspace-tabs ~  .workspace-tabs,
-.hider-frameless:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs ~  .workspace-tabs {
-  padding-top:0px;
-}
-.hider-frameless.is-fullscreen:not(.is-mobile) .workspace-split.mod-left-split > .workspace-tabs,
-.hider-frameless.is-fullscreen:not(.is-mobile) .workspace-split.mod-root .view-header {
-  padding-top:0px;
-}
-
-/* Adjustments to title bar for traffic light icons */
-:root {
-  --traffic-x-space:0px;
-}
-
-/* Frameless + no ribbon */
-.mod-macos.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
-  --traffic-x-space:64px;
-}
-
-/* Frameless + popout */
-.mod-macos.is-popout-window.hider-ribbon.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .mod-root .workspace-leaf:first-of-type  {
-  --traffic-x-space:64px;
-}
-/* Frameless */
-.mod-macos.hider-frameless:not(.is-fullscreen):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type  {
-  --traffic-x-space:22px;
-}
-
 /* Remove ribbon border on Mac when frameless */
 .mod-macos.hider-frameless .workspace-ribbon {
-  border:none;
+	border:none;
+}
+
+.mod-macos.hider-ribbon:not(.is-popout-window) {
+	--frame-left-space: 72px;
 }
 
 /* --------------- */
 /* App ribbon moved to the bottom edge */
 
 .hider-ribbon:not(.is-mobile) .workspace-ribbon-collapse-btn {
-  display:none;
+	display:none;
 }
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-right {
-  pointer-events:none;
+	pointer-events:none;
 }
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left {
-  position:absolute;
-  border-right:0px;
-  margin:0;
-  height:var(--header-height);
-  overflow:visible;
-  flex-basis:0;
-  bottom:0;
-  top:auto;
-  display:flex !important;
-  flex-direction:row;
-  z-index:17;
-  opacity:0;
-  transition:opacity 0.25s ease-in-out;
-  filter:drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
+	position: absolute;
+	border-right: 0px;
+	margin: 0;
+	height:var(--header-height);
+	overflow: visible;
+	flex-basis: 0;
+	bottom: 0;
+	top: auto;
+	display:flex !important;
+	flex-direction: row;
+	z-index: 17;
+	opacity:0;
+	transition:opacity 0.25s ease-in-out;
+	filter: 
+		 drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
+	gap: 0;
 }
 .hider-ribbon:not(.is-mobile) .side-dock-actions,
 .hider-ribbon:not(.is-mobile) .side-dock-settings {
-  display:flex;
-  border-top:var(--border-width) solid var(--background-modifier-border);
-  background:var(--background-secondary);
-  margin:0;
-  position:relative;
+	flex-direction: row;
+	display:flex;
+	border-top:var(--border-width) solid var(--background-modifier-border);
+	background:var(--background-secondary);
+	margin:0;
+	position:relative;
+	gap: var(--size-2-2);
 }
 .hider-ribbon:not(.is-mobile) .side-dock-actions {
-  padding-left:5px;
+	padding-left: 8px;
 }
 .hider-ribbon:not(.is-mobile) .side-dock-settings {
-  border-right:var(--border-width) solid var(--background-modifier-border);
-  border-top-right-radius:5px;
-  padding-right:10px;
+	border-right: var(--border-width) solid var(--background-modifier-border);
+	border-top-right-radius: var(--radius-m);
+	padding: 0 var(--size-2-2);
 }
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-ribbon-action {
-  display:flex;
-  padding:4px;
-  margin:6px 0px 5px 7px;
+	display: flex;
+	margin: 7px 0px 8px;
 }
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left:hover {
-  opacity:1;
-  transition:opacity 0.25s ease-in-out;
+	opacity: 1;
+	transition:opacity 0.25s ease-in-out;
 }
 .hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  opacity:0;
+	opacity: 0;
 }
 .hider-ribbon:not(.is-mobile) .workspace-split.mod-left-split {
-  margin:0;
+	margin: 0;
 }
 .hider-ribbon:not(.is-mobile) .workspace-leaf-content .item-list {
-  padding-bottom:40px;
+	padding-bottom: 40px;
 }
 .hider-ribbon .workspace-ribbon {
-  padding:0;
+	padding: 0;
 }

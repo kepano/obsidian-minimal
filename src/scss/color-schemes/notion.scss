@@ -1,31 +1,31 @@
 /* Notion */
 
 .theme-light.minimal-notion-light {
-  --base-h:39;
-  --base-s:18%;
-  --base-d:96%;
+	--base-h:39;
+	--base-s:18%;
+	--base-d:96%;
 
-  --accent-h:197;
-  --accent-s:65%;
-  --accent-l:71%;
+	--accent-h:197;
+	--accent-s:65%;
+	--accent-l:71%;
 
-  --bg2:#f7f6f4;
-  --bg3:#e8e7e4;
+	--bg2:#f7f6f4;
+	--bg3:#e8e7e4;
 
-  --ui1:#ededec;
-  --ui2:#dbdbda;
-  --ui3:#aaa9a5;
+	--ui1:#ededec;
+	--ui2:#dbdbda;
+	--ui3:#aaa9a5;
 
-  --tx1:#37352f;
-  --tx2:#72706c;
-  --tx3:#aaa9a5;
+	--tx1:#37352f;
+	--tx2:#72706c;
+	--tx3:#aaa9a5;
 
-  --ax1:#37352f;
-  --ax2:#000;
-  --ax3:#2eaadc;
+	--ax1:#37352f;
+	--ax2:#000;
+	--ax3:#2eaadc;
 
-  --hl1:rgba(131,201,229,0.3);
-  --link-weight:500;
+	--hl1:rgba(131,201,229,0.3);
+	--link-weight:500;
 }
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-notion-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
@@ -34,36 +34,36 @@
 .theme-light.minimal-notion-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-notion-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-notion-dark {
-  --base-h:203;
-  --base-s:8%;
-  --base-d:20%;
+	--base-h:203;
+	--base-s:8%;
+	--base-d:20%;
 
-  --accent-h:197;
-  --accent-s:48%;
-  --accent-l:43%;
+	--accent-h:197;
+	--accent-s:48%;
+	--accent-l:43%;
 
-  --bg1:#2f3437;
-  --bg2:#373c3f;
-  --bg3:#4b5053;
+	--bg1:#2f3437;
+	--bg2:#373c3f;
+	--bg3:#4b5053;
 
-  --ui1:#3e4245;
-  --ui2:#585d5f;
-  --ui3:#585d5f;
+	--ui1:#3e4245;
+	--ui2:#585d5f;
+	--ui3:#585d5f;
 
-  --tx1:#ebebeb;
-  --tx2:#909295;
-  --tx3:#585d5f;
+	--tx1:#ebebeb;
+	--tx2:#909295;
+	--tx3:#585d5f;
 
-  --ax1:#ebebeb;
-  --ax2:#fff;
-  --ax3:#2eaadc;
+	--ax1:#ebebeb;
+	--ax2:#fff;
+	--ax3:#2eaadc;
 
-  --hl1:rgba(57,134,164,0.3);
-  --link-weight:500;
+	--hl1:rgba(57,134,164,0.3);
+	--link-weight:500;
 }
 .theme-dark.minimal-notion-dark.minimal-dark-black {
-  --base-d:5%;
+	--base-d:5%;
 
-  --bg3:#232729;
-  --ui1:#2f3437;
+	--bg3:#232729;
+	--ui1:#2f3437;
 }

@@ -107,7 +107,7 @@ body.is-mobile {
     padding-bottom:20px;
   }
   .search-result-file-match-replace-button {
-    background-color:var(--background-tertiary);
+    background-color:var(--background-modifier-hover);
     color:var(--text-normal);
   }
   .search-result-file-matches,
@@ -336,7 +336,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
   cursor:var(--cursor);
 }
 .is-mobile .nav-file-title.is-active {
-  box-shadow:0 0 0px 2px var(--background-tertiary);
+  box-shadow:0 0 0px 2px var(--background-modifier-hover);
 }
 .pull-down-action {
   top:0;
@@ -489,7 +489,7 @@ body.is-mobile:not(.minimal-icons-off) .view-action svg {
     opacity:1;
   }
   .mod-left:not(.is-pinned) + .mod-root .view-header-icon:hover {
-    background-color:var(--background-tertiary);
+    background-color:var(--background-modifier-hover);
   }
   .is-mobile.is-ios .safe-area-top-cover {
     background-color:transparent;

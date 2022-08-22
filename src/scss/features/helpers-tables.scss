@@ -2,10 +2,10 @@
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
 .table-small table:not(.calendar) {
-  --table-font-size:85%;
+	--table-font-size:85%;
 }
 .table-tiny table:not(.calendar) {
-  --table-font-size:75%;
+	--table-font-size:75%;
 }
 
 .markdown-source-view.mod-cm6 th,
@@ -15,7 +15,7 @@ table:not(.calendar) thead > tr > th,
 table:not(.calendar) tbody > tr > td,
 .table-view-table .tag,
 .table-view-table a.tag {
-  font-size:var(--table-font-size);
+	font-size:var(--table-font-size);
 }
 
 .row-hover th:first-child,
@@ -28,32 +28,32 @@ table:not(.calendar) tbody > tr > td,
 .table-lines.markdown-source-view.mod-cm6 td:first-child,
 .table-lines table:not(.calendar) thead > tr > th:first-child,
 .table-lines table:not(.calendar) tbody > tr > td:first-child {
-  padding-left:10px;
+	padding-left:10px;
 }
 .row-alt table:not(.calendar) tbody > tr:nth-child(odd),
 .col-alt table:not(.calendar) tr > th:nth-child(2n+2),
 .col-alt table:not(.calendar) tr > td:nth-child(2n+2) {
-  padding-left:10px;
-  background:var(--background-table-rows);
+	padding-left:10px;
+	background:var(--background-table-rows);
 }
 .table-tabular table:not(.calendar)  {
-  font-variant-numeric:tabular-nums;
+	font-variant-numeric:tabular-nums;
 }
 .table-lines table:not(.calendar) ,
 .table-lines .table-view-table  {
-  border:1px solid var(--background-modifier-border);
+	border:1px solid var(--background-modifier-border);
 }
 .table-lines table:not(.calendar) .table-view-table thead > tr > th,
 .table-lines table:not(.calendar) .table-view-table > tbody > tr > td  {
-  border-right:1px solid var(--background-modifier-border);
-  border-bottom:1px solid var(--background-modifier-border);
-  padding:4px 10px;
+	border-right:1px solid var(--background-modifier-border);
+	border-bottom:1px solid var(--background-modifier-border);
+	padding:4px 10px;
 }
 .table-nowrap thead > tr > th,
 .table-nowrap tbody > tr > td {
-  white-space:nowrap;
-  text-overflow:ellipsis;
-  overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
 }
 .trim-cols .markdown-preview-view.table-wrap .table-view-table>tbody>tr>td,
 .trim-cols .markdown-preview-view.table-wrap .table-view-table>thead>tr>th,
@@ -61,64 +61,64 @@ table:not(.calendar) tbody > tr > td,
 .trim-cols .markdown-source-view.mod-cm6.table-wrap .table-view-table>thead>tr>th,
 .table-nowrap .table-wrap thead > tr > th,
 .table-nowrap .table-wrap tbody > tr > td {
-  white-space:normal;
-  overflow:auto;
+	white-space:normal;
+	overflow:auto;
 }
 .table-numbers table:not(.calendar) {
-  counter-reset:section;
+	counter-reset:section;
 }
 .table-numbers table:not(.calendar) > thead > tr > th:first-child::before {
-  content:" ";
-  padding-right:0.5em;
-  display:inline-block;
-  min-width:2em;
+	content:" ";
+	padding-right:0.5em;
+	display:inline-block;
+	min-width:2em;
 }
 .table-numbers table:not(.calendar) > tbody > tr > td:first-child::before {
-  counter-increment:section;
-  content:counter(section) " ";
-  text-align:center;
-  padding-right:0.5em;
-  display:inline-block;
-  min-width:2em;
-  color:var(--text-faint);
-  font-variant-numeric:tabular-nums;
+	counter-increment:section;
+	content:counter(section) " ";
+	text-align:center;
+	padding-right:0.5em;
+	display:inline-block;
+	min-width:2em;
+	color:var(--text-faint);
+	font-variant-numeric:tabular-nums;
 }
 .row-highlight table:not(.calendar) tbody > tr:hover td {
-  background-color:var(--background-table-rows);
+	background-color:var(--background-table-rows);
 }
 .row-lines table:not(.calendar) tbody > tr > td,
 .row-lines .table-view-table > tbody > tr > td {
-  border-bottom:1px solid var(--background-modifier-border);
+	border-bottom:1px solid var(--background-modifier-border);
 }
 .row-lines table:not(.calendar) tbody > tr:last-child > td {
-  border-bottom:none;
+	border-bottom:none;
 }
 .col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
 .col-lines .table-view-table thead > tr > th:not(:last-child),
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {
-  border-right:1px solid var(--background-modifier-border);
+	border-right:1px solid var(--background-modifier-border);
 }
 
 /* Highlight rows on hover */
 .row-hover {
-  --row-color-hover:
-    hsla(
-      var(--accent-h),
-      50%,
-      80%, 
-      20%
-    );
+	--row-color-hover:
+	hsla(
+		var(--accent-h),
+		50%,
+		80%, 
+		20%
+		);
 
 }
 .theme-dark.row-hover {
-  --row-color-hover:
-    hsla(
-      var(--accent-h),
-      30%,
-      40%, 
-      20%
-    );
+	--row-color-hover:
+	hsla(
+		var(--accent-h),
+		30%,
+		40%, 
+		20%
+		);
 }
 .row-hover tr:hover td {
-  background-color:var(--row-color-hover);
+	background-color:var(--row-color-hover);
 }

@@ -10,110 +10,87 @@ https://github.com/sponsors/kepano
 
 */
 
-.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) {
+.labeled-nav {
 
-  .workspace-tab-header-container {
-    height: auto;
-  }
-  .workspace-tab-container-inner {
-    flex-direction:column;
-    padding:8px 8px 4px 8px;
-    background-color:transparent;
-  }
-  .workspace-tab-header {
-    padding:0;
-    margin-bottom:2px;
-    border:none;
-    height:auto;
-    opacity:0.75;
+	&.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space {
+		.workspace-tab-header-container {
+			padding-left: 0;
+		}
+	}
 
-    &.is-active,
-    &:hover {
-      opacity:1;
-      background-color:transparent;
-    }
+	&.is-hidden-frameless {
+		.workspace-ribbon.mod-left:not(.is-collapsed) {
+			&:before {
+				border: none;
+			}
+		}
+	}
 
-    .workspace-tab-header-inner {
-      padding:0;
-      box-shadow:none;
-      border:none;
-      border-radius:6px;
-    }
-    .workspace-tab-header-inner-icon {
-      border-radius:6px;
-      padding:5px 6px;
-      margin:0;
-      height:26px;
-      width:100%;
-      opacity:1;
-    }
-  }
-  .workspace-tab-header .workspace-tab-header-inner-icon:hover {
-    background-color:var(--background-tertiary);
-  }
-   .workspace-tab-header-inner-icon {
-    font-size: var(--font-small);
-    font-weight:500;
-    display:flex;
-    align-items:center;
-  }
-   .workspace-tab-header:hover .workspace-tab-header-inner-icon,
-   .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-    color:var(--icon-color-active);
-  }
-  .workspace-tab-header-inner-icon svg {
-    margin-right:6px;
-  }
-  .workspace-tab-header-container {
-    border:none;
-    padding:0;
-  }
+}
 
-  .workspace-tab-header .workspace-tab-header-inner-icon:after {
-    content:"Plugin";
-  }
-  .workspace-tab-header[data-type="backlink"] .workspace-tab-header-inner-icon:after {
-    content:"Backlinks";
-  }
-  .workspace-tab-header[data-type="calendar"] .workspace-tab-header-inner-icon:after {
-    content:"Calendar";
-  }
-  .workspace-tab-header[data-type="dictionary-view"] .workspace-tab-header-inner-icon:after {
-    content:"Dictionary";
-  }
-  .workspace-tab-header[data-type="localgraph"] .workspace-tab-header-inner-icon:after,
-  .workspace-tab-header[data-type="graph"] .workspace-tab-header-inner-icon:after {
-    content:"Graph";
-  }
-  .workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-icon:after {
-    content:"Note";
-  }
-  .workspace-tab-header[data-type="file-explorer"] .workspace-tab-header-inner-icon:after {
-    content:"Notes";
-  }
-  .workspace-tab-header[data-type="outgoing-link"] .workspace-tab-header-inner-icon:after {
-    content:"Outlinks";
-  }
-  .workspace-tab-header[data-type="outline"] .workspace-tab-header-inner-icon:after {
-    content:"Outline";
-  }
-  .workspace-tab-header[data-type="recent-files"] .workspace-tab-header-inner-icon:after {
-    content:"Recent";
-  }
-  .workspace-tab-header[data-type="reminder-list"] .workspace-tab-header-inner-icon:after {
-    content:"Reminders";
-  }
-  .workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon:after {
-    content:"Search";
-  }
-  .workspace-tab-header[data-type="starred"] .workspace-tab-header-inner-icon:after {
-    content:"Starred";
-  }
-  .workspace-tab-header[data-type="style-settings"] .workspace-tab-header-inner-icon:after {
-    content:"Style";
-  }
-  .workspace-tab-header[data-type="tag"] .workspace-tab-header-inner-icon:after {
-    content:"Tags";
-  }
+.labeled-nav .mod-left-split.is-sidedock-collapsed .mod-top {
+	.workspace-tab-container-inner {
+		margin-top: calc(var(--header-height) - 1px);
+	}
+}
 
+.labeled-nav .mod-left-split .mod-top {
+
+	.workspace-tab-header-spacer {
+		display:none
+	}
+	.workspace-tab-header-inner-title {
+		display: inline-block;
+		font-weight: 500;
+		font-size: var(--font-adaptive-smaller);
+	}
+	.workspace-tab-header-container {
+		flex-direction: column-reverse !important;
+		height: auto;
+		width: 100%;
+
+		.sidebar-toggle-button.mod-left {
+			flex-shrink: 1;
+			width: 46px;
+			margin-left: auto;
+		}
+		.workspace-tab-header-container-inner {
+			flex-direction: column !important;
+		}
+		.workspace-tab-container-inner {
+			flex-grow: 1;
+			gap: 0;
+			padding: var(--size-4-2) var(--size-4-3);
+		}
+	}
+
+	.workspace-tab-header {
+		padding: 0;
+		margin-bottom:2px;
+		border:none;
+		height:auto;
+
+		&.is-active {
+			background-color: transparent;
+		}
+
+		&.is-active,
+		&:hover {
+			opacity:1;
+		}
+		.workspace-tab-header-inner {
+			padding: var(--size-4-1) var(--size-4-2);
+			box-shadow:none;
+			border:none;
+		}
+
+	}
+	.workspace-tab-header:hover .workspace-tab-header-inner-icon,
+	.workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+		color:var(--icon-color-active);
+	}
+	.workspace-tab-header-container {
+		border:none;
+		padding:0;
+	}
 }

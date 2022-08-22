@@ -301,7 +301,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h1
+        id: h1-size
         title: H1 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -369,7 +369,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h2
+        id: h2-size
         title: H2 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -437,7 +437,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h3
+        id: h3-size
         title: H3 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -505,7 +505,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h4
+        id: h4-size
         title: H4 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -573,7 +573,7 @@ settings:
         type: variable-text
         default: ''
     -  
-        id: h5
+        id: h5-size
         title: H5 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -641,7 +641,7 @@ settings:
         type: variable-text
         default: ''
     - 
-        id: h6
+        id: h6-size
         title: H6 font size
         description: Accepts any CSS font-size value
         type: variable-text
@@ -980,6 +980,28 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
+        id: tabs
+        title: Tabs
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: tabs-style
+        title: Tabs
+        type: class-select
+        allowEmpty: false
+        default: tabs-default
+        options:
+            - 
+                label: Default
+                value: tabs-default
+            -
+                label: Square
+                value: tabs-square
+            -
+                label: Underline
+                value: tabs-underline
+    -
         id: tags
         title: Tags
         type: heading
@@ -1095,14 +1117,14 @@ settings:
         default-light: '#'
         default-dark: '#'
     - 
-        id: text-italic
+        id: italic-color
         title: Italic text color
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
-        id: text-bold
+        id: bold-color
         title: Bold text color
         type: variable-themed-color
         format: hex
@@ -1145,17 +1167,11 @@ settings:
             -
                 label: Center
                 value: title-align-center
-    -
-        id: show-grabber
-        title: Always show grabber icon
-        description: Make the dragging handle always visible in the top left corner of a pane
-        type: class-toggle
-        default: false
     - 
         id: header-height
         title: Title bar height
         type: variable-text
-        default: 42px
+        default: 40px
     - 
         id: title-size
         title: Title font size
@@ -1274,7 +1290,7 @@ settings:
     -
         id: window-title-on
         title: Display window title
-        description: Display title in the window frame
+        description: Display title in the custom window frame
         type: class-toggle
     -
         id: styled-scrollbars
@@ -1298,18 +1314,18 @@ settings:
                 label: Crosshair
                 value: crosshair
     - 
-        id: font-smaller
-        title: Smaller font size
+        id: font-ui-small
+        title: Small font size
         description: Font size in px of smaller text
         type: variable-number
-        default: 11
+        default: 13
         format: px
     - 
-        id: font-smallest
-        title: Smallest font size
+        id: font-ui-smaller
+        title: Smaller font size
         description: Font size in px of smallest text
         type: variable-number
-        default: 10
+        default: 11
         format: px
     - 
         id: folding-offset

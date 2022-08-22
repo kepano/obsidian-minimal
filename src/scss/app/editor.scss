@@ -1,0 +1,145 @@
+/* Editor mode (CodeMirror 6 Live Preview) */
+
+/* Fix strange Obsidian ghost textearea bug on right click */
+.CodeMirror-wrap > div > textarea {
+	opacity:0;
+}
+
+.markdown-source-view.mod-cm6 hr {
+	border-width:2px;
+}
+.mod-cm6 .cm-editor .cm-line {
+	padding:0;
+}
+.cm-editor .cm-content {
+	padding-top:0.5em;
+}
+.markdown-source-view {
+	color: var(--text-normal);
+}
+.markdown-source-view.mod-cm6 .cm-scroller {
+	padding-top:15px;
+	padding-left:0;
+	padding-right:0;
+}
+
+/* Gutters */
+body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
+	position:absolute !important;
+	z-index:0;
+}
+.cm-editor .cm-lineNumbers .cm-gutterElement {
+	min-width:25px;
+}
+/* Line numbers */
+@media (max-width:400pt) {
+	.cm-editor .cm-lineNumbers .cm-gutterElement {
+		padding-right:4px;
+		padding-left:8px;
+	}
+}
+.cm-editor .cm-lineNumbers .cm-gutterElement {
+	font-variant-numeric:tabular-nums;
+}
+.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
+.cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
+	color:var(--text-muted);
+}
+
+/* Code execution blocks, e.g. Dataview */
+.markdown-source-view.mod-cm6 .edit-block-button {
+	cursor:var(--cursor);
+	color:var(--text-faint);
+	background-color:var(--background-primary);
+	top:0;
+	right:auto;
+	left:0px;
+	opacity:0;
+	transition:opacity 200ms;
+	padding:4px 4px 4px 9px;
+	svg {
+		margin:0 !important;
+	}
+}
+.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
+	width:30px !important;
+	padding-left:7px !important;
+	transform:none !important;
+	margin-left:0 !important;
+}
+.is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
+	padding-left:0px !important;
+	margin-left:0 !important;
+	transform:none !important;
+	right:0;
+	left:auto;
+	padding:4px
+}
+.markdown-source-view.mod-cm6 .edit-block-button:hover {
+	background-color:var(--background-primary);
+	color:var(--text-muted);
+}
+.markdown-source-view.mod-cm6 .edit-block-button svg {
+	opacity:1;
+}
+.markdown-source-view.mod-cm6 .edit-block-button:hover svg {
+	opacity:1;
+}
+.markdown-source-view.mod-cm6 .cm-embed-block {
+	padding:0;
+	border:0;
+	border-radius:0;
+}
+.markdown-source-view.mod-cm6 .cm-embed-block:hover {
+	border:0;
+}
+
+/* Live Preview folding */
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
+	color:var(--text-faint);
+}
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+	background-color:transparent;
+	border-left-width:1px;
+}
+.cm-editor .cm-foldPlaceholder,
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+	cursor:var(--cursor);
+}
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
+	right:8px;
+}
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-task-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
+	right:8px;
+	width:auto;
+}
+.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
+	right:-8px;
+	top:1px;
+	width:26px;
+}
+ul>li.is-collapsed::marker,
+.markdown-source-view.mod-cm6 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
+	color:var(--text-accent);
+}
+.cm-gutterElement .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
+.markdown-source-view.mod-cm6 .fold-gutter {
+	opacity:0;
+}
+.cm-gutterElement:hover .collapse-indicator,
+.cm-gutterElement .is-collapsed .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-line:hover .cm-fold-indicator .collapse-indicator,
+.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator,
+.markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
+.markdown-source-view.mod-cm6 .fold-gutter:hover,
+.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator svg {
+	opacity:1;
+}
+
+body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
+	max-width:100%;
+}
+body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
+	max-width:100%;
+}

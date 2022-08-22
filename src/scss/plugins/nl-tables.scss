@@ -1,38 +1,38 @@
 /* NL tables  */
 
 body .NLT__header-menu-header-container {
-  font-size:85%;
+	font-size:85%;
 }
 
 body .NLT__button {
-  background:transparent;
-  box-shadow:none;
-  color:var(--text-muted);
-  &:hover,
-  &:active,
-  &:focus {
-    background:transparent;
-    color:var(--text-normal);
-    box-shadow:none;
-  }
+	background:transparent;
+	box-shadow:none;
+	color:var(--text-muted);
+	&:hover,
+	&:active,
+	&:focus {
+		background:transparent;
+		color:var(--text-normal);
+		box-shadow:none;
+	}
 }
 
 .NLT__app {
-  .NLT__button {
-    background:transparent;
-    border:1px solid var(--background-modifier-border);
-    box-shadow:0 0.5px 1px 0 var(--btn-shadow-color);
-    color:var(--text-muted);
-    padding:2px 8px;
-    &:hover,
-    &:active,
-    &:focus {
-      background:transparent;
-      border-color:var(--background-modifier-border-hover);
-      color:var(--text-normal);
-      box-shadow:0 0.5px 1px 0 var(--btn-shadow-color);
-    }
-  }
+	.NLT__button {
+		background:transparent;
+		border:1px solid var(--background-modifier-border);
+		box-shadow:0 0.5px 1px 0 var(--btn-shadow-color);
+		color:var(--text-muted);
+		padding:2px 8px;
+		&:hover,
+		&:active,
+		&:focus {
+			background:transparent;
+			border-color:var(--background-modifier-border-hover);
+			color:var(--text-normal);
+			box-shadow:0 0.5px 1px 0 var(--btn-shadow-color);
+		}
+	}
 }
 
 /*
@@ -53,77 +53,77 @@ th.NLT__selectable .NLT__header-content:after {
   -webkit-mask-size:16px 16px;
   margin:0 0 0 6px;
   background-color:var(--text-faint);
-}*/
+  }*/
 
-.NLT__td:nth-last-child(2),
-.NLT__th:nth-last-child(2) {
-  border-right:0;
-}
+  .NLT__td:nth-last-child(2),
+  .NLT__th:nth-last-child(2) {
+  	border-right:0;
+  }
 
-.NLT__app {
-  .NLT__td:last-child,
-  .NLT__th:last-child {
-    padding-right:0;
+  .NLT__app {
+  	.NLT__td:last-child,
+  	.NLT__th:last-child {
+  		padding-right:0;
+  	}
+  	/* Remove Sortable plugin background icons */
+  	.NLT__th {
+  		background-image:none !important;
+  	}
+  	th.NLT__selectable:hover {
+  		background-color:transparent;
+  		cursor:var(--cursor);
+  	}
+  	th:first-child, td:first-child {
+  	}
   }
-  /* Remove Sortable plugin background icons */
-  .NLT__th {
-    background-image:none !important;
-  }
-  th.NLT__selectable:hover {
-    background-color:transparent;
-    cursor:var(--cursor);
-  }
-  th:first-child, td:first-child {
-  }
-}
 
-.NLT__menu {
-  .NLT__menu-container {
-    background-color:var(--background-secondary);
+  .NLT__menu {
+  	.NLT__menu-container {
+  		background-color:var(--background-secondary);
+  	}
+  	.NLT__header-menu-item {
+  		font-size:var(--font-adaptive-small);
+  	}
+  	.NLT__header-menu {
+  		padding:6px 4px;
+  	}
+  	.NLT__drag-menu {
+  		font-size:var(--font-adaptive-small);
+  		padding:6px 4px;
+  	}
+  	svg {
+  		color:var(--text-faint);
+  		margin-right:6px;
+  	}
+  	.NLT__selected,
+  	.NLT__selectable:hover {
+  		background:transparent;
+  	}
+  	.NLT__selected > .NLT__selectable {
+  		background-color:var(--background-modifier-hover);
+  	}
+  	.NLT__selectable {
+  		cursor:var(--cursor);
+  	}
+  	div.NLT__selectable {
+  		min-width:110px;
+  		border-radius:var(--radius-m);
+  		padding:3px 8px 3px 4px;
+  		margin:1px 2px 1px;
+  		cursor:var(--cursor);
+  		height:auto;
+  		line-height:20px;
+  		&:hover {
+  			background-color:var(--background-modifier-hover);
+  		}
+  	}
+  	.NLT__textarea {
+  		font-size:var(--table-font-size)
+  	}
   }
-  .NLT__header-menu-item {
-    font-size:var(--font-adaptive-small);
-  }
-  .NLT__header-menu {
-    padding:6px 4px;
-  }
-  .NLT__drag-menu {
-    font-size:var(--font-adaptive-small);
-    padding:6px 4px;
-  }
-  svg {
-    color:var(--text-faint);
-    margin-right:6px;
-  }
-  .NLT__selected,
-  .NLT__selectable:hover {
-    background:transparent;
-  }
-  .NLT__selected > .NLT__selectable {
-    background-color:var(--background-tertiary);
-  }
-  .NLT__selectable {
-    cursor:var(--cursor);
-  }
-  div.NLT__selectable {
-    min-width:110px;
-    border-radius:var(--radius-m);
-    padding:3px 8px 3px 4px;
-    margin:1px 2px 1px;
-    cursor:var(--cursor);
-    height:auto;
-    line-height:20px;
-    &:hover {
-      background-color:var(--background-tertiary);
-    }
-  }
-  .NLT__textarea {
-    font-size:var(--table-font-size)
-  }
-}
 
-.NLT__tfoot {
-  tr:hover td {
-    background-color:transparent;
+  .NLT__tfoot {
+  	tr:hover td {
+  		background-color:transparent;
+  	}
   }
-}

@@ -1,0 +1,32 @@
+/* Preview mode  */
+.markdown-preview-view {
+  blockquote,
+  p,
+  ol,
+  ul {
+    margin-block-start:var(--spacing-p);
+    margin-block-end:var(--spacing-p);
+  }
+  ul ol,
+  ol ol,
+  ol ul,
+  ul ul {
+    margin-block-start:0em;
+    margin-block-end:0em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-start:1em;
+    margin-block-end:var(--spacing-p);
+  }
+}
+
+.markdown-preview-view .mod-highlighted {
+  transition:background-color 0.3s ease;
+  background-color:var(--text-selection);
+  color:inherit;
+}

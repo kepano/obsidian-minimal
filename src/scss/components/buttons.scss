@@ -1,60 +1,20 @@
 /* Buttons */
-button {
-  cursor:var(--cursor);
-}
-button,
-.setting-item-control button {
-  font-family:var(--font-interface);
-  font-size:var(--font-inputs);
-  font-weight:400;
-  border-radius:var(--radius-m);
-}
-button:active,
-button:focus {
-  -webkit-appearance:none;
-  border-color:var(--background-modifier-border-hover);
-}
-body:not(.is-mobile) button:active,
-body:not(.is-mobile) button:focus {
-  box-shadow:0 0 0px 2px var(--background-modifier-border-hover);
-}
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
 .modal button:not(.mod-warning),
 .modal.mod-settings button:not(.mod-warning) {
-  background-color:var(--interactive-normal);
-  color:var(--text-normal);
-  border:1px solid var(--background-modifier-border);
-  box-shadow:0 1px 1px 0px var(--btn-shadow-color);
-  cursor:var(--cursor);
-  height:var(--input-height);
-  line-height:0;
-  white-space:nowrap;
-  transition:background-color 0.2s ease-out, border-color 0.2s ease-out;
+	white-space:nowrap;
+	transition:background-color 0.2s ease-out, border-color 0.2s ease-out;
 }
 button.mod-warning {
-  border:1px solid var(--background-modifier-error);
-  color:var(--text-error);
-  box-shadow:0 1px 1px 0px var(--btn-shadow-color);
-  transition:background-color 0.2s ease-out;
+	border:1px solid var(--background-modifier-error);
+	color:var(--text-error);
+	box-shadow:0 1px 1px 0px var(--btn-shadow-color);
+	transition:background-color 0.2s ease-out;
 }
 button.mod-warning:hover {
-  border:1px solid var(--background-modifier-error);
-  color:var(--text-error);
-  box-shadow:0 2px 3px 0px var(--btn-shadow-color);
-  transition:background-color 0.2s ease-out;
-}
-button:hover,
-.modal button:not(.mod-warning):hover,
-.modal.mod-settings button:not(.mod-warning):hover {
-  background-color:var(--interactive-normal);
-  border-color:var(--background-modifier-border-hover);
-  box-shadow:0 2px 3px 0px var(--btn-shadow-color);
-  transition:background-color 0.2s ease-out, border-color 0.2s ease-out;
+	border:1px solid var(--background-modifier-error);
+	color:var(--text-error);
+	box-shadow:0 2px 3px 0px var(--btn-shadow-color);
+	transition:background-color 0.2s ease-out;
 }
 
-.is-mobile {
-  button.copy-code-button {
-    width:auto;
-    margin-right:4px;
-  }
-}

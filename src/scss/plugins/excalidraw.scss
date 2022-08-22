@@ -2,61 +2,65 @@
 
 body .excalidraw,
 body .excalidraw.theme--dark {
-  --color-primary-light:var(--text-selection);
-  --color-primary:var(--interactive-accent);
-  --color-primary-chubb:var(--interactive-accent-hover);
-  --color-primary-darker:var(--interactive-accent-hover);
-  --color-primary-darkest:var(--interactive-accent-hover);
-  --ui-font:var(--font-interface);
-  --island-bg-color:var(--background-secondary);
-  --button-gray-1:var(--background-tertiary);
-  --button-gray-2:var(--background-tertiary);
-  --focus-highlight-color:var(--background-modifier-border-focus);
-  --default-bg-color:var(--background-primary);
-  --input-border-color:var(--background-modifier-border);
-  --link-color:var(--text-accent);
-  --overlay-bg-color:rgba(255, 255, 255, 0.88);
-  --text-primary-color:var(--text-normal);
+	--color-primary-light:var(--text-selection);
+	--color-primary:var(--interactive-accent);
+	--color-primary-chubb:var(--interactive-accent-hover);
+	--color-primary-darker:var(--interactive-accent-hover);
+	--color-primary-darkest:var(--interactive-accent-hover);
+	--ui-font:var(--font-interface);
+	--island-bg-color:var(--background-secondary);
+	--button-gray-1:var(--background-modifier-hover);
+	--button-gray-2:var(--background-modifier-hover);
+	--focus-highlight-color:var(--background-modifier-border-focus);
+	--default-bg-color:var(--background-primary);
+	--input-border-color:var(--background-modifier-border);
+	--link-color:var(--text-accent);
+	--overlay-bg-color:rgba(255, 255, 255, 0.88);
+	--text-primary-color:var(--text-normal);
 }
 
 .workspace-leaf-content[data-type=excalidraw] .view-header .view-header-title-container {
-  width:auto;
+	width:auto;
 }
-body .excalidraw .App-toolbar-container .ToolIcon_type_floating:not(.is-mobile) .ToolIcon__icon {
-  box-shadow:none;
-}
-body .excalidraw button,
-body .excalidraw .buttonList label {
-  cursor:var(--cursor);
-}
-body .excalidraw .Dialog__title {
-  font-variant:normal;
-}
-body .excalidraw .reset-zoom-button,
-body .excalidraw .HintViewer {
-  color:var(--text-muted);
-  font-size:var(--font-small);
-}
-body .excalidraw .reset-zoom-button {
-  padding-left:1em;
-  padding-right:1em;
-}
-body .excalidraw .HintViewer>span {
-  background-color:transparent;
-}
-body .excalidraw button:hover {
-  box-shadow:none;
-}
-body .excalidraw .Island {
-  box-shadow:none;
-  border:1px solid var(--background-modifier-border);
-}
-body .excalidraw .ToolIcon {
-  cursor:var(--cursor);
-  font-family:var(--font-interface);
-  background-color:transparent;
-}
-body .excalidraw label.ToolIcon {
-  cursor:var(--cursor);
-  background-color:transparent;
+
+body .excalidraw {
+
+	.App-toolbar-container .ToolIcon_type_floating:not(.is-mobile) .ToolIcon__icon {
+		box-shadow:none;
+	}
+	button,
+	.buttonList label {
+		cursor:var(--cursor);
+	}
+	.Dialog__title {
+		font-variant:normal;
+	}
+	.reset-zoom-button,
+	.HintViewer {
+		color:var(--text-muted);
+		font-size:var(--font-adaptive-smaller);
+	}
+	.reset-zoom-button {
+		padding-left:1em;
+		padding-right:1em;
+	}
+	.HintViewer>span {
+		background-color:transparent;
+	}
+	button:hover {
+		box-shadow:none;
+	}
+	.Island {
+		box-shadow:none;
+		border:1px solid var(--background-modifier-border);
+	}
+	.ToolIcon {
+		cursor:var(--cursor);
+		font-family:var(--font-interface);
+		background-color:transparent;
+	}
+	label.ToolIcon {
+		cursor:var(--cursor);
+		background-color:transparent;
+	}
 }

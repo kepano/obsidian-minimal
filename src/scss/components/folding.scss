@@ -1,0 +1,20 @@
+
+.is-mobile span[title="Fold line"]:after,
+.is-mobile .CodeMirror-foldgutter-open:after {
+	transform:translateX(-2px) !important;
+}
+
+body.is-mobile span[title="Unfold line"]:after,
+body.is-mobile .CodeMirror-foldgutter-folded:after {
+	content:"›";
+	font-family:sans-serif;
+	transform:translateY(-2px);
+	transform:rotate(-90deg) translateY(2px) translateX(-0.45em);
+}
+
+body.is-mobile span[title="Fold line"]:after,
+body.is-mobile .CodeMirror-foldgutter-open:after {
+	content:"›";
+	font-family:sans-serif;
+	transform:rotate(360deg);
+}

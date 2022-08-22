@@ -14,80 +14,80 @@ https://github.com/sponsors/kepano
 /* Switch to flexbox */
 
 .contextual-typography .markdown-reading-view > .markdown-preview-view {
-  padding-top:15px;
+	padding-top:15px;
 }
 .contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  display:flex;
-  flex-direction:column;
-  width:100%;
-  max-width:100%;
-  padding-left:0;
-  padding-top:0;
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	max-width:100%;
+	padding-left:0;
+	padding-top:0;
 }
 
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  align-items:center;
-  padding-left:0;
+	align-items:center;
+	padding-left:0;
 }
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  width:var(--max-width);
+	width:var(--max-width);
 
 }
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  margin-left:auto;
-  margin-right:auto;
-  max-width:var(--max-width);
-  width:var(--line-width-adaptive);
+	margin-left:auto;
+	margin-right:auto;
+	max-width:var(--max-width);
+	width:var(--line-width-adaptive);
 }
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer > div {
-  max-width:100%;
+	max-width:100%;
 }
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview,
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
-  width:100%;
-  max-width:100%;
-  overflow-x:auto;
+	width:100%;
+	max-width:100%;
+	overflow-x:auto;
 }
 
 .el-lang-dataviewjs .block-language-dataviewjs .contains-task-list,
 .el-lang-dataview .block-language-dataview .contains-task-list {
-  max-width:100%;
+	max-width:100%;
 }
 .is-readable-line-width .el-table table,
 .is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
-  width:var(--max-width);
-  max-width:var(--line-width-adaptive);
-  margin:0 auto 0.5rem;
+	width:var(--max-width);
+	max-width:var(--line-width-adaptive);
+	margin:0 auto 0.5rem;
 }
 .markdown-embed .el-table table,
 .markdown-embed .el-lang-dataview .dataview.table-view-table {
-  width:100%;
+	width:100%;
 }
 
 /* Dataview and tables */
 .table-100 .el-table table,
 .table-100 .el-lang-dataviewjs .dataview.table-view-table,
 .table-100 .el-lang-dataview .dataview.table-view-table {
-  max-width:100% !important;
-  width:100% !important;
+	max-width:100% !important;
+	width:100% !important;
 }
 .markdown-preview-view.table-100.is-readable-line-width .el-table table,
 .markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .markdown-preview-view.table-100.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
-  max-width:100% !important;
-  width:100% !important;
+	max-width:100% !important;
+	width:100% !important;
 }
 .table-max .el-table table,
 .table-max .el-lang-dataview .dataview.table-view-table,
 .table-max .el-lang-dataviewjs .dataview.table-view-table {
-  max-width:100% !important;
+	max-width:100% !important;
 }
 .markdown-preview-view.table-max .el-table table,
 .markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table
 .markdown-preview-view.table-max .el-lang-dataviewjs .dataview.table-view-table, {
-  max-width:100% !important;
+	max-width:100% !important;
 }
 .table-wide .markdown-preview-view.is-readable-line-width .el-table table,
 .markdown-preview-view.is-readable-line-width.table-wide .el-table table,
@@ -95,7 +95,7 @@ https://github.com/sponsors/kepano
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table,
 .table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table,
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataviewjs .dataview.table-view-table {
-  max-width:var(--line-width-wide) !important;
+	max-width:var(--line-width-wide) !important;
 }
 .table-100 table th:first-child,
 .table-100 table td:first-child,
@@ -103,13 +103,13 @@ https://github.com/sponsors/kepano
 .table-100 .dataview.table-view-table td:first-child,
 .table-100 .markdown-source-view.mod-cm6 td:first-child,
 .table-100 .markdown-source-view.mod-cm6 th:first-child {
-  padding-left:20px;
+	padding-left:20px;
 }
 .table-100 table th:last-child,
 .table-100 table td:last-child,
 .table-100 .dataview.table-view-table th:last-child,
 .table-100 .dataview.table-view-table td:last-child {
-  padding-right:20px;
+	padding-right:20px;
 }
 
 /* Maps, images and iframes */
@@ -121,7 +121,7 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width.iframe-max .markdown-preview-sizer > .el-iframe,
 .contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-max .markdown-preview-sizer > .el-embed-image {
-  width:100%;
+	width:100%;
 }
 .contextual-typography.chart-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography .markdown-preview-view.is-readable-line-width.chart-wide .markdown-preview-sizer > .el-lang-chart,
@@ -131,7 +131,7 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width.iframe-wide .markdown-preview-sizer > .el-iframe,
 .contextual-typography.img-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
 .contextual-typography .markdown-preview-view.is-readable-line-width.img-wide .markdown-preview-sizer > .el-embed-image {
-  width:var(--line-width-wide);
+	width:var(--line-width-wide);
 }
 .contextual-typography.chart-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography .markdown-preview-view.is-readable-line-width.chart-100 .markdown-preview-sizer > .el-lang-chart,
@@ -141,14 +141,14 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.iframe-100 .markdown-preview-sizer > .el-iframe,
 .contextual-typography.img-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
 .contextual-typography .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image {
-  width:100%;
-  max-width:100%;
+	width:100%;
+	max-width:100%;
 }
 
 .is-readable-line-width .el-table table,
 .is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
-  max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
+	max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
 }
 .embed-strict .el-embed-page p,
 .map-100 .el-lang-leaflet,
@@ -172,7 +172,7 @@ https://github.com/sponsors/kepano
 .img-100 .el-embed-image,
 .img-max .el-embed-image,
 .img-wide .el-embed-image {
-  --folding-offset:0px;
+	--folding-offset:0px;
 }
 
 /* Live Preview */
@@ -192,11 +192,11 @@ https://github.com/sponsors/kepano
 .img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
 .img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
-  width:var(--max-width) !important;
-  max-width:var(--max-width) !important;
-  transform:none !important;
-  padding-left:0;
-  margin:0 auto !important;
+	width:var(--max-width) !important;
+	max-width:var(--max-width) !important;
+	transform:none !important;
+	padding-left:0;
+	margin:0 auto !important;
 }
 .chart-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
@@ -214,11 +214,11 @@ https://github.com/sponsors/kepano
 .img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
 .img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
-  width:var(--line-width-wide) !important;
-  max-width:var(--max-width);
-  transform:none !important;
-  padding-left:0;
-  margin:0 auto !important;
+	width:var(--line-width-wide) !important;
+	max-width:var(--max-width);
+	transform:none !important;
+	padding-left:0;
+	margin:0 auto !important;
 }
 .chart-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
 .chart-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
@@ -236,42 +236,42 @@ https://github.com/sponsors/kepano
 .img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
 .img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
 .img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
-  width:100% !important;
-  max-width:100% !important;
-  transform:none !important;
-  margin:0 auto !important;
-  padding-left:0;
+	width:100% !important;
+	max-width:100% !important;
+	transform:none !important;
+	margin:0 auto !important;
+	padding-left:0;
 }
 
 
 /* Mobile */
 @media (max-width:400pt) {
-  .markdown-preview-view .el-table th:first-child,
-  .markdown-preview-view .el-table td:first-child,
-  .markdown-preview-view .el-lang-dataview th:first-child,
-  .markdown-preview-view .el-lang-dataview td:first-child
-  .markdown-preview-view .el-lang-dataviewjs th:first-child,
-  .markdown-preview-view .el-lang-dataviewjs td:first-child {
-    padding-left:6vw;
-  }
-  .markdown-preview-view .el-table th:last-child,
-  .markdown-preview-view .el-table td:last-child,
-  .markdown-preview-view .el-lang-dataview th:last-child,
-  .markdown-preview-view .el-lang-dataview td:last-child,
-  .markdown-preview-view .el-lang-dataviewjs th:last-child,
-  .markdown-preview-view .el-lang-dataviewjs td:last-child {
-    padding-right:6vw;
-  }
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
-    padding-left:0;
-    padding-right:0;
-  }
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-  .markdown-preview-view .table-view-table table,
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
-    width:100%;
-  }
+	.markdown-preview-view .el-table th:first-child,
+	.markdown-preview-view .el-table td:first-child,
+	.markdown-preview-view .el-lang-dataview th:first-child,
+	.markdown-preview-view .el-lang-dataview td:first-child
+	.markdown-preview-view .el-lang-dataviewjs th:first-child,
+	.markdown-preview-view .el-lang-dataviewjs td:first-child {
+		padding-left:6vw;
+	}
+	.markdown-preview-view .el-table th:last-child,
+	.markdown-preview-view .el-table td:last-child,
+	.markdown-preview-view .el-lang-dataview th:last-child,
+	.markdown-preview-view .el-lang-dataview td:last-child,
+	.markdown-preview-view .el-lang-dataviewjs th:last-child,
+	.markdown-preview-view .el-lang-dataviewjs td:last-child {
+		padding-right:6vw;
+	}
+	.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
+	.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
+	.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
+		padding-left:0;
+		padding-right:0;
+	}
+	.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
+	.markdown-preview-view .table-view-table table,
+	.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
+	.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
+		width:100%;
+	}
 }

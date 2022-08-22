@@ -1,0 +1,31 @@
+/* Backlinks in Preview */
+
+.is-mobile .workspace-leaf-content:not([data-type='search']) .workspace-leaf-content[data-type='markdown'] .nav-buttons-container {
+  border-bottom:none;
+  padding-top:5px;
+}
+.is-mobile .mod-root .workspace-leaf-content[data-type='markdown'] .search-input-container {
+  width:calc(100% - 160px);
+}
+
+
+.embedded-backlinks {
+	.nav-header ~ .search-input-container {
+		width: calc(100% - 140px);
+		margin-top: 12px;
+	}
+
+	.nav-buttons-container {
+		position: absolute;
+		right:0;
+		top: 14px;
+	}
+	.backlink-pane > .tree-item-self:hover,
+	.backlink-pane > .tree-item-self {
+		text-transform: none;
+		color: var(--text-normal);
+		font-size: var(--font-adaptive-normal);
+		font-weight: 500;
+		letter-spacing: unset;
+	}
+}

@@ -1,0 +1,49 @@
+/* Status bar */
+
+.minimal-status-off .status-bar {
+	--status-bar-position: static;
+	--status-bar-radius: 0;
+	--status-bar-border-width: 1px 0 0 0;
+	--status-bar-background: var(--background-secondary);
+	--status-bar-border-color: var(--ui1);
+}
+body:not(.minimal-status-off) .status-bar {
+	background-color: var(--background-primary);
+	--status-bar-border-width: 0;
+}
+.status-bar {
+	transition: color 200ms linear;
+	color: var(--text-faint);
+	font-size: var(--font-adaptive-smallest);
+
+	.sync-status-icon.mod-working,
+	.sync-status-icon.mod-success {
+		color: var(--text-faint);
+	}
+
+	&:hover .sync-status-icon.mod-working,
+	&:hover .sync-status-icon.mod-success,
+	&:hover {
+		color: var(--text-muted);
+		transition: color 200ms linear;
+	}
+
+	.plugin-sync:hover {
+		.sync-status-icon.mod-working,
+		.sync-status-icon.mod-success {
+			color: var(--text-normal);
+		}
+	}
+	.status-bar-item {
+		cursor:var(--cursor) !important;
+
+		&.plugin-editor-status:hover,
+		&.plugin-sync:hover,
+		&.cMenu-statusbar-button:hover,
+		&.mod-clickable:hover {
+			text-align:center;
+			background-color:var(--background-modifier-hover) !important;
+		}
+	}
+
+}
