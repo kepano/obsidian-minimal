@@ -1,4 +1,4 @@
-[![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/cover.png)](https://minimal.guide)
+![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/cover.png)
 
 Find detailed documentation at [minimal.guide](https://minimal.guide)
 
