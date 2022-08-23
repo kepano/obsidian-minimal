@@ -916,9 +916,9 @@ body:not(.window-title-on) .titlebar-text {
 
 .is-hidden-frameless {
   --titlebar-background: var(--bg-1); }
-  .is-hidden-frameless.is-focused .sidebar-toggle-button.mod-right,
-  .is-hidden-frameless.is-focused .workspace-ribbon.mod-left,
-  .is-hidden-frameless.is-focused .workspace-tabs.mod-top {
+  .is-hidden-frameless.is-focused:not(.colorful-titlebar) .sidebar-toggle-button.mod-right,
+  .is-hidden-frameless.is-focused:not(.colorful-titlebar) .workspace-ribbon.mod-left,
+  .is-hidden-frameless.is-focused:not(.colorful-titlebar) .workspace-tabs.mod-top {
     --titlebar-background-focused: var(--bg1); }
 
 /* Trying for a smoother animation */
@@ -2426,6 +2426,31 @@ body:not(.colorful-active) .vertical-tab-nav-item.is-active {
   background-color: var(--background-modifier-hover);
   color: var(--text-normal); }
 
+.theme-light {
+  --colorful-titlebar:
+  	hsla(
+  		var(--accent-h),
+  		var(--accent-s),
+  		calc(var(--accent-l) + 30%),
+  		1
+  		); }
+
+.theme-dark {
+  --colorful-titlebar:
+  	hsla(
+  		var(--accent-h),
+  		var(--accent-s),
+  		calc(var(--accent-l) - 40%),
+  		1
+  		); }
+
+body.colorful-titlebar .workspace-ribbon.mod-left:before,
+body.colorful-titlebar .sidebar-toggle-button.mod-left,
+body.colorful-titlebar .titlebar,
+body.colorful-titlebar .mod-top {
+  --titlebar-background: var(--colorful-titlebar);
+  --titlebar-background-focused: var(--colorful-titlebar); }
+
 /* Colorful headings */
 body.colorful-headings .view-content {
   --h1-color:var(--red);
@@ -2848,6 +2873,8 @@ https://github.com/sponsors/kepano
   padding-left: 0; }
 .labeled-nav.is-hidden-frameless .workspace-ribbon.mod-left:not(.is-collapsed):before {
   border: none; }
+.labeled-nav.is-frameless:not(.is-hidden-frameless) .mod-left-split .mod-top {
+  --tab-container-background: var(--background-secondary); }
 
 .labeled-nav .mod-left-split.is-sidedock-collapsed .mod-top .workspace-tab-container-inner {
   margin-top: calc(var(--header-height) - 1px); }
@@ -2859,9 +2886,14 @@ https://github.com/sponsors/kepano
   font-weight: 500;
   font-size: var(--font-adaptive-smaller); }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
-  flex-direction: column-reverse !important;
+  flex-direction: column !important;
   height: auto;
   width: 100%; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container:before {
+    border-bottom: 1px solid var(--tab-outline-color);
+    background-color: var(--titlebar-background);
+    content: '';
+    height: calc(var(--header-height) - var(--tab-outline-width)); }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .sidebar-toggle-button.mod-left {
     flex-shrink: 1;
     width: 46px;

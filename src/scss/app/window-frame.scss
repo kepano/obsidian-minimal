@@ -5,7 +5,7 @@ body:not(.window-title-on) .titlebar-text {
 
 .is-hidden-frameless {
 	--titlebar-background: var(--bg-1);
-	&.is-focused {
+	&.is-focused:not(.colorful-titlebar) {
 		.sidebar-toggle-button.mod-right,
 		.workspace-ribbon.mod-left,
 		.workspace-tabs.mod-top {

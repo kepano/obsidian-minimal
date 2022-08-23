@@ -1,0 +1,28 @@
+.theme-light {
+	--colorful-titlebar: 
+		hsla(
+			var(--accent-h),
+			var(--accent-s),
+			calc(var(--accent-l) + 30%),
+			1
+			);
+}
+.theme-dark {
+	--colorful-titlebar: 
+		hsla(
+			var(--accent-h),
+			var(--accent-s),
+			calc(var(--accent-l) - 40%),
+			1
+			);
+}
+
+body.colorful-titlebar {
+	.workspace-ribbon.mod-left:before,
+	.sidebar-toggle-button.mod-left,
+	.titlebar,
+	.mod-top {
+		--titlebar-background: var(--colorful-titlebar);
+		--titlebar-background-focused: var(--colorful-titlebar);
+	}
+}
