@@ -911,7 +911,7 @@ settings:
         level: 2
         collapsed: true
     -
-        id: table-font-size
+        id: table-text-size
         title: Table font size
         description: All of the following settings apply to all tables globally. To turn on these features on a per-note basis use helper classes. See documentation.
         type: variable-text

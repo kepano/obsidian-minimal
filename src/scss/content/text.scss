@@ -19,9 +19,9 @@ body,
 .markdown-source-view.mod-cm6.is-live-preview .cm-scroller,
 .cm-s-obsidian,
 .cm-s-obsidian .cm-formatting-hashtag {
-	font-size:var(--font-adaptive-normal);
-	font-weight:var(--normal-weight);
-	line-height:var(--line-height);
+	font-size: var(--font-adaptive-normal);
+	font-weight: var(--normal-weight);
+	line-height: var(--line-height);
 }
 
 .markdown-source-view.mod-cm6 .cm-scroller,
@@ -29,8 +29,8 @@ body,
 .cm-s-obsidian .cm-formatting-hashtag, 
 .cm-s-obsidian,
 .cm-s-obsidian span.cm-formatting-task {
-	line-height:var(--line-height);
-	font-family:var(--font-editor);
+	line-height: var(--line-height);
+	font-family: var(--font-editor);
 }
 
 .cm-s-obsidian span.cm-formatting-task {

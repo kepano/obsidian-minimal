@@ -16,53 +16,53 @@ body {
 	--embed-block-shadow-hover: none;
 
 	/* Font sizes */
-	--font-ui-smaller: 11px;
+	--font-ui-smaller: 12px;
 
 	/* File */
 	--file-margins: 0;
 
 	/* Font weights */
-	--normal-weight:400;
-	--bold-weight:600;
-	--link-weight:inherit;
+	--normal-weight: 400;
+	--bold-weight: 600;
+	--link-weight: inherit;
 
 	/* Headings */
-	--title-size:1.1em;
-	--title-weight:600;
+	--title-size: 1.1em;
+	--title-weight: 600;
 
 	/* Headings */
-	--h1-size:1.125em;
-	--h2-size:1.05em;
-	--h3-size:1em;
-	--h4-size:0.90em;
-	--h5-size:0.85em;
-	--h6-size:0.85em;
+	--h1-size: 1.125em;
+	--h2-size: 1.05em;
+	--h3-size: 1em;
+	--h4-size: 0.90em;
+	--h5-size: 0.85em;
+	--h6-size: 0.85em;
 
-	--h1-weight:600;
-	--h2-weight:600;
-	--h3-weight:500;
-	--h4-weight:500;
-	--h5-weight:500;
-	--h6-weight:400;
+	--h1-weight: 600;
+	--h2-weight: 600;
+	--h3-weight: 500;
+	--h4-weight: 500;
+	--h5-weight: 500;
+	--h6-weight: 400;
 
-	--h1-variant:normal;
-	--h2-variant:normal;
-	--h3-variant:normal;
-	--h4-variant:small-caps;
-	--h5-variant:small-caps;
-	--h6-variant:small-caps;
+	--h1-variant: normal;
+	--h2-variant: normal;
+	--h3-variant: normal;
+	--h4-variant: small-caps;
+	--h5-variant: small-caps;
+	--h6-variant: small-caps;
 
-	--h1-style:normal;
-	--h2-style:normal;
-	--h3-style:normal;
-	--h4-style:normal;
-	--h5-style:normal;
-	--h6-style:normal;
+	--h1-style: normal;
+	--h2-style: normal;
+	--h3-style: normal;
+	--h4-style: normal;
+	--h5-style: normal;
+	--h6-style: normal;
 
 	/* Line widths */
 	--line-width: 40rem;
 	--line-height: 1.5;
-	--max-width:88%;
+	--max-width: 88%;
 	--max-col-width: 18em;
 
 	/* Icons */

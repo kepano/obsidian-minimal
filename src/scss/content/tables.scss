@@ -1,70 +1,34 @@
 /* Preview mode tables */
 
 .markdown-source-view.mod-cm6 table {
-  border-collapse:collapse; 
+	border-collapse:collapse; 
 }
 .markdown-preview-view table {
-  margin-block-start:1em;
+	margin-block-start:1em;
 }
 
-.markdown-source-view.mod-cm6 td,
-.markdown-source-view.mod-cm6 th,
-.markdown-preview-view th,
-.markdown-preview-view td {
-  padding:4px 10px;
+.markdown-source-view.mod-cm6,
+.markdown-preview-view {
+	.dataview.table-view-table thead.table-view-thead tr th,
+	td, th {
+		padding: 4px 10px;
+	}
 }
 
-.markdown-source-view.mod-cm6 td,
-.markdown-preview-view td {
-  font-size:var(--table-font-size);
-}
-
-.markdown-source-view.mod-cm6 th,
-.markdown-preview-view th {
-  font-weight:400;
-  font-size:var(--table-font-size);
-  color:var(--text-muted);
-  border-top:none;
-  text-align:left;
-  &[align="center"] {text-align:center;}
-  &[align="right"] {text-align:right;}
-}
-.markdown-source-view.mod-cm6 th:last-child,
-.markdown-source-view.mod-cm6 td:last-child,
-.markdown-preview-view th:last-child,
-.markdown-preview-view td:last-child {
-  border-right:none;
-}
-.markdown-source-view.mod-cm6 th:first-child,
-.markdown-source-view.mod-cm6 td:first-child,
-.markdown-preview-view th:first-child,
-.markdown-preview-view td:first-child {
-  border-left:none;
-  padding-left:0;
-}
-.markdown-source-view.mod-cm6 tr:last-child td,
-.markdown-preview-view tr:last-child td {
-  border-bottom:none;
-}
-
-
-/* Legacy Editor Tables */
-.CodeMirror pre.HyperMD-table-row {
-  font-family:var(--font-monospace);
-  font-size:var(--table-font-size);
+body {
+	--table-header-border-width: 0 1px;
+	--table-column-first-border-width: 0;
+	--table-column-last-border-width: 0;
+	--table-row-last-border-width: 0;
 }
 
 /* Live Preview Tables */
 .is-live-preview .el-table {
-  width:100%;
-  max-width:100%;
-}
-
-.cm-s-obsidian .HyperMD-table-row {
-  font-size:var(--table-font-size);
+	width:100%;
+	max-width:100%;
 }
 .cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep,
 .cm-hmd-table-sep-dummy {
-  color:var(--text-faint);
-  font-weight:400;
+	color:var(--text-faint);
+	font-weight:400;
 }

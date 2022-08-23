@@ -1,62 +1,63 @@
 /* Image zoom  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
-body:not(.zoom-off) .view-content img {
-	max-width:100%;
-	cursor:zoom-in;
-}
+body:not(.zoom-off) .view-content {
+	img {
+		max-width:100%;
+		cursor:zoom-in;
+	}
 
-body:not(.zoom-off) .view-content img:active {
-	cursor:zoom-out;
-}
-
-body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
-body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active {
-	aspect-ratio:unset;
-	cursor:zoom-out;
-	display:block;
-	z-index:200;
-	position:fixed;
-	max-height:calc(100% + 1px);
-	max-width:100%;
-	height:calc(100% + 1px);
-	width:100%;
-	object-fit:contain;
-	margin:-0.5px auto 0 !important;
-	text-align:center;
-	padding:0;
-	left:0;
-	right:0;
-	bottom:0;
-}
-body:not(.is-mobile):not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active {
-	background-color:var(--background-primary);
-	padding:10px;
-}
-body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active:after {
-	background-color:var(--background-primary);
-	opacity:0.9;
-	content:" ";
-	height:calc(100% + 1px);
-	width:100%;
-	position:fixed;
-	left:0;
-	right:1px;
-	z-index:0;
-}
-body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
-	aspect-ratio:unset;
-	top:50%;
-	z-index:99;
-	transform:translateY(-50%);
-	padding:0;
-	margin:0 auto;
-	width:calc(100% - 20px);
-	max-height:95vh;
-	object-fit:contain;
-	left:0;
-	right:0;
-	bottom:0;
-	position:absolute;
-	opacity:1;
+	img:active {
+		cursor:zoom-out;
+	}
+	.markdown-preview-view img[referrerpolicy='no-referrer']:active {
+		background-color:var(--background-primary);
+		padding:10px;
+	}
+	.markdown-preview-view img[referrerpolicy='no-referrer']:active,
+	.image-embed:active {
+		aspect-ratio:unset;
+		cursor:zoom-out;
+		display:block;
+		z-index:200;
+		position:fixed;
+		max-height:calc(100% + 1px);
+		max-width:100%;
+		height:calc(100% + 1px);
+		width:100%;
+		object-fit:contain;
+		margin:-0.5px auto 0 !important;
+		text-align:center;
+		padding:0;
+		left:0;
+		right:0;
+		bottom:0;
+	}
+	.image-embed:active:after {
+		background-color:var(--background-primary);
+		opacity:0.9;
+		content:" ";
+		height:calc(100% + 1px);
+		width:100%;
+		position:fixed;
+		left:0;
+		right:1px;
+		z-index:0;
+	}
+	.image-embed:active img {
+		aspect-ratio:unset;
+		top:50%;
+		z-index:99;
+		transform:translateY(-50%);
+		padding:0;
+		margin:0 auto;
+		width:calc(100% - 20px);
+		max-height:95vh;
+		object-fit:contain;
+		left:0;
+		right:0;
+		bottom:0;
+		position:absolute;
+		opacity:1;
+	}
 }

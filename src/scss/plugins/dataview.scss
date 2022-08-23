@@ -9,7 +9,7 @@
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
 	font-weight:400;
-	font-size:var(--table-font-size);
+	font-size:var(--table-text-size);
 	color:var(--text-muted);
 	border-bottom:1px solid var(--background-modifier-border);
 	cursor:var(--cursor);
@@ -49,7 +49,7 @@ body div.dataview-error-box {
 	min-height:0;
 	border:none;
 	background-color:transparent;
-	font-size:var(--table-font-size);
+	font-size:var(--table-text-size);
 	border-radius:var(--radius-m);
 	padding:15px 0;
 	p {
