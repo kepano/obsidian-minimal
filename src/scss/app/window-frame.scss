@@ -1,5 +1,5 @@
 /* Window frame */
-body:not(.window-title-on) .titlebar-text {
+body.window-title-off .titlebar-text {
   display:none;
 }
 
@@ -41,15 +41,10 @@ body {
 	}
 }
 
-.is-hidden-frameless {
+.is-hidden-frameless:not(.colorful-titlebar) {
 	.mod-left-split {
 		.mod-top .workspace-tab-header-container {
 			--tab-container-background: var(--background-secondary);
 		}
 	}
-	/*.mod-right-split {
-		.workspace-tab-header-container {
-			--tab-container-background: var(--background-primary);
-		}
-	}*/
 }

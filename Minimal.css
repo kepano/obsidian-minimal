@@ -951,7 +951,7 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
   transition: opacity 0.25s ease-in-out; }
 
 /* Window frame */
-body:not(.window-title-on) .titlebar-text {
+body.window-title-off .titlebar-text {
   display: none; }
 
 .is-hidden-frameless {
@@ -978,14 +978,8 @@ body .mod-right-split {
   body .mod-right-split :not(.mod-top) .workspace-tab-header-container {
     --tab-container-background: var(--background-primary); }
 
-.is-hidden-frameless {
-  /*.mod-right-split {
-  	.workspace-tab-header-container {
-  		--tab-container-background: var(--background-primary);
-  	}
-  }*/ }
-  .is-hidden-frameless .mod-left-split .mod-top .workspace-tab-header-container {
-    --tab-container-background: var(--background-secondary); }
+.is-hidden-frameless:not(.colorful-titlebar) .mod-left-split .mod-top .workspace-tab-header-container {
+  --tab-container-background: var(--background-secondary); }
 
 /* Components */
 /* Buttons */
@@ -8104,9 +8098,9 @@ name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
     -
-        id: window-title-on
-        title: Display window title
-        description: Display title in the custom window frame
+        id: window-title-off
+        title: Hide window title
+        description: Hide title in the custom window frame
         type: class-toggle
     -
         id: styled-scrollbars

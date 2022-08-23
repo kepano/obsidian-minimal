@@ -1288,9 +1288,9 @@ name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
     -
-        id: window-title-on
-        title: Display window title
-        description: Display title in the custom window frame
+        id: window-title-off
+        title: Hide window title
+        description: Hide title in the custom window frame
         type: class-toggle
     -
         id: styled-scrollbars
