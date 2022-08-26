@@ -5074,7 +5074,6 @@ div[data-type="git-view"] .search-input-container {
 
 div[data-type="git-view"] .commit-msg {
   min-height: 2.5em !important;
-  height: 2.5em !important;
   padding: 6.5px 8px !important; }
 
 div[data-type="git-view"] .search-input-clear-button {
