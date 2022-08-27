@@ -52,11 +52,11 @@ https://github.com/sponsors/kepano
 			font-size: var(--font-adaptive-smaller);
 		}
 		.workspace-tab-header-container {
-			flex-direction: column !important;
+			flex-direction: column-reverse !important;
 			height: auto;
 			width: 100%;
 			&:before {
-				border-bottom: 1px solid var(--tab-outline-color);
+				border-bottom: var(--divider-width) solid var(--tab-outline-color);
 				background-color: var(--titlebar-background);
 				content: '';
 				height: calc(var(--header-height) - var(--tab-outline-width));
@@ -82,6 +82,9 @@ https://github.com/sponsors/kepano
 			border:none;
 			height:auto;
 
+			&.is-active:not(:hover) {
+				background-color: transparent;
+			}
 			&.is-active,
 			&:hover {
 				opacity:1;

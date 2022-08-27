@@ -5,7 +5,7 @@ body.window-title-off .titlebar-text {
 
 .is-hidden-frameless {
 	--titlebar-background: var(--bg-1);
-	&.is-focused:not(.colorful-titlebar) {
+	&.is-focused:not(.colorful-frame) {
 		.sidebar-toggle-button.mod-right,
 		.workspace-ribbon.mod-left,
 		.workspace-tabs.mod-top {
@@ -41,7 +41,7 @@ body {
 	}
 }
 
-.is-hidden-frameless:not(.colorful-titlebar) {
+.is-hidden-frameless:not(.colorful-frame) {
 	.mod-left-split {
 		.mod-top .workspace-tab-header-container {
 			--tab-container-background: var(--background-secondary);

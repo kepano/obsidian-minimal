@@ -1,5 +1,5 @@
 .theme-light {
-	--colorful-titlebar: 
+	--colorful-frame: 
 		hsla(
 			var(--accent-h),
 			var(--accent-s),
@@ -8,7 +8,7 @@
 			);
 }
 .theme-dark {
-	--colorful-titlebar: 
+	--colorful-frame: 
 		hsla(
 			var(--accent-h),
 			var(--accent-s),
@@ -17,12 +17,13 @@
 			);
 }
 
-body.colorful-titlebar {
+body.colorful-frame.is-focused,
+body.colorful-frame {
 	.workspace-ribbon.mod-left:before,
 	.sidebar-toggle-button.mod-left,
 	.titlebar,
 	.mod-top {
-		--titlebar-background: var(--colorful-titlebar);
-		--titlebar-background-focused: var(--colorful-titlebar);
+		--titlebar-background: var(--colorful-frame);
+		--titlebar-background-focused: var(--colorful-frame);
 	}
 }

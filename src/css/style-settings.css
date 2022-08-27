@@ -229,6 +229,24 @@ settings:
         type: variable-text
         default: 13px
     -
+        id: dataview
+        title: Dataview
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: trim-cols
+        title: Trim Dataview columns
+        description: Disables word wrapping in table cells, and trims long text
+        type: class-toggle
+        default: true
+    -
+        id: max-col-width
+        title: Dataview maximum column width
+        description: Maximum width for Dataview columns, accepts any CSS width value
+        type: variable-text
+        default: 18em
+    -
         id: embed-blocks
         title: Embeds and transclusions
         type: heading

@@ -916,9 +916,9 @@ body.window-title-off .titlebar-text {
 
 .is-hidden-frameless {
   --titlebar-background: var(--bg-1); }
-  .is-hidden-frameless.is-focused:not(.colorful-titlebar) .sidebar-toggle-button.mod-right,
-  .is-hidden-frameless.is-focused:not(.colorful-titlebar) .workspace-ribbon.mod-left,
-  .is-hidden-frameless.is-focused:not(.colorful-titlebar) .workspace-tabs.mod-top {
+  .is-hidden-frameless.is-focused:not(.colorful-frame) .sidebar-toggle-button.mod-right,
+  .is-hidden-frameless.is-focused:not(.colorful-frame) .workspace-ribbon.mod-left,
+  .is-hidden-frameless.is-focused:not(.colorful-frame) .workspace-tabs.mod-top {
     --titlebar-background-focused: var(--bg1); }
 
 /* Trying for a smoother animation */
@@ -938,7 +938,7 @@ body .mod-right-split {
   body .mod-right-split :not(.mod-top) .workspace-tab-header-container {
     --tab-container-background: var(--background-primary); }
 
-.is-hidden-frameless:not(.colorful-titlebar) .mod-left-split .mod-top .workspace-tab-header-container {
+.is-hidden-frameless:not(.colorful-frame) .mod-left-split .mod-top .workspace-tab-header-container {
   --tab-container-background: var(--background-secondary); }
 
 /* Components */
@@ -2421,7 +2421,7 @@ body:not(.colorful-active) .vertical-tab-nav-item.is-active {
   color: var(--text-normal); }
 
 .theme-light {
-  --colorful-titlebar:
+  --colorful-frame:
   	hsla(
   		var(--accent-h),
   		var(--accent-s),
@@ -2430,7 +2430,7 @@ body:not(.colorful-active) .vertical-tab-nav-item.is-active {
   		); }
 
 .theme-dark {
-  --colorful-titlebar:
+  --colorful-frame:
   	hsla(
   		var(--accent-h),
   		var(--accent-s),
@@ -2438,12 +2438,16 @@ body:not(.colorful-active) .vertical-tab-nav-item.is-active {
   		1
   		); }
 
-body.colorful-titlebar .workspace-ribbon.mod-left:before,
-body.colorful-titlebar .sidebar-toggle-button.mod-left,
-body.colorful-titlebar .titlebar,
-body.colorful-titlebar .mod-top {
-  --titlebar-background: var(--colorful-titlebar);
-  --titlebar-background-focused: var(--colorful-titlebar); }
+body.colorful-frame.is-focused .workspace-ribbon.mod-left:before,
+body.colorful-frame.is-focused .sidebar-toggle-button.mod-left,
+body.colorful-frame.is-focused .titlebar,
+body.colorful-frame.is-focused .mod-top,
+body.colorful-frame .workspace-ribbon.mod-left:before,
+body.colorful-frame .sidebar-toggle-button.mod-left,
+body.colorful-frame .titlebar,
+body.colorful-frame .mod-top {
+  --titlebar-background: var(--colorful-frame);
+  --titlebar-background-focused: var(--colorful-frame); }
 
 /* Colorful headings */
 body.colorful-headings .view-content {
@@ -2880,11 +2884,11 @@ https://github.com/sponsors/kepano
   font-weight: 500;
   font-size: var(--font-adaptive-smaller); }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
-  flex-direction: column !important;
+  flex-direction: column-reverse !important;
   height: auto;
   width: 100%; }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container:before {
-    border-bottom: 1px solid var(--tab-outline-color);
+    border-bottom: var(--divider-width) solid var(--tab-outline-color);
     background-color: var(--titlebar-background);
     content: '';
     height: calc(var(--header-height) - var(--tab-outline-width)); }
@@ -2903,6 +2907,8 @@ https://github.com/sponsors/kepano
   margin-bottom: 2px;
   border: none;
   height: auto; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
+    background-color: transparent; }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active, .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover {
     opacity: 1;
     --tab-text-color-focused: var(--text-normal);
