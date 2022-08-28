@@ -4,10 +4,11 @@ body.window-title-off .titlebar-text {
 }
 
 .is-hidden-frameless {
-	--titlebar-background: var(--bg-1);
+	--titlebar-background: var(--bg1);
+
 	&.is-focused:not(.colorful-frame) {
 		.sidebar-toggle-button.mod-right,
-		.workspace-ribbon.mod-left,
+		.workspace-ribbon.mod-left.is-collapsed,
 		.workspace-tabs.mod-top {
 			--titlebar-background-focused: var(--bg1);
 		}
@@ -30,7 +31,7 @@ body.window-title-off .titlebar-text {
 
 body {
 	&.is-focused {
-		--titlebar-background-focused: var(--bg2);
+		--titlebar-background-focused: var(--background-secondary);
 	}
 	.mod-right-split {
 		--background-secondary: var(--background-primary);

@@ -956,9 +956,9 @@ body.window-title-off .titlebar-text {
   display: none; }
 
 .is-hidden-frameless {
-  --titlebar-background: var(--bg-1); }
+  --titlebar-background: var(--bg1); }
   .is-hidden-frameless.is-focused:not(.colorful-frame) .sidebar-toggle-button.mod-right,
-  .is-hidden-frameless.is-focused:not(.colorful-frame) .workspace-ribbon.mod-left,
+  .is-hidden-frameless.is-focused:not(.colorful-frame) .workspace-ribbon.mod-left.is-collapsed,
   .is-hidden-frameless.is-focused:not(.colorful-frame) .workspace-tabs.mod-top {
     --titlebar-background-focused: var(--bg1); }
 
@@ -973,7 +973,7 @@ body.window-title-off .titlebar-text {
   padding-right: 36px; }
 
 body.is-focused {
-  --titlebar-background-focused: var(--bg2); }
+  --titlebar-background-focused: var(--background-secondary); }
 body .mod-right-split {
   --background-secondary: var(--background-primary); }
   body .mod-right-split :not(.mod-top) .workspace-tab-header-container {
