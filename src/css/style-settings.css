@@ -752,6 +752,14 @@ settings:
         format: hex
         default-light: '#'
         default-dark: '#'
+    - 
+        id: icon-color-focused
+        title: Icon color (focused)
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
         id: images
         title: Images

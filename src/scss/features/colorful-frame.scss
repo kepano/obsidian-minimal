@@ -46,7 +46,6 @@ body {
 
 body.colorful-frame.is-focused,
 body.colorful-frame {
-
 	--frame-divider-color: var(--frame-outline-color);
 
 	.workspace-ribbon.mod-left:before,
@@ -72,12 +71,16 @@ body.colorful-frame {
 	}
 }
 
+
+.workspace-leaf-resize-handle {
+	transition: none;
+}
 .workspace-split.mod-root .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
 	border: 0;
 	width: 1px;
-	background: var(--ui1);
+	background: var(--divider-color);
 	&:before {
 		content:"";
 		height: var(--header-height);

@@ -54,7 +54,7 @@ body .excalidraw {
 	--frame-divider-color:               var(--ui1);
 
 	--icon-color-active:                 var(--tx1);
-	--icon-color-focus:                  var(--tx1);
+	--icon-color-focused:                var(--tx1);
 	--icon-color-hover:                  var(--tx2);
 	--icon-color:                        var(--tx2);
 	--icon-hex:                          var(--mono0);
@@ -101,6 +101,8 @@ body .excalidraw {
 
 	--title-color-inactive:              var(--tx2);
 	--title-color:                       var(--tx1);
+
+	--titlebar-text-color-focused:       var(--tx1);
 
 	--tag-color:                         var(--tx2);
 	--tag-bg:                            transparent;

@@ -205,7 +205,6 @@ body .excalidraw {
 .theme-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
 .theme-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark,
@@ -396,7 +395,7 @@ body .excalidraw {
   --divider-color: var(--ui1);
   --frame-divider-color: var(--ui1);
   --icon-color-active: var(--tx1);
-  --icon-color-focus: var(--tx1);
+  --icon-color-focused: var(--tx1);
   --icon-color-hover: var(--tx2);
   --icon-color: var(--tx2);
   --icon-hex: var(--mono0);
@@ -433,6 +432,7 @@ body .excalidraw {
   --text-selection: var(--hl1);
   --title-color-inactive: var(--tx2);
   --title-color: var(--tx1);
+  --titlebar-text-color-focused: var(--tx1);
   --tag-color: var(--tx2);
   --tag-bg: transparent;
   --tag-bg2: transparent; }
@@ -915,11 +915,15 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
 body.window-title-off .titlebar-text {
   display: none; }
 
-.is-hidden-frameless {
+.is-hidden-frameless.theme-dark:not(.minimal-dark-black),
+.is-hidden-frameless.theme-light:not(.minimal-light-tonal) {
   --titlebar-background: var(--bg1); }
-  .is-hidden-frameless.is-focused:not(.colorful-frame) .sidebar-toggle-button.mod-right,
-  .is-hidden-frameless.is-focused:not(.colorful-frame) .workspace-ribbon.mod-left.is-collapsed,
-  .is-hidden-frameless.is-focused:not(.colorful-frame) .workspace-tabs.mod-top {
+  .is-hidden-frameless.theme-dark:not(.minimal-dark-black).is-focused:not(.colorful-frame) .sidebar-toggle-button.mod-right,
+  .is-hidden-frameless.theme-dark:not(.minimal-dark-black).is-focused:not(.colorful-frame) .workspace-ribbon.mod-left.is-collapsed,
+  .is-hidden-frameless.theme-dark:not(.minimal-dark-black).is-focused:not(.colorful-frame) .workspace-tabs.mod-top,
+  .is-hidden-frameless.theme-light:not(.minimal-light-tonal).is-focused:not(.colorful-frame) .sidebar-toggle-button.mod-right,
+  .is-hidden-frameless.theme-light:not(.minimal-light-tonal).is-focused:not(.colorful-frame) .workspace-ribbon.mod-left.is-collapsed,
+  .is-hidden-frameless.theme-light:not(.minimal-light-tonal).is-focused:not(.colorful-frame) .workspace-tabs.mod-top {
     --titlebar-background-focused: var(--bg1); }
 
 /* Trying for a smoother animation */
@@ -2461,12 +2465,15 @@ body.colorful-frame {
     --tab-text-color-hover: var(--frame-muted-color);
     --tab-text-color-focused: var(--frame-muted-color); }
 
+.workspace-leaf-resize-handle {
+  transition: none; }
+
 .workspace-split.mod-root .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   border: 0;
   width: 1px;
-  background: var(--ui1); }
+  background: var(--divider-color); }
   .workspace-split.mod-root .workspace-leaf-resize-handle:before,
   .workspace-split.mod-left-split > .workspace-leaf-resize-handle:before,
   .workspace-split.mod-right-split > .workspace-leaf-resize-handle:before {

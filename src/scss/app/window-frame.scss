@@ -3,7 +3,8 @@ body.window-title-off .titlebar-text {
   display:none;
 }
 
-.is-hidden-frameless {
+.is-hidden-frameless.theme-dark:not(.minimal-dark-black),
+.is-hidden-frameless.theme-light:not(.minimal-light-tonal) {
 	--titlebar-background: var(--bg1);
 
 	&.is-focused:not(.colorful-frame) {
