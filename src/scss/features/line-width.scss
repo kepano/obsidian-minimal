@@ -88,10 +88,10 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
 	max-width:100%;
 }
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
 	max-width:calc(var(--max-width) - var(--folding-offset));
 }
 
@@ -163,8 +163,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 		}
 	}
 	/* For lists adding an extra offset value in Edit mode */
-	/* Needs .is-line-wrap to override default styling */
-	.markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap {
+	.markdown-source-view.mod-cm6.is-readable-line-width {
 		.HyperMD-list-line {
 			width:calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
 			max-width:calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));

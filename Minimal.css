@@ -534,7 +534,7 @@ body {
   --font-adaptive-normal:var(--font-text-size,var(--editor-font-size));
   --font-adaptive-small: var(--font-ui-medium);
   --font-adaptive-smaller: var(--font-ui-small);
-  --font-adaptive-smallest: var(--font-ui-smaller);
+  --font-adaptive-smallest: 11px;
   --line-width-adaptive:var(--line-width);
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
@@ -1703,18 +1703,11 @@ ul > li {
 ol > li {
   margin-left: 0em; }
 
-ul {
-  padding-inline-start: var(--list-indent); }
-
 ol {
-  padding-inline-start: var(--list-indent);
   margin-left: 0;
   list-style: default; }
 
 /* Live Preview */
-.cm-line:not(.HyperMD-codeblock) {
-  tab-size: var(--list-indent); }
-
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line {
   margin-left: var(--list-edit-offset) !important; }
 
@@ -1728,13 +1721,6 @@ ol {
   padding-bottom: var(--list-spacing); }
 
 /* Bullets */
-ul > li:not(.task-list-item)::marker {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-
-.mod-cm6 .HyperMD-list-line .list-bullet::after,
-.mod-cm6 span.list-bullet::after {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   left: -5px; }
 
@@ -3301,10 +3287,10 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
   max-width: 100%; }
 
-.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   max-width: calc(var(--max-width) - var(--folding-offset)); }
 
 /* Fill the width of the parent block for nested elements */
@@ -3361,8 +3347,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
   margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
 
 /* For lists adding an extra offset value in Edit mode */
-/* Needs .is-line-wrap to override default styling */
-.markdown-source-view.mod-cm6.is-readable-line-width.is-line-wrap .HyperMD-list-line {
+.markdown-source-view.mod-cm6.is-readable-line-width .HyperMD-list-line {
   width: calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
   max-width: calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));
   margin-right: auto;

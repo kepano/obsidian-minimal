@@ -8,22 +8,15 @@ ul > li {
 }
 ol > li {
   margin-left:0em;}
-ul {
-  padding-inline-start:var(--list-indent);
-}
 ol {
-  padding-inline-start:var(--list-indent);
   margin-left:0;
   list-style:default;
 }
 
 /* Live Preview */
-.cm-line:not(.HyperMD-codeblock) {
-  tab-size:var(--list-indent);
-}
 
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line {
-  margin-left:var(--list-edit-offset) !important;
+  margin-left: var(--list-edit-offset) !important;
 }
 
 /* Space between list items */
@@ -37,21 +30,12 @@ ol {
 }
 
 /* Bullets */
-ul > li:not(.task-list-item)::marker {
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-}
-.mod-cm6 .HyperMD-list-line .list-bullet::after,
-.mod-cm6 span.list-bullet::after {
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-}
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   left:-5px;
 }
 body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
   margin-left:-5px;
 }
-
-
 
 .is-mobile {
   ul > li:not(.task-list-item)::marker {
