@@ -883,26 +883,6 @@ settings:
         type: heading
         level: 2
         collapsed: true
-    - 
-        id: tab-style
-        title: Tab style
-        description: See documentation for screenshots
-        type: class-select
-        allowEmpty: false
-        default: tab-style-1
-        options:
-            - 
-                label: Compact
-                value: tab-style-1
-            -
-                label: Pill
-                value: tab-style-3
-            - 
-                label: Underlined
-                value: tab-style-2
-            - 
-                label: Index
-                value: tab-style-4
     -
         id: sidebar-lines-off
         title: Disable sidebar relationship lines
@@ -1005,7 +985,7 @@ settings:
         collapsed: true
     - 
         id: tabs-style
-        title: Tabs
+        title: Tab style
         type: class-select
         allowEmpty: false
         default: tabs-default
@@ -1169,38 +1149,21 @@ settings:
         level: 2
         collapsed: true
     - 
-        id: title-alignment
-        title: Title alignment
-        description: Position of the text within the title bar
-        type: class-select
-        allowEmpty: false
-        default: title-align-body
-        options:
-            - 
-                label: Text body
-                value: title-align-body
-            - 
-                label: Left
-                value: title-align-left
-            -
-                label: Center
-                value: title-align-center
-    - 
         id: header-height
         title: Title bar height
         type: variable-text
         default: 40px
     - 
-        id: title-size
-        title: Title font size
+        id: file-header-font-size
+        title: View header font size
         description: Accepts any CSS font-size value
         type: variable-text
-        default: 1.1em
+        default: 0.9em
     - 
-        id: title-weight
-        title: Title font weight
+        id: file-header-font-weight
+        title: View header font weight
         type: variable-number-slider
-        default: 600
+        default: 500
         min: 100
         max: 900
         step: 100
@@ -1242,7 +1205,51 @@ settings:
         min: 0
         max: 1
         step: 0.05
-
+    -
+        id: window-frame
+        title: Window frame
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: window-title-off
+        title: Hide window title
+        description: Hide title in the custom title bar
+        type: class-toggle
+    - 
+        id: frame-background
+        title: Window frame background
+        description: Requires colorful window frame
+        type: variable-themed-color
+        opacity: true
+        format: hsl-split
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: titlebar-text-color-focused
+        title: Window title color (focused)
+        description: Requires custom title bar
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: titlebar-text-color
+        title: Window title color (inactive)
+        description: Requires custom title bar
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: titlebar-text-weight
+        title: Window title font weight
+        description: Requires custom title bar
+        type: variable-number-slider
+        default: 600
+        min: 100
+        max: 900
+        step: 100
 */
 
 /* @settings
@@ -1305,11 +1312,6 @@ settings:
 name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
-    -
-        id: window-title-off
-        title: Hide window title
-        description: Hide title in the custom window frame
-        type: class-toggle
     -
         id: styled-scrollbars
         title: Styled scrollbars

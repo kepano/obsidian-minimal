@@ -38,22 +38,6 @@ body,
 	line-height:var(--line-height);
 }
 
-.view-header-title,
-.file-embed-title,
-.markdown-embed-title {
-	letter-spacing:-0.02em;
-	text-align:left;
-	font-size:var(--title-size);
-	font-weight:var(--title-weight);
-}
-.view-header-title {
-	color:var(--title-color-inactive);
-}
-.file-embed-title,
-.markdown-embed-title,
-.workspace-leaf.mod-active .view-header-title {
-	color:var(--title-color);
-}
 .mod-cm6 .cm-editor .HyperMD-header-1,
 .mod-cm6 .cm-editor .HyperMD-header-2,
 .mod-cm6 .cm-editor .HyperMD-header-3,

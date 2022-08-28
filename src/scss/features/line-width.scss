@@ -6,11 +6,6 @@
 	}
 }
 
-/* Nudge titlebar */
-body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-rotate-header) .view-header-title {
-	padding-left:var(--folding-offset);
-}
-
 .markdown-source-view.wide,
 .markdown-preview-view.wide {
 	--line-width-adaptive:var(--line-width-wide);

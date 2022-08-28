@@ -1,21 +1,21 @@
 /* Map colors to semantic Obsidian names */
 
 .theme-light {
-	--mono100:black;
-	--mono0:white;
+	--mono100: black;
+	--mono0: white;
 }
 .theme-dark {
-	--mono100:white;
-	--mono0:black;
+	--mono100: white;
+	--mono0: black;
 }
 .theme-light,
 .theme-dark {
-	--h1-color:var(--text-normal);
-	--h2-color:var(--text-normal);
-	--h3-color:var(--text-normal);
-	--h4-color:var(--text-normal);
-	--h5-color:var(--text-normal);
-	--h6-color:var(--text-muted);
+	--h1-color: var(--text-normal);
+	--h2-color: var(--text-normal);
+	--h3-color: var(--text-normal);
+	--h4-color: var(--text-normal);
+	--h5-color: var(--text-normal);
+	--h6-color: var(--text-muted);
 }
 
 .theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
@@ -51,6 +51,7 @@ body .excalidraw {
 	--code-normal:                       var(--tx1);
 
 	--divider-color:                     var(--ui1);
+	--frame-divider-color:               var(--ui1);
 
 	--icon-color-active:                 var(--tx1);
 	--icon-color-focus:                  var(--tx1);

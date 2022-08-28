@@ -1,29 +1,90 @@
+body {
+	--frame-background:
+	hsla(
+		var(--frame-background-h),
+		var(--frame-background-s),
+		var(--frame-background-l),
+		1
+		);
+}
+
 .theme-light {
-	--colorful-frame: 
+	--frame-background-h: var(--accent-h);
+	--frame-background-s: var(--accent-s);
+	--frame-background-l: calc(var(--accent-l) + 30%);
+	--frame-outline-color:
 		hsla(
-			var(--accent-h),
-			var(--accent-s),
-			calc(var(--accent-l) + 30%),
+			var(--frame-background-h),
+			calc(var(--frame-background-s) - 2%),
+			calc(var(--frame-background-l) - 6.5%),
 			1
 			);
+	--frame-muted-color:
+			hsl(
+				var(--frame-background-h),
+				calc(var(--frame-background-s) - 10%),
+				calc(var(--frame-background-l) - 35%));
+
 }
 .theme-dark {
-	--colorful-frame: 
+	--frame-background-h: var(--accent-h);
+	--frame-background-s: var(--accent-s);
+	--frame-background-l: calc(var(--accent-l) - 25%);
+	--frame-outline-color:
 		hsla(
-			var(--accent-h),
-			var(--accent-s),
-			calc(var(--accent-l) - 40%),
+			var(--frame-background-h),
+			calc(var(--frame-background-s) - 2%),
+			calc(var(--frame-background-l) + 6.5%),
 			1
 			);
+	--frame-muted-color:
+			hsl(
+				var(--frame-background-h),
+				calc(var(--frame-background-s) - 10%),
+				calc(var(--frame-background-l) + 25%));
 }
 
 body.colorful-frame.is-focused,
 body.colorful-frame {
+
+	--frame-divider-color: var(--frame-outline-color);
+
 	.workspace-ribbon.mod-left:before,
 	.sidebar-toggle-button.mod-left,
 	.titlebar,
 	.mod-top {
-		--titlebar-background: var(--colorful-frame);
-		--titlebar-background-focused: var(--colorful-frame);
+		--titlebar-background: var(--frame-background);
+		--titlebar-background-focused: var(--frame-background);
+	}
+
+	.workspace-ribbon.mod-left:before,
+	.mod-top .workspace-tab-header-container {
+		--tab-outline-width: 0px;
+		--tab-outline-color: var(--frame-outline-color);
+		--tab-divider-color: var(--frame-outline-color);
+		--background-modifier-hover: var(--frame-outline-color);
+		--icon-color: var(--frame-muted-color);
+		--icon-color-hover: var(--frame-muted-color);
+		--text-muted: var(--frame-muted-color);
+		--tab-text-color: var(--frame-muted-color);
+		--tab-text-color-hover: var(--frame-muted-color);
+		--tab-text-color-focused: var(--frame-muted-color);
+	}
+}
+
+.workspace-split.mod-root .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+	border: 0;
+	width: 1px;
+	background: var(--ui1);
+	&:before {
+		content:"";
+		height: var(--header-height);
+		width: 1px;
+		background: var(--frame-divider-color);
+		top: 0;
+		position: absolute;
+		z-index: 9999;
 	}
 }
