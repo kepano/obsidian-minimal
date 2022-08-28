@@ -2450,7 +2450,7 @@ body {
   --frame-outline-color:
   	hsla(
   		var(--frame-background-h),
-  		calc(var(--frame-background-s) - 2%),
+  		var(--frame-background-s),
   		calc(var(--frame-background-l) - 6.5%),
   		1
   		);
@@ -2490,9 +2490,13 @@ body.colorful-frame {
   body.colorful-frame .mod-top {
     --titlebar-background: var(--frame-background);
     --titlebar-background-focused: var(--frame-background); }
+  body.colorful-frame.is-focused .titlebar,
   body.colorful-frame.is-focused .workspace-ribbon.mod-left:before,
+  body.colorful-frame.is-focused .sidebar-toggle-button.mod-left,
   body.colorful-frame.is-focused .mod-top .workspace-tab-header-container,
+  body.colorful-frame .titlebar,
   body.colorful-frame .workspace-ribbon.mod-left:before,
+  body.colorful-frame .sidebar-toggle-button.mod-left,
   body.colorful-frame .mod-top .workspace-tab-header-container {
     --tab-outline-width: 0px;
     --tab-outline-color: var(--frame-outline-color);
@@ -2508,15 +2512,15 @@ body.colorful-frame {
 .workspace-leaf-resize-handle {
   transition: none; }
 
-.workspace-split.mod-root .workspace-leaf-resize-handle,
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+.is-hidden-frameless .workspace-split.mod-root .workspace-leaf-resize-handle,
+.is-hidden-frameless .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   border: 0;
   width: 1px;
   background: var(--divider-color); }
-  .workspace-split.mod-root .workspace-leaf-resize-handle:before,
-  .workspace-split.mod-left-split > .workspace-leaf-resize-handle:before,
-  .workspace-split.mod-right-split > .workspace-leaf-resize-handle:before {
+  .is-hidden-frameless .workspace-split.mod-root .workspace-leaf-resize-handle:before,
+  .is-hidden-frameless .workspace-split.mod-left-split > .workspace-leaf-resize-handle:before,
+  .is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle:before {
     content: "";
     height: var(--header-height);
     width: 1px;
@@ -6737,14 +6741,6 @@ settings:
         id: base
         title: Base color
         description: Defines all background and border colors unless overridden in more granular settings
-        type: variable-themed-color
-        format: hsl-split
-        default-light: '#'
-        default-dark: '#'
-    - 
-        id: accent
-        title: Accent color
-        description: Defines link and checkbox colors unless overridden in more granular settings
         type: variable-themed-color
         format: hsl-split
         default-light: '#'

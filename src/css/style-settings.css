@@ -25,14 +25,6 @@ settings:
         default-light: '#'
         default-dark: '#'
     - 
-        id: accent
-        title: Accent color
-        description: Defines link and checkbox colors unless overridden in more granular settings
-        type: variable-themed-color
-        format: hsl-split
-        default-light: '#'
-        default-dark: '#'
-    - 
         id: bg1
         title: Primary background
         description: Background color for the main window
