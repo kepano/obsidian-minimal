@@ -4293,7 +4293,7 @@ body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
-  font-size: var(--font-adaptive-smaller); }
+  font-size: var(--font-adaptive-smallest); }
 
 .nav-buttons-container {
   justify-content: flex-start; }
