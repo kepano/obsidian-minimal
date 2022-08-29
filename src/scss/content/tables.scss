@@ -12,6 +12,9 @@
 	.dataview.table-view-table thead.table-view-thead tr th,
 	td, th {
 		padding: 4px 10px;
+		&:first-child {
+			padding-left: 0;
+		}
 	}
 }
 

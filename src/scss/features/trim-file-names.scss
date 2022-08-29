@@ -1,5 +1,13 @@
 /* Turn off file name trimming */
 
 .full-file-names {
-	--nav-item-white-space: :normal;
+	--nav-item-white-space: normal;
+}
+
+body:not(.full-file-names) {
+	.tree-item-inner {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 }

@@ -160,6 +160,7 @@ body .excalidraw {
 }
 
 .theme-dark.minimal-dark-tonal {
+	--ribbon-background: var(--bg1);
 	--background-secondary:      var(--bg1);
 	--background-table-rows:     var(--bg3);
 }

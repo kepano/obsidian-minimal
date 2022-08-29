@@ -475,6 +475,7 @@ body .excalidraw {
   --background-table-rows: var(--bg3); }
 
 .theme-dark.minimal-dark-tonal {
+  --ribbon-background: var(--bg1);
   --background-secondary: var(--bg1);
   --background-table-rows: var(--bg3); }
 
@@ -1742,6 +1743,12 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatt
 .markdown-preview-view td,
 .markdown-preview-view th {
   padding: 4px 10px; }
+  .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child,
+  .markdown-source-view.mod-cm6 td:first-child, .markdown-source-view.mod-cm6 th:first-child,
+  .markdown-preview-view .dataview.table-view-table thead.table-view-thead tr th:first-child,
+  .markdown-preview-view td:first-child,
+  .markdown-preview-view th:first-child {
+    padding-left: 0; }
 
 body {
   --table-header-border-width: 0 1px;
@@ -2476,7 +2483,7 @@ body.colorful-frame {
 .is-hidden-frameless .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   border: 0;
-  width: 1px;
+  width: var(--divider-width);
   background: var(--divider-color); }
   .is-hidden-frameless .workspace-split.mod-root .workspace-leaf-resize-handle:before,
   .is-hidden-frameless .workspace-split.mod-left-split > .workspace-leaf-resize-handle:before,
@@ -3617,7 +3624,12 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 
 /* Turn off file name trimming */
 .full-file-names {
-  --nav-item-white-space: :normal; }
+  --nav-item-white-space: normal; }
+
+body:not(.full-file-names) .tree-item-inner {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
 
 /* Underline headings */
 .theme-light,
