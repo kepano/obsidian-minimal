@@ -15,8 +15,6 @@ body {
   --embed-block-shadow-hover: none;
   /* Font sizes */
   --font-ui-smaller: 12px;
-  /* File */
-  --file-margins: 0;
   /* Font weights */
   --normal-weight: 400;
   --bold-weight: 600;
@@ -294,7 +292,7 @@ body .excalidraw {
   --hl1:
   hsla(
   	var(--accent-h),
-  	70%,
+  	50%,
   	40%,
   	30%
   	);
@@ -864,6 +862,9 @@ span.cm-image-marker,
   transition: background-color 0.3s ease;
   background-color: var(--text-selection);
   color: inherit; }
+
+.workspace-leaf-content > .view-content {
+  --file-margins: 0; }
 
 .inline-title {
   padding-top: 16px; }
