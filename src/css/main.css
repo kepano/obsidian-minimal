@@ -3271,6 +3271,7 @@ https://github.com/sponsors/kepano
   width: var(--max-width); }
 
 /* Max width for readable-line length off */
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .inline-title,
 .markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-contentContainer {
   max-width: var(--max-width);
   margin: 0 0 0 calc(50% - var(--max-width)/2) !important;

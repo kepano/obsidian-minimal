@@ -46,10 +46,13 @@
 }
 
 /* Max width for readable-line length off */
-.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-contentContainer {
-	max-width:var(--max-width);
-	margin:0 0 0 calc(50% - var(--max-width)/2) !important;
-	padding-left:var(--folding-offset);
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) {
+	.inline-title,
+	.cm-contentContainer {
+		max-width:var(--max-width);
+		margin:0 0 0 calc(50% - var(--max-width)/2) !important;
+		padding-left:var(--folding-offset);
+	}
 }
 
 .markdown-source-view.mod-cm6 .cm-content > .cm-embed-block[contenteditable=false] {
