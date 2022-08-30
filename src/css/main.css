@@ -930,13 +930,8 @@ body.window-title-off .titlebar-text {
 
 /* Trying for a smoother animation */
 .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
-  position: fixed;
-  top: 0;
   right: 0;
-  z-index: var(--layer-popover);
-  background-color: var(--titlebar-background); }
-.mod-macos.is-hidden-frameless:not(.is-popout-window) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
-  padding-right: 36px; }
+  padding-right: var(--size-4-2); }
 
 body.is-focused {
   --titlebar-background-focused: var(--background-secondary); }
