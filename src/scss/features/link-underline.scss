@@ -1,14 +1,8 @@
 /* Links and underline handling*/
 
-body:not(.links-int-on) a[href*="obsidian://"],
-body:not(.links-int-on) .markdown-preview-view .internal-link,
-body:not(.links-int-on) .cm-hmd-internal-link .cm-underline,
-body:not(.links-int-on) a.internal-link,
-body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
+body:not(.links-int-on) {
 	--link-decoration: none;
 }
-body:not(.links-ext-on) .external-link,
-body:not(.links-ext-on) .cm-link .cm-underline,
-body:not(.links-ext-on) .cm-s-obsidian span.cm-url {
+body:not(.links-ext-on) {
 	--link-external-decoration: none;
 }

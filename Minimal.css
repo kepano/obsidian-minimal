@@ -552,16 +552,6 @@ body {
     --font-adaptive-smallest:calc(var(--font-ui-smallest) + 2px);
     --line-width-adaptive:calc(var(--line-width) + 6rem);
     --max-width:90%; } }
-/* Disabled features */
-/* Disabled features */
-/* Search counts */
-.tree-item-flair:not(.tag-pane-tag-count) {
-  display: none; }
-
-/* Folder name */
-.tree-item-inner-subtext {
-  display: none; }
-
 /* Obsidian */
 /* Block width snippet */
 .minimal-dev-block-width {
@@ -3479,16 +3469,10 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-
   margin-right: max(calc(50% - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2)); }
 
 /* Links and underline handling*/
-body:not(.links-int-on) a[href*="obsidian://"],
-body:not(.links-int-on) .markdown-preview-view .internal-link,
-body:not(.links-int-on) .cm-hmd-internal-link .cm-underline,
-body:not(.links-int-on) a.internal-link,
-body:not(.links-int-on) .cm-s-obsidian span.cm-hmd-internal-link:hover {
+body:not(.links-int-on) {
   --link-decoration: none; }
 
-body:not(.links-ext-on) .external-link,
-body:not(.links-ext-on) .cm-link .cm-underline,
-body:not(.links-ext-on) .cm-s-obsidian span.cm-url {
+body:not(.links-ext-on) {
   --link-external-decoration: none; }
 
 /* Scroll indicator for sidebar containers
@@ -5095,9 +5079,6 @@ div[data-type="git-view"] .search-input-clear-button {
 /* Remove ribbon border on Mac when frameless */
 .mod-macos.hider-frameless .workspace-ribbon {
   border: none; }
-
-.mod-macos.hider-ribbon:not(.is-popout-window) {
-  --frame-left-space: 84px; }
 
 /* --------------- */
 /* App ribbon moved to the bottom edge */
