@@ -27,7 +27,9 @@
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 	position:absolute !important;
 	z-index:0;
+	margin-left: 0;
 }
+
 .cm-editor .cm-lineNumbers .cm-gutterElement {
 	min-width:25px;
 }

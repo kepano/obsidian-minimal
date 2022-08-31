@@ -27,6 +27,7 @@ body {
 
 }
 .theme-dark {
+	--tab-outline-width: 0px;
 	--frame-background-h: var(--accent-h);
 	--frame-background-s: var(--accent-s);
 	--frame-background-l: calc(var(--accent-l) - 25%);
@@ -60,23 +61,24 @@ body.colorful-frame {
 	.workspace-ribbon.mod-left:before,
 	.sidebar-toggle-button.mod-left,
 	.mod-top .workspace-tab-header-container {
-		--tab-outline-width: 0px;
+		--titlebar-text-color: var(--frame-muted-color);
 		--tab-outline-color: var(--frame-outline-color);
 		--tab-divider-color: var(--frame-outline-color);
 		--background-modifier-hover: var(--frame-outline-color);
 		--icon-color: var(--frame-muted-color);
 		--icon-color-hover: var(--frame-muted-color);
-		--text-muted: var(--frame-muted-color);
+		--icon-color-focus: var(--text-normal);
 		--tab-text-color: var(--frame-muted-color);
 		--tab-text-color-hover: var(--frame-muted-color);
 		--tab-text-color-focused: var(--frame-muted-color);
 	}
 }
 
-
 .workspace-leaf-resize-handle {
 	transition: none;
 }
+
+/*
 .is-hidden-frameless {
 	.workspace-split.mod-root .workspace-leaf-resize-handle,
 	.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
@@ -95,3 +97,4 @@ body.colorful-frame {
 		}
 	}
 }
+*/

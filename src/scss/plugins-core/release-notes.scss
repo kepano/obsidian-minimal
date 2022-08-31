@@ -1,0 +1,5 @@
+.release-notes-view .cm-scroller.is-readable-line-width {
+	width: var(--line-width-adaptive);
+	max-width: var(--max-width);
+	margin: 0 auto;
+}
