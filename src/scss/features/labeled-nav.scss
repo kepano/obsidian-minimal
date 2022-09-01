@@ -3,7 +3,7 @@
 Labeled Nav snippet for Obsidian
 
 author: @kepano
-version: 1.2.0
+version: 2.0.0
 
 Support my work:
 https://github.com/sponsors/kepano
@@ -18,23 +18,20 @@ https://github.com/sponsors/kepano
 		}
 	}
 
-	/*
-	&.mod-macos.hider-ribbon.is-hidden-frameless:not(.colorful-frame) {
-		.workspace-ribbon.mod-left:not(.is-collapsed) {
-			&:before {
-				border: none;
-			}
-		}
-	}*/
-
-	&:not(.is-hidden-frameless),
-	&.mod-macos:not(.hider-ribbon),
-	&.colorful-frame.is-hidden-frameless:not(.is-fullscreen) {
+	&.mod-macos,
+	&.mod-macos.is-hidden-frameless:not(.is-fullscreen) {
 		.mod-left-split .mod-top .workspace-tab-header-container:before {
 			-webkit-app-region: drag;
 			position: absolute;
 			width: calc(100% - var(--divider-width));
 			height: calc(var(--header-height) - var(--tab-outline-width));
+		}
+	}
+
+	&:not(.is-hidden-frameless),
+	&.mod-macos:not(.hider-ribbon),
+	&.colorful-frame.is-hidden-frameless:not(.is-fullscreen) {
+		.mod-left-split .mod-top .workspace-tab-header-container:before {
 			border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
 		}
 	}

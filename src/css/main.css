@@ -2896,94 +2896,86 @@ body:not(.zoom-off) .view-content .image-embed:active img {
 Labeled Nav snippet for Obsidian
 
 author: @kepano
-version: 1.2.0
+version: 2.0.0
 
 Support my work:
 https://github.com/sponsors/kepano
 
 */
-.labeled-nav {
-  /*
-  &.mod-macos.hider-ribbon.is-hidden-frameless:not(.colorful-frame) {
-  	.workspace-ribbon.mod-left:not(.is-collapsed) {
-  		&:before {
-  			border: none;
-  		}
-  	}
-  }*/ }
-  .labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-    padding-left: 0; }
-  .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos:not(.hider-ribbon) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
-    -webkit-app-region: drag;
+.labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: 0; }
+.labeled-nav.mod-macos .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
+  -webkit-app-region: drag;
+  position: absolute;
+  width: calc(100% - var(--divider-width));
+  height: calc(var(--header-height) - var(--tab-outline-width)); }
+.labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos:not(.hider-ribbon) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
+  border-bottom: var(--tab-outline-width) solid var(--tab-outline-color); }
+.labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before {
+  position: absolute;
+  top: 0;
+  content: " "; }
+.labeled-nav.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) .mod-left-split:not(.is-sidedock-collapsed) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: 0; }
+.labeled-nav:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspace-tab-header-container {
+  -webkit-app-region: no-drag; }
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header-spacer {
+  display: none; }
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header-inner-title {
+  display: inline-block;
+  font-weight: 500;
+  font-size: var(--font-adaptive-smaller); }
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
+  position: relative;
+  flex-direction: column-reverse !important;
+  height: auto;
+  width: 100%; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .sidebar-toggle-button.mod-left {
     position: absolute;
-    width: calc(100% - var(--divider-width));
-    height: calc(var(--header-height) - var(--tab-outline-width));
-    border-bottom: var(--tab-outline-width) solid var(--tab-outline-color); }
-  .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before {
-    position: absolute;
+    justify-content: flex-end;
+    padding-right: var(--size-4-2);
     top: 0;
-    content: " "; }
-  .labeled-nav.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) .mod-left-split:not(.is-sidedock-collapsed) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-    padding-left: 0; }
-  .labeled-nav:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspace-tab-header-container {
-    -webkit-app-region: no-drag; }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-spacer {
-    display: none; }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-inner-title {
-    display: inline-block;
-    font-weight: 500;
-    font-size: var(--font-adaptive-smaller); }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
-    position: relative;
-    flex-direction: column-reverse !important;
-    height: auto;
-    width: 100%; }
-    .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .sidebar-toggle-button.mod-left {
-      position: absolute;
-      justify-content: flex-end;
-      padding-right: var(--size-4-2);
-      top: 0;
-      right: 0; }
-    .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
-      padding-top: var(--size-4-2);
-      margin-top: var(--header-height);
-      background-color: var(--background-secondary);
-      flex-direction: column !important; }
-    .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-container-inner {
-      flex-grow: 1;
-      gap: 0;
-      padding: var(--size-4-2) var(--size-4-3); }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header {
-    --icon-color: var(--text-muted);
-    --tab-text-color: var(--text-muted);
-    --tab-text-color-focused: var(--text-muted);
-    padding: 0;
-    margin-bottom: 2px;
-    border: none;
-    height: auto; }
-    .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
-      background-color: transparent; }
-    .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active, .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover {
-      opacity: 1;
-      --tab-text-color-focused: var(--text-normal);
-      --icon-color: var(--text-normal); }
-    .labeled-nav .mod-left-split .mod-top .workspace-tab-header .workspace-tab-header-inner {
-      gap: var(--size-2-3);
-      padding: var(--size-4-1) var(--size-4-2);
-      box-shadow: none;
-      border: none; }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.has-active-menu:hover,
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:hover {
+    right: 0; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
+    padding-top: var(--size-4-2);
+    margin-top: var(--header-height);
+    background-color: var(--background-secondary);
+    flex-direction: column !important; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-container-inner {
+    flex-grow: 1;
+    gap: 0;
+    padding: var(--size-4-2) var(--size-4-3); }
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header {
+  --icon-color: var(--text-muted);
+  --tab-text-color: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
+  padding: 0;
+  margin-bottom: 2px;
+  border: none;
+  height: auto; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
     background-color: transparent; }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:hover .workspace-tab-header-inner,
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-    background-color: var(--nav-item-background-hover); }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover .workspace-tab-header-inner-icon,
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-    color: var(--icon-color-active); }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
-    border: none;
-    padding: 0; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active, .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover {
+    opacity: 1;
+    --tab-text-color-focused: var(--text-normal);
+    --icon-color: var(--text-normal); }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header .workspace-tab-header-inner {
+    gap: var(--size-2-3);
+    padding: var(--size-4-1) var(--size-4-2);
+    box-shadow: none;
+    border: none; }
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header.has-active-menu:hover,
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:hover {
+  background-color: transparent; }
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:hover .workspace-tab-header-inner,
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background-color: var(--nav-item-background-hover); }
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover .workspace-tab-header-inner-icon,
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--icon-color-active); }
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
+  border: none;
+  padding: 0; }
 
 /* MIT License | Copyright (c) Stephan Ango (@kepano) 
 
