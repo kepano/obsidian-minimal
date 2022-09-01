@@ -984,6 +984,11 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: header-height
+        title: Tab bar height
+        type: variable-text
+        default: 40px
+    - 
         id: tabs-style
         title: Tab style
         type: class-select
@@ -1143,25 +1148,61 @@ settings:
         type: variable-text
         default: 0.75em
     -
-        id: titlebar
-        title: Title bar
+        id: titles
+        title: Titles
         type: heading
         level: 2
         collapsed: true
+    -
+        id: inline-title
+        title: Inline title
+        description: Inline titles must be turned on in Appearance settings
+        type: heading
+        level: 3
+        collapsed: true
     - 
-        id: header-height
-        title: Title bar height
+        id: inline-title-font
+        title: Inline title font
+        description: Name of the font as it appears on your system
         type: variable-text
-        default: 40px
+        default: ''
+    - 
+        id: inline-title-size
+        title: Inline title font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.125em
+    - 
+        id: inline-title-weight
+        title: Inline title font weight
+        type: variable-number-slider
+        default: 600
+        min: 100
+        max: 900
+        step: 100
+    - 
+        id: inline-title-color
+        title: Inline title text color (active)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: tab-title-bar
+        title: Tab title bar
+        description: Tab title bar must be turned on in Appearance settings
+        type: heading
+        level: 3
+        collapsed: true
     - 
         id: file-header-font-size
-        title: View header font size
+        title: Tab title bar font size
         description: Accepts any CSS font-size value
         type: variable-text
         default: 0.9em
     - 
         id: file-header-font-weight
-        title: View header font weight
+        title: Tab title bar font weight
         type: variable-number-slider
         default: 500
         min: 100
@@ -1169,14 +1210,14 @@ settings:
         step: 100
     - 
         id: title-color
-        title: Title text color (active)
+        title: Tab title text color (active)
         type: variable-themed-color
         format: hex
         default-light: '#'
         default-dark: '#'
     - 
         id: title-color-inactive
-        title: Title text color (inactive)
+        title: Tab title color (inactive)
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -1188,23 +1229,13 @@ settings:
         level: 2
         collapsed: true
     -
-        id: bg-translucency-light
-        title: Translucency (light mode)
-        description: Sidebar translucency in light mode. Requires turning on "Translucent window" in Appearance settings, and "Translucent sidebar" in Minimal settings.
-        type: variable-number-slider
-        default: 0.7
-        min: 0
-        max: 1
-        step: 0.05
-    -
-        id: bg-translucency-dark
-        title: Translucency (dark mode)
-        description: Sidebar translucency in dark mode
-        type: variable-number-slider
-        default: 0.85
-        min: 0
-        max: 1
-        step: 0.05
+        id: --workspace-background-translucent
+        title: Translucent background color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
         id: window-frame
         title: Window frame

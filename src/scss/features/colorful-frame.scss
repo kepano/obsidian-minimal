@@ -1,49 +1,47 @@
-.colorful-frame {
+body {
 	--frame-background:
-	hsla(
+	hsl(
 		var(--frame-background-h),
 		var(--frame-background-s),
-		var(--frame-background-l),
-		1
-		);
-
-
-	&.theme-light {
-		--frame-background-h: var(--accent-h);
-		--frame-background-s: var(--accent-s);
-		--frame-background-l: calc(var(--accent-l) + 30%);
-		--frame-outline-color:
-			hsla(
+		var(--frame-background-l));
+}
+.theme-light {
+	--frame-background-h: var(--accent-h);
+	--frame-background-s: var(--accent-s);
+	--frame-background-l: calc(var(--accent-l) + 30%);
+	--frame-outline-color:
+		hsla(
+			var(--frame-background-h),
+			var(--frame-background-s),
+			calc(var(--frame-background-l) - 6.5%),
+			1
+			);
+	--frame-muted-color:
+			hsl(
 				var(--frame-background-h),
-				var(--frame-background-s),
-				calc(var(--frame-background-l) - 6.5%),
-				1
-				);
-		--frame-muted-color:
-				hsl(
-					var(--frame-background-h),
-					calc(var(--frame-background-s) - 10%),
-					calc(var(--frame-background-l) - 35%));
+				calc(var(--frame-background-s) - 10%),
+				calc(var(--frame-background-l) - 35%));
 
-	}
-	&.theme-dark {
-		--tab-outline-width: 0px;
-		--frame-background-h: var(--accent-h);
-		--frame-background-s: var(--accent-s);
-		--frame-background-l: calc(var(--accent-l) - 25%);
-		--frame-outline-color:
-			hsla(
+}
+.theme-dark {
+	--frame-background-h: var(--accent-h);
+	--frame-background-s: var(--accent-s);
+	--frame-background-l: calc(var(--accent-l) - 25%);
+	--frame-outline-color:
+		hsla(
+			var(--frame-background-h),
+			calc(var(--frame-background-s) - 2%),
+			calc(var(--frame-background-l) + 6.5%),
+			1
+			);
+	--frame-muted-color:
+			hsl(
 				var(--frame-background-h),
-				calc(var(--frame-background-s) - 2%),
-				calc(var(--frame-background-l) + 6.5%),
-				1
-				);
-		--frame-muted-color:
-				hsl(
-					var(--frame-background-h),
-					calc(var(--frame-background-s) - 10%),
-					calc(var(--frame-background-l) + 25%));
-	}
+				calc(var(--frame-background-s) - 10%),
+				calc(var(--frame-background-l) + 25%));
+}
+.colorful-frame.theme-dark {
+	--tab-outline-width: 0px;
 }
 
 .colorful-frame.is-focused,
@@ -75,10 +73,12 @@
 
 
 .colorful-frame.is-hidden-frameless {
+	.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 	.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 	.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
 		-webkit-app-region: no-drag;
 		border: 0;
+		z-index: 15;
 		&:after {
 			content:"";
 			height: 100%;
@@ -86,7 +86,6 @@
 			background: linear-gradient(180deg, var(--frame-outline-color) var(--header-height), var(--divider-color) var(--header-height));
 			top: 0;
 			position: absolute;
-			z-index: 9999;
 		}
 		&:hover:after {
 			background: var(--divider-color-hover);
@@ -95,6 +94,7 @@
 	.workspace-split.mod-right-split > .workspace-leaf-resize-handle:after {
 		left: 0;
 	}
+	.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:after,
 	.workspace-split.mod-left-split > .workspace-leaf-resize-handle:after {
 		right: 0;
 	}

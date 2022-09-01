@@ -1,4 +1,4 @@
-/* Translucent sidebars */
+/* Translucent sidebars 
 
 :root {
   --bg-translucency-light:0.7;
@@ -8,11 +8,11 @@
 .theme-dark.frosted-sidebar.is-translucent {
   --opacity-translucency:1;
 }
-.is-translucent.frosted-sidebar:not(.hider-ribbon) .workspace-ribbon.mod-left,
+.is-translucent.frosted-sidebar .workspace-ribbon.mod-left,
 .is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs {
   background:transparent;
 }
-.is-translucent.frosted-sidebar:not(.hider-ribbon) .workspace-ribbon.mod-left:after {
+.is-translucent.frosted-sidebar .workspace-ribbon.mod-left:after {
   background:var(--background-secondary);
   opacity:var(--bg-translucency-light);
   top:0px;
@@ -26,14 +26,13 @@
 .is-translucent.frosted-sidebar .mod-left-split .workspace-tabs:after {
   background:var(--background-secondary);
   opacity:var(--bg-translucency-light);
-  top:-50px;
   content:"";
   height:120%;
   position:fixed;
   width:120%;
   z-index:-10;
 }
-.theme-dark.is-translucent.frosted-sidebar:not(.hider-ribbon) .workspace-ribbon.mod-left:after,
+.theme-dark.is-translucent.frosted-sidebar .workspace-ribbon.mod-left:after,
 .theme-dark.is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs:after {
   opacity:var(--bg-translucency-dark);
 }
@@ -46,3 +45,5 @@
 .is-translucent .status-bar {
   margin:0;
 }
+
+*/
