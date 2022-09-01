@@ -2389,49 +2389,54 @@ body:not(.colorful-active) .vertical-tab-nav-item.is-active {
   background-color: var(--background-modifier-hover);
   color: var(--text-normal); }
 
-body {
+.colorful-frame {
   --frame-background:
+  hsla(
+  	var(--frame-background-h),
+  	var(--frame-background-s),
+  	var(--frame-background-l),
+  	0.5
+  	);
+  --frame-background-focused:
   hsla(
   	var(--frame-background-h),
   	var(--frame-background-s),
   	var(--frame-background-l),
   	1
   	); }
-
-.theme-light {
-  --frame-background-h: var(--accent-h);
-  --frame-background-s: var(--accent-s);
-  --frame-background-l: calc(var(--accent-l) + 30%);
-  --frame-outline-color:
-  	hsla(
-  		var(--frame-background-h),
-  		var(--frame-background-s),
-  		calc(var(--frame-background-l) - 6.5%),
-  		1
-  		);
-  --frame-muted-color:
-  		hsl(
-  			var(--frame-background-h),
-  			calc(var(--frame-background-s) - 10%),
-  			calc(var(--frame-background-l) - 35%)); }
-
-.theme-dark {
-  --tab-outline-width: 0px;
-  --frame-background-h: var(--accent-h);
-  --frame-background-s: var(--accent-s);
-  --frame-background-l: calc(var(--accent-l) - 25%);
-  --frame-outline-color:
-  	hsla(
-  		var(--frame-background-h),
-  		calc(var(--frame-background-s) - 2%),
-  		calc(var(--frame-background-l) + 6.5%),
-  		1
-  		);
-  --frame-muted-color:
-  		hsl(
-  			var(--frame-background-h),
-  			calc(var(--frame-background-s) - 10%),
-  			calc(var(--frame-background-l) + 25%)); }
+  .colorful-frame.theme-light {
+    --frame-background-h: var(--accent-h);
+    --frame-background-s: var(--accent-s);
+    --frame-background-l: calc(var(--accent-l) + 30%);
+    --frame-outline-color:
+    	hsla(
+    		var(--frame-background-h),
+    		var(--frame-background-s),
+    		calc(var(--frame-background-l) - 6.5%),
+    		1
+    		);
+    --frame-muted-color:
+    		hsl(
+    			var(--frame-background-h),
+    			calc(var(--frame-background-s) - 10%),
+    			calc(var(--frame-background-l) - 35%)); }
+  .colorful-frame.theme-dark {
+    --tab-outline-width: 0px;
+    --frame-background-h: var(--accent-h);
+    --frame-background-s: var(--accent-s);
+    --frame-background-l: calc(var(--accent-l) - 25%);
+    --frame-outline-color:
+    	hsla(
+    		var(--frame-background-h),
+    		calc(var(--frame-background-s) - 2%),
+    		calc(var(--frame-background-l) + 6.5%),
+    		1
+    		);
+    --frame-muted-color:
+    		hsl(
+    			var(--frame-background-h),
+    			calc(var(--frame-background-s) - 10%),
+    			calc(var(--frame-background-l) + 25%)); }
 
 body.colorful-frame.is-focused,
 body.colorful-frame {
@@ -2445,7 +2450,7 @@ body.colorful-frame {
   body.colorful-frame .titlebar,
   body.colorful-frame .mod-top {
     --titlebar-background: var(--frame-background);
-    --titlebar-background-focused: var(--frame-background); }
+    --titlebar-background-focused: var(--frame-background-focused); }
   body.colorful-frame.is-focused .titlebar,
   body.colorful-frame.is-focused .workspace-ribbon.mod-left:before,
   body.colorful-frame.is-focused .sidebar-toggle-button.mod-left,
