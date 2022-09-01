@@ -680,6 +680,7 @@ body {
 .markdown-source-view {
   color: var(--text-normal); }
 
+.markdown-reading-view,
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top: 18px;
   padding-left: 0;
@@ -2507,26 +2508,27 @@ body.colorful-frame {
 .workspace-leaf-resize-handle {
   transition: none; }
 
-/*
-.is-hidden-frameless {
-	.workspace-split.mod-root .workspace-leaf-resize-handle,
-	.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-	.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-		border: 0;
-		width: var(--divider-width);
-		background: var(--divider-color);
-		&:before {
-			content:"";
-			height: var(--header-height);
-			width: 1px;
-			background: var(--frame-divider-color);
-			top: 0;
-			position: absolute;
-			z-index: 9999;
-		}
-	}
-}
-*/
+.colorful-frame.is-hidden-frameless .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.colorful-frame.is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  -webkit-app-region: no-drag;
+  border: 0; }
+  .colorful-frame.is-hidden-frameless .workspace-split.mod-left-split > .workspace-leaf-resize-handle:after,
+  .colorful-frame.is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle:after {
+    content: "";
+    height: 100%;
+    width: 1px;
+    background: linear-gradient(180deg, var(--frame-outline-color) var(--header-height), var(--divider-color) var(--header-height));
+    top: 0;
+    position: absolute;
+    z-index: 9999; }
+  .colorful-frame.is-hidden-frameless .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover:after,
+  .colorful-frame.is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover:after {
+    background: var(--divider-color-hover); }
+.colorful-frame.is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle:after {
+  left: 0; }
+.colorful-frame.is-hidden-frameless .workspace-split.mod-left-split > .workspace-leaf-resize-handle:after {
+  right: 0; }
+
 /* Colorful headings */
 body.colorful-headings .view-content {
   --h1-color:var(--red);

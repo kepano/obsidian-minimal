@@ -78,23 +78,29 @@ body.colorful-frame {
 	transition: none;
 }
 
-/*
-.is-hidden-frameless {
-	.workspace-split.mod-root .workspace-leaf-resize-handle,
+
+.colorful-frame.is-hidden-frameless {
 	.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 	.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+		-webkit-app-region: no-drag;
 		border: 0;
-		width: var(--divider-width);
-		background: var(--divider-color);
-		&:before {
+		&:after {
 			content:"";
-			height: var(--header-height);
+			height: 100%;
 			width: 1px;
-			background: var(--frame-divider-color);
+			background: linear-gradient(180deg, var(--frame-outline-color) var(--header-height), var(--divider-color) var(--header-height));
 			top: 0;
 			position: absolute;
 			z-index: 9999;
 		}
+		&:hover:after {
+			background: var(--divider-color-hover);
+		}
+	}
+	.workspace-split.mod-right-split > .workspace-leaf-resize-handle:after {
+		left: 0;
+	}
+	.workspace-split.mod-left-split > .workspace-leaf-resize-handle:after {
+		right: 0;
 	}
 }
-*/
