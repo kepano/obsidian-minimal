@@ -2435,13 +2435,6 @@ body:not(.colorful-active) .vertical-tab-nav-item.is-active {
   	var(--frame-background-h),
   	var(--frame-background-s),
   	var(--frame-background-l),
-  	0.5
-  	);
-  --frame-background-focused:
-  hsla(
-  	var(--frame-background-h),
-  	var(--frame-background-s),
-  	var(--frame-background-l),
   	1
   	); }
   .colorful-frame.theme-light {
@@ -2478,27 +2471,19 @@ body:not(.colorful-active) .vertical-tab-nav-item.is-active {
     			calc(var(--frame-background-s) - 10%),
     			calc(var(--frame-background-l) + 25%)); }
 
-body.colorful-frame.is-focused,
-body.colorful-frame {
-  --frame-divider-color: var(--frame-outline-color); }
-  body.colorful-frame.is-focused .workspace-ribbon.mod-left:before,
-  body.colorful-frame.is-focused .sidebar-toggle-button.mod-left,
-  body.colorful-frame.is-focused .titlebar,
-  body.colorful-frame.is-focused .mod-top,
-  body.colorful-frame .workspace-ribbon.mod-left:before,
-  body.colorful-frame .sidebar-toggle-button.mod-left,
-  body.colorful-frame .titlebar,
-  body.colorful-frame .mod-top {
-    --titlebar-background: var(--frame-background);
-    --titlebar-background-focused: var(--frame-background-focused); }
-  body.colorful-frame.is-focused .titlebar,
-  body.colorful-frame.is-focused .workspace-ribbon.mod-left:before,
-  body.colorful-frame.is-focused .sidebar-toggle-button.mod-left,
-  body.colorful-frame.is-focused .mod-top .workspace-tab-header-container,
-  body.colorful-frame .titlebar,
-  body.colorful-frame .workspace-ribbon.mod-left:before,
-  body.colorful-frame .sidebar-toggle-button.mod-left,
-  body.colorful-frame .mod-top .workspace-tab-header-container {
+.colorful-frame.is-focused,
+.colorful-frame {
+  --frame-divider-color: var(--frame-outline-color);
+  --titlebar-background: var(--frame-background);
+  --titlebar-background-focused: var(--frame-background); }
+  .colorful-frame.is-focused .titlebar,
+  .colorful-frame.is-focused .workspace-ribbon.mod-left:before,
+  .colorful-frame.is-focused .sidebar-toggle-button.mod-left,
+  .colorful-frame.is-focused .mod-top .workspace-tab-header-container,
+  .colorful-frame .titlebar,
+  .colorful-frame .workspace-ribbon.mod-left:before,
+  .colorful-frame .sidebar-toggle-button.mod-left,
+  .colorful-frame .mod-top .workspace-tab-header-container {
     --titlebar-text-color: var(--frame-muted-color);
     --tab-outline-color: var(--frame-outline-color);
     --tab-divider-color: var(--frame-outline-color);

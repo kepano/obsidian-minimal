@@ -1,13 +1,5 @@
 .colorful-frame {
-
 	--frame-background:
-	hsla(
-		var(--frame-background-h),
-		var(--frame-background-s),
-		var(--frame-background-l),
-		0.5
-		);
-	--frame-background-focused:
 	hsla(
 		var(--frame-background-h),
 		var(--frame-background-s),
@@ -54,17 +46,11 @@
 	}
 }
 
-body.colorful-frame.is-focused,
-body.colorful-frame {
+.colorful-frame.is-focused,
+.colorful-frame {
 	--frame-divider-color: var(--frame-outline-color);
-
-	.workspace-ribbon.mod-left:before,
-	.sidebar-toggle-button.mod-left,
-	.titlebar,
-	.mod-top {
-		--titlebar-background: var(--frame-background);
-		--titlebar-background-focused: var(--frame-background-focused);
-	}
+	--titlebar-background: var(--frame-background);
+	--titlebar-background-focused: var(--frame-background);
 
 	.titlebar,
 	.workspace-ribbon.mod-left:before,
