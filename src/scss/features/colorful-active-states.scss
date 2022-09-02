@@ -1,8 +1,11 @@
 /* Colorful active states */
 .colorful-active {
-	--sp1:var(--bg1);
-	--nav-item-background-active: var(--ax3);
-	--nav-item-color-active: var(--sp1);
+	--sp1: #fff;
+
+	.nav-files-container {
+		--nav-item-background-active: var(--ax3);
+		--nav-item-color-active: var(--sp1);
+	}
 
 	#calendar-container {
 		.active,

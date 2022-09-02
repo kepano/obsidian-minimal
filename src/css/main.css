@@ -2363,9 +2363,10 @@ li[data-task="b"] > p > input:checked {
 
 /* Colorful active states */
 .colorful-active {
-  --sp1:var(--bg1);
-  --nav-item-background-active: var(--ax3);
-  --nav-item-color-active: var(--sp1); }
+  --sp1: #fff; }
+  .colorful-active .nav-files-container {
+    --nav-item-background-active: var(--ax3);
+    --nav-item-color-active: var(--sp1); }
   .colorful-active #calendar-container .active,
   .colorful-active #calendar-container .active.today,
   .colorful-active #calendar-container .active:hover,
