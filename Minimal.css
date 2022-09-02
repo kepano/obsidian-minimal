@@ -671,7 +671,9 @@ body {
 .markdown-source-view {
   color: var(--text-normal); }
 
-.markdown-reading-view,
+.markdown-reading-view > .markdown-preview-view {
+  padding-top: 18px; }
+
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-top: 18px;
   padding-left: 0;
@@ -3021,9 +3023,6 @@ https://github.com/sponsors/kepano
 */
 /* Requires Contextual Typography 2.2.1+ */
 /* Switch to flexbox */
-.contextual-typography .markdown-reading-view > .markdown-preview-view {
-  padding-top: 15px; }
-
 .contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   display: flex;
   flex-direction: column;
