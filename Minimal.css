@@ -925,6 +925,16 @@ body:not(.minimal-status-off) .status-bar {
       text-align: center;
       background-color: var(--background-modifier-hover) !important; }
 
+.tab-stack-top-flipped {
+  --tab-stacked-text-transform: rotate(180deg);
+  --tab-stacked-text-align: right; }
+
+.tab-stack-bottom {
+  --tab-stacked-text-transform: rotate(180deg); }
+
+.tab-stack-bottom-flipped {
+  --tab-stacked-text-align: right; }
+
 /* Title Bar */
 /* Alignment */
 body:not(.is-mobile) .view-actions .view-action:last-child {
@@ -7733,6 +7743,44 @@ settings:
             -
                 label: Underline
                 value: tabs-underline
+    -
+        id: tab-stacks
+        title: Tab stacks
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: tab-stacked-pane-width
+        title: Stacked width
+        type: variable-number
+        description: Width of a stacked tab in pixels
+        default: 700
+        format: px
+    - 
+        id: tab-stacked-header-width
+        title: Spine width
+        type: variable-number
+        description: Width of the spine in pixels
+        default: 40
+        format: px
+	-
+        id: tab-stacked-spine-orientation
+        title: Spine text orientation
+        type: class-select
+        default: tab-stack-top
+        options:
+            - 
+                label: Top aligned
+                value: tab-stack-top
+            - 
+                label: Top aligned flipped
+                value: tab-stack-top-flipped
+            - 
+                label: Bottom aligned
+                value: tab-stack-bottom
+            - 
+                label: Bottom aligned flipped
+                value: tab-stack-bottom-flipped
     -
         id: tags
         title: Tags

@@ -1,0 +1,10 @@
+.tab-stack-top-flipped {
+	--tab-stacked-text-transform: rotate(180deg);
+	--tab-stacked-text-align: right;
+}
+.tab-stack-bottom {
+	--tab-stacked-text-transform: rotate(180deg);
+}
+.tab-stack-bottom-flipped {
+	--tab-stacked-text-align: right;
+}
