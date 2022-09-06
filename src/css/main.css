@@ -201,10 +201,7 @@ body .excalidraw {
   --hl2:rgba(255, 225, 0, 0.5); }
 
 .theme-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark,
 .theme-dark.minimal-default-dark,
 .excalidraw.theme--dark {
@@ -356,10 +353,7 @@ body .excalidraw {
   --mono100: white;
   --mono0: black; }
 
-.theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
 .theme-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark,
@@ -421,6 +415,8 @@ body .excalidraw {
   --text-selection: var(--hl1);
   --title-color-inactive: var(--tx2);
   --title-color: var(--tx1);
+  --titlebar-background: var(--bg2);
+  --titlebar-background-focused: var(--bg2);
   --titlebar-text-color-focused: var(--tx1);
   --tag-color: var(--tx2);
   --tag-bg: transparent;
@@ -6101,9 +6097,6 @@ body.theme-light {
   --bg3:#eaeaeb; }
 
 .theme-light.minimal-atom-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-atom-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-atom-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-atom-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-atom-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-atom-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-atom-dark {
@@ -6145,9 +6138,6 @@ body.theme-light {
   --blue:#6272a4; }
 
 .theme-light.minimal-dracula-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-dracula-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-dracula-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-dracula-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-dracula-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-dracula-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-dracula-dark {
@@ -6221,9 +6211,6 @@ body.theme-light {
   --ui1:#edead5; }
 
 .theme-light.minimal-everforest-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-everforest-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-everforest-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-everforest-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-everforest-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-everforest-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-everforest-dark {
@@ -6295,9 +6282,6 @@ body.theme-light {
   --ui1:#f2e6bd; }
 
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-gruvbox-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-gruvbox-dark {
@@ -6360,9 +6344,6 @@ body.theme-light {
   --bg2:#f0f0f0; }
 
 .theme-light.minimal-macos-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-macos-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-macos-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-macos-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-macos-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-macos-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-macos-dark {
@@ -6426,9 +6407,6 @@ body.theme-light {
   --hl2:rgba(208, 135, 112, 0.35); }
 
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-nord-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-nord-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-nord-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-nord-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-nord-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-nord-dark {
@@ -6477,9 +6455,6 @@ body.theme-light {
   --link-weight:500; }
 
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-notion-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-notion-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-notion-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-notion-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-notion-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-notion-dark {
@@ -6546,9 +6521,6 @@ body.theme-light {
   --bg2:#fdf6e3; }
 
 .theme-light.minimal-solarized-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-solarized-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-solarized-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-solarized-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-solarized-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-solarized-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-solarized-dark {
@@ -6619,9 +6591,6 @@ body.theme-light {
   --bg3:#f5f6f8; }
 
 .theme-light.minimal-things-light.minimal-light-contrast .titlebar,
-.theme-light.minimal-things-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-.theme-light.minimal-things-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-things-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-things-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-things-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark.minimal-things-dark {
