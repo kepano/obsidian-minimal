@@ -2576,6 +2576,9 @@ body.fancy-cursor .mod-cm6 .cm-line {
   .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed {
     border-color: transparent;
     background-color: var(--background-primary); }
+    .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:before {
+      background-color: var(--background-primary);
+      border-color: transparent; }
     .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
     .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
       opacity: 0;

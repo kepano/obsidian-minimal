@@ -15,6 +15,10 @@
 	.workspace-ribbon.mod-left.is-collapsed {
 		border-color: transparent;
 		background-color: var(--background-primary);
+		&:before {
+			background-color: var(--background-primary);
+			border-color:transparent;
+		}
 		.side-dock-actions,
 		.side-dock-settings {
 			opacity: 0;
