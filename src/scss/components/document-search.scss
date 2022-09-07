@@ -1,4 +1,11 @@
-
+.document-search, .document-replace {
+	max-width: 100%;
+}
+.document-search-container {
+	margin: 0 auto;
+	max-width: var(--max-width);
+	width: var(--line-width-adaptive);
+}
 
 /* Mobile */
 .is-mobile {

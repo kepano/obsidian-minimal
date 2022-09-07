@@ -994,6 +994,14 @@ button.mod-warning:hover {
   box-shadow: 0 2px 3px 0px var(--btn-shadow-color);
   transition: background-color 0.2s ease-out; }
 
+.document-search, .document-replace {
+  max-width: 100%; }
+
+.document-search-container {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  width: var(--line-width-adaptive); }
+
 /* Mobile */
 .is-mobile .document-search,
 .is-mobile .document-replace {
