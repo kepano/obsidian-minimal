@@ -2,7 +2,7 @@
 
 Find detailed documentation at [minimal.guide](https://minimal.guide)
 
-Minimal is an [Obsidian](https://obsidian.md/) theme for desktop, mobile and tablet. You can customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider). Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217) ✨ 
+Minimal is an [Obsidian](https://obsidian.md/) theme for desktop, mobile and tablet. Customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider). Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217) ✨ 
 
 Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or [Buy me a coffee](https://www.buymeacoffee.com/kepano)
 
@@ -38,7 +38,7 @@ Combining **focus mode** with **image grid** and **image width** options allows 
 
 ![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-img-grid.png)
 
-Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, **Sliding Panes**, [and more](#plugin-support)
+Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, [and more](#plugin-support)
 
 ![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-plugins.png)
 
@@ -74,31 +74,27 @@ The following settings can be accessed using [Minimal Theme Settings](https://gi
 
 ### Interface colors and fonts
 
-- **Background contrast** —  includes true black dark mode for OLED devices
-- **Color scheme** — includes Dracula, Everforest, Gruvbox, macOS, Nord, Solarized, [and more](#color-schemes)
-- **Accent color** — used for links and checkboxes and other elements
-- **Fonts** and **font size**
-- **Line width** — set normal line width and maximum width within a pane
+- [Background contrast](https://minimal.guide/Features/Background+contrast) —  includes true black dark mode for OLED devices
+- [Color scheme](https://minimal.guide/Features/Color+schemes) — includes Dracula, Everforest, Gruvbox, macOS, Nord, Solarized, [and more](#color-schemes)
+- [Line width](https://minimal.guide/Features/Line+width) — set normal line width and maximum width within a pane
 
 You can also use the Style Settings plugin for even deeper customization
 
-### Feature toggles
+### Features
 
-- **Text labels for primary navigation** — adds text labels the top left navigation, note that a translation snippet is necessary for languages other than English [more on localization](#localization)
-- **Focus mode** — hides title bar and status bar
-- **Fancy cursor** — use accent color for the cursor
-- **Colorful headings** — use different colors for each heading
-- **Translucent sidebar** — frosted glass style sidebar
-- **Hide sidebar borders** — removes dividing lines for a more minimal appearance
-- **Trim filenames** — file names are trimmed to a single line
+- [Text labels for primary navigation](https://minimal.guide/Features/Text+labels+for+primary+navigation) — adds text labels the top left navigation, note that a translation snippet is necessary for languages other than English [more on localization](#localization)
+- [Focus mode](https://minimal.guide/Features/Focus+mode) — hides title bar and status bar
+- [Colorful frame](https://minimal.guide/Features/Colorful+frame) — use accent color for the top area of the app window
+- [Colorful headings](https://minimal.guide/Features/Colorful+headings) — use different colors for each heading
+- Hide workspace borders — removes dividing lines for a more minimal appearance
+- Trim filenames — file names are trimmed to a single line
 
 ### Layout options
 
 Controls images, tables and iframes. These settings can also be enabled on a per-file basis using [helper classes](#helper-filters-and-classes).
 
-- **Image grids** — turns consecutive images into columns. To make a new row, add an extra line break between images. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
-- **Default element width** — controls the width of elements by type. [Learn more.](https://github.com/kepano/obsidian-minimal/releases/tag/4.2.0)
-- **Trim Dataview columns** — disables text wrapping in Dataview tables, and sets a maximum width that trims long text
+- [Image grids](https://minimal.guide/Block+types/Image+grids) — turns consecutive images into columns. To make a new row, add an extra line break between images.
+- [Block widths](https://minimal.guide/Features/Block+width) — controls the width of elements by type.
 
 ## Color schemes
 
@@ -128,11 +124,10 @@ Most plugins work well with Minimal, but the following plugins have received spe
 - [Git](https://github.com/denolehov/obsidian-git)
 - [Hider](https://github.com/kepano/obsidian-hider)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
+- [Leaflet](https://github.com/valentine195/obsidian-leaflet-plugin) for maps
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 - [QuickAdd](https://github.com/chhoumann/quickadd)
-- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian) — recommended spine width 36px
 - [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) — recommended for cards and tables
-- [Todoist](https://github.com/jamiebrynes7/obsidian-todoist-plugin)
 
 ## Helper filters and classes
 
