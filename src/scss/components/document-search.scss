@@ -7,6 +7,10 @@
 	width: var(--line-width-adaptive);
 }
 
+.minimal-focus-mode .document-search-container {
+	margin-top: var(--header-height);
+}
+
 /* Mobile */
 .is-mobile {
 

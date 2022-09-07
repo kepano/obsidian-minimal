@@ -962,6 +962,9 @@ button.mod-warning:hover {
   max-width: var(--max-width);
   width: var(--line-width-adaptive); }
 
+.minimal-focus-mode .document-search-container {
+  margin-top: var(--header-height); }
+
 /* Mobile */
 .is-mobile .document-search,
 .is-mobile .document-replace {
