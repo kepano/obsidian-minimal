@@ -12,6 +12,12 @@ https://github.com/sponsors/kepano
 
 .labeled-nav {
 
+	&.is-translucent {
+		.mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
+			background-color: transparent;
+		}
+	}
+
 	&.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space {
 		.workspace-tab-header-container {
 			padding-left: 0;
@@ -82,8 +88,8 @@ https://github.com/sponsors/kepano
 			.workspace-tab-header-container-inner {
 				padding-top: var(--size-4-2);
 				margin-top: var(--header-height);
-				background-color: var(--background-secondary);
 				flex-direction: column !important;
+				background-color: var(--background-secondary);
 			}
 			.workspace-tab-container-inner {
 				flex-grow: 1;

@@ -1267,7 +1267,7 @@ settings:
         level: 2
         collapsed: true
     -
-        id: --workspace-background-translucent
+        id: workspace-background-translucent
         title: Translucent background color
         type: variable-themed-color
         opacity: true

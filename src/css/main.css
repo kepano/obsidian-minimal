@@ -2905,6 +2905,8 @@ Support my work:
 https://github.com/sponsors/kepano
 
 */
+.labeled-nav.is-translucent .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
+  background-color: transparent; }
 .labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
   padding-left: 0; }
 .labeled-nav.mod-macos .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
@@ -2942,8 +2944,8 @@ https://github.com/sponsors/kepano
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
     padding-top: var(--size-4-2);
     margin-top: var(--header-height);
-    background-color: var(--background-secondary);
-    flex-direction: column !important; }
+    flex-direction: column !important;
+    background-color: var(--background-secondary); }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-container-inner {
     flex-grow: 1;
     gap: 0;
@@ -3576,53 +3578,8 @@ body:not(.is-mobile) .mod-right-split .backlink-pane {
 .workspace > .workspace-split:not(.mod-root) .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   --tab-outline-width: 0; }
 
-/* Translucent sidebars 
+/* Translucency 
 
-:root {
-  --bg-translucency-light:0.7;
-  --bg-translucency-dark:0.85;
-}
-.theme-light.frosted-sidebar.is-translucent,
-.theme-dark.frosted-sidebar.is-translucent {
-  --opacity-translucency:1;
-}
-.is-translucent.frosted-sidebar .workspace-ribbon.mod-left,
-.is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs {
-  background:transparent;
-}
-.is-translucent.frosted-sidebar .workspace-ribbon.mod-left:after {
-  background:var(--background-secondary);
-  opacity:var(--bg-translucency-light);
-  top:0px;
-  left:0px;
-  content:"";
-  height:120%;
-  position:fixed;
-  width:42px;
-  z-index:-10;
-}
-.is-translucent.frosted-sidebar .mod-left-split .workspace-tabs:after {
-  background:var(--background-secondary);
-  opacity:var(--bg-translucency-light);
-  content:"";
-  height:120%;
-  position:fixed;
-  width:120%;
-  z-index:-10;
-}
-.theme-dark.is-translucent.frosted-sidebar .workspace-ribbon.mod-left:after,
-.theme-dark.is-translucent.frosted-sidebar .workspace-split:not(.mod-right-split) .workspace-tabs:after {
-  opacity:var(--bg-translucency-dark);
-}
-.theme-light.is-translucent.frosted-sidebar.minimal-light-white .workspace-split:not(.mod-right-split) .workspace-tabs:after {
-  background:white;
-}
-.theme-dark.is-translucent.frosted-sidebar.minimal-dark-black .workspace-split:not(.mod-right-split) .workspace-tabs:after {
-  background:black;
-}
-.is-translucent .status-bar {
-  margin:0;
-}
 
 */
 /* Turn off file name trimming */
