@@ -1612,7 +1612,8 @@ ul > li.task-list-item .task-list-item-checkbox {
   display: none; }
 
 .embed-strict .internal-embed:not([src*="#^"]) .markdown-embed-link {
-  width: 30px; }
+  width: 24px;
+  opacity: 0; }
 
 .embed-strict.contextual-typography .internal-embed .markdown-preview-view .markdown-preview-sizer > div,
 .contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer > div {
@@ -1649,17 +1650,26 @@ ul > li.task-list-item .task-list-item-checkbox {
 .file-embed-link {
   top: 0px;
   right: 0;
-  text-align: right; }
+  text-align: right;
+  justify-content: flex-end; }
 
 .file-embed-link svg,
 .markdown-embed-link svg {
   width: 16px;
-  height: 16px;
-  opacity: 0; }
+  height: 16px; }
 
-.markdown-embed .file-embed-link:hover svg,
-.markdown-embed .markdown-embed-link:hover svg {
+.markdown-embed .file-embed-link,
+.markdown-embed .markdown-embed-link {
+  opacity: 0.6;
+  transition: opacity 0.1s linear; }
+
+.markdown-embed .file-embed-link:hover,
+.markdown-embed .markdown-embed-link:hover {
   opacity: 1; }
+  .markdown-embed .file-embed-link:hover:hover,
+  .markdown-embed .markdown-embed-link:hover:hover {
+    background-color: transparent;
+    --icon-color: var(--text-accent); }
 
 .markdown-embed-link:hover, .file-embed-link:hover {
   color: var(--text-muted); }
