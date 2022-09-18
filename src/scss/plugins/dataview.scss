@@ -30,12 +30,18 @@ body .dataview.small-text {
 }
 
 /* Remove hover effect */
-body .dataview.task-list-item:hover,
-body .dataview.task-list-basic-item:hover,
-body .table-view-table > tbody > tr:hover {
-	background-color:transparent;
+body:not(.row-hover) .dataview.task-list-item:hover,
+body:not(.row-hover) .dataview.task-list-basic-item:hover,
+body:not(.row-hover) .table-view-table > tbody > tr:hover {
+	background-color:transparent !important;
 	box-shadow:none;
 }
+body.row-hover .dataview.task-list-item:hover,
+body.row-hover .dataview.task-list-basic-item:hover,
+body.row-hover .table-view-table > tbody > tr:hover {
+	background-color: var(--table-row-background-hover) !important;
+}
+
 body .dataview-error {
 	margin-top:16px;
 	background-color:transparent;

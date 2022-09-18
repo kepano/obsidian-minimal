@@ -13,3 +13,23 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
   opacity:1;
   transition:opacity 0.25s ease-in-out;
 }
+
+.minimal-tab-title-hover {
+	.view-header-title-container {
+		opacity: 0;
+		transition: opacity 0.1s ease-in-out;
+	}
+	.workspace-tab-header-container:hover + .workspace-tab-container,
+	.view-header:hover {
+		.view-header-title-container {
+			opacity: 1;
+			transition: opacity 0.1s ease-in-out;
+		}
+	}
+}
+
+.minimal-tab-title-hidden {
+	.view-header-title-container {
+		opacity: 0;
+	}
+}

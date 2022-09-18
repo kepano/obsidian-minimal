@@ -1001,6 +1001,23 @@ settings:
 		type: variable-text
 		default: 1em
 	-
+		id: maximize-tables-off
+		title: Maximize table width (beta)
+		description: Tables fill the width of the line
+		type: class-select
+		allowEmpty: false
+		default: maximize-tables
+		options:
+			- 
+				label: Always
+				value: maximize-tables
+			-
+				label: Automatic
+				value: maximize-tables-auto
+			-
+				label: Never
+				value: maximize-tables-off
+	-
 		id: row-lines
 		title: Row lines
 		description: Display borders between table rows globally
@@ -1055,7 +1072,7 @@ settings:
 		type: class-toggle
 		default: false
 	- 
-		id: row-color-hover
+		id: table-row-background-hover
 		title: Active row background
 		description: Background color for hovered tables rows
 		type: variable-themed-color
@@ -1278,6 +1295,69 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: tab-title-bar
+		title: Tab title bar
+		description: Tab title bar must be turned on in Appearance settings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: file-header-visibility
+		title: Tab title visibility
+		description: Visibility of the tab title text
+		type: class-select
+		default: minimal-tab-title-visible
+		options:
+			- 
+				label: Visible
+				value: minimal-tab-title-visible
+			- 
+				label: Hidden
+				value: minimal-tab-title-hidden
+			- 
+				label: Hover only
+				value: minimal-tab-title-hover
+	- 
+		id: file-header-font-size
+		title: Tab title font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: 0.9em
+	- 
+		id: file-header-font-weight
+		title: Tab title font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: file-header-justify
+		title: Tab title alignment
+		type: variable-select
+		default: center
+		options:
+			- 
+				label: Center
+				value: center
+			- 
+				label: Left
+				value: left
+	- 
+		id: title-color
+		title: Tab title text color (active)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: title-color-inactive
+		title: Tab title color (inactive)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: inline-title
 		title: Inline title
 		description: Inline titles must be turned on in Appearance settings
@@ -1307,41 +1387,6 @@ settings:
 	- 
 		id: inline-title-color
 		title: Inline title text color (active)
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
-		id: tab-title-bar
-		title: Tab title bar
-		description: Tab title bar must be turned on in Appearance settings
-		type: heading
-		level: 3
-		collapsed: true
-	- 
-		id: file-header-font-size
-		title: Tab title bar font size
-		description: Accepts any CSS font-size value
-		type: variable-text
-		default: 0.9em
-	- 
-		id: file-header-font-weight
-		title: Tab title bar font weight
-		type: variable-number-slider
-		default: 500
-		min: 100
-		max: 900
-		step: 100
-	- 
-		id: title-color
-		title: Tab title text color (active)
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	- 
-		id: title-color-inactive
-		title: Tab title color (inactive)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'

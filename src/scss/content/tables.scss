@@ -1,10 +1,10 @@
 /* Preview mode tables */
 
 .markdown-source-view.mod-cm6 table {
-	border-collapse:collapse; 
+	border-collapse: collapse; 
 }
 .markdown-preview-view table {
-	margin-block-start:1em;
+	margin-block-start: 1em;
 }
 
 .markdown-source-view.mod-cm6,
@@ -27,11 +27,11 @@ body {
 
 /* Live Preview Tables */
 .is-live-preview .el-table {
-	width:100%;
-	max-width:100%;
+	width: 100%;
+	max-width: 100%;
 }
 .cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep,
 .cm-hmd-table-sep-dummy {
-	color:var(--text-faint);
-	font-weight:400;
+	color: var(--text-faint);
+	font-weight: 400;
 }

@@ -904,6 +904,17 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
   opacity: 1;
   transition: opacity 0.25s ease-in-out; }
 
+.minimal-tab-title-hover .view-header-title-container {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out; }
+.minimal-tab-title-hover .workspace-tab-header-container:hover + .workspace-tab-container .view-header-title-container,
+.minimal-tab-title-hover .view-header:hover .view-header-title-container {
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out; }
+
+.minimal-tab-title-hidden .view-header-title-container {
+  opacity: 0; }
+
 /* Window frame */
 body.window-title-off .titlebar-text {
   display: none; }
@@ -2934,7 +2945,8 @@ https://github.com/sponsors/kepano
   -webkit-app-region: drag;
   position: absolute;
   width: calc(100% - var(--divider-width));
-  height: calc(var(--header-height) - var(--tab-outline-width)); }
+  height: calc(var(--header-height) - var(--tab-outline-width));
+  border-bottom: var(--labeled-nav-outline-width) solid var(--tab-outline-color); }
 .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos:not(.hider-ribbon) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
   border-bottom: var(--tab-outline-width) solid var(--tab-outline-color); }
 .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before {
@@ -3016,6 +3028,34 @@ https://github.com/sponsors/kepano
 */
 /* Requires Contextual Typography 2.2.1+ */
 /* Switch to flexbox */
+body {
+  --table-max-width: var(--max-width);
+  --left-margin-table: auto; }
+
+.maximize-tables-auto {
+  --table-max-width: auto;
+  --left-margin-table: max(
+  	calc(50% + var(--folding-offset)/2 - var(--line-width-adaptive)/2),
+  	calc(50% + var(--folding-offset)/2 - var(--max-width)/2) ); }
+
+.maximize-tables-auto.table-wide, .maximize-tables-auto.table-max, .maximize-tables-auto.table-100 {
+  --table-max-width: var(--max-width);
+  --left-margin-table: auto; }
+
+.maximize-tables-off {
+  --table-max-width: auto;
+  --left-margin-table: max(
+  	calc(50% + var(--folding-offset)/2 - var(--line-width-adaptive)/2),
+  	calc(50% + var(--folding-offset)/2 - var(--max-width)/2)); }
+  .maximize-tables-off.table-wide {
+    --left-margin-table: max(
+    	calc(50% + var(--folding-offset)/2 - var(--line-width-wide)/2),
+    	calc(50% + var(--folding-offset)/2 - var(--max-width)/2)); }
+  .maximize-tables-off.table-max {
+    --left-margin-table: calc(50% + var(--folding-offset)/2 - var(--max-width)/2); }
+  .maximize-tables-off.table-100 {
+    --left-margin-table: 0 ; }
+
 .contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   display: flex;
   flex-direction: column;
@@ -3027,19 +3067,13 @@ https://github.com/sponsors/kepano
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   align-items: center;
   padding-left: 0; }
-
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  width: var(--max-width); }
-
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--max-width);
-  width: var(--line-width-adaptive); }
-
+  .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    width: var(--line-width-adaptive); }
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer > div {
   max-width: 100%; }
-
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview,
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
@@ -3054,7 +3088,7 @@ https://github.com/sponsors/kepano
 .is-readable-line-width .el-table table,
 .is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
-  width: var(--max-width);
+  width: var(--table-max-width);
   max-width: var(--line-width-adaptive);
   margin: 0 auto 0.5rem; }
 
@@ -3064,11 +3098,8 @@ https://github.com/sponsors/kepano
 
 /* Dataview and tables */
 .table-100 .el-table table,
+.table-100 .el-lang-dataview .dataview.table-view-table,
 .table-100 .el-lang-dataviewjs .dataview.table-view-table,
-.table-100 .el-lang-dataview .dataview.table-view-table {
-  max-width: 100% !important;
-  width: 100% !important; }
-
 .markdown-preview-view.table-100.is-readable-line-width .el-table table,
 .markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .markdown-preview-view.table-100.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
@@ -3077,19 +3108,17 @@ https://github.com/sponsors/kepano
 
 .table-max .el-table table,
 .table-max .el-lang-dataview .dataview.table-view-table,
-.table-max .el-lang-dataviewjs .dataview.table-view-table {
-  max-width: 100% !important; }
-
+.table-max .el-lang-dataviewjs .dataview.table-view-table,
 .markdown-preview-view.table-max .el-table table,
-.markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table
+.markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table,
 .markdown-preview-view.table-max .el-lang-dataviewjs .dataview.table-view-table {
   max-width: 100% !important; }
 
 .table-wide .markdown-preview-view.is-readable-line-width .el-table table,
-.markdown-preview-view.is-readable-line-width.table-wide .el-table table,
 .table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
-.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table,
 .table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table,
+.markdown-preview-view.is-readable-line-width.table-wide .el-table table,
+.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table,
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataviewjs .dataview.table-view-table {
   max-width: var(--line-width-wide) !important; }
 
@@ -3100,7 +3129,6 @@ https://github.com/sponsors/kepano
 .table-100 .markdown-source-view.mod-cm6 td:first-child,
 .table-100 .markdown-source-view.mod-cm6 th:first-child {
   padding-left: 20px; }
-
 .table-100 table th:last-child,
 .table-100 table td:last-child,
 .table-100 .dataview.table-view-table th:last-child,
@@ -3109,13 +3137,42 @@ https://github.com/sponsors/kepano
 
 /* Maps, images and iframes */
 .contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography .markdown-preview-view.is-readable-line-width.chart-max .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
+.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image, .contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
 .contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography .markdown-preview-view.is-readable-line-width.map-max .markdown-preview-sizer > .el-lang-leaflet,
+.contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image, .contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
 .contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .markdown-preview-view.is-readable-line-width.iframe-max .markdown-preview-sizer > .el-iframe,
+.contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image, .contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
+.contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
 .contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
-.contextual-typography .markdown-preview-view.is-readable-line-width.img-max .markdown-preview-sizer > .el-embed-image {
+.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
+.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
+.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
+.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
+.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
+.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
+.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
+.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
+.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
+.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image {
   width: 100%; }
 
 .contextual-typography.chart-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
@@ -3142,7 +3199,8 @@ https://github.com/sponsors/kepano
 .is-readable-line-width .el-table table,
 .is-readable-line-width .el-lang-dataview .dataview.table-view-table,
 .is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
-  max-width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
+  max-width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  margin-left: var(--left-margin-table) !important; }
 
 .embed-strict .el-embed-page p,
 .map-100 .el-lang-leaflet,
@@ -3166,7 +3224,7 @@ https://github.com/sponsors/kepano
 .img-100 .el-embed-image,
 .img-max .el-embed-image,
 .img-wide .el-embed-image {
-  --folding-offset:0px; }
+  --folding-offset: 0px; }
 
 /* Live Preview */
 .chart-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
@@ -4770,11 +4828,16 @@ body .dataview.small-text {
   color: var(--text-faint); }
 
 /* Remove hover effect */
-body .dataview.task-list-item:hover,
-body .dataview.task-list-basic-item:hover,
-body .table-view-table > tbody > tr:hover {
-  background-color: transparent;
+body:not(.row-hover) .dataview.task-list-item:hover,
+body:not(.row-hover) .dataview.task-list-basic-item:hover,
+body:not(.row-hover) .table-view-table > tbody > tr:hover {
+  background-color: transparent !important;
   box-shadow: none; }
+
+body.row-hover .dataview.task-list-item:hover,
+body.row-hover .dataview.task-list-basic-item:hover,
+body.row-hover .table-view-table > tbody > tr:hover {
+  background-color: var(--table-row-background-hover) !important; }
 
 body .dataview-error {
   margin-top: 16px;
