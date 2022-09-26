@@ -1,18 +1,14 @@
 /* Tooltips */
 
 .tooltip {
-  font-size:var(--font-adaptive-smaller);
-  line-height:1.3;
-  font-weight:500;
-  padding:4px 8px;
-  border-radius:4px;
-  transition:none;
-  text-align:left;
-  animation:none;
-  opacity:0.8;
+	transition: none;
+	animation: none;
 }
 .tooltip.mod-left,
 .tooltip.mod-right {
-  transform:none;
-  animation:none; 
+	transform:none;
+	animation:none; 
+}
+.tooltip.mod-error {
+	color: var(--text-error);
 }

@@ -67,10 +67,11 @@
 @import 'features/trim-file-names';
 @import 'features/underline-headings';
 
-/* Mobile */
+/* Mobile
 @import 'mobile/mobile';
 @import 'mobile/ios';
 @import 'mobile/toolbar';
+*/
 
 /* Core plugins */
 @import 'plugins-core/backlinks-outlinks';
@@ -105,7 +106,6 @@
 @import 'plugins/quick-explorer';
 @import 'plugins/recent';
 @import 'plugins/reminder';
-@import 'plugins/sliding-panes';
 @import 'plugins/sortable';
 @import 'plugins/style-settings';
 @import 'plugins/todoist';
