@@ -70,19 +70,17 @@
 
 	.mod-root .workspace-tab-header-container {
 		height: 0px;
-		position: relative;
 		transition: all 0.1s linear 0.1s !important;
 		--tab-outline-width: 0px;
 
 		.workspace-tab-header-container-inner,
 		.workspace-tab-header-new-tab,
-		.workspace-tab-header-spacer,
 		.workspace-tab-header-tab-list {
 			opacity: 0;
 			transition: opacity 0.1s linear;
 		}
 
-		&::before {
+		.workspace-tab-header-spacer:before {
 			width: 100%;
 			content: " ";
 			background-color: transparent;
@@ -90,6 +88,7 @@
 			position: absolute;
 			z-index: 100;
 			top: 0;
+			left: 0;
 		}
 
 		&:hover {
@@ -97,7 +96,6 @@
 			--tab-outline-width: 1px;
 			.workspace-tab-header-container-inner,
 			.workspace-tab-header-new-tab,
-			.workspace-tab-header-spacer,
 			.workspace-tab-header-tab-list {
 				opacity: 1;
 				transition: opacity 0.1s linear 0.1s;

@@ -2698,29 +2698,27 @@ body.fancy-cursor .mod-cm6 .cm-line {
       background-color: blue; }
   .minimal-focus-mode .mod-root .workspace-tab-header-container {
     height: 0px;
-    position: relative;
     transition: all 0.1s linear 0.1s !important;
     --tab-outline-width: 0px; }
     .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner,
     .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-new-tab,
-    .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-spacer,
     .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-tab-list {
       opacity: 0;
       transition: opacity 0.1s linear; }
-    .minimal-focus-mode .mod-root .workspace-tab-header-container::before {
+    .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-spacer:before {
       width: 100%;
       content: " ";
       background-color: transparent;
       height: 15px;
       position: absolute;
       z-index: 100;
-      top: 0; }
+      top: 0;
+      left: 0; }
     .minimal-focus-mode .mod-root .workspace-tab-header-container:hover {
       height: var(--header-height);
       --tab-outline-width: 1px; }
       .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner,
       .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-new-tab,
-      .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-spacer,
       .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-tab-list {
         opacity: 1;
         transition: opacity 0.1s linear 0.1s; }
