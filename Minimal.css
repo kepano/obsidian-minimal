@@ -2698,13 +2698,13 @@ body.fancy-cursor .mod-cm6 .cm-line {
       background-color: blue; }
   .minimal-focus-mode .mod-root .workspace-tab-header-container {
     height: 0px;
-    transition: all 0.1s linear 0.1s !important;
+    transition: all 0.1s linear 0.6s;
     --tab-outline-width: 0px; }
     .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner,
     .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-new-tab,
     .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-tab-list {
       opacity: 0;
-      transition: opacity 0.1s linear; }
+      transition: opacity 0.1s linear 0.6s; }
     .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-spacer:before {
       width: 100%;
       content: " ";
@@ -2716,20 +2716,21 @@ body.fancy-cursor .mod-cm6 .cm-line {
       left: 0; }
     .minimal-focus-mode .mod-root .workspace-tab-header-container:hover {
       height: var(--header-height);
-      --tab-outline-width: 1px; }
+      --tab-outline-width: 1px;
+      transition: all 0.1s linear 0.05s; }
       .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner,
       .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-new-tab,
       .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-tab-list {
         opacity: 1;
-        transition: opacity 0.1s linear 0.1s; }
+        transition: opacity 0.1s linear 0.05s; }
 
 /* Collapse pane header */
 body.show-view-header .app-container .workspace-split.mod-root > .workspace-leaf .view-header {
-  transition: height 0.1s linear; }
+  transition: height 0.1s linear 0.1s; }
 
 body.minimal-focus-mode.show-view-header .mod-root .workspace-leaf .view-header {
   height: 0em;
-  transition: all linear 0.1s; }
+  transition: all 0.1s linear 0.5s; }
 body.minimal-focus-mode.show-view-header .view-header::after {
   width: 100%;
   content: " ";
@@ -2742,7 +2743,7 @@ body.minimal-focus-mode.show-view-header .view-header-nav-buttons,
 body.minimal-focus-mode.show-view-header .view-header-title-container,
 body.minimal-focus-mode.show-view-header .view-actions {
   opacity: 0;
-  transition: all 0.1s linear; }
+  transition: all 0.1s linear 0.5s; }
 body.minimal-focus-mode.show-view-header .mod-root .workspace-tab-header-container:hover ~ .workspace-tab-container .view-header,
 body.minimal-focus-mode.show-view-header .mod-root .workspace-leaf .view-header:hover,
 body.minimal-focus-mode.show-view-header .mod-root .workspace-leaf .view-header:focus-within {
