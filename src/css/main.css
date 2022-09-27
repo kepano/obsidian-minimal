@@ -399,7 +399,6 @@ body .excalidraw {
   --scrollbar-bg: transparent;
   --scrollbar-thumb-bg: var(--ui1);
   --tab-text-color-focused-active: var(--tx1);
-  --tab-container-background: var(--bg2);
   --tab-outline-color: var(--ui1);
   --text-accent-hover: var(--ax2);
   --text-accent: var(--ax1);
@@ -422,6 +421,9 @@ body .excalidraw {
   --tag-color: var(--tx2);
   --tag-bg: transparent;
   --tag-bg2: transparent; }
+
+.theme-light.minimal-light-contrast .theme-dark {
+  --tab-container-background: var(--bg2); }
 
 .theme-light,
 body .excalidraw {
