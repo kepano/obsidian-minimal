@@ -2725,6 +2725,8 @@ body.fancy-cursor .mod-cm6 .cm-line {
       .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-tab-list {
         opacity: 1;
         transition: opacity 0.1s linear 0.05s; }
+  .minimal-focus-mode.mod-macos .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+    padding-top: 30px; }
 
 /* Collapse pane header */
 body.show-view-header .app-container .workspace-split.mod-root > .workspace-leaf .view-header {

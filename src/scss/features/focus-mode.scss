@@ -104,6 +104,10 @@
 		}
 	}
 
+	&.mod-macos .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+		padding-top: 30px;
+	}
+
 }
 
 /* Collapse pane header */
