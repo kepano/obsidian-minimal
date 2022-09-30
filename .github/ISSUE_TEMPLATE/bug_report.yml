@@ -30,8 +30,8 @@ body:
     id: version
     attributes:
       label: Minimal theme version
-      description: What version of Minimal theme are you using? Can be found by going to `Appearance > Manage`. Make sure you have updated to the latest version of the theme.
-      placeholder: e.g. 5.3.0
+      description: What version of Minimal theme are you using? Can be found by going to `Appearance > Manage`. Make sure you have updated to the latest version of the theme. Please note that only reports for Minimal 6.0+ are accepted. Versions 5.3 and below are no longer supported.
+      placeholder: e.g. 6.0.0
     validations:
       required: true
   - type: textarea
