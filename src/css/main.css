@@ -430,7 +430,7 @@ body .excalidraw {
   --interactive-normal: var(--bg1);
   --interactive-accent-rgb:220, 220, 220;
   --active-line-bg:rgba(0,0,0,0.035);
-  --background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 50%),calc(var(--base-l) - 7%),0.2);
+  --background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 70%),calc(var(--base-l) - 20%),0.5);
   --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
   /* Errors */
   --background-modifier-error:rgba(255,0,0,0.14);
@@ -442,9 +442,9 @@ body .excalidraw {
 .theme-dark,
 .excalidraw.theme--dark {
   --interactive-normal: var(--bg3);
-  --interactive-accent-rgb:66, 66, 66;
-  --active-line-bg:rgba(255,255,255,0.04);
-  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.2);
+  --interactive-accent-rgb: 66, 66, 66;
+  --active-line-bg: rgba(255,255,255,0.04);
+  --background-modifier-cover: hsla(var(--base-h),var(--base-s), calc(var(--base-l) - 12%), 0.5);
   --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
   /* Errors */
   --background-modifier-error:rgba(255,20,20,0.12);
@@ -2381,7 +2381,7 @@ body.fancy-cursor .mod-cm6 .cm-line {
       .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-tab-list {
         opacity: 1;
         transition: opacity 0.1s linear 0.05s; }
-  .minimal-focus-mode.mod-macos .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+  .minimal-focus-mode.mod-macos:not(.is-fullscreen) .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
     padding-top: 30px; }
 
 /* Collapse pane header */
@@ -3424,6 +3424,16 @@ body:not(.full-file-names) .tree-item-inner {
   border-bottom: 1px solid var(--h6l);
   padding-bottom: 0.4em;
   margin-block-end: 0.6em; }
+
+/* Tablet */
+.is-tablet .workspace-drawer:not(.is-pinned) {
+  margin: 30px 16px 0;
+  height: calc(100vh - 48px);
+  border-radius: 15px;
+  border: none; }
+.is-tablet .workspace-drawer-ribbon {
+  background-color: var(--background-primary);
+  border-right: 1px solid var(--background-modifier-border); }
 
 /* Mobile
 @import 'mobile/mobile';
