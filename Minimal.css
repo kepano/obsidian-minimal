@@ -5181,6 +5181,7 @@ body.theme-light {
 .theme-light.minimal-atom-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-atom-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-atom-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-atom-light.minimal-light-contrast .mod-left-split,
 .theme-dark.minimal-atom-dark {
   --base-h:220;
   --base-s:12%;
@@ -5295,6 +5296,7 @@ body.theme-light {
 .theme-light.minimal-everforest-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-everforest-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-everforest-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-everforest-light.minimal-light-contrast .mod-left-split,
 .theme-dark.minimal-everforest-dark {
   --base-h:203;
   --base-s:15%;
@@ -5366,6 +5368,7 @@ body.theme-light {
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-gruvbox-light.minimal-light-contrast .mod-left-split,
 .theme-dark.minimal-gruvbox-dark {
   --accent-h:24;
   --accent-s:88%;
@@ -5428,6 +5431,7 @@ body.theme-light {
 .theme-light.minimal-macos-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-macos-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-macos-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-macos-light.minimal-light-contrast .mod-left-split,
 .theme-dark.minimal-macos-dark {
   --base-h:106;
   --base-s:0%;
@@ -5491,6 +5495,7 @@ body.theme-light {
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-nord-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-nord-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-nord-light.minimal-light-contrast .mod-left-split,
 .theme-dark.minimal-nord-dark {
   --base-h:220;
   --base-s:16%;
@@ -5539,6 +5544,7 @@ body.theme-light {
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-notion-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-notion-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-notion-light.minimal-light-contrast .mod-left-split,
 .theme-dark.minimal-notion-dark {
   --base-h:203;
   --base-s:8%;
@@ -5605,6 +5611,7 @@ body.theme-light {
 .theme-light.minimal-solarized-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-solarized-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-solarized-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-solarized-light.minimal-light-contrast .mod-left-split,
 .theme-dark.minimal-solarized-dark {
   --accent-h:205;
   --accent-s:70%;
@@ -5675,6 +5682,7 @@ body.theme-light {
 .theme-light.minimal-things-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-things-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-things-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-things-light.minimal-light-contrast .mod-left-split,
 .theme-dark.minimal-things-dark {
   --base-h:218;
   --base-s:9%;
