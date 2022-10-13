@@ -350,6 +350,7 @@ body .excalidraw {
 
 .theme-dark.minimal-dark-black {
   --base-d:0%;
+  --titlebar-background: black;
   --background-primary: black;
   --background-secondary: black;
   --background-secondary-alt: black;
@@ -978,6 +979,9 @@ body.window-title-off .titlebar-text {
   .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,
   .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-tabs.mod-top {
     --titlebar-background-focused: var(--bg1); }
+  .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-left:not(.is-collapsed),
+  .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-left:not(.is-collapsed) {
+    --titlebar-background: var(--bg2); }
 
 /* Trying for a smoother animation */
 .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
@@ -2717,6 +2721,9 @@ https://github.com/sponsors/kepano
   width: calc(100% - var(--divider-width));
   height: calc(var(--header-height) - var(--tab-outline-width));
   border-bottom: var(--labeled-nav-outline-width) solid var(--tab-outline-color); }
+.labeled-nav.mod-macos .workspace-ribbon.mod-left:not(.is-collapsed), .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-ribbon.mod-left:not(.is-collapsed) {
+  border: none;
+  --tab-outline-width: 0px; }
 .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos:not(.hider-ribbon) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
   border-bottom: var(--tab-outline-width) solid var(--tab-outline-color); }
 .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before {
@@ -5182,6 +5189,7 @@ body.theme-light {
 .theme-light.minimal-atom-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-atom-light.minimal-light-contrast .workspace-drawer.mod-left,
 .theme-light.minimal-atom-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-atom-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-dark.minimal-atom-dark {
   --base-h:220;
   --base-s:12%;
@@ -5297,6 +5305,7 @@ body.theme-light {
 .theme-light.minimal-everforest-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-everforest-light.minimal-light-contrast .workspace-drawer.mod-left,
 .theme-light.minimal-everforest-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-everforest-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-dark.minimal-everforest-dark {
   --base-h:203;
   --base-s:15%;
@@ -5369,6 +5378,7 @@ body.theme-light {
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-drawer.mod-left,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-dark.minimal-gruvbox-dark {
   --accent-h:24;
   --accent-s:88%;
@@ -5432,6 +5442,7 @@ body.theme-light {
 .theme-light.minimal-macos-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-macos-light.minimal-light-contrast .workspace-drawer.mod-left,
 .theme-light.minimal-macos-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-macos-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-dark.minimal-macos-dark {
   --base-h:106;
   --base-s:0%;
@@ -5496,6 +5507,7 @@ body.theme-light {
 .theme-light.minimal-nord-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-nord-light.minimal-light-contrast .workspace-drawer.mod-left,
 .theme-light.minimal-nord-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-nord-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-dark.minimal-nord-dark {
   --base-h:220;
   --base-s:16%;
@@ -5544,6 +5556,7 @@ body.theme-light {
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-notion-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-notion-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-notion-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-notion-light.minimal-light-contrast .mod-left-split,
 .theme-dark.minimal-notion-dark {
   --base-h:203;
@@ -5612,6 +5625,7 @@ body.theme-light {
 .theme-light.minimal-solarized-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-solarized-light.minimal-light-contrast .workspace-drawer.mod-left,
 .theme-light.minimal-solarized-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-solarized-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-dark.minimal-solarized-dark {
   --accent-h:205;
   --accent-s:70%;
@@ -5683,6 +5697,7 @@ body.theme-light {
 .theme-light.minimal-things-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-things-light.minimal-light-contrast .workspace-drawer.mod-left,
 .theme-light.minimal-things-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-things-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-dark.minimal-things-dark {
   --base-h:218;
   --base-s:9%;

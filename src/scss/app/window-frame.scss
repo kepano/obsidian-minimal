@@ -14,6 +14,12 @@ body.window-title-off .titlebar-text {
 			--titlebar-background-focused: var(--bg1);
 		}
 	}
+
+	&:not(.minimal-light-white) {
+		.workspace-ribbon.mod-left:not(.is-collapsed) {
+			--titlebar-background: var(--bg2);
+		}
+	}
 }
 
 /* Trying for a smoother animation */
