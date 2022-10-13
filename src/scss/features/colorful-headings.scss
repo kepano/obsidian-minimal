@@ -1,12 +1,18 @@
 /* Colorful headings */
 
 body.colorful-headings {
-	.view-content {
-		--h1-color:var(--red);
-		--h2-color:var(--orange);
-		--h3-color:var(--yellow);
-		--h4-color:var(--green);
-		--h5-color:var(--blue);
-		--h6-color:var(--purple);
+	--h1-color: var(--red);
+	--h2-color:var(--orange);
+	--h3-color:var(--yellow);
+	--h4-color:var(--green);
+	--h5-color:var(--blue);
+	--h6-color:var(--purple);
+	.modal {
+		--h1-color: var(--text-normal);
+		--h2-color: var(--text-normal);
+		--h3-color: var(--text-normal);
+		--h4-color: var(--text-normal);
+		--h5-color: var(--text-normal);
+		--h6-color: var(--text-normal);
 	}
 }

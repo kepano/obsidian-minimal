@@ -396,6 +396,9 @@ body .excalidraw {
   --nav-item-color: var(--tx2);
   --nav-item-color-active: var(--tx1);
   --nav-item-color-hover: var(--tx1);
+  --nav-collapse-icon-color: var(--tx2);
+  --nav-collapse-icon-color-collapsed: var(--tx2);
+  --nav-indentation-guide-color: var(--ui1);
   --prompt-border-color: var(--ui3);
   --quote-opening-modifier: var(--ui2);
   --ribbon-background: var(--bg2);
@@ -2206,13 +2209,20 @@ body {
   right: 0; }
 
 /* Colorful headings */
-body.colorful-headings .view-content {
-  --h1-color:var(--red);
+body.colorful-headings {
+  --h1-color: var(--red);
   --h2-color:var(--orange);
   --h3-color:var(--yellow);
   --h4-color:var(--green);
   --h5-color:var(--blue);
   --h6-color:var(--purple); }
+  body.colorful-headings .modal {
+    --h1-color: var(--text-normal);
+    --h2-color: var(--text-normal);
+    --h3-color: var(--text-normal);
+    --h4-color: var(--text-normal);
+    --h5-color: var(--text-normal);
+    --h6-color: var(--text-normal); }
 
 /* Icons */
 .is-mobile .tree-item-self .collapse-icon {
