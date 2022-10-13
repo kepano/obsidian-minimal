@@ -11,6 +11,9 @@ body {
 body {
 	/* Blockquotes */
 	--blockquote-style:normal;
+	--blockquote-color: var(--text-muted);
+	--blockquote-border-thickness: 1px;
+	--blockquote-border-color: var(--quote-opening-modifier);
 
 	/* Embeds */
 	--embed-block-shadow-hover: none;

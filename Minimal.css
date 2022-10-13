@@ -54,6 +54,9 @@ body {
 body {
   /* Blockquotes */
   --blockquote-style:normal;
+  --blockquote-color: var(--text-muted);
+  --blockquote-border-thickness: 1px;
+  --blockquote-border-color: var(--quote-opening-modifier);
   /* Embeds */
   --embed-block-shadow-hover: none;
   /* Font sizes */
@@ -1233,41 +1236,13 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 
 /* Content */
 /* Blockquotes */
-/* Preview */
 .markdown-preview-view blockquote {
-  border-radius: 0;
-  border: solid var(--quote-opening-modifier);
-  border-width: 0px 0px 0px 1px;
-  background-color: transparent;
   padding: 0 0 0 var(--nested-padding);
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  font-size: var(--blockquote-size);
-  font-style: var(--blockquote-style);
-  color: var(--text-blockquote); }
+  font-size: var(--blockquote-size); }
 
-.cm-s-obsidian span.cm-quote,
-.markdown-preview-view blockquote em,
-.markdown-preview-view blockquote strong {
-  color: var(--text-blockquote); }
-
-/* Editor */
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote,
 .markdown-source-view.mod-cm6 .HyperMD-quote {
-  background-color: transparent;
-  color: var(--text-blockquote);
-  font-size: var(--blockquote-size);
-  font-style: var(--blockquote-style);
-  border-left: 1px solid var(--quote-opening-modifier); }
-
-.markdown-source-view.mod-cm6 .cm-blockquote-border {
-  width: 20px;
-  display: inline-block;
-  border-left: none;
-  border-right: 1px solid var(--quote-opening-modifier); }
-
-.markdown-source-view.mod-cm6 .cm-hmd-indent-in-quote {
-  margin-left: 10px; }
+  font-size: var(--blockquote-size); }
 
 .is-live-preview .cm-hmd-indent-in-quote {
   color: var(--text-faint); }
@@ -5950,7 +5925,7 @@ settings:
 		level: 2
 		collapsed: true
 	- 
-		id: text-blockquote
+		id: blockquote-color
 		title: Blockquotes text color
 		type: variable-themed-color
 		format: hex
@@ -5963,7 +5938,7 @@ settings:
 		type: variable-text
 		default: ''
 	- 
-		id: blockquote-style
+		id: blockquote-font-style
 		title: Blockquotes font style
 		type: variable-select
 		allowEmpty: false
@@ -6118,7 +6093,7 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: node
+		id: graph-node
 		title: Node color
 		description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
 		type: variable-themed-color
@@ -6126,28 +6101,28 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: node-focused
+		id: graph-node-focused
 		title: Active node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-   
-		id: node-tag
+		id: graph-node-tag
 		title: Tag node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-   
-		id: node-attachment
+		id: graph-node-attachment
 		title: Attachment node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-   
-		id: node-unresolved
+		id: graph-node-unresolved
 		title: Unresolved node color
 		type: variable-themed-color
 		format: hex

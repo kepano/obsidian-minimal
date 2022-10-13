@@ -175,7 +175,7 @@ settings:
 		level: 2
 		collapsed: true
 	- 
-		id: text-blockquote
+		id: blockquote-color
 		title: Blockquotes text color
 		type: variable-themed-color
 		format: hex
@@ -188,7 +188,7 @@ settings:
 		type: variable-text
 		default: ''
 	- 
-		id: blockquote-style
+		id: blockquote-font-style
 		title: Blockquotes font style
 		type: variable-select
 		allowEmpty: false
@@ -343,7 +343,7 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: node
+		id: graph-node
 		title: Node color
 		description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
 		type: variable-themed-color
@@ -351,28 +351,28 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: node-focused
+		id: graph-node-focused
 		title: Active node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-   
-		id: node-tag
+		id: graph-node-tag
 		title: Tag node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-   
-		id: node-attachment
+		id: graph-node-attachment
 		title: Attachment node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-   
-		id: node-unresolved
+		id: graph-node-unresolved
 		title: Unresolved node color
 		type: variable-themed-color
 		format: hex
