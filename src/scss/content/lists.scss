@@ -31,10 +31,7 @@ ol {
 
 /* Bullets */
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
-  left:-5px;
-}
-body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
-  margin-left:-5px;
+  left:-3px;
 }
 
 .is-mobile {

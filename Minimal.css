@@ -3,7 +3,7 @@
 @import 'mobile/toolbar';
 /* ---------------------------------------------------------------------------
 
-Minimal Obsidian 6.0.0 alpha by @kepano
+Minimal Theme by @kepano
 
 User interface replacement for Obsidian.
 
@@ -48,8 +48,7 @@ body {
   --font-editor-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
   --font-monospace-theme:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
   --font-interface-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
-  --font-editor:var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
-  --minimal-version:"You are currently using Minimal 6.0\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install Minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\a minimal.guide\a\a Support my work:\a buymeacoffee.com/kepano"; }
+  --font-editor:var(--font-editor-override), var(--font-text-override), var(--font-editor-theme); }
 
 body {
   /* Blockquotes */
@@ -421,6 +420,7 @@ body .excalidraw {
   --background-secondary: var(--bg2);
   --background-secondary-alt: var(--bg1);
   --background-table-rows: var(--bg2);
+  --checkbox-color: var(--ax3);
   --code-normal: var(--tx1);
   --divider-color: var(--ui1);
   --frame-divider-color: var(--ui1);
@@ -537,21 +537,6 @@ body {
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
   --table-text-size:calc(var(--font-adaptive-normal) * 0.875); }
 
-/* Phone font sizes */
-@media (max-width: 400pt) {
-  .is-mobile {
-    --font-adaptive-small:calc(var(--font-ui-medium) + 2px);
-    --font-adaptive-smaller:calc(var(--font-ui-smaller) + 2px);
-    --font-adaptive-smallest:calc(var(--font-ui-smaller) + 2px);
-    --max-width:88%; } }
-/* Tablet font sizes */
-@media (min-width: 400pt) {
-  .is-mobile {
-    --font-adaptive-small:calc(var(--font-ui-medium) + 3px);
-    --font-adaptive-smaller:calc(var(--font-ui-smaller) + 2px);
-    --font-adaptive-smallest:calc(var(--font-ui-smallest) + 2px);
-    --line-width-adaptive:calc(var(--line-width) + 6rem);
-    --max-width:90%; } }
 /* Obsidian */
 /* Block width snippet */
 .minimal-dev-block-width {
@@ -959,6 +944,9 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
 
 .minimal-tab-title-hover .view-header-title-container {
   opacity: 0;
+  transition: opacity 0.1s ease-in-out; }
+.minimal-tab-title-hover .view-header-title-container:focus-within {
+  opacity: 1;
   transition: opacity 0.1s ease-in-out; }
 .minimal-tab-title-hover .workspace-tab-header-container:hover + .workspace-tab-container .view-header-title-container,
 .minimal-tab-title-hover .view-header:hover .view-header-title-container {
@@ -1441,10 +1429,7 @@ ol {
 
 /* Bullets */
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
-  left: -5px; }
-
-body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
-  margin-left: -5px; }
+  left: -3px; }
 
 .is-mobile {
   /* first level */ }
@@ -1596,15 +1581,13 @@ body, input, button {
 body,
 .markdown-preview-view,
 .markdown-source-view.mod-cm6.is-live-preview .cm-scroller,
-.cm-s-obsidian,
-.cm-s-obsidian .cm-formatting-hashtag {
+.cm-s-obsidian {
   font-size: var(--font-adaptive-normal);
   font-weight: var(--normal-weight);
   line-height: var(--line-height); }
 
 .markdown-source-view.mod-cm6 .cm-scroller,
 .markdown-source-view,
-.cm-s-obsidian .cm-formatting-hashtag,
 .cm-s-obsidian,
 .cm-s-obsidian span.cm-formatting-task {
   line-height: var(--line-height);
@@ -2137,13 +2120,13 @@ li[data-task="b"] > p > input:checked {
 .colorful-active {
   --sp1: #fff; }
   .colorful-active .nav-files-container {
-    --nav-item-background-active: var(--ax3);
+    --nav-item-background-active: var(--interactive-accent);
     --nav-item-color-active: var(--sp1); }
   .colorful-active #calendar-container .active,
   .colorful-active #calendar-container .active.today,
   .colorful-active #calendar-container .active:hover,
   .colorful-active #calendar-container .day:active {
-    background-color: var(--ax3);
+    background-color: var(--interactive-accent);
     color: var(--sp1); }
   .colorful-active #calendar-container .day:active .dot,
   .colorful-active #calendar-container .active .dot,
@@ -2559,6 +2542,9 @@ body.minimal-focus-mode.show-view-header .view-content {
   opacity: var(--image-muted);
   transition: opacity 0.25s linear; }
 
+@media print {
+  body {
+    --image-muted: 1; } }
 .theme-dark .print-preview img,
 .theme-dark .markdown-source-view img:hover,
 .theme-dark .markdown-preview-view img:hover {
@@ -2721,86 +2707,91 @@ Support my work:
 https://github.com/sponsors/kepano
 
 */
-.labeled-nav.is-translucent .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
-  background-color: transparent; }
-.labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-  padding-left: 0; }
-.labeled-nav.mod-macos .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
-  -webkit-app-region: drag;
-  position: absolute;
-  width: calc(100% - var(--divider-width));
-  height: calc(var(--header-height) - var(--tab-outline-width));
-  border-bottom: var(--labeled-nav-outline-width) solid var(--tab-outline-color); }
-.labeled-nav.mod-macos .workspace-ribbon.mod-left:not(.is-collapsed), .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-ribbon.mod-left:not(.is-collapsed) {
-  border: none;
-  --tab-outline-width: 0px; }
-.labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos:not(.hider-ribbon) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
-  border-bottom: var(--tab-outline-width) solid var(--tab-outline-color); }
-.labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before {
-  position: absolute;
-  top: 0;
-  content: " "; }
-.labeled-nav.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) .mod-left-split:not(.is-sidedock-collapsed) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-  padding-left: 0; }
-.labeled-nav:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspace-tab-header-container {
-  -webkit-app-region: no-drag; }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header-spacer {
-  display: none; }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header-inner-title {
-  display: inline-block;
-  font-weight: 500;
-  font-size: var(--font-adaptive-smaller); }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
-  position: relative;
-  flex-direction: column-reverse !important;
-  height: auto;
-  width: 100%; }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .sidebar-toggle-button.mod-left {
-    position: absolute;
-    justify-content: flex-end;
-    padding-right: var(--size-4-2);
-    top: 0;
-    right: 0; }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
-    padding-top: var(--size-4-2);
-    margin-top: var(--header-height);
-    flex-direction: column !important;
-    background-color: var(--background-secondary); }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-container-inner {
-    flex-grow: 1;
-    gap: 0;
-    padding: var(--size-4-2) var(--size-4-3); }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header {
-  --icon-color: var(--text-muted);
-  --tab-text-color: var(--text-muted);
-  --tab-text-color-focused: var(--text-muted);
-  padding: 0;
-  margin-bottom: 2px;
-  border: none;
-  height: auto; }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
+.labeled-nav.is-fullscreen:not(.colorful-frame) {
+  --labeled-nav-top-margin: 0; }
+
+.labeled-nav {
+  --labeled-nav-top-margin: var(--header-height); }
+  .labeled-nav.is-translucent .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
     background-color: transparent; }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active, .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover {
-    opacity: 1;
-    --tab-text-color-focused: var(--text-normal);
-    --icon-color: var(--text-normal); }
-  .labeled-nav .mod-left-split .mod-top .workspace-tab-header .workspace-tab-header-inner {
-    gap: var(--size-2-3);
-    padding: var(--size-4-1) var(--size-4-2);
-    box-shadow: none;
-    border: none; }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header.has-active-menu:hover,
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:hover {
-  background-color: transparent; }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:hover .workspace-tab-header-inner,
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-  background-color: var(--nav-item-background-hover); }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover .workspace-tab-header-inner-icon,
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-  color: var(--icon-color-active); }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
-  border: none;
-  padding: 0; }
+  .labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+    padding-left: 0; }
+  .labeled-nav.mod-macos .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
+    -webkit-app-region: drag;
+    position: absolute;
+    width: calc(100% - var(--divider-width));
+    height: calc(var(--header-height) - var(--tab-outline-width));
+    border-bottom: var(--labeled-nav-outline-width) solid var(--tab-outline-color); }
+  .labeled-nav.mod-macos .workspace-ribbon.mod-left:not(.is-collapsed), .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-ribbon.mod-left:not(.is-collapsed) {
+    border: none;
+    --tab-outline-width: 0px; }
+  .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos:not(.hider-ribbon) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
+    border-bottom: var(--tab-outline-width) solid var(--tab-outline-color); }
+  .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before {
+    position: absolute;
+    top: 0;
+    content: " "; }
+  .labeled-nav.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) .mod-left-split:not(.is-sidedock-collapsed) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+    padding-left: 0; }
+  .labeled-nav:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspace-tab-header-container {
+    -webkit-app-region: no-drag; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-spacer {
+    display: none; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-inner-title {
+    display: inline-block;
+    font-weight: 500;
+    font-size: var(--font-adaptive-smaller); }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
+    position: relative;
+    flex-direction: column-reverse !important;
+    height: auto;
+    width: 100%; }
+    .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .sidebar-toggle-button.mod-left {
+      position: absolute;
+      justify-content: flex-end;
+      padding-right: var(--size-4-2);
+      top: 0;
+      right: 0; }
+    .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
+      padding-top: var(--size-4-2);
+      margin-top: var(--labeled-nav-top-margin);
+      flex-direction: column !important;
+      background-color: var(--background-secondary); }
+    .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-container-inner {
+      flex-grow: 1;
+      gap: 0;
+      padding: var(--size-4-2) var(--size-4-3); }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header {
+    --icon-color: var(--text-muted);
+    --tab-text-color: var(--text-muted);
+    --tab-text-color-focused: var(--text-muted);
+    padding: 0;
+    margin-bottom: 2px;
+    border: none;
+    height: auto; }
+    .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
+      background-color: transparent; }
+    .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active, .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover {
+      opacity: 1;
+      --tab-text-color-focused: var(--text-normal);
+      --icon-color: var(--text-normal); }
+    .labeled-nav .mod-left-split .mod-top .workspace-tab-header .workspace-tab-header-inner {
+      gap: var(--size-2-3);
+      padding: var(--size-4-1) var(--size-4-2);
+      box-shadow: none;
+      border: none; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.has-active-menu:hover,
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:hover {
+    background-color: transparent; }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:hover .workspace-tab-header-inner,
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    background-color: var(--nav-item-background-hover); }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover .workspace-tab-header-inner-icon,
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+    color: var(--icon-color-active); }
+  .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container {
+    border: none;
+    padding: 0; }
 
 /* MIT License | Copyright (c) Stephan Ango (@kepano) 
 
@@ -3461,6 +3452,8 @@ body:not(.full-file-names) .tree-item-inner {
   margin-block-end: 0.6em; }
 
 /* Tablet */
+.is-tablet .workspace-drawer {
+  padding-top: 0px; }
 .is-tablet .workspace-drawer:not(.is-pinned) {
   margin: 30px 16px 0;
   height: calc(100vh - 48px);
@@ -3469,6 +3462,11 @@ body:not(.full-file-names) .tree-item-inner {
 .is-tablet .workspace-drawer-ribbon {
   background-color: var(--background-primary);
   border-right: 1px solid var(--background-modifier-border); }
+.is-tablet .workspace-drawer-header {
+  padding-top: var(--size-4-4); }
+
+.is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
+  margin-left: 0; }
 
 /* Mobile
 */
@@ -5965,6 +5963,29 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
+		id: blockquote-background-color
+		title: Blockquotes background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: blockquote-border-color
+		title: Blockquotes border color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: blockquote-border-thickness
+		title: Blockquote border thickness
+		type: variable-number-slider
+		format: px
+		default: 1
+		min: 0
+		max: 5
+		step: 1
+	- 
 		id: blockquote-size
 		title: Blockquotes font size
 		description: Accepts any CSS font-size value
@@ -5984,6 +6005,26 @@ settings:
 				label: Italic
 				value: italic
 	-
+		id: callouts
+		title: Callouts
+		type: heading
+		level: 2
+		collapsed: true
+	- 
+		id: callout-blend-mode
+		title: Color blending
+		description: Blend the color of nested callouts
+		type: variable-select
+		allowEmpty: false
+		default: var(--highlight-mix-blend-mode)
+		options:
+			- 
+				label: On
+				value: var(--highlight-mix-blend-mode)
+			- 
+				label: Off
+				value: normal
+	-
 		id: code-blocks
 		title: Code and syntax highlighting
 		type: heading
@@ -5995,6 +6036,19 @@ settings:
 		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 13px
+	- 
+		id: code-white-space
+		title: Word wrap
+		type: variable-select
+		allowEmpty: false
+		default: pre-wrap
+		options:
+			- 
+				label: Wrap lines
+				value: pre-wrap
+			- 
+				label: Scroll
+				value: pre
 	- 
 		id: code-background
 		title: Code background color
@@ -6700,7 +6754,7 @@ settings:
 		level: 2
 		collapsed: true
 	- 
-		id: ax3
+		id: checkbox-color
 		title: Checkbox color
 		description: Background color for completed tasks
 		type: variable-themed-color

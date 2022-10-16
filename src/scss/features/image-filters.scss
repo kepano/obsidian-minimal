@@ -7,6 +7,12 @@
 	transition:opacity 0.25s linear;
 }
 
+@media print{
+  body {
+    --image-muted: 1;
+  }
+}
+
 .theme-dark .print-preview img,
 .theme-dark .markdown-source-view img:hover,
 .theme-dark .markdown-preview-view img:hover {

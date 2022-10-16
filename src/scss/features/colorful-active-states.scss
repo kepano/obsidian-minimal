@@ -3,7 +3,7 @@
 	--sp1: #fff;
 
 	.nav-files-container {
-		--nav-item-background-active: var(--ax3);
+		--nav-item-background-active: var(--interactive-accent);
 		--nav-item-color-active: var(--sp1);
 	}
 
@@ -12,7 +12,7 @@
 		.active.today,
 		.active:hover,
 		.day:active {
-			background-color:var(--ax3);
+			background-color:var(--interactive-accent);
 			color:var(--sp1);
 		}
 		.day:active .dot,

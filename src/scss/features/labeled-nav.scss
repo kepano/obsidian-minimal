@@ -10,7 +10,12 @@ https://github.com/sponsors/kepano
 
 */
 
+.labeled-nav.is-fullscreen:not(.colorful-frame) {
+	--labeled-nav-top-margin: 0;
+}
+
 .labeled-nav {
+	--labeled-nav-top-margin: var(--header-height);
 
 	&.is-translucent {
 		.mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
@@ -92,7 +97,7 @@ https://github.com/sponsors/kepano
 			}
 			.workspace-tab-header-container-inner {
 				padding-top: var(--size-4-2);
-				margin-top: var(--header-height);
+				margin-top: var(--labeled-nav-top-margin);
 				flex-direction: column !important;
 				background-color: var(--background-secondary);
 			}

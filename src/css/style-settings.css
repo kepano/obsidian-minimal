@@ -182,6 +182,29 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
+		id: blockquote-background-color
+		title: Blockquotes background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: blockquote-border-color
+		title: Blockquotes border color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: blockquote-border-thickness
+		title: Blockquote border thickness
+		type: variable-number-slider
+		format: px
+		default: 1
+		min: 0
+		max: 5
+		step: 1
+	- 
 		id: blockquote-size
 		title: Blockquotes font size
 		description: Accepts any CSS font-size value
@@ -201,6 +224,26 @@ settings:
 				label: Italic
 				value: italic
 	-
+		id: callouts
+		title: Callouts
+		type: heading
+		level: 2
+		collapsed: true
+	- 
+		id: callout-blend-mode
+		title: Color blending
+		description: Blend the color of nested callouts
+		type: variable-select
+		allowEmpty: false
+		default: var(--highlight-mix-blend-mode)
+		options:
+			- 
+				label: On
+				value: var(--highlight-mix-blend-mode)
+			- 
+				label: Off
+				value: normal
+	-
 		id: code-blocks
 		title: Code and syntax highlighting
 		type: heading
@@ -212,6 +255,19 @@ settings:
 		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 13px
+	- 
+		id: code-white-space
+		title: Word wrap
+		type: variable-select
+		allowEmpty: false
+		default: pre-wrap
+		options:
+			- 
+				label: Wrap lines
+				value: pre-wrap
+			- 
+				label: Scroll
+				value: pre
 	- 
 		id: code-background
 		title: Code background color
@@ -917,7 +973,7 @@ settings:
 		level: 2
 		collapsed: true
 	- 
-		id: ax3
+		id: checkbox-color
 		title: Checkbox color
 		description: Background color for completed tasks
 		type: variable-themed-color

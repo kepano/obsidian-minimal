@@ -1,6 +1,9 @@
 /* Tablet */
 
 .is-tablet {
+	.workspace-drawer {
+			padding-top: 0px;
+	}
 	.workspace-drawer:not(.is-pinned) {
 		margin: 30px 16px 0;
 		height: calc(100vh - 48px);
@@ -10,5 +13,14 @@
 	.workspace-drawer-ribbon {
 		background-color: var(--background-primary);
 		border-right: 1px solid var(--background-modifier-border);
+	}
+	.workspace-drawer-header {
+		padding-top: var(--size-4-4)
+	}
+}
+
+.is-mobile {
+	.markdown-source-view.mod-cm6 .cm-gutters {
+		margin-left: 0;
 	}
 }

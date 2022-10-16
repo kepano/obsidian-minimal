@@ -19,6 +19,10 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
 		opacity: 0;
 		transition: opacity 0.1s ease-in-out;
 	}
+	.view-header-title-container:focus-within {
+		opacity: 1;
+		transition: opacity 0.1s ease-in-out;
+	}
 	.workspace-tab-header-container:hover + .workspace-tab-container,
 	.view-header:hover {
 		.view-header-title-container {
