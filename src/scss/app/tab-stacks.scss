@@ -2,6 +2,13 @@
 	--tab-stacked-text-transform: rotate(180deg);
 	--tab-stacked-text-align: right;
 }
+.tab-stack-center {
+	--tab-stacked-text-align: center;
+}
+.tab-stack-center-flipped {
+	--tab-stacked-text-transform: rotate(180deg);
+	--tab-stacked-text-align: center;
+}
 .tab-stack-bottom {
 	--tab-stacked-text-transform: rotate(180deg);
 }

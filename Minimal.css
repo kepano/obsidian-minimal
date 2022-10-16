@@ -923,6 +923,13 @@ body:not(.minimal-status-off) .status-bar {
   --tab-stacked-text-transform: rotate(180deg);
   --tab-stacked-text-align: right; }
 
+.tab-stack-center {
+  --tab-stacked-text-align: center; }
+
+.tab-stack-center-flipped {
+  --tab-stacked-text-transform: rotate(180deg);
+  --tab-stacked-text-align: center; }
+
 .tab-stack-bottom {
   --tab-stacked-text-transform: rotate(180deg); }
 
@@ -6971,17 +6978,23 @@ settings:
 		default: tab-stack-top
 		options:
 			- 
-				label: Top aligned
+				label: Top
 				value: tab-stack-top
 			- 
-				label: Top aligned flipped
+				label: Top flipped
 				value: tab-stack-top-flipped
 			- 
-				label: Bottom aligned
+				label: Bottom
 				value: tab-stack-bottom
 			- 
-				label: Bottom aligned flipped
+				label: Bottom flipped
 				value: tab-stack-bottom-flipped
+			- 
+				label: Center
+				value: tab-stack-center
+			- 
+				label: Center flipped
+				value: tab-stack-center-flipped
 	-
 		id: tags
 		title: Tags
