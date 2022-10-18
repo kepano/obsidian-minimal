@@ -914,21 +914,29 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
   opacity: 1;
   transition: opacity 0.25s ease-in-out; }
 
-body:not(.is-phone) .view-header-title-container {
+.view-header-title-container {
   opacity: 0;
   transition: opacity 0.1s ease-in-out; }
-body:not(.is-phone) .view-header-title-container:focus-within {
-  opacity: 1;
-  transition: opacity 0.1s ease-in-out; }
-body:not(.is-phone) .workspace-tab-header-container:hover + .workspace-tab-container .view-header-title-container,
-body:not(.is-phone) .view-header:hover .view-header-title-container {
+
+.view-header-title-container:focus-within {
   opacity: 1;
   transition: opacity 0.1s ease-in-out; }
 
-body.minimal-tab-title-visible .view-header-title-container {
+.workspace-tab-header-container:hover + .workspace-tab-container .view-header-title-container,
+.view-header:hover .view-header-title-container {
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out; }
+
+.is-phone .view-header-title-container,
+.minimal-tab-title-visible .view-header-title-container {
   opacity: 1; }
 
 .minimal-tab-title-hidden .view-header-title-container {
+  opacity: 0; }
+.minimal-tab-title-hidden .view-header-title-container:focus-within {
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out; }
+.minimal-tab-title-hidden .view-header:hover .view-header-title-container {
   opacity: 0; }
 
 /* Window frame */
