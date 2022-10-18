@@ -83,7 +83,7 @@ settings:
 		level: 2
 		collapsed: true
 	- 
-		id: red
+		id: color-red
 		title: Red
 		description: Extended palette colors are defaults used for progress bar status, syntax highlighting, colorful headings, and graph nodes
 		type: variable-themed-color
@@ -92,7 +92,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
-		id: orange
+		id: color-orange
 		title: Orange
 		type: variable-themed-color
 		opacity: true
@@ -100,7 +100,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
-		id: yellow
+		id: color-yellow
 		title: Yellow
 		type: variable-themed-color
 		opacity: true
@@ -108,7 +108,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
-		id: green
+		id: color-green
 		title: Green
 		type: variable-themed-color
 		opacity: true
@@ -116,7 +116,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
-		id: cyan
+		id: color-cyan
 		title: Cyan
 		type: variable-themed-color
 		opacity: true
@@ -124,7 +124,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
-		id: blue
+		id: color-blue
 		title: Blue
 		type: variable-themed-color
 		opacity: true
@@ -132,7 +132,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
-		id: purple
+		id: color-purple
 		title: Purple
 		type: variable-themed-color
 		opacity: true
@@ -140,7 +140,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
-		id: pink
+		id: color-pink
 		title: Pink
 		type: variable-themed-color
 		opacity: true
@@ -1158,6 +1158,9 @@ settings:
 				label: Default
 				value: tabs-default
 			-
+				label: Modern
+				value: tabs-modern
+			-
 				label: Square
 				value: tabs-square
 			-
@@ -1368,17 +1371,17 @@ settings:
 		title: Tab title visibility
 		description: Visibility of the tab title text
 		type: class-select
-		default: minimal-tab-title-visible
+		default: minimal-tab-title-hover
 		options:
-			- 
-				label: Visible
-				value: minimal-tab-title-visible
+			-
+				label: Hover only
+				value: minimal-tab-title-hover
 			- 
 				label: Hidden
 				value: minimal-tab-title-hidden
-			- 
-				label: Hover only
-				value: minimal-tab-title-hover
+			-
+				label: Visible
+				value: minimal-tab-title-visible
 	- 
 		id: file-header-font-size
 		title: Tab title font size
@@ -1503,7 +1506,15 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	- 
+	-
+		id: frame-icon-color
+		title: Colorful frame icon color
+		description: Requires colorful frame
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: titlebar-text-weight
 		title: Window title font weight
 		description: Requires custom title bar

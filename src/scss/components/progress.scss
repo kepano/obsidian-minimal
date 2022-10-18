@@ -17,19 +17,19 @@
 	&[value^='1']::-webkit-progress-value,
 	&[value^='2']::-webkit-progress-value,
 	&[value^='3']::-webkit-progress-value {
-		background-color:var(--red);
+		background-color:var(--color-red);
 	}
 	&[value^='4']::-webkit-progress-value,
 	&[value^='5']::-webkit-progress-value {
-		background-color:var(--orange);
+		background-color:var(--color-orange);
 	}
 	&[value^='6']::-webkit-progress-value,
 	&[value^='7']::-webkit-progress-value {
-		background-color:var(--yellow);
+		background-color:var(--color-yellow);
 	}
 	&[value^='8']::-webkit-progress-value,
 	&[value^='9']::-webkit-progress-value {
-		background-color:var(--green);
+		background-color:var(--color-green);
 	}
 	&[value='1']::-webkit-progress-value,
 	&[value='100']::-webkit-progress-value {
@@ -45,6 +45,6 @@
 	&[value='7']::-webkit-progress-value,
 	&[value='8']::-webkit-progress-value,
 	&[value='9']::-webkit-progress-value {
-		background-color:var(--red);
+		background-color:var(--color-red);
 	}
 }

@@ -54,6 +54,7 @@ https://github.com/sponsors/kepano
 			border-radius: 6px;
 			overflow: hidden;
 			transition: box-shadow 0.15s linear;
+			max-width: var(--cards-max-width);
 		}
 		> tbody > tr:hover {
 			border: var(--cards-border-width) solid var(--background-modifier-border-hover);

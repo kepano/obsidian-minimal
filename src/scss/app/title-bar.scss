@@ -14,7 +14,7 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
   transition:opacity 0.25s ease-in-out;
 }
 
-.minimal-tab-title-hover {
+body:not(.is-phone) {
 	.view-header-title-container {
 		opacity: 0;
 		transition: opacity 0.1s ease-in-out;
@@ -29,6 +29,12 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
 			opacity: 1;
 			transition: opacity 0.1s ease-in-out;
 		}
+	}
+}
+
+body.minimal-tab-title-visible {
+	.view-header-title-container {
+		opacity: 1;
 	}
 }
 

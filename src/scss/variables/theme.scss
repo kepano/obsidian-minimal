@@ -23,7 +23,7 @@ body .excalidraw {
 
 	--background-modifier-form-field-highlighted: var(--bg1);
 	--background-modifier-form-field:    var(--bg1);
-	--background-modifier-success:       var(--green);
+	--background-modifier-success:       var(--color-green);
 
 	--background-modifier-hover:         var(--bg3);
 	--background-modifier-active-hover:  var(--bg3);
@@ -83,7 +83,7 @@ body .excalidraw {
 	--text-blockquote:                   var(--tx2);
 	--text-bold:                         var(--tx1);
 	--text-code:                         var(--tx4);
-	--text-error:                        var(--red);
+	--text-error:                        var(--color-red);
 	--text-faint:                        var(--tx3);
 	--text-highlight-bg:                 var(--hl2);
 	--text-italic:                       var(--tx1);

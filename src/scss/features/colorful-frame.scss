@@ -58,9 +58,10 @@ body {
 		--tab-outline-color: var(--frame-outline-color);
 		--tab-divider-color: var(--frame-outline-color);
 		--background-modifier-hover: var(--frame-outline-color);
-		--icon-color: var(--frame-muted-color);
-		--icon-color-hover: var(--frame-muted-color);
-		--icon-color-focus: var(--text-normal);
+		--icon-color: var(--frame-icon-color);
+		--icon-color-hover: var(--frame-icon-color);
+		--icon-color-active: var(--frame-icon-color);
+		--icon-color-focused: var(--frame-icon-color);
 		--tab-text-color: var(--frame-muted-color);
 		--tab-text-color-hover: var(--frame-muted-color);
 		--tab-text-color-focused: var(--frame-muted-color);

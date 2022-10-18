@@ -36,3 +36,76 @@
 .workspace > .workspace-split:not(.mod-root) .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
 	--tab-outline-width: 0;
 }
+
+/* Safari/Firefox style */
+.tabs-modern {
+	/*&.colorful-active {
+		--tab-background-active: var(--ax3);
+	}*/
+	&.colorful-frame .mod-root .mod-top.workspace-tabs:not(.mod-stacked) {
+		--tab-background: var(--frame-outline-color);
+		.workspace-tab-header:hover,
+		.workspace-tab-header.is-active {
+			.workspace-tab-header-inner-close-button {
+				color: var(--frame-muted-color);
+			}
+		}
+	}
+	&.minimal-focus-mode .mod-root .workspace-tab-header-container:hover {
+		--tab-outline-width: 0px;
+	}
+	.mod-root {
+		--tab-container-background: var(--background-primary);
+	}
+	.mod-root .workspace-tabs:not(.mod-stacked) {
+		--tab-background: var(--background-modifier-hover);
+		--tab-height: calc(var(--header-height) - 14px);
+		--tab-text-color-active: var(--text-normal);
+		--tab-text-color-focused-active: var(--text-normal);
+		--tab-outline-width: 0px;
+
+		.workspace-tab-header::before,
+		.workspace-tab-header::after,
+		.workspace-tab-header-inner::after {
+			display: none;
+		}
+
+		.workspace-tab-header-container-inner {
+			align-items: center;
+			margin: 0;
+			padding: 2px var(--size-4-2) 0 var(--size-4-1);
+		}
+		.workspace-tab-header-inner-title {
+			text-overflow: ellipsis;
+			-webkit-mask-image: none;
+		}
+		.workspace-tab-header {
+			background: transparent;
+			border-radius: 5px;
+			box-shadow: none;
+			border: 1px solid var(--tab-outline-color);
+			height: var(--tab-height);
+			margin-left: var(--size-4-1);
+			padding: 0;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+				border-color: var(--tab-background);
+			}
+			&.is-active .workspace-tab-header-inner-title {
+				color: var(--tab-text-color-active);
+			}
+			&.is-active.mod-active {
+				opacity: 1;
+				background-color: var(--tab-background);
+				border-color: transparent;
+			}
+		}
+		.workspace-tab-header-new-tab {
+			margin-right: 0;
+		}
+		.workspace-tab-header-inner {
+			padding: 0 var(--size-4-1) 0 var(--size-4-2);
+		}
+	}
+}

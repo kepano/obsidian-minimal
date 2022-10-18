@@ -24,14 +24,14 @@ body {
 	--accent-s: 17%;   /* Accent saturation */
 	--accent-l: 50%;   /* Accent lightness */
 
-	--red: #d04255;
-	--yellow: #e5b567;
-	--green: #a8c373;
-	--orange: #d5763f;
-	--cyan: #73bbb2;
-	--blue: #6c99bb;
-	--purple: #9e86c8;
-	--pink: #b05279;
+	--color-red: #d04255;
+	--color-yellow: #e5b567;
+	--color-green: #a8c373;
+	--color-orange: #d5763f;
+	--color-cyan: #73bbb2;
+	--color-blue: #6c99bb;
+	--color-purple: #9e86c8;
+	--color-pink: #b05279;
 }
 
 .theme-light,
@@ -257,6 +257,7 @@ body .excalidraw {
 	--background-secondary:       white;
 	--background-secondary-alt:   white;
 	--ribbon-background:          white;
+	--bg1: white;
 }
 
 .theme-dark.minimal-dark-black {

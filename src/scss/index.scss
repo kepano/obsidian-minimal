@@ -15,6 +15,7 @@
 @import 'app/tab-stacks';
 @import 'app/title-bar';
 @import 'app/window-frame';
+@import 'app/workspace';
 
 /* Components */
 @import 'components/buttons';
@@ -114,6 +115,7 @@
 
 /* Color schemes */
 @import 'color-schemes/atom';
+@import 'color-schemes/catppuccin';
 @import 'color-schemes/dracula';
 @import 'color-schemes/everforest';
 @import 'color-schemes/gruvbox';

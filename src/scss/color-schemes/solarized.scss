@@ -2,14 +2,14 @@
 
 .theme-dark.minimal-solarized-dark,
 .theme-light.minimal-solarized-light {
-	--red:#dc322f;
-	--orange:#cb4b16;
-	--yellow:#b58900;
-	--green:#859900;
-	--cyan:#2aa198;
-	--blue:#268bd2;
-	--purple:#6c71c4;
-	--pink:#d33682;
+	--color-red:#dc322f;
+	--color-orange:#cb4b16;
+	--color-yellow:#b58900;
+	--color-green:#859900;
+	--color-cyan:#2aa198;
+	--color-blue:#268bd2;
+	--color-purple:#6c71c4;
+	--color-pink:#d33682;
 }
 
 .theme-light.minimal-solarized-light {
@@ -42,7 +42,6 @@
 .theme-light.minimal-solarized-light.minimal-light-tonal {
 	--bg2:#fdf6e3;
 }
-
 .theme-light.minimal-solarized-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-solarized-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-solarized-light.minimal-light-contrast .workspace-drawer.mod-left,

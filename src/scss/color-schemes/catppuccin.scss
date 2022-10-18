@@ -1,0 +1,91 @@
+/* catppuccin */
+.theme-light.minimal-catppuccin-light {
+	--color-red: #E64553;
+	--color-orange: #FE640C;
+	--color-yellow: #DF8E1D;
+	--color-green: #40A02B;
+	--color-purple: #8938EF;
+	--color-pink: #EA77CB;
+	--color-cyan: #17929A;
+	--color-blue: #2166F6;
+}
+.theme-dark.minimal-catppuccin-dark {
+	--color-red: #EB999C;
+	--color-orange: #EFA076;
+	--color-yellow: #E5C890;
+	--color-green: #A6D18A;
+	--color-purple: #CA9EE6;
+	--color-pink: #F4B9E5;
+	--color-cyan: #81C8BE;
+	--color-blue: #8CAAEE;
+}
+
+.theme-light.minimal-catppuccin-light {
+	--base-h: 228;
+	--base-s: 20%;
+	--base-l: 95%;
+
+	--accent-h: 11;
+	--accent-s: 59%;
+	--accent-l: 67%;
+
+	--bg1: #F0F1F5;
+	--bg2: #DCE0E8;
+	--bg3: hsla(228,11%,65%,.25);
+
+	--ui1: #CCD0DA;
+	--ui2: #BCC0CC;
+	--ui3: #ACB0BE;
+
+	--tx1: #4D4F69;
+	--tx2: #5D5F77;
+	--tx3: #8D8FA2;
+
+	--ax1: #DC8A78;
+
+	--hl1: rgba(172,176,190,.3);
+	--hl2: rgba(223,142,29,.3);
+}
+
+.theme-light.minimal-catppuccin-light.minimal-light-tonal {
+	--bg2: #DCE0E8;
+}
+.theme-light.minimal-catppuccin-light.minimal-light-white {
+	--bg3: #F0F1F5;
+	--ui1: #DCE0E8;
+}
+.theme-light.minimal-catppuccin-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-catppuccin-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-catppuccin-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-catppuccin-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-catppuccin-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-dark.minimal-catppuccin-dark {
+	--base-h: 229;
+	--base-s: 19%;
+	--base-l: 23%;
+
+	--accent-h: 10;
+	--accent-s: 57%;
+	--accent-l: 88%;
+
+	--bg1: #303446;
+	--bg2: #242634;
+	--bg3: hsla(229,13%,52%,0.25);
+
+	--ui1: #41455A;
+	--ui2: #51576D;
+	--ui3: #626880;
+
+	--tx1: #C6D0F5;
+	--tx2: #A6ADCE;
+	--tx3: #848BA7;
+
+	--ax1: #F2D5CF;
+
+	--hl1: rgba(98,104,128,.5);
+	--hl2: rgba(223,142,29,.4);
+}
+.theme-dark.minimal-catppuccin-dark.minimal-dark-black {
+	--ui1: #303446;
+	--hl2: rgba(223,142,29,.5);
+}

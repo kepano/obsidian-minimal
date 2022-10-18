@@ -60,11 +60,11 @@ ul.todoist-task-list {
 }
 
 .todoist-task-list .task-date.task-overdue {
-	color:var(--orange);
+	color:var(--color-orange);
 }
 
 body .todoist-p1 > input[type="checkbox"] {
-	border:1px solid var(--red);
+	border:1px solid var(--color-red);
 }
 
 body .todoist-p1 > input[type="checkbox"]:hover {
@@ -72,7 +72,7 @@ body .todoist-p1 > input[type="checkbox"]:hover {
 }
 
 body .todoist-p2 > input[type="checkbox"] {
-	border:1px solid var(--yellow);
+	border:1px solid var(--color-yellow);
 }
 
 body .todoist-p2 > input[type="checkbox"]:hover {
@@ -80,7 +80,7 @@ body .todoist-p2 > input[type="checkbox"]:hover {
 }
 
 body .todoist-p3 > input[type="checkbox"] {
-	border:1px solid var(--blue);
+	border:1px solid var(--color-blue);
 }
 
 body .todoist-p3 > input[type="checkbox"]:hover {
