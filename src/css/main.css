@@ -895,6 +895,13 @@ body:not(.minimal-status-off) .status-bar {
   --tab-stacked-text-align: right; }
 
 /* Title Bar */
+.view-header-title-parent,
+.view-header-title {
+  text-overflow: ellipsis; }
+
+.view-header-title-container:not(.mod-at-end):after {
+  display: none; }
+
 /* Alignment */
 body:not(.is-mobile) .view-actions .view-action:last-child {
   margin-left: -1px; }
