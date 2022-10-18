@@ -3416,25 +3416,27 @@ body:not(.links-ext-on) {
     .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
       background: transparent;
       border-radius: 5px;
+      border: none;
       box-shadow: none;
-      border: 1px solid var(--tab-outline-color);
       height: var(--tab-height);
       margin-left: var(--size-4-1);
       padding: 0;
-      opacity: 0.8; }
+      opacity: 1; }
       .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:hover {
-        opacity: 1;
-        border-color: var(--tab-background); }
+        opacity: 1; }
       .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title {
         color: var(--tab-text-color-active); }
       .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active.mod-active {
         opacity: 1;
-        background-color: var(--tab-background);
-        border-color: transparent; }
+        background-color: var(--tab-background); }
     .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-new-tab {
       margin-right: 0; }
     .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
-      padding: 0 var(--size-4-1) 0 var(--size-4-2); }
+      padding: 0 var(--size-4-1) 0 var(--size-4-2);
+      border: 1px solid transparent; }
+    .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(:hover):not(.mod-active) .workspace-tab-header-inner,
+    .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:not(.mod-active) .workspace-tab-header-inner {
+      border: 1px solid var(--tab-outline-color); }
 
 /* Translucency 
 
@@ -3547,7 +3549,7 @@ input.prompt-input,
 input.prompt-input:hover,
 input.prompt-input:focus,
 input.prompt-input:focus-visible {
-  border-bottom: 1px solid var(--background-modifier-border); }
+  border-color: rgba(var(--mono-rgb-100), 0.05); }
 
 .is-mobile {
   /* Mobile publish */

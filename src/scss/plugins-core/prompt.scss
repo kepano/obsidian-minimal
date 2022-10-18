@@ -2,5 +2,5 @@ input.prompt-input,
 input.prompt-input:hover,
 input.prompt-input:focus,
 input.prompt-input:focus-visible {
-	border-bottom: 1px solid var(--background-modifier-border);
+	border-color: rgba(var(--mono-rgb-100), .05);
 }
