@@ -936,6 +936,7 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
 .minimal-tab-title-hidden .view-header-title-container:focus-within {
   opacity: 1;
   transition: opacity 0.1s ease-in-out; }
+.minimal-tab-title-hidden .workspace-tab-header-container:hover + .workspace-tab-container .view-header-title-container,
 .minimal-tab-title-hidden .view-header:hover .view-header-title-container {
   opacity: 0; }
 

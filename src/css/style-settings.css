@@ -323,6 +323,14 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	- 
+		id: code-operator
+		title: "Syntax: operators"
+		description: Syntax highlighting for operators
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
 		id: code-property
 		title: "Syntax: properties"
 		description: Syntax highlighting for properties
