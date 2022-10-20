@@ -51,15 +51,27 @@ body {
 	--titlebar-background-focused: var(--frame-background);
 	--titlebar-text-color: var(--frame-muted-color);
 
+	--minimal-tab-text-color: var(--frame-muted-color);
+
+	.workspace-tabs:not(.mod-stacked) {
+		--tab-text-color: var(--minimal-tab-text-color);
+		--tab-text-color-focused: var(--minimal-tab-text-color);
+	}
+
 	.titlebar,
 	.workspace-ribbon.mod-left:before,
 	.mod-top .workspace-tab-header-container {
 		--tab-outline-color: var(--frame-outline-color);
 		--tab-divider-color: var(--frame-outline-color);
-		--tab-text-color: var(--frame-muted-color);
-		--tab-text-color-hover: var(--frame-muted-color);
-		--tab-text-color-focused: var(--frame-muted-color);
-		--tab-text-color-focused-active: var(--frame-muted-color);
+	}
+	.mod-root .workspace-tab-header {
+		.workspace-tab-header-inner-icon {
+			--icon-color: var(--minimal-tab-text-color-active);
+			--icon-color-hover: var(--minimal-tab-text-color-active);
+			--icon-color-active: var(--minimal-tab-text-color-active);
+			--icon-color-focused: var(--minimal-tab-text-color-active);
+
+		}
 	}
 	.sidebar-toggle-button,
 	.workspace-tab-header:not(.is-active),

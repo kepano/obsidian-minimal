@@ -1,5 +1,15 @@
 /* Main tabs */
-
+body {
+	--minimal-tab-text-color: var(--text-muted);
+	--minimal-tab-text-color-active: var(--text-normal);
+}
+.workspace-tabs:not(.mod-stacked) {
+	--tab-text-color: var(--minimal-tab-text-color);
+	--tab-text-color-focused: var(--minimal-tab-text-color);
+	--tab-text-color-active: var(--minimal-tab-text-color-active);
+	--tab-text-color-focused-active: var(--minimal-tab-text-color-active);
+	--tab-text-color-focused-active-current: var(--minimal-tab-text-color-active);
+}
 .tabs-square .mod-root {
 	--tab-curve: 0;
 	--tab-radius: 0;
@@ -39,15 +49,17 @@
 
 /* Safari/Firefox style */
 .tabs-modern {
-	/*&.colorful-active {
-		--tab-background-active: var(--ax3);
-	}*/
-	&.colorful-frame .mod-root .mod-top.workspace-tabs:not(.mod-stacked) {
-		--tab-background: var(--frame-outline-color);
-		.workspace-tab-header:hover,
-		.workspace-tab-header.is-active {
-			.workspace-tab-header-inner-close-button {
-				color: var(--frame-muted-color);
+
+	&.colorful-frame {
+		.mod-root .mod-top.workspace-tabs:not(.mod-stacked) {
+			--tab-background: var(--frame-outline-color);
+			--tab-outline-width: 1px;
+
+			.workspace-tab-header:hover,
+			.workspace-tab-header.is-active {
+				.workspace-tab-header-inner-close-button {
+					color: var(--minimal-tab-text-color-active);
+				}
 			}
 		}
 	}
@@ -60,8 +72,6 @@
 	.mod-root .workspace-tabs:not(.mod-stacked) {
 		--tab-background: var(--background-modifier-hover);
 		--tab-height: calc(var(--header-height) - 14px);
-		--tab-text-color-active: var(--text-normal);
-		--tab-text-color-focused-active: var(--text-normal);
 		--tab-outline-width: 0px;
 
 		.workspace-tab-header::before,
