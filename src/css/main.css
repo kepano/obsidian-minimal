@@ -2131,7 +2131,8 @@ body {
   hsl(
   	var(--frame-background-h),
   	var(--frame-background-s),
-  	var(--frame-background-l)); }
+  	var(--frame-background-l));
+  --frame-icon-color: var(--frame-muted-color); }
 
 .theme-light {
   --frame-background-h: var(--accent-h);
@@ -2174,26 +2175,43 @@ body {
 .colorful-frame {
   --frame-divider-color: var(--frame-outline-color);
   --titlebar-background: var(--frame-background);
-  --titlebar-background-focused: var(--frame-background); }
+  --titlebar-background-focused: var(--frame-background);
+  --titlebar-text-color: var(--frame-muted-color); }
   .colorful-frame.is-focused .titlebar,
   .colorful-frame.is-focused .workspace-ribbon.mod-left:before,
-  .colorful-frame.is-focused .sidebar-toggle-button.mod-left,
   .colorful-frame.is-focused .mod-top .workspace-tab-header-container,
   .colorful-frame .titlebar,
   .colorful-frame .workspace-ribbon.mod-left:before,
-  .colorful-frame .sidebar-toggle-button.mod-left,
   .colorful-frame .mod-top .workspace-tab-header-container {
-    --titlebar-text-color: var(--frame-muted-color);
     --tab-outline-color: var(--frame-outline-color);
     --tab-divider-color: var(--frame-outline-color);
+    --tab-text-color: var(--frame-muted-color);
+    --tab-text-color-hover: var(--frame-muted-color);
+    --tab-text-color-focused: var(--frame-muted-color);
+    --tab-text-color-focused-active: var(--frame-muted-color); }
+  .colorful-frame.is-focused .sidebar-toggle-button,
+  .colorful-frame.is-focused .workspace-tab-header:not(.is-active),
+  .colorful-frame.is-focused .workspace-tab-header-new-tab,
+  .colorful-frame.is-focused .workspace-tab-header-tab-list,
+  .colorful-frame.is-focused .mod-left-split .mod-top .workspace-tab-header,
+  .colorful-frame.is-focused .mod-right-split .mod-top .workspace-tab-header,
+  .colorful-frame .sidebar-toggle-button,
+  .colorful-frame .workspace-tab-header:not(.is-active),
+  .colorful-frame .workspace-tab-header-new-tab,
+  .colorful-frame .workspace-tab-header-tab-list,
+  .colorful-frame .mod-left-split .mod-top .workspace-tab-header,
+  .colorful-frame .mod-right-split .mod-top .workspace-tab-header {
     --background-modifier-hover: var(--frame-outline-color);
     --icon-color: var(--frame-icon-color);
     --icon-color-hover: var(--frame-icon-color);
     --icon-color-active: var(--frame-icon-color);
     --icon-color-focused: var(--frame-icon-color);
-    --tab-text-color: var(--frame-muted-color);
-    --tab-text-color-hover: var(--frame-muted-color);
-    --tab-text-color-focused: var(--frame-muted-color); }
+    --icon-color-focus: var(--frame-icon-color); }
+  .colorful-frame.is-focused .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+  .colorful-frame.is-focused .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+  .colorful-frame .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+  .colorful-frame .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+    color: var(--frame-icon-color); }
 
 .workspace-leaf-resize-handle {
   transition: none; }

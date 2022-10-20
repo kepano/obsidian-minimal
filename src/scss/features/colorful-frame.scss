@@ -4,6 +4,7 @@ body {
 		var(--frame-background-h),
 		var(--frame-background-s),
 		var(--frame-background-l));
+	--frame-icon-color: var(--frame-muted-color);
 }
 .theme-light {
 	--frame-background-h: var(--accent-h);
@@ -21,7 +22,6 @@ body {
 				var(--frame-background-h),
 				calc(var(--frame-background-s) - 10%),
 				calc(var(--frame-background-l) - 35%));
-
 }
 .theme-dark {
 	--frame-background-h: var(--accent-h);
@@ -49,22 +49,36 @@ body {
 	--frame-divider-color: var(--frame-outline-color);
 	--titlebar-background: var(--frame-background);
 	--titlebar-background-focused: var(--frame-background);
+	--titlebar-text-color: var(--frame-muted-color);
 
 	.titlebar,
 	.workspace-ribbon.mod-left:before,
-	.sidebar-toggle-button.mod-left,
 	.mod-top .workspace-tab-header-container {
-		--titlebar-text-color: var(--frame-muted-color);
 		--tab-outline-color: var(--frame-outline-color);
 		--tab-divider-color: var(--frame-outline-color);
+		--tab-text-color: var(--frame-muted-color);
+		--tab-text-color-hover: var(--frame-muted-color);
+		--tab-text-color-focused: var(--frame-muted-color);
+		--tab-text-color-focused-active: var(--frame-muted-color);
+	}
+	.sidebar-toggle-button,
+	.workspace-tab-header:not(.is-active),
+	.workspace-tab-header-new-tab,
+	.workspace-tab-header-tab-list,
+	.mod-left-split .mod-top .workspace-tab-header,
+	.mod-right-split .mod-top .workspace-tab-header {
 		--background-modifier-hover: var(--frame-outline-color);
 		--icon-color: var(--frame-icon-color);
 		--icon-color-hover: var(--frame-icon-color);
 		--icon-color-active: var(--frame-icon-color);
 		--icon-color-focused: var(--frame-icon-color);
-		--tab-text-color: var(--frame-muted-color);
-		--tab-text-color-hover: var(--frame-muted-color);
-		--tab-text-color-focused: var(--frame-muted-color);
+
+		// #todo Remove line below after 1.0.2
+		--icon-color-focus: var(--frame-icon-color);
+	}
+	.mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+	.mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+		color: var(--frame-icon-color);
 	}
 }
 

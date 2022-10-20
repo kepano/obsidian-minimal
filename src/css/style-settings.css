@@ -1486,12 +1486,12 @@ settings:
 		collapsed: true
 	-
 		id: window-title-off
-		title: Hide window title
+		title: Hide window frame title
 		description: Hide title in the custom title bar
 		type: class-toggle
 	- 
 		id: frame-background
-		title: Window frame background
+		title: Frame background
 		description: Requires colorful window frame
 		type: variable-themed-color
 		opacity: true
@@ -1499,8 +1499,16 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: frame-icon-color
+		title: Frame icon color
+		description: Requires colorful frame
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: titlebar-text-color-focused
-		title: Window title color (focused)
+		title: Frame title color (focused)
 		description: Requires custom title bar
 		type: variable-themed-color
 		format: hex
@@ -1508,23 +1516,15 @@ settings:
 		default-dark: '#'
 	-
 		id: titlebar-text-color
-		title: Window title color (inactive)
+		title: Frame title color (inactive)
 		description: Requires custom title bar
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: frame-icon-color
-		title: Colorful frame icon color
-		description: Requires colorful frame
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
 		id: titlebar-text-weight
-		title: Window title font weight
+		title: Frame title font weight
 		description: Requires custom title bar
 		type: variable-number-slider
 		default: 600
