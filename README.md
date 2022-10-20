@@ -75,7 +75,7 @@ The following settings can be accessed using [Minimal Theme Settings](https://gi
 ### Interface colors and fonts
 
 - [Background contrast](https://minimal.guide/Features/Background+contrast) —  includes true black dark mode for OLED devices
-- [Color scheme](https://minimal.guide/Features/Color+schemes) — includes Dracula, Everforest, Gruvbox, macOS, Nord, Solarized, [and more](#color-schemes)
+- [Color scheme](https://minimal.guide/Features/Color+schemes) — includes Catppuccin, Dracula, Everforest, Gruvbox, macOS, Nord, Solarized, [and more](#color-schemes)
 - [Line width](https://minimal.guide/Features/Line+width) — set normal line width and maximum width within a pane
 
 You can also use the Style Settings plugin for even deeper customization
