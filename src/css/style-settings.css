@@ -77,8 +77,38 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: accent-color
+		title: Accent color
+		type: heading
+		level: 2
+		collapsed: true
+	- 
+		id: ax1
+		title: Accent color
+		type: variable-themed-color
+		description: Used primarily for links
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: ax2
+		title: Accent color (hover)
+		type: variable-themed-color
+		description: Used primarily for hovered links
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: ax3
+		title: Accent color interactive
+		type: variable-themed-color
+		description: Used for buttons, checklists, toggles
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: extended-palette
-		title: Interface extended palette
+		title: Extended colors
 		type: heading
 		level: 2
 		collapsed: true
@@ -952,28 +982,69 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+	-
+		id: links-internal
+		title: Internal links
+		type: heading
+		level: 3
+		collapsed: true
 	- 
-		id: ax1
-		title: Link color
+		id: link-color
+		title: Internal link color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: link-color-hover
+		title: Internal link color (hover)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	- 
-		id: ax2
-		title: Link color (hovering)
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	- 
-		id: link-weight
-		title: Link font weight
+		id: link-unresolved-opacity
+		title: Unresolved link opacity
 		type: variable-number-slider
-		default: 400
-		min: 100
-		max: 900
-		step: 100
+		default: 0.7
+		min: 0.25
+		max: 1
+		step: 0.05
+	- 
+		id: link-unresolved-color
+		title: Unresolved link color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: link-unresolved-decoration-color
+		title: Unresolved link underline color
+		type: variable-themed-color
+		format: hex
+		opacity:  true
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: links-external
+		title: External links
+		type: heading
+		level: 3
+		collapsed: true
+	- 
+		id: link-external-color
+		title: External link color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: link-external-color-hover
+		title: External link color (hover)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: lists
 		title: Lists and tasks

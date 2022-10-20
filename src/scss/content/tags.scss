@@ -19,7 +19,7 @@ body:not(.minimal-unstyled-tags) {
     background-color:var(--tag-bg);
     border:var(--tag-border-width) solid var(--background-modifier-border);
     color:var(--tag-color);
-    font-size:calc(var(--font-adaptive-normal) * 0.8);
+    font-size: 0.8em;
     font-weight:var(--link-weight);
     font-family:var(--font-interface);
     vertical-align:middle;
@@ -36,7 +36,7 @@ body:not(.minimal-unstyled-tags) {
     background-color:var(--tag-bg);
     border:var(--tag-border-width) solid var(--background-modifier-border);
     color:var(--tag-color);
-    font-size:calc(var(--font-adaptive-normal) * 0.8);
+    font-size: 0.8em;
     font-family:var(--font-interface);
     font-weight:var(--link-weight);
     text-align:center;

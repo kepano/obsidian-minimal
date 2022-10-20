@@ -87,7 +87,7 @@ body {
 }
 
 
-.colorful-frame.is-hidden-frameless {
+.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) {
 	.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 	.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 	.workspace-split.mod-right-split > .workspace-leaf-resize-handle {

@@ -36,6 +36,11 @@
 		border-right:none;
 	}
 
+	/* Hide right sidebar button */
+	.mod-top-right-space .sidebar-toggle-button.mod-right {
+		opacity: 0;
+	}
+
 	/* Hide status bar */
 	&:not(.minimal-status-off) .status-bar {
 		opacity: 0;
@@ -46,20 +51,7 @@
 		transition:opacity 0.2s ease-in-out;
 	}
 
-	/* Hide tab bar
-	.mod-root .workspace-tab-header-container {
-		top: 0;
-		width: 100%;
-		left: 0;
-		right: 0;
-		transition: opacity 0.1s ease-in-out !important;
-		position: absolute;
-		z-index: var(--layer-popover);
-		opacity: 0;
-		&:hover {
-			opacity: 1;
-		}
-	} */
+
 	.mod-root .workspace-tabs {
 		position: relative;
 		
