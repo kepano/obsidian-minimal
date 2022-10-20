@@ -15,6 +15,8 @@ body {
 	--checkbox-left: 0px;
 	--checkbox-margin: 0px 8px 0px -1.35em;
 }
+
+
 body.minimal-strike-lists {
 	--checklist-done-decoration: line-through;
 }
@@ -22,6 +24,7 @@ body:not(.minimal-strike-lists) {
 	--checklist-done-decoration: none;
 	--checklist-done-color: var(--text-normal);
 }
+
 input[type=checkbox] {
 	padding: 0;
 	margin: 0 6px 0 0;
@@ -30,31 +33,30 @@ input[type=checkbox] {
 	padding-bottom: 0.5em;
 }
 
-/* Preview offset */
 ul > li.task-list-item .task-list-item-checkbox {
 	margin-left: -1.35em;
 }
-/* Editor */
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-	margin: -2px 1px 0 -0.6em;
+	margin: 1px 1px 1px -0.4em;
+}
+.mod-cm6 .HyperMD-task-line[data-task] .cm-formatting-list-ol ~ .task-list-label .task-list-item-checkbox {
+	margin: 1px;
 }
 .markdown-preview-view .task-list-item-checkbox {
 	position: relative;
 	top: var(--checkbox-top);
 	left: var(--checkbox-left);
 	line-height: 0;
-	margin: var(--checkbox-margin);
 }
 .markdown-preview-view ul > li.task-list-item {
 	text-indent: 0;
 	line-height: var(--line-height);
 }
-.markdown-preview-view .task-list-item {
-	padding-inline-start: 0;
-}
+
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
 	margin-left: -0.4em;
 }
 .is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox {
 	top: 0.2em;
 }
+
