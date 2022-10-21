@@ -2287,10 +2287,6 @@ body:not(.minimal-icons-off) svg.globe {
 body:not(.minimal-icons-off) svg.obsidian-leaflet-plugin-icon-map {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7' /%3E%3C/svg%3E"); }
 
-/* Text Generator plugin */
-body:not(.minimal-icons-off) svg.pencil_icon {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' /%3E%3C/svg%3E"); }
-
 body:not(.minimal-icons-off) .workspace-tab-header[data-type="dictionary-view"] svg.quote-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' /%3E%3C/svg%3E"); }
 
@@ -2774,7 +2770,10 @@ https://github.com/sponsors/kepano
       background-color: transparent; }
     .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active, .labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover {
       opacity: 1;
+      --tab-text-color-active: var(--text-normal);
       --tab-text-color-focused: var(--text-normal);
+      --tab-text-color-focused-active: var(--text-normal);
+      --tab-text-color-focused-active-current: var(--text-normal);
       --icon-color: var(--text-normal); }
     .labeled-nav .mod-left-split .mod-top .workspace-tab-header .workspace-tab-header-inner {
       gap: var(--size-2-3);

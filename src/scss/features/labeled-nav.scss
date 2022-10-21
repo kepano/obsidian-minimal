@@ -124,7 +124,10 @@ https://github.com/sponsors/kepano
 			&.is-active,
 			&:hover {
 				opacity:1;
+				--tab-text-color-active: var(--text-normal);
 				--tab-text-color-focused: var(--text-normal);
+				--tab-text-color-focused-active: var(--text-normal);
+				--tab-text-color-focused-active-current: var(--text-normal);
 				--icon-color: var(--text-normal);
 			}
 			.workspace-tab-header-inner {
