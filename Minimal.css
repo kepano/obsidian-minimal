@@ -4504,7 +4504,7 @@ body .kanban-plugin {
   --text-on-accent:var(--text-normal);
   background-color: var(--background-primary); }
 body .kanban-plugin__markdown-preview-view {
-  font-family: var(----text); }
+  font-family: var(--font-text); }
 body .kanban-plugin__board > div {
   margin: 0 auto; }
 body .kanban-plugin__checkbox-label {
