@@ -474,7 +474,8 @@ body .excalidraw {
   --tag-bg2: transparent; }
 
 .theme-light.minimal-light-contrast .theme-dark {
-  --tab-container-background: var(--bg2); }
+  --tab-container-background: var(--bg2);
+  --ribbon-background-collapsed: var(--bg2); }
 
 .theme-light,
 body .excalidraw {
