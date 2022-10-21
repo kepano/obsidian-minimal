@@ -1372,7 +1372,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: tag-bg
+		id: tag-background
 		title: Tag background color
 		type: variable-themed-color
 		opacity: true
@@ -1380,7 +1380,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: tag-bg2
+		id: tag-background-hover
 		title: Tag background color (hover)
 		type: variable-themed-color
 		opacity: true
