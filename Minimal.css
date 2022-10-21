@@ -6941,6 +6941,22 @@ settings:
 		step: 1
 		format: px
 	-
+		id: indentation-guide-color
+		title: Indentation guide color
+		type: variable-themed-color
+		format: hex
+		opacity:  true
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: indentation-guide-color-active
+		title: Indentation guide color (active)
+		type: variable-themed-color
+		format: hex
+		opacity:  true
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: links
 		title: Links
 		type: heading
