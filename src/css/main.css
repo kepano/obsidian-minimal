@@ -1553,7 +1553,8 @@ body,
   box-shadow: -25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg); }
 
 .borders-none {
-  --divider-width:0px; }
+  --divider-width:0px;
+  --tab-outline-width: 0px; }
 
 /* MIT License | Copyright (c) Stephan Ango (@kepano) 
 
