@@ -137,6 +137,7 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 
 /* Sidebar tabs ------------ */
 
+.tabs-modern.sidebar-tabs-wide .mod-right-split,
 .tabs-modern.sidebar-tabs-default .mod-right-split {
 	--tab-outline-width: 0;
 }
@@ -225,53 +226,30 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 	}
 }
 
-/* Wide */
+/* Modern Wide */
+.sidebar-tabs-wide {
 
-.sidebar-tabs-modern .mod-right-split {
-
-	.workspace-sidedock-empty-state+.workspace-tabs .workspace-tab-header-container,
-	.mod-right-split .workspace-sidedock-empty-state + .workspace-tabs .workspace-tab-header-container {
-		border-bottom:none;
-	}
-
-	.workspace-tab-header-container {
-		padding-left:7px;
-		padding-right:7px;
-		border:none;
-	}
-	.workspace-tab-header-container .workspace-tab-header {
-		flex-grow:1;
-	}
-	.workspace-tab-container-inner {
-		padding:3px;
-		background:var(--bg3);
-		border-radius:6px;
-	}
-	.workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
-		justify-content:center;
-		align-items:center;
-		transition:none;
-		border:1px solid transparent;
-	}
-	.workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover {
-		background-color:transparent;
-	}
-	&:not(.minimal-dark-tonal) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
-		background:var(--bg2);
-	}
-	.workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
-		background:var(--bg1);
-		box-shadow:0px 1px 1px 0 rgba(0,0,0,0.1);
-		border-radius:4px;
-	}
-	.labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
-		background-color:transparent;
-	}
-	.workspace-tab-header-inner-icon {
-		height:18px;
-		padding:0;
-	}
-	.workspace-tab-header-inner-icon:hover {
-		background-color:transparent;
+	&:not(.labeled-nav) .mod-left-split,
+	&.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top),
+	.mod-right-split {
+		.workspace-tab-header-container-inner {
+			flex-grow: 1;
+			border: 1px solid var(--tab-outline-color);
+			padding: 3px;
+			margin: 6px 8px 6px;
+			border-radius: 4px;
+		}
+		.workspace-tab-header {
+			flex-grow:1;
+			&.is-active {
+				border-color: transparent;
+			}
+		}
+		.workspace-tab-header-container {
+			padding-right: 0;
+		}
+		.workspace-tab-header-spacer {
+			display: none;
+		}
 	}
 }
