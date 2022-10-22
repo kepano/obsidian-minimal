@@ -12,6 +12,7 @@ body.minimal-unstyled-tags {
 
 body:not(.minimal-unstyled-tags) {
 	--tag-size: 0.8em;
+	--tag-padding-y: 0.2em;
 	--tag-background: transparent;
 	--tag-background-hover: transparent;
 	--tag-color: var(--text-muted);

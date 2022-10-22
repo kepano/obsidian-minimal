@@ -1126,6 +1126,25 @@ settings:
 		description: Turns off lines in file navigation
 		type: class-toggle
 	-
+		id: sidebar-tabs-style
+		title: Sidebar tab style
+		type: class-select
+		allowEmpty: false
+		default: sidebar-tabs-default
+		options:
+			-
+				label: Index round
+				value: sidebar-tabs-index
+			-
+				label: Index square
+				value: sidebar-tabs-square
+			-
+				label: Modern compact
+				value: sidebar-tabs-default
+			-
+				label: Underline
+				value: sidebar-tabs-underline
+	-
 		id: mobile-left-sidebar-width
 		title: Mobile left sidebar width
 		description: Maximum width for pinned left sidebar on mobile
@@ -1250,14 +1269,14 @@ settings:
 		default: tabs-default
 		options:
 			-
-				label: Default
+				label: Index round
 				value: tabs-default
+			-
+				label: Index square
+				value: tabs-square
 			-
 				label: Modern
 				value: tabs-modern
-			-
-				label: Square
-				value: tabs-square
 			-
 				label: Underline
 				value: tabs-underline
