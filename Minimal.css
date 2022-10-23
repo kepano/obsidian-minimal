@@ -1039,9 +1039,6 @@ button.mod-warning:hover {
   max-width: var(--max-width);
   width: var(--line-width-adaptive); }
 
-.minimal-focus-mode .document-search-container {
-  margin-top: var(--header-height); }
-
 .is-mobile span[title="Fold line"]:after,
 .is-mobile .CodeMirror-foldgutter-open:after {
   transform: translateX(-2px) !important; }
