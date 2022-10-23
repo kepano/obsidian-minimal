@@ -8,6 +8,9 @@ body.minimal-unstyled-tags {
 	--tag-padding-y: 0;
 	--tag-size: inherit;
 	--tag-color-hover: var(--text-accent-hover);
+	&.is-mobile.theme-dark {
+		--tag-background: transparent;
+	}
 }
 
 body:not(.minimal-unstyled-tags) {

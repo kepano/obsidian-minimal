@@ -1,0 +1,9 @@
+body:not(.sidebar-color) {
+	.mod-right-split {
+		--background-secondary: var(--background-primary);
+
+		:not(.mod-top) .workspace-tab-header-container {
+			--tab-container-background: var(--background-primary);
+		}
+	}
+}

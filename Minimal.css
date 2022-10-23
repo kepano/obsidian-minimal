@@ -1000,16 +1000,12 @@ body.window-title-off .titlebar-text {
 
 body.is-focused {
   --titlebar-background-focused: var(--background-secondary); }
-body .mod-right-split {
-  --background-secondary: var(--background-primary); }
-  body .mod-right-split :not(.mod-top) .workspace-tab-header-container {
-    --tab-container-background: var(--background-primary); }
 
 .is-hidden-frameless:not(.colorful-frame) .mod-left-split .mod-top .workspace-tab-header-container {
   --tab-container-background: var(--background-secondary); }
 
 .mod-root .workspace-tab-header-status-icon {
-  color: var(--text-normal); }
+  color: var(--text-muted); }
 
 /* Components */
 /* Buttons */
@@ -1536,6 +1532,8 @@ body.minimal-unstyled-tags {
   --tag-padding-y: 0;
   --tag-size: inherit;
   --tag-color-hover: var(--text-accent-hover); }
+  body.minimal-unstyled-tags.is-mobile.theme-dark {
+    --tag-background: transparent; }
 
 body:not(.minimal-unstyled-tags) {
   --tag-size: 0.8em;
@@ -3315,6 +3313,11 @@ body:not(.links-int-on) {
 
 body:not(.links-ext-on) {
   --link-external-decoration: none; }
+
+body:not(.sidebar-color) .mod-right-split {
+  --background-secondary: var(--background-primary); }
+  body:not(.sidebar-color) .mod-right-split :not(.mod-top) .workspace-tab-header-container {
+    --tab-container-background: var(--background-primary); }
 
 /* Sidebar documents
 

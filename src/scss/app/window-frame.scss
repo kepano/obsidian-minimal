@@ -34,13 +34,6 @@ body {
 	&.is-focused {
 		--titlebar-background-focused: var(--background-secondary);
 	}
-	.mod-right-split {
-		--background-secondary: var(--background-primary);
-
-		:not(.mod-top) .workspace-tab-header-container {
-			--tab-container-background: var(--background-primary);
-		}
-	}
 }
 
 .is-hidden-frameless:not(.colorful-frame) {
