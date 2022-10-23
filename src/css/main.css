@@ -1058,6 +1058,9 @@ body {
   transform: translateX(calc(2px + var(--ig-adjust-edit))); }
 
 /* Modals */
+.modal-button-container .mod-checkbox {
+  --checkbox-radius: 4px; }
+
 /* Confirm delete */
 .modal-container.mod-confirmation .modal {
   width: 480px;
