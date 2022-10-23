@@ -286,18 +286,11 @@ settings:
 		type: variable-text
 		default: 13px
 	-
-		id: code-white-space
-		title: Word wrap
-		type: variable-select
-		allowEmpty: false
-		default: pre-wrap
-		options:
-			-
-				label: Wrap lines
-				value: pre-wrap
-			-
-				label: Scroll
-				value: pre
+		id: minimal-code-scroll
+		title: Scroll long lines
+		description: Turns off line wrap for code
+		type: class-toggle
+		default: false
 	-
 		id: code-background
 		title: Code background color

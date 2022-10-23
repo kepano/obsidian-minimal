@@ -1325,6 +1325,13 @@ ul > li.task-list-item .task-list-item-checkbox {
 .is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox {
   top: 0.2em; }
 
+.minimal-code-scroll {
+  --code-white-space: pre; }
+  .minimal-code-scroll .HyperMD-codeblock.HyperMD-codeblock-bg {
+    overflow-y: scroll; }
+  .minimal-code-scroll .cm-hmd-codeblock {
+    white-space: pre !important; }
+
 /* Transcluded notes and embeds */
 /* Strict embeds (naked) */
 .embed-strict .internal-embed .markdown-embed {
@@ -6302,18 +6309,11 @@ settings:
 		type: variable-text
 		default: 13px
 	-
-		id: code-white-space
-		title: Word wrap
-		type: variable-select
-		allowEmpty: false
-		default: pre-wrap
-		options:
-			-
-				label: Wrap lines
-				value: pre-wrap
-			-
-				label: Scroll
-				value: pre
+		id: minimal-code-scroll
+		title: Scroll long lines
+		description: Turns off line wrap for code
+		type: class-toggle
+		default: false
 	-
 		id: code-background
 		title: Code background color

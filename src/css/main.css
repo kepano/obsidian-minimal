@@ -1282,6 +1282,13 @@ ul > li.task-list-item .task-list-item-checkbox {
 .is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox {
   top: 0.2em; }
 
+.minimal-code-scroll {
+  --code-white-space: pre; }
+  .minimal-code-scroll .HyperMD-codeblock.HyperMD-codeblock-bg {
+    overflow-y: scroll; }
+  .minimal-code-scroll .cm-hmd-codeblock {
+    white-space: pre !important; }
+
 /* Transcluded notes and embeds */
 /* Strict embeds (naked) */
 .embed-strict .internal-embed .markdown-embed {

@@ -1,0 +1,11 @@
+
+.minimal-code-scroll {
+	--code-white-space: pre;
+
+	.HyperMD-codeblock.HyperMD-codeblock-bg {
+		overflow-y: scroll;
+	}
+	.cm-hmd-codeblock {
+		white-space: pre !important;
+	}
+}
