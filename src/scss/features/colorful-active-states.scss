@@ -1,7 +1,8 @@
 /* Colorful active states */
 .colorful-active {
 	--sp1: #fff;
-
+	--text-on-accent: var(--sp1);
+	
 	.nav-files-container {
 		--nav-item-background-active: var(--interactive-accent);
 		--nav-item-color-active: var(--sp1);

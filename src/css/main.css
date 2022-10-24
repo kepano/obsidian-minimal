@@ -188,7 +188,7 @@ body .excalidraw {
   hsl(
   	var(--accent-h),
   	var(--accent-s),
-  	calc(var(--accent-l) + 10%)
+  	var(--accent-l)
   	);
   --hl1:
   hsla(
@@ -277,13 +277,13 @@ body .excalidraw {
   hsl(
   	var(--accent-h),
   	var(--accent-s),
-  	calc(var(--accent-l) + 12%)
+  	calc(var(--accent-l) + 8%)
   	);
   --ax3:
   hsl(
   	var(--accent-h),
   	var(--accent-s),
-  	calc(var(--accent-l) - 12%)
+  	var(--accent-l)
   	);
   --hl1:
   hsla(
@@ -384,7 +384,7 @@ body .excalidraw {
   --icon-color-hover: var(--tx2);
   --icon-color: var(--tx2);
   --icon-hex: var(--mono0);
-  --interactive-accent-hover: var(--ax3);
+  --interactive-accent-hover: var(--ax2);
   --interactive-accent: var(--ax3);
   --interactive-hover: var(--ui1);
   --list-marker-color: var(--tx3);
@@ -2063,7 +2063,8 @@ li[data-task="b"] > p > input:checked {
 
 /* Colorful active states */
 .colorful-active {
-  --sp1: #fff; }
+  --sp1: #fff;
+  --text-on-accent: var(--sp1); }
   .colorful-active .nav-files-container {
     --nav-item-background-active: var(--interactive-accent);
     --nav-item-color-active: var(--sp1); }
@@ -5302,9 +5303,9 @@ body.theme-light {
   --base-h:106;
   --base-s:0%;
   --base-l:98%;
-  --accent-h:209;
-  --accent-s:100%;
-  --accent-l:55%;
+  --accent-h:231;
+  --accent-s:76%;
+  --accent-l:62%;
   --bg1:#fafafa;
   --bg2:#eaeaeb;
   --bg3:#dbdbdc;
@@ -5313,8 +5314,6 @@ body.theme-light {
   --tx1:#232324;
   --tx2:#8e8e90;
   --tx3:#a0a1a8;
-  --ax1:#1a92ff;
-  --ax3:#566de8;
   --hl1:rgba(180,180,183,0.3);
   --hl2:rgba(209,154,102,0.35); }
 
@@ -5341,8 +5340,6 @@ body.theme-light {
   --tx1:#d8dae1;
   --tx2:#898f9d;
   --tx3:#5d6370;
-  --ax1:#578af2;
-  --ax3:#578af2;
   --hl1:rgba(114,123,141,0.3);
   --hl2:rgba(209,154,102,0.3);
   --sp1:#fff; }
@@ -5390,7 +5387,6 @@ body.theme-light {
   --tx1: #4D4F69;
   --tx2: #5D5F77;
   --tx3: #8D8FA2;
-  --ax1: #DC8A78;
   --hl1: rgba(172,176,190,.3);
   --hl2: rgba(223,142,29,.3); }
 
@@ -5422,7 +5418,7 @@ body.theme-light {
   --tx1: #C6D0F5;
   --tx2: #A6ADCE;
   --tx3: #848BA7;
-  --ax1: #F2D5CF;
+  --sp1: #242634;
   --hl1: rgba(98,104,128,.5);
   --hl2: rgba(223,142,29,.4); }
 
@@ -5501,9 +5497,6 @@ body.theme-light {
   --tx1:#5C6A72;
   --tx2:#829181;
   --tx3:#a6b0a0;
-  --ax1:#93b259;
-  --ax2:#738555;
-  --ax3:#93b259;
   --hl1:rgba(198,214,152,.4);
   --hl2:rgba(222,179,51,.3); }
 
@@ -5574,9 +5567,6 @@ body.theme-light {
   --tx1:#282828;
   --tx2:#7c7065;
   --tx3:#a89a85;
-  --ax1:#d65d0e;
-  --ax2:#af3a03;
-  --ax3:#d65d0d;
   --hl1:rgba(192,165,125,.3);
   --hl2:rgba(215,153,33,.4); }
 
@@ -5606,9 +5596,6 @@ body.theme-light {
   --tx1:#fbf1c7;
   --tx2:#bdae93;
   --tx3:#7c6f64;
-  --ax1:#d65d0e;
-  --ax2:#fe8019;
-  --ax3:#d65d0e;
   --hl1:rgba(173,149,139,0.3);
   --hl2:rgba(215,153,33,.4); }
 
@@ -5642,9 +5629,6 @@ body.theme-light {
   --tx1:#454545;
   --tx2:#808080;
   --tx3:#b0b0b0;
-  --ax1:#027aff;
-  --ax2:#0463cc;
-  --ax3:#007bff;
   --hl1:#b3d7ff; }
 
 .theme-light.minimal-macos-light.minimal-light-tonal {
@@ -5674,9 +5658,6 @@ body.theme-light {
   --tx1:#dcdcdc;
   --tx2:#8c8c8c;
   --tx3:#686868;
-  --ax1:#027aff;
-  --ax2:#3f9bff;
-  --ax3:#007bff;
   --hl1:rgba(98,169,252,0.5);
   --sp1:#fff; }
 
@@ -5712,8 +5693,6 @@ body.theme-light {
   --tx1:#2e3440;
   --tx2:#7D8697;
   --tx3:#ADB1B8;
-  --ax1:#5e81ac;
-  --ax2:#81a1c1;
   --hl2:rgba(208, 135, 112, 0.35); }
 
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
@@ -5733,11 +5712,10 @@ body.theme-light {
   --bg3:rgba(135,152,190,0.15);
   --ui1:#434c5e;
   --ui2:#58647b;
-  --ui3:#5e81ac;
+  --ui3:#58647b;
   --tx1:#d8dee9;
   --tx2:#9eafcc;
   --tx3:#4c566a;
-  --ax3:#5e81ac;
   --hl1:rgba(129,142,180,0.3);
   --hl2:rgba(208, 135, 112, 0.35); }
 
@@ -5750,8 +5728,8 @@ body.theme-light {
   --base-s:18%;
   --base-d:96%;
   --accent-h:197;
-  --accent-s:65%;
-  --accent-l:71%;
+  --accent-s:71%;
+  --accent-l:52%;
   --bg2:#f7f6f4;
   --bg3:#e8e7e4;
   --ui1:#ededec;
@@ -5760,9 +5738,6 @@ body.theme-light {
   --tx1:#37352f;
   --tx2:#72706c;
   --tx3:#aaa9a5;
-  --ax1:#37352f;
-  --ax2:#000;
-  --ax3:#2eaadc;
   --hl1:rgba(131,201,229,0.3);
   --link-weight:500; }
 
@@ -5776,8 +5751,8 @@ body.theme-light {
   --base-s:8%;
   --base-d:20%;
   --accent-h:197;
-  --accent-s:48%;
-  --accent-l:43%;
+  --accent-s:71%;
+  --accent-l:52%;
   --bg1:#2f3437;
   --bg2:#373c3f;
   --bg3:#4b5053;
@@ -5787,9 +5762,6 @@ body.theme-light {
   --tx1:#ebebeb;
   --tx2:#909295;
   --tx3:#585d5f;
-  --ax1:#ebebeb;
-  --ax2:#fff;
-  --ax3:#2eaadc;
   --hl1:rgba(57,134,164,0.3);
   --link-weight:500; }
 
@@ -5856,8 +5828,6 @@ body.theme-light {
   --tx2:#657b83;
   --tx3:#31535B;
   --tx4:#657b83;
-  --ax1:#268bd2;
-  --ax3:#268bd2;
   --hl1:rgba(15,81,98,0.3);
   --hl2:rgba(203, 75, 22, 0.35); }
 
@@ -5895,9 +5865,6 @@ body.theme-light {
   --tx1:#26272b;
   --tx2:#7D7F84;
   --tx3:#a9abb0;
-  --ax1:#1b61c2;
-  --ax2:#1C88DD;
-  --ax3:#1b61c2;
   --hl1:#cae2ff; }
 
 .theme-light.minimal-things-light.minimal-light-tonal {
@@ -5929,9 +5896,6 @@ body.theme-light {
   --tx1:#fbfbfb;
   --tx2:#CBCCCD;
   --tx3:#6c6e70;
-  --ax1:#4d95f7;
-  --ax2:#79a9ec;
-  --ax3:#4d95f7;
   --hl1:rgba(40,119,236,0.35);
   --sp1:#fff; }
 
