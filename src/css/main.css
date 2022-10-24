@@ -182,13 +182,13 @@ body .excalidraw {
   hsl(
   	var(--accent-h),
   	var(--accent-s),
-  	calc(var(--accent-l) - 10%)
+  	calc(var(--accent-l) - 8%)
   	);
   --ax3:
   hsl(
   	var(--accent-h),
   	var(--accent-s),
-  	var(--accent-l)
+  	calc(var(--accent-l) + 6%)
   	);
   --hl1:
   hsla(
