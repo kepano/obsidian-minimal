@@ -29,6 +29,9 @@ https://github.com/sponsors/kepano
 		}
 	}
 
+	/* refactor this using a new variable for border above labeled nav 
+	in different conditions e.g. OSes and colorful frame */
+
 	&.mod-macos,
 	&.mod-macos.is-hidden-frameless:not(.is-fullscreen) {
 		.mod-left-split .mod-top .workspace-tab-header-container:before {

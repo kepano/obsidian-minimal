@@ -2670,7 +2670,9 @@ https://github.com/sponsors/kepano
   --labeled-nav-top-margin: 0; }
 
 .labeled-nav {
-  --labeled-nav-top-margin: var(--header-height); }
+  --labeled-nav-top-margin: var(--header-height);
+  /* refactor this using a new variable for border above labeled nav 
+  in different conditions e.g. OSes and colorful frame */ }
   .labeled-nav.is-translucent .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
     background-color: transparent; }
   .labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
