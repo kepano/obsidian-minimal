@@ -107,6 +107,14 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: sp1
+		title: Text on accent
+		type: variable-themed-color
+		description: Used primarily for text on accented buttons
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: extended-palette
 		title: Extended colors
 		type: heading

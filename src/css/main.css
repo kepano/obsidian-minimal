@@ -417,7 +417,7 @@ body .excalidraw {
   --text-italic: var(--tx1);
   --text-muted: var(--tx2);
   --text-normal: var(--tx1);
-  --text-on-accent: white;
+  --text-on-accent: var(--sp1);
   --text-selection: var(--hl1);
   --title-color-inactive: var(--tx2);
   --title-color: var(--tx1);
@@ -5804,7 +5804,6 @@ body.theme-light {
   --tx2:#586e75;
   --tx3:#ABB2AC;
   --tx4:#586e75;
-  --ax1:#268bd2;
   --hl1:rgba(202,197,182,0.3);
   --hl2:rgba(203,75,22,0.3); }
 
