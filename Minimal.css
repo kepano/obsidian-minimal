@@ -1324,7 +1324,8 @@ ul > li.task-list-item .task-list-item-checkbox {
 .minimal-code-scroll {
   --code-white-space: pre; }
   .minimal-code-scroll .HyperMD-codeblock.HyperMD-codeblock-bg {
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    white-space: pre; }
   .minimal-code-scroll .cm-hmd-codeblock {
     white-space: pre !important; }
 
