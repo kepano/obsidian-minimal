@@ -5354,7 +5354,7 @@ body.theme-light {
   --accent-l:62%;
   --bg1:#fafafa;
   --bg2:#eaeaeb;
-  --bg3:#dbdbdc;
+  --bg3:rgba(0,0,0,.1);
   --ui1:#dbdbdc;
   --ui2:#d8d8d9;
   --tx1:#232324;
@@ -5670,7 +5670,7 @@ body.theme-light {
   --accent-l:50%;
   --bg1:#fff;
   --bg2:#f0f0f0;
-  --bg3:#d7d7d7;
+  --bg3:rgba(0,0,0,.11);
   --ui1:#e7e7e7;
   --tx1:#454545;
   --tx2:#808080;
