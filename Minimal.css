@@ -240,7 +240,8 @@ body .excalidraw {
   	calc(var(--base-l) - 20%),
   	30%
   	);
-  --hl2:rgba(255, 225, 0, 0.5); }
+  --hl2:rgba(255, 225, 0, 0.5);
+  --sp1: white; }
 
 .theme-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
@@ -336,7 +337,7 @@ body .excalidraw {
   	30%
   	);
   --hl2:rgba(255, 177, 80, 0.3);
-  --sp1:#fff; }
+  --sp1: white; }
 
 .theme-light.minimal-light-white {
   --background-primary: white;
