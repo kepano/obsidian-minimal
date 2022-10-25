@@ -36,8 +36,11 @@ https://github.com/sponsors/kepano
 			position: absolute;
 			width: calc(100% - var(--divider-width));
 			height: calc(var(--header-height) - var(--tab-outline-width));
-			border-bottom: var(--labeled-nav-outline-width) solid var(--tab-outline-color);
+			border-bottom: 0px solid var(--tab-outline-color);
 		}
+	}
+
+	&.mod-macos.is-hidden-frameless:not(.is-fullscreen) {
 		.workspace-ribbon.mod-left:not(.is-collapsed) {
 			border: none;
 			--tab-outline-width: 0px;
@@ -49,6 +52,9 @@ https://github.com/sponsors/kepano
 	&.colorful-frame.is-hidden-frameless:not(.is-fullscreen) {
 		.mod-left-split .mod-top .workspace-tab-header-container:before {
 			border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
+		}
+		.workspace-ribbon.mod-left:not(.is-collapsed) {
+			--tab-outline-width: 1px;
 		}
 	}
 

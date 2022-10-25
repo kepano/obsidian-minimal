@@ -2723,12 +2723,14 @@ https://github.com/sponsors/kepano
     position: absolute;
     width: calc(100% - var(--divider-width));
     height: calc(var(--header-height) - var(--tab-outline-width));
-    border-bottom: var(--labeled-nav-outline-width) solid var(--tab-outline-color); }
-  .labeled-nav.mod-macos .workspace-ribbon.mod-left:not(.is-collapsed), .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-ribbon.mod-left:not(.is-collapsed) {
+    border-bottom: 0px solid var(--tab-outline-color); }
+  .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-ribbon.mod-left:not(.is-collapsed) {
     border: none;
     --tab-outline-width: 0px; }
   .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos:not(.hider-ribbon) .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
     border-bottom: var(--tab-outline-width) solid var(--tab-outline-color); }
+  .labeled-nav:not(.is-hidden-frameless) .workspace-ribbon.mod-left:not(.is-collapsed), .labeled-nav.mod-macos:not(.hider-ribbon) .workspace-ribbon.mod-left:not(.is-collapsed), .labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .workspace-ribbon.mod-left:not(.is-collapsed) {
+    --tab-outline-width: 1px; }
   .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before {
     position: absolute;
     top: 0;
