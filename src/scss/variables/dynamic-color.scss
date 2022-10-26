@@ -237,7 +237,7 @@ body .excalidraw {
 	hsl(
 		var(--accent-h),
 		var(--accent-s),
-		var(--accent-l)
+		calc(var(--accent-l) - 5%)
 		);
 
 	--hl1:

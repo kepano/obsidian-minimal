@@ -327,7 +327,7 @@ body .excalidraw {
   hsl(
   	var(--accent-h),
   	var(--accent-s),
-  	var(--accent-l)
+  	calc(var(--accent-l) - 5%)
   	);
   --hl1:
   hsla(
@@ -428,7 +428,7 @@ body .excalidraw {
   --icon-color-hover: var(--tx2);
   --icon-color: var(--tx2);
   --icon-hex: var(--mono0);
-  --interactive-accent-hover: var(--ax2);
+  --interactive-accent-hover: var(--ax1);
   --interactive-accent: var(--ax3);
   --interactive-hover: var(--ui1);
   --list-marker-color: var(--tx3);
