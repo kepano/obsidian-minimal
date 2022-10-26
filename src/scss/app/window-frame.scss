@@ -10,7 +10,8 @@ body.window-title-off .titlebar-text {
 	&.is-focused {
 		.sidebar-toggle-button.mod-right,
 		.workspace-ribbon.mod-left.is-collapsed,
-		.workspace-tabs.mod-top {
+		.workspace-tabs.mod-top,
+		.titlebar-button-container.mod-right {
 			--titlebar-background-focused: var(--bg1);
 		}
 	}

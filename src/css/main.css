@@ -943,9 +943,11 @@ body.window-title-off .titlebar-text {
   .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,
   .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,
   .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-tabs.mod-top,
+  .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .titlebar-button-container.mod-right,
   .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,
   .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,
-  .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-tabs.mod-top {
+  .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-tabs.mod-top,
+  .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .titlebar-button-container.mod-right {
     --titlebar-background-focused: var(--bg1); }
   .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-left:not(.is-collapsed),
   .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-left:not(.is-collapsed) {
