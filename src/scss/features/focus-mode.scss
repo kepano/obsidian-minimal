@@ -8,6 +8,11 @@
 }
 .minimal-focus-mode {
 
+	&.is-translucent .workspace-ribbon.mod-left.is-collapsed,
+	&.is-translucent .workspace-ribbon.mod-left.is-collapsed:before {
+		background-color: var(--background-primary) !important;
+	}
+
 	/* Hide ribbon */
 	.workspace-ribbon.mod-left {
 		transition: background-color 0s linear 0s;

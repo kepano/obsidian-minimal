@@ -3,6 +3,10 @@ body.window-title-off .titlebar-text {
   display:none;
 }
 
+.titlebar-button-container.mod-right {
+	background-color: transparent !important;
+}
+
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame),
 .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame) {
 	--titlebar-background: var(--bg1);
@@ -10,8 +14,7 @@ body.window-title-off .titlebar-text {
 	&.is-focused {
 		.sidebar-toggle-button.mod-right,
 		.workspace-ribbon.mod-left.is-collapsed,
-		.workspace-tabs.mod-top,
-		.titlebar-button-container.mod-right {
+		.workspace-tabs.mod-top {
 			--titlebar-background-focused: var(--bg1);
 		}
 	}
