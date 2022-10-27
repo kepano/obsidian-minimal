@@ -695,35 +695,35 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 .markdown-source-view.mod-cm6 .cm-embed-block:hover {
   border: 0; }
 
-/* Live Preview folding */
+/* Live Preview folding
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
-  color: var(--text-faint); }
-
+	color:var(--text-faint);
+}
 .cm-editor .cm-foldPlaceholder,
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-  cursor: var(--cursor); }
-
+	cursor:var(--cursor);
+}
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
-  right: 8px; }
-
+	right:8px;
+}
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-task-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-  right: 8px;
-  width: auto; }
-
+	right:8px;
+	width:auto;
+}
 .markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-  right: -8px;
-  top: 1px;
-  width: 26px; }
-
-ul > li.is-collapsed::marker,
+	right:-8px;
+	top:1px;
+	width:26px;
+}
+ul>li.is-collapsed::marker,
 .markdown-source-view.mod-cm6 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
-  color: var(--text-accent); }
-
+	color:var(--text-accent);
+}
 .cm-gutterElement .collapse-indicator,
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
 .markdown-source-view.mod-cm6 .fold-gutter {
-  opacity: 0; }
-
+	opacity:0;
+}
 .cm-gutterElement:hover .collapse-indicator,
 .cm-gutterElement .is-collapsed .collapse-indicator,
 .markdown-source-view.mod-cm6 .cm-line:hover .cm-fold-indicator .collapse-indicator,
@@ -731,14 +731,15 @@ ul > li.is-collapsed::marker,
 .markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
 .markdown-source-view.mod-cm6 .fold-gutter:hover,
 .markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator svg {
-  opacity: 1; }
+	opacity:1;
+}
 
 body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
-  max-width: 100%; }
-
-body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer {
-  max-width: 100%; }
-
+	max-width:100%;
+}
+body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
+	max-width:100%;
+} */
 /* Editor mode (Legacy) */
 .theme-light .token.operator,
 .theme-light .token.entity,
@@ -4168,6 +4169,25 @@ body .dataview.inline-field-value {
 
 .markdown-preview-view .block-language-dataview table.calendar .day {
   font-size: var(--font-adaptive-small); }
+
+/* Database folder */
+.database-plugin__scroll-container,
+.database-plugin__table,
+.database-plugin__navbar {
+  width: 100%; }
+
+.dbfolder-table-container {
+  --font-adaptive-normal: var(--table-text-size);
+  --font-size-text: 12px; }
+
+.database-plugin__cell_size_wide .database-plugin__td {
+  padding: 0.15rem; }
+
+.database-plugin__table {
+  border-spacing: 0 !important; }
+
+.MuiPaper-root {
+  background-color: transparent !important; }
 
 /* Dictionary plugin */
 .workspace-leaf-content .view-content.dictionary-view-content {
