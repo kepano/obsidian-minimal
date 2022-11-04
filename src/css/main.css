@@ -1464,15 +1464,11 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
 .markdown-preview-view table {
   margin-block-start: 1em; }
 
-.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,
 .markdown-source-view.mod-cm6 td, .markdown-source-view.mod-cm6 th,
-.markdown-preview-view .dataview.table-view-table thead.table-view-thead tr th,
 .markdown-preview-view td,
 .markdown-preview-view th {
   padding: 4px 10px; }
-  .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child,
   .markdown-source-view.mod-cm6 td:first-child, .markdown-source-view.mod-cm6 th:first-child,
-  .markdown-preview-view .dataview.table-view-table thead.table-view-thead tr th:first-child,
   .markdown-preview-view td:first-child,
   .markdown-preview-view th:first-child {
     padding-left: 0; }

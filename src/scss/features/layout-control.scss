@@ -129,13 +129,15 @@ body {
 	}
 }
 .table-100 {
-	table th:first-child,
-	table td:first-child,
-	.dataview.table-view-table th:first-child,
-	.dataview.table-view-table td:first-child,
-	.markdown-source-view.mod-cm6 td:first-child,
-	.markdown-source-view.mod-cm6 th:first-child {
-		padding-left:20px;
+	table th,
+	table td,
+	.dataview.table-view-table th,
+	.dataview.table-view-table td,
+	.markdown-source-view.mod-cm6 td,
+	.markdown-source-view.mod-cm6 th {
+		&:first-child {
+			padding-left:20px;
+		}
 	}
 	table th:last-child,
 	table td:last-child,
