@@ -9,12 +9,25 @@
 
 .markdown-source-view.mod-cm6,
 .markdown-preview-view {
-
+	table {
+		border: 1px solid var(--border-color);
+		border-collapse: collapse;
+	}
 	td, th {
 		padding: 4px 10px;
 		&:first-child {
 			padding-left: 0;
 		}
+	}
+}
+
+/* Override Sortable plugin */
+.markdown-preview-view th,
+.table-view-table > thead > tr > th,
+.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
+	padding: 4px 10px;
+	&:first-child {
+		padding-left: 0;
 	}
 }
 

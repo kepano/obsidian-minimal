@@ -799,14 +799,6 @@ span.cm-image-marker,
 .cm-s-obsidian span.cm-formatting-link {
   color: var(--text-faint); }
 
-/* Editor Mode Footnotes */
-.cm-s-obsidian span.cm-footref {
-  font-size: var(--font-adaptive-normal); }
-
-.cm-s-obsidian pre.HyperMD-footnote {
-  font-size: var(--font-adaptive-small);
-  padding-left: 20px; }
-
 /* Editor Mode Quotes */
 .cm-formatting-quote {
   color: var(--text-faint) !important; }
@@ -1464,6 +1456,10 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
 .markdown-preview-view table {
   margin-block-start: 1em; }
 
+.markdown-source-view.mod-cm6 table,
+.markdown-preview-view table {
+  border: 1px solid var(--border-color);
+  border-collapse: collapse; }
 .markdown-source-view.mod-cm6 td, .markdown-source-view.mod-cm6 th,
 .markdown-preview-view td,
 .markdown-preview-view th {
@@ -1471,6 +1467,16 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   .markdown-source-view.mod-cm6 td:first-child, .markdown-source-view.mod-cm6 th:first-child,
   .markdown-preview-view td:first-child,
   .markdown-preview-view th:first-child {
+    padding-left: 0; }
+
+/* Override Sortable plugin */
+.markdown-preview-view th,
+.table-view-table > thead > tr > th,
+.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
+  padding: 4px 10px; }
+  .markdown-preview-view th:first-child,
+  .table-view-table > thead > tr > th:first-child,
+  .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child {
     padding-left: 0; }
 
 body {
@@ -2879,7 +2885,7 @@ body {
 .table-100 .dataview.table-view-table td:first-child,
 .table-100 .markdown-source-view.mod-cm6 td:first-child,
 .table-100 .markdown-source-view.mod-cm6 th:first-child {
-  padding-left: 20px; }
+  padding-left: 20px !important; }
 .table-100 table th:last-child,
 .table-100 table td:last-child,
 .table-100 .dataview.table-view-table th:last-child,

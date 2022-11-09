@@ -49,7 +49,6 @@
 	padding-top:3px;
 }
 
-
 span.cm-image-marker,
 .cm-s-obsidian span.cm-footref.cm-formatting.cm-formatting-link.cm-formatting-link-end,
 .cm-s-obsidian .cm-formatting-link+span.cm-link.cm-formatting.cm-formatting-link-end,
@@ -57,15 +56,6 @@ span.cm-image-marker,
 .cm-s-obsidian span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
 .cm-s-obsidian span.cm-formatting-link {
 	color:var(--text-faint);
-}
-
-/* Editor Mode Footnotes */
-.cm-s-obsidian span.cm-footref {
-	font-size:var(--font-adaptive-normal);
-}
-.cm-s-obsidian pre.HyperMD-footnote {
-	font-size:var(--font-adaptive-small);
-	padding-left:20px;
 }
 
 /* Editor Mode Quotes */
