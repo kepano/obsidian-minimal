@@ -6240,21 +6240,21 @@ settings:
 		collapsed: true
 	-
 		id: blockquote-color
-		title: Blockquotes text color
+		title: Blockquote text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: blockquote-background-color
-		title: Blockquotes background color
+		title: Blockquote background color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: blockquote-border-color
-		title: Blockquotes border color
+		title: Blockquote border color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6270,13 +6270,13 @@ settings:
 		step: 1
 	-
 		id: blockquote-size
-		title: Blockquotes font size
+		title: Blockquote font size
 		description: Accepts any CSS font-size value
 		type: variable-text
 		default: ''
 	-
 		id: blockquote-font-style
-		title: Blockquotes font style
+		title: Blockquote font style
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -6309,7 +6309,7 @@ settings:
 				value: normal
 	-
 		id: code-blocks
-		title: Code and syntax highlighting
+		title: Code blocks
 		type: heading
 		level: 2
 		collapsed: true
@@ -7577,7 +7577,7 @@ settings:
 		default-dark: '#'
 	-
 		id: title-color-inactive
-		title: Tab title color (inactive)
+		title: Tab title text color (inactive)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
