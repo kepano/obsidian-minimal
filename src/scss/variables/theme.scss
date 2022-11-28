@@ -13,9 +13,7 @@
 .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark,
-.theme-light,
-.excalidraw.theme--dark,
-body .excalidraw {
+.theme-light {
 	--background-modifier-accent:        var(--ax3);  
 	--background-modifier-border-focus:  var(--ui3);
 	--background-modifier-border-hover:  var(--ui2);
@@ -113,8 +111,7 @@ body .excalidraw {
 	--ribbon-background-collapsed:       var(--bg2);
 }
 
-.theme-light,
-body .excalidraw {
+.theme-light {
 	--interactive-normal:         var(--bg1);
 	--interactive-accent-rgb:220, 220, 220;
 
@@ -132,8 +129,7 @@ body .excalidraw {
 	--btn-shadow-color:rgba(0, 0, 0, 0.05);
 }
 
-.theme-dark,
-.excalidraw.theme--dark {
+.theme-dark {
 	--interactive-normal:         var(--bg3);
 	--interactive-accent-rgb: 66, 66, 66;
 
