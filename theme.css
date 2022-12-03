@@ -523,9 +523,16 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: graph-line
+		title: Line color
+		description: Changing graph colors requires closing and reopening graph panes or restarting Obsidian
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: graph-node
 		title: Node color
-		description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
