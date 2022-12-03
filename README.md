@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/cover.png)
+![](/cover.png)
 
 Find detailed documentation at [minimal.guide](https://minimal.guide)
 
@@ -28,23 +28,23 @@ Support development: **@kepano** on [Twitter](https://www.twitter.com/kepano) or
 
 **Background styles** include low contrast, high contrast, and a true black option ideal for OLED devices
 
-![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-variants.png)
+![](/assets/minimal-variants.png)
 
 **Helper classes** for tables and card layouts allow you to create powerful workflows
 
-![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-movies.png)
+![](/assets/minimal-movies.png)
 
 Combining **focus mode** with **image grid** and **image width** options allows you to immerse yourself in visual projects
 
-![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-img-grid.png)
+![](/assets/minimal-img-grid.png)
 
 Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, [and more](#plugin-support)
 
-![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-plugins.png)
+![](/assets/minimal-plugins.png)
 
 Every screen in the Obsidian app has been revised to create a cohesive experience, including **settings**, **plugin browser**, **sync**, **publish**, and **file recovery**
 
-![](https://raw.githubusercontent.com/kepano/obsidian-minimal/master/assets/minimal-modals.png)
+![](/assets/minimal-modals.png)
 
 ## Installation
 
@@ -102,13 +102,13 @@ Controls images, tables and iframes. These settings can also be enabled on a per
 
 Minimal offers color schemes that can be separately selected for light and dark mode using the [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Color schemes include Dracula, Everforest, Gruvbox, macOS, Nord, Notion, Solarized, and Things. 
 
-![Minimal Theme Settings](https://kep-log.s3-us-west-2.amazonaws.com/minimal-color-schemes.gif)
+![Minimal Theme Settings](/assets/minimal-color-schemes.gif)
 
 ### Custom color schemes
 
 You can use the Style Settings plugin to customize your color scheme. To see your changes more easily, open Style Settings in a new pane by using the command palette (`CMD + P` by default). Using Style Settings you can customize Minimal's colors, font sizes, font styles, and many more details.
 
-![Style Settings](https://kep-log.s3-us-west-2.amazonaws.com/minimal-style-settings.gif)
+![Style Settings](/assets/minimal-style-settings.gif)
 
 ## Plugin support
 
