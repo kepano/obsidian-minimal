@@ -1221,16 +1221,13 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 
 /* Checklists, task lists, checkboxes */
 body {
-  --checkbox-size: 17px;
-  --checkbox-icon: 20px;
   --checkbox-radius: 50%;
   --checkbox-top: 2px;
   --checkbox-left: 0px;
   --checkbox-margin: 0px 6px 0px -1.35em; }
 
 .checkbox-square {
-  --checkbox-size: 15px;
-  --checkbox-icon: 17px;
+  --checkbox-size: calc(var(--font-text-size) * 0.85);
   --checkbox-radius: 4px;
   --checkbox-top: 1px;
   --checkbox-left: 0px;
