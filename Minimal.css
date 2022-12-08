@@ -3673,6 +3673,9 @@ body:not(.full-file-names) .tree-item-inner {
 .canvas-node-label {
   font-size: var(--font-adaptive-small); }
 
+.canvas-node-container {
+  border: 2px solid var(--background-modifier-border-focus); }
+
 /* File browser */
 .is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
   display: none; }
