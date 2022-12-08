@@ -1,4 +1,4 @@
-/* Reader Mode Lists  */
+/* Reading Mode Lists  */
 div > ol,
 div > ul {
   padding-inline-start:1.4em;
@@ -29,10 +29,6 @@ ol {
   padding-bottom:var(--list-spacing);
 }
 
-/* Bullets */
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
-  left:-3px;
-}
 
 .is-mobile {
   ul > li:not(.task-list-item)::marker {

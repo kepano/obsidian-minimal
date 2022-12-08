@@ -15,3 +15,8 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 .nav-buttons-container {
 	justify-content:flex-start;
 }
+
+.nav-file-tag {
+	background-color: transparent;
+	color: var(--text-faint);
+}

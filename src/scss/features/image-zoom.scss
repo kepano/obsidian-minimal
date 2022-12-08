@@ -2,7 +2,7 @@
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
 body:not(.zoom-off) .view-content {
-	img {
+	div:not(.canvas-node-content) img {
 		max-width:100%;
 		cursor:zoom-in;
 	}
@@ -15,7 +15,7 @@ body:not(.zoom-off) .view-content {
 		padding:10px;
 	}
 	.markdown-preview-view img[referrerpolicy='no-referrer']:active,
-	.image-embed:active {
+	.image-embed:not(.canvas-node-content):active {
 		aspect-ratio:unset;
 		cursor:zoom-out;
 		display:block;
@@ -33,7 +33,7 @@ body:not(.zoom-off) .view-content {
 		right:0;
 		bottom:0;
 	}
-	.image-embed:active:after {
+	.image-embed:not(.canvas-node-content):active:after {
 		background-color:var(--background-primary);
 		opacity:0.9;
 		content:" ";
@@ -44,7 +44,7 @@ body:not(.zoom-off) .view-content {
 		right:1px;
 		z-index:0;
 	}
-	.image-embed:active img {
+	.image-embed:not(.canvas-node-content):active img {
 		aspect-ratio:unset;
 		top:50%;
 		z-index:99;
