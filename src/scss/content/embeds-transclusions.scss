@@ -1,18 +1,33 @@
 /* Transcluded notes and embeds */
 
 /* Strict embeds (naked) */
+.embed-strict {
+	--embed-background: transparent;
+	--embed-border-left: 0;
+	--embed-padding: 0;
 
-.embed-strict .internal-embed .markdown-embed {
-	padding:0;
-	border:none;
+	.markdown-embed-content {
+		--folding-offset: 0px;
+	}
+	.el-embed-heading.el-p > p {
+		margin-block-start: 0;
+		margin-block-end: 0;
+	}
+
+	.internal-embed .markdown-embed,
+	&.markdown-preview-view .markdown-embed {
+		padding:0;
+	}
+	.markdown-embed-title,
+	.internal-embed .markdown-embed .markdown-embed-title {
+		display:none;
+	}
+	.internal-embed:not([src*="#^"]) .markdown-embed-link {
+		width:24px;
+		opacity: 0;
+	}
 }
-.embed-strict .internal-embed .markdown-embed .markdown-embed-title {
-	display:none;
-}
-.embed-strict .internal-embed:not([src*="#^"]) .markdown-embed-link {
-	width:24px;
-	opacity: 0;
-}
+
 .embed-strict.contextual-typography .internal-embed .markdown-preview-view .markdown-preview-sizer>div,
 .contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer>div {
 	margin:0;

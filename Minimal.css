@@ -1329,16 +1329,23 @@ ul > li.task-list-item .task-list-item-checkbox {
 
 /* Transcluded notes and embeds */
 /* Strict embeds (naked) */
-.embed-strict .internal-embed .markdown-embed {
-  padding: 0;
-  border: none; }
-
-.embed-strict .internal-embed .markdown-embed .markdown-embed-title {
-  display: none; }
-
-.embed-strict .internal-embed:not([src*="#^"]) .markdown-embed-link {
-  width: 24px;
-  opacity: 0; }
+.embed-strict {
+  --embed-background: transparent;
+  --embed-border-left: 0;
+  --embed-padding: 0; }
+  .embed-strict .markdown-embed-content {
+    --folding-offset: 0px; }
+  .embed-strict .el-embed-heading.el-p > p {
+    margin-block-start: 0;
+    margin-block-end: 0; }
+  .embed-strict .internal-embed .markdown-embed, .embed-strict.markdown-preview-view .markdown-embed {
+    padding: 0; }
+  .embed-strict .markdown-embed-title,
+  .embed-strict .internal-embed .markdown-embed .markdown-embed-title {
+    display: none; }
+  .embed-strict .internal-embed:not([src*="#^"]) .markdown-embed-link {
+    width: 24px;
+    opacity: 0; }
 
 .embed-strict.contextual-typography .internal-embed .markdown-preview-view .markdown-preview-sizer > div,
 .contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer > div {
@@ -1553,6 +1560,8 @@ body:not(.minimal-unstyled-tags) {
   --tag-border-color: var(--background-modifier-border);
   --tag-border-color-hover: var(--background-modifier-border-hover);
   --tag-color-hover: var(--text-normal); }
+  body:not(.minimal-unstyled-tags).is-mobile.theme-dark {
+    --tag-background: transparent; }
 
 /* Headings and fonts */
 h1, h2, h3, h4 {
