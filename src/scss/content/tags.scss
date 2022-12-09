@@ -23,7 +23,8 @@ body:not(.minimal-unstyled-tags) {
 	--tag-border-color: var(--background-modifier-border);
 	--tag-border-color-hover: var(--background-modifier-border-hover);
 	--tag-color-hover: var(--text-normal);
-	&.is-mobile.theme-dark {
-		--tag-background: transparent;
-	}
+}
+
+body.is-mobile.theme-dark {
+	--tag-background: transparent;
 }

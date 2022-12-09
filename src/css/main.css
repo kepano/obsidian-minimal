@@ -1228,14 +1228,14 @@ body {
   --checkbox-radius: 50%;
   --checkbox-top: 2px;
   --checkbox-left: 0px;
-  --checkbox-margin: 0px 6px 0px -1.35em; }
+  --checkbox-margin: 0px 6px 0px -2em; }
 
 .checkbox-square {
   --checkbox-size: calc(var(--font-text-size) * 0.85);
   --checkbox-radius: 4px;
   --checkbox-top: 1px;
   --checkbox-left: 0px;
-  --checkbox-margin: 0px 8px 0px -1.35em; }
+  --checkbox-margin: 0px 8px 0px -2em; }
 
 body.minimal-strike-lists {
   --checklist-done-decoration: line-through; }
@@ -1250,12 +1250,6 @@ input[type=checkbox] {
 
 .markdown-preview-section > .contains-task-list {
   padding-bottom: 0.5em; }
-
-ul > li.task-list-item .task-list-item-checkbox {
-  margin-left: -1.35em; }
-
-.mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin: 1px 1px 1px -0.4em; }
 
 .mod-cm6 .HyperMD-task-line[data-task] .cm-formatting-list-ol ~ .task-list-label .task-list-item-checkbox {
   margin: 1px; }
@@ -1517,8 +1511,9 @@ body:not(.minimal-unstyled-tags) {
   --tag-border-color: var(--background-modifier-border);
   --tag-border-color-hover: var(--background-modifier-border-hover);
   --tag-color-hover: var(--text-normal); }
-  body:not(.minimal-unstyled-tags).is-mobile.theme-dark {
-    --tag-background: transparent; }
+
+body.is-mobile.theme-dark {
+  --tag-background: transparent; }
 
 /* Headings and fonts */
 h1, h2, h3, h4 {
@@ -3633,8 +3628,18 @@ body:not(.full-file-names) .tree-item-inner {
 .canvas-node-label {
   font-size: var(--font-adaptive-small); }
 
+.canvas-background circle {
+  fill: var(--background-modifier-border-hover); }
+
+.canvas-edges :not(.is-themed) path.canvas-display-path {
+  stroke: var(--background-modifier-border-focus); }
+
+.canvas-edges :not(.is-themed) polyline.canvas-path-end {
+  stroke: var(--background-modifier-border-focus);
+  fill: var(--background-modifier-border-focus); }
+
 .canvas-node-container {
-  border: 2px solid var(--background-modifier-border-focus); }
+  border: 1.5px solid var(--background-modifier-border-focus); }
 
 /* File browser */
 .is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
@@ -3651,8 +3656,13 @@ body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-
   justify-content: flex-start; }
 
 .nav-file-tag {
+  padding-top: 0.2em;
   background-color: transparent;
   color: var(--text-faint); }
+
+.nav-file:hover .nav-file-tag,
+.nav-file .is-active .nav-file-tag {
+  color: var(--text-muted); }
 
 input.prompt-input,
 input.prompt-input:hover,

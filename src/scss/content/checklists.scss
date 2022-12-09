@@ -3,14 +3,14 @@ body {
 	--checkbox-radius: 50%;
 	--checkbox-top: 2px;
 	--checkbox-left: 0px;
-	--checkbox-margin: 0px 6px 0px -1.35em;
+	--checkbox-margin: 0px 6px 0px -2em;
 }
 .checkbox-square {
 	--checkbox-size: calc(var(--font-text-size) * 0.85);
 	--checkbox-radius: 4px;
 	--checkbox-top: 1px;
 	--checkbox-left: 0px;
-	--checkbox-margin: 0px 8px 0px -1.35em;
+	--checkbox-margin: 0px 8px 0px -2em;
 }
 
 body.minimal-strike-lists {
@@ -29,12 +29,6 @@ input[type=checkbox] {
 	padding-bottom: 0.5em;
 }
 
-ul > li.task-list-item .task-list-item-checkbox {
-	margin-left: -1.35em;
-}
-.mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-	margin: 1px 1px 1px -0.4em;
-}
 .mod-cm6 .HyperMD-task-line[data-task] .cm-formatting-list-ol ~ .task-list-label .task-list-item-checkbox {
 	margin: 1px;
 }

@@ -17,6 +17,14 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 }
 
 .nav-file-tag {
+	padding-top: 0.2em;
 	background-color: transparent;
 	color: var(--text-faint);
+}
+
+.nav-file:hover,
+.nav-file .is-active {
+	.nav-file-tag {
+		color: var(--text-muted);
+	}
 }

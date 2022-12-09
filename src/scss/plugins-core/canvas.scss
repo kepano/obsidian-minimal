@@ -1,6 +1,19 @@
 .canvas-node-label {
 	font-size: var(--font-adaptive-small);
 }
+
+.canvas-background circle {
+	fill: var(--background-modifier-border-hover);
+}
+
+.canvas-edges :not(.is-themed) path.canvas-display-path {
+	stroke: var(--background-modifier-border-focus);
+}
+.canvas-edges :not(.is-themed) polyline.canvas-path-end {
+	stroke: var(--background-modifier-border-focus);
+	fill: var(--background-modifier-border-focus);
+}
+
 .canvas-node-container {
-	border: 2px solid var(--background-modifier-border-focus);
+	border: 1.5px solid var(--background-modifier-border-focus);
 }
