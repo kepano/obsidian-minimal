@@ -1278,7 +1278,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   margin: 0 auto; }
 
 .callouts-outlined .callout .callout-title {
-  background-color: var(--bg1);
+  background-color: var(--background-primary);
   margin-top: -25px;
   z-index: 200;
   width: fit-content;
@@ -1293,6 +1293,8 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   --callout-title-size: 0.8em;
   --callout-blend-mode: normal;
   background-color: transparent; }
+.callouts-outlined .markdown-source-view.mod-cm6 .cm-embed-block.cm-callout {
+  padding-top: 12px; }
 
 /* Checklists, task lists, checkboxes */
 body {
