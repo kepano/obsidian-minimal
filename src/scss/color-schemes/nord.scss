@@ -2,14 +2,23 @@
 
 .theme-dark.minimal-nord-dark,
 .theme-light.minimal-nord-light {
+	--color-red-rgb: 191,97,106;
+	--color-orange-rgb: 208,138,112;
+	--color-yellow-rgb: 235,203,139;
+	--color-green-rgb: 163,190,140;
+	--color-cyan-rgb: 136,192,208;
+	--color-blue-rgb: 129,161,193;
+	--color-purple-rgb: 180,142,173;
+	--color-pink-rgb: 180,142,173;
+
 	--color-red:#BF616A;
+	--color-orange:#D08770;
 	--color-yellow:#EBCB8B;
 	--color-green:#A3BE8C;
-	--color-orange:#D08770;
-	--color-purple:#B48EAD;
-	--color-pink:#B48EAD;
 	--color-cyan:#88C0D0;
 	--color-blue:#81A1C1;
+	--color-purple:#B48EAD;
+	--color-pink:#B48EAD;
 }
 
 .theme-light.minimal-nord-light {

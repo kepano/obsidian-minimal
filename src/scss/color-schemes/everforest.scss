@@ -1,23 +1,41 @@
 /* Everforest */
 .theme-light.minimal-everforest-light {
+	--color-red-rgb: 248,85,82;
+	--color-orange-rgb: 245,125,38;
+	--color-yellow-rgb: 223,160,0;
+	--color-green-rgb: 141,161,1;
+	--color-cyan-rgb: 53,167,124;
+	--color-blue-rgb: 127,187,179;
+	--color-purple-rgb: 223,105,186;
+	--color-pink-rgb: 223,105,186;
+
 	--color-red:#f85552;
 	--color-orange:#f57d26;
 	--color-yellow:#dfa000;
 	--color-green:#8da101;
-	--color-purple:#df69ba;
-	--color-pink:#df69ba;
 	--color-cyan:#35a77c;
 	--color-blue:#7fbbb3;
+	--color-purple:#df69ba;
+	--color-pink:#df69ba;
 }
 .theme-dark.minimal-everforest-dark {
+	--color-red-rgb: 230,126,128;
+	--color-orange-rgb: 230,152,117;
+	--color-yellow-rgb: 219,188,127;
+	--color-green-rgb: 167,192,128;
+	--color-cyan-rgb: 131,192,146;
+	--color-blue-rgb: 127,187,179;
+	--color-purple-rgb: 223,105,186;
+	--color-pink-rgb: 223,105,186;
+
 	--color-red:#e67e80;
 	--color-orange:#e69875;
 	--color-yellow:#dbbc7f;
 	--color-green:#a7c080;
-	--color-purple:#d699b6;
-	--color-pink:#d699b6;
 	--color-cyan:#83c092;
 	--color-blue:#7fbbb3;
+	--color-purple:#d699b6;
+	--color-pink:#d699b6;
 }
 
 .theme-light.minimal-everforest-light {

@@ -1,14 +1,23 @@
 /* Dracula */
 
 .theme-dark.minimal-dracula-dark {
+	--color-red-rgb: 255,85,85;
+	--color-orange-rgb: 255,184,108;
+	--color-yellow-rgb: 241,250,140;
+	--color-green-rgb: 80,250,123;
+	--color-cyan-rgb: 139,233,253;
+	--color-blue-rgb: 98,114,164;
+	--color-purple-rgb: 189,147,249;
+	--color-pink-rgb: 255,121,198;
+
 	--color-red:#ff5555;
+	--color-orange:#ffb86c;
 	--color-yellow:#f1fa8c;
 	--color-green:#50fa7b;
-	--color-orange:#ffb86c;
-	--color-purple:#bd93f9;
-	--color-pink:#ff79c6;
 	--color-cyan:#8be9fd;
 	--color-blue:#6272a4;
+	--color-purple:#bd93f9;
+	--color-pink:#ff79c6;
 }
 
 .theme-light.minimal-dracula-light.minimal-light-contrast .titlebar,

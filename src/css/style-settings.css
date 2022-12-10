@@ -268,6 +268,19 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: callouts-style
+		title: Callout style
+		type: class-select
+		allowEmpty: false
+		default: callouts-default
+		options:
+			-
+				label: Filled
+				value: callouts-default
+			-
+				label: Outlined
+				value: callouts-outlined
+	-
 		id: callout-blend-mode
 		title: Color blending
 		description: Blend the color of nested callouts

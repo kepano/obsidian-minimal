@@ -101,7 +101,7 @@ body {
   --nested-padding:1.1em;
   /* Lists */
   --folding-offset:10px;
-  --list-edit-offset: 1em;
+  --list-edit-offset: 0.5em;
   --list-indent: 2em;
   --list-spacing: 0.075em;
   --input-height: 32px;
@@ -146,11 +146,22 @@ body {
   --accent-s: 17%;
   /* Accent saturation */
   --accent-l: 50%;
-  /* Accent lightness */
+  /* Accent lightness */ }
+
+.theme-dark,
+.theme-light {
+  --color-red-rgb: 208,66,85;
+  --color-orange-rgb: 213,118,63;
+  --color-yellow-rgb: 229,181,103;
+  --color-green-rgb: 168,195,115;
+  --color-cyan-rgb: 115,187,178;
+  --color-blue-rgb: 108,153,187;
+  --color-purple-rgb: 158,134,200;
+  --color-pink-rgb: 176,82,121;
   --color-red: #d04255;
+  --color-orange: #d5763f;
   --color-yellow: #e5b567;
   --color-green: #a8c373;
-  --color-orange: #d5763f;
   --color-cyan: #73bbb2;
   --color-blue: #6c99bb;
   --color-purple: #9e86c8;
@@ -1265,6 +1276,23 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 .is-live-preview.is-readable-line-width > .cm-callout .callout {
   max-width: var(--max-width);
   margin: 0 auto; }
+
+.callouts-outlined .callout .callout-title {
+  background-color: var(--bg1);
+  margin-top: -25px;
+  z-index: 200;
+  width: fit-content;
+  padding: 0 0.5em;
+  margin-left: -0.75em;
+  letter-spacing: 0.05em;
+  font-variant-caps: all-small-caps; }
+.callouts-outlined .callout {
+  overflow: visible;
+  --callout-border-width: 1px;
+  --callout-border-opacity: 0.5;
+  --callout-title-size: 0.8em;
+  --callout-blend-mode: normal;
+  background-color: transparent; }
 
 /* Checklists, task lists, checkboxes */
 body {
@@ -5349,6 +5377,14 @@ body.theme-light {
 /* Color schemes */
 /* Atom */
 .theme-dark.minimal-atom-dark {
+  --color-red-rgb: 225,109,118;
+  --color-orange-rgb: 209,154,102;
+  --color-yellow-rgb: 206,193,103;
+  --color-green-rgb: 152,195,121;
+  --color-cyan-rgb: 88,182,194;
+  --color-blue-rgb: 98,175,239;
+  --color-purple-rgb: 198,120,222;
+  --color-pink-rgb: 225,109,118;
   --color-red:#e16d76;
   --color-orange:#d19a66;
   --color-yellow:#cec167;
@@ -5359,6 +5395,14 @@ body.theme-light {
   --color-pink:#e16d76; }
 
 .theme-light.minimal-atom-light {
+  --color-red-rgb: 228,87,73;
+  --color-orange-rgb: 183,107,2;
+  --color-yellow-rgb: 193,131,2;
+  --color-green-rgb: 80,161,80;
+  --color-cyan-rgb: 13,151,179;
+  --color-blue-rgb: 98,175,239;
+  --color-purple-rgb: 166,38,164;
+  --color-pink-rgb: 228,87,73;
   --color-red:#e45749;
   --color-orange:#b76b02;
   --color-yellow:#c18302;
@@ -5421,24 +5465,40 @@ body.theme-light {
 
 /* catppuccin */
 .theme-light.minimal-catppuccin-light {
+  --color-red-rgb: 230, 69, 83;
+  --color-orange-rgb: 254,100,12;
+  --color-yellow-rgb: 223,142,29;
+  --color-green-rgb: 64,160,43;
+  --color-cyan-rgb: 23,146,154;
+  --color-blue-rgb: 33,102,246;
+  --color-purple-rgb: 137,56,239;
+  --color-pink-rgb: 234,119,203;
   --color-red: #E64553;
   --color-orange: #FE640C;
   --color-yellow: #DF8E1D;
   --color-green: #40A02B;
-  --color-purple: #8938EF;
-  --color-pink: #EA77CB;
   --color-cyan: #17929A;
-  --color-blue: #2166F6; }
+  --color-blue: #2166F6;
+  --color-purple: #8938EF;
+  --color-pink: #EA77CB; }
 
 .theme-dark.minimal-catppuccin-dark {
+  --color-red-rgb: 235,153,156;
+  --color-orange-rgb: 239,160,118;
+  --color-yellow-rgb: 229,200,144;
+  --color-green-rgb: 166,209,138;
+  --color-cyan-rgb: 129,200,190;
+  --color-blue-rgb: 140,170,238;
+  --color-purple-rgb: 202,158,230;
+  --color-pink-rgb: 244,185,229;
   --color-red: #EB999C;
   --color-orange: #EFA076;
   --color-yellow: #E5C890;
   --color-green: #A6D18A;
-  --color-purple: #CA9EE6;
-  --color-pink: #F4B9E5;
   --color-cyan: #81C8BE;
-  --color-blue: #8CAAEE; }
+  --color-blue: #8CAAEE;
+  --color-purple: #CA9EE6;
+  --color-pink: #F4B9E5; }
 
 .theme-light.minimal-catppuccin-light {
   --base-h: 228;
@@ -5497,14 +5557,22 @@ body.theme-light {
 
 /* Dracula */
 .theme-dark.minimal-dracula-dark {
+  --color-red-rgb: 255,85,85;
+  --color-orange-rgb: 255,184,108;
+  --color-yellow-rgb: 241,250,140;
+  --color-green-rgb: 80,250,123;
+  --color-cyan-rgb: 139,233,253;
+  --color-blue-rgb: 98,114,164;
+  --color-purple-rgb: 189,147,249;
+  --color-pink-rgb: 255,121,198;
   --color-red:#ff5555;
+  --color-orange:#ffb86c;
   --color-yellow:#f1fa8c;
   --color-green:#50fa7b;
-  --color-orange:#ffb86c;
-  --color-purple:#bd93f9;
-  --color-pink:#ff79c6;
   --color-cyan:#8be9fd;
-  --color-blue:#6272a4; }
+  --color-blue:#6272a4;
+  --color-purple:#bd93f9;
+  --color-pink:#ff79c6; }
 
 .theme-light.minimal-dracula-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-dracula-light.minimal-light-contrast.minimal-status-off .status-bar,
@@ -5531,24 +5599,40 @@ body.theme-light {
 
 /* Everforest */
 .theme-light.minimal-everforest-light {
+  --color-red-rgb: 248,85,82;
+  --color-orange-rgb: 245,125,38;
+  --color-yellow-rgb: 223,160,0;
+  --color-green-rgb: 141,161,1;
+  --color-cyan-rgb: 53,167,124;
+  --color-blue-rgb: 127,187,179;
+  --color-purple-rgb: 223,105,186;
+  --color-pink-rgb: 223,105,186;
   --color-red:#f85552;
   --color-orange:#f57d26;
   --color-yellow:#dfa000;
   --color-green:#8da101;
-  --color-purple:#df69ba;
-  --color-pink:#df69ba;
   --color-cyan:#35a77c;
-  --color-blue:#7fbbb3; }
+  --color-blue:#7fbbb3;
+  --color-purple:#df69ba;
+  --color-pink:#df69ba; }
 
 .theme-dark.minimal-everforest-dark {
+  --color-red-rgb: 230,126,128;
+  --color-orange-rgb: 230,152,117;
+  --color-yellow-rgb: 219,188,127;
+  --color-green-rgb: 167,192,128;
+  --color-cyan-rgb: 131,192,146;
+  --color-blue-rgb: 127,187,179;
+  --color-purple-rgb: 223,105,186;
+  --color-pink-rgb: 223,105,186;
   --color-red:#e67e80;
   --color-orange:#e69875;
   --color-yellow:#dbbc7f;
   --color-green:#a7c080;
-  --color-purple:#d699b6;
-  --color-pink:#d699b6;
   --color-cyan:#83c092;
-  --color-blue:#7fbbb3; }
+  --color-blue:#7fbbb3;
+  --color-purple:#d699b6;
+  --color-pink:#d699b6; }
 
 .theme-light.minimal-everforest-light {
   --base-h:46;
@@ -5611,14 +5695,22 @@ body.theme-light {
 /* Gruvbox */
 .theme-dark.minimal-gruvbox-dark,
 .theme-light.minimal-gruvbox-light {
+  --color-red-rgb: 204, 36, 29;
+  --color-orange-rgb: 214,93,14;
+  --color-yellow-rgb: 215,153,33;
+  --color-green-rgb: 152,151,26;
+  --color-cyan-rgb: 104,157,106;
+  --color-blue-rgb: 69,133,136;
+  --color-purple-rgb: 177,98,134;
+  --color-pink-rgb: 177,98,134;
   --color-red:#cc241d;
+  --color-orange:#d65d0e;
   --color-yellow:#d79921;
   --color-green:#98971a;
-  --color-orange:#d65d0e;
-  --color-purple:#b16286;
-  --color-pink:#b16286;
   --color-cyan:#689d6a;
-  --color-blue:#458588; }
+  --color-blue:#458588;
+  --color-purple:#b16286;
+  --color-pink:#b16286; }
 
 .theme-light.minimal-gruvbox-light {
   --base-h:49;
@@ -5675,14 +5767,22 @@ body.theme-light {
 /* macOS */
 .theme-dark.minimal-macos-dark,
 .theme-light.minimal-macos-light {
+  --color-red-rgb: 255,59,49;
+  --color-orange-rgb: 255,149,2;
+  --color-yellow-rgb: 255,204,209;
+  --color-green-rgb: 42,205,65;
+  --color-cyan-rgb: 2,199,190;
+  --color-blue-rgb: 2,122,255;
+  --color-purple-rgb: 176,81,222;
+  --color-pink-rgb: 255,46,85;
   --color-red:#ff3b31;
+  --color-orange:#ff9502;
   --color-yellow:#ffcc00;
   --color-green:#2acd41;
-  --color-orange:#ff9502;
-  --color-purple:#b051de;
-  --color-pink:#ff2e55;
   --color-cyan:#02c7be;
-  --color-blue:#027aff; }
+  --color-blue:#027aff;
+  --color-purple:#b051de;
+  --color-pink:#ff2e55; }
 
 .theme-light.minimal-macos-light {
   --base-h:106;
@@ -5737,14 +5837,22 @@ body.theme-light {
 /* Nord */
 .theme-dark.minimal-nord-dark,
 .theme-light.minimal-nord-light {
+  --color-red-rgb: 191,97,106;
+  --color-orange-rgb: 208,138,112;
+  --color-yellow-rgb: 235,203,139;
+  --color-green-rgb: 163,190,140;
+  --color-cyan-rgb: 136,192,208;
+  --color-blue-rgb: 129,161,193;
+  --color-purple-rgb: 180,142,173;
+  --color-pink-rgb: 180,142,173;
   --color-red:#BF616A;
+  --color-orange:#D08770;
   --color-yellow:#EBCB8B;
   --color-green:#A3BE8C;
-  --color-orange:#D08770;
-  --color-purple:#B48EAD;
-  --color-pink:#B48EAD;
   --color-cyan:#88C0D0;
-  --color-blue:#81A1C1; }
+  --color-blue:#81A1C1;
+  --color-purple:#B48EAD;
+  --color-pink:#B48EAD; }
 
 .theme-light.minimal-nord-light {
   --base-h:221;
@@ -5842,37 +5950,45 @@ body.theme-light {
 /* Solarized */
 .theme-dark.minimal-solarized-dark,
 .theme-light.minimal-solarized-light {
-  --color-red:#dc322f;
-  --color-orange:#cb4b16;
-  --color-yellow:#b58900;
-  --color-green:#859900;
-  --color-cyan:#2aa198;
-  --color-blue:#268bd2;
-  --color-purple:#6c71c4;
-  --color-pink:#d33682; }
+  --color-red-rgb: 220, 50, 47;
+  --color-orange-rgb: 203,77,22;
+  --color-yellow-rgb: 181,137,0;
+  --color-green-rgb: 133,153,0;
+  --color-cyan-rgb: 42,161,152;
+  --color-blue-rgb: 38,139,210;
+  --color-purple-rgb: 108,113,196;
+  --color-pink-rgb: 211,54,130;
+  --color-red: #dc322f;
+  --color-orange: #cb4b16;
+  --color-yellow: #b58900;
+  --color-green: #859900;
+  --color-cyan: #2aa198;
+  --color-blue: #268bd2;
+  --color-purple: #6c71c4;
+  --color-pink: #d33682; }
 
 .theme-light.minimal-solarized-light {
-  --base-h:44;
-  --base-s:87%;
-  --base-l:94%;
-  --accent-h:205;
-  --accent-s:70%;
-  --accent-l:48%;
-  --bg1:#fdf6e3;
-  --bg2:#eee8d5;
-  --bg3:rgba(0,0,0,0.062);
-  --ui1:#e9e1c8;
-  --ui2:#d0cab8;
-  --ui3:#d0cab8;
-  --tx1:#073642;
-  --tx2:#586e75;
-  --tx3:#ABB2AC;
-  --tx4:#586e75;
-  --hl1:rgba(202,197,182,0.3);
-  --hl2:rgba(203,75,22,0.3); }
+  --base-h: 44;
+  --base-s: 87%;
+  --base-l: 94%;
+  --accent-h: 205;
+  --accent-s: 70%;
+  --accent-l: 48%;
+  --bg1: #fdf6e3;
+  --bg2: #eee8d5;
+  --bg3: rgba(0,0,0,0.062);
+  --ui1: #e9e1c8;
+  --ui2: #d0cab8;
+  --ui3: #d0cab8;
+  --tx1: #073642;
+  --tx2: #586e75;
+  --tx3: #ABB2AC;
+  --tx4: #586e75;
+  --hl1: rgba(202,197,182,0.3);
+  --hl2: rgba(203,75,22,0.3); }
 
 .theme-light.minimal-solarized-light.minimal-light-tonal {
-  --bg2:#fdf6e3; }
+  --bg2: #fdf6e3; }
 
 .theme-light.minimal-solarized-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-solarized-light.minimal-light-contrast.minimal-status-off .status-bar,
@@ -5880,44 +5996,53 @@ body.theme-light {
 .theme-light.minimal-solarized-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-solarized-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-dark.minimal-solarized-dark {
-  --accent-h:205;
-  --accent-s:70%;
-  --accent-l:48%;
-  --base-h:193;
-  --base-s:98%;
-  --base-l:11%;
-  --bg1:#002b36;
-  --bg2:#073642;
-  --bg3:rgba(255,255,255,0.062);
-  --ui1:#19414B;
-  --ui2:#274850;
-  --ui3:#31535B;
-  --tx1:#93a1a1;
-  --tx2:#657b83;
-  --tx3:#31535B;
-  --tx4:#657b83;
-  --hl1:rgba(15,81,98,0.3);
-  --hl2:rgba(203, 75, 22, 0.35); }
+  --accent-h: 205;
+  --accent-s: 70%;
+  --accent-l: 48%;
+  --base-h: 193;
+  --base-s: 98%;
+  --base-l: 11%;
+  --bg1: #002b36;
+  --bg2: #073642;
+  --bg3: rgba(255,255,255,0.062);
+  --ui1: #19414B;
+  --ui2: #274850;
+  --ui3: #31535B;
+  --tx1: #93a1a1;
+  --tx2: #657b83;
+  --tx3: #31535B;
+  --tx4: #657b83;
+  --hl1: rgba(15,81,98,0.3);
+  --hl2: rgba(203, 75, 22, 0.35); }
 
 .theme-dark.minimal-solarized-dark.minimal-dark-black {
-  --hl1:rgba(15,81,98,0.55);
-  --ui1:#002b36; }
+  --hl1: rgba(15,81,98,0.55);
+  --ui1: #002b36; }
 
 /* Things */
 .theme-dark.minimal-things-dark,
 .theme-light.minimal-things-light {
+  --color-red-rgb: 255,48,108;
+  --color-orange-rgb: 255,149,2;
+  --color-yellow-rgb: 255,213,0;
+  --color-green-rgb: 75,191,94;
+  --color-cyan-rgb: 73,174,164;
+  --color-purple-rgb: 176,81,222;
+  --color-pink-rgb: 255,46,85;
   --color-red:#FF306C;
+  --color-orange:#ff9502;
   --color-yellow:#FFD500;
   --color-green:#4BBF5E;
-  --color-orange:#ff9502;
+  --color-cyan:#49AEA4;
   --color-purple:#b051de;
-  --color-pink:#ff2e55;
-  --color-cyan:#49AEA4; }
+  --color-pink:#ff2e55; }
 
 .theme-light.minimal-things-light {
+  --color-blue-rgb: 27,97,194;
   --color-blue:#1b61c2; }
 
 .theme-dark.minimal-things-dark {
+  --color-blue-rgb: 77,149,247;
   --color-blue:#4d95f7; }
 
 .theme-light.minimal-things-light {
@@ -6285,6 +6410,19 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+	-
+		id: callouts-style
+		title: Callout style
+		type: class-select
+		allowEmpty: false
+		default: callouts-default
+		options:
+			-
+				label: Filled
+				value: callouts-default
+			-
+				label: Outlined
+				value: callouts-outlined
 	-
 		id: callout-blend-mode
 		title: Color blending

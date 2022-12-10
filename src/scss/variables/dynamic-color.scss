@@ -23,11 +23,23 @@ body {
 	--accent-h: 201;   /* Accent hue */
 	--accent-s: 17%;   /* Accent saturation */
 	--accent-l: 50%;   /* Accent lightness */
+}
+
+.theme-dark,
+.theme-light {
+	--color-red-rgb: 208,66,85;
+	--color-orange-rgb: 213,118,63;
+	--color-yellow-rgb: 229,181,103;
+	--color-green-rgb: 168,195,115;
+	--color-cyan-rgb: 115,187,178;
+	--color-blue-rgb: 108,153,187;
+	--color-purple-rgb: 158,134,200;
+	--color-pink-rgb: 176,82,121;
 
 	--color-red: #d04255;
+	--color-orange: #d5763f;
 	--color-yellow: #e5b567;
 	--color-green: #a8c373;
-	--color-orange: #d5763f;
 	--color-cyan: #73bbb2;
 	--color-blue: #6c99bb;
 	--color-purple: #9e86c8;

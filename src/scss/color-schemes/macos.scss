@@ -2,14 +2,23 @@
 
 .theme-dark.minimal-macos-dark,
 .theme-light.minimal-macos-light {
+	--color-red-rgb: 255,59,49;
+	--color-orange-rgb: 255,149,2;
+	--color-yellow-rgb: 255,204,209;
+	--color-green-rgb: 42,205,65;
+	--color-cyan-rgb: 2,199,190;
+	--color-blue-rgb: 2,122,255;
+	--color-purple-rgb: 176,81,222;
+	--color-pink-rgb: 255,46,85;
+
 	--color-red:#ff3b31;
+	--color-orange:#ff9502;
 	--color-yellow:#ffcc00;
 	--color-green:#2acd41;
-	--color-orange:#ff9502;
-	--color-purple:#b051de;
-	--color-pink:#ff2e55;
 	--color-cyan:#02c7be;
 	--color-blue:#027aff;
+	--color-purple:#b051de;
+	--color-pink:#ff2e55;
 }
 
 .theme-light.minimal-macos-light {

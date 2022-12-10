@@ -2,14 +2,23 @@
 
 .theme-dark.minimal-gruvbox-dark,
 .theme-light.minimal-gruvbox-light {
+	--color-red-rgb: 204, 36, 29;
+	--color-orange-rgb: 214,93,14;
+	--color-yellow-rgb: 215,153,33;
+	--color-green-rgb: 152,151,26;
+	--color-cyan-rgb: 104,157,106;
+	--color-blue-rgb: 69,133,136;
+	--color-purple-rgb: 177,98,134;
+	--color-pink-rgb: 177,98,134;
+
 	--color-red:#cc241d;
+	--color-orange:#d65d0e;
 	--color-yellow:#d79921;
 	--color-green:#98971a;
-	--color-orange:#d65d0e;
-	--color-purple:#b16286;
-	--color-pink:#b16286;
 	--color-cyan:#689d6a;
 	--color-blue:#458588;
+	--color-purple:#b16286;
+	--color-pink:#b16286;
 }
 
 .theme-light.minimal-gruvbox-light {

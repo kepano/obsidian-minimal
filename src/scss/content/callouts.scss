@@ -4,3 +4,25 @@
 	max-width:var(--max-width);
 	margin:0 auto;
 }
+
+.callouts-outlined {
+	.callout .callout-title {
+		background-color: var(--bg1);
+		margin-top: -25px;
+		z-index: 200;
+		width: fit-content;
+		padding: 0 0.5em;
+		margin-left: -0.75em;
+		letter-spacing: 0.05em;
+		font-variant-caps: all-small-caps;
+	}
+
+	.callout {
+		overflow: visible;
+		--callout-border-width: 1px;
+		--callout-border-opacity: 0.5;
+		--callout-title-size: 0.8em;
+		--callout-blend-mode: normal;
+		background-color: transparent;
+	}
+}

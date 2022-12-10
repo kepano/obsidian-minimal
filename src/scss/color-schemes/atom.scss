@@ -1,6 +1,15 @@
 /* Atom */
 
 .theme-dark.minimal-atom-dark {
+	--color-red-rgb: 225,109,118;
+	--color-orange-rgb: 209,154,102;
+	--color-yellow-rgb: 206,193,103;
+	--color-green-rgb: 152,195,121;
+	--color-cyan-rgb: 88,182,194;
+	--color-blue-rgb: 98,175,239;
+	--color-purple-rgb: 198,120,222;
+	--color-pink-rgb: 225,109,118;
+
 	--color-red:#e16d76;
 	--color-orange:#d19a66;
 	--color-yellow:#cec167;
@@ -11,6 +20,15 @@
 	--color-pink:#e16d76;
 }
 .theme-light.minimal-atom-light {
+	--color-red-rgb: 228,87,73;
+	--color-orange-rgb: 183,107,2;
+	--color-yellow-rgb: 193,131,2;
+	--color-green-rgb: 80,161,80;
+	--color-cyan-rgb: 13,151,179;
+	--color-blue-rgb: 98,175,239;
+	--color-purple-rgb: 166,38,164;
+	--color-pink-rgb: 228,87,73;
+
 	--color-red:#e45749;
 	--color-orange:#b76b02;
 	--color-yellow:#c18302;
