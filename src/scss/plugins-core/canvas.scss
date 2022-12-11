@@ -17,3 +17,11 @@
 .canvas-node-container {
 	border: 1.5px solid var(--background-modifier-border-focus);
 }
+
+.node-insert-event.mod-inside-iframe {
+	--max-width: 100%;
+	--folding-offset: 0px;
+	.cm-editor .cm-content {
+		padding-top: 0;
+	}
+}
