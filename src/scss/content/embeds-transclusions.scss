@@ -1,4 +1,8 @@
 /* Transcluded notes and embeds */
+body {
+	--embed-max-height: none;
+}
+
 
 /* Strict embeds (naked) */
 .embed-strict {
@@ -88,12 +92,7 @@
 .markdown-embed-link:hover, .file-embed-link:hover {
 	color: var(--text-muted);
 }
-.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
-	max-height: none !important;
-}
-.markdown-embed-content {
-	max-height: none !important;
-}
+
 .markdown-embed .markdown-preview-view {
 	padding: 0;
 }

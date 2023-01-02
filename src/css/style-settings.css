@@ -295,6 +295,33 @@ settings:
 				label: Off
 				value: normal
 	-
+		id: canvas
+		title: Canvas
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: canvas-card-label-display
+		title: Card labels
+		type: variable-select
+		allowEmpty: true
+		default: block
+		options:
+			-
+				label: Visible
+				value: block
+			-
+				label: Hidden
+				value: none
+	-
+		id: canvas-dot-pattern
+		title: Canvas dot pattern
+		description: Color for background dot pattern
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: code-blocks
 		title: Code blocks
 		type: heading

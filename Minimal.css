@@ -20,7 +20,7 @@ https://github.com/kepano/obsidian-minimal
 
 MIT License
 
-Copyright (c) 2020-2022 Stephan Ango (@kepano)
+Copyright (c) 2020-2023 Stephan Ango (@kepano)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1293,7 +1293,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   --callout-title-size: 0.8em;
   --callout-blend-mode: normal;
   background-color: transparent; }
-.callouts-outlined .markdown-source-view.mod-cm6 .cm-embed-block.cm-callout {
+.callouts-outlined .cm-embed-block.cm-callout {
   padding-top: 12px; }
 
 /* Checklists, task lists, checkboxes */
@@ -1352,6 +1352,9 @@ input[type=checkbox] {
     white-space: pre !important; }
 
 /* Transcluded notes and embeds */
+body {
+  --embed-max-height: none; }
+
 /* Strict embeds (naked) */
 .embed-strict {
   --embed-background: transparent;
@@ -1429,12 +1432,6 @@ input[type=checkbox] {
 
 .markdown-embed-link:hover, .file-embed-link:hover {
   color: var(--text-muted); }
-
-.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
-  max-height: none !important; }
-
-.markdown-embed-content {
-  max-height: none !important; }
 
 .markdown-embed .markdown-preview-view {
   padding: 0; }
@@ -3272,7 +3269,7 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .mod-empty,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > div,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > mjx-container {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset));
+  width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
   max-width: calc(var(--max-width) - var(--folding-offset));
   margin-right: auto;
   margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
@@ -3695,11 +3692,13 @@ body:not(.full-file-names) .tree-item-inner {
   font-size: var(--font-adaptive-smallest);
   font-weight: 500; }
 
-.canvas-node-label {
-  font-size: var(--font-adaptive-small); }
+body {
+  --canvas-card-label-display: block;
+  --canvas-dot-pattern: var(--background-modifier-border-hover); }
 
-.canvas-background circle {
-  fill: var(--background-modifier-border-hover); }
+.canvas-node-label {
+  font-size: var(--font-adaptive-small);
+  display: var(--canvas-card-label-display); }
 
 .canvas-edges :not(.is-themed) path.canvas-display-path {
   stroke: var(--background-modifier-border-focus); }
@@ -5690,9 +5689,6 @@ body.theme-light {
   --tx1:#d3c6aa;
   --tx2:#9da9a0;
   --tx3:#7a8478;
-  --ax1:#A7C080;
-  --ax2:#c7cca3;
-  --ax3:#93b259;
   --hl1:rgba(134,70,93,.5);
   --hl2:rgba(147,185,96,.3); }
 
@@ -6445,6 +6441,33 @@ settings:
 			-
 				label: Off
 				value: normal
+	-
+		id: canvas
+		title: Canvas
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: canvas-card-label-display
+		title: Card labels
+		type: variable-select
+		allowEmpty: true
+		default: block
+		options:
+			-
+				label: Visible
+				value: block
+			-
+				label: Hidden
+				value: none
+	-
+		id: canvas-dot-pattern
+		title: Canvas dot pattern
+		description: Color for background dot pattern
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: code-blocks
 		title: Code blocks

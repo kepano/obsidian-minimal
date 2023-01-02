@@ -152,7 +152,7 @@
 		.mod-empty,
 		.cm-embed-block > div,
 		.cm-embed-block > mjx-container {
-			width:calc(var(--line-width-adaptive) - var(--folding-offset));
+			width:calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
 			max-width:calc(var(--max-width) - var(--folding-offset));
 			margin-right:auto;
 			margin-left:max(
