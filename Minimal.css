@@ -1365,7 +1365,8 @@ body {
   .embed-strict .el-embed-heading.el-p > p {
     margin-block-start: 0;
     margin-block-end: 0; }
-  .embed-strict .internal-embed .markdown-embed, .embed-strict.markdown-preview-view .markdown-embed {
+  .embed-strict .internal-embed .markdown-embed,
+  .embed-strict .markdown-preview-view .markdown-embed, .embed-strict.markdown-preview-view .markdown-embed {
     padding: 0; }
   .embed-strict .markdown-embed-title,
   .embed-strict .internal-embed .markdown-embed .markdown-embed-title {
