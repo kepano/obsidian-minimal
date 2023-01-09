@@ -5612,7 +5612,7 @@ body.theme-light {
   --color-yellow-rgb: 223,160,0;
   --color-green-rgb: 141,161,1;
   --color-cyan-rgb: 53,167,124;
-  --color-blue-rgb: 127,187,179;
+  --color-blue-rgb: 56,148,196;
   --color-purple-rgb: 223,105,186;
   --color-pink-rgb: 223,105,186;
   --color-red:#f85552;
@@ -5620,7 +5620,7 @@ body.theme-light {
   --color-yellow:#dfa000;
   --color-green:#8da101;
   --color-cyan:#35a77c;
-  --color-blue:#7fbbb3;
+  --color-blue:#3795C5;
   --color-purple:#df69ba;
   --color-pink:#df69ba; }
 
@@ -5643,18 +5643,18 @@ body.theme-light {
   --color-pink:#d699b6; }
 
 .theme-light.minimal-everforest-light {
-  --base-h:46;
+  --base-h:44;
   --base-s:87%;
   --base-l:94%;
-  --accent-h:81;
-  --accent-s:37%;
-  --accent-l:52%;
-  --bg1:#FDF7E3;
-  --bg2:#EEEAD5;
-  --bg3:rgba(206,207,182,.5);
-  --ui1:#dfdbc8;
-  --ui2:#bdc3af;
-  --ui3:#bdc3af;
+  --accent-h:83;
+  --accent-s:36%;
+  --accent-l:53%;
+  --bg1:#fdf6e3;
+  --bg2:#efebd4;
+  --bg3:rgba(226,222,198,.5);
+  --ui1:#e0dcc7;
+  --ui2:#bec5b2;
+  --ui3:#bec5b2;
   --tx1:#5C6A72;
   --tx2:#829181;
   --tx3:#a6b0a0;
@@ -5662,7 +5662,7 @@ body.theme-light {
   --hl2:rgba(222,179,51,.3); }
 
 .theme-light.minimal-everforest-light.minimal-light-tonal {
-  --bg2:#EEEAD5; }
+  --bg2:#fdf6e3; }
 
 .theme-light.minimal-everforest-light.minimal-light-white {
   --bg3:#f3efda;
@@ -5680,12 +5680,11 @@ body.theme-light {
   --accent-h:81;
   --accent-s:34%;
   --accent-l:63%;
-  --bg1:#323D44;
-  --bg2:#2A343A;
-  --bg3:#414C54;
-  --bg3:rgba(78,91,100,0.5);
-  --ui1:#404c51;
-  --ui2:#4A555C;
+  --bg1:#2d353b;
+  --bg2:#232a2e;
+  --bg3:rgba(71,82,88,0.5);
+  --ui1:#475258;
+  --ui2:#4f585e;
   --ui3:#525c62;
   --tx1:#d3c6aa;
   --tx2:#9da9a0;
