@@ -1,4 +1,3 @@
-
 .minimal-code-scroll {
 	--code-white-space: pre;
 	
@@ -8,5 +7,11 @@
 	}
 	.cm-hmd-codeblock {
 		white-space: pre !important;
+	}
+}
+
+@media print {
+	.print {
+		--code-background: #eee !important;
 	}
 }

@@ -8,7 +8,7 @@
 .callouts-outlined {
 	.callout .callout-title {
 		background-color: var(--background-primary);
-		margin-top: -25px;
+		margin-top: -24px;
 		z-index: 200;
 		width: fit-content;
 		padding: 0 0.5em;
@@ -28,5 +28,9 @@
 
 	.cm-embed-block.cm-callout {
 		padding-top: 12px;
+	}
+
+	.callout-content .callout {
+		margin-top: 18px;
 	}
 }

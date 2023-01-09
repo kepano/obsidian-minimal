@@ -1236,7 +1236,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 
 .callouts-outlined .callout .callout-title {
   background-color: var(--background-primary);
-  margin-top: -25px;
+  margin-top: -24px;
   z-index: 200;
   width: fit-content;
   padding: 0 0.5em;
@@ -1252,6 +1252,8 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   background-color: transparent; }
 .callouts-outlined .cm-embed-block.cm-callout {
   padding-top: 12px; }
+.callouts-outlined .callout-content .callout {
+  margin-top: 18px; }
 
 /* Checklists, task lists, checkboxes */
 body {
@@ -1308,6 +1310,9 @@ input[type=checkbox] {
   .minimal-code-scroll .cm-hmd-codeblock {
     white-space: pre !important; }
 
+@media print {
+  .print {
+    --code-background: #eee !important; } }
 /* Transcluded notes and embeds */
 body {
   --embed-max-height: none; }
