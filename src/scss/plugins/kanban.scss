@@ -18,6 +18,12 @@ body:not(.minimal-icons-off) .kanban-plugin svg.cross {
 
 body {
 
+	.kanban-plugin__icon>svg,
+	.kanban-plugin__lane-settings-button svg {
+		width: 18px;
+		height: 18px;
+	}
+
 	.kanban-plugin {
 		--kanban-border:var(--border-width);
 		--interactive-accent:var(--text-selection);
@@ -33,7 +39,6 @@ body {
 		margin:0 auto;
 	}
 	.kanban-plugin__checkbox-label {
-		font-size:var(--font-adaptive-small);
 		color:var(--text-muted);
 	}
 	.kanban-plugin__item-markdown ul {
@@ -52,12 +57,8 @@ body {
 	.kanban-plugin__grow-wrap > textarea, 
 	.kanban-plugin__grow-wrap::after, 
 	.kanban-plugin__item-title p {
-		font-size:calc(var(--font-adaptive-normal) - 2px);
+		font-size: var(--font-ui-medium);
 		line-height:1.3;
-	}
-	.kanban-plugin__item-input-actions button,
-	.kanban-plugin__lane-input-actions button {
-		font-size:var(--font-adaptive-small);
 	}
 	.kanban-plugin__item {
 		background-color:var(--background-primary);
@@ -76,7 +77,7 @@ body {
 	.kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap > textarea {
 		background:transparent;
 		color:var(--text-normal);
-		font-size:calc(var(--font-adaptive-normal) - 2px);
+		font-size: var(--font-ui-medium);
 		font-weight:500;
 	}
 	.kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea {
@@ -85,9 +86,6 @@ body {
 		height: auto;
 	}
 	.kanban-plugin__item-form .kanban-plugin__grow-wrap {
-		padding:6px 8px;
-		border-radius:6px;
-		border:1px solid var(--background-modifier-border);
 		background-color:var(--background-primary);
 	}
 	.kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea::placeholder {
@@ -138,7 +136,6 @@ body {
 		background-color:var(--background-modifier-hover);
 	}
 	.kanban-plugin__item-button-wrapper > button {
-		font-size:var(--font-adaptive-small);
 		color:var(--text-muted);
 		font-weight:400;
 		background:transparent;

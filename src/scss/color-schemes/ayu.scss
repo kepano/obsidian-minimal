@@ -1,0 +1,102 @@
+/* ayu */
+.theme-light.minimal-ayu-light {
+	--color-red-rgb: 230,80,80;
+	--color-orange-rgb: 250,141,62;
+	--color-yellow-rgb: 242,174,73;
+	--color-green-rgb: 108,191,67;
+	--color-cyan-rgb: 76,191,153;
+	--color-blue-rgb: 57,158,230;
+	--color-purple-rgb: 163,122,204;
+	--color-pink-rgb: 255,115,131;
+
+	--color-red:#e65050;
+	--color-orange:#fa8d3e;
+	--color-yellow:#f2ae49;
+	--color-green:#6CBF43;
+	--color-cyan:#4cbf99;
+	--color-blue:#399ee6;
+	--color-purple:#a37acc;
+	--color-pink:#ff7383;
+}
+
+.theme-dark.minimal-ayu-dark {
+	--color-red-rgb: 255,102,102;
+	--color-orange-rgb: 250,173,102;
+	--color-yellow-rgb: 255,209,55;
+	--color-green-rgb: 135,217,108;
+	--color-cyan-rgb: 149,230,203;
+	--color-blue-rgb: 115,208,255;
+	--color-purple-rgb: 223,191,255;
+	--color-pink-rgb: 242,121,131;
+
+	--color-red:#ff6666;
+	--color-orange:#ffad66;
+	--color-yellow:#ffd137;
+	--color-green:#87D96C;
+	--color-cyan:#95e6cb;
+	--color-blue:#73d0ff;
+	--color-purple:#dfbfff;
+	--color-pink:#f27983;
+}
+
+.theme-light.minimal-ayu-light {
+	--base-h:210;
+	--base-s:17%;
+	--base-l:98%;
+
+	--accent-h:36;
+	--accent-s:100%;
+	--accent-l:50%;
+
+	--bg1:#fff;
+	--bg2:#f8f9fa;
+	--bg3:rgba(209,218,224,0.5);
+
+	--ui1:#E6EAED;
+
+	--tx1:#5C6165;
+	--tx2:#8A9199;
+	--tx3:#AAAEB0;
+
+	--hl1:rgba(3,91,214,0.15);
+}
+.theme-light.minimal-ayu-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-ayu-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-ayu-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-ayu-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-ayu-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-dark.minimal-ayu-dark {
+	--base-h:222;
+	--base-s:22%;
+	--base-l:15%;
+
+	--accent-h:35;
+	--accent-s:100%;
+	--accent-l:60%;
+
+	--bg1:#232937;
+	--bg2:#1E2431;
+	--bg3:rgba(51,61,80,0.5);
+
+	--ui1:#333C4A;
+	--ui2:#333C4A;
+	--ui3:#333C4A;
+
+	--tx1:#cccac2;
+	--tx2:#707A8C;
+	--tx3:#495063;
+
+	--hl1:rgba(64,159,255,0.25);
+}
+.theme-dark.minimal-ayu-dark.minimal-dark-black {
+	--accent-h:40;
+	--accent-s:75%;
+	--accent-l:61%;
+
+	--bg3:#0E1017;
+
+	--tx1:#BFBDB6;
+
+	--divider-color:#11151C;
+	--tab-outline-color:#11151C;
+}

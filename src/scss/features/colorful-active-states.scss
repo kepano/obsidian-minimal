@@ -1,11 +1,9 @@
 /* Colorful active states */
 .colorful-active {
-	--sp1: #fff;
-	--text-on-accent: var(--sp1);
 	
 	.nav-files-container {
 		--nav-item-background-active: var(--interactive-accent);
-		--nav-item-color-active: var(--sp1);
+		--nav-item-color-active: var(--text-on-accent);
 	}
 
 	#calendar-container {
@@ -14,12 +12,12 @@
 		.active:hover,
 		.day:active {
 			background-color:var(--interactive-accent);
-			color:var(--sp1);
+			color:var(--text-on-accent);
 		}
 		.day:active .dot,
 		.active .dot,
 		.today.active .dot {
-			fill:var(--sp1);
+			fill:var(--text-on-accent);
 		}
 	}
 }
