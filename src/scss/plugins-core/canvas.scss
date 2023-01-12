@@ -1,11 +1,9 @@
 body {
-	--canvas-card-label-display: block;
 	--canvas-dot-pattern: var(--background-modifier-border-hover);
 }
 
 .canvas-node-label {
 	font-size: var(--font-adaptive-small);
-	display: var(--canvas-card-label-display);
 }
 
 .canvas-edges :not(.is-themed) path.canvas-display-path {

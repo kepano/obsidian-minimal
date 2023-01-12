@@ -3656,12 +3656,10 @@ body:not(.full-file-names) .tree-item-inner {
   font-weight: 500; }
 
 body {
-  --canvas-card-label-display: block;
   --canvas-dot-pattern: var(--background-modifier-border-hover); }
 
 .canvas-node-label {
-  font-size: var(--font-adaptive-small);
-  display: var(--canvas-card-label-display); }
+  font-size: var(--font-adaptive-small); }
 
 .canvas-edges :not(.is-themed) path.canvas-display-path {
   stroke: var(--background-modifier-border-focus); }
