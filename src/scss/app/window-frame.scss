@@ -19,7 +19,7 @@ body.window-title-off .titlebar-text {
 		}
 	}
 
-	&:not(.minimal-light-white) {
+	&:not(.minimal-dark-tonal):not(.minimal-light-white) {
 		.workspace-ribbon.mod-left:not(.is-collapsed) {
 			--titlebar-background: var(--bg2);
 		}
