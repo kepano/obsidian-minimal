@@ -21,20 +21,38 @@
 }
 
 /* Invert  */
-.theme-dark img[src$="#invert"],
-.theme-dark div[src$="#invert"] img,
-.theme-dark span[src$="#invert"] img {
-	filter:invert(1) hue-rotate(180deg);
-	mix-blend-mode:screen;
-}
-.theme-dark div[src$="#invert"] {
-	background-color:var(--background-primary);
+
+// Necessary to set background for screen/multiply to work
+div[src$="#multiply"],
+div[src$="#invert"] {
+	background-color: var(--background-primary);
 }
 
-.theme-light img[src$="#invertW"],
-.theme-light div[src$="#invertW"] img,
-.theme-light span[src$="invertW"] img {
-	filter:invert(1) hue-rotate(180deg);
+.theme-dark {
+	img[src$="#invert"],
+	div[src$="#invert"] img,
+	span[src$="#invert"] img {
+		filter: invert(1) hue-rotate(180deg);
+		mix-blend-mode: screen;
+	}
+	img[src$="#multiply"],
+	div[src$="#multiply"] img,
+	span[src$="#multiply"] img {
+		mix-blend-mode: screen;
+	}
+}
+
+.theme-light {
+	img[src$="#multiply"],
+	div[src$="#multiply"] img,
+	span[src$="#multiply"] img {
+		mix-blend-mode: multiply;
+	}
+	img[src$="#invertW"],
+	div[src$="#invertW"] img,
+	span[src$="invertW"] img {
+		filter: invert(1) hue-rotate(180deg);
+	}
 }
 
 /* Circle */
