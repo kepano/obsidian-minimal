@@ -2655,8 +2655,11 @@ body {
   --image-grid-background: transparent; }
 
 .image-embed.is-loaded {
-  line-height: 0;
-  background-color: var(--image-grid-background); }
+  line-height: 0; }
+  .image-embed.is-loaded img {
+    background-color: var(--image-grid-background); }
+    .image-embed.is-loaded img:active {
+      background-color: transparent; }
 
 div:not(.el-embed-image) + .el-embed-image {
   margin-top: 1rem; }

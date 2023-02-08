@@ -18,7 +18,12 @@ body {
 
 .image-embed.is-loaded {
 	line-height:0;
-	background-color: var(--image-grid-background);
+	img {
+		background-color: var(--image-grid-background);
+		&:active {
+			background-color: transparent;
+		}
+	}
 }
 div:not(.el-embed-image) + .el-embed-image {
 	margin-top:1rem;
