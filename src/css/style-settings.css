@@ -988,6 +988,28 @@ settings:
 		description: Turns off click + hold to zoom images
 		type: class-toggle
 	-
+		id: image-grid-fit
+		title: Image grid crop
+		description: Sets how images get cropped in a grid
+		type: variable-select
+		default: cover
+		options:
+			-
+				label: Crop to fit
+				value: cover
+			-
+				label: Show full image
+				value: contain
+	-
+		id: image-grid-background
+		title: Image grid background
+		description: Background of images in cells, useful when images are not cropped to fit
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: indentation-guides
 		title: Indentation guides
 		type: heading

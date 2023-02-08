@@ -1404,8 +1404,8 @@ body {
   padding: 0 calc(var(--nested-padding) / 2) 0 var(--nested-padding); }
 
 .markdown-embed-title {
-  line-height: 18px;
-  height: 24px; }
+  line-height: 0;
+  height: 0; }
 
 .internal-embed:not([src*="#^"]) .markdown-embed-link {
   right: 0;
@@ -2650,6 +2650,14 @@ https://github.com/sponsors/kepano
 
 */
 /* Requires Contextual Typography 2.2.1+ */
+body {
+  --image-grid-fit: cover;
+  --image-grid-background: transparent; }
+
+.image-embed.is-loaded {
+  line-height: 0;
+  background-color: var(--image-grid-background); }
+
 div:not(.el-embed-image) + .el-embed-image {
   margin-top: 1rem; }
 
@@ -2674,11 +2682,11 @@ div:not(.el-embed-image) + .el-embed-image {
   display: none; }
 
 .img-grid .markdown-preview-section > .el-embed-image > p > img {
-  object-fit: cover;
+  object-fit: var(--image-grid-fit);
   align-self: stretch; }
 
 .img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
-  object-fit: cover;
+  object-fit: var(--image-grid-fit);
   height: 100%; }
 
 .img-grid .img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img,
@@ -7205,6 +7213,28 @@ settings:
 		title: Disable image zoom
 		description: Turns off click + hold to zoom images
 		type: class-toggle
+	-
+		id: image-grid-fit
+		title: Image grid crop
+		description: Sets how images get cropped in a grid
+		type: variable-select
+		default: cover
+		options:
+			-
+				label: Crop to fit
+				value: cover
+			-
+				label: Show full image
+				value: contain
+	-
+		id: image-grid-background
+		title: Image grid background
+		description: Background of images in cells, useful when images are not cropped to fit
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: indentation-guides
 		title: Indentation guides
