@@ -25,14 +25,12 @@ body,
 
 .markdown-source-view.mod-cm6 .cm-scroller,
 .markdown-source-view,
-.cm-s-obsidian,
-.cm-s-obsidian span.cm-formatting-task {
+.cm-s-obsidian {
 	line-height: var(--line-height);
 	font-family: var(--font-editor);
 }
 
 .cm-s-obsidian span.cm-formatting-task {
-	font-family:var(--font-editor);
 	line-height:var(--line-height);
 }
 
