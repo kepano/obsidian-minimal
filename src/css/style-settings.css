@@ -459,6 +459,43 @@ settings:
 		type: class-toggle
 		default: false
 	-
+		id: embed-underline
+		title: Underline embedded text
+		description: Transcluded text is underlined. Can be enabled per file using the embed-underline helper class
+		type: class-toggle
+		default: false
+	-
+		id: embed-decoration-style
+		title: Embedded text underline style
+		type: variable-select
+		description: Requires underlines to be enabled
+		allowEmpty: true
+		default: none
+		options:
+			-
+				label: Solid
+				value: solid
+			-
+				label: Dotted
+				value: dotted
+			-
+				label: Dashed
+				value: dashed
+			-
+				label: Double
+				value: double
+			-
+				label: Wavy
+				value: wavy
+	-
+		id: embed-decoration-color
+		title: Embedded text underline color
+		type: variable-themed-color
+		description: Requires underlines to be enabled
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: graphs
 		title: Graphs
 		type: heading

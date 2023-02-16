@@ -1358,7 +1358,9 @@ input[type=checkbox] {
     --code-background: #eee !important; } }
 /* Transcluded notes and embeds */
 body {
-  --embed-max-height: none; }
+  --embed-max-height: none;
+  --embed-decoration-style: solid;
+  --embed-decoration-color: var(--background-modifier-border-hover); }
 
 /* Strict embeds (naked) */
 .embed-strict {
@@ -1379,6 +1381,11 @@ body {
   .embed-strict .internal-embed:not([src*="#^"]) .markdown-embed-link {
     width: 24px;
     opacity: 0; }
+
+.embed-underline .internal-embed {
+  text-decoration-line: underline;
+  text-decoration-style: var(--embed-decoration-style);
+  text-decoration-color: var(--embed-decoration-color); }
 
 .embed-strict.contextual-typography .internal-embed .markdown-preview-view .markdown-preview-sizer > div,
 .contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer > div {
@@ -6685,6 +6692,43 @@ settings:
 		description: Transclusions appear seamlessly in the flow of text. Can be enabled per file using the embed-strict helper class
 		type: class-toggle
 		default: false
+	-
+		id: embed-underline
+		title: Underline embedded text
+		description: Transcluded text is underlined. Can be enabled per file using the embed-underline helper class
+		type: class-toggle
+		default: false
+	-
+		id: embed-decoration-style
+		title: Embedded text underline style
+		type: variable-select
+		description: Requires underlines to be enabled
+		allowEmpty: true
+		default: none
+		options:
+			-
+				label: Solid
+				value: solid
+			-
+				label: Dotted
+				value: dotted
+			-
+				label: Dashed
+				value: dashed
+			-
+				label: Double
+				value: double
+			-
+				label: Wavy
+				value: wavy
+	-
+		id: embed-decoration-color
+		title: Embedded text underline color
+		type: variable-themed-color
+		description: Requires underlines to be enabled
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: graphs
 		title: Graphs
