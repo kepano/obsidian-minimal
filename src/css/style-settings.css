@@ -470,17 +470,17 @@ settings:
 		type: variable-select
 		description: Requires underlines to be enabled
 		allowEmpty: true
-		default: none
+		default: solid
 		options:
 			-
 				label: Solid
 				value: solid
 			-
-				label: Dotted
-				value: dotted
-			-
 				label: Dashed
 				value: dashed
+			-
+				label: Dotted
+				value: dotted
 			-
 				label: Double
 				value: double
