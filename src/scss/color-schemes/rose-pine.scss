@@ -1,0 +1,101 @@
+/* 
+Rosé Pine
+MIT License 
+Copyright (c) 2023 Rosé Pine
+https://github.com/rose-pine/rose-pine-theme
+*/
+
+.theme-light.minimal-rose-pine-light {
+	--color-red-rgb: 180,99,122;
+	--color-orange-rgb: 215,130,125;
+	--color-yellow-rgb: 234,157,53;
+	--color-green-rgb: 40,105,131;
+	--color-cyan-rgb: 87,147,159;
+	--color-blue-rgb: 87,147,159;
+	--color-purple-rgb: 144,122,169;
+	--color-pink-rgb: 144,122,169;
+
+	--color-red: #b4637a;
+	--color-orange: #d7827e;
+	--color-yellow: #ea9d34;
+	--color-green: #286983;
+	--color-cyan: #56949f;
+	--color-blue: #56949f;
+	--color-purple: #907aa9;
+	--color-pink: #907aa9;
+}
+
+.theme-dark.minimal-rose-pine-dark {
+	--color-red-rgb: 234,111,146;
+	--color-orange-rgb: 233,155,151;
+	--color-yellow-rgb: 246,193,119;
+	--color-green-rgb: 47,116,143;
+	--color-cyan-rgb: 157,207,215;
+	--color-blue-rgb: 157,207,215;
+	--color-purple-rgb: 196,167,231;
+	--color-pink-rgb: 196,167,231;
+
+	--color-red: #eb6f92;
+	--color-orange: #ea9a97;
+	--color-yellow: #f6c177;
+	--color-green: #31748f;
+	--color-cyan: #9ccfd8;
+	--color-blue: #9ccfd8;
+	--color-purple: #c4a7e7;
+	--color-pink: #c4a7e7;
+}
+
+.theme-light.minimal-rose-pine-light {
+	--base-h: 32;
+	--base-s: 57%;
+	--base-l: 95%;
+
+	--accent-h: 3;
+	--accent-s: 53%;
+	--accent-l: 67%;
+
+	--bg1: #fffaf3;
+	--bg2: #faf4ed;
+	--bg3: rgba(233,223,218,0.5);
+
+	--ui1: #EAE3E1;
+	--ui2: #dfdad9;
+	--ui3: #cecacd;
+
+	--tx1: #575279;
+	--tx2: #797593;
+	--tx3: #9893a5;
+
+	--hl1: #EAE3E1;
+}
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-dark.minimal-rose-pine-dark {
+	--base-h: 247;
+	--base-s: 23%;
+	--base-l: 15%;
+
+	--accent-h: 2;
+	--accent-s: 55%;
+	--accent-l: 83%;
+
+	--bg1: #1f1d2e;
+	--bg2: #191724;
+	--bg3: rgba(68,66,86,0.5);
+
+	--ui1: #312F41;
+	--ui2: #403d52;
+	--ui3: #524f67;
+
+	--tx1: #e0def4;
+	--tx2: #908caa;
+	--tx3: #6e6a86;
+
+	--hl1: #403d52;
+}
+.theme-dark.minimal-rose-pine-dark.minimal-dark-black {
+	--ui1: #21202e;
+}

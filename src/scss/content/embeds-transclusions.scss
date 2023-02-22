@@ -43,6 +43,11 @@ body {
 		text-decoration-color: var(--embed-decoration-color);
 	}
 }
+.embed-hide-title {
+	.markdown-embed-title {
+		display: none;
+	}
+}
 
 
 .embed-strict.contextual-typography .internal-embed .markdown-preview-view .markdown-preview-sizer>div,
@@ -68,10 +73,6 @@ body {
 .markdown-preview-view .markdown-embed {
 	margin-top:var(--nested-padding);
 	padding:0 calc(var(--nested-padding) / 2) 0 var(--nested-padding);
-}
-.markdown-embed-title {
-	line-height:0;
-	height:0;
 }
 .internal-embed:not([src*="#^"]) .markdown-embed-link {
 	right:0;

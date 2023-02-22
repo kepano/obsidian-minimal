@@ -459,6 +459,12 @@ settings:
 		type: class-toggle
 		default: false
 	-
+		id: embed-hide-title
+		title: Hide embed titles
+		description: Hide title of the transcluded file
+		type: class-toggle
+		default: false
+	-
 		id: embed-underline
 		title: Underline embedded text
 		description: Transcluded text is underlined. Can be enabled per file using the embed-underline helper class

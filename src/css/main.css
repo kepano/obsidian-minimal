@@ -1344,6 +1344,9 @@ body {
   text-decoration-style: var(--embed-decoration-style);
   text-decoration-color: var(--embed-decoration-color); }
 
+.embed-hide-title .markdown-embed-title {
+  display: none; }
+
 .embed-strict.contextual-typography .internal-embed .markdown-preview-view .markdown-preview-sizer > div,
 .contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer > div {
   margin: 0;
@@ -1366,10 +1369,6 @@ body {
 .markdown-preview-view .markdown-embed {
   margin-top: var(--nested-padding);
   padding: 0 calc(var(--nested-padding) / 2) 0 var(--nested-padding); }
-
-.markdown-embed-title {
-  line-height: 0;
-  height: 0; }
 
 .internal-embed:not([src*="#^"]) .markdown-embed-link {
   right: 0;
@@ -3660,8 +3659,10 @@ body:not(.full-file-names) .tree-item-inner {
 .is-tablet .workspace-drawer-header {
   padding-top: var(--size-4-4); }
 
-.is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
-  margin-left: 0; }
+.is-mobile {
+  --interactive-normal: var(--background-secondary); }
+  .is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
+    margin-left: 0; }
 
 /* Mobile
 @import 'mobile/mobile';
@@ -5433,7 +5434,12 @@ body.theme-light {
   --divider-color:#282c34;
   --tab-outline-color:#282c34; }
 
-/* ayu */
+/*
+ayu
+MIT License
+Copyright (c) Konstantin Pschera <me@kons.ch> (kons.ch)
+https://github.com/ayu-theme/ayu-colors
+*/
 .theme-light.minimal-ayu-light {
   --color-red-rgb: 230,80,80;
   --color-orange-rgb: 250,141,62;
@@ -5518,9 +5524,14 @@ body.theme-light {
   --divider-color:#11151C;
   --tab-outline-color:#11151C; }
 
-/* catppuccin */
+/*
+Catppuccin
+MIT License
+Copyright (c) 2021 Catppuccin
+https://github.com/catppuccin/catppuccin
+*/
 .theme-light.minimal-catppuccin-light {
-  --color-red-rgb: 230, 69, 83;
+  --color-red-rgb: 230,69,83;
   --color-orange-rgb: 254,100,12;
   --color-yellow-rgb: 223,142,29;
   --color-green-rgb: 64,160,43;
@@ -5610,7 +5621,12 @@ body.theme-light {
   --ui1: #303446;
   --hl2: rgba(223,142,29,.5); }
 
-/* Dracula */
+/*
+Dracula
+MIT License
+Copyright (c) 2016 Dracula Theme
+https://github.com/dracula/dracula-theme
+*/
 .theme-dark.minimal-dracula-dark {
   --color-red-rgb: 255,85,85;
   --color-orange-rgb: 255,184,108;
@@ -5652,7 +5668,12 @@ body.theme-light {
 .theme-dark.minimal-dracula-dark.minimal-dark-black {
   --ui1:#282a36; }
 
-/* Everforest */
+/*
+Everforest
+MIT License
+Copyright (c) 2019 sainnhe
+https://github.com/sainnhe/everforest
+*/
 .theme-light.minimal-everforest-light {
   --color-red-rgb: 248,85,82;
   --color-orange-rgb: 245,125,38;
@@ -5743,7 +5764,11 @@ body.theme-light {
   --hl1:rgba(134,70,93,.4);
   --ui1:#2b3339; }
 
-/* Gruvbox */
+/*
+Gruvbox
+MIT License
+https://github.com/morhetz/gruvbox
+*/
 .theme-dark.minimal-gruvbox-dark,
 .theme-light.minimal-gruvbox-light {
   --color-red-rgb: 204, 36, 29;
@@ -5885,7 +5910,12 @@ body.theme-light {
   --divider-color:#1e1e1e;
   --tab-outline-color:#1e1e1e; }
 
-/* Nord */
+/*
+Nord
+MIT License
+Copyright (c) 2016-present Sven Greb <development@svengreb.de> (https://www.svengreb.de)
+https://github.com/nordtheme/nord
+*/
 .theme-dark.minimal-nord-dark,
 .theme-light.minimal-nord-light {
   --color-red-rgb: 191,97,106;
@@ -5998,7 +6028,98 @@ body.theme-light {
   --bg3:#232729;
   --ui1:#2f3437; }
 
-/* Solarized */
+/* 
+Rosé Pine
+MIT License 
+Copyright (c) 2023 Rosé Pine
+https://github.com/rose-pine/rose-pine-theme
+*/
+.theme-light.minimal-rose-pine-light {
+  --color-red-rgb: 180,99,122;
+  --color-orange-rgb: 215,130,125;
+  --color-yellow-rgb: 234,157,53;
+  --color-green-rgb: 40,105,131;
+  --color-cyan-rgb: 87,147,159;
+  --color-blue-rgb: 87,147,159;
+  --color-purple-rgb: 144,122,169;
+  --color-pink-rgb: 144,122,169;
+  --color-red: #b4637a;
+  --color-orange: #d7827e;
+  --color-yellow: #ea9d34;
+  --color-green: #286983;
+  --color-cyan: #56949f;
+  --color-blue: #56949f;
+  --color-purple: #907aa9;
+  --color-pink: #907aa9; }
+
+.theme-dark.minimal-rose-pine-dark {
+  --color-red-rgb: 234,111,146;
+  --color-orange-rgb: 233,155,151;
+  --color-yellow-rgb: 246,193,119;
+  --color-green-rgb: 47,116,143;
+  --color-cyan-rgb: 157,207,215;
+  --color-blue-rgb: 157,207,215;
+  --color-purple-rgb: 196,167,231;
+  --color-pink-rgb: 196,167,231;
+  --color-red: #eb6f92;
+  --color-orange: #ea9a97;
+  --color-yellow: #f6c177;
+  --color-green: #31748f;
+  --color-cyan: #9ccfd8;
+  --color-blue: #9ccfd8;
+  --color-purple: #c4a7e7;
+  --color-pink: #c4a7e7; }
+
+.theme-light.minimal-rose-pine-light {
+  --base-h: 32;
+  --base-s: 57%;
+  --base-l: 95%;
+  --accent-h: 3;
+  --accent-s: 53%;
+  --accent-l: 67%;
+  --bg1: #fffaf3;
+  --bg2: #faf4ed;
+  --bg3: rgba(233,223,218,0.5);
+  --ui1: #EAE3E1;
+  --ui2: #dfdad9;
+  --ui3: #cecacd;
+  --tx1: #575279;
+  --tx2: #797593;
+  --tx3: #9893a5;
+  --hl1: #EAE3E1; }
+
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-dark.minimal-rose-pine-dark {
+  --base-h: 247;
+  --base-s: 23%;
+  --base-l: 15%;
+  --accent-h: 2;
+  --accent-s: 55%;
+  --accent-l: 83%;
+  --bg1: #1f1d2e;
+  --bg2: #191724;
+  --bg3: rgba(68,66,86,0.5);
+  --ui1: #312F41;
+  --ui2: #403d52;
+  --ui3: #524f67;
+  --tx1: #e0def4;
+  --tx2: #908caa;
+  --tx3: #6e6a86;
+  --hl1: #403d52; }
+
+.theme-dark.minimal-rose-pine-dark.minimal-dark-black {
+  --ui1: #21202e; }
+
+/*
+Solarized
+MIT License
+Copyright (c) 2011 Ethan Schoonover
+https://ethanschoonover.com/solarized/
+*/
 .theme-dark.minimal-solarized-dark,
 .theme-light.minimal-solarized-light {
   --color-red-rgb: 220, 50, 47;

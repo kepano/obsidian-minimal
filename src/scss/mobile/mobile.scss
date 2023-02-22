@@ -20,6 +20,8 @@
 }
 
 .is-mobile {
+	--interactive-normal: var(--background-secondary);
+
 	.markdown-source-view.mod-cm6 .cm-gutters {
 		margin-left: 0;
 	}
