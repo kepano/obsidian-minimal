@@ -21,8 +21,21 @@
 
 .is-mobile {
 	--interactive-normal: var(--background-secondary);
+	--background-modifier-form-field: var(--background-secondary);
+	--background-modifier-form-field-highlighted: var(--background-secondary);
 
 	.markdown-source-view.mod-cm6 .cm-gutters {
 		margin-left: 0;
 	}
+}
+
+.is-mobile {
+	.workspace-drawer.mod-left.is-pinned {
+		max-width:var(--mobile-left-sidebar-width);
+		min-width:150pt;
+  }
+	.workspace-drawer.mod-right.is-pinned {
+		max-width:var(--mobile-right-sidebar-width);
+		min-width:150pt;
+  }
 }

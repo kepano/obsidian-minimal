@@ -54,14 +54,7 @@ body.is-mobile {
     border:none;
     box-shadow:0 5px 50px 5px rgba(0,0,0,0.05);
   }
-  .workspace-drawer.mod-left.is-pinned {
-    max-width:var(--mobile-left-sidebar-width);
-    min-width:150pt;
-  }
-  .workspace-drawer.mod-right.is-pinned {
-    max-width:var(--mobile-right-sidebar-width);
-    min-width:150pt;
-  }
+
   .workspace-drawer.mod-right.is-pinned {
     border-right:none;
   }

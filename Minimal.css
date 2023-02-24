@@ -3703,9 +3703,18 @@ body:not(.full-file-names) .tree-item-inner {
   padding-top: var(--size-4-4); }
 
 .is-mobile {
-  --interactive-normal: var(--background-secondary); }
+  --interactive-normal: var(--background-secondary);
+  --background-modifier-form-field: var(--background-secondary);
+  --background-modifier-form-field-highlighted: var(--background-secondary); }
   .is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
     margin-left: 0; }
+
+.is-mobile .workspace-drawer.mod-left.is-pinned {
+  max-width: var(--mobile-left-sidebar-width);
+  min-width: 150pt; }
+.is-mobile .workspace-drawer.mod-right.is-pinned {
+  max-width: var(--mobile-right-sidebar-width);
+  min-width: 150pt; }
 
 /* Mobile
 */
