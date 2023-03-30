@@ -12,35 +12,4 @@
     min-width:0;
   }
 
-  .modal-content {
-    margin-top:10px;
-
-    .setting-item {
-      margin-top:10px;
-    }
-  }
-
-  .modal-button-container {
-    display:flex;
-    
-    > .mod-warning:nth-last-child(3) {
-      background:transparent;
-      border:none;
-      font-weight:500;
-      color:var(--text-error);
-      cursor:pointer;
-      margin-right:auto;
-      box-shadow:none;
-      padding-left:0;
-      padding-right:0;
-    } 
-
-    > .mod-warning:nth-last-child(3):hover {
-      text-decoration:underline;
-    }
-
-    > .mod-warning:nth-last-child(2) {
-      margin-left:auto;
-    }
-  }
 }
