@@ -36,6 +36,7 @@
 @import 'content/links';
 @import 'content/lists';
 @import 'content/preview-backlinks';
+@import 'content/pdf';
 @import 'content/tables';
 @import 'content/tags';
 @import 'content/text';
@@ -82,6 +83,7 @@
 @import 'plugins-core/prompt';
 @import 'plugins-core/publish';
 @import 'plugins-core/release-notes';
+@import 'plugins-core/search';
 @import 'plugins-core/sync';
 
 /* Community plugins */
@@ -114,6 +116,7 @@
 @import 'plugins/style-settings';
 @import 'plugins/todoist';
 @import 'plugins/tracker';
+@import 'plugins/weaver';
 
 /* Color schemes */
 @import 'color-schemes/atom';

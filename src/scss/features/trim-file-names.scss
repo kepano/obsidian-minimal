@@ -9,5 +9,6 @@ body:not(.full-file-names) {
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
+		align-self: center;
 	}
 }

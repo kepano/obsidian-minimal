@@ -1215,6 +1215,47 @@ settings:
 		step: 0.1
 		format: em
 	-
+		id: pdf
+		title: PDFs
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: pdf-page-style
+		title: PDF page style
+		description: Borders and shadows around pages
+		type: class-select
+		allowEmpty: false
+		default: pdf-seamless-on
+		options:
+			-
+				label: Seamless
+				value: pdf-seamless-on
+			-
+				label: Shadows
+				value: pdf-shadows-on
+	-
+		id: pdf-invert-dark
+		title: Invert PDFs in dark mode
+		description: Best for working with black text on white pages
+		type: class-toggle
+		default: true
+	-
+		id: pdf-blend-light
+		title: Blend PDFs in light mode
+		description: Allow PDFs to blend into the color scheme background color
+		type: class-toggle
+		default: true
+	-
+		id: pdf-dark-opacity
+		title: PDF opacity in dark mode
+		description: Fade PDF pages in dark mode
+		type: variable-number-slider
+		default: 1
+		min: 0.25
+		max: 1
+		step: 0.05
+	-
 		id: sidebars
 		title: Sidebars
 		type: heading

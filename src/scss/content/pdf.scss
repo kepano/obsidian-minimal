@@ -1,0 +1,44 @@
+body {
+	--pdf-dark-opacity: 1;
+}
+
+.theme-light:not(.pdf-shadows-on),
+.theme-dark:not(.pdf-shadows-on) {
+	--pdf-shadow: none;
+	--pdf-thumbnail-shadow: none;
+
+	.pdf-viewer .page {
+		border: 0;
+	}
+	.pdf-sidebar-container .thumbnailSelectionRing {
+		padding: 0;
+	}
+	.pdf-sidebar-container .thumbnail::after {
+		right: var(--size-4-2);
+		bottom: var(--size-4-2);
+	}
+}
+
+.theme-dark {
+	--pdf-thumbnail-shadow: 0 0 1px 0 rgba(0,0,0,0.6);
+	--pdf-shadow: 0 0 1px 0 rgba(0,0,0,0.6);
+
+	.pdf-viewer .canvasWrapper {
+		opacity: var(--pdf-dark-opacity);
+	}
+	&.pdf-invert-dark {
+		.pdf-viewer .canvasWrapper,
+		.pdf-thumbnail-view .thumbnailImage {
+			filter: invert(1) hue-rotate(180deg);
+			mix-blend-mode: screen;
+		}
+	}
+}
+.theme-light {
+	&.pdf-blend-light {
+		.pdf-viewer .canvasWrapper,
+		.pdf-thumbnail-view .thumbnailImage {
+			mix-blend-mode: multiply;
+		}
+	}
+}
