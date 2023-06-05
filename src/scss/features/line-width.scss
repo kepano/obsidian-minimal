@@ -112,14 +112,14 @@
 	margin-left:0 !important;
 }
 
-/* 
+/*
 	Line width for Live Preview / Editor mode
 	Gets complicated.
 	-------------------------------------------*/
 
 	/* Nudge everything slightly to the left to make space for folding and gutters */
 	/* This is the big daddy rule for most editor content line types */
-	.markdown-source-view.mod-cm6.is-readable-line-width { 
+	.markdown-source-view.mod-cm6.is-readable-line-width {
 		.internal-embed,
 		.cm-content > .image-embed,
 		.cm-line,
@@ -128,6 +128,7 @@
 		.embedded-backlinks,
 		.cm-embed-block.cm-callout > .callout,
 		.cm-html-embed,
+		.external-embed,
 		.cm-content > img:not([width]),
 		table {
 			width:calc(var(--line-width-adaptive) - var(--folding-offset));
@@ -172,7 +173,7 @@
 		}
 	}
 
-/* 
+/*
 Dataview lists/checklists
 A nightmare mainly because there is no selector that indicates
 a list is present inside the dataview block
