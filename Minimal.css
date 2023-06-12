@@ -1335,7 +1335,7 @@ body {
     width: 24px;
     opacity: 0; }
 
-.embed-underline .internal-embed {
+.embed-underline .internal-embed:not(.pdf-embed) {
   text-decoration-line: underline;
   text-decoration-style: var(--embed-decoration-style);
   text-decoration-color: var(--embed-decoration-color); }
@@ -1501,13 +1501,13 @@ body {
   --pdf-shadow: 0 0 1px 0 rgba(0,0,0,0.6); }
   .theme-dark .pdf-viewer .canvasWrapper {
     opacity: var(--pdf-dark-opacity); }
-  .theme-dark.pdf-invert-dark .pdf-viewer .canvasWrapper,
-  .theme-dark.pdf-invert-dark .pdf-thumbnail-view .thumbnailImage {
+  .theme-dark.pdf-invert-dark .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper,
+  .theme-dark.pdf-invert-dark .workspace-leaf-content[data-type=pdf] .pdf-thumbnail-view .thumbnailImage {
     filter: invert(1) hue-rotate(180deg);
     mix-blend-mode: screen; }
 
-.theme-light.pdf-blend-light .pdf-viewer .canvasWrapper,
-.theme-light.pdf-blend-light .pdf-thumbnail-view .thumbnailImage {
+.theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper,
+.theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdf-thumbnail-view .thumbnailImage {
   mix-blend-mode: multiply; }
 
 /* Preview mode tables */
@@ -2568,6 +2568,12 @@ body.minimal-focus-mode.show-view-header .view-content {
 
 /* Dark mode images  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
+:root {
+  --image-mix: normal ; }
+
+.image-blend-light {
+  --image-mix: multiply; }
+
 .theme-dark .markdown-source-view img,
 .theme-dark .markdown-preview-view img {
   opacity: var(--image-muted);
@@ -2581,6 +2587,9 @@ body.minimal-focus-mode.show-view-header .view-content {
 .theme-dark .markdown-preview-view img:hover {
   opacity: 1;
   transition: opacity 0.25s linear; }
+
+.theme-light img {
+  mix-blend-mode: var(--image-mix); }
 
 /* Invert  */
 div[src$="#multiply"],
@@ -3983,7 +3992,7 @@ body .button-default.blue {
     opacity: 1; }
   #calendar-container .day {
     padding: 2px 4px 4px;
-    font-size: calc(var(--font-adaptive-normal) - 2px); }
+    font-size: calc(var(--font-adaptive-small) + 4px); }
   #calendar-container .active,
   #calendar-container .active.today,
   #calendar-container .week-num:hover,
@@ -7414,6 +7423,12 @@ settings:
 		min: 0.25
 		max: 1
 		step: 0.05
+	-
+		id: image-blend-light
+		title: Blend images in light mode
+		description: Allow images to blend into the color scheme background color
+		type: class-toggle
+		default: false
 	-
 		id: zoom-off
 		title: Disable image zoom

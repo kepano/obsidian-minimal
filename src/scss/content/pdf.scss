@@ -26,7 +26,7 @@ body {
 	.pdf-viewer .canvasWrapper {
 		opacity: var(--pdf-dark-opacity);
 	}
-	&.pdf-invert-dark {
+	&.pdf-invert-dark .workspace-leaf-content[data-type=pdf] {
 		.pdf-viewer .canvasWrapper,
 		.pdf-thumbnail-view .thumbnailImage {
 			filter: invert(1) hue-rotate(180deg);
@@ -35,7 +35,7 @@ body {
 	}
 }
 .theme-light {
-	&.pdf-blend-light {
+	&.pdf-blend-light .workspace-leaf-content[data-type=pdf] {
 		.pdf-viewer .canvasWrapper,
 		.pdf-thumbnail-view .thumbnailImage {
 			mix-blend-mode: multiply;

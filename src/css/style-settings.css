@@ -1026,6 +1026,12 @@ settings:
 		max: 1
 		step: 0.05
 	-
+		id: image-blend-light
+		title: Blend images in light mode
+		description: Allow images to blend into the color scheme background color
+		type: class-toggle
+		default: false
+	-
 		id: zoom-off
 		title: Disable image zoom
 		description: Turns off click + hold to zoom images

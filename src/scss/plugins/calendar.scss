@@ -124,7 +124,7 @@
 	}
 	.day {
 		padding:2px 4px 4px;
-		font-size:calc(var(--font-adaptive-normal) - 2px);
+		font-size:calc(var(--font-adaptive-small) + 4px);
 	}
 	.active,
 	.active.today,
