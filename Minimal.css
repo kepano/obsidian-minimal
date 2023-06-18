@@ -3973,7 +3973,7 @@ body .button-default.blue {
   #calendar-container .year,
   #calendar-container .month,
   #calendar-container .title {
-    font-size: var(--font-adaptive-normal);
+    font-size: calc(var(--font-adaptive-small) + 2px);
     font-weight: 400;
     color: var(--text-normal); }
   #calendar-container .today.active,
@@ -4007,7 +4007,7 @@ body .button-default.blue {
     opacity: 1; }
   #calendar-container .day {
     padding: 2px 4px 4px;
-    font-size: calc(var(--font-adaptive-small) + 4px); }
+    font-size: calc(var(--font-adaptive-small) + 1px); }
   #calendar-container .active,
   #calendar-container .active.today,
   #calendar-container .week-num:hover,

@@ -81,7 +81,7 @@
 	.year,
 	.month,
 	.title {
-		font-size:var(--font-adaptive-normal);
+		font-size:calc(var(--font-adaptive-small) + 2px);
 		font-weight:400;
 		color:var(--text-normal);
 	}
@@ -124,7 +124,7 @@
 	}
 	.day {
 		padding:2px 4px 4px;
-		font-size:calc(var(--font-adaptive-small) + 4px);
+		font-size:calc(var(--font-adaptive-small) + 1px);
 	}
 	.active,
 	.active.today,
