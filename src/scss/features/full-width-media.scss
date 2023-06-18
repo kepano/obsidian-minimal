@@ -6,3 +6,10 @@
 .full-width-media .markdown-preview-view video, {
 	width:100%;
 }
+
+
+/* YouTube embeds */
+.full-width-media .el-p p:has(.external-embed),
+.full-width-media .external-embed {
+	width: 100%;
+}

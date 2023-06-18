@@ -810,6 +810,13 @@ span.cm-image-marker,
 .cm-formatting-quote {
   color: var(--text-faint) !important; }
 
+.markdown-reading-view .metadata-container {
+  max-width: var(--max-width);
+  margin: 0 auto; }
+
+.is-readable-line-width .markdown-reading-view .metadata-container {
+  width: var(--line-width-adaptive); }
+
 /* Preview mode  */
 figure {
   margin-inline-start: 0;
@@ -2432,6 +2439,11 @@ body.minimal-focus-mode.show-view-header .view-content {
 .full-width-media .markdown-preview-view video {
   width: 100%; }
 
+/* YouTube embeds */
+.full-width-media .el-p p:has(.external-embed),
+.full-width-media .external-embed {
+  width: 100%; }
+
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 .table-small table:not(.calendar) {
@@ -3227,6 +3239,7 @@ body {
   .markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > .image-embed,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+  .markdown-source-view.mod-cm6.is-readable-line-width .external-embed,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
   .markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,

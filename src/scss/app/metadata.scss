@@ -1,0 +1,9 @@
+.markdown-reading-view .metadata-container {
+	max-width: var(--max-width);
+	margin: 0 auto;
+}
+.is-readable-line-width .markdown-reading-view {
+	.metadata-container { 
+		width: var(--line-width-adaptive);
+	}
+}

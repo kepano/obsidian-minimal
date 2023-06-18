@@ -5,8 +5,6 @@ body {
 	--embed-decoration-color: var(--background-modifier-border-hover);	
 }
 
-
-
 /* Strict embeds (naked) */
 .embed-strict {
 	--embed-background: transparent;
@@ -48,7 +46,6 @@ body {
 		display: none;
 	}
 }
-
 
 .embed-strict.contextual-typography .internal-embed .markdown-preview-view .markdown-preview-sizer>div,
 .contextual-typography .embed-strict .internal-embed .markdown-preview-view .markdown-preview-sizer>div {
