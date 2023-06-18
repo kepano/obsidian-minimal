@@ -17,13 +17,16 @@
 .markdown-source-view {
 	color: var(--text-normal);
 }
-.markdown-reading-view > .markdown-preview-view {
+.markdown-reading-view > .markdown-preview-view,
+.markdown-source-view {
 	padding-top:18px;
 }
 .markdown-source-view.mod-cm6 .cm-scroller {
-	padding-top: 18px;
 	padding-left: 0;
 	padding-right: 0;
+}
+.markdown-source-view .cm-contentContainer {
+	margin-top: var(--spacing-p);
 }
 
 /* Gutters */

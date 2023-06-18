@@ -1,9 +1,12 @@
-.markdown-reading-view .metadata-container {
-	max-width: var(--max-width);
-	margin: 0 auto;
+.is-live-preview .metadata-container {
+	max-width:calc(var(--max-width) - var(--folding-offset));
+	margin-right:auto;
+	margin-left:max(
+		calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2),
+		calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
 }
-.is-readable-line-width .markdown-reading-view {
+.is-readable-line-width.is-live-preview {
 	.metadata-container { 
-		width: var(--line-width-adaptive);
+		width:calc(var(--line-width-adaptive) - var(--folding-offset));	
 	}
 }

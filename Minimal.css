@@ -674,13 +674,16 @@ body {
 .markdown-source-view {
   color: var(--text-normal); }
 
-.markdown-reading-view > .markdown-preview-view {
+.markdown-reading-view > .markdown-preview-view,
+.markdown-source-view {
   padding-top: 18px; }
 
 .markdown-source-view.mod-cm6 .cm-scroller {
-  padding-top: 18px;
   padding-left: 0;
   padding-right: 0; }
+
+.markdown-source-view .cm-contentContainer {
+  margin-top: var(--spacing-p); }
 
 /* Gutters */
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
@@ -806,9 +809,7 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
 .theme-light .cm-link {
   background-color: transparent; }
 
-.markdown-source-view.mod-cm6,
-.markdown-source-view.mod-cm5,
-.markdown-source-view {
+.markdown-source-view.mod-cm5 {
   padding: 0; }
 
 .cm-s-obsidian .CodeMirror-code {
@@ -853,12 +854,13 @@ span.cm-image-marker,
 .cm-formatting-quote {
   color: var(--text-faint) !important; }
 
-.markdown-reading-view .metadata-container {
-  max-width: var(--max-width);
-  margin: 0 auto; }
+.is-live-preview .metadata-container {
+  max-width: calc(var(--max-width) - var(--folding-offset));
+  margin-right: auto;
+  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
 
-.is-readable-line-width .markdown-reading-view .metadata-container {
-  width: var(--line-width-adaptive); }
+.is-readable-line-width.is-live-preview .metadata-container {
+  width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
 
 /* Preview mode  */
 figure {
