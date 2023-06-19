@@ -3603,11 +3603,8 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 .full-file-names {
   --nav-item-white-space: normal; }
 
-body:not(.full-file-names) .tree-item-inner {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  align-self: center; }
+body:not(.full-file-names) {
+  --nav-item-white-space: nowrap; }
 
 /* Underline headings */
 .theme-light,

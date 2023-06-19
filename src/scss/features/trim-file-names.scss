@@ -5,10 +5,5 @@
 }
 
 body:not(.full-file-names) {
-	.tree-item-inner {
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		align-self: center;
-	}
+	--nav-item-white-space: nowrap;
 }
