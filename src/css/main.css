@@ -632,7 +632,7 @@ body {
   color: var(--text-normal); }
 
 .markdown-reading-view > .markdown-preview-view,
-.markdown-source-view {
+.cm-sizer {
   padding-top: 18px; }
 
 .markdown-source-view.mod-cm6 .cm-scroller {
@@ -1507,7 +1507,7 @@ body {
     padding-left: 0; }
 
 body {
-  --table-header-border-width: 0 1px;
+  --table-header-border-width: 0;
   --table-column-first-border-width: 0;
   --table-column-last-border-width: 0;
   --table-row-last-border-width: 0; }
