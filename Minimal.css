@@ -3648,6 +3648,11 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 
 body:not(.full-file-names) {
   --nav-item-white-space: nowrap; }
+  body:not(.full-file-names) .tree-item-self {
+    white-space: nowrap; }
+  body:not(.full-file-names) .tree-item-inner {
+    text-overflow: ellipsis;
+    overflow: hidden; }
 
 /* Underline headings */
 .theme-light,

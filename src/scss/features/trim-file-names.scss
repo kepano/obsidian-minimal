@@ -6,4 +6,13 @@
 
 body:not(.full-file-names) {
 	--nav-item-white-space: nowrap;
+
+	.tree-item-self {
+		white-space: nowrap;
+
+	}
+	.tree-item-inner {
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 }
