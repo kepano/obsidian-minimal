@@ -128,7 +128,7 @@
 	}
 	.day,
 	.week-num {
-		font-size: calc(var(--font-adaptive-smaller) + 3px);
+		font-size: calc(var(--font-ui-small) + 10%);
 	}
 	.active,
 	.active.today,
