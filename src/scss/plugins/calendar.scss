@@ -115,6 +115,7 @@
 		}
 	}
 	.reset-button,
+	.week-num,
 	.day {
 		cursor:var(--cursor);
 	}
@@ -123,8 +124,11 @@
 		opacity:1;
 	}
 	.day {
-		padding:2px 4px 4px;
-		font-size:calc(var(--font-adaptive-small) + 1px);
+		padding:2px 4px 4px
+	}
+	.day,
+	.week-num {
+		font-size: var(--font-adaptive-small);
 	}
 	.active,
 	.active.today,

@@ -3957,14 +3957,17 @@ body .button-default.blue {
       color: var(--text-normal);
       background-color: var(--background-modifier-hover); }
   #calendar-container .reset-button,
+  #calendar-container .week-num,
   #calendar-container .day {
     cursor: var(--cursor); }
   #calendar-container .day.adjacent-month {
     color: var(--text-faint);
     opacity: 1; }
   #calendar-container .day {
-    padding: 2px 4px 4px;
-    font-size: calc(var(--font-adaptive-small) + 1px); }
+    padding: 2px 4px 4px; }
+  #calendar-container .day,
+  #calendar-container .week-num {
+    font-size: var(--font-adaptive-small); }
   #calendar-container .active,
   #calendar-container .active.today,
   #calendar-container .week-num:hover,
