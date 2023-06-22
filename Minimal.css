@@ -676,7 +676,7 @@ body {
 
 .markdown-reading-view > .markdown-preview-view,
 .cm-sizer {
-  padding-top: 18px; }
+  padding-top: 8px; }
 
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-left: 0;
