@@ -3447,6 +3447,13 @@ body {
 body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-square) .workspace > .workspace-split:not(.mod-root) .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   --tab-outline-width: 0; }
 
+/* Hide tab close buttons except active tab */
+.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
+  display: none; }
+
+.mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+  display: flex; }
+
 /* Safari/Firefox style */
 .tabs-modern.colorful-frame .mod-root .mod-top.workspace-tabs:not(.mod-stacked) {
   --tab-background: var(--frame-outline-color);
