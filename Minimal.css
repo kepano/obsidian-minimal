@@ -59,7 +59,7 @@ body {
   /* Embeds */
   --embed-block-shadow-hover: none;
   /* Font sizes */
-  --font-ui-smaller: 12px;
+  --font-ui-smaller: 11px;
   /* Font weights */
   --normal-weight: 400;
   --bold-weight: 600;
@@ -540,7 +540,7 @@ body {
   --font-adaptive-normal:var(--font-text-size,var(--editor-font-size));
   --font-adaptive-small: var(--font-ui-medium);
   --font-adaptive-smaller: var(--font-ui-small);
-  --font-adaptive-smallest: 11px;
+  --font-adaptive-smallest: var(--font-ui-smaller);
   --line-width-adaptive:var(--line-width);
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
