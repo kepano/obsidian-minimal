@@ -26,6 +26,8 @@ body {
 	--link-weight: inherit;
 
 	/* Headings */
+	--inline-title-margin-bottom: 0;
+
 	--h1-size: 1.125em;
 	--h2-size: 1.05em;
 	--h3-size: 1em;
@@ -87,7 +89,7 @@ body {
 	--image-muted:0.7;
 
 	/* Spacing */
-	--spacing-p: 0.75em;
+	--p-spacing: 1.5em;
 
 }
 

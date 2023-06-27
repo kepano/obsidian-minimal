@@ -1628,11 +1628,11 @@ settings:
 		max: 900
 		step: 100
 	-
-		id: spacing-p
+		id: p-spacing
 		title: Paragraph spacing
 		description: Space between paragraphs in reading mode
 		type: variable-text
-		default: 0.75em
+		default: 1rem
 	-
 		id: titles
 		title: Titles
