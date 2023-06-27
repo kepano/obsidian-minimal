@@ -1575,6 +1575,22 @@ body,
   background-color: var(--active-line-bg);
   box-shadow: -25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg); }
 
+@media (max-width: 400pt) {
+  .is-mobile {
+    --folding-offset:0px; } }
+/* With readable line width */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  max-width: var(--max-width);
+  width: var(--line-width-adaptive);
+  margin: 0 auto; }
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto 0 auto;
+  width: var(--line-width-adaptive);
+  max-width: var(--max-width); }
+
 .borders-none {
   --divider-width:0px;
   --tab-outline-width: 0px; }
