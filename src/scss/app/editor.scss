@@ -30,7 +30,7 @@
 }
 
 /* Gutters */
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
+body:not(.is-mobile) :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutters {
 	position:absolute !important;
 	z-index:0;
 	margin-left: 0;
