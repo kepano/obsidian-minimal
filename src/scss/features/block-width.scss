@@ -14,11 +14,11 @@
 
 /* Set inner content to line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
-.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div,
-.markdown-source-view.mod-cm6 .cm-sizer > .inline-title,
-.markdown-source-view.mod-cm6 .cm-sizer > .embedded-backlinks  {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .inline-title,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .embedded-backlinks  {
 	max-width: var(--max-width);
-	width: var(--line-width-adaptive);
+	width: var(--line-width);
 	margin-inline: auto !important;
 }
 
@@ -30,31 +30,40 @@
    like `.table-100.markdown-source-view...`
 */
 
-body {
-	--container-table-width: var(--line-width-adaptive);
+.markdown-source-view,
+.markdown-preview-view {
+	--container-table-width: var(--line-width);
 	--container-table-max-width: var(--max-width);
 	--table-max-width: none;
 	--table-width: auto;
 
-	--container-img-width: var(--line-width-adaptive);
+	--container-img-width: var(--line-width);
 	--container-img-max-width: var(--max-width);
 	--img-max-width: none;
 	--img-width: auto;
 
-	--container-chart-width: var(--line-width-adaptive);
+	--container-chart-width: var(--line-width);
 	--container-chart-max-width: var(--max-width);
 	--chart-max-width: none;
 	--chart-width: auto;
 
-	--container-map-width: var(--line-width-adaptive);
+	--container-map-width: var(--line-width);
 	--container-map-max-width: var(--max-width);
 	--map-max-width: none;
 	--map-width: auto;
 
-	--container-iframe-width: var(--line-width-adaptive);
+	--container-iframe-width: var(--line-width);
 	--container-iframe-max-width: var(--max-width);
 	--iframe-max-width: none;
 	--iframe-width: auto;
+
+	&.wide {
+		--line-width: var(--line-width-wide);
+	}
+	&.max {
+		--line-width: 300em;
+		--line-width-wide: 300em;
+	}
 }
 
 .table-wide,
@@ -72,7 +81,7 @@ body {
 	--table-edge-cell-padding: 20px;
 	.dataview.list-view-ul {
 		max-width: var(--max-width);
-		width: var(--line-width-adaptive);
+		width: var(--line-width);
 		margin-inline: auto;
 	}
 }
@@ -137,7 +146,7 @@ body {
    we no longer require Contextual Typography plugin.
 */
 
-.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer>.cm-content,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer>.cm-content,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
 
 	/* Tables */

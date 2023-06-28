@@ -71,8 +71,8 @@ body {
   /* Image opacity in dark mode */
   --image-muted:0.7;
   /* Spacing */
-  --heading-spacing: 2.5rem;
-  --p-spacing: 1.85rem; }
+  --heading-spacing: 2.25rem;
+  --p-spacing: 1.5em; }
 
 .mod-macos {
   --top-left-padding-y:24px; }
@@ -633,7 +633,7 @@ body {
 .markdown-source-view {
   color: var(--text-normal); }
 
-.markdown-reading-view > .markdown-preview-view,
+.markdown-reading-view > .markdown-preview-view.is-readable-line-width,
 .cm-sizer {
   padding-top: 8px; }
 
@@ -824,7 +824,7 @@ figure {
   background-color: var(--text-selection);
   color: inherit; }
 
-.workspace-leaf-content > .view-content {
+.is-readable-line-width {
   --file-margins: 0; }
 
 .inline-title {
@@ -1589,11 +1589,11 @@ body,
 
 /* Set inner content to line width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
-.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div,
-.markdown-source-view.mod-cm6 .cm-sizer > .inline-title,
-.markdown-source-view.mod-cm6 .cm-sizer > .embedded-backlinks {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .inline-title,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .embedded-backlinks {
   max-width: var(--max-width);
-  width: var(--line-width-adaptive);
+  width: var(--line-width);
   margin-inline: auto !important; }
 
 /* Content rules ------------------------------------
@@ -1603,27 +1603,35 @@ body,
    It means we don't have to write long specific selectors
    like `.table-100.markdown-source-view...`
 */
-body {
-  --container-table-width: var(--line-width-adaptive);
+.markdown-source-view,
+.markdown-preview-view {
+  --container-table-width: var(--line-width);
   --container-table-max-width: var(--max-width);
   --table-max-width: none;
   --table-width: auto;
-  --container-img-width: var(--line-width-adaptive);
+  --container-img-width: var(--line-width);
   --container-img-max-width: var(--max-width);
   --img-max-width: none;
   --img-width: auto;
-  --container-chart-width: var(--line-width-adaptive);
+  --container-chart-width: var(--line-width);
   --container-chart-max-width: var(--max-width);
   --chart-max-width: none;
   --chart-width: auto;
-  --container-map-width: var(--line-width-adaptive);
+  --container-map-width: var(--line-width);
   --container-map-max-width: var(--max-width);
   --map-max-width: none;
   --map-width: auto;
-  --container-iframe-width: var(--line-width-adaptive);
+  --container-iframe-width: var(--line-width);
   --container-iframe-max-width: var(--max-width);
   --iframe-max-width: none;
   --iframe-width: auto; }
+  .markdown-source-view.wide,
+  .markdown-preview-view.wide {
+    --line-width: var(--line-width-wide); }
+  .markdown-source-view.max,
+  .markdown-preview-view.max {
+    --line-width: 300em;
+    --line-width-wide: 300em; }
 
 .table-wide,
 .table-max,
@@ -1643,7 +1651,7 @@ body {
   --table-edge-cell-padding: 20px; }
   .table-100 .dataview.list-view-ul {
     max-width: var(--max-width);
-    width: var(--line-width-adaptive);
+    width: var(--line-width);
     margin-inline: auto; }
 
 .img-wide,
@@ -1716,62 +1724,62 @@ body {
    Obsidian installer 1.1.9 or above. However it means
    we no longer require Contextual Typography plugin.
 */
-.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   /* Tables */
   /* Images */
   /* Maps */
   /* Maps */
   /* Iframes */ }
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> table),
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> table),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> table),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview) {
     width: var(--container-table-width);
     max-width: var(--container-table-max-width); }
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content table,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content table,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer table {
     width: var(--table-width);
     max-width: var(--table-max-width); }
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem; }
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) {
     width: var(--container-img-width);
     max-width: var(--container-img-max-width); }
-    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed img,
-    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed) img,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed img,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed) img,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed img,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) img {
       max-width: var(--img-max-width); }
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-chart) {
     width: var(--container-chart-width);
     max-width: var(--container-chart-max-width); }
-    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart) canvas,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart) canvas,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-chart) canvas {
       max-width: var(--map-chart-width); }
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) {
     width: var(--container-map-width);
     max-width: var(--container-map-max-width); }
-    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet) iframe,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet) iframe,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) iframe {
       max-width: var(--map-max-width); }
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe),
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> iframe),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .cm-html-embed) {
     width: var(--container-iframe-width);
     max-width: var(--container-iframe-max-width); }
-    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe) iframe,
-    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed) iframe,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe) iframe,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed) iframe,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> iframe) iframe,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .cm-html-embed) iframe {
       max-width: var(--map-iframe-width); }

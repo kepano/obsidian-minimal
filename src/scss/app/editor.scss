@@ -17,7 +17,7 @@
 .markdown-source-view {
 	color: var(--text-normal);
 }
-.markdown-reading-view > .markdown-preview-view,
+.markdown-reading-view > .markdown-preview-view.is-readable-line-width,
 .cm-sizer {
 	padding-top: 8px;
 }
