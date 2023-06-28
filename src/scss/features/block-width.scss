@@ -153,8 +153,8 @@ body {
 	}
 
 	/* Images */
-	.image-embed,
-	div:has(>.image-embed) {
+	> .image-embed,
+	> div:has(.image-embed) {
 		width: var(--container-img-width);
 		max-width:var(--container-img-max-width);
 

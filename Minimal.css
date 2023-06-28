@@ -1778,16 +1778,16 @@ body {
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer table {
     width: var(--table-width);
     max-width: var(--table-max-width); }
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content .image-embed,
-  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .image-embed),
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .image-embed,
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .image-embed) {
+  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
+  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) {
     width: var(--container-img-width);
     max-width: var(--container-img-max-width); }
-    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content .image-embed img,
-    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .image-embed) img,
-    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .image-embed img,
-    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .image-embed) img {
+    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed img,
+    .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed) img,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed img,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) img {
       max-width: var(--img-max-width); }
   .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-chart) {
@@ -2832,16 +2832,23 @@ span[src$="#interface"] img {
 Image Grid snippet for Obsidian
 
 author: @kepano
-version: 3.0.0
+version: 4.0.0
 
 Support my work:
 https://github.com/sponsors/kepano
 
 */
-/* Requires Contextual Typography 2.2.1+ */
+/* Revamped for Obsidian 1.1.9+ using :has() */
 body {
   --image-grid-fit: cover;
-  --image-grid-background: transparent; }
+  --image-grid-background: transparent;
+  --img-grid-gap: 0.5rem; }
+
+@media (max-width: 400pt) {
+  body {
+    --img-grid-gap: 0.25rem; } }
+.img-grid-ratio {
+  --image-grid-fit: contain; }
 
 .image-embed.is-loaded {
   line-height: 0; }
@@ -2850,49 +2857,26 @@ body {
     .image-embed.is-loaded img:active {
       background-color: transparent; }
 
-div:not(.el-embed-image) + .el-embed-image {
-  margin-top: 1rem; }
-
-.el-embed-image {
-  margin-top: 0.5rem; }
-
-.contextual-typography .markdown-preview-section > .el-embed-image > p {
-  margin-block-start: 0;
-  margin-block-end: 0; }
-
-.img-grid .markdown-preview-section .el-embed-image img:not(.emoji):not([width]),
+.img-grid .markdown-preview-section img:not(.emoji):not([width]),
 .img-grid .markdown-preview-section video {
   width: 100%; }
-
-.img-grid .markdown-preview-section > .el-embed-image > p {
+.img-grid .markdown-preview-section > div:has(.image-embed) > p {
   display: grid;
-  grid-column-gap: 0.5rem;
+  margin-block-start: var(--img-grid-gap);
+  margin-block-end: var(--img-grid-gap);
+  grid-column-gap: var(--img-grid-gap);
   grid-row-gap: 0;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+  .img-grid .markdown-preview-section > div:has(.image-embed) > p > br {
+    display: none; }
+  .img-grid .markdown-preview-section > div:has(.image-embed) > p > img {
+    object-fit: var(--image-grid-fit);
+    align-self: stretch; }
+  .img-grid .markdown-preview-section > div:has(.image-embed) > p > .internal-embed img {
+    object-fit: var(--image-grid-fit);
+    height: 100%;
+    align-self: center; }
 
-.img-grid .markdown-preview-section > .el-embed-image > p > br {
-  display: none; }
-
-.img-grid .markdown-preview-section > .el-embed-image > p > img {
-  object-fit: var(--image-grid-fit);
-  align-self: stretch; }
-
-.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
-  object-fit: var(--image-grid-fit);
-  height: 100%; }
-
-.img-grid .img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img,
-.img-grid.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img {
-  object-fit: contain;
-  height: 100%;
-  align-self: center; }
-
-@media (max-width: 400pt) {
-  .el-embed-image {
-    margin-top: 0.25rem; }
-
-  .img-grid .markdown-preview-section > .el-embed-image > p {
-    grid-column-gap: 0.25rem; } }
 /* Image zoom  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 body:not(.zoom-off) .view-content div:not(.canvas-node-content) img {
