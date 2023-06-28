@@ -65,14 +65,19 @@
 
 .row-lines-off {
 	table:not(.calendar) tbody > tr > td,
-	.table-view-table > tbody > tr > td {
-		border-bottom: none;
-	}
+	.table-view-table > tbody > tr > td,
 	table:not(.calendar) tbody > tr:last-child > td {
 		border-bottom:none;
 	}
 }
 
+.col-lines {
+	table:not(.calendar) tbody > tr > td:not(:last-child),
+	.table-view-table thead > tr > th:not(:last-child),
+	.table-view-table > tbody > tr > td:not(:last-child) {
+		border-right:1px solid var(--background-modifier-border);
+	}
+}
 
 /* Highlight rows on hover */
 .row-hover {

@@ -2733,10 +2733,14 @@ body.minimal-focus-mode.show-view-header .view-content {
     font-variant-numeric: tabular-nums; }
 
 .row-lines-off table:not(.calendar) tbody > tr > td,
-.row-lines-off .table-view-table > tbody > tr > td {
-  border-bottom: none; }
+.row-lines-off .table-view-table > tbody > tr > td,
 .row-lines-off table:not(.calendar) tbody > tr:last-child > td {
   border-bottom: none; }
+
+.col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
+.col-lines .table-view-table thead > tr > th:not(:last-child),
+.col-lines .table-view-table > tbody > tr > td:not(:last-child) {
+  border-right: 1px solid var(--background-modifier-border); }
 
 /* Highlight rows on hover */
 .row-hover {
