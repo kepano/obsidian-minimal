@@ -3719,7 +3719,7 @@ body .button-default.blue {
     padding: 2px 4px 4px; }
   #calendar-container .day,
   #calendar-container .week-num {
-    font-size: calc(var(--font-ui-small) + 10%); }
+    font-size: calc(var(--font-adaptive-smaller) + 5%); }
   #calendar-container .active,
   #calendar-container .active.today,
   #calendar-container .week-num:hover,
