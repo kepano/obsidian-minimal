@@ -60,8 +60,6 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 	color:var(--text-faint);
 	background-color:var(--background-primary);
 	top:0;
-	right:auto;
-	left:0px;
 	opacity:0;
 	transition:opacity 200ms;
 	padding:4px 4px 4px 9px;
@@ -72,15 +70,10 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
 	width:30px !important;
 	padding-left:7px !important;
-	transform:none !important;
-	margin-left:0 !important;
 }
 .is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
 	padding-left:0px !important;
 	margin-left:0 !important;
-	transform:none !important;
-	right:0;
-	left:auto;
 	padding:4px
 }
 .markdown-source-view.mod-cm6 .edit-block-button:hover {

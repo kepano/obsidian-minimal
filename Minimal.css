@@ -114,7 +114,8 @@ body {
   /* Image opacity in dark mode */
   --image-muted:0.7;
   /* Spacing */
-  --p-spacing: 1.5em; }
+  --heading-spacing: 1em;
+  --p-spacing: 1.5rem; }
 
 .mod-macos {
   --top-left-padding-y:24px; }
@@ -713,8 +714,6 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   color: var(--text-faint);
   background-color: var(--background-primary);
   top: 0;
-  right: auto;
-  left: 0px;
   opacity: 0;
   transition: opacity 200ms;
   padding: 4px 4px 4px 9px; }
@@ -723,16 +722,11 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 
 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width: 30px !important;
-  padding-left: 7px !important;
-  transform: none !important;
-  margin-left: 0 !important; }
+  padding-left: 7px !important; }
 
 .is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
   padding-left: 0px !important;
   margin-left: 0 !important;
-  transform: none !important;
-  right: 0;
-  left: auto;
   padding: 4px; }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
@@ -1503,9 +1497,6 @@ body {
 .markdown-source-view.mod-cm6 table {
   border-collapse: collapse; }
 
-.markdown-preview-view table {
-  margin-block-start: 1em; }
-
 .markdown-source-view.mod-cm6 table,
 .markdown-preview-view table {
   border: 1px solid var(--border-color);
@@ -1620,19 +1611,37 @@ body,
 
 @media (max-width: 400pt) {
   .is-mobile {
-    --folding-offset:0px; } }
-/* With readable line width */
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+    --folding-offset: 0px; } }
+/* Line widths ------------------------------------ */
+/* Set overall context to 100% width --- */
+.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+  max-width: 100%;
+  margin-inline: auto;
+  width: 100%; }
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+  max-width: 100%;
+  width: 100%; }
+
+/* Set inner content to line width */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
+.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div,
+.markdown-source-view.mod-cm6 .cm-sizer > .inline-title,
+.markdown-source-view.mod-cm6 .cm-sizer > .embedded-backlinks {
   max-width: var(--max-width);
   width: var(--line-width-adaptive);
-  margin: 0 auto; }
+  margin-inline: auto !important; }
 
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 auto 0 auto;
+/* Block widths ------------------------------------ */
+.table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview), .table-100.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview) {
+  width: 100%;
+  max-width: 100%; }
+
+.table-100 .dataview.list-view-ul {
+  max-width: var(--max-width);
   width: var(--line-width-adaptive);
-  max-width: var(--max-width); }
+  margin-inline: auto; }
 
 .borders-none {
   --divider-width:0px;

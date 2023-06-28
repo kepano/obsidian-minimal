@@ -1,19 +1,49 @@
 @media (max-width:400pt) {
 	.is-mobile {
-		--folding-offset:0px;
+		--folding-offset: 0px;
 	}
 }
 
-/* With readable line width */
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-	max-width:var(--max-width);
-	width:var(--line-width-adaptive);
-	margin:0 auto;
+/* Line widths ------------------------------------ */
+
+/* Set overall context to 100% width --- */
+.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+	max-width: 100%;
+	margin-inline: auto;
+	width: 100%;
 }
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
-	padding-left:0;
-	padding-right:0;
-	margin:0 auto 0 auto;
-	width:var(--line-width-adaptive);
-	max-width:var(--max-width);
+	max-width: 100%;
+	width: 100%;
+}
+
+/* Set inner content to line width */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
+.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div,
+.markdown-source-view.mod-cm6 .cm-sizer > .inline-title,
+.markdown-source-view.mod-cm6 .cm-sizer > .embedded-backlinks  {
+	max-width: var(--max-width);
+	width: var(--line-width-adaptive);
+	margin-inline: auto !important;
+}
+
+/* Block widths ------------------------------------ */
+
+.table-100 {
+	&.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer>.cm-content,
+	&.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+		> div:has(>.block-language-dataview) {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+.table-100 {
+	.dataview.list-view-ul {
+		max-width: var(--max-width);
+		width: var(--line-width-adaptive);
+		margin-inline: auto;
+	}
 }
