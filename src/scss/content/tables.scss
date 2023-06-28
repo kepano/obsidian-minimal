@@ -23,6 +23,9 @@ body {
 		&:first-child {
 			padding-left: var(--table-edge-cell-padding);
 		}
+		&:last-child {
+			padding-right: var(--table-edge-cell-padding);
+		}
 	}
 }
 
@@ -33,6 +36,9 @@ body {
 	padding: 4px 10px;
 	&:first-child {
 		padding-left: var(--table-edge-cell-padding);
+	}
+	&:last-child {
+		padding-right: var(--table-edge-cell-padding);
 	}
 }
 

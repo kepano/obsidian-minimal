@@ -33,6 +33,9 @@
 .table-100 {
 	&.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer>.cm-content,
 	&.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+		.cm-table-widget,
+		table,
+		> div:has(>table),
 		> div:has(>.block-language-dataview) {
 			width: 100%;
 			max-width: 100%;

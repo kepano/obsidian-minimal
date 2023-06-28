@@ -1473,6 +1473,10 @@ body {
   .markdown-preview-view td:first-child,
   .markdown-preview-view th:first-child {
     padding-left: var(--table-edge-cell-padding); }
+  .markdown-source-view.mod-cm6 td:last-child, .markdown-source-view.mod-cm6 th:last-child,
+  .markdown-preview-view td:last-child,
+  .markdown-preview-view th:last-child {
+    padding-right: var(--table-edge-cell-padding); }
 
 /* Override Sortable plugin */
 .markdown-preview-view th,
@@ -1483,6 +1487,10 @@ body {
   .table-view-table > thead > tr > th:first-child,
   .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child {
     padding-left: var(--table-edge-cell-padding); }
+  .markdown-preview-view th:last-child,
+  .table-view-table > thead > tr > th:last-child,
+  .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:last-child {
+    padding-right: var(--table-edge-cell-padding); }
 
 /* Live Preview Tables */
 .is-live-preview .el-table {
@@ -1592,7 +1600,13 @@ body,
   margin-inline: auto !important; }
 
 /* Block widths ------------------------------------ */
-.table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview), .table-100.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview) {
+.table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
+.table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content table,
+.table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> table),
+.table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview), .table-100.markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
+.table-100.markdown-preview-view.is-readable-line-width .markdown-preview-sizer table,
+.table-100.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> table),
+.table-100.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview) {
   width: 100%;
   max-width: 100%; }
 
