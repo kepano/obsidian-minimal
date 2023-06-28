@@ -30,8 +30,7 @@
    like `.table-100.markdown-source-view...`
 */
 
-.markdown-source-view,
-.markdown-preview-view {
+body {
 	--container-table-width: var(--line-width);
 	--container-table-max-width: var(--max-width);
 	--table-max-width: none;
@@ -57,12 +56,20 @@
 	--iframe-max-width: none;
 	--iframe-width: auto;
 
-	&.wide {
+	/* Entire page */
+	.is-readable-line-width.wide {
 		--line-width: var(--line-width-wide);
 	}
-	&.max {
+	.is-readable-line-width.max {
 		--line-width: 300em;
-		--line-width-wide: 300em;
+	}
+	.is-readable-line-width.wide,
+	.is-readable-line-width.max {
+		--container-table-width: var(--line-width);
+		--container-img-width: var(--line-width);
+		--container-iframe-width: var(--line-width);
+		--container-map-width: var(--line-width);
+		--container-chart-width: var(--line-width);
 	}
 }
 

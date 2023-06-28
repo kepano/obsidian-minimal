@@ -1603,8 +1603,7 @@ body,
    It means we don't have to write long specific selectors
    like `.table-100.markdown-source-view...`
 */
-.markdown-source-view,
-.markdown-preview-view {
+body {
   --container-table-width: var(--line-width);
   --container-table-max-width: var(--max-width);
   --table-max-width: none;
@@ -1624,14 +1623,19 @@ body,
   --container-iframe-width: var(--line-width);
   --container-iframe-max-width: var(--max-width);
   --iframe-max-width: none;
-  --iframe-width: auto; }
-  .markdown-source-view.wide,
-  .markdown-preview-view.wide {
+  --iframe-width: auto;
+  /* Entire page */ }
+  body .is-readable-line-width.wide {
     --line-width: var(--line-width-wide); }
-  .markdown-source-view.max,
-  .markdown-preview-view.max {
-    --line-width: 300em;
-    --line-width-wide: 300em; }
+  body .is-readable-line-width.max {
+    --line-width: 300em; }
+  body .is-readable-line-width.wide,
+  body .is-readable-line-width.max {
+    --container-table-width: var(--line-width);
+    --container-img-width: var(--line-width);
+    --container-iframe-width: var(--line-width);
+    --container-map-width: var(--line-width);
+    --container-chart-width: var(--line-width); }
 
 .table-wide,
 .table-max,
