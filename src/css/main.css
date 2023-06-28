@@ -1598,8 +1598,10 @@ body,
 
 /* Content rules ------------------------------------
 
-   The benefit of this approach is that it covers all
-   levels of specificity: global, per file, and element-level.
+   The benefit of this approach is that it covers all levels
+   of specificity wherever the helper is applied: global, 
+   per file, and element-level. 
+
    It means we don't have to write long specific selectors
    like `.table-100.markdown-source-view...`
 */
@@ -1610,7 +1612,7 @@ body {
   --table-width: auto;
   --container-img-width: var(--line-width);
   --container-img-max-width: var(--max-width);
-  --img-max-width: none;
+  --img-max-width: 100%;
   --img-width: auto;
   --container-chart-width: var(--line-width);
   --container-chart-max-width: var(--max-width);
@@ -1725,8 +1727,8 @@ body {
 /* Block widths ------------------------------------
 
    Because we are using :has() this method requires
-   Obsidian installer 1.1.9 or above. However it means
-   we no longer require Contextual Typography plugin.
+   Obsidian installer 1.1.9 or above. However it means the
+   code no longer requires Contextual Typography plugin.
 */
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
