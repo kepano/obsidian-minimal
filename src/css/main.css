@@ -2833,32 +2833,33 @@ body {
 .img-grid-ratio {
   --image-grid-fit: contain; }
 
-.image-embed.is-loaded {
+.img-grid .image-embed.is-loaded {
   line-height: 0; }
-  .image-embed.is-loaded img {
+  .img-grid .image-embed.is-loaded img {
     background-color: var(--image-grid-background); }
-    .image-embed.is-loaded img:active {
+    .img-grid .image-embed.is-loaded img:active {
       background-color: transparent; }
-
-.img-grid .markdown-preview-section img:not(.emoji):not([width]),
-.img-grid .markdown-preview-section video {
-  width: 100%; }
-.img-grid .markdown-preview-section > div:has(.image-embed) > p {
-  display: grid;
-  margin-block-start: var(--img-grid-gap);
-  margin-block-end: var(--img-grid-gap);
-  grid-column-gap: var(--img-grid-gap);
-  grid-row-gap: 0;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-  .img-grid .markdown-preview-section > div:has(.image-embed) > p > br {
-    display: none; }
-  .img-grid .markdown-preview-section > div:has(.image-embed) > p > img {
-    object-fit: var(--image-grid-fit);
-    align-self: stretch; }
-  .img-grid .markdown-preview-section > div:has(.image-embed) > p > .internal-embed img {
-    object-fit: var(--image-grid-fit);
-    height: 100%;
-    align-self: center; }
+.img-grid .markdown-preview-section {
+  /*img:not(.emoji):not([width]),
+  video {
+  	width:100%;
+  }*/ }
+  .img-grid .markdown-preview-section > div:has(.image-embed) > p {
+    display: grid;
+    margin-block-start: var(--img-grid-gap);
+    margin-block-end: var(--img-grid-gap);
+    grid-column-gap: var(--img-grid-gap);
+    grid-row-gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .img-grid .markdown-preview-section > div:has(.image-embed) > p > br {
+      display: none; }
+    .img-grid .markdown-preview-section > div:has(.image-embed) > p > img {
+      object-fit: var(--image-grid-fit);
+      align-self: stretch; }
+    .img-grid .markdown-preview-section > div:has(.image-embed) > p > .internal-embed img {
+      object-fit: var(--image-grid-fit);
+      height: 100%;
+      align-self: center; }
 
 /* Image zoom  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */

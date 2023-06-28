@@ -26,23 +26,23 @@ body {
 	--image-grid-fit: contain;
 }
 
-.image-embed.is-loaded {
-	line-height:0;
-	img {
-		background-color: var(--image-grid-background);
-		&:active {
-			background-color: transparent;
-		}
-	}
-}
-
 .img-grid {
 
+	.image-embed.is-loaded {
+		line-height:0;
+		img {
+			background-color: var(--image-grid-background);
+			&:active {
+				background-color: transparent;
+			}
+		}
+	}
+
 	.markdown-preview-section {
-		img:not(.emoji):not([width]),
+		/*img:not(.emoji):not([width]),
 		video {
 			width:100%;
-		}
+		}*/
 		> div:has(.image-embed) > p {
 			display: grid;
 			margin-block-start: var(--img-grid-gap);
