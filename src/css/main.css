@@ -500,7 +500,6 @@ body {
   --font-adaptive-small: var(--font-ui-medium);
   --font-adaptive-smaller: var(--font-ui-small);
   --font-adaptive-smallest: var(--font-ui-smaller);
-  --line-width-adaptive:var(--line-width);
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
   --table-text-size:calc(var(--font-adaptive-normal) * 0.875); }
@@ -539,7 +538,7 @@ body {
     border-right: 1px solid green;
     background-color: rgba(0, 128, 0, 0.1);
     top: 0;
-    left: max(calc(50% - var(--line-width-adaptive)/2 - 1px), calc(50% - var(--max-width)/2 - 1px));
+    left: max(calc(50% - var(--line-width)/2 - 1px), calc(50% - var(--max-width)/2 - 1px));
     z-index: 999;
     position: fixed;
     pointer-events: none; }
@@ -602,7 +601,7 @@ body {
     font-size: 12px;
     font-family: var(--font-monospace);
     content: "\00a0normal";
-    width: var(--line-width-adaptive);
+    width: var(--line-width);
     max-width: var(--max-width);
     height: 100vh;
     border-left: 1px solid blue;
@@ -806,14 +805,20 @@ span.cm-image-marker,
 .cm-formatting-quote {
   color: var(--text-faint) !important; }
 
+/* 
 .is-live-preview .metadata-container {
-  max-width: calc(var(--max-width) - var(--folding-offset));
-  margin-right: auto;
-  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
-
-.is-readable-line-width.is-live-preview .metadata-container {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
-
+	max-width:calc(var(--max-width) - var(--folding-offset));
+	margin-right:auto;
+	margin-left:max(
+		calc(50% + var(--folding-offset) - var(--line-width)/2),
+		calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
+}
+.is-readable-line-width.is-live-preview {
+	.metadata-container { 
+		width:calc(var(--line-width) - var(--folding-offset));	
+	}
+}
+*/
 /* Preview mode  */
 figure {
   margin-inline-start: 0;
@@ -985,7 +990,7 @@ button.mod-warning:hover {
 .document-search-container {
   margin: 0 auto;
   max-width: var(--max-width);
-  width: var(--line-width-adaptive); }
+  width: var(--line-width); }
 
 .is-mobile span[title="Fold line"]:after,
 .is-mobile .CodeMirror-foldgutter-open:after {
@@ -3469,7 +3474,7 @@ input.prompt-input:focus-visible {
       margin-right: 10px; } }
 
 .release-notes-view .cm-scroller.is-readable-line-width {
-  width: var(--line-width-adaptive);
+  width: var(--line-width);
   max-width: var(--max-width);
   margin: 0 auto; }
 
@@ -3543,7 +3548,7 @@ body .button-default.blue {
   padding: 5px 0 0 0; }
 
 .mod-root #calendar-container {
-  width: var(--line-width-adaptive);
+  width: var(--line-width);
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0; }
@@ -4840,7 +4845,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 .workspace-leaf-content[data-type="style-settings"] .view-content {
   padding: var(--size-4-4) 0 var(--size-4-4) var(--folding-offset); }
 .workspace-leaf-content[data-type="style-settings"] .view-content > div {
-  width: var(--line-width-adaptive);
+  width: var(--line-width);
   max-width: var(--max-width);
   margin: 0 auto; }
 .workspace-leaf-content[data-type="style-settings"] .style-settings-heading[data-level="0"] .setting-item-name {
