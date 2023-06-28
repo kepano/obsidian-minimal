@@ -21,10 +21,6 @@ body:not(.minimal-strike-lists) {
 	--checklist-done-color: var(--text-normal);
 }
 
-input[type=checkbox] {
-	padding: 0;
-	margin: 0 6px 0 0;
-}
 .markdown-preview-section > .contains-task-list {
 	padding-bottom: 0.5em;
 }
@@ -44,7 +40,7 @@ input[type=checkbox] {
 }
 
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-	margin-left: -0.4em;
+	margin-inline-start: -0.4em;
 }
 .is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox {
 	top: 0.2em;

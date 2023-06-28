@@ -1121,10 +1121,6 @@ body:not(.minimal-strike-lists) {
   --checklist-done-decoration: none;
   --checklist-done-color: var(--text-normal); }
 
-input[type=checkbox] {
-  padding: 0;
-  margin: 0 6px 0 0; }
-
 .markdown-preview-section > .contains-task-list {
   padding-bottom: 0.5em; }
 
@@ -1142,7 +1138,7 @@ input[type=checkbox] {
   line-height: var(--line-height); }
 
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin-left: -0.4em; }
+  margin-inline-start: -0.4em; }
 
 .is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox {
   top: 0.2em; }
@@ -1262,7 +1258,7 @@ a[href*="obsidian://search"] {
 .theme-dark a[href*="obsidian://search"] {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'><path fill='white' stroke='white' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'></path></svg>"); }
 
-/* Reading Mode Lists  */
+/* Reading Mode Lists	*/
 div > ol,
 div > ul {
   padding-inline-start: 1.4em; }
@@ -1271,15 +1267,21 @@ ul > li {
   min-height: 1.4em; }
 
 ol > li {
-  margin-left: 0em; }
+  margin-inline-start: 0em; }
 
 ol {
-  margin-left: 0;
+  margin-inline-start: 0;
   list-style: default; }
+
+body {
+  --adaptive-list-edit-offset: var(--list-edit-offset); }
+
+.is-rtl {
+  --adaptive-list-edit-offset: calc(var(--list-edit-offset)*-1); }
 
 /* Live Preview */
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line {
-  margin-left: var(--list-edit-offset) !important; }
+  transform: translateX(var(--adaptive-list-edit-offset)); }
 
 /* Space between list items */
 .markdown-source-view ol > li,
@@ -1302,7 +1304,7 @@ ol {
     padding-inline-start: 2em; }
   .is-mobile .el-ol > ol,
   .is-mobile .el-ul > ul {
-    margin-left: 0; }
+    margin-inline-start: 0; }
 
 /* Backlinks in Preview */
 .is-mobile .workspace-leaf-content:not([data-type='search']) .workspace-leaf-content[data-type='markdown'] .nav-buttons-container {
