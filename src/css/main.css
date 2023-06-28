@@ -1450,6 +1450,13 @@ body {
 .theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdf-thumbnail-view .thumbnailImage {
   mix-blend-mode: multiply; }
 
+body {
+  --table-header-border-width: 0;
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width: 0;
+  --table-row-last-border-width: 0;
+  --table-edge-padding: 0; }
+
 /* Preview mode tables */
 .markdown-source-view.mod-cm6 table {
   border-collapse: collapse; }
@@ -1465,7 +1472,7 @@ body {
   .markdown-source-view.mod-cm6 td:first-child, .markdown-source-view.mod-cm6 th:first-child,
   .markdown-preview-view td:first-child,
   .markdown-preview-view th:first-child {
-    padding-left: 0; }
+    padding-left: var(--table-edge-cell-padding); }
 
 /* Override Sortable plugin */
 .markdown-preview-view th,
@@ -1475,13 +1482,7 @@ body {
   .markdown-preview-view th:first-child,
   .table-view-table > thead > tr > th:first-child,
   .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child {
-    padding-left: 0; }
-
-body {
-  --table-header-border-width: 0;
-  --table-column-first-border-width: 0;
-  --table-column-last-border-width: 0;
-  --table-row-last-border-width: 0; }
+    padding-left: var(--table-edge-cell-padding); }
 
 /* Live Preview Tables */
 .is-live-preview .el-table {
@@ -1599,6 +1600,9 @@ body,
   max-width: var(--max-width);
   width: var(--line-width-adaptive);
   margin-inline: auto; }
+
+.table-100 {
+  --table-edge-cell-padding: 20px; }
 
 .borders-none {
   --divider-width:0px;

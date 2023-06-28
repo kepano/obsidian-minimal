@@ -1,5 +1,13 @@
-/* Preview mode tables */
+body {
+	--table-header-border-width: 0;
+	--table-column-first-border-width: 0;
+	--table-column-last-border-width: 0;
+	--table-row-last-border-width: 0;
+	--table-edge-padding: 0;
+}
 
+
+/* Preview mode tables */
 .markdown-source-view.mod-cm6 table {
 	border-collapse: collapse; 
 }
@@ -13,7 +21,7 @@
 	td, th {
 		padding: 4px 10px;
 		&:first-child {
-			padding-left: 0;
+			padding-left: var(--table-edge-cell-padding);
 		}
 	}
 }
@@ -24,15 +32,8 @@
 .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
 	padding: 4px 10px;
 	&:first-child {
-		padding-left: 0;
+		padding-left: var(--table-edge-cell-padding);
 	}
-}
-
-body {
-	--table-header-border-width: 0;
-	--table-column-first-border-width: 0;
-	--table-column-last-border-width: 0;
-	--table-row-last-border-width: 0;
 }
 
 /* Live Preview Tables */
