@@ -1,8 +1,34 @@
-@media (max-width:400pt) {
-	.is-mobile {
-		--folding-offset: 0px;
-	}
+/* Line widths ------------------------------------ */
+
+/* Set overall context to 100% width */
+.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+	max-width: 100%;
+	margin-inline: auto;
+	width: 100%;
 }
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+	max-width: 100%;
+	width: 100%;
+}
+
+/* Set inner content to line width */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
+.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div,
+.markdown-source-view.mod-cm6 .cm-sizer > .inline-title,
+.markdown-source-view.mod-cm6 .cm-sizer > .embedded-backlinks  {
+	max-width: var(--max-width);
+	width: var(--line-width-adaptive);
+	margin-inline: auto !important;
+}
+
+/* Content rules ------------------------------------
+
+   The benefit of this approach is that it covers all
+   levels of specificity: global, per file, and element-level.
+   It means we don't have to write long specific selectors
+   like `.table-100.markdown-source-view...`
+*/
 
 body {
 	--container-table-width: var(--line-width-adaptive);
@@ -30,32 +56,6 @@ body {
 	--iframe-max-width: none;
 	--iframe-width: auto;
 }
-
-/* Line widths ------------------------------------ */
-
-/* Set overall context to 100% width --- */
-.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
-	max-width: 100%;
-	margin-inline: auto;
-	width: 100%;
-}
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
-	max-width: 100%;
-	width: 100%;
-}
-
-/* Set inner content to line width */
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
-.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div,
-.markdown-source-view.mod-cm6 .cm-sizer > .inline-title,
-.markdown-source-view.mod-cm6 .cm-sizer > .embedded-backlinks  {
-	max-width: var(--max-width);
-	width: var(--line-width-adaptive);
-	margin-inline: auto !important;
-}
-
-/* Content rules ------------------------------------ */
 
 .table-wide,
 .table-max,
@@ -130,7 +130,12 @@ body {
 	--container-iframe-max-width: 100%;}
 
 
-/* Block widths ------------------------------------ */
+/* Block widths ------------------------------------
+
+   Because we are using :has() this method requires
+   Obsidian installer 1.1.9 or above. However it means
+   we no longer require Contextual Typography plugin.
+*/
 
 .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer>.cm-content,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
@@ -188,5 +193,4 @@ body {
 			max-width:var(--map-iframe-width);
 		}
 	}
-
 }
