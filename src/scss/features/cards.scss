@@ -65,29 +65,32 @@ https://github.com/sponsors/kepano
 		}
 
 		tbody > tr > td {
+			padding: calc(var(--cards-padding)/3) calc(var(--cards-padding)/2);
+
 			&:first-child {
 				font-weight:var(--bold-weight);
+				border: none;
 			}
 			&:first-child a {
-				padding:0 0 calc(var(--cards-padding)/3);
-				display:block;
+				display: block;
+			}
+			&:last-child {
+				border: none;
 			}
 			&:not(:first-child) {
-				font-size:90%;
-				color:var(--text-muted);
+				font-size: 90%;
+				color: var(--text-muted);
 			}
 
 			/* Paragraphs */
-			.el-p {
-				display:block;
-				width:100%;
-			}
-			> *:not(.el-embed-image) {
+			> * {
 				padding: calc(var(--cards-padding)/3) 0;
 			}
-			&:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {
+			&:not(:last-child):not(:first-child) {
+				padding: 4px 0;
 				border-bottom: 1px solid var(--background-modifier-border);
-				width: 100%;
+				width: calc(100% - var(--cards-padding));
+				margin: 0 calc(var(--cards-padding)/2);
 			}
 
 			/* Links */
@@ -115,11 +118,12 @@ https://github.com/sponsors/kepano
 			}
 
 			/* Images */
-			.el-embed-image {
+			&:has(img) {
+				padding: 0;
 				background-color: var(--background-secondary);
 				display: block;
-				margin: 0 calc(var(--cards-padding)/-2) 0 calc(var(--cards-padding)/-2);
-				width: calc(100% + var(--cards-padding));
+				margin: 0;
+				width: 100%;
 			}
 			img {
 				aspect-ratio: var(--cards-aspect-ratio);
@@ -139,6 +143,8 @@ https://github.com/sponsors/kepano
 .trim-cols .cards table.dataview tbody > tr > td {
 	white-space: normal;
 }
+
+/*
 .cards,
 .markdown-source-view.mod-cm6.cards {
 	.dataview.table-view-table > tbody > tr > td,
@@ -152,7 +158,7 @@ https://github.com/sponsors/kepano
 		max-width: 100%;
 		display: flex;
 	}
-}
+}*/
 
 .links-int-on .cards table.dataview tbody > tr > td a {
 	text-decoration:none;
@@ -178,10 +184,6 @@ https://github.com/sponsors/kepano
 }
 
 .cards {
-	.el-pre + .el-lang-dataview .table-view-thead {
-		padding-top:8px;
-	}
-
 	table.dataview {
 		thead {
 			user-select: none;

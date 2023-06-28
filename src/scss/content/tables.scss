@@ -4,6 +4,7 @@ body {
 	--table-column-last-border-width: 0;
 	--table-row-last-border-width: 0;
 	--table-edge-padding: 0;
+	--table-cell-padding: 4px 10px;
 }
 
 /* Preview mode tables */
@@ -18,7 +19,7 @@ body {
 		border-collapse: collapse;
 	}
 	td, th {
-		padding: 4px 10px;
+		padding: var(--table-cell-padding);
 		&:first-child {
 			padding-left: var(--table-edge-cell-padding);
 		}
@@ -32,7 +33,7 @@ body {
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,
 .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
-	padding: 4px 10px;
+	padding: var(--table-cell-padding);
 	&:first-child {
 		padding-left: var(--table-edge-cell-padding);
 	}

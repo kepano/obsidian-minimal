@@ -1427,7 +1427,8 @@ body {
   --table-column-first-border-width: 0;
   --table-column-last-border-width: 0;
   --table-row-last-border-width: 0;
-  --table-edge-padding: 0; }
+  --table-edge-padding: 0;
+  --table-cell-padding: 4px 10px; }
 
 /* Preview mode tables */
 .markdown-source-view.mod-cm6 table {
@@ -1440,7 +1441,7 @@ body {
 .markdown-source-view.mod-cm6 td, .markdown-source-view.mod-cm6 th,
 .markdown-preview-view td,
 .markdown-preview-view th {
-  padding: 4px 10px; }
+  padding: var(--table-cell-padding); }
   .markdown-source-view.mod-cm6 td:first-child, .markdown-source-view.mod-cm6 th:first-child,
   .markdown-preview-view td:first-child,
   .markdown-preview-view th:first-child {
@@ -1454,7 +1455,7 @@ body {
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,
 .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
-  padding: 4px 10px; }
+  padding: var(--table-cell-padding); }
   .markdown-preview-view th:first-child,
   .table-view-table > thead > tr > th:first-child,
   .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child {
@@ -1875,27 +1876,29 @@ https://github.com/sponsors/kepano
   box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
   transition: box-shadow 0.15s linear; }
 .cards table.dataview tbody > tr > td {
+  padding: calc(var(--cards-padding)/3) calc(var(--cards-padding)/2);
   /* Paragraphs */
   /* Links */
   /* Buttons */
   /* Lists */
   /* Images */ }
   .cards table.dataview tbody > tr > td:first-child {
-    font-weight: var(--bold-weight); }
+    font-weight: var(--bold-weight);
+    border: none; }
   .cards table.dataview tbody > tr > td:first-child a {
-    padding: 0 0 calc(var(--cards-padding)/3);
     display: block; }
+  .cards table.dataview tbody > tr > td:last-child {
+    border: none; }
   .cards table.dataview tbody > tr > td:not(:first-child) {
     font-size: 90%;
     color: var(--text-muted); }
-  .cards table.dataview tbody > tr > td .el-p {
-    display: block;
-    width: 100%; }
-  .cards table.dataview tbody > tr > td > *:not(.el-embed-image) {
+  .cards table.dataview tbody > tr > td > * {
     padding: calc(var(--cards-padding)/3) 0; }
-  .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {
+  .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) {
+    padding: 4px 0;
     border-bottom: 1px solid var(--background-modifier-border);
-    width: 100%; }
+    width: calc(100% - var(--cards-padding));
+    margin: 0 calc(var(--cards-padding)/2); }
   .cards table.dataview tbody > tr > td a {
     text-decoration: none; }
   .cards table.dataview tbody > tr > td > button {
@@ -1909,11 +1912,12 @@ https://github.com/sponsors/kepano
     margin: 0 auto !important; }
   .cards table.dataview tbody > tr > td:not(:last-child) > ul {
     border-bottom: 1px solid var(--background-modifier-border); }
-  .cards table.dataview tbody > tr > td .el-embed-image {
+  .cards table.dataview tbody > tr > td:has(img) {
+    padding: 0;
     background-color: var(--background-secondary);
     display: block;
-    margin: 0 calc(var(--cards-padding)/-2) 0 calc(var(--cards-padding)/-2);
-    width: calc(100% + var(--cards-padding)); }
+    margin: 0;
+    width: 100%; }
   .cards table.dataview tbody > tr > td img {
     aspect-ratio: var(--cards-aspect-ratio);
     width: 100%;
@@ -1926,19 +1930,21 @@ https://github.com/sponsors/kepano
 .trim-cols .cards table.dataview tbody > tr > td {
   white-space: normal; }
 
-.cards .dataview.table-view-table > tbody > tr > td,
-.cards table.dataview tbody > tr > td,
-.markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
-.markdown-source-view.mod-cm6.cards table.dataview tbody > tr > td {
-  border-bottom: none;
-  padding: 0 !important;
-  line-height: 1.2;
-  width: calc(100% - var(--cards-padding));
-  margin: 0 auto;
-  overflow: visible !important;
-  max-width: 100%;
-  display: flex; }
-
+/*
+.cards,
+.markdown-source-view.mod-cm6.cards {
+	.dataview.table-view-table > tbody > tr > td,
+	table.dataview tbody > tr > td {
+		border-bottom: none;
+		padding: 0!important;
+		line-height: 1.2;
+		width: calc(100% - var(--cards-padding));
+		margin: 0 auto;
+		overflow: visible !important;
+		max-width: 100%;
+		display: flex;
+	}
+}*/
 .links-int-on .cards table.dataview tbody > tr > td a {
   text-decoration: none; }
 
@@ -1959,8 +1965,6 @@ https://github.com/sponsors/kepano
 .theme-light .cards table.dataview thead:before {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>'); }
 
-.cards .el-pre + .el-lang-dataview .table-view-thead {
-  padding-top: 8px; }
 .cards table.dataview thead {
   user-select: none;
   width: 180px;
@@ -7739,7 +7743,7 @@ settings:
 		title: Paragraph spacing
 		description: Space between paragraphs in reading mode
 		type: variable-text
-		default: 1rem
+		default: 1.5rem
 	-
 		id: titles
 		title: Titles

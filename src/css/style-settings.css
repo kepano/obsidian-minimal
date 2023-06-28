@@ -1697,7 +1697,7 @@ settings:
 		title: Paragraph spacing
 		description: Space between paragraphs in reading mode
 		type: variable-text
-		default: 1rem
+		default: 1.5rem
 	-
 		id: titles
 		title: Titles
