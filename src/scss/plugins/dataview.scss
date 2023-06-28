@@ -1,11 +1,35 @@
 /* Dataview plugin */
 
+/* inline lists */
+
+.dataview-inline-lists .markdown-source-view:not(.cards),
+.dataview-inline-lists .markdown-preview-view:not(.cards) {
+	.dataview-ul li:not(:last-child):after,
+	.dataview-ul li:not(:last-child):after {
+		content:", ";
+	}
+	ul.dataview-ul > li::before,
+	ul.dataview-ul > li::before {
+		display:none;
+	}
+	.dataview-ul li,
+	.dataview-ul li {
+		display:inline-block;
+		padding-right:0.25em;
+	}
+}
+
+.markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
+.markdown-preview-view .table-view-table > tbody > tr > td {
+	border-bottom:var(--table-border-width) solid var(--table-border-color);
+}
+
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
 	font-weight:400;
 	font-size:var(--table-text-size);
 	color:var(--text-muted);
-	border-bottom:1px solid var(--background-modifier-border);
+	border-bottom:1px solid var(--table-border-color);
 	cursor:var(--cursor);
 }
 table.dataview ul.dataview-ul {

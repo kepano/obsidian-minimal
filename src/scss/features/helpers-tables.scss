@@ -8,21 +8,12 @@
 	--table-text-size: 75%;
 }
 
-.row-hover th:first-child,
-.row-hover th:first-child,
-.row-alt.markdown-source-view.mod-cm6 th:first-child,
-.row-alt.markdown-source-view.mod-cm6 td:first-child,
-.row-alt table:not(.calendar) th:first-child,
-.row-alt table:not(.calendar) tbody > tr > td:first-child,
-.table-lines.markdown-source-view.mod-cm6 th:first-child,
-.table-lines.markdown-source-view.mod-cm6 td:first-child,
-.table-lines table:not(.calendar) thead > tr > th:first-child,
-.table-lines table:not(.calendar) tbody > tr > td:first-child {
-	padding-left: 10px;
+.row-hover {
+	--table-edge-cell-padding: 10px;
 }
-
 .row-alt {
 	--table-row-alt-background: var(--background-table-rows);
+	--table-edge-cell-padding: 10px;
 }
 .col-alt {
 	--table-column-alt-background: var(--background-table-rows);
@@ -38,6 +29,7 @@
 	--table-column-first-border-width: 1px;
 	--table-column-last-border-width: 1px;
 	--table-row-last-border-width: 1px;
+	--table-edge-cell-padding: 10px;
 }
 
 .table-nowrap {
@@ -71,23 +63,16 @@
 	}
 }
 
-.row-lines {
+.row-lines-off {
 	table:not(.calendar) tbody > tr > td,
 	.table-view-table > tbody > tr > td {
-		border-bottom: 1px solid var(--background-modifier-border);
+		border-bottom: none;
 	}
 	table:not(.calendar) tbody > tr:last-child > td {
 		border-bottom:none;
 	}
 }
 
-.col-lines {
-	table:not(.calendar) tbody > tr > td:not(:last-child),
-	.table-view-table thead > tr > th:not(:last-child),
-	.table-view-table > tbody > tr > td:not(:last-child) {
-		border-right:1px solid var(--background-modifier-border);
-	}
-}
 
 /* Highlight rows on hover */
 .row-hover {

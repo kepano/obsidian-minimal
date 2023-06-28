@@ -2644,20 +2644,12 @@ body.minimal-focus-mode.show-view-header .view-content {
 .table-tiny table:not(.calendar) {
   --table-text-size: 75%; }
 
-.row-hover th:first-child,
-.row-hover th:first-child,
-.row-alt.markdown-source-view.mod-cm6 th:first-child,
-.row-alt.markdown-source-view.mod-cm6 td:first-child,
-.row-alt table:not(.calendar) th:first-child,
-.row-alt table:not(.calendar) tbody > tr > td:first-child,
-.table-lines.markdown-source-view.mod-cm6 th:first-child,
-.table-lines.markdown-source-view.mod-cm6 td:first-child,
-.table-lines table:not(.calendar) thead > tr > th:first-child,
-.table-lines table:not(.calendar) tbody > tr > td:first-child {
-  padding-left: 10px; }
+.row-hover {
+  --table-edge-cell-padding: 10px; }
 
 .row-alt {
-  --table-row-alt-background: var(--background-table-rows); }
+  --table-row-alt-background: var(--background-table-rows);
+  --table-edge-cell-padding: 10px; }
 
 .col-alt {
   --table-column-alt-background: var(--background-table-rows); }
@@ -2670,7 +2662,8 @@ body.minimal-focus-mode.show-view-header .view-content {
   --table-header-border-width: 1px;
   --table-column-first-border-width: 1px;
   --table-column-last-border-width: 1px;
-  --table-row-last-border-width: 1px; }
+  --table-row-last-border-width: 1px;
+  --table-edge-cell-padding: 10px; }
 
 .table-nowrap {
   --table-white-space: nowrap; }
@@ -2696,16 +2689,11 @@ body.minimal-focus-mode.show-view-header .view-content {
     color: var(--text-faint);
     font-variant-numeric: tabular-nums; }
 
-.row-lines table:not(.calendar) tbody > tr > td,
-.row-lines .table-view-table > tbody > tr > td {
-  border-bottom: 1px solid var(--background-modifier-border); }
-.row-lines table:not(.calendar) tbody > tr:last-child > td {
+.row-lines-off table:not(.calendar) tbody > tr > td,
+.row-lines-off .table-view-table > tbody > tr > td {
   border-bottom: none; }
-
-.col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
-.col-lines .table-view-table thead > tr > th:not(:last-child),
-.col-lines .table-view-table > tbody > tr > td:not(:last-child) {
-  border-right: 1px solid var(--background-modifier-border); }
+.row-lines-off table:not(.calendar) tbody > tr:last-child > td {
+  border-bottom: none; }
 
 /* Highlight rows on hover */
 .row-hover {
@@ -3794,12 +3782,34 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
   padding-bottom: 0; }
 
 /* Dataview plugin */
+/* inline lists */
+.dataview-inline-lists .markdown-source-view:not(.cards) .dataview-ul li:not(:last-child):after,
+.dataview-inline-lists .markdown-source-view:not(.cards) .dataview-ul li:not(:last-child):after,
+.dataview-inline-lists .markdown-preview-view:not(.cards) .dataview-ul li:not(:last-child):after,
+.dataview-inline-lists .markdown-preview-view:not(.cards) .dataview-ul li:not(:last-child):after {
+  content: ", "; }
+.dataview-inline-lists .markdown-source-view:not(.cards) ul.dataview-ul > li::before,
+.dataview-inline-lists .markdown-source-view:not(.cards) ul.dataview-ul > li::before,
+.dataview-inline-lists .markdown-preview-view:not(.cards) ul.dataview-ul > li::before,
+.dataview-inline-lists .markdown-preview-view:not(.cards) ul.dataview-ul > li::before {
+  display: none; }
+.dataview-inline-lists .markdown-source-view:not(.cards) .dataview-ul li,
+.dataview-inline-lists .markdown-source-view:not(.cards) .dataview-ul li,
+.dataview-inline-lists .markdown-preview-view:not(.cards) .dataview-ul li,
+.dataview-inline-lists .markdown-preview-view:not(.cards) .dataview-ul li {
+  display: inline-block;
+  padding-right: 0.25em; }
+
+.markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
+.markdown-preview-view .table-view-table > tbody > tr > td {
+  border-bottom: var(--table-border-width) solid var(--table-border-color); }
+
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
   font-weight: 400;
   font-size: var(--table-text-size);
   color: var(--text-muted);
-  border-bottom: 1px solid var(--background-modifier-border);
+  border-bottom: 1px solid var(--table-border-color);
   cursor: var(--cursor); }
 
 table.dataview ul.dataview-ul {

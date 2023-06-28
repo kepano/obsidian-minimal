@@ -420,6 +420,12 @@ settings:
 		type: class-toggle
 		default: true
 	-
+		id: dataview-inline-lists
+		title: Force tables lists inline
+		description: Makes lists inside of table cells inline and comma separated
+		type: class-toggle
+		default: false
+	-
 		id: max-col-width
 		title: Dataview maximum column width
 		description: Maximum width for Dataview columns, accepts any CSS width value
@@ -1402,12 +1408,6 @@ settings:
 			-
 				label: Never
 				value: maximize-tables-off
-	-
-		id: row-lines
-		title: Row lines
-		description: Display borders between table rows globally
-		type: class-toggle
-		default: false
 	-
 		id: col-lines
 		title: Column lines
