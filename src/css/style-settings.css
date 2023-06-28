@@ -440,7 +440,7 @@ settings:
 	-
 		id: embed-hide-title
 		title: Hide embed titles
-		description: Hide title of the transcluded file
+		description: Hide title of the transcluded file (if strict embed is off)
 		type: class-toggle
 		default: false
 	-
@@ -449,6 +449,12 @@ settings:
 		description: Transcluded text is underlined. Can be enabled per file using the embed-underline helper class
 		type: class-toggle
 		default: false
+	-
+		id: embed-max-height
+		title: Maximum height of embeds
+		type: variable-text
+		description: For transcluded text, accepts valid CSS units
+		default: ''
 	-
 		id: embed-decoration-style
 		title: Embedded text underline style
@@ -477,6 +483,14 @@ settings:
 		title: Embedded text underline color
 		type: variable-themed-color
 		description: Requires underlines to be enabled
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: embed-background
+		title: Embed background
+		type: variable-themed-color
+		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'

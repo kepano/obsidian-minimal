@@ -1559,6 +1559,7 @@ body,
     background-color: var(--active-line-bg); }
 
 body {
+  --content-margin: auto;
   --content-margin-start: max(
   	calc(50% - var(--line-width)/2),
   	calc(50% - var(--max-width)/2) );
@@ -1583,7 +1584,7 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .embedded-backlinks {
   max-width: var(--max-width);
   width: var(--line-width);
-  margin-inline: auto !important; }
+  margin-inline: var(--content-margin) !important; }
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > *:not(div) {
   max-width: var(--content-line-width);
@@ -1602,6 +1603,10 @@ body {
     --file-margins: 0 0 0 var(--folding-offset); }
     .minimal-line-nums .is-readable-line-width.is-rtl {
       --file-margins: 0 var(--folding-offset) 0 0; }
+
+/* Embeds ------------------------------------ */
+.inline-embed {
+  --max-width: 100%; }
 
 /* Content rules ------------------------------------
 
@@ -6477,7 +6482,7 @@ settings:
 	-
 		id: embed-hide-title
 		title: Hide embed titles
-		description: Hide title of the transcluded file
+		description: Hide title of the transcluded file (if strict embed is off)
 		type: class-toggle
 		default: false
 	-
@@ -6486,6 +6491,12 @@ settings:
 		description: Transcluded text is underlined. Can be enabled per file using the embed-underline helper class
 		type: class-toggle
 		default: false
+	-
+		id: embed-max-height
+		title: Maximum height of embeds
+		type: variable-text
+		description: For transcluded text, accepts valid CSS units
+		default: ''
 	-
 		id: embed-decoration-style
 		title: Embedded text underline style
@@ -6514,6 +6525,14 @@ settings:
 		title: Embedded text underline color
 		type: variable-themed-color
 		description: Requires underlines to be enabled
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: embed-background
+		title: Embed background
+		type: variable-themed-color
+		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'

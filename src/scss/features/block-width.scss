@@ -1,4 +1,5 @@
 body {
+	--content-margin: auto;
 	--content-margin-start: max(
 		calc(50% - var(--line-width)/2),
 		calc(50% - var(--max-width)/2) );
@@ -26,7 +27,7 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .embedded-backlinks  {
 	max-width: var(--max-width);
 	width: var(--line-width);
-	margin-inline: auto !important;
+	margin-inline: var(--content-margin) !important;
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content {
 	>  *:not(div) {
@@ -36,7 +37,6 @@ body {
 }
 
 /* File margins ------------------------------------ */
-
 .is-readable-line-width {
 	--file-margins: 0;}
 
@@ -50,6 +50,11 @@ body {
 		&.is-rtl {
 			--file-margins: 0 var(--folding-offset) 0 0;}
 	}
+}
+
+/* Embeds ------------------------------------ */
+.inline-embed {
+	--max-width: 100%;
 }
 
 /* Content rules ------------------------------------
