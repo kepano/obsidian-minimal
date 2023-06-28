@@ -101,7 +101,7 @@ body {
   /* Quotes and transclusions */
   --nested-padding:1.1em;
   /* Lists */
-  --folding-offset:10px;
+  --folding-offset: 32px;
   --list-edit-offset: 0.5em;
   --list-indent: 2em;
   --list-spacing: 0.075em;
@@ -693,16 +693,37 @@ body {
 body:not(.is-mobile) :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutters {
   position: absolute !important;
   z-index: 0;
-  margin-left: 0; }
+  margin-inline-end: 0; }
+
+body:not(.is-mobile) :not(.canvas-node) .markdown-source-view.mod-cm6.is-rtl .cm-gutters {
+  right: 0; }
+
+body {
+  --line-number-color: var(--text-faint);
+  --line-number-color-active: var(--text-muted); }
+
+.markdown-source-view.mod-cm6 .cm-gutters {
+  color: var(--line-number-color) !important; }
+
+.markdown-source-view.mod-cm6 .cm-editor .cm-gutterElement.cm-active .cm-heading-marker,
+.markdown-source-view.mod-cm6 .cm-editor .cm-lineNumbers .cm-gutterElement.cm-active {
+  color: var(--line-number-color-active); }
+
+.cm-editor .cm-lineNumbers {
+  background-color: var(--gutter-background); }
 
 .cm-editor .cm-lineNumbers .cm-gutterElement {
-  min-width: 25px; }
+  min-width: var(--folding-offset);
+  padding-inline-end: 0.5em; }
+
+.is-rtl .cm-editor .cm-lineNumbers .cm-gutterElement {
+  text-align: left; }
 
 /* Line numbers */
 @media (max-width: 400pt) {
   .cm-editor .cm-lineNumbers .cm-gutterElement {
-    padding-right: 4px;
-    padding-left: 8px; } }
+    padding-inline-end: 4px;
+    padding-inline-start: 8px; } }
 .cm-editor .cm-lineNumbers .cm-gutterElement {
   font-variant-numeric: tabular-nums; }
 
@@ -1575,9 +1596,12 @@ body {
 /* With line numbers */
 .minimal-line-nums {
   --file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px; }
-
-.minimal-line-nums .is-readable-line-width {
-  --file-margins: 0 0 0 25px; }
+  .minimal-line-nums.is-rtl {
+    --file-margins: var(--size-4-8) 48px var(--size-4-8) var(--size-4-8); }
+  .minimal-line-nums .is-readable-line-width {
+    --file-margins: 0 0 0 var(--folding-offset); }
+    .minimal-line-nums .is-readable-line-width.is-rtl {
+      --file-margins: 0 var(--folding-offset) 0 0; }
 
 /* Content rules ------------------------------------
 
@@ -6197,27 +6221,6 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: active-line
-		title: Active line
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: active-line-on
-		title: Highlight active line
-		description: Adds a background to current line in editor
-		type: class-toggle
-		default: false
-	-
-		id: active-line-bg
-		title: Active line background
-		description: Using a low opacity color is recommended to avoid conflicting with highlights
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
 		id: blockquotes
 		title: Blockquotes
 		type: heading
@@ -7179,6 +7182,58 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: active-line
+		title: Line  numbers
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: active-line-on
+		title: Highlight active line
+		description: Adds a background to current line in editor
+		type: class-toggle
+		default: false
+	-
+		id: folding-offset
+		title: Gutter offset
+		description: Width of the file margin used for gutter
+		type: variable-number-slider
+		default: 32
+		min: 0
+		max: 60
+		step: 1
+		format: px
+	-  
+		id: gutter-background
+		title: Gutter background
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: line-number-color
+		title: Line number color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: line-number-color-active
+		title: Active line number color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: active-line-bg
+		title: Active line background
+		description: Using a low opacity color is recommended to avoid conflicting with highlights
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: lists
 		title: Lists and tasks
 		type: heading
@@ -7930,16 +7985,6 @@ settings:
 		description: Font size in px of smallest text
 		type: variable-number
 		default: 11
-		format: px
-	-
-		id: folding-offset
-		title: Folding offset
-		description: Width of the left margin used for folding indicators
-		type: variable-number-slider
-		default: 10
-		min: 0
-		max: 30
-		step: 1
 		format: px
 
 */

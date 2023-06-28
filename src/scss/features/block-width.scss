@@ -42,10 +42,15 @@ body {
 
 /* With line numbers */
 .minimal-line-nums {
-	--file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px;}
-
-.minimal-line-nums .is-readable-line-width {
-	--file-margins: 0 0 0 25px;}
+	--file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px;
+	&.is-rtl {
+			--file-margins: var(--size-4-8) 48px var(--size-4-8) var(--size-4-8);}
+	.is-readable-line-width {
+		--file-margins: 0 0 0 var(--folding-offset);
+		&.is-rtl {
+			--file-margins: 0 var(--folding-offset) 0 0;}
+	}
+}
 
 /* Content rules ------------------------------------
 

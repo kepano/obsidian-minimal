@@ -186,27 +186,6 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: active-line
-		title: Active line
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: active-line-on
-		title: Highlight active line
-		description: Adds a background to current line in editor
-		type: class-toggle
-		default: false
-	-
-		id: active-line-bg
-		title: Active line background
-		description: Using a low opacity color is recommended to avoid conflicting with highlights
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
 		id: blockquotes
 		title: Blockquotes
 		type: heading
@@ -1168,6 +1147,58 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: active-line
+		title: Line  numbers
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: active-line-on
+		title: Highlight active line
+		description: Adds a background to current line in editor
+		type: class-toggle
+		default: false
+	-
+		id: folding-offset
+		title: Gutter offset
+		description: Width of the file margin used for gutter
+		type: variable-number-slider
+		default: 32
+		min: 0
+		max: 60
+		step: 1
+		format: px
+	-  
+		id: gutter-background
+		title: Gutter background
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: line-number-color
+		title: Line number color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: line-number-color-active
+		title: Active line number color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: active-line-bg
+		title: Active line background
+		description: Using a low opacity color is recommended to avoid conflicting with highlights
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: lists
 		title: Lists and tasks
 		type: heading
@@ -1919,16 +1950,6 @@ settings:
 		description: Font size in px of smallest text
 		type: variable-number
 		default: 11
-		format: px
-	-
-		id: folding-offset
-		title: Folding offset
-		description: Width of the left margin used for folding indicators
-		type: variable-number-slider
-		default: 10
-		min: 0
-		max: 30
-		step: 1
 		format: px
 
 */
