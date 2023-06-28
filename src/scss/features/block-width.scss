@@ -4,6 +4,13 @@
 	}
 }
 
+body {
+	--content-margin-left:
+		max(
+			calc(50% - var(--line-width-adaptive)/2),
+			calc(50% - var(--max-width)/2));
+}
+
 /* Line widths ------------------------------------ */
 
 /* Set overall context to 100% width --- */
@@ -25,12 +32,15 @@
 .markdown-source-view.mod-cm6 .cm-sizer > .embedded-backlinks  {
 	max-width: var(--max-width);
 	width: var(--line-width-adaptive);
-	margin-inline: auto !important;
+	margin-inline-start: var(--content-margin-left);
+	margin-inline-end: auto;
 }
 
 /* Block widths ------------------------------------ */
 
 .table-100 {
+	.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer>.cm-content,
+	.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
 	&.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer>.cm-content,
 	&.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
 		.cm-table-widget,
@@ -39,6 +49,7 @@
 		> div:has(>.block-language-dataview) {
 			width: 100%;
 			max-width: 100%;
+			margin-inline-start: 0;
 		}
 	}
 }

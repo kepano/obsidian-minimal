@@ -1578,6 +1578,12 @@ body,
 @media (max-width: 400pt) {
   .is-mobile {
     --folding-offset: 0px; } }
+body {
+  --content-margin-left:
+  	max(
+  		calc(50% - var(--line-width-adaptive)/2),
+  		calc(50% - var(--max-width)/2)); }
+
 /* Line widths ------------------------------------ */
 /* Set overall context to 100% width --- */
 .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
@@ -1597,10 +1603,18 @@ body,
 .markdown-source-view.mod-cm6 .cm-sizer > .embedded-backlinks {
   max-width: var(--max-width);
   width: var(--line-width-adaptive);
-  margin-inline: auto !important; }
+  margin-inline-start: var(--content-margin-left);
+  margin-inline-end: auto; }
 
 /* Block widths ------------------------------------ */
-.table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
+.table-100 .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
+.table-100 .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content table,
+.table-100 .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> table),
+.table-100 .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview),
+.table-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
+.table-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer table,
+.table-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> table),
+.table-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview), .table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
 .table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content table,
 .table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> table),
 .table-100.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview), .table-100.markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
@@ -1608,7 +1622,8 @@ body,
 .table-100.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> table),
 .table-100.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview) {
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  margin-inline-start: 0; }
 
 .table-100 .dataview.list-view-ul {
   max-width: var(--max-width);
