@@ -1853,78 +1853,81 @@ https://github.com/sponsors/kepano
 .table-100 .cards table.dataview tbody {
   padding: 0.25rem 0.75rem; }
 
-.cards table.dataview tbody {
-  clear: both;
-  padding: 0.5rem 0;
-  display: grid;
-  grid-template-columns: var(--cards-columns);
-  grid-column-gap: 0.75rem;
-  grid-row-gap: 0.75rem; }
-.cards table.dataview > tbody > tr {
-  background-color: var(--cards-background);
-  border: var(--cards-border-width) solid var(--background-modifier-border);
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0 0 calc(var(--cards-padding)/3) 0;
-  border-radius: 6px;
-  overflow: hidden;
-  transition: box-shadow 0.15s linear;
-  max-width: var(--cards-max-width); }
-.cards table.dataview > tbody > tr:hover {
-  border: var(--cards-border-width) solid var(--background-modifier-border-hover);
-  box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
-  transition: box-shadow 0.15s linear; }
-.cards table.dataview tbody > tr > td {
-  padding: calc(var(--cards-padding)/3) calc(var(--cards-padding)/2);
-  /* Paragraphs */
-  /* Links */
-  /* Buttons */
-  /* Lists */
-  /* Images */ }
-  .cards table.dataview tbody > tr > td:first-child {
-    font-weight: var(--bold-weight);
-    border: none; }
-  .cards table.dataview tbody > tr > td:first-child a {
-    display: block; }
-  .cards table.dataview tbody > tr > td:last-child {
-    border: none; }
-  .cards table.dataview tbody > tr > td:not(:first-child) {
-    font-size: 90%;
-    color: var(--text-muted); }
-  .cards table.dataview tbody > tr > td > * {
-    padding: calc(var(--cards-padding)/3) 0; }
-  .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) {
-    padding: 4px 0;
-    border-bottom: 1px solid var(--background-modifier-border);
-    width: calc(100% - var(--cards-padding));
-    margin: 0 calc(var(--cards-padding)/2); }
-  .cards table.dataview tbody > tr > td a {
-    text-decoration: none; }
-  .cards table.dataview tbody > tr > td > button {
-    width: 100%;
-    margin: calc(var(--cards-padding)/2) 0; }
-  .cards table.dataview tbody > tr > td:last-child > button {
-    margin-bottom: calc(var(--cards-padding)/6); }
-  .cards table.dataview tbody > tr > td > ul {
-    width: 100%;
-    padding: 0.25em 0 !important;
-    margin: 0 auto !important; }
-  .cards table.dataview tbody > tr > td:not(:last-child) > ul {
-    border-bottom: 1px solid var(--background-modifier-border); }
-  .cards table.dataview tbody > tr > td:has(img) {
-    padding: 0;
-    background-color: var(--background-secondary);
-    display: block;
+.cards table.dataview {
+  --table-width: 100%;
+  --table-edge-cell-padding: calc(var(--cards-padding)/2);
+  --table-cell-padding: calc(var(--cards-padding)/3) calc(var(--cards-padding)/2); }
+  .cards table.dataview tbody {
+    clear: both;
+    padding: 0.5rem 0;
+    display: grid;
+    grid-template-columns: var(--cards-columns);
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 0.75rem; }
+  .cards table.dataview > tbody > tr {
+    background-color: var(--cards-background);
+    border: var(--cards-border-width) solid var(--background-modifier-border);
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    width: 100%; }
-  .cards table.dataview tbody > tr > td img {
-    aspect-ratio: var(--cards-aspect-ratio);
-    width: 100%;
-    object-fit: var(--cards-image-fit);
-    max-height: var(--cards-image-height);
-    background-color: var(--background-secondary);
-    vertical-align: bottom; }
+    padding: 0 0 calc(var(--cards-padding)/3) 0;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.15s linear;
+    max-width: var(--cards-max-width); }
+  .cards table.dataview > tbody > tr:hover {
+    border: var(--cards-border-width) solid var(--background-modifier-border-hover);
+    box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
+    transition: box-shadow 0.15s linear; }
+  .cards table.dataview tbody > tr > td {
+    /* Paragraphs */
+    /* Links */
+    /* Buttons */
+    /* Lists */
+    /* Images */ }
+    .cards table.dataview tbody > tr > td:first-child {
+      font-weight: var(--bold-weight);
+      border: none; }
+    .cards table.dataview tbody > tr > td:first-child a {
+      display: block; }
+    .cards table.dataview tbody > tr > td:last-child {
+      border: none; }
+    .cards table.dataview tbody > tr > td:not(:first-child) {
+      font-size: 90%;
+      color: var(--text-muted); }
+    .cards table.dataview tbody > tr > td > * {
+      padding: calc(var(--cards-padding)/3) 0; }
+    .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) {
+      padding: 4px 0;
+      border-bottom: 1px solid var(--background-modifier-border);
+      width: calc(100% - var(--cards-padding));
+      margin: 0 calc(var(--cards-padding)/2); }
+    .cards table.dataview tbody > tr > td a {
+      text-decoration: none; }
+    .cards table.dataview tbody > tr > td > button {
+      width: 100%;
+      margin: calc(var(--cards-padding)/2) 0; }
+    .cards table.dataview tbody > tr > td:last-child > button {
+      margin-bottom: calc(var(--cards-padding)/6); }
+    .cards table.dataview tbody > tr > td > ul {
+      width: 100%;
+      padding: 0.25em 0 !important;
+      margin: 0 auto !important; }
+    .cards table.dataview tbody > tr > td:not(:last-child) > ul {
+      border-bottom: 1px solid var(--background-modifier-border); }
+    .cards table.dataview tbody > tr > td:has(img) {
+      padding: 0;
+      background-color: var(--background-secondary);
+      display: block;
+      margin: 0;
+      width: 100%; }
+    .cards table.dataview tbody > tr > td img {
+      aspect-ratio: var(--cards-aspect-ratio);
+      width: 100%;
+      object-fit: var(--cards-image-fit);
+      max-height: var(--cards-image-height);
+      background-color: var(--background-secondary);
+      vertical-align: bottom; }
 
 .markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
 .trim-cols .cards table.dataview tbody > tr > td {
