@@ -1262,6 +1262,20 @@ settings:
 		max: 1
 		step: 0.05
 	-
+		id: progress
+		title: Progress bars
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: progress-complete
+		title: Completed progress bar color
+		description: Defaults to your accent color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: sidebars
 		title: Sidebars
 		type: heading

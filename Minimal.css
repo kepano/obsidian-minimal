@@ -1089,6 +1089,9 @@ body {
 .theme-dark {
   --progress-outline:rgba(255,255,255,0.04); }
 
+body {
+  --progress-complete: var(--text-accent); }
+
 .markdown-rendered progress,
 .markdown-source-view.is-live-preview progress,
 .markdown-preview-view progress {
@@ -1128,7 +1131,7 @@ body {
   .markdown-source-view.is-live-preview progress[value='100']::-webkit-progress-value,
   .markdown-preview-view progress[value='1']::-webkit-progress-value,
   .markdown-preview-view progress[value='100']::-webkit-progress-value {
-    background-color: var(--text-accent); }
+    background-color: var(--progress-complete); }
   .markdown-rendered progress[value='0']::-webkit-progress-value, .markdown-rendered progress[value='2']::-webkit-progress-value, .markdown-rendered progress[value='3']::-webkit-progress-value, .markdown-rendered progress[value='4']::-webkit-progress-value, .markdown-rendered progress[value='5']::-webkit-progress-value, .markdown-rendered progress[value='6']::-webkit-progress-value, .markdown-rendered progress[value='7']::-webkit-progress-value, .markdown-rendered progress[value='8']::-webkit-progress-value, .markdown-rendered progress[value='9']::-webkit-progress-value,
   .markdown-source-view.is-live-preview progress[value='0']::-webkit-progress-value,
   .markdown-source-view.is-live-preview progress[value='2']::-webkit-progress-value,
@@ -7317,6 +7320,20 @@ settings:
 		min: 0.25
 		max: 1
 		step: 0.05
+	-
+		id: progress
+		title: Progress bars
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: progress-complete
+		title: Completed progress bar color
+		description: Defaults to your accent color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: sidebars
 		title: Sidebars
