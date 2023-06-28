@@ -1583,6 +1583,12 @@ body,
   background-color: var(--active-line-bg);
   box-shadow: -25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg); }
 
+body {
+  --content-margin-start: max(
+  	calc(50% - var(--line-width)/2),
+  	calc(50% - var(--max-width)/2) );
+  --content-line-width: min(var(--line-width), var(--max-width)); }
+
 /* Line widths ------------------------------------ */
 /* Set overall context to 100% width */
 .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
@@ -1604,6 +1610,10 @@ body,
   width: var(--line-width);
   margin-inline: auto !important; }
 
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > *:not(div) {
+  max-width: var(--content-line-width);
+  margin-inline-start: var(--content-margin-start) !important; }
+
 /* Content rules ------------------------------------
 
    The benefit of this approach is that it covers all levels
@@ -1622,6 +1632,9 @@ body {
   --container-img-max-width: var(--max-width);
   --img-max-width: 100%;
   --img-width: auto;
+  /* because external images don't have a container */
+  --img-margin-start: var(--content-margin-start);
+  --img-line-width: var(--content-line-width);
   --container-chart-width: var(--line-width);
   --container-chart-max-width: var(--max-width);
   --chart-max-width: none;
@@ -1675,14 +1688,20 @@ body {
   --img-width: 100%; }
 
 .img-wide {
-  --container-img-width: var(--line-width-wide); }
+  --container-img-width: var(--line-width-wide);
+  --img-line-width: var(--line-width-wide);
+  --img-margin-start: calc(50% - var(--line-width-wide)/2); }
 
 .img-max {
-  --container-img-width: var(--max-width); }
+  --container-img-width: var(--max-width);
+  --img-line-width: var(--max-width);
+  --img-margin-start: calc(50% - var(--max-width)/2); }
 
 .img-100 {
   --container-img-width: 100%;
-  --container-img-max-width: 100%; }
+  --container-img-max-width: 100%;
+  --img-line-width: 100%;
+  --img-margin-start:0; }
 
 .map-wide,
 .map-max,
@@ -1742,6 +1761,7 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   /* Tables */
   /* Images */
+  /* External images */
   /* Maps */
   /* Maps */
   /* Iframes */ }
@@ -1772,6 +1792,10 @@ body {
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed img,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) img {
       max-width: var(--img-max-width); }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > img,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > img {
+    max-width: var(--img-line-width);
+    margin-inline-start: var(--img-margin-start) !important; }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-chart) {
     width: var(--container-chart-width);
@@ -2638,15 +2662,18 @@ body.minimal-focus-mode.show-view-header .view-content {
   height: 100%; }
 
 /* Full width media  */
+.full-width-media .markdown-source-view .image-embed img:not(.emoji):not([width]),
+.full-width-media .markdown-source-view img:not(.emoji):not([width]),
+.full-width-media .markdown-source-view p:has(.external-embed),
+.full-width-media .markdown-source-view .external-embed,
+.full-width-media .markdown-source-view audio,
+.full-width-media .markdown-source-view video,
 .full-width-media .markdown-preview-view .image-embed img:not(.emoji):not([width]),
-.full-width-media .image-embed img:not(.emoji):not([width]),
+.full-width-media .markdown-preview-view img:not(.emoji):not([width]),
+.full-width-media .markdown-preview-view p:has(.external-embed),
+.full-width-media .markdown-preview-view .external-embed,
 .full-width-media .markdown-preview-view audio,
 .full-width-media .markdown-preview-view video {
-  width: 100%; }
-
-/* YouTube embeds */
-.full-width-media .el-p p:has(.external-embed),
-.full-width-media .external-embed {
   width: 100%; }
 
 /* Table helper classes for alternate styles */

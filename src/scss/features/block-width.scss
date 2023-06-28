@@ -1,3 +1,10 @@
+body {
+	--content-margin-start: max(
+		calc(50% - var(--line-width)/2),
+		calc(50% - var(--max-width)/2) );
+	--content-line-width: min(var(--line-width), var(--max-width));
+}
+
 /* Line widths ------------------------------------ */
 
 /* Set overall context to 100% width */
@@ -21,6 +28,12 @@
 	width: var(--line-width);
 	margin-inline: auto !important;
 }
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content {
+	>  *:not(div) {
+		max-width: var(--content-line-width);
+		margin-inline-start: var(--content-margin-start) !important;
+	}
+}
 
 /* Content rules ------------------------------------
 
@@ -42,6 +55,10 @@ body {
 	--container-img-max-width: var(--max-width);
 	--img-max-width: 100%;
 	--img-width: auto;
+
+	/* because external images don't have a container */
+	--img-margin-start: var(--content-margin-start);
+	--img-line-width: var(--content-line-width);
 
 	--container-chart-width: var(--line-width);
 	--container-chart-max-width: var(--max-width);
@@ -101,12 +118,18 @@ body {
 	--img-max-width: 100%;
 	--img-width: 100%;}
 .img-wide {
-	--container-img-width: var(--line-width-wide);}
+	--container-img-width: var(--line-width-wide);
+	--img-line-width: var(--line-width-wide);
+	--img-margin-start: calc(50% - var(--line-width-wide)/2);}
 .img-max {
-	--container-img-width: var(--max-width);}
+	--container-img-width: var(--max-width);
+	--img-line-width: var(--max-width);
+	--img-margin-start: calc(50% - var(--max-width)/2);}
 .img-100 {
 	--container-img-width: 100%;
-	--container-img-max-width: 100%;}
+	--container-img-max-width: 100%;
+	--img-line-width: 100%;
+	--img-margin-start:0;}
 
 .map-wide,
 .map-max,
@@ -183,6 +206,12 @@ body {
 		img {
 			max-width:var(--img-max-width);
 		}
+	}
+
+	/* External images */
+	> img {
+		max-width: var(--img-line-width);
+		margin-inline-start: var(--img-margin-start) !important;
 	}
 
 	/* Maps */
