@@ -773,9 +773,6 @@ figure {
   background-color: var(--text-selection);
   color: inherit; }
 
-.is-readable-line-width {
-  --file-margins: 0; }
-
 .inline-title {
   padding-top: 16px; }
 
@@ -1570,6 +1567,17 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > *:not(div) {
   max-width: var(--content-line-width);
   margin-inline-start: var(--content-margin-start) !important; }
+
+/* File margins ------------------------------------ */
+.is-readable-line-width {
+  --file-margins: 0; }
+
+/* With line numbers */
+.minimal-line-nums {
+  --file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px; }
+
+.minimal-line-nums .is-readable-line-width {
+  --file-margins: 0 0 0 25px; }
 
 /* Content rules ------------------------------------
 

@@ -35,6 +35,18 @@ body {
 	}
 }
 
+/* File margins ------------------------------------ */
+
+.is-readable-line-width {
+	--file-margins: 0;}
+
+/* With line numbers */
+.minimal-line-nums {
+	--file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px;}
+
+.minimal-line-nums .is-readable-line-width {
+	--file-margins: 0 0 0 25px;}
+
 /* Content rules ------------------------------------
 
    The benefit of this approach is that it covers all levels
