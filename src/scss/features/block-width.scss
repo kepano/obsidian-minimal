@@ -115,9 +115,11 @@ body {
 	--table-max-width: 100%;
 	--table-width: 100%;}
 .table-wide {
-	--container-table-width: var(--line-width-wide);}
+	--container-table-width: var(--line-width-wide);
+	--table-edge-cell-padding: 0px;}
 .table-max {
-	--container-table-width: var(--max-width);}
+	--container-table-width: var(--max-width);
+	--table-edge-cell-padding: 0px;}
 .table-100 {
 	--container-table-width: 100%;
 	--container-table-max-width: 100%;
