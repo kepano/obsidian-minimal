@@ -22,7 +22,7 @@ body {
   --bold-weight: 600;
   --link-weight: inherit;
   /* Headings */
-  --inline-title-margin-bottom: 0;
+  --inline-title-margin-bottom: 1rem;
   --h1-size: 1.125em;
   --h2-size: 1.05em;
   --h3-size: 1em;
@@ -72,7 +72,7 @@ body {
   --image-muted:0.7;
   /* Spacing */
   --heading-spacing: 2.25rem;
-  --p-spacing: 1.5em; }
+  --p-spacing: 1.5rem; }
 
 .mod-macos {
   --top-left-padding-y:24px; }
@@ -636,6 +636,9 @@ body {
 .cm-sizer {
   padding-top: 8px; }
 
+.markdown-source-view.mod-cm6 .cm-sizer {
+  display: block; }
+
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-left: 0;
   padding-right: 0; }
@@ -702,108 +705,6 @@ body:not(.is-mobile) :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutter
 
 .markdown-source-view.mod-cm6 .cm-embed-block:hover {
   border: 0; }
-
-/* Live Preview folding
-.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
-	color:var(--text-faint);
-}
-.cm-editor .cm-foldPlaceholder,
-.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-	cursor:var(--cursor);
-}
-.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
-	right:8px;
-}
-.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-task-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-	right:8px;
-	width:auto;
-}
-.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-	right:-8px;
-	top:1px;
-	width:26px;
-}
-ul>li.is-collapsed::marker,
-.markdown-source-view.mod-cm6 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
-	color:var(--text-accent);
-}
-.cm-gutterElement .collapse-indicator,
-.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
-.markdown-source-view.mod-cm6 .fold-gutter {
-	opacity:0;
-}
-.cm-gutterElement:hover .collapse-indicator,
-.cm-gutterElement .is-collapsed .collapse-indicator,
-.markdown-source-view.mod-cm6 .cm-line:hover .cm-fold-indicator .collapse-indicator,
-.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator,
-.markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
-.markdown-source-view.mod-cm6 .fold-gutter:hover,
-.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator svg {
-	opacity:1;
-}
-
-body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
-	max-width:100%;
-}
-body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
-	max-width:100%;
-} */
-/* Editor mode (Legacy) */
-.theme-light .token.operator,
-.theme-light .token.entity,
-.theme-light .token.url,
-.theme-light .language-css .token.string,
-.theme-light .style .token.string,
-.theme-light .cm-operator,
-.theme-light .cm-string,
-.theme-light .cm-string-2,
-.theme-light .cm-link {
-  background-color: transparent; }
-
-.markdown-source-view.mod-cm5 {
-  padding: 0; }
-
-.cm-s-obsidian .CodeMirror-code {
-  padding-right: 0; }
-
-.CodeMirror-lines {
-  padding-bottom: 170px; }
-
-.CodeMirror pre.CodeMirror-line,
-.CodeMirror pre.CodeMirror-line-like {
-  padding-left: 0;
-  padding-right: 0; }
-
-.cm-s-obsidian pre.HyperMD-list-line {
-  padding-top: 0; }
-
-.workspace .markdown-preview-view .markdown-embed {
-  margin: 0; }
-
-.workspace .markdown-preview-view .markdown-embed-content {
-  max-height: none; }
-
-.markdown-embed-title,
-.internal-embed .markdown-preview-section {
-  max-width: 100%; }
-
-.CodeMirror-linenumber {
-  font-size: var(--font-adaptive-small) !important;
-  font-feature-settings: 'tnum';
-  color: var(--text-faint);
-  padding-top: 3px; }
-
-span.cm-image-marker,
-.cm-s-obsidian span.cm-footref.cm-formatting.cm-formatting-link.cm-formatting-link-end,
-.cm-s-obsidian .cm-formatting-link + span.cm-link.cm-formatting.cm-formatting-link-end,
-.cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
-.cm-s-obsidian span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
-.cm-s-obsidian span.cm-formatting-link {
-  color: var(--text-faint); }
-
-/* Editor Mode Quotes */
-.cm-formatting-quote {
-  color: var(--text-faint) !important; }
 
 /* 
 .is-live-preview .metadata-container {
@@ -1567,14 +1468,6 @@ body,
 
 .cm-s-obsidian span.cm-formatting-task {
   line-height: var(--line-height); }
-
-.mod-cm6 .cm-editor .HyperMD-header-1,
-.mod-cm6 .cm-editor .HyperMD-header-2,
-.mod-cm6 .cm-editor .HyperMD-header-3,
-.mod-cm6 .cm-editor .HyperMD-header-4,
-.mod-cm6 .cm-editor .HyperMD-header-5,
-.mod-cm6 .cm-editor .HyperMD-header-6 {
-  padding-top: 0.5em; }
 
 /* Minimal features */
 /* Active line highlight */
