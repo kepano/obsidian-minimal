@@ -8,65 +8,71 @@
 /* --------------- */
 /* App ribbon moved to the bottom edge */
 
-.hider-ribbon:not(.is-mobile) .workspace-ribbon-collapse-btn {
-	display:none;
-}
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-right {
-	pointer-events:none;
-}
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left {
-	position: absolute;
-	border-right: 0px;
-	margin: 0;
-	height:var(--header-height);
-	overflow: visible;
-	flex-basis: 0;
-	bottom: 0;
-	top: auto;
-	display:flex !important;
-	flex-direction: row;
-	z-index: 17;
-	opacity:0;
-	transition:opacity 0.25s ease-in-out;
-	filter: 
-		 drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
-	gap: 0;
-}
-.hider-ribbon:not(.is-mobile) .side-dock-actions,
-.hider-ribbon:not(.is-mobile) .side-dock-settings {
-	flex-direction: row;
-	display:flex;
-	border-top:var(--border-width) solid var(--background-modifier-border);
-	background:var(--background-secondary);
-	margin:0;
-	position:relative;
-	gap: var(--size-2-2);
-}
-.hider-ribbon:not(.is-mobile) .side-dock-actions {
-	padding-left: 8px;
-}
-.hider-ribbon:not(.is-mobile) .side-dock-settings {
-	border-right: var(--border-width) solid var(--background-modifier-border);
-	border-top-right-radius: var(--radius-m);
-	padding: 0 var(--size-2-2);
-}
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-ribbon-action {
-	display: flex;
-	margin: 7px 0px 8px;
-}
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left:hover {
-	opacity: 1;
-	transition:opacity 0.25s ease-in-out;
-}
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-	opacity: 0;
-}
-.hider-ribbon:not(.is-mobile) .workspace-split.mod-left-split {
-	margin: 0;
-}
-.hider-ribbon:not(.is-mobile) .workspace-leaf-content .item-list {
-	padding-bottom: 40px;
-}
 .hider-ribbon .workspace-ribbon {
 	padding: 0;
+}
+
+.bottom-ribbon,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) {
+
+	.workspace-ribbon-collapse-btn {
+		display:none;
+	}
+	.workspace-ribbon.mod-right {
+		pointer-events:none;
+	}
+	.workspace-ribbon.mod-left {
+		position: absolute;
+		border-right: 0px;
+		margin: 0;
+		height:var(--header-height);
+		overflow: visible;
+		flex-basis: 0;
+		bottom: 0;
+		top: auto;
+		display:flex !important;
+		flex-direction: row;
+		z-index: 17;
+		opacity:0;
+		transition:opacity 0.25s ease-in-out;
+		filter: 
+			 drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
+		gap: 0;
+	}
+	.side-dock-actions,
+	.side-dock-settings {
+		flex-direction: row;
+		display:flex;
+		border-top:var(--border-width) solid var(--background-modifier-border);
+		background:var(--background-secondary);
+		margin:0;
+		position:relative;
+		gap: var(--size-2-2);
+	}
+	.side-dock-actions {
+		padding-left: 8px;
+	}
+	.side-dock-settings {
+		border-right: var(--border-width) solid var(--background-modifier-border);
+		border-top-right-radius: var(--radius-m);
+		padding: 0 var(--size-2-2);
+	}
+	.workspace-ribbon.mod-left .side-dock-ribbon-action {
+		display: flex;
+		margin: 7px 0px 8px;
+	}
+	.workspace-ribbon.mod-left:hover {
+		opacity: 1;
+		transition:opacity 0.25s ease-in-out;
+	}
+	.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+		opacity: 0;
+	}
+	.workspace-split.mod-left-split {
+		margin: 0;
+	}
+	.workspace-leaf-content .item-list {
+		padding-bottom: 40px;
+	}
+
 }

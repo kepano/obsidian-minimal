@@ -1309,19 +1309,25 @@ settings:
 				label: Underline
 				value: sidebar-tabs-underline
 	-
-		id: mobile-left-sidebar-width
-		title: Mobile left sidebar width
-		description: Maximum width for pinned left sidebar on mobile
-		type: variable-number
-		default: 280
-		format: pt
+		id: ribbon
+		title: Ribbon
+		type: heading
+		level: 2
+		collapsed: true
 	-
-		id: mobile-right-sidebar-width
-		title: Mobile right sidebar width
-		description: Maximum width for pinned right sidebar on mobile
-		type: variable-number
-		default: 240
-		format: pt
+		id: ribbon-style
+		title: Ribbon style
+		description: Ribbon menu can be hidden using the Hider plugin
+		type: class-select
+		allowEmpty: false
+		default: ribbon-hidden
+		options:
+			-
+				label: Default
+				value: ribbon-hidden
+			-
+				label: Bottom left hover
+				value: ribbon-bottom-left-hover
 	-
 		id: tables
 		title: Tables

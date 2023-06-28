@@ -4127,13 +4127,17 @@ div[data-type="git-view"] .search-input-clear-button {
 
 /* --------------- */
 /* App ribbon moved to the bottom edge */
-.hider-ribbon:not(.is-mobile) .workspace-ribbon-collapse-btn {
+.hider-ribbon .workspace-ribbon {
+  padding: 0; }
+
+.bottom-ribbon .workspace-ribbon-collapse-btn,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon-collapse-btn {
   display: none; }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-right {
+.bottom-ribbon .workspace-ribbon.mod-right,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-right {
   pointer-events: none; }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left {
+.bottom-ribbon .workspace-ribbon.mod-left,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-left {
   position: absolute;
   border-right: 0px;
   margin: 0;
@@ -4149,9 +4153,10 @@ div[data-type="git-view"] .search-input-clear-button {
   transition: opacity 0.25s ease-in-out;
   filter: drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
   gap: 0; }
-
-.hider-ribbon:not(.is-mobile) .side-dock-actions,
-.hider-ribbon:not(.is-mobile) .side-dock-settings {
+.bottom-ribbon .side-dock-actions,
+.bottom-ribbon .side-dock-settings,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .side-dock-actions,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .side-dock-settings {
   flex-direction: row;
   display: flex;
   border-top: var(--border-width) solid var(--background-modifier-border);
@@ -4159,34 +4164,31 @@ div[data-type="git-view"] .search-input-clear-button {
   margin: 0;
   position: relative;
   gap: var(--size-2-2); }
-
-.hider-ribbon:not(.is-mobile) .side-dock-actions {
+.bottom-ribbon .side-dock-actions,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .side-dock-actions {
   padding-left: 8px; }
-
-.hider-ribbon:not(.is-mobile) .side-dock-settings {
+.bottom-ribbon .side-dock-settings,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .side-dock-settings {
   border-right: var(--border-width) solid var(--background-modifier-border);
   border-top-right-radius: var(--radius-m);
   padding: 0 var(--size-2-2); }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-ribbon-action {
+.bottom-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display: flex;
   margin: 7px 0px 8px; }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left:hover {
+.bottom-ribbon .workspace-ribbon.mod-left:hover,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-left:hover {
   opacity: 1;
   transition: opacity 0.25s ease-in-out; }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+.bottom-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
   opacity: 0; }
-
-.hider-ribbon:not(.is-mobile) .workspace-split.mod-left-split {
+.bottom-ribbon .workspace-split.mod-left-split,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-split.mod-left-split {
   margin: 0; }
-
-.hider-ribbon:not(.is-mobile) .workspace-leaf-content .item-list {
+.bottom-ribbon .workspace-leaf-content .item-list,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-leaf-content .item-list {
   padding-bottom: 40px; }
-
-.hider-ribbon .workspace-ribbon {
-  padding: 0; }
 
 /* Hover Editor */
 .popover.hover-editor {
