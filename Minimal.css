@@ -114,8 +114,8 @@ body {
   /* Image opacity in dark mode */
   --image-muted:0.7;
   /* Spacing */
-  --heading-spacing: 1em;
-  --p-spacing: 1.5rem; }
+  --heading-spacing: 2.5rem;
+  --p-spacing: 1.85rem; }
 
 .mod-macos {
   --top-left-padding-y:24px; }
@@ -1778,6 +1778,10 @@ body {
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer table {
     width: var(--table-width);
     max-width: var(--table-max-width); }
+  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem; }
   .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
   .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed,

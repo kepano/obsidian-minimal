@@ -153,6 +153,10 @@ body {
 	}
 
 	/* Images */
+	> .image-embed {
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+	}
 	> .image-embed,
 	> div:has(.image-embed) {
 		width: var(--container-img-width);
