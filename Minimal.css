@@ -114,7 +114,7 @@ body {
   --image-muted:0.7;
   /* Spacing */
   --heading-spacing: 2.25rem;
-  --p-spacing: 1.5rem;
+  --p-spacing: 1.5em;
   --border-width: 1px;
   --table-border-width: var(--border-width); }
 
@@ -951,7 +951,8 @@ button.mod-warning:hover {
   transition: background-color 0.2s ease-out; }
 
 .document-search, .document-replace {
-  max-width: 100%; }
+  max-width: 100%;
+  padding: 0; }
 
 .document-search-container {
   margin: 0 auto;
@@ -1612,7 +1613,7 @@ body {
       --file-margins: 0 var(--folding-offset) 0 0; }
 
 /* Embeds ------------------------------------ */
-.inline-embed {
+.markdown-preview-view .inline-embed {
   --max-width: 100%; }
 
 /* Content rules ------------------------------------
@@ -1788,10 +1789,10 @@ body {
   /* Iframes */ }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> table),
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview > table),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> table),
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview) {
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview > table) {
     width: var(--container-table-width);
     max-width: var(--container-table-max-width); }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content table,

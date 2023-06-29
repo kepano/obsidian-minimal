@@ -53,7 +53,7 @@ body {
 }
 
 /* Embeds ------------------------------------ */
-.inline-embed {
+.markdown-preview-view .inline-embed {
 	--max-width: 100%;
 }
 
@@ -226,7 +226,7 @@ body {
 	/* Tables */
 	.cm-table-widget,
 	> div:has(>table),
-	> div:has(>.block-language-dataview) {
+	> div:has(>.block-language-dataview>table) {
 		width: var(--container-table-width);
 		max-width:var(--container-table-max-width);
 	}
