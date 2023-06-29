@@ -54,7 +54,6 @@ body {
   --max-col-width: 18em;
   /* Icons */
   --icon-muted: 0.5;
-  --border-width: 1px;
   /* Quotes and transclusions */
   --nested-padding:1.1em;
   /* Lists */
@@ -72,11 +71,16 @@ body {
   --image-muted:0.7;
   /* Spacing */
   --heading-spacing: 2.25rem;
-  --p-spacing: 1.5rem; }
+  --p-spacing: 1.5rem;
+  --border-width: 1px;
+  --table-border-width: var(--border-width); }
 
 .mod-macos {
   --top-left-padding-y:24px; }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .is-phone {
+    --border-width: 0.75px; } }
 /* Dynamic colors
 
 Most colors are driven from the following values, meaning that 
@@ -1395,7 +1399,7 @@ body {
 
 .markdown-source-view.mod-cm6 table,
 .markdown-preview-view table {
-  border: 1px solid var(--border-color);
+  border: var(--border-width) solid var(--border-color);
   border-collapse: collapse; }
 .markdown-source-view.mod-cm6 td, .markdown-source-view.mod-cm6 th,
 .markdown-preview-view td,
@@ -1555,13 +1559,13 @@ body {
   --file-margins: 0; }
 
 /* With line numbers */
-.minimal-line-nums {
+.minimal-line-nums .workspace-leaf-content[data-type=markdown] {
   --file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px; }
-  .minimal-line-nums.is-rtl {
+  .minimal-line-nums .workspace-leaf-content[data-type=markdown].is-rtl {
     --file-margins: var(--size-4-8) 48px var(--size-4-8) var(--size-4-8); }
-  .minimal-line-nums .is-readable-line-width {
+  .minimal-line-nums .workspace-leaf-content[data-type=markdown] .is-readable-line-width {
     --file-margins: 0 0 0 var(--folding-offset); }
-    .minimal-line-nums .is-readable-line-width.is-rtl {
+    .minimal-line-nums .workspace-leaf-content[data-type=markdown] .is-readable-line-width.is-rtl {
       --file-margins: 0 var(--folding-offset) 0 0; }
 
 /* Embeds ------------------------------------ */
@@ -2681,12 +2685,12 @@ body.minimal-focus-mode.show-view-header .view-content {
   font-variant-numeric: tabular-nums; }
 
 .table-lines {
-  --table-border-width: 1px;
-  --table-header-border-width: 1px;
-  --table-column-first-border-width: 1px;
-  --table-column-last-border-width: 1px;
-  --table-row-last-border-width: 1px;
-  --table-edge-cell-padding-first: 10px; }
+  --table-border-width: var(--border-width);
+  --table-header-border-width: var(--border-width);
+  --table-column-first-border-width: var(--border-width);
+  --table-column-last-border-width:var(--border-width);
+  --table-row-last-border-width: var(--border-width);
+  --table-edge-cell-padding: 10px; }
 
 .table-nowrap {
   --table-white-space: nowrap; }
@@ -2720,7 +2724,7 @@ body.minimal-focus-mode.show-view-header .view-content {
 .col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
 .col-lines .table-view-table thead > tr > th:not(:last-child),
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {
-  border-right: 1px solid var(--background-modifier-border); }
+  border-right: var(--table-border-width) solid var(--background-modifier-border); }
 
 /* Highlight rows on hover */
 .row-hover {
@@ -3836,7 +3840,7 @@ body .table-view-table > thead > tr > th,
   font-weight: 400;
   font-size: var(--table-text-size);
   color: var(--text-muted);
-  border-bottom: 1px solid var(--table-border-color);
+  border-bottom: var(--table-border-width) solid var(--table-border-color);
   cursor: var(--cursor); }
 
 table.dataview ul.dataview-ul {
@@ -4873,7 +4877,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   margin: 2px 0 2px -20px; }
 
 .workspace-leaf-content[data-type="style-settings"] .view-content {
-  padding: var(--size-4-4) 0 var(--size-4-4) var(--folding-offset); }
+  padding: var(--size-4-4) 0; }
 .workspace-leaf-content[data-type="style-settings"] .view-content > div {
   width: var(--line-width);
   max-width: var(--max-width);

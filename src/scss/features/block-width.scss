@@ -41,7 +41,7 @@ body {
 	--file-margins: 0;}
 
 /* With line numbers */
-.minimal-line-nums {
+.minimal-line-nums .workspace-leaf-content[data-type=markdown] {
 	--file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px;
 	&.is-rtl {
 			--file-margins: var(--size-4-8) 48px var(--size-4-8) var(--size-4-8);}

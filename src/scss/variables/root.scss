@@ -65,8 +65,6 @@ body {
 	/* Icons */
 	--icon-muted: 0.5;
 
-	--border-width: 1px;
-
 	/* Quotes and transclusions */
 	--nested-padding:1.1em;
 
@@ -92,8 +90,16 @@ body {
 	--heading-spacing: 2.25rem;
 	--p-spacing: 1.5rem;
 
+	--border-width: 1px;
+	--table-border-width: var(--border-width);
 }
 
 .mod-macos {
 	--top-left-padding-y:24px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+	.is-phone {
+		--border-width: 0.75px;
+	}
 }
