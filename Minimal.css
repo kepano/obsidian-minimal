@@ -1941,8 +1941,6 @@ https://github.com/sponsors/kepano
       width: 100%;
       padding: 0.25em 0 !important;
       margin: 0 auto !important; }
-    .cards table.dataview tbody > tr > td:not(:last-child) > ul {
-      border-bottom: 1px solid var(--background-modifier-border); }
     .cards table.dataview tbody > tr > td:has(img) {
       padding: 0;
       background-color: var(--background-secondary);
@@ -3857,20 +3855,23 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 
 /* Dataview plugin */
 /* inline lists */
-.dataview-inline-lists .markdown-source-view:not(.cards) .dataview-ul li:not(:last-child):after,
-.dataview-inline-lists .markdown-source-view:not(.cards) .dataview-ul li:not(:last-child):after,
-.dataview-inline-lists .markdown-preview-view:not(.cards) .dataview-ul li:not(:last-child):after,
-.dataview-inline-lists .markdown-preview-view:not(.cards) .dataview-ul li:not(:last-child):after {
+.dataview-inline-lists .markdown-source-view .dataview-ul,
+.dataview-inline-lists .markdown-preview-view .dataview-ul {
+  --list-spacing: 0; }
+.dataview-inline-lists .markdown-source-view .dataview-ul li:not(:last-child):after,
+.dataview-inline-lists .markdown-source-view .dataview-ul li:not(:last-child):after,
+.dataview-inline-lists .markdown-preview-view .dataview-ul li:not(:last-child):after,
+.dataview-inline-lists .markdown-preview-view .dataview-ul li:not(:last-child):after {
   content: ", "; }
-.dataview-inline-lists .markdown-source-view:not(.cards) ul.dataview-ul > li::before,
-.dataview-inline-lists .markdown-source-view:not(.cards) ul.dataview-ul > li::before,
-.dataview-inline-lists .markdown-preview-view:not(.cards) ul.dataview-ul > li::before,
-.dataview-inline-lists .markdown-preview-view:not(.cards) ul.dataview-ul > li::before {
+.dataview-inline-lists .markdown-source-view ul.dataview-ul > li::before,
+.dataview-inline-lists .markdown-source-view ul.dataview-ul > li::before,
+.dataview-inline-lists .markdown-preview-view ul.dataview-ul > li::before,
+.dataview-inline-lists .markdown-preview-view ul.dataview-ul > li::before {
   display: none; }
-.dataview-inline-lists .markdown-source-view:not(.cards) .dataview-ul li,
-.dataview-inline-lists .markdown-source-view:not(.cards) .dataview-ul li,
-.dataview-inline-lists .markdown-preview-view:not(.cards) .dataview-ul li,
-.dataview-inline-lists .markdown-preview-view:not(.cards) .dataview-ul li {
+.dataview-inline-lists .markdown-source-view .dataview-ul li,
+.dataview-inline-lists .markdown-source-view .dataview-ul li,
+.dataview-inline-lists .markdown-preview-view .dataview-ul li,
+.dataview-inline-lists .markdown-preview-view .dataview-ul li {
   display: inline-block;
   padding-right: 0.25em; }
 

@@ -2,8 +2,11 @@
 
 /* inline lists */
 
-.dataview-inline-lists .markdown-source-view:not(.cards),
-.dataview-inline-lists .markdown-preview-view:not(.cards) {
+.dataview-inline-lists .markdown-source-view,
+.dataview-inline-lists .markdown-preview-view {
+	.dataview-ul {
+		--list-spacing: 0;
+	}
 	.dataview-ul li:not(:last-child):after,
 	.dataview-ul li:not(:last-child):after {
 		content:", ";

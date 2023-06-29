@@ -117,9 +117,6 @@ https://github.com/sponsors/kepano
 				padding: 0.25em 0 !important;
 				margin: 0 auto !important;
 			}
-			&:not(:last-child) > ul {
-				border-bottom: 1px solid var(--background-modifier-border);
-			}
 
 			/* Images */
 			&:has(img) {
