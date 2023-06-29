@@ -1,0 +1,20 @@
+.zoom-plugin-header {
+	--link-color: var(--text-normal);
+	--link-decoration: none;
+	font-size: var(--font-ui-small);
+	padding: 0;
+	justify-content: center;
+	margin: var(--size-4-2) auto;
+	max-width: var(--max-width);
+
+	> .zoom-plugin-title {
+		text-decoration: none;
+		max-width: 15em;
+		overflow: hidden;
+	}
+
+	> .zoom-plugin-delimiter {
+		color: var(--text-faint);
+		padding: 0 var(--size-4-1);
+	}
+}
