@@ -7789,13 +7789,13 @@ settings:
 	-
 		id: p-spacing
 		title: Paragraph spacing
-		description: Space between paragraphs in reading mode
+		description: Space between paragraphs in reading mode (Obsidian 1.3.7+)
 		type: variable-text
 		default: 1.5em
 	-
-		id: p-spacing
+		id: heading-spacing
 		title: Heading spacing
-		description: Space between paragraphs and headings in reading mode
+		description: Space between paragraphs and headings in reading mode (Obsidian 1.3.7+)
 		type: variable-text
 		default: 2.25rem
 	-
