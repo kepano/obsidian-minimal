@@ -1393,21 +1393,21 @@ settings:
 		default: 1em
 	-
 		id: maximize-tables-off
-		title: Maximize table width (beta)
-		description: Tables fill the width of the line
+		title: Maximize table width 
+		description: Determines how wide tables should behave when they become wider than the line width
 		type: class-select
 		allowEmpty: false
-		default: maximize-tables
+		default: maximize-tables-off
 		options:
 			-
-				label: Always
-				value: maximize-tables
+				label: Fit to line width
+				value: maximize-tables-off
 			-
-				label: Automatic
+				label: Overflow line width
 				value: maximize-tables-auto
 			-
-				label: Never
-				value: maximize-tables-off
+				label: Always fill
+				value: maximize-tables
 	-
 		id: col-lines
 		title: Column lines

@@ -1427,7 +1427,8 @@ body {
   --table-column-first-border-width: 0;
   --table-column-last-border-width: 0;
   --table-row-last-border-width: 0;
-  --table-edge-padding: 0;
+  --table-edge-cell-padding-first: 0;
+  --table-edge-cell-padding-last: 10px;
   --table-cell-padding: 4px 10px; }
 
 /* Preview mode tables */
@@ -1445,11 +1446,11 @@ body {
   .markdown-source-view.mod-cm6 td:first-child, .markdown-source-view.mod-cm6 th:first-child,
   .markdown-preview-view td:first-child,
   .markdown-preview-view th:first-child {
-    padding-left: var(--table-edge-cell-padding); }
+    padding-left: var(--table-edge-cell-padding-first); }
   .markdown-source-view.mod-cm6 td:last-child, .markdown-source-view.mod-cm6 th:last-child,
   .markdown-preview-view td:last-child,
   .markdown-preview-view th:last-child {
-    padding-right: var(--table-edge-cell-padding); }
+    padding-right: var(--table-edge-cell-padding-last); }
 
 /* Override Sortable plugin */
 .markdown-preview-view th,
@@ -1459,11 +1460,11 @@ body {
   .markdown-preview-view th:first-child,
   .table-view-table > thead > tr > th:first-child,
   .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child {
-    padding-left: var(--table-edge-cell-padding); }
+    padding-left: var(--table-edge-cell-padding-first); }
   .markdown-preview-view th:last-child,
   .table-view-table > thead > tr > th:last-child,
   .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:last-child {
-    padding-right: var(--table-edge-cell-padding); }
+    padding-right: var(--table-edge-cell-padding-last); }
 
 /* Live Preview Tables */
 .is-live-preview .el-table {
@@ -1623,6 +1624,7 @@ body {
   --container-table-max-width: var(--max-width);
   --table-max-width: none;
   --table-width: auto;
+  --table-margin: inherit;
   --container-img-width: var(--line-width);
   --container-img-max-width: var(--max-width);
   --img-max-width: 100%;
@@ -1655,6 +1657,21 @@ body {
     --container-map-width: var(--line-width);
     --container-chart-width: var(--line-width); }
 
+.maximize-tables-auto {
+  --container-table-max-width: 100%;
+  --container-table-width: 100%;
+  --table-max-width: 100%;
+  --table-margin: var(--content-margin-start) auto;
+  --table-width: auto; }
+
+.maximize-tables {
+  --container-table-max-width: 100%;
+  --container-table-width: 100%;
+  --table-min-width: min(var(--line-width), var(--max-width));
+  --table-max-width: 100%;
+  --table-margin: auto;
+  --table-width: auto; }
+
 .table-wide,
 .table-max,
 .table-100 {
@@ -1663,16 +1680,18 @@ body {
 
 .table-wide {
   --container-table-width: var(--line-width-wide);
-  --table-edge-cell-padding: 0px; }
+  --table-edge-cell-padding-first: 0px; }
 
 .table-max {
   --container-table-width: var(--max-width);
-  --table-edge-cell-padding: 0px; }
+  --table-edge-cell-padding-first: 0px;
+  --table-margin: 0; }
 
 .table-100 {
   --container-table-width: 100%;
   --container-table-max-width: 100%;
-  --table-edge-cell-padding: 20px; }
+  --table-edge-cell-padding-first: 20px;
+  --table-margin: 0; }
   .table-100 .dataview.list-view-ul {
     max-width: var(--max-width);
     width: var(--line-width);
@@ -1773,7 +1792,9 @@ body {
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content table,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer table {
     width: var(--table-width);
-    max-width: var(--table-max-width); }
+    max-width: var(--table-max-width);
+    margin-inline: var(--table-margin);
+    min-width: var(--table-min-width); }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {
     padding-top: 0.25rem;
@@ -1855,7 +1876,8 @@ https://github.com/sponsors/kepano
 
 .cards table.dataview {
   --table-width: 100%;
-  --table-edge-cell-padding: calc(var(--cards-padding)/2);
+  --table-edge-cell-padding-first: calc(var(--cards-padding)/2);
+  --table-edge-cell-padding-last: calc(var(--cards-padding)/2);
   --table-cell-padding: calc(var(--cards-padding)/3) calc(var(--cards-padding)/2); }
   .cards table.dataview tbody {
     clear: both;
@@ -2688,11 +2710,11 @@ body.minimal-focus-mode.show-view-header .view-content {
   --table-text-size: 75%; }
 
 .row-hover {
-  --table-edge-cell-padding: 10px; }
+  --table-edge-cell-padding-first: 10px; }
 
 .row-alt {
   --table-row-alt-background: var(--background-table-rows);
-  --table-edge-cell-padding: 10px; }
+  --table-edge-cell-padding-first: 10px; }
 
 .col-alt {
   --table-column-alt-background: var(--background-table-rows); }
@@ -2706,7 +2728,7 @@ body.minimal-focus-mode.show-view-header .view-content {
   --table-column-first-border-width: 1px;
   --table-column-last-border-width: 1px;
   --table-row-last-border-width: 1px;
-  --table-edge-cell-padding: 10px; }
+  --table-edge-cell-padding-first: 10px; }
 
 .table-nowrap {
   --table-white-space: nowrap; }
@@ -7456,21 +7478,21 @@ settings:
 		default: 1em
 	-
 		id: maximize-tables-off
-		title: Maximize table width (beta)
-		description: Tables fill the width of the line
+		title: Maximize table width 
+		description: Determines how wide tables should behave when they become wider than the line width
 		type: class-select
 		allowEmpty: false
-		default: maximize-tables
+		default: maximize-tables-off
 		options:
 			-
-				label: Always
-				value: maximize-tables
+				label: Fit to line width
+				value: maximize-tables-off
 			-
-				label: Automatic
+				label: Overflow line width
 				value: maximize-tables-auto
 			-
-				label: Never
-				value: maximize-tables-off
+				label: Always fill
+				value: maximize-tables
 	-
 		id: col-lines
 		title: Column lines

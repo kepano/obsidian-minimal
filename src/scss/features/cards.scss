@@ -37,7 +37,8 @@ https://github.com/sponsors/kepano
 .cards {
 	table.dataview {
 		--table-width: 100%;
-		--table-edge-cell-padding: calc(var(--cards-padding)/2);
+		--table-edge-cell-padding-first: calc(var(--cards-padding)/2);
+		--table-edge-cell-padding-last: calc(var(--cards-padding)/2);
 		--table-cell-padding: calc(var(--cards-padding)/3) calc(var(--cards-padding)/2);
 
 		tbody {

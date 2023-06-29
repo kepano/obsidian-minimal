@@ -9,11 +9,11 @@
 }
 
 .row-hover {
-	--table-edge-cell-padding: 10px;
+	--table-edge-cell-padding-first: 10px;
 }
 .row-alt {
 	--table-row-alt-background: var(--background-table-rows);
-	--table-edge-cell-padding: 10px;
+	--table-edge-cell-padding-first: 10px;
 }
 .col-alt {
 	--table-column-alt-background: var(--background-table-rows);
@@ -29,7 +29,7 @@
 	--table-column-first-border-width: 1px;
 	--table-column-last-border-width: 1px;
 	--table-row-last-border-width: 1px;
-	--table-edge-cell-padding: 10px;
+	--table-edge-cell-padding-first: 10px;
 }
 
 .table-nowrap {

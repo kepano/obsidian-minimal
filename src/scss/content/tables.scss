@@ -3,7 +3,8 @@ body {
 	--table-column-first-border-width: 0;
 	--table-column-last-border-width: 0;
 	--table-row-last-border-width: 0;
-	--table-edge-padding: 0;
+	--table-edge-cell-padding-first: 0;
+	--table-edge-cell-padding-last: 10px;
 	--table-cell-padding: 4px 10px;
 }
 
@@ -21,10 +22,10 @@ body {
 	td, th {
 		padding: var(--table-cell-padding);
 		&:first-child {
-			padding-left: var(--table-edge-cell-padding);
+			padding-left: var(--table-edge-cell-padding-first);
 		}
 		&:last-child {
-			padding-right: var(--table-edge-cell-padding);
+			padding-right: var(--table-edge-cell-padding-last);
 		}
 	}
 }
@@ -35,10 +36,10 @@ body {
 .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
 	padding: var(--table-cell-padding);
 	&:first-child {
-		padding-left: var(--table-edge-cell-padding);
+		padding-left: var(--table-edge-cell-padding-first);
 	}
 	&:last-child {
-		padding-right: var(--table-edge-cell-padding);
+		padding-right: var(--table-edge-cell-padding-last);
 	}
 }
 
