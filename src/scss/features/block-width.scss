@@ -120,7 +120,8 @@ body {
 	--container-table-width: 100%;
 	--table-max-width: 100%;
 	--table-margin: var(--content-margin-start) auto;
-	--table-width: auto;}
+	--table-width: auto;
+}
 
 .maximize-tables {
 	--container-table-max-width: 100%;
@@ -128,7 +129,11 @@ body {
 	--table-min-width: min(var(--line-width), var(--max-width));
 	--table-max-width: 100%;
 	--table-margin: auto;
-	--table-width: auto;}
+	--table-width: auto;
+	.cards .block-language-dataview {
+		padding: 0 var(--size-4-3);
+	}
+}
 
 .table-wide,
 .table-max,

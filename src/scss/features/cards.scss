@@ -34,12 +34,13 @@ https://github.com/sponsors/kepano
 	padding:0.25rem 0.75rem;
 }
 
-.cards {
+.cards {	
 	table.dataview {
 		--table-width: 100%;
 		--table-edge-cell-padding-first: calc(var(--cards-padding)/2);
 		--table-edge-cell-padding-last: calc(var(--cards-padding)/2);
 		--table-cell-padding: calc(var(--cards-padding)/3) calc(var(--cards-padding)/2);
+		line-height: 1.3;
 
 		tbody {
 			clear: both;
@@ -82,7 +83,7 @@ https://github.com/sponsors/kepano
 				border: none;
 			}
 			&:not(:first-child) {
-				font-size: 90%;
+				font-size: calc(var(--table-text-size) * .9);
 				color: var(--text-muted);
 			}
 
@@ -194,7 +195,7 @@ https://github.com/sponsors/kepano
 			position: relative;
 			text-align: right;
 			height: 24px;
-			padding-bottom: 4px;
+			padding-bottom: 0px;
 		}
 		thead:hover:before {
 			opacity:0.5;
@@ -231,7 +232,7 @@ https://github.com/sponsors/kepano
 			padding: 6px;
 			border-radius: var(--radius-m);
 			flex-direction: column;
-			margin: 26px 0 0 0;
+			margin: 24px 0 0 0;
 			width: 100%;
 		}
 		thead:hover > tr {
