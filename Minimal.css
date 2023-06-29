@@ -3402,6 +3402,8 @@ body:not(.full-file-names) {
   padding-top: var(--size-4-4); }
 
 .is-mobile {
+  --font-bold: 600;
+  --font-ui-medium: var(--font-adaptive-small);
   --interactive-normal: var(--background-secondary);
   --background-modifier-form-field: var(--background-secondary);
   --background-modifier-form-field-highlighted: var(--background-secondary); }
@@ -4952,23 +4954,12 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   border-radius: 40px;
   box-shadow: none;
   border: none; }
-
 .setting-item.setting-item-heading.style-settings-heading.is-collapsed {
   border-bottom: 1px solid var(--background-modifier-border); }
-
 .setting-item.setting-item-heading.style-settings-heading {
   border: 0;
   padding: 10px 0 5px;
   margin-bottom: 0; }
-
-.mod-root .workspace-leaf-content[data-type="style-settings"] .style-settings-container .setting-item:not(.setting-item-heading) {
-  flex-direction: row;
-  align-items: center;
-  padding: 0.5em 0; }
-
-.workspace-split:not(.mod-root) .workspace-leaf-content[data-type="style-settings"] .setting-item-name {
-  font-size: var(--font-adaptive-smaller); }
-
 .setting-item .style-settings-import,
 .setting-item .style-settings-export {
   text-decoration: none;
@@ -4979,12 +4970,19 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   padding: 2px 8px;
   border-radius: 5px;
   cursor: var(--cursor); }
-
-.style-settings-import:hover,
-.style-settings-export:hover {
+.setting-item .style-settings-import:hover,
+.setting-item .style-settings-export:hover {
   background-color: var(--background-modifier-hover);
   color: var(--text-normal);
   cursor: var(--cursor); }
+
+.mod-root .workspace-leaf-content[data-type="style-settings"] .style-settings-container .setting-item:not(.setting-item-heading) {
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em 0; }
+
+.workspace-split:not(.mod-root) .workspace-leaf-content[data-type="style-settings"] .setting-item-name {
+  font-size: var(--font-adaptive-smaller); }
 
 .themed-color-wrapper > div + div {
   margin-top: 0;
@@ -4992,13 +4990,18 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 
 .theme-light .themed-color-wrapper > .theme-light {
   background-color: transparent; }
-
 .theme-light .themed-color-wrapper > .theme-dark {
   background-color: rgba(0, 0, 0, 0.8); }
 
 .theme-dark .themed-color-wrapper > .theme-dark {
   background-color: transparent; }
 
+@media (max-width: 400pt) {
+  .workspace-leaf-content[data-type="style-settings"] .setting-item-name {
+    font-size: var(--font-adaptive-small); }
+  .workspace-leaf-content[data-type="style-settings"] .setting-item-info:has(.search-input-container) {
+    width: 100%;
+    margin-right: 0; } }
 /* Todoist Plugin Styles */
 body .todoist-query-title {
   display: inline;
