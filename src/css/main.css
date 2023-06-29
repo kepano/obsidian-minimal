@@ -3877,18 +3877,21 @@ body .dataview-error {
 .dataview.dataview-error {
   color: var(--text-muted); }
 
-/* New error box as of 2022-05 */
 body div.dataview-error-box {
   min-height: 0;
   border: none;
   background-color: transparent;
   font-size: var(--table-text-size);
   border-radius: var(--radius-m);
-  padding: 15px 0; }
+  padding: 15px 0;
+  justify-content: flex-start; }
   body div.dataview-error-box p {
     margin-block-start: 0;
     margin-block-end: 0;
     color: var(--text-faint); }
+
+.block-language-dataviewjs:has(.dataview-error-box) table.dataview {
+  display: none; }
 
 .markdown-source-view div.dataview-error-box {
   margin-top: 15px; }
