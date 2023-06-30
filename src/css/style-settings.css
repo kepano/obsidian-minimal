@@ -1409,6 +1409,12 @@ settings:
 				label: Always fill
 				value: maximize-tables
 	-
+		id: row-lines
+		title: Row lines
+		description: Display borders between table rows globally
+		type: class-toggle
+		default: false
+	-
 		id: col-lines
 		title: Column lines
 		description: Display borders between table columns globally

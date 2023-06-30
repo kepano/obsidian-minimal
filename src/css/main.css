@@ -2733,6 +2733,12 @@ body.minimal-focus-mode.show-view-header .view-content {
 .row-lines-off table:not(.calendar) tbody > tr:last-child > td {
   border-bottom: none; }
 
+.row-lines table:not(.calendar) tbody > tr > td,
+.row-lines .table-view-table > tbody > tr > td {
+  border-bottom: var(--table-border-width) solid var(--table-border-color); }
+.row-lines table:not(.calendar) tbody > tr:last-child > td {
+  border-bottom: none; }
+
 .col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
 .col-lines .table-view-table thead > tr > th:not(:last-child),
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {
@@ -3861,10 +3867,6 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .dataview-inline-lists .markdown-preview-view .dataview-ul li {
   display: inline-block;
   padding-right: 0.25em; }
-
-.markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
-.markdown-preview-view .table-view-table > tbody > tr > td {
-  border-bottom: var(--table-border-width) solid var(--table-border-color); }
 
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
