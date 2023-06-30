@@ -103,19 +103,21 @@ body {
 	--iframe-width: auto;
 
 	/* Entire page */
-	.is-readable-line-width.wide {
+	.wide {
 		--line-width: var(--line-width-wide);
+		--container-table-width: var(--line-width-wide);
+		--container-img-width: var(--line-width-wide);
+		--container-iframe-width: var(--line-width-wide);
+		--container-map-width: var(--line-width-wide);
+		--container-chart-width: var(--line-width-wide);
 	}
-	.is-readable-line-width.max {
+	.max {
 		--line-width: var(--max-width);
-	}
-	.is-readable-line-width.wide,
-	.is-readable-line-width.max {
-		--container-table-width: var(--line-width);
-		--container-img-width: var(--line-width);
-		--container-iframe-width: var(--line-width);
-		--container-map-width: var(--line-width);
-		--container-chart-width: var(--line-width);
+		--container-table-width: var(--max-width);
+		--container-img-width: var(--max-width);
+		--container-iframe-width: var(--max-width);
+		--container-map-width: var(--max-width);
+		--container-chart-width: var(--max-width);
 	}
 }
 
@@ -250,7 +252,7 @@ table.dataview {
 	.cm-table-widget,
 	> div:has(>table),
 	> div:has(>.block-language-dataview>table),
-	> div:has(>.block-language-dataviewjs table) {
+	> div:has(>.block-language-dataviewjs) {
 		width: var(--container-table-width);
 		max-width:var(--container-table-max-width);
 	}
@@ -261,9 +263,8 @@ table.dataview {
 		min-width: var(--table-min-width);
 	}
 	.block-language-dataviewjs {
-		> :is(div,p,h1,h2,h3,h4,h5,h6) {
+		> :is(p,h1,h2,h3,h4,h5,h6) {
 			width: var(--line-width);
-			margin-inline: auto;
 		}
 	}
 

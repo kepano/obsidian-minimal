@@ -1654,17 +1654,20 @@ body {
   --iframe-max-width: none;
   --iframe-width: auto;
   /* Entire page */ }
-  body .is-readable-line-width.wide {
-    --line-width: var(--line-width-wide); }
-  body .is-readable-line-width.max {
-    --line-width: var(--max-width); }
-  body .is-readable-line-width.wide,
-  body .is-readable-line-width.max {
-    --container-table-width: var(--line-width);
-    --container-img-width: var(--line-width);
-    --container-iframe-width: var(--line-width);
-    --container-map-width: var(--line-width);
-    --container-chart-width: var(--line-width); }
+  body .wide {
+    --line-width: var(--line-width-wide);
+    --container-table-width: var(--line-width-wide);
+    --container-img-width: var(--line-width-wide);
+    --container-iframe-width: var(--line-width-wide);
+    --container-map-width: var(--line-width-wide);
+    --container-chart-width: var(--line-width-wide); }
+  body .max {
+    --line-width: var(--max-width);
+    --container-table-width: var(--max-width);
+    --container-img-width: var(--max-width);
+    --container-iframe-width: var(--max-width);
+    --container-map-width: var(--max-width);
+    --container-chart-width: var(--max-width); }
 
 table.dataview {
   --table-min-width: var(--line-width); }
@@ -1805,11 +1808,11 @@ table.dataview {
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> table),
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview > table),
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataviewjs table),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataviewjs),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> table),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview > table),
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataviewjs table) {
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataviewjs) {
     width: var(--container-table-width);
     max-width: var(--container-table-max-width); }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content table,
@@ -1818,10 +1821,9 @@ table.dataview {
     max-width: var(--table-max-width);
     margin-inline: var(--table-margin);
     min-width: var(--table-min-width); }
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .block-language-dataviewjs > :is(div,p,h1,h2,h3,h4,h5,h6),
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .block-language-dataviewjs > :is(div,p,h1,h2,h3,h4,h5,h6) {
-    width: var(--line-width);
-    margin-inline: auto; }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .block-language-dataviewjs > :is(p,h1,h2,h3,h4,h5,h6),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .block-language-dataviewjs > :is(p,h1,h2,h3,h4,h5,h6) {
+    width: var(--line-width); }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {
     padding-top: 0.25rem;
