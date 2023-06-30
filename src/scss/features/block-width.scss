@@ -40,6 +40,11 @@ body {
 .is-readable-line-width {
 	--file-margins: 0;}
 
+
+.is-mobile .markdown-preview-view {
+	--folding-offset: 0;
+}
+
 /* With line numbers */
 .minimal-line-nums .workspace-leaf-content[data-type=markdown] {
 	--file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px;
