@@ -249,7 +249,8 @@ table.dataview {
 	/* Tables */
 	.cm-table-widget,
 	> div:has(>table),
-	> div:has(>.block-language-dataview>table) {
+	> div:has(>.block-language-dataview>table),
+	> div:has(>.block-language-dataviewjs table) {
 		width: var(--container-table-width);
 		max-width:var(--container-table-max-width);
 	}
@@ -258,6 +259,12 @@ table.dataview {
 		max-width:var(--table-max-width);
 		margin-inline: var(--table-margin);
 		min-width: var(--table-min-width);
+	}
+	.block-language-dataviewjs {
+		> :is(div,p,h1,h2,h3,h4,h5,h6) {
+			width: var(--line-width);
+			margin-inline: auto;
+		}
 	}
 
 	/* Images */
