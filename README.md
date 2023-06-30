@@ -65,7 +65,6 @@ Have a question? Join the [Minimal channel](https://discord.com/channels/6860537
 
 - [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) allows you to customize color schemes, fonts, [hotkeys](#hotkeys), and access the main feature toggles. This plugin is highly recommended for all users of Minimal.
 - [Hider plugin](https://github.com/kepano/obsidian-hider) is recommended to hide Obsidian UI elements such as window frame, scrollbars, tooltips, etc. When using Hider to turn off the main toolbar (AKA app ribbon), it can be accessed by hovering over the bottom left edge of the window.
-- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography) is required for advanced layout features such as image grids and block width options.
 - [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings) allows you to create a custom color scheme. This plugin is optional.
 
 ## Settings
@@ -117,7 +116,6 @@ Most plugins work well with Minimal, but the following plugins have received spe
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Charts](https://github.com/phibr0/obsidian-charts)
 - [Checklist](https://github.com/delashum/obsidian-checklist-plugin)
-- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography) — required for image grids and layout control
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
 - [Dictionary](https://github.com/phibr0/obsidian-dictionary)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)
