@@ -1444,6 +1444,21 @@ settings:
 			-
 				label: Underline
 				value: sidebar-tabs-underline
+
+	-
+		id: mobile-left-sidebar-width
+		title: Mobile left sidebar width
+		description: Maximum width for pinned left sidebar on mobile
+		type: variable-number
+		default: 280
+		format: pt
+	-
+		id: mobile-right-sidebar-width
+		title: Mobile right sidebar width
+		description: Maximum width for pinned right sidebar on mobile
+		type: variable-number
+		default: 240
+		format: pt
 	-
 		id: ribbon
 		title: Ribbon
