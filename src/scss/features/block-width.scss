@@ -107,7 +107,7 @@ body {
 		--line-width: var(--line-width-wide);
 	}
 	.is-readable-line-width.max {
-		--line-width: 300em;
+		--line-width: var(--max-width);
 	}
 	.is-readable-line-width.wide,
 	.is-readable-line-width.max {

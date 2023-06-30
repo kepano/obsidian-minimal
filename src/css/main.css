@@ -1614,7 +1614,7 @@ body {
   body .is-readable-line-width.wide {
     --line-width: var(--line-width-wide); }
   body .is-readable-line-width.max {
-    --line-width: 300em; }
+    --line-width: var(--max-width); }
   body .is-readable-line-width.wide,
   body .is-readable-line-width.max {
     --container-table-width: var(--line-width);
