@@ -162,8 +162,8 @@ https://github.com/sponsors/kepano
 	}
 }*/
 
-.links-int-on .cards table.dataview tbody > tr > td a {
-	text-decoration:none;
+.links-int-on .cards table {
+	--link-decoration: none;
 }
 /* Block button */
 .markdown-source-view.mod-cm6.cards .edit-block-button {

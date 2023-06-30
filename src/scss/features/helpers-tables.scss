@@ -15,7 +15,7 @@
 	--table-row-alt-background: var(--background-table-rows);
 	--table-edge-cell-padding-first: 10px;
 }
-.col-alt {
+.col-alt .markdown-rendered:not(.cards) {
 	--table-column-alt-background: var(--background-table-rows);
 }
 
