@@ -42,10 +42,6 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 
 ![](/assets/minimal-plugins.png)
 
-Every screen in the Obsidian app has been revised to create a cohesive experience, including **settings**, **plugin browser**, **sync**, **publish**, and **file recovery**
-
-![](/assets/minimal-modals.png)
-
 ## Installation
 
 To install the theme
