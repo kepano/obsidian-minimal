@@ -116,7 +116,9 @@ body {
   --heading-spacing: 2.25rem;
   --p-spacing: 1.5em;
   --border-width: 1px;
-  --table-border-width: var(--border-width); }
+  --table-border-width: var(--border-width);
+  /* Readable line length off */
+  --file-margins: var(--size-4-2) var(--size-4-12); }
 
 .mod-macos {
   --top-left-padding-y:24px; }
@@ -680,7 +682,7 @@ body {
   color: var(--text-normal); }
 
 .markdown-reading-view > .markdown-preview-view.is-readable-line-width,
-.cm-sizer {
+.markdown-source-view.is-readable-line-width .cm-sizer {
   padding-top: 8px; }
 
 .markdown-source-view.mod-cm6 .cm-sizer {

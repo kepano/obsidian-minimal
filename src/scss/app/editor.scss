@@ -18,7 +18,7 @@
 	color: var(--text-normal);
 }
 .markdown-reading-view > .markdown-preview-view.is-readable-line-width,
-.cm-sizer {
+.markdown-source-view.is-readable-line-width .cm-sizer {
 	padding-top: 8px;
 }
 .markdown-source-view.mod-cm6 .cm-sizer {
