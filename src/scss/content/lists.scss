@@ -1,22 +1,29 @@
-/* Reading Mode Lists  */
+/* Reading Mode Lists	*/
 div > ol,
 div > ul {
-  padding-inline-start:1.4em;
+	padding-inline-start:1.4em;
 }
 ul > li {
-  min-height:1.4em;
+	min-height:1.4em;
 }
 ol > li {
-  margin-left:0em;}
+	margin-inline-start:0em;}
 ol {
-  margin-left:0;
-  list-style:default;
+	margin-inline-start:0;
+	list-style:default;
+}
+
+body {
+	--adaptive-list-edit-offset: var(--list-edit-offset);
+}
+
+.is-rtl {
+	--adaptive-list-edit-offset: calc(var(--list-edit-offset)*-1);
 }
 
 /* Live Preview */
-
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line {
-  margin-left: var(--list-edit-offset) !important;
+	transform: translateX(var(--adaptive-list-edit-offset));
 }
 
 /* Space between list items */
@@ -25,26 +32,26 @@ ol {
 .markdown-preview-view ol>li,
 .markdown-preview-view ul>li,
 .mod-cm6 .HyperMD-list-line.cm-line {
-  padding-top:var(--list-spacing);
-  padding-bottom:var(--list-spacing);
+	padding-top:var(--list-spacing);
+	padding-bottom:var(--list-spacing);
 }
 
 
 .is-mobile {
-  ul > li:not(.task-list-item)::marker {
-    font-size:0.8em;
-  }
-  .markdown-rendered ul,
-  .markdown-rendered ol {
-    padding-inline-start:var(--list-indent);
-  }
-  /* first level */
-  .markdown-rendered div > ol,
-  .markdown-rendered div > ul {
-    padding-inline-start:2em;
-  }
-  .el-ol > ol,
-  .el-ul > ul {
-    margin-left:0;
-  }
+	ul > li:not(.task-list-item)::marker {
+		font-size:0.8em;
+	}
+	.markdown-rendered ul,
+	.markdown-rendered ol {
+		padding-inline-start:var(--list-indent);
+	}
+	/* first level */
+	.markdown-rendered div > ol,
+	.markdown-rendered div > ul {
+		padding-inline-start:2em;
+	}
+	.el-ol > ol,
+	.el-ul > ul {
+		margin-inline-start:0;
+	}
 }

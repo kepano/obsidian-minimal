@@ -32,7 +32,7 @@
 		background-color:rgba(0,128,0,0.1);
 		top:0;
 		left:max(
-			calc(50% - var(--line-width-adaptive)/2 - 1px),
+			calc(50% - var(--line-width)/2 - 1px),
 			calc(50% - var(--max-width)/2 - 1px));
 		z-index:999;
 		position:fixed;
@@ -103,7 +103,7 @@
 		font-size:12px;
 		font-family:var(--font-monospace);
 		content:"\00a0normal";
-		width:var(--line-width-adaptive);
+		width:var(--line-width);
 		max-width:var(--max-width);
 		height:100vh;
 		border-left:1px solid blue;

@@ -65,6 +65,7 @@ body {
   --bold-weight: 600;
   --link-weight: inherit;
   /* Headings */
+  --inline-title-margin-bottom: 1rem;
   --h1-size: 1.125em;
   --h2-size: 1.05em;
   --h3-size: 1em;
@@ -96,11 +97,10 @@ body {
   --max-col-width: 18em;
   /* Icons */
   --icon-muted: 0.5;
-  --border-width: 1px;
   /* Quotes and transclusions */
   --nested-padding:1.1em;
   /* Lists */
-  --folding-offset:10px;
+  --folding-offset: 32px;
   --list-edit-offset: 0.5em;
   --list-indent: 2em;
   --list-spacing: 0.075em;
@@ -113,11 +113,17 @@ body {
   /* Image opacity in dark mode */
   --image-muted:0.7;
   /* Spacing */
-  --spacing-p: 0.75em; }
+  --heading-spacing: 2.25rem;
+  --p-spacing: 1.5em;
+  --border-width: 1px;
+  --table-border-width: var(--border-width); }
 
 .mod-macos {
   --top-left-padding-y:24px; }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .is-phone {
+    --border-width: 0.75px; } }
 /* Dynamic colors
 
 Most colors are driven from the following values, meaning that 
@@ -541,7 +547,6 @@ body {
   --font-adaptive-small: var(--font-ui-medium);
   --font-adaptive-smaller: var(--font-ui-small);
   --font-adaptive-smallest: var(--font-ui-smaller);
-  --line-width-adaptive:var(--line-width);
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
   --table-text-size:calc(var(--font-adaptive-normal) * 0.875); }
@@ -580,7 +585,7 @@ body {
     border-right: 1px solid green;
     background-color: rgba(0, 128, 0, 0.1);
     top: 0;
-    left: max(calc(50% - var(--line-width-adaptive)/2 - 1px), calc(50% - var(--max-width)/2 - 1px));
+    left: max(calc(50% - var(--line-width)/2 - 1px), calc(50% - var(--max-width)/2 - 1px));
     z-index: 999;
     position: fixed;
     pointer-events: none; }
@@ -643,7 +648,7 @@ body {
     font-size: 12px;
     font-family: var(--font-monospace);
     content: "\00a0normal";
-    width: var(--line-width-adaptive);
+    width: var(--line-width);
     max-width: var(--max-width);
     height: 100vh;
     border-left: 1px solid blue;
@@ -674,31 +679,55 @@ body {
 .markdown-source-view {
   color: var(--text-normal); }
 
-.markdown-reading-view > .markdown-preview-view,
+.markdown-reading-view > .markdown-preview-view.is-readable-line-width,
 .cm-sizer {
   padding-top: 8px; }
+
+.markdown-source-view.mod-cm6 .cm-sizer {
+  display: block; }
 
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-left: 0;
   padding-right: 0; }
 
 .markdown-source-view .cm-contentContainer {
-  margin-top: var(--spacing-p); }
+  margin-top: var(--p-spacing); }
 
 /* Gutters */
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
+body:not(.is-mobile) :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutters {
   position: absolute !important;
   z-index: 0;
-  margin-left: 0; }
+  margin-inline-end: 0; }
+
+body:not(.is-mobile) :not(.canvas-node) .markdown-source-view.mod-cm6.is-rtl .cm-gutters {
+  right: 0; }
+
+body {
+  --line-number-color: var(--text-faint);
+  --line-number-color-active: var(--text-muted); }
+
+.markdown-source-view.mod-cm6 .cm-gutters {
+  color: var(--line-number-color) !important; }
+
+.markdown-source-view.mod-cm6 .cm-editor .cm-gutterElement.cm-active .cm-heading-marker,
+.markdown-source-view.mod-cm6 .cm-editor .cm-lineNumbers .cm-gutterElement.cm-active {
+  color: var(--line-number-color-active); }
+
+.cm-editor .cm-lineNumbers {
+  background-color: var(--gutter-background); }
 
 .cm-editor .cm-lineNumbers .cm-gutterElement {
-  min-width: 25px; }
+  min-width: var(--folding-offset);
+  padding-inline-end: 0.5em; }
+
+.is-rtl .cm-editor .cm-lineNumbers .cm-gutterElement {
+  text-align: left; }
 
 /* Line numbers */
 @media (max-width: 400pt) {
   .cm-editor .cm-lineNumbers .cm-gutterElement {
-    padding-right: 4px;
-    padding-left: 8px; } }
+    padding-inline-end: 4px;
+    padding-inline-start: 8px; } }
 .cm-editor .cm-lineNumbers .cm-gutterElement {
   font-variant-numeric: tabular-nums; }
 
@@ -712,8 +741,6 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
   color: var(--text-faint);
   background-color: var(--background-primary);
   top: 0;
-  right: auto;
-  left: 0px;
   opacity: 0;
   transition: opacity 200ms;
   padding: 4px 4px 4px 9px; }
@@ -722,16 +749,11 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 
 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width: 30px !important;
-  padding-left: 7px !important;
-  transform: none !important;
-  margin-left: 0 !important; }
+  padding-left: 7px !important; }
 
 .is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
   padding-left: 0px !important;
   margin-left: 0 !important;
-  transform: none !important;
-  right: 0;
-  left: auto;
   padding: 4px; }
 
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
@@ -752,149 +774,29 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 .markdown-source-view.mod-cm6 .cm-embed-block:hover {
   border: 0; }
 
-/* Live Preview folding
-.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
-	color:var(--text-faint);
-}
-.cm-editor .cm-foldPlaceholder,
-.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-	cursor:var(--cursor);
-}
-.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
-	right:8px;
-}
-.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-task-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-	right:8px;
-	width:auto;
-}
-.markdown-source-view.mod-cm6 .HyperMD-list-line:not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-	right:-8px;
-	top:1px;
-	width:26px;
-}
-ul>li.is-collapsed::marker,
-.markdown-source-view.mod-cm6 .is-collapsed ~ .cm-formatting-list .list-bullet:after {
-	color:var(--text-accent);
-}
-.cm-gutterElement .collapse-indicator,
-.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
-.markdown-source-view.mod-cm6 .fold-gutter {
-	opacity:0;
-}
-.cm-gutterElement:hover .collapse-indicator,
-.cm-gutterElement .is-collapsed .collapse-indicator,
-.markdown-source-view.mod-cm6 .cm-line:hover .cm-fold-indicator .collapse-indicator,
-.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator,
-.markdown-source-view.mod-cm6 .fold-gutter.is-collapsed,
-.markdown-source-view.mod-cm6 .fold-gutter:hover,
-.markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator svg {
-	opacity:1;
-}
-
-body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
-	max-width:100%;
-}
-body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer { 
-	max-width:100%;
-} */
-/* Editor mode (Legacy) */
-.theme-light .token.operator,
-.theme-light .token.entity,
-.theme-light .token.url,
-.theme-light .language-css .token.string,
-.theme-light .style .token.string,
-.theme-light .cm-operator,
-.theme-light .cm-string,
-.theme-light .cm-string-2,
-.theme-light .cm-link {
-  background-color: transparent; }
-
-.markdown-source-view.mod-cm5 {
-  padding: 0; }
-
-.cm-s-obsidian .CodeMirror-code {
-  padding-right: 0; }
-
-.CodeMirror-lines {
-  padding-bottom: 170px; }
-
-.CodeMirror pre.CodeMirror-line,
-.CodeMirror pre.CodeMirror-line-like {
-  padding-left: 0;
-  padding-right: 0; }
-
-.cm-s-obsidian pre.HyperMD-list-line {
-  padding-top: 0; }
-
-.workspace .markdown-preview-view .markdown-embed {
-  margin: 0; }
-
-.workspace .markdown-preview-view .markdown-embed-content {
-  max-height: none; }
-
-.markdown-embed-title,
-.internal-embed .markdown-preview-section {
-  max-width: 100%; }
-
-.CodeMirror-linenumber {
-  font-size: var(--font-adaptive-small) !important;
-  font-feature-settings: 'tnum';
-  color: var(--text-faint);
-  padding-top: 3px; }
-
-span.cm-image-marker,
-.cm-s-obsidian span.cm-footref.cm-formatting.cm-formatting-link.cm-formatting-link-end,
-.cm-s-obsidian .cm-formatting-link + span.cm-link.cm-formatting.cm-formatting-link-end,
-.cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
-.cm-s-obsidian span.cm-link.cm-hmd-barelink.cm-formatting-link-start,
-.cm-s-obsidian span.cm-formatting-link {
-  color: var(--text-faint); }
-
-/* Editor Mode Quotes */
-.cm-formatting-quote {
-  color: var(--text-faint) !important; }
-
+/* 
 .is-live-preview .metadata-container {
-  max-width: calc(var(--max-width) - var(--folding-offset));
-  margin-right: auto;
-  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
-
-.is-readable-line-width.is-live-preview .metadata-container {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset)); }
-
+	max-width:calc(var(--max-width) - var(--folding-offset));
+	margin-right:auto;
+	margin-left:max(
+		calc(50% + var(--folding-offset) - var(--line-width)/2),
+		calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
+}
+.is-readable-line-width.is-live-preview {
+	.metadata-container { 
+		width:calc(var(--line-width) - var(--folding-offset));	
+	}
+}
+*/
 /* Preview mode  */
 figure {
   margin-inline-start: 0;
   margin-inline-end: 0; }
 
-.markdown-preview-view blockquote,
-.markdown-preview-view p,
-.markdown-preview-view ol,
-.markdown-preview-view ul {
-  margin-block-start: var(--spacing-p);
-  margin-block-end: var(--spacing-p); }
-.markdown-preview-view ul ol,
-.markdown-preview-view ol ol,
-.markdown-preview-view ol ul,
-.markdown-preview-view ul ul {
-  margin-block-start: 0em;
-  margin-block-end: 0em; }
-.markdown-preview-view h1,
-.markdown-preview-view h2,
-.markdown-preview-view h3,
-.markdown-preview-view h4,
-.markdown-preview-view h5,
-.markdown-preview-view h6 {
-  margin-block-start: 1em;
-  margin-block-end: var(--spacing-p); }
-
 .markdown-preview-view .mod-highlighted {
   transition: background-color 0.3s ease;
   background-color: var(--text-selection);
   color: inherit; }
-
-.workspace-leaf-content > .view-content {
-  --file-margins: 0; }
 
 .inline-title {
   padding-top: 16px; }
@@ -1049,12 +951,13 @@ button.mod-warning:hover {
   transition: background-color 0.2s ease-out; }
 
 .document-search, .document-replace {
-  max-width: 100%; }
+  max-width: 100%;
+  padding: 0; }
 
 .document-search-container {
   margin: 0 auto;
   max-width: var(--max-width);
-  width: var(--line-width-adaptive); }
+  width: var(--line-width); }
 
 .is-mobile span[title="Fold line"]:after,
 .is-mobile .CodeMirror-foldgutter-open:after {
@@ -1110,6 +1013,9 @@ body {
 .theme-dark {
   --progress-outline:rgba(255,255,255,0.04); }
 
+body {
+  --progress-complete: var(--text-accent); }
+
 .markdown-rendered progress,
 .markdown-source-view.is-live-preview progress,
 .markdown-preview-view progress {
@@ -1149,7 +1055,7 @@ body {
   .markdown-source-view.is-live-preview progress[value='100']::-webkit-progress-value,
   .markdown-preview-view progress[value='1']::-webkit-progress-value,
   .markdown-preview-view progress[value='100']::-webkit-progress-value {
-    background-color: var(--text-accent); }
+    background-color: var(--progress-complete); }
   .markdown-rendered progress[value='0']::-webkit-progress-value, .markdown-rendered progress[value='2']::-webkit-progress-value, .markdown-rendered progress[value='3']::-webkit-progress-value, .markdown-rendered progress[value='4']::-webkit-progress-value, .markdown-rendered progress[value='5']::-webkit-progress-value, .markdown-rendered progress[value='6']::-webkit-progress-value, .markdown-rendered progress[value='7']::-webkit-progress-value, .markdown-rendered progress[value='8']::-webkit-progress-value, .markdown-rendered progress[value='9']::-webkit-progress-value,
   .markdown-source-view.is-live-preview progress[value='0']::-webkit-progress-value,
   .markdown-source-view.is-live-preview progress[value='2']::-webkit-progress-value,
@@ -1281,10 +1187,6 @@ body:not(.minimal-strike-lists) {
   --checklist-done-decoration: none;
   --checklist-done-color: var(--text-normal); }
 
-input[type=checkbox] {
-  padding: 0;
-  margin: 0 6px 0 0; }
-
 .markdown-preview-section > .contains-task-list {
   padding-bottom: 0.5em; }
 
@@ -1302,7 +1204,7 @@ input[type=checkbox] {
   line-height: var(--line-height); }
 
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin-left: -0.4em; }
+  margin-inline-start: -0.4em; }
 
 .is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox {
   top: 0.2em; }
@@ -1422,7 +1324,7 @@ a[href*="obsidian://search"] {
 .theme-dark a[href*="obsidian://search"] {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'><path fill='white' stroke='white' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'></path></svg>"); }
 
-/* Reading Mode Lists  */
+/* Reading Mode Lists	*/
 div > ol,
 div > ul {
   padding-inline-start: 1.4em; }
@@ -1431,15 +1333,21 @@ ul > li {
   min-height: 1.4em; }
 
 ol > li {
-  margin-left: 0em; }
+  margin-inline-start: 0em; }
 
 ol {
-  margin-left: 0;
+  margin-inline-start: 0;
   list-style: default; }
+
+body {
+  --adaptive-list-edit-offset: var(--list-edit-offset); }
+
+.is-rtl {
+  --adaptive-list-edit-offset: calc(var(--list-edit-offset)*-1); }
 
 /* Live Preview */
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line {
-  margin-left: var(--list-edit-offset) !important; }
+  transform: translateX(var(--adaptive-list-edit-offset)); }
 
 /* Space between list items */
 .markdown-source-view ol > li,
@@ -1462,7 +1370,7 @@ ol {
     padding-inline-start: 2em; }
   .is-mobile .el-ol > ol,
   .is-mobile .el-ul > ul {
-    margin-left: 0; }
+    margin-inline-start: 0; }
 
 /* Backlinks in Preview */
 .is-mobile .workspace-leaf-content:not([data-type='search']) .workspace-leaf-content[data-type='markdown'] .nav-buttons-container {
@@ -1519,41 +1427,50 @@ body {
 .theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdf-thumbnail-view .thumbnailImage {
   mix-blend-mode: multiply; }
 
+body {
+  --table-header-border-width: 0;
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width: 0;
+  --table-row-last-border-width: 0;
+  --table-edge-cell-padding-first: 0;
+  --table-edge-cell-padding-last: 10px;
+  --table-cell-padding: 4px 10px;
+  --table-header-size: var(--table-text-size); }
+
 /* Preview mode tables */
 .markdown-source-view.mod-cm6 table {
   border-collapse: collapse; }
 
-.markdown-preview-view table {
-  margin-block-start: 1em; }
-
 .markdown-source-view.mod-cm6 table,
 .markdown-preview-view table {
-  border: 1px solid var(--border-color);
+  border: var(--border-width) solid var(--border-color);
   border-collapse: collapse; }
 .markdown-source-view.mod-cm6 td, .markdown-source-view.mod-cm6 th,
 .markdown-preview-view td,
 .markdown-preview-view th {
-  padding: 4px 10px; }
+  padding: var(--table-cell-padding); }
   .markdown-source-view.mod-cm6 td:first-child, .markdown-source-view.mod-cm6 th:first-child,
   .markdown-preview-view td:first-child,
   .markdown-preview-view th:first-child {
-    padding-left: 0; }
+    padding-left: var(--table-edge-cell-padding-first); }
+  .markdown-source-view.mod-cm6 td:last-child, .markdown-source-view.mod-cm6 th:last-child,
+  .markdown-preview-view td:last-child,
+  .markdown-preview-view th:last-child {
+    padding-right: var(--table-edge-cell-padding-last); }
 
 /* Override Sortable plugin */
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,
 .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
-  padding: 4px 10px; }
+  padding: var(--table-cell-padding); }
   .markdown-preview-view th:first-child,
   .table-view-table > thead > tr > th:first-child,
   .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child {
-    padding-left: 0; }
-
-body {
-  --table-header-border-width: 0;
-  --table-column-first-border-width: 0;
-  --table-column-last-border-width: 0;
-  --table-row-last-border-width: 0; }
+    padding-left: var(--table-edge-cell-padding-first); }
+  .markdown-preview-view th:last-child,
+  .table-view-table > thead > tr > th:last-child,
+  .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:last-child {
+    padding-right: var(--table-edge-cell-padding-last); }
 
 /* Live Preview Tables */
 .is-live-preview .el-table {
@@ -1623,20 +1540,323 @@ body,
 .cm-s-obsidian span.cm-formatting-task {
   line-height: var(--line-height); }
 
-.mod-cm6 .cm-editor .HyperMD-header-1,
-.mod-cm6 .cm-editor .HyperMD-header-2,
-.mod-cm6 .cm-editor .HyperMD-header-3,
-.mod-cm6 .cm-editor .HyperMD-header-4,
-.mod-cm6 .cm-editor .HyperMD-header-5,
-.mod-cm6 .cm-editor .HyperMD-header-6 {
-  padding-top: 0.5em; }
-
 /* Minimal features */
 /* Active line highlight */
 .active-line-on .cm-line.cm-active,
 .active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
-  background-color: var(--active-line-bg);
-  box-shadow: -25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg); }
+  background-color: var(--active-line-bg); }
+  .active-line-on .cm-line.cm-active:before,
+  .active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active:before {
+    top: 0;
+    left: -50vw;
+    position: absolute;
+    display: block;
+    content: '';
+    width: 50vw;
+    height: 100%;
+    background-color: var(--active-line-bg); }
+  .active-line-on .cm-line.cm-active:after,
+  .active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active:after {
+    top: 0;
+    right: -50vw;
+    position: absolute;
+    display: block;
+    content: '';
+    width: 50vw;
+    height: 100%;
+    background-color: var(--active-line-bg); }
+
+body {
+  --content-margin: auto;
+  --content-margin-start: max(
+  	calc(50% - var(--line-width)/2),
+  	calc(50% - var(--max-width)/2) );
+  --content-line-width: min(var(--line-width), var(--max-width)); }
+
+/* Line widths ------------------------------------ */
+/* Set overall context to 100% width */
+.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+  max-width: 100%;
+  margin-inline: auto;
+  width: 100%; }
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+  max-width: 100%;
+  width: 100%; }
+
+/* Set inner content to line width */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .inline-title,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .embedded-backlinks {
+  max-width: var(--max-width);
+  width: var(--line-width);
+  margin-inline: var(--content-margin) !important; }
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > *:not(div) {
+  max-width: var(--content-line-width);
+  margin-inline-start: var(--content-margin-start) !important; }
+
+/* File margins ------------------------------------ */
+.is-readable-line-width {
+  --file-margins: 0; }
+
+/* With line numbers */
+.minimal-line-nums .workspace-leaf-content[data-type=markdown] {
+  --file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px; }
+  .minimal-line-nums .workspace-leaf-content[data-type=markdown].is-rtl {
+    --file-margins: var(--size-4-8) 48px var(--size-4-8) var(--size-4-8); }
+  .minimal-line-nums .workspace-leaf-content[data-type=markdown] .is-readable-line-width {
+    --file-margins: 0 0 0 var(--folding-offset); }
+    .minimal-line-nums .workspace-leaf-content[data-type=markdown] .is-readable-line-width.is-rtl {
+      --file-margins: 0 var(--folding-offset) 0 0; }
+
+/* Embeds ------------------------------------ */
+.markdown-preview-view .inline-embed {
+  --max-width: 100%; }
+
+/* Content rules ------------------------------------
+
+   The benefit of this approach is that it covers all levels
+   of specificity wherever the helper is applied: global, 
+   per file, and element-level. 
+
+   It means we don't have to write long specific selectors
+   like `.table-100.markdown-source-view...`
+*/
+body {
+  --container-table-width: var(--line-width);
+  --container-table-max-width: var(--max-width);
+  --table-max-width: none;
+  --table-width: auto;
+  --table-margin: inherit;
+  --container-img-width: var(--line-width);
+  --container-img-max-width: var(--max-width);
+  --img-max-width: 100%;
+  --img-width: auto;
+  /* because external images don't have a container */
+  --img-margin-start: var(--content-margin-start);
+  --img-line-width: var(--content-line-width);
+  --container-chart-width: var(--line-width);
+  --container-chart-max-width: var(--max-width);
+  --chart-max-width: none;
+  --chart-width: auto;
+  --container-map-width: var(--line-width);
+  --container-map-max-width: var(--max-width);
+  --map-max-width: none;
+  --map-width: auto;
+  --container-iframe-width: var(--line-width);
+  --container-iframe-max-width: var(--max-width);
+  --iframe-max-width: none;
+  --iframe-width: auto;
+  /* Entire page */ }
+  body .is-readable-line-width.wide {
+    --line-width: var(--line-width-wide); }
+  body .is-readable-line-width.max {
+    --line-width: 300em; }
+  body .is-readable-line-width.wide,
+  body .is-readable-line-width.max {
+    --container-table-width: var(--line-width);
+    --container-img-width: var(--line-width);
+    --container-iframe-width: var(--line-width);
+    --container-map-width: var(--line-width);
+    --container-chart-width: var(--line-width); }
+
+table.dataview {
+  --table-min-width: var(--line-width); }
+
+.cards table.dataview {
+  --table-width: 100%;
+  --table-min-width: none; }
+
+.maximize-tables-auto {
+  --container-table-max-width: 100%;
+  --container-table-width: 100%;
+  --table-max-width: 100%;
+  --table-margin: var(--content-margin-start) auto;
+  --table-width: auto; }
+  .maximize-tables-auto .cards {
+    --container-table-max-width: var(--max-width); }
+  .maximize-tables-auto .cards .block-language-dataview {
+    --table-margin: auto; }
+
+.maximize-tables {
+  --container-table-max-width: 100%;
+  --container-table-width: 100%;
+  --table-min-width: min(var(--line-width), var(--max-width));
+  --table-max-width: 100%;
+  --table-margin: auto;
+  --table-width: auto;
+  --table-edge-cell-padding-first: 10px; }
+
+.table-wide,
+.table-max,
+.table-100 {
+  --table-max-width: 100%;
+  --table-width: 100%; }
+
+.table-wide {
+  --container-table-width: var(--line-width-wide);
+  --table-edge-cell-padding-first: 0px; }
+
+.table-max {
+  --container-table-width: var(--max-width);
+  --table-edge-cell-padding-first: 0px;
+  --table-margin: 0; }
+
+.table-100 {
+  --container-table-width: 100%;
+  --container-table-max-width: 100%;
+  --table-edge-cell-padding-first: 20px;
+  --table-margin: 0; }
+  .table-100 .dataview.list-view-ul {
+    max-width: var(--max-width);
+    width: var(--line-width);
+    margin-inline: auto; }
+
+.img-wide,
+.img-max,
+.img-100 {
+  --img-max-width: 100%;
+  --img-width: 100%; }
+
+.img-wide {
+  --container-img-width: var(--line-width-wide);
+  --img-line-width: var(--line-width-wide);
+  --img-margin-start: calc(50% - var(--line-width-wide)/2); }
+
+.img-max {
+  --container-img-width: var(--max-width);
+  --img-line-width: var(--max-width);
+  --img-margin-start: calc(50% - var(--max-width)/2); }
+
+.img-100 {
+  --container-img-width: 100%;
+  --container-img-max-width: 100%;
+  --img-line-width: 100%;
+  --img-margin-start:0; }
+
+.map-wide,
+.map-max,
+.map-100 {
+  --map-max-width: 100%;
+  --map-width: 100%; }
+
+.map-wide {
+  --container-map-width: var(--line-width-wide); }
+
+.map-max {
+  --container-map-width: var(--max-width); }
+
+.map-100 {
+  --container-map-width: 100%;
+  --container-map-max-width: 100%; }
+
+.chart-wide,
+.chart-max,
+.chart-100 {
+  --chart-max-width: 100%;
+  --chart-width: 100%; }
+
+.chart-wide {
+  --container-chart-width: var(--line-width-wide); }
+
+.chart-max {
+  --container-chart-width: var(--max-width); }
+
+.chart-100 {
+  --container-chart-width: 100%;
+  --container-chart-max-width: 100%; }
+
+.iframe-wide,
+.iframe-max,
+.iframe-100 {
+  --iframe-max-width: 100%;
+  --iframe-width: 100%; }
+
+.iframe-wide {
+  --container-iframe-width: var(--line-width-wide); }
+
+.iframe-max {
+  --container-iframe-width: var(--max-width); }
+
+.iframe-100 {
+  --container-iframe-width: 100%;
+  --container-iframe-max-width: 100%; }
+
+/* Block widths ------------------------------------
+
+   Because we are using :has() this method requires
+   Obsidian installer 1.1.9 or above. However it means the
+   code no longer requires Contextual Typography plugin.
+*/
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  /* Tables */
+  /* Images */
+  /* External images */
+  /* Maps */
+  /* Maps */
+  /* Iframes */ }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> table),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview > table),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> table),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview > table) {
+    width: var(--container-table-width);
+    max-width: var(--container-table-max-width); }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content table,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer table {
+    width: var(--table-width);
+    max-width: var(--table-max-width);
+    margin-inline: var(--table-margin);
+    min-width: var(--table-min-width); }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem; }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) {
+    width: var(--container-img-width);
+    max-width: var(--container-img-max-width); }
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed img,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed) img,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed img,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) img {
+      max-width: var(--img-max-width); }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > img,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > img {
+    max-width: var(--img-line-width);
+    margin-inline-start: var(--img-margin-start) !important; }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-chart) {
+    width: var(--container-chart-width);
+    max-width: var(--container-chart-max-width); }
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart) canvas,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-chart) canvas {
+      max-width: var(--map-chart-width); }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) {
+    width: var(--container-map-width);
+    max-width: var(--container-map-max-width); }
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet) iframe,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) iframe {
+      max-width: var(--map-max-width); }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe),
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> iframe),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .cm-html-embed) {
+    width: var(--container-iframe-width);
+    max-width: var(--container-iframe-max-width); }
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe) iframe,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed) iframe,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> iframe) iframe,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .cm-html-embed) iframe {
+      max-width: var(--map-iframe-width); }
 
 .borders-none {
   --divider-width:0px;
@@ -1672,95 +1892,103 @@ https://github.com/sponsors/kepano
 .table-100 .cards table.dataview tbody {
   padding: 0.25rem 0.75rem; }
 
-.cards table.dataview tbody {
-  clear: both;
-  padding: 0.5rem 0;
-  display: grid;
-  grid-template-columns: var(--cards-columns);
-  grid-column-gap: 0.75rem;
-  grid-row-gap: 0.75rem; }
-.cards table.dataview > tbody > tr {
-  background-color: var(--cards-background);
-  border: var(--cards-border-width) solid var(--background-modifier-border);
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0 0 calc(var(--cards-padding)/3) 0;
-  border-radius: 6px;
-  overflow: hidden;
-  transition: box-shadow 0.15s linear;
-  max-width: var(--cards-max-width); }
-.cards table.dataview > tbody > tr:hover {
-  border: var(--cards-border-width) solid var(--background-modifier-border-hover);
-  box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
-  transition: box-shadow 0.15s linear; }
-.cards table.dataview tbody > tr > td {
-  /* Paragraphs */
-  /* Links */
-  /* Buttons */
-  /* Lists */
-  /* Images */ }
-  .cards table.dataview tbody > tr > td:first-child {
-    font-weight: var(--bold-weight); }
-  .cards table.dataview tbody > tr > td:first-child a {
-    padding: 0 0 calc(var(--cards-padding)/3);
-    display: block; }
-  .cards table.dataview tbody > tr > td:not(:first-child) {
-    font-size: 90%;
-    color: var(--text-muted); }
-  .cards table.dataview tbody > tr > td .el-p {
-    display: block;
-    width: 100%; }
-  .cards table.dataview tbody > tr > td > *:not(.el-embed-image) {
-    padding: calc(var(--cards-padding)/3) 0; }
-  .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {
-    border-bottom: 1px solid var(--background-modifier-border);
-    width: 100%; }
-  .cards table.dataview tbody > tr > td a {
-    text-decoration: none; }
-  .cards table.dataview tbody > tr > td > button {
-    width: 100%;
-    margin: calc(var(--cards-padding)/2) 0; }
-  .cards table.dataview tbody > tr > td:last-child > button {
-    margin-bottom: calc(var(--cards-padding)/6); }
-  .cards table.dataview tbody > tr > td > ul {
-    width: 100%;
-    padding: 0.25em 0 !important;
-    margin: 0 auto !important; }
-  .cards table.dataview tbody > tr > td:not(:last-child) > ul {
-    border-bottom: 1px solid var(--background-modifier-border); }
-  .cards table.dataview tbody > tr > td .el-embed-image {
-    background-color: var(--background-secondary);
-    display: block;
-    margin: 0 calc(var(--cards-padding)/-2) 0 calc(var(--cards-padding)/-2);
-    width: calc(100% + var(--cards-padding)); }
-  .cards table.dataview tbody > tr > td img {
-    aspect-ratio: var(--cards-aspect-ratio);
-    width: 100%;
-    object-fit: var(--cards-image-fit);
-    max-height: var(--cards-image-height);
-    background-color: var(--background-secondary);
-    vertical-align: bottom; }
+.cards table.dataview {
+  --table-width: 100%;
+  --table-edge-cell-padding-first: calc(var(--cards-padding)/2);
+  --table-edge-cell-padding-last: calc(var(--cards-padding)/2);
+  --table-cell-padding: calc(var(--cards-padding)/3) calc(var(--cards-padding)/2);
+  line-height: 1.3; }
+  .cards table.dataview tbody {
+    clear: both;
+    padding: 0.5rem 0;
+    display: grid;
+    grid-template-columns: var(--cards-columns);
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 0.75rem; }
+  .cards table.dataview > tbody > tr {
+    background-color: var(--cards-background);
+    border: var(--cards-border-width) solid var(--background-modifier-border);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 0 calc(var(--cards-padding)/3) 0;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.15s linear;
+    max-width: var(--cards-max-width); }
+  .cards table.dataview > tbody > tr:hover {
+    border: var(--cards-border-width) solid var(--background-modifier-border-hover);
+    box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
+    transition: box-shadow 0.15s linear; }
+  .cards table.dataview tbody > tr > td {
+    /* Paragraphs */
+    /* Links */
+    /* Buttons */
+    /* Lists */
+    /* Images */ }
+    .cards table.dataview tbody > tr > td:first-child {
+      font-weight: var(--bold-weight);
+      border: none; }
+    .cards table.dataview tbody > tr > td:first-child a {
+      display: block; }
+    .cards table.dataview tbody > tr > td:last-child {
+      border: none; }
+    .cards table.dataview tbody > tr > td:not(:first-child) {
+      font-size: calc(var(--table-text-size) * .9);
+      color: var(--text-muted); }
+    .cards table.dataview tbody > tr > td > * {
+      padding: calc(var(--cards-padding)/3) 0; }
+    .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) {
+      padding: 4px 0;
+      border-bottom: 1px solid var(--background-modifier-border);
+      width: calc(100% - var(--cards-padding));
+      margin: 0 calc(var(--cards-padding)/2); }
+    .cards table.dataview tbody > tr > td a {
+      text-decoration: none; }
+    .cards table.dataview tbody > tr > td > button {
+      width: 100%;
+      margin: calc(var(--cards-padding)/2) 0; }
+    .cards table.dataview tbody > tr > td:last-child > button {
+      margin-bottom: calc(var(--cards-padding)/6); }
+    .cards table.dataview tbody > tr > td > ul {
+      width: 100%;
+      padding: 0.25em 0 !important;
+      margin: 0 auto !important; }
+    .cards table.dataview tbody > tr > td:has(img) {
+      padding: 0 !important;
+      background-color: var(--background-secondary);
+      display: block;
+      margin: 0;
+      width: 100%; }
+    .cards table.dataview tbody > tr > td img {
+      aspect-ratio: var(--cards-aspect-ratio);
+      width: 100%;
+      object-fit: var(--cards-image-fit);
+      max-height: var(--cards-image-height);
+      background-color: var(--background-secondary);
+      vertical-align: bottom; }
 
 .markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
 .trim-cols .cards table.dataview tbody > tr > td {
   white-space: normal; }
 
-.cards .dataview.table-view-table > tbody > tr > td,
-.cards table.dataview tbody > tr > td,
-.markdown-source-view.mod-cm6.cards .dataview.table-view-table > tbody > tr > td,
-.markdown-source-view.mod-cm6.cards table.dataview tbody > tr > td {
-  border-bottom: none;
-  padding: 0 !important;
-  line-height: 1.2;
-  width: calc(100% - var(--cards-padding));
-  margin: 0 auto;
-  overflow: visible !important;
-  max-width: 100%;
-  display: flex; }
-
-.links-int-on .cards table.dataview tbody > tr > td a {
-  text-decoration: none; }
+/*
+.cards,
+.markdown-source-view.mod-cm6.cards {
+	.dataview.table-view-table > tbody > tr > td,
+	table.dataview tbody > tr > td {
+		border-bottom: none;
+		padding: 0!important;
+		line-height: 1.2;
+		width: calc(100% - var(--cards-padding));
+		margin: 0 auto;
+		overflow: visible !important;
+		max-width: 100%;
+		display: flex;
+	}
+}*/
+.links-int-on .cards table {
+  --link-decoration: none; }
 
 /* Block button */
 .markdown-source-view.mod-cm6.cards .edit-block-button {
@@ -1779,8 +2007,6 @@ https://github.com/sponsors/kepano
 .theme-light .cards table.dataview thead:before {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>'); }
 
-.cards .el-pre + .el-lang-dataview .table-view-thead {
-  padding-top: 8px; }
 .cards table.dataview thead {
   user-select: none;
   width: 180px;
@@ -1789,7 +2015,7 @@ https://github.com/sponsors/kepano
   position: relative;
   text-align: right;
   height: 24px;
-  padding-bottom: 4px; }
+  padding-bottom: 0px; }
 .cards table.dataview thead:hover:before {
   opacity: 0.5;
   background-color: var(--background-modifier-hover); }
@@ -1823,7 +2049,7 @@ https://github.com/sponsors/kepano
   padding: 6px;
   border-radius: var(--radius-m);
   flex-direction: column;
-  margin: 26px 0 0 0;
+  margin: 24px 0 0 0;
   width: 100%; }
 .cards table.dataview thead:hover > tr {
   display: flex; }
@@ -2478,15 +2704,18 @@ body.minimal-focus-mode.show-view-header .view-content {
   height: 100%; }
 
 /* Full width media  */
+.full-width-media .markdown-source-view .image-embed img:not(.emoji):not([width]),
+.full-width-media .markdown-source-view img:not(.emoji):not([width]),
+.full-width-media .markdown-source-view p:has(.external-embed),
+.full-width-media .markdown-source-view .external-embed,
+.full-width-media .markdown-source-view audio,
+.full-width-media .markdown-source-view video,
 .full-width-media .markdown-preview-view .image-embed img:not(.emoji):not([width]),
-.full-width-media .image-embed img:not(.emoji):not([width]),
+.full-width-media .markdown-preview-view img:not(.emoji):not([width]),
+.full-width-media .markdown-preview-view p:has(.external-embed),
+.full-width-media .markdown-preview-view .external-embed,
 .full-width-media .markdown-preview-view audio,
 .full-width-media .markdown-preview-view video {
-  width: 100%; }
-
-/* YouTube embeds */
-.full-width-media .el-p p:has(.external-embed),
-.full-width-media .external-embed {
   width: 100%; }
 
 /* Table helper classes for alternate styles */
@@ -2497,33 +2726,26 @@ body.minimal-focus-mode.show-view-header .view-content {
 .table-tiny table:not(.calendar) {
   --table-text-size: 75%; }
 
-.row-hover th:first-child,
-.row-hover th:first-child,
-.row-alt.markdown-source-view.mod-cm6 th:first-child,
-.row-alt.markdown-source-view.mod-cm6 td:first-child,
-.row-alt table:not(.calendar) th:first-child,
-.row-alt table:not(.calendar) tbody > tr > td:first-child,
-.table-lines.markdown-source-view.mod-cm6 th:first-child,
-.table-lines.markdown-source-view.mod-cm6 td:first-child,
-.table-lines table:not(.calendar) thead > tr > th:first-child,
-.table-lines table:not(.calendar) tbody > tr > td:first-child {
-  padding-left: 10px; }
+.row-hover {
+  --table-edge-cell-padding-first: 10px; }
 
 .row-alt {
-  --table-row-alt-background: var(--background-table-rows); }
+  --table-row-alt-background: var(--background-table-rows);
+  --table-edge-cell-padding-first: 10px; }
 
-.col-alt {
+.col-alt .markdown-rendered:not(.cards) {
   --table-column-alt-background: var(--background-table-rows); }
 
 .table-tabular table:not(.calendar) {
   font-variant-numeric: tabular-nums; }
 
 .table-lines {
-  --table-border-width: 1px;
-  --table-header-border-width: 1px;
-  --table-column-first-border-width: 1px;
-  --table-column-last-border-width: 1px;
-  --table-row-last-border-width: 1px; }
+  --table-border-width: var(--border-width);
+  --table-header-border-width: var(--border-width);
+  --table-column-first-border-width: var(--border-width);
+  --table-column-last-border-width:var(--border-width);
+  --table-row-last-border-width: var(--border-width);
+  --table-edge-cell-padding: 10px; }
 
 .table-nowrap {
   --table-white-space: nowrap; }
@@ -2549,16 +2771,15 @@ body.minimal-focus-mode.show-view-header .view-content {
     color: var(--text-faint);
     font-variant-numeric: tabular-nums; }
 
-.row-lines table:not(.calendar) tbody > tr > td,
-.row-lines .table-view-table > tbody > tr > td {
-  border-bottom: 1px solid var(--background-modifier-border); }
-.row-lines table:not(.calendar) tbody > tr:last-child > td {
+.row-lines-off table:not(.calendar) tbody > tr > td,
+.row-lines-off .table-view-table > tbody > tr > td,
+.row-lines-off table:not(.calendar) tbody > tr:last-child > td {
   border-bottom: none; }
 
 .col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
 .col-lines .table-view-table thead > tr > th:not(:last-child),
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {
-  border-right: 1px solid var(--background-modifier-border); }
+  border-right: var(--table-border-width) solid var(--background-modifier-border); }
 
 /* Highlight rows on hover */
 .row-hover {
@@ -2655,67 +2876,52 @@ span[src$="#interface"] img {
 Image Grid snippet for Obsidian
 
 author: @kepano
-version: 3.0.0
+version: 4.0.0
 
 Support my work:
 https://github.com/sponsors/kepano
 
 */
-/* Requires Contextual Typography 2.2.1+ */
+/* Revamped for Obsidian 1.1.9+ using :has() */
 body {
   --image-grid-fit: cover;
-  --image-grid-background: transparent; }
-
-.image-embed.is-loaded {
-  line-height: 0; }
-  .image-embed.is-loaded img {
-    background-color: var(--image-grid-background); }
-    .image-embed.is-loaded img:active {
-      background-color: transparent; }
-
-div:not(.el-embed-image) + .el-embed-image {
-  margin-top: 1rem; }
-
-.el-embed-image {
-  margin-top: 0.5rem; }
-
-.contextual-typography .markdown-preview-section > .el-embed-image > p {
-  margin-block-start: 0;
-  margin-block-end: 0; }
-
-.img-grid .markdown-preview-section .el-embed-image img:not(.emoji):not([width]),
-.img-grid .markdown-preview-section video {
-  width: 100%; }
-
-.img-grid .markdown-preview-section > .el-embed-image > p {
-  display: grid;
-  grid-column-gap: 0.5rem;
-  grid-row-gap: 0;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-
-.img-grid .markdown-preview-section > .el-embed-image > p > br {
-  display: none; }
-
-.img-grid .markdown-preview-section > .el-embed-image > p > img {
-  object-fit: var(--image-grid-fit);
-  align-self: stretch; }
-
-.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
-  object-fit: var(--image-grid-fit);
-  height: 100%; }
-
-.img-grid .img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img,
-.img-grid.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img {
-  object-fit: contain;
-  height: 100%;
-  align-self: center; }
+  --image-grid-background: transparent;
+  --img-grid-gap: 0.5rem; }
 
 @media (max-width: 400pt) {
-  .el-embed-image {
-    margin-top: 0.25rem; }
+  body {
+    --img-grid-gap: 0.25rem; } }
+.img-grid-ratio {
+  --image-grid-fit: contain; }
 
-  .img-grid .markdown-preview-section > .el-embed-image > p {
-    grid-column-gap: 0.25rem; } }
+.img-grid .image-embed.is-loaded {
+  line-height: 0; }
+  .img-grid .image-embed.is-loaded img {
+    background-color: var(--image-grid-background); }
+    .img-grid .image-embed.is-loaded img:active {
+      background-color: transparent; }
+.img-grid .markdown-preview-section {
+  /*img:not(.emoji):not([width]),
+  video {
+  	width:100%;
+  }*/ }
+  .img-grid .markdown-preview-section > div:has(.image-embed) > p {
+    display: grid;
+    margin-block-start: var(--img-grid-gap);
+    margin-block-end: var(--img-grid-gap);
+    grid-column-gap: var(--img-grid-gap);
+    grid-row-gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .img-grid .markdown-preview-section > div:has(.image-embed) > p > br {
+      display: none; }
+    .img-grid .markdown-preview-section > div:has(.image-embed) > p > img {
+      object-fit: var(--image-grid-fit);
+      align-self: stretch; }
+    .img-grid .markdown-preview-section > div:has(.image-embed) > p > .internal-embed img {
+      object-fit: var(--image-grid-fit);
+      height: 100%;
+      align-self: center; }
+
 /* Image zoom  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 body:not(.zoom-off) .view-content div:not(.canvas-node-content) img {
@@ -2874,521 +3080,6 @@ https://github.com/sponsors/kepano
     border: none;
     padding: 0; }
 
-/* MIT License | Copyright (c) Stephan Ango (@kepano) 
-
-Layout Control snippet for Obsidian
-
-author: @kepano
-version: 2.0.0
-
-Support my work:
-https://github.com/sponsors/kepano
-
-*/
-/* Requires Contextual Typography 2.2.1+ */
-/* Switch to flexbox */
-body {
-  --table-max-width: var(--max-width);
-  --left-margin-table: auto; }
-
-.maximize-tables-auto {
-  --table-max-width: auto;
-  --left-margin-table: max(
-  	calc(50% + var(--folding-offset)/2 - var(--line-width-adaptive)/2),
-  	calc(50% + var(--folding-offset)/2 - var(--max-width)/2) ); }
-
-.maximize-tables-auto.table-wide, .maximize-tables-auto.table-max, .maximize-tables-auto.table-100 {
-  --table-max-width: var(--max-width);
-  --left-margin-table: auto; }
-
-.maximize-tables-off {
-  --table-max-width: auto;
-  --left-margin-table: max(
-  	calc(50% + var(--folding-offset)/2 - var(--line-width-adaptive)/2),
-  	calc(50% + var(--folding-offset)/2 - var(--max-width)/2)); }
-  .maximize-tables-off.table-wide {
-    --left-margin-table: max(
-    	calc(50% + var(--folding-offset)/2 - var(--line-width-wide)/2),
-    	calc(50% + var(--folding-offset)/2 - var(--max-width)/2)); }
-  .maximize-tables-off.table-max {
-    --left-margin-table: calc(50% + var(--folding-offset)/2 - var(--max-width)/2); }
-  .maximize-tables-off.table-100 {
-    --left-margin-table: 0 ; }
-
-.contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 100%;
-  padding-left: 0;
-  padding-top: 0; }
-
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  align-items: center;
-  padding-left: 0; }
-  .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--max-width);
-    width: var(--line-width-adaptive); }
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer > div {
-  max-width: 100%; }
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview,
-.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: auto; }
-
-.el-lang-dataviewjs .block-language-dataviewjs .contains-task-list,
-.el-lang-dataview .block-language-dataview .contains-task-list {
-  max-width: 100%; }
-
-.is-readable-line-width .el-table table,
-.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
-.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
-  width: var(--table-max-width);
-  max-width: var(--line-width-adaptive);
-  margin: 0 auto 0.5rem; }
-
-.markdown-embed .el-table table,
-.markdown-embed .el-lang-dataview .dataview.table-view-table {
-  width: 100%; }
-
-/* Dataview and tables */
-.table-100 .el-table table,
-.table-100 .el-lang-dataview .dataview.table-view-table,
-.table-100 .el-lang-dataviewjs .dataview.table-view-table,
-.markdown-preview-view.table-100.is-readable-line-width .el-table table,
-.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
-.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
-  max-width: 100% !important;
-  width: 100% !important; }
-
-.table-max .el-table table,
-.table-max .el-lang-dataview .dataview.table-view-table,
-.table-max .el-lang-dataviewjs .dataview.table-view-table,
-.markdown-preview-view.table-max .el-table table,
-.markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table,
-.markdown-preview-view.table-max .el-lang-dataviewjs .dataview.table-view-table {
-  max-width: 100% !important; }
-
-.table-wide .markdown-preview-view.is-readable-line-width .el-table table,
-.table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
-.table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table,
-.markdown-preview-view.is-readable-line-width.table-wide .el-table table,
-.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table,
-.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataviewjs .dataview.table-view-table {
-  max-width: var(--line-width-wide) !important; }
-
-.table-100 table th:first-child,
-.table-100 table td:first-child,
-.table-100 .dataview.table-view-table th:first-child,
-.table-100 .dataview.table-view-table td:first-child,
-.table-100 .markdown-source-view.mod-cm6 td:first-child,
-.table-100 .markdown-source-view.mod-cm6 th:first-child {
-  padding-left: 20px !important; }
-.table-100 table th:last-child,
-.table-100 table td:last-child,
-.table-100 .dataview.table-view-table th:last-child,
-.table-100 .dataview.table-view-table td:last-child {
-  padding-right: 20px; }
-
-/* Maps, images and iframes */
-.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography.chart-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image, .contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography.map-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image, .contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography.iframe-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image, .contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography.img-max .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
-.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .chart-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
-.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .map-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
-.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .iframe-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
-.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .img-max.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image {
-  width: 100%; }
-
-.contextual-typography.chart-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography .markdown-preview-view.is-readable-line-width.chart-wide .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography.map-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography .markdown-preview-view.is-readable-line-width.map-wide .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.iframe-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .markdown-preview-view.is-readable-line-width.iframe-wide .markdown-preview-sizer > .el-iframe,
-.contextual-typography.img-wide .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
-.contextual-typography .markdown-preview-view.is-readable-line-width.img-wide .markdown-preview-sizer > .el-embed-image {
-  width: var(--line-width-wide); }
-
-.contextual-typography.chart-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography .markdown-preview-view.is-readable-line-width.chart-100 .markdown-preview-sizer > .el-lang-chart,
-.contextual-typography.map-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography .markdown-preview-view.is-readable-line-width.map-100 .markdown-preview-sizer > .el-lang-leaflet,
-.contextual-typography.iframe-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-iframe,
-.contextual-typography .markdown-preview-view.iframe-100 .markdown-preview-sizer > .el-iframe,
-.contextual-typography.img-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-embed-image,
-.contextual-typography .markdown-preview-view.img-100 .markdown-preview-sizer > .el-embed-image {
-  width: 100%;
-  max-width: 100%; }
-
-.is-readable-line-width .el-table table,
-.is-readable-line-width .el-lang-dataview .dataview.table-view-table,
-.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table {
-  max-width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  margin-left: var(--left-margin-table) !important; }
-
-.embed-strict .el-embed-page p,
-.map-100 .el-lang-leaflet,
-.map-max .el-lang-leaflet,
-.map-wide .el-lang-leaflet,
-.chart-100 .el-lang-chart,
-.chart-max .el-lang-chart,
-.chart-wide .el-lang-chart,
-.table-100 .el-lang-dataview,
-.table-max .el-lang-dataview,
-.table-wide .el-lang-dataview,
-.table-100 .el-lang-dataviewjs,
-.table-max .el-lang-dataviewjs,
-.table-wide .el-lang-dataviewjs,
-.table-100 .el-table,
-.table-max .el-table,
-.table-wide .el-table,
-.iframe-100 .el-iframe,
-.iframe-max .el-iframe,
-.iframe-wide .el-iframe,
-.img-100 .el-embed-image,
-.img-max .el-embed-image,
-.img-wide .el-embed-image {
-  --folding-offset: 0px; }
-
-/* Live Preview */
-.chart-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
-.map-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
-.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
-.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget > div:not(.edit-block-button),
-.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget > div:not(.edit-block-button),
-.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
-.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
-  width: var(--max-width) !important;
-  max-width: var(--max-width) !important;
-  transform: none !important;
-  padding-left: 0;
-  margin: 0 auto !important; }
-
-.chart-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
-.map-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget > table,
-.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
-.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
-.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget > div:not(.edit-block-button),
-.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget > div:not(.edit-block-button),
-.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
-.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
-  width: var(--line-width-wide) !important;
-  max-width: var(--max-width);
-  transform: none !important;
-  padding-left: 0;
-  margin: 0 auto !important; }
-
-.chart-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
-.chart-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,
-.map-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
-.map-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,
-.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table,
-.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table,
-.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataview,
-.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
-.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .block-language-dataviewjs,
-.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget > div:not(.edit-block-button),
-.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget > div:not(.edit-block-button),
-.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > .image-embed,
-.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img,
-.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content > img {
-  width: 100% !important;
-  max-width: 100% !important;
-  transform: none !important;
-  margin: 0 auto !important;
-  padding-left: 0; }
-
-/* Mobile */
-@media (max-width: 400pt) {
-  .markdown-preview-view .el-table th:first-child,
-  .markdown-preview-view .el-table td:first-child,
-  .markdown-preview-view .el-lang-dataview th:first-child,
-  .markdown-preview-view .el-lang-dataview td:first-child
-  .markdown-preview-view .el-lang-dataviewjs th:first-child,
-  .markdown-preview-view .el-lang-dataviewjs td:first-child {
-    padding-left: 6vw; }
-
-  .markdown-preview-view .el-table th:last-child,
-  .markdown-preview-view .el-table td:last-child,
-  .markdown-preview-view .el-lang-dataview th:last-child,
-  .markdown-preview-view .el-lang-dataview td:last-child,
-  .markdown-preview-view .el-lang-dataviewjs th:last-child,
-  .markdown-preview-view .el-lang-dataviewjs td:last-child {
-    padding-right: 6vw; }
-
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
-    padding-left: 0;
-    padding-right: 0; }
-
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-table,
-  .markdown-preview-view .table-view-table table,
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataview
-  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .el-lang-dataviewjs {
-    width: 100%; } }
-/* Custom line width with folding offset */
-@media (max-width: 400pt) {
-  .is-mobile {
-    --folding-offset:0px; } }
-.markdown-source-view.wide,
-.markdown-preview-view.wide {
-  --line-width-adaptive:var(--line-width-wide); }
-
-.markdown-source-view.max,
-.markdown-preview-view.max {
-  --line-width-adaptive:300em;
-  --line-width-wide:300em; }
-
-/* With readable line width */
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  max-width: var(--max-width);
-  width: var(--line-width-adaptive);
-  padding-left: 0; }
-
-.markdown-source-view.is-readable-line-width .CodeMirror {
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 auto 0 auto;
-  width: var(--line-width-adaptive);
-  max-width: var(--max-width); }
-
-/* Readable line width off */
-.markdown-reading-view .markdown-preview-view:not(.is-readable-line-width) > .markdown-preview-sizer {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding-left: var(--folding-offset); }
-
-.is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
-  padding-right: 0; }
-
-/* Requires Minimal plugin 5.2.1+ */
-.minimal-readable-off .view-header-title-container {
-  width: var(--max-width); }
-
-/* Max width for readable-line length off */
-.markdown-source-view.mod-cm6:not(.is-readable-line-width) .inline-title,
-.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-contentContainer {
-  max-width: var(--max-width);
-  margin: 0 0 0 calc(50% - var(--max-width)/2) !important;
-  padding-left: var(--folding-offset); }
-
-.markdown-source-view.mod-cm6 .cm-content > .cm-embed-block[contenteditable=false] {
-  overflow-x: auto; }
-
-/* Folding offset */
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataview"],
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div[data-block-language="dataviewjs"] {
-  padding-left: var(--folding-offset); }
-
-.internal-embed > .markdown-embed,
-.popover:not(.hover-editor) {
-  --folding-offset:0; }
-
-/* Live Preview */
-/* Inline title */
-.markdown-source-view.mod-cm6.is-readable-line-width .inline-title {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  max-width: calc(var(--max-width) - var(--folding-offset));
-  margin-right: auto;
-  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
-
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
-  max-width: 100%; }
-
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
-  max-width: calc(var(--max-width) - var(--folding-offset)); }
-
-/* Fill the width of the parent block for nested elements */
-.is-live-preview.is-readable-line-width.embed-strict .internal-embed .markdown-preview-sizer,
-.is-readable-line-width .block-language-dataview table.dataview,
-.is-readable-line-width .block-language-dataviewjs table.dataview,
-.is-live-preview.is-readable-line-width .cm-embed-block table.dataview,
-.markdown-source-view.is-live-preview.is-readable-line-width table.NLT__table,
-.markdown-preview-view.is-readable-line-width .dataview.result-group .contains-task-list {
-  width: 100%;
-  max-width: 100%;
-  transform: none;
-  margin-left: auto !important; }
-
-/* Remove margins when nested */
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line > .internal-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-list-line .internal-embed.image-embed {
-  margin-left: 0 !important; }
-
-/* 
-	Line width for Live Preview / Editor mode
-	Gets complicated.
-	-------------------------------------------*/
-/* Nudge everything slightly to the left to make space for folding and gutters */
-/* This is the big daddy rule for most editor content line types */
-.markdown-source-view.mod-cm6.is-readable-line-width {
-  /* Don't force width for images that have a width */ }
-  .markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > .image-embed,
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
-  .markdown-source-view.mod-cm6.is-readable-line-width .external-embed,
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
-  .markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout > .callout,
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img:not([width]),
-  .markdown-source-view.mod-cm6.is-readable-line-width table {
-    width: calc(var(--line-width-adaptive) - var(--folding-offset));
-    max-width: calc(var(--max-width) - var(--folding-offset));
-    margin-right: auto;
-    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-line > .cm-html-embed {
-    --folding-offset:0; }
-  .markdown-source-view.mod-cm6.is-readable-line-width .cm-content > img[width] {
-    max-width: var(--max-width);
-    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
-
-.markdown-source-view.mod-cm6.is-readable-line-width .mod-empty,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > div,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block > mjx-container {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
-  max-width: calc(var(--max-width) - var(--folding-offset));
-  margin-right: auto;
-  margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--folding-offset) - var(--max-width)/2)) !important; }
-
-/* For lists adding an extra offset value in Edit mode */
-.markdown-source-view.mod-cm6.is-readable-line-width .HyperMD-list-line {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset) - var(--list-edit-offset));
-  max-width: calc(var(--max-width) - var(--folding-offset) - var(--list-edit-offset));
-  margin-right: auto;
-  margin-left: max(calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--line-width-adaptive)/2), calc(50% + var(--list-edit-offset) + var(--folding-offset) - var(--max-width)/2)) !important; }
-
-/* 
-Dataview lists/checklists
-A nightmare mainly because there is no selector that indicates
-a list is present inside the dataview block
--------------------------------------------*/
-/* Normal block width */
-/* ------------------ */
-body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul,
-body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview > h4,
-body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.result-group > .contains-task-list,
-body:not(.table-100):not(.table-max):not(.table-wide) .is-live-preview.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-container > .contains-task-list {
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  transform: none; }
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-container > .contains-task-list,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > p,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h1,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h2,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h3,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs > h4,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs h4,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview > h4,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview h4,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.result-group,
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-error {
-  width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  max-width: var(--max-width);
-  margin-right: auto;
-  margin-left: auto; }
-
-/* Wider block widths */
-/* ------------------ */
-.is-live-preview.is-readable-line-width .dataview.list-view-ul,
-.is-live-preview.is-readable-line-width .dataview > h4,
-.is-live-preview.is-readable-line-width .block-language-dataviewjs h4,
-.is-live-preview.is-readable-line-width .dataview .contains-task-list,
-.is-live-preview.is-readable-line-width .dataview.dataview-container .contains-task-list {
-  --folding-offset:10px;
-  width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  max-width: calc(100% - var(--folding-offset));
-  transform: translateX(calc(var(--folding-offset)/2));
-  margin-right: auto;
-  margin-left: auto; }
-
-.table-100 .is-live-preview.is-readable-line-width .dataview.list-view-ul,
-.table-100 .is-live-preview.is-readable-line-width .dataview > h4,
-.table-100 .is-live-preview.is-readable-line-width .dataview .contains-task-list,
-.table-100.is-live-preview.is-readable-line-width .dataview.list-view-ul,
-.table-100.is-live-preview.is-readable-line-width .dataview > h4,
-.table-100.is-live-preview.is-readable-line-width .dataview .contains-task-list {
-  max-width: calc(var(--max-width) - var(--folding-offset)); }
-
-.markdown-preview-view.is-readable-line-width .dataview.list-view-ul,
-.markdown-preview-view.is-readable-line-width .dataview .contains-task-list,
-.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > p,
-.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h1,
-.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h2,
-.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h3,
-.markdown-preview-view.is-readable-line-width .block-language-dataviewjs > h4,
-.markdown-preview-view.is-readable-line-width .block-language-dataviewjs h4,
-.markdown-preview-view.is-readable-line-width .block-language-dataview > h4,
-.markdown-preview-view.is-readable-line-width .block-language-dataview h4,
-.markdown-preview-view.is-readable-line-width .dataview.result-group,
-.markdown-preview-view.is-readable-line-width .dataview.dataview-error {
-  --folding-offset:10px;
-  width: calc(var(--line-width-adaptive) - var(--folding-offset));
-  max-width: calc(var(--max-width) - var(--folding-offset));
-  margin-left: auto;
-  margin-right: max(calc(50% - var(--line-width-adaptive)/2), calc(50% - var(--max-width)/2)); }
-
 /* Links and underline handling*/
 body:not(.links-int-on) {
   --link-decoration: none; }
@@ -3461,6 +3152,20 @@ body {
   --tab-text-color-active: var(--minimal-tab-text-color-active);
   --tab-text-color-focused-active: var(--minimal-tab-text-color-active);
   --tab-text-color-focused-active-current: var(--minimal-tab-text-color-active); }
+
+.tabs-plain-square .mod-root {
+  --tab-curve: 0;
+  --tab-radius: 0;
+  --tab-radius-active: 0; }
+  .tabs-plain-square .mod-root .workspace-tab-header-container {
+    padding-right: 0; }
+  .tabs-plain-square .mod-root .workspace-tab-header-container-inner {
+    margin-top: -1px;
+    margin-left: -15px; }
+  .tabs-plain-square .mod-root .workspace-tab-header {
+    padding: 0; }
+  .tabs-plain-square .mod-root .workspace-tab-header-inner {
+    padding: 0 8px; }
 
 .tabs-square .mod-root {
   --tab-curve: 0;
@@ -3722,6 +3427,8 @@ body:not(.full-file-names) {
   padding-top: var(--size-4-4); }
 
 .is-mobile {
+  --font-bold: 600;
+  --font-ui-medium: var(--font-adaptive-small);
   --interactive-normal: var(--background-secondary);
   --background-modifier-form-field: var(--background-secondary);
   --background-modifier-form-field-highlighted: var(--background-secondary); }
@@ -3845,7 +3552,7 @@ input.prompt-input:focus-visible {
       margin-right: 10px; } }
 
 .release-notes-view .cm-scroller.is-readable-line-width {
-  width: var(--line-width-adaptive);
+  width: var(--line-width);
   max-width: var(--max-width);
   margin: 0 auto; }
 
@@ -3919,7 +3626,7 @@ body .button-default.blue {
   padding: 5px 0 0 0; }
 
 .mod-root #calendar-container {
-  width: var(--line-width-adaptive);
+  width: var(--line-width);
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0; }
@@ -4019,7 +3726,7 @@ body .button-default.blue {
     padding: 2px 4px 4px; }
   #calendar-container .day,
   #calendar-container .week-num {
-    font-size: calc(var(--font-ui-small) + 10%); }
+    font-size: calc(var(--font-adaptive-smaller) + 5%); }
   #calendar-container .active,
   #calendar-container .active.today,
   #calendar-container .week-num:hover,
@@ -4173,51 +3880,38 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
   padding-top: 0;
   padding-bottom: 0; }
 
-/* Contextual Typography */
-.el-hr hr {
-  margin: 1rem 0; }
-
-.el-p + .el-h1,
-.el-p + .el-h2 {
-  margin-top: 0.75rem; }
-
-.el-hr + .el-h1,
-.el-hr + .el-h2,
-.el-h1 + .el-h1,
-.el-h1 + .el-h2,
-.el-h2 + .el-h2 {
-  margin-top: 0rem; }
-
-.el-ol + .el-lang-dataview,
-.el-ul + .el-lang-dataview,
-.el-p:not(.el-lang-dataview) + .el-lang-dataview,
-.el-ol + .el-lang-dataviewjs,
-.el-ul + .el-lang-dataviewjs,
-.el-p:not(.el-lang-dataviewjs) + .el-lang-dataviewjs,
-.el-ol + .el-table,
-.el-ul + .el-table,
-.el-p + .el-table,
-.el-lang-dataviewjs + .el-p,
-.el-lang-dataview + .el-p {
-  margin-top: var(--spacing-p); }
-
-.el-div + .el-h1,
-.el-pre + .el-h1,
-.el-lang-leaflet,
-.el-lang-leaflet + *,
-.el-iframe + .el-p,
-.el-p + .el-iframe,
-.el-p:not(.el-embed-image) + .el-embed-image,
-.el-embed-image + .el-p:not(.el-embed-image) {
-  margin-top: 1rem; }
-
 /* Dataview plugin */
+/* inline lists */
+.dataview-inline-lists .markdown-source-view .dataview-ul,
+.dataview-inline-lists .markdown-preview-view .dataview-ul {
+  --list-spacing: 0; }
+.dataview-inline-lists .markdown-source-view .dataview-ul li:not(:last-child):after,
+.dataview-inline-lists .markdown-source-view .dataview-ul li:not(:last-child):after,
+.dataview-inline-lists .markdown-preview-view .dataview-ul li:not(:last-child):after,
+.dataview-inline-lists .markdown-preview-view .dataview-ul li:not(:last-child):after {
+  content: ", "; }
+.dataview-inline-lists .markdown-source-view ul.dataview-ul > li::before,
+.dataview-inline-lists .markdown-source-view ul.dataview-ul > li::before,
+.dataview-inline-lists .markdown-preview-view ul.dataview-ul > li::before,
+.dataview-inline-lists .markdown-preview-view ul.dataview-ul > li::before {
+  display: none; }
+.dataview-inline-lists .markdown-source-view .dataview-ul li,
+.dataview-inline-lists .markdown-source-view .dataview-ul li,
+.dataview-inline-lists .markdown-preview-view .dataview-ul li,
+.dataview-inline-lists .markdown-preview-view .dataview-ul li {
+  display: inline-block;
+  padding-right: 0.25em; }
+
+.markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
+.markdown-preview-view .table-view-table > tbody > tr > td {
+  border-bottom: var(--table-border-width) solid var(--table-border-color); }
+
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
   font-weight: 400;
   font-size: var(--table-text-size);
   color: var(--text-muted);
-  border-bottom: 1px solid var(--background-modifier-border);
+  border-bottom: var(--table-border-width) solid var(--table-border-color);
   cursor: var(--cursor); }
 
 table.dataview ul.dataview-ul {
@@ -4226,8 +3920,8 @@ table.dataview ul.dataview-ul {
   margin-block-start: 0em !important;
   margin-block-end: 0em !important; }
 
-.markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
-.markdown-preview-view .table-view-table > tbody > tr > td {
+.markdown-source-view.mod-cm6:not(.cards) .table-view-table > tbody > tr > td,
+.markdown-preview-view:not(.cards) .table-view-table > tbody > tr > td {
   max-width: var(--max-col-width); }
 
 body .dataview.small-text {
@@ -4253,18 +3947,21 @@ body .dataview-error {
 .dataview.dataview-error {
   color: var(--text-muted); }
 
-/* New error box as of 2022-05 */
 body div.dataview-error-box {
   min-height: 0;
   border: none;
   background-color: transparent;
   font-size: var(--table-text-size);
   border-radius: var(--radius-m);
-  padding: 15px 0; }
+  padding: 15px 0;
+  justify-content: flex-start; }
   body div.dataview-error-box p {
     margin-block-start: 0;
     margin-block-end: 0;
     color: var(--text-faint); }
+
+.block-language-dataviewjs:has(.dataview-error-box) table.dataview {
+  display: none; }
 
 .markdown-source-view div.dataview-error-box {
   margin-top: 15px; }
@@ -4505,13 +4202,17 @@ div[data-type="git-view"] .search-input-clear-button {
 
 /* --------------- */
 /* App ribbon moved to the bottom edge */
-.hider-ribbon:not(.is-mobile) .workspace-ribbon-collapse-btn {
+.hider-ribbon .workspace-ribbon {
+  padding: 0; }
+
+.bottom-ribbon .workspace-ribbon-collapse-btn,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon-collapse-btn {
   display: none; }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-right {
+.bottom-ribbon .workspace-ribbon.mod-right,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-right {
   pointer-events: none; }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left {
+.bottom-ribbon .workspace-ribbon.mod-left,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-left {
   position: absolute;
   border-right: 0px;
   margin: 0;
@@ -4527,9 +4228,10 @@ div[data-type="git-view"] .search-input-clear-button {
   transition: opacity 0.25s ease-in-out;
   filter: drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
   gap: 0; }
-
-.hider-ribbon:not(.is-mobile) .side-dock-actions,
-.hider-ribbon:not(.is-mobile) .side-dock-settings {
+.bottom-ribbon .side-dock-actions,
+.bottom-ribbon .side-dock-settings,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .side-dock-actions,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .side-dock-settings {
   flex-direction: row;
   display: flex;
   border-top: var(--border-width) solid var(--background-modifier-border);
@@ -4537,34 +4239,31 @@ div[data-type="git-view"] .search-input-clear-button {
   margin: 0;
   position: relative;
   gap: var(--size-2-2); }
-
-.hider-ribbon:not(.is-mobile) .side-dock-actions {
+.bottom-ribbon .side-dock-actions,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .side-dock-actions {
   padding-left: 8px; }
-
-.hider-ribbon:not(.is-mobile) .side-dock-settings {
+.bottom-ribbon .side-dock-settings,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .side-dock-settings {
   border-right: var(--border-width) solid var(--background-modifier-border);
   border-top-right-radius: var(--radius-m);
   padding: 0 var(--size-2-2); }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-ribbon-action {
+.bottom-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display: flex;
   margin: 7px 0px 8px; }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left:hover {
+.bottom-ribbon .workspace-ribbon.mod-left:hover,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-left:hover {
   opacity: 1;
   transition: opacity 0.25s ease-in-out; }
-
-.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+.bottom-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
   opacity: 0; }
-
-.hider-ribbon:not(.is-mobile) .workspace-split.mod-left-split {
+.bottom-ribbon .workspace-split.mod-left-split,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-split.mod-left-split {
   margin: 0; }
-
-.hider-ribbon:not(.is-mobile) .workspace-leaf-content .item-list {
+.bottom-ribbon .workspace-leaf-content .item-list,
+.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) .workspace-leaf-content .item-list {
   padding-bottom: 40px; }
-
-.hider-ribbon .workspace-ribbon {
-  padding: 0; }
 
 /* Hover Editor */
 .popover.hover-editor {
@@ -5252,9 +4951,9 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   margin: 2px 0 2px -20px; }
 
 .workspace-leaf-content[data-type="style-settings"] .view-content {
-  padding: var(--size-4-4) 0 var(--size-4-4) var(--folding-offset); }
+  padding: var(--size-4-4) 0; }
 .workspace-leaf-content[data-type="style-settings"] .view-content > div {
-  width: var(--line-width-adaptive);
+  width: var(--line-width);
   max-width: var(--max-width);
   margin: 0 auto; }
 .workspace-leaf-content[data-type="style-settings"] .style-settings-heading[data-level="0"] .setting-item-name {
@@ -5283,23 +4982,12 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   border-radius: 40px;
   box-shadow: none;
   border: none; }
-
 .setting-item.setting-item-heading.style-settings-heading.is-collapsed {
   border-bottom: 1px solid var(--background-modifier-border); }
-
 .setting-item.setting-item-heading.style-settings-heading {
   border: 0;
   padding: 10px 0 5px;
   margin-bottom: 0; }
-
-.mod-root .workspace-leaf-content[data-type="style-settings"] .style-settings-container .setting-item:not(.setting-item-heading) {
-  flex-direction: row;
-  align-items: center;
-  padding: 0.5em 0; }
-
-.workspace-split:not(.mod-root) .workspace-leaf-content[data-type="style-settings"] .setting-item-name {
-  font-size: var(--font-adaptive-smaller); }
-
 .setting-item .style-settings-import,
 .setting-item .style-settings-export {
   text-decoration: none;
@@ -5310,12 +4998,19 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   padding: 2px 8px;
   border-radius: 5px;
   cursor: var(--cursor); }
-
-.style-settings-import:hover,
-.style-settings-export:hover {
+.setting-item .style-settings-import:hover,
+.setting-item .style-settings-export:hover {
   background-color: var(--background-modifier-hover);
   color: var(--text-normal);
   cursor: var(--cursor); }
+
+.mod-root .workspace-leaf-content[data-type="style-settings"] .style-settings-container .setting-item:not(.setting-item-heading) {
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em 0; }
+
+.workspace-split:not(.mod-root) .workspace-leaf-content[data-type="style-settings"] .setting-item-name {
+  font-size: var(--font-adaptive-smaller); }
 
 .themed-color-wrapper > div + div {
   margin-top: 0;
@@ -5323,13 +5018,18 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 
 .theme-light .themed-color-wrapper > .theme-light {
   background-color: transparent; }
-
 .theme-light .themed-color-wrapper > .theme-dark {
   background-color: rgba(0, 0, 0, 0.8); }
 
 .theme-dark .themed-color-wrapper > .theme-dark {
   background-color: transparent; }
 
+@media (max-width: 400pt) {
+  .workspace-leaf-content[data-type="style-settings"] .setting-item-name {
+    font-size: var(--font-adaptive-small); }
+  .workspace-leaf-content[data-type="style-settings"] .setting-item-info:has(.search-input-container) {
+    width: 100%;
+    margin-right: 0; } }
 /* Todoist Plugin Styles */
 body .todoist-query-title {
   display: inline;
@@ -5454,6 +5154,22 @@ body.theme-light {
     color: var(--text-faint); }
   .tabs-manager .chat-view .input-area .input-form .btn-new-chat {
     display: none; }
+
+.zoom-plugin-header {
+  --link-color: var(--text-normal);
+  --link-decoration: none;
+  font-size: var(--font-ui-small);
+  padding: 0;
+  justify-content: center;
+  margin: var(--size-4-2) auto;
+  max-width: var(--max-width); }
+  .zoom-plugin-header > .zoom-plugin-title {
+    text-decoration: none;
+    max-width: 15em;
+    overflow: hidden; }
+  .zoom-plugin-header > .zoom-plugin-delimiter {
+    color: var(--text-faint);
+    padding: 0 var(--size-4-1); }
 
 /* Color schemes */
 /* Atom */
@@ -6611,27 +6327,6 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: active-line
-		title: Active line
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: active-line-on
-		title: Highlight active line
-		description: Adds a background to current line in editor
-		type: class-toggle
-		default: false
-	-
-		id: active-line-bg
-		title: Active line background
-		description: Using a low opacity color is recommended to avoid conflicting with highlights
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
 		id: blockquotes
 		title: Blockquotes
 		type: heading
@@ -6866,6 +6561,12 @@ settings:
 		type: class-toggle
 		default: true
 	-
+		id: dataview-inline-lists
+		title: Force tables lists inline
+		description: Makes lists inside of table cells inline and comma separated
+		type: class-toggle
+		default: false
+	-
 		id: max-col-width
 		title: Dataview maximum column width
 		description: Maximum width for Dataview columns, accepts any CSS width value
@@ -6886,7 +6587,7 @@ settings:
 	-
 		id: embed-hide-title
 		title: Hide embed titles
-		description: Hide title of the transcluded file
+		description: Hide title of the transcluded file (if strict embed is off)
 		type: class-toggle
 		default: false
 	-
@@ -6895,6 +6596,12 @@ settings:
 		description: Transcluded text is underlined. Can be enabled per file using the embed-underline helper class
 		type: class-toggle
 		default: false
+	-
+		id: embed-max-height
+		title: Maximum height of embeds
+		type: variable-text
+		description: For transcluded text, accepts valid CSS units
+		default: ''
 	-
 		id: embed-decoration-style
 		title: Embedded text underline style
@@ -6923,6 +6630,14 @@ settings:
 		title: Embedded text underline color
 		type: variable-themed-color
 		description: Requires underlines to be enabled
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: embed-background
+		title: Embed background
+		type: variable-themed-color
+		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
@@ -7593,6 +7308,58 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: active-line
+		title: Line  numbers
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: active-line-on
+		title: Highlight active line
+		description: Adds a background to current line in editor
+		type: class-toggle
+		default: false
+	-
+		id: folding-offset
+		title: Gutter offset
+		description: Width of the file margin used for gutter
+		type: variable-number-slider
+		default: 32
+		min: 0
+		max: 60
+		step: 1
+		format: px
+	-  
+		id: gutter-background
+		title: Gutter background
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: line-number-color
+		title: Line number color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: line-number-color-active
+		title: Active line number color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: active-line-bg
+		title: Active line background
+		description: Using a low opacity color is recommended to avoid conflicting with highlights
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: lists
 		title: Lists and tasks
 		type: heading
@@ -7687,6 +7454,20 @@ settings:
 		max: 1
 		step: 0.05
 	-
+		id: progress
+		title: Progress bars
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: progress-complete
+		title: Completed progress bar color
+		description: Defaults to your accent color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: sidebars
 		title: Sidebars
 		type: heading
@@ -7720,19 +7501,25 @@ settings:
 				label: Underline
 				value: sidebar-tabs-underline
 	-
-		id: mobile-left-sidebar-width
-		title: Mobile left sidebar width
-		description: Maximum width for pinned left sidebar on mobile
-		type: variable-number
-		default: 280
-		format: pt
+		id: ribbon
+		title: Ribbon
+		type: heading
+		level: 2
+		collapsed: true
 	-
-		id: mobile-right-sidebar-width
-		title: Mobile right sidebar width
-		description: Maximum width for pinned right sidebar on mobile
-		type: variable-number
-		default: 240
-		format: pt
+		id: ribbon-style
+		title: Ribbon style
+		description: Ribbon menu can be hidden using the Hider plugin
+		type: class-select
+		allowEmpty: false
+		default: ribbon-hidden
+		options:
+			-
+				label: Default
+				value: ribbon-hidden
+			-
+				label: Bottom left hover
+				value: ribbon-bottom-left-hover
 	-
 		id: tables
 		title: Tables
@@ -7747,27 +7534,21 @@ settings:
 		default: 1em
 	-
 		id: maximize-tables-off
-		title: Maximize table width (beta)
-		description: Tables fill the width of the line
+		title: Maximize table width 
+		description: Determines how wide tables should behave when they become wider than the line width
 		type: class-select
 		allowEmpty: false
-		default: maximize-tables
+		default: maximize-tables-off
 		options:
 			-
-				label: Always
-				value: maximize-tables
+				label: Fit to line width
+				value: maximize-tables-off
 			-
-				label: Automatic
+				label: Overflow line width
 				value: maximize-tables-auto
 			-
-				label: Never
-				value: maximize-tables-off
-	-
-		id: row-lines
-		title: Row lines
-		description: Display borders between table rows globally
-		type: class-toggle
-		default: false
+				label: Always fill
+				value: maximize-tables
 	-
 		id: col-lines
 		title: Column lines
@@ -7852,6 +7633,9 @@ settings:
 			-
 				label: Modern
 				value: tabs-modern
+			-
+				label: Square
+				value: tabs-plain-square
 			-
 				label: Underline
 				value: tabs-underline
@@ -8053,11 +7837,17 @@ settings:
 		max: 900
 		step: 100
 	-
-		id: spacing-p
+		id: p-spacing
 		title: Paragraph spacing
-		description: Space between paragraphs in reading mode
+		description: Space between paragraphs in reading mode (Obsidian 1.3.7+)
 		type: variable-text
-		default: 0.75em
+		default: 1.5em
+	-
+		id: heading-spacing
+		title: Heading spacing
+		description: Space between paragraphs and headings in reading mode (Obsidian 1.3.7+)
+		type: variable-text
+		default: 2.25rem
 	-
 		id: titles
 		title: Titles
@@ -8324,16 +8114,6 @@ settings:
 		description: Font size in px of smallest text
 		type: variable-number
 		default: 11
-		format: px
-	-
-		id: folding-offset
-		title: Folding offset
-		description: Width of the left margin used for folding indicators
-		type: variable-number-slider
-		default: 10
-		min: 0
-		max: 30
-		step: 1
 		format: px
 
 */

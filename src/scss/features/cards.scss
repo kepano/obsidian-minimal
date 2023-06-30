@@ -34,8 +34,14 @@ https://github.com/sponsors/kepano
 	padding:0.25rem 0.75rem;
 }
 
-.cards {
+.cards {	
 	table.dataview {
+		--table-width: 100%;
+		--table-edge-cell-padding-first: calc(var(--cards-padding)/2);
+		--table-edge-cell-padding-last: calc(var(--cards-padding)/2);
+		--table-cell-padding: calc(var(--cards-padding)/3) calc(var(--cards-padding)/2);
+		line-height: 1.3;
+
 		tbody {
 			clear: both;
 			padding: 0.5rem 0;
@@ -65,29 +71,31 @@ https://github.com/sponsors/kepano
 		}
 
 		tbody > tr > td {
+
 			&:first-child {
 				font-weight:var(--bold-weight);
+				border: none;
 			}
 			&:first-child a {
-				padding:0 0 calc(var(--cards-padding)/3);
-				display:block;
+				display: block;
+			}
+			&:last-child {
+				border: none;
 			}
 			&:not(:first-child) {
-				font-size:90%;
-				color:var(--text-muted);
+				font-size: calc(var(--table-text-size) * .9);
+				color: var(--text-muted);
 			}
 
 			/* Paragraphs */
-			.el-p {
-				display:block;
-				width:100%;
-			}
-			> *:not(.el-embed-image) {
+			> * {
 				padding: calc(var(--cards-padding)/3) 0;
 			}
-			&:not(:last-child):not(:first-child) > .el-p:not(.el-embed-image) {
+			&:not(:last-child):not(:first-child) {
+				padding: 4px 0;
 				border-bottom: 1px solid var(--background-modifier-border);
-				width: 100%;
+				width: calc(100% - var(--cards-padding));
+				margin: 0 calc(var(--cards-padding)/2);
 			}
 
 			/* Links */
@@ -110,16 +118,14 @@ https://github.com/sponsors/kepano
 				padding: 0.25em 0 !important;
 				margin: 0 auto !important;
 			}
-			&:not(:last-child) > ul {
-				border-bottom: 1px solid var(--background-modifier-border);
-			}
 
 			/* Images */
-			.el-embed-image {
+			&:has(img) {
+				padding: 0 !important;
 				background-color: var(--background-secondary);
 				display: block;
-				margin: 0 calc(var(--cards-padding)/-2) 0 calc(var(--cards-padding)/-2);
-				width: calc(100% + var(--cards-padding));
+				margin: 0;
+				width: 100%;
 			}
 			img {
 				aspect-ratio: var(--cards-aspect-ratio);
@@ -139,6 +145,8 @@ https://github.com/sponsors/kepano
 .trim-cols .cards table.dataview tbody > tr > td {
 	white-space: normal;
 }
+
+/*
 .cards,
 .markdown-source-view.mod-cm6.cards {
 	.dataview.table-view-table > tbody > tr > td,
@@ -152,10 +160,10 @@ https://github.com/sponsors/kepano
 		max-width: 100%;
 		display: flex;
 	}
-}
+}*/
 
-.links-int-on .cards table.dataview tbody > tr > td a {
-	text-decoration:none;
+.links-int-on .cards table {
+	--link-decoration: none;
 }
 /* Block button */
 .markdown-source-view.mod-cm6.cards .edit-block-button {
@@ -178,10 +186,6 @@ https://github.com/sponsors/kepano
 }
 
 .cards {
-	.el-pre + .el-lang-dataview .table-view-thead {
-		padding-top:8px;
-	}
-
 	table.dataview {
 		thead {
 			user-select: none;
@@ -191,7 +195,7 @@ https://github.com/sponsors/kepano
 			position: relative;
 			text-align: right;
 			height: 24px;
-			padding-bottom: 4px;
+			padding-bottom: 0px;
 		}
 		thead:hover:before {
 			opacity:0.5;
@@ -228,7 +232,7 @@ https://github.com/sponsors/kepano
 			padding: 6px;
 			border-radius: var(--radius-m);
 			flex-direction: column;
-			margin: 26px 0 0 0;
+			margin: 24px 0 0 0;
 			width: 100%;
 		}
 		thead:hover > tr {

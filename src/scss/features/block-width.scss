@@ -1,0 +1,310 @@
+body {
+	--content-margin: auto;
+	--content-margin-start: max(
+		calc(50% - var(--line-width)/2),
+		calc(50% - var(--max-width)/2) );
+	--content-line-width: min(var(--line-width), var(--max-width));
+}
+
+/* Line widths ------------------------------------ */
+
+/* Set overall context to 100% width */
+.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {
+	max-width: 100%;
+	margin-inline: auto;
+	width: 100%;
+}
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+	max-width: 100%;
+	width: 100%;
+}
+
+/* Set inner content to line width */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .inline-title,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .embedded-backlinks  {
+	max-width: var(--max-width);
+	width: var(--line-width);
+	margin-inline: var(--content-margin) !important;
+}
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content {
+	>  *:not(div) {
+		max-width: var(--content-line-width);
+		margin-inline-start: var(--content-margin-start) !important;
+	}
+}
+
+/* File margins ------------------------------------ */
+.is-readable-line-width {
+	--file-margins: 0;}
+
+/* With line numbers */
+.minimal-line-nums .workspace-leaf-content[data-type=markdown] {
+	--file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px;
+	&.is-rtl {
+			--file-margins: var(--size-4-8) 48px var(--size-4-8) var(--size-4-8);}
+	.is-readable-line-width {
+		--file-margins: 0 0 0 var(--folding-offset);
+		&.is-rtl {
+			--file-margins: 0 var(--folding-offset) 0 0;}
+	}
+}
+
+/* Embeds ------------------------------------ */
+.markdown-preview-view .inline-embed {
+	--max-width: 100%;
+}
+
+/* Content rules ------------------------------------
+
+   The benefit of this approach is that it covers all levels
+   of specificity wherever the helper is applied: global, 
+   per file, and element-level. 
+
+   It means we don't have to write long specific selectors
+   like `.table-100.markdown-source-view...`
+*/
+
+body {
+	--container-table-width: var(--line-width);
+	--container-table-max-width: var(--max-width);
+	--table-max-width: none;
+	--table-width: auto;
+	--table-margin: inherit;
+
+	--container-img-width: var(--line-width);
+	--container-img-max-width: var(--max-width);
+	--img-max-width: 100%;
+	--img-width: auto;
+
+	/* because external images don't have a container */
+	--img-margin-start: var(--content-margin-start);
+	--img-line-width: var(--content-line-width);
+
+	--container-chart-width: var(--line-width);
+	--container-chart-max-width: var(--max-width);
+	--chart-max-width: none;
+	--chart-width: auto;
+
+	--container-map-width: var(--line-width);
+	--container-map-max-width: var(--max-width);
+	--map-max-width: none;
+	--map-width: auto;
+
+	--container-iframe-width: var(--line-width);
+	--container-iframe-max-width: var(--max-width);
+	--iframe-max-width: none;
+	--iframe-width: auto;
+
+	/* Entire page */
+	.is-readable-line-width.wide {
+		--line-width: var(--line-width-wide);
+	}
+	.is-readable-line-width.max {
+		--line-width: 300em;
+	}
+	.is-readable-line-width.wide,
+	.is-readable-line-width.max {
+		--container-table-width: var(--line-width);
+		--container-img-width: var(--line-width);
+		--container-iframe-width: var(--line-width);
+		--container-map-width: var(--line-width);
+		--container-chart-width: var(--line-width);
+	}
+}
+
+table.dataview {
+	--table-min-width: var(--line-width);
+}
+
+.cards table.dataview {
+	--table-width: 100%;
+	--table-min-width: none;
+}
+
+.maximize-tables-auto {
+	--container-table-max-width: 100%;
+	--container-table-width: 100%;
+	--table-max-width: 100%;
+	--table-margin: var(--content-margin-start) auto;
+	--table-width: auto;
+	.cards {
+		--container-table-max-width: var(--max-width);
+	}
+	.cards .block-language-dataview {
+		--table-margin: auto;
+	}
+}
+
+.maximize-tables {
+	--container-table-max-width: 100%;
+	--container-table-width: 100%;
+	--table-min-width: min(var(--line-width), var(--max-width));
+	--table-max-width: 100%;
+	--table-margin: auto;
+	--table-width: auto;
+	--table-edge-cell-padding-first: 10px;
+}
+
+
+.table-wide,
+.table-max,
+.table-100 {
+	--table-max-width: 100%;
+	--table-width: 100%;}
+.table-wide {
+	--container-table-width: var(--line-width-wide);
+	--table-edge-cell-padding-first: 0px;}
+.table-max {
+	--container-table-width: var(--max-width);
+	--table-edge-cell-padding-first: 0px;
+	--table-margin: 0;}
+.table-100 {
+	--container-table-width: 100%;
+	--container-table-max-width: 100%;
+	--table-edge-cell-padding-first: 20px;
+	--table-margin: 0;
+	.dataview.list-view-ul {
+		max-width: var(--max-width);
+		width: var(--line-width);
+		margin-inline: auto;
+	}
+}
+
+.img-wide,
+.img-max,
+.img-100 {
+	--img-max-width: 100%;
+	--img-width: 100%;}
+.img-wide {
+	--container-img-width: var(--line-width-wide);
+	--img-line-width: var(--line-width-wide);
+	--img-margin-start: calc(50% - var(--line-width-wide)/2);}
+.img-max {
+	--container-img-width: var(--max-width);
+	--img-line-width: var(--max-width);
+	--img-margin-start: calc(50% - var(--max-width)/2);}
+.img-100 {
+	--container-img-width: 100%;
+	--container-img-max-width: 100%;
+	--img-line-width: 100%;
+	--img-margin-start:0;}
+
+.map-wide,
+.map-max,
+.map-100 {
+	--map-max-width: 100%;
+	--map-width: 100%;}
+.map-wide {
+	--container-map-width: var(--line-width-wide);}
+.map-max {
+	--container-map-width: var(--max-width);}
+.map-100 {
+	--container-map-width: 100%;
+	--container-map-max-width: 100%;}
+
+.chart-wide,
+.chart-max,
+.chart-100 {
+	--chart-max-width: 100%;
+	--chart-width: 100%;}
+.chart-wide {
+	--container-chart-width: var(--line-width-wide);}
+.chart-max {
+	--container-chart-width: var(--max-width);}
+.chart-100 {
+	--container-chart-width: 100%;
+	--container-chart-max-width: 100%;}
+
+.iframe-wide,
+.iframe-max,
+.iframe-100 {
+	--iframe-max-width: 100%;
+	--iframe-width: 100%;}
+.iframe-wide {
+	--container-iframe-width: var(--line-width-wide);}
+.iframe-max {
+	--container-iframe-width: var(--max-width);}
+.iframe-100 {
+	--container-iframe-width: 100%;
+	--container-iframe-max-width: 100%;}
+
+
+/* Block widths ------------------------------------
+
+   Because we are using :has() this method requires
+   Obsidian installer 1.1.9 or above. However it means the
+   code no longer requires Contextual Typography plugin.
+*/
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer>.cm-content,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+
+	/* Tables */
+	.cm-table-widget,
+	> div:has(>table),
+	> div:has(>.block-language-dataview>table) {
+		width: var(--container-table-width);
+		max-width:var(--container-table-max-width);
+	}
+	table {
+		width: var(--table-width);
+		max-width:var(--table-max-width);
+		margin-inline: var(--table-margin);
+		min-width: var(--table-min-width);
+	}
+
+	/* Images */
+	> .image-embed {
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+	}
+	> .image-embed,
+	> div:has(.image-embed) {
+		width: var(--container-img-width);
+		max-width:var(--container-img-max-width);
+
+		img {
+			max-width:var(--img-max-width);
+		}
+	}
+
+	/* External images */
+	> img {
+		max-width: var(--img-line-width);
+		margin-inline-start: var(--img-margin-start) !important;
+	}
+
+	/* Maps */
+	div:has(>.block-language-chart) {
+		width: var(--container-chart-width);
+		max-width:var(--container-chart-max-width);
+
+		canvas {
+			max-width:var(--map-chart-width);
+		}
+	}
+
+	/* Maps */
+	div:has(>.block-language-leaflet) {
+		width: var(--container-map-width);
+		max-width:var(--container-map-max-width);
+
+		iframe {
+			max-width:var(--map-max-width);
+		}
+	}
+
+	/* Iframes */
+	> div:has(>iframe),
+	div:has(>.cm-html-embed) {
+		width: var(--container-iframe-width);
+		max-width:var(--container-iframe-max-width);
+
+		iframe {
+			max-width:var(--map-iframe-width);
+		}
+	}
+}

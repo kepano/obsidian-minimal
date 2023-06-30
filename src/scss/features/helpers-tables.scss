@@ -8,23 +8,14 @@
 	--table-text-size: 75%;
 }
 
-.row-hover th:first-child,
-.row-hover th:first-child,
-.row-alt.markdown-source-view.mod-cm6 th:first-child,
-.row-alt.markdown-source-view.mod-cm6 td:first-child,
-.row-alt table:not(.calendar) th:first-child,
-.row-alt table:not(.calendar) tbody > tr > td:first-child,
-.table-lines.markdown-source-view.mod-cm6 th:first-child,
-.table-lines.markdown-source-view.mod-cm6 td:first-child,
-.table-lines table:not(.calendar) thead > tr > th:first-child,
-.table-lines table:not(.calendar) tbody > tr > td:first-child {
-	padding-left: 10px;
+.row-hover {
+	--table-edge-cell-padding-first: 10px;
 }
-
 .row-alt {
 	--table-row-alt-background: var(--background-table-rows);
+	--table-edge-cell-padding-first: 10px;
 }
-.col-alt {
+.col-alt .markdown-rendered:not(.cards) {
 	--table-column-alt-background: var(--background-table-rows);
 }
 
@@ -33,11 +24,12 @@
 }
 
 .table-lines {
-	--table-border-width: 1px;
-	--table-header-border-width: 1px;
-	--table-column-first-border-width: 1px;
-	--table-column-last-border-width: 1px;
-	--table-row-last-border-width: 1px;
+	--table-border-width: var(--border-width);
+	--table-header-border-width: var(--border-width);
+	--table-column-first-border-width: var(--border-width);
+	--table-column-last-border-width:var(--border-width);
+	--table-row-last-border-width: var(--border-width);
+	--table-edge-cell-padding: 10px;
 }
 
 .table-nowrap {
@@ -71,11 +63,9 @@
 	}
 }
 
-.row-lines {
+.row-lines-off {
 	table:not(.calendar) tbody > tr > td,
-	.table-view-table > tbody > tr > td {
-		border-bottom: 1px solid var(--background-modifier-border);
-	}
+	.table-view-table > tbody > tr > td,
 	table:not(.calendar) tbody > tr:last-child > td {
 		border-bottom:none;
 	}
@@ -85,7 +75,7 @@
 	table:not(.calendar) tbody > tr > td:not(:last-child),
 	.table-view-table thead > tr > th:not(:last-child),
 	.table-view-table > tbody > tr > td:not(:last-child) {
-		border-right:1px solid var(--background-modifier-border);
+		border-right: var(--table-border-width) solid var(--background-modifier-border);
 	}
 }
 

@@ -3,71 +3,65 @@
 Image Grid snippet for Obsidian
 
 author: @kepano
-version: 3.0.0
+version: 4.0.0
 
 Support my work:
 https://github.com/sponsors/kepano
 
 */
-/* Requires Contextual Typography 2.2.1+ */
+/* Revamped for Obsidian 1.1.9+ using :has() */
 
 body {
 	--image-grid-fit: cover;
 	--image-grid-background: transparent;
+	--img-grid-gap: 0.5rem;
+}
+@media (max-width:400pt) {
+	body {
+		--img-grid-gap: 0.25rem;
+	}
 }
 
-.image-embed.is-loaded {
-	line-height:0;
-	img {
-		background-color: var(--image-grid-background);
-		&:active {
-			background-color: transparent;
+.img-grid-ratio {
+	--image-grid-fit: contain;
+}
+
+.img-grid {
+
+	.image-embed.is-loaded {
+		line-height:0;
+		img {
+			background-color: var(--image-grid-background);
+			&:active {
+				background-color: transparent;
+			}
 		}
 	}
-}
-div:not(.el-embed-image) + .el-embed-image {
-	margin-top:1rem;
-}
-.el-embed-image {
-	margin-top:0.5rem;
-}
-.contextual-typography .markdown-preview-section > .el-embed-image > p {
-	margin-block-start:0;
-	margin-block-end:0;
-}
-.img-grid .markdown-preview-section .el-embed-image img:not(.emoji):not([width]),
-.img-grid .markdown-preview-section video {
-	width:100%;
-}
-.img-grid .markdown-preview-section > .el-embed-image > p {
-	display:grid;
-	grid-column-gap:0.5rem;
-	grid-row-gap:0;
-	grid-template-columns:repeat(auto-fit, minmax(0, 1fr));
-}
-.img-grid .markdown-preview-section > .el-embed-image > p > br {
-	display:none;
-}
-.img-grid .markdown-preview-section > .el-embed-image > p > img {
-	object-fit: var(--image-grid-fit);
-	align-self:stretch;
-}
-.img-grid .markdown-preview-section > .el-embed-image > p > .internal-embed img {
-	object-fit: var(--image-grid-fit);
-	height:100%;
-}
-.img-grid .img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img,
-.img-grid.img-grid-ratio .markdown-preview-section > .el-embed-image > p > .internal-embed img {
-	object-fit:contain;
-	height:100%;
-	align-self:center;
-}
 
-@media (max-width:400pt) {
-	.el-embed-image {
-		margin-top:0.25rem;
-	}
-	.img-grid .markdown-preview-section > .el-embed-image > p {
-		grid-column-gap:0.25rem;
+	.markdown-preview-section {
+		/*img:not(.emoji):not([width]),
+		video {
+			width:100%;
+		}*/
+		> div:has(.image-embed) > p {
+			display: grid;
+			margin-block-start: var(--img-grid-gap);
+			margin-block-end: var(--img-grid-gap);
+			grid-column-gap: var(--img-grid-gap);
+			grid-row-gap: 0;
+			grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+			> br {
+				display:none;
+			}
+			> img {
+				object-fit: var(--image-grid-fit);
+				align-self: stretch;
+			}
+			> .internal-embed img {
+				object-fit: var(--image-grid-fit);
+				height:100%;
+				align-self: center;
+			}
+		}
 	}
 }

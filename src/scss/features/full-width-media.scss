@@ -1,15 +1,15 @@
 /* Full width media  */
 
-.full-width-media .markdown-preview-view .image-embed img:not(.emoji):not([width]),
-.full-width-media .image-embed img:not(.emoji):not([width]),
-.full-width-media .markdown-preview-view audio,
-.full-width-media .markdown-preview-view video, {
-	width:100%;
-}
-
-
-/* YouTube embeds */
-.full-width-media .el-p p:has(.external-embed),
-.full-width-media .external-embed {
-	width: 100%;
+.full-width-media {
+	.markdown-source-view,
+	.markdown-preview-view {
+		.image-embed img:not(.emoji):not([width]),
+		img:not(.emoji):not([width]),
+		p:has(.external-embed),
+		.external-embed,
+		audio,
+		video {
+			width: 100%;
+		}
+	}
 }

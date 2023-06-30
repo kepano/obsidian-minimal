@@ -5,6 +5,9 @@
 .theme-dark {
 	--progress-outline:rgba(255,255,255,0.04);
 }
+body {
+	--progress-complete: var(--text-accent);
+}
 .markdown-rendered progress,
 .markdown-source-view.is-live-preview progress,
 .markdown-preview-view progress {
@@ -17,23 +20,23 @@
 	&[value^='1']::-webkit-progress-value,
 	&[value^='2']::-webkit-progress-value,
 	&[value^='3']::-webkit-progress-value {
-		background-color:var(--color-red);
+		background-color: var(--color-red);
 	}
 	&[value^='4']::-webkit-progress-value,
 	&[value^='5']::-webkit-progress-value {
-		background-color:var(--color-orange);
+		background-color: var(--color-orange);
 	}
 	&[value^='6']::-webkit-progress-value,
 	&[value^='7']::-webkit-progress-value {
-		background-color:var(--color-yellow);
+		background-color: var(--color-yellow);
 	}
 	&[value^='8']::-webkit-progress-value,
 	&[value^='9']::-webkit-progress-value {
-		background-color:var(--color-green);
+		background-color: var(--color-green);
 	}
 	&[value='1']::-webkit-progress-value,
 	&[value='100']::-webkit-progress-value {
-		background-color:var(--text-accent);
+		background-color: var(--progress-complete);
 	}
 
 	&[value='0']::-webkit-progress-value,
@@ -45,6 +48,6 @@
 	&[value='7']::-webkit-progress-value,
 	&[value='8']::-webkit-progress-value,
 	&[value='9']::-webkit-progress-value {
-		background-color:var(--color-red);
+		background-color: var(--color-red);
 	}
 }

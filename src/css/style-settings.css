@@ -186,27 +186,6 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: active-line
-		title: Active line
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: active-line-on
-		title: Highlight active line
-		description: Adds a background to current line in editor
-		type: class-toggle
-		default: false
-	-
-		id: active-line-bg
-		title: Active line background
-		description: Using a low opacity color is recommended to avoid conflicting with highlights
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-
 		id: blockquotes
 		title: Blockquotes
 		type: heading
@@ -441,6 +420,12 @@ settings:
 		type: class-toggle
 		default: true
 	-
+		id: dataview-inline-lists
+		title: Force tables lists inline
+		description: Makes lists inside of table cells inline and comma separated
+		type: class-toggle
+		default: false
+	-
 		id: max-col-width
 		title: Dataview maximum column width
 		description: Maximum width for Dataview columns, accepts any CSS width value
@@ -461,7 +446,7 @@ settings:
 	-
 		id: embed-hide-title
 		title: Hide embed titles
-		description: Hide title of the transcluded file
+		description: Hide title of the transcluded file (if strict embed is off)
 		type: class-toggle
 		default: false
 	-
@@ -470,6 +455,12 @@ settings:
 		description: Transcluded text is underlined. Can be enabled per file using the embed-underline helper class
 		type: class-toggle
 		default: false
+	-
+		id: embed-max-height
+		title: Maximum height of embeds
+		type: variable-text
+		description: For transcluded text, accepts valid CSS units
+		default: ''
 	-
 		id: embed-decoration-style
 		title: Embedded text underline style
@@ -498,6 +489,14 @@ settings:
 		title: Embedded text underline color
 		type: variable-themed-color
 		description: Requires underlines to be enabled
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: embed-background
+		title: Embed background
+		type: variable-themed-color
+		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
@@ -1168,6 +1167,58 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: active-line
+		title: Line  numbers
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: active-line-on
+		title: Highlight active line
+		description: Adds a background to current line in editor
+		type: class-toggle
+		default: false
+	-
+		id: folding-offset
+		title: Gutter offset
+		description: Width of the file margin used for gutter
+		type: variable-number-slider
+		default: 32
+		min: 0
+		max: 60
+		step: 1
+		format: px
+	-  
+		id: gutter-background
+		title: Gutter background
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: line-number-color
+		title: Line number color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-  
+		id: line-number-color-active
+		title: Active line number color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: active-line-bg
+		title: Active line background
+		description: Using a low opacity color is recommended to avoid conflicting with highlights
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: lists
 		title: Lists and tasks
 		type: heading
@@ -1262,6 +1313,20 @@ settings:
 		max: 1
 		step: 0.05
 	-
+		id: progress
+		title: Progress bars
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: progress-complete
+		title: Completed progress bar color
+		description: Defaults to your accent color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: sidebars
 		title: Sidebars
 		type: heading
@@ -1295,19 +1360,25 @@ settings:
 				label: Underline
 				value: sidebar-tabs-underline
 	-
-		id: mobile-left-sidebar-width
-		title: Mobile left sidebar width
-		description: Maximum width for pinned left sidebar on mobile
-		type: variable-number
-		default: 280
-		format: pt
+		id: ribbon
+		title: Ribbon
+		type: heading
+		level: 2
+		collapsed: true
 	-
-		id: mobile-right-sidebar-width
-		title: Mobile right sidebar width
-		description: Maximum width for pinned right sidebar on mobile
-		type: variable-number
-		default: 240
-		format: pt
+		id: ribbon-style
+		title: Ribbon style
+		description: Ribbon menu can be hidden using the Hider plugin
+		type: class-select
+		allowEmpty: false
+		default: ribbon-hidden
+		options:
+			-
+				label: Default
+				value: ribbon-hidden
+			-
+				label: Bottom left hover
+				value: ribbon-bottom-left-hover
 	-
 		id: tables
 		title: Tables
@@ -1322,27 +1393,21 @@ settings:
 		default: 1em
 	-
 		id: maximize-tables-off
-		title: Maximize table width (beta)
-		description: Tables fill the width of the line
+		title: Maximize table width 
+		description: Determines how wide tables should behave when they become wider than the line width
 		type: class-select
 		allowEmpty: false
-		default: maximize-tables
+		default: maximize-tables-off
 		options:
 			-
-				label: Always
-				value: maximize-tables
+				label: Fit to line width
+				value: maximize-tables-off
 			-
-				label: Automatic
+				label: Overflow line width
 				value: maximize-tables-auto
 			-
-				label: Never
-				value: maximize-tables-off
-	-
-		id: row-lines
-		title: Row lines
-		description: Display borders between table rows globally
-		type: class-toggle
-		default: false
+				label: Always fill
+				value: maximize-tables
 	-
 		id: col-lines
 		title: Column lines
@@ -1427,6 +1492,9 @@ settings:
 			-
 				label: Modern
 				value: tabs-modern
+			-
+				label: Square
+				value: tabs-plain-square
 			-
 				label: Underline
 				value: tabs-underline
@@ -1628,11 +1696,17 @@ settings:
 		max: 900
 		step: 100
 	-
-		id: spacing-p
+		id: p-spacing
 		title: Paragraph spacing
-		description: Space between paragraphs in reading mode
+		description: Space between paragraphs in reading mode (Obsidian 1.3.7+)
 		type: variable-text
-		default: 0.75em
+		default: 1.5em
+	-
+		id: heading-spacing
+		title: Heading spacing
+		description: Space between paragraphs and headings in reading mode (Obsidian 1.3.7+)
+		type: variable-text
+		default: 2.25rem
 	-
 		id: titles
 		title: Titles
@@ -1899,16 +1973,6 @@ settings:
 		description: Font size in px of smallest text
 		type: variable-number
 		default: 11
-		format: px
-	-
-		id: folding-offset
-		title: Folding offset
-		description: Width of the left margin used for folding indicators
-		type: variable-number-slider
-		default: 10
-		min: 0
-		max: 30
-		step: 1
 		format: px
 
 */

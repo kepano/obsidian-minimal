@@ -10,6 +10,25 @@ body {
 	--tab-text-color-focused-active: var(--minimal-tab-text-color-active);
 	--tab-text-color-focused-active-current: var(--minimal-tab-text-color-active);
 }
+.tabs-plain-square .mod-root {
+	--tab-curve: 0;
+	--tab-radius: 0;
+	--tab-radius-active: 0;
+
+	.workspace-tab-header-container {
+		padding-right:0;
+	}
+	.workspace-tab-header-container-inner {
+		margin-top: -1px;
+		margin-left: -15px;
+	}
+	.workspace-tab-header {
+		padding: 0;
+	}
+	.workspace-tab-header-inner {
+		padding: 0 8px;
+	}
+}
 .tabs-square .mod-root {
 	--tab-curve: 0;
 	--tab-radius: 0;
