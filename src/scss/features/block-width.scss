@@ -115,15 +115,26 @@ body {
 	}
 }
 
+table.dataview {
+	--table-min-width: var(--line-width);
+}
+
+.cards table.dataview {
+	--table-width: 100%;
+	--table-min-width: none;
+}
+
 .maximize-tables-auto {
 	--container-table-max-width: 100%;
 	--container-table-width: 100%;
 	--table-max-width: 100%;
 	--table-margin: var(--content-margin-start) auto;
 	--table-width: auto;
+	.cards {
+		--container-table-max-width: var(--max-width);
+	}
 	.cards .block-language-dataview {
 		--table-margin: auto;
-		padding: 0 var(--size-4-3);
 	}
 }
 
@@ -135,13 +146,8 @@ body {
 	--table-margin: auto;
 	--table-width: auto;
 	--table-edge-cell-padding-first: 10px;
-	.cards .block-language-dataview {
-		padding: 0 var(--size-4-3);
-	}
 }
-.dataview {
-	--table-min-width: var(--line-width);
-}
+
 
 .table-wide,
 .table-max,

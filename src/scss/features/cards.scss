@@ -121,7 +121,7 @@ https://github.com/sponsors/kepano
 
 			/* Images */
 			&:has(img) {
-				padding: 0;
+				padding: 0 !important;
 				background-color: var(--background-secondary);
 				display: block;
 				margin: 0;
