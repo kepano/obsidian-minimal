@@ -1669,6 +1669,9 @@ body {
   --table-max-width: 100%;
   --table-margin: var(--content-margin-start) auto;
   --table-width: auto; }
+  .maximize-tables-auto .cards .block-language-dataview {
+    --table-margin: auto;
+    padding: 0 var(--size-4-3); }
 
 .maximize-tables {
   --container-table-max-width: 100%;
@@ -1676,9 +1679,13 @@ body {
   --table-min-width: min(var(--line-width), var(--max-width));
   --table-max-width: 100%;
   --table-margin: auto;
-  --table-width: auto; }
+  --table-width: auto;
+  --table-edge-cell-padding-first: 10px; }
   .maximize-tables .cards .block-language-dataview {
     padding: 0 var(--size-4-3); }
+
+.dataview {
+  --table-min-width: var(--line-width); }
 
 .table-wide,
 .table-max,

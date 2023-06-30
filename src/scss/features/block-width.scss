@@ -121,6 +121,10 @@ body {
 	--table-max-width: 100%;
 	--table-margin: var(--content-margin-start) auto;
 	--table-width: auto;
+	.cards .block-language-dataview {
+		--table-margin: auto;
+		padding: 0 var(--size-4-3);
+	}
 }
 
 .maximize-tables {
@@ -130,9 +134,13 @@ body {
 	--table-max-width: 100%;
 	--table-margin: auto;
 	--table-width: auto;
+	--table-edge-cell-padding-first: 10px;
 	.cards .block-language-dataview {
 		padding: 0 var(--size-4-3);
 	}
+}
+.dataview {
+	--table-min-width: var(--line-width);
 }
 
 .table-wide,
