@@ -1,10 +1,12 @@
 /* Full width media  */
 
 .full-width-media {
+	--iframe-width: 100%;
+
 	.markdown-source-view,
 	.markdown-preview-view {
-		.image-embed img:not(.emoji):not([width]),
-		img:not(.emoji):not([width]),
+		.image-embed img:not(.link-favicon):not(.emoji):not([width]),
+		img:not(.link-favicon):not(.emoji):not([width]),
 		p:has(.external-embed),
 		.external-embed,
 		audio,

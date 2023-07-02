@@ -1833,7 +1833,8 @@ table.dataview {
     .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed) iframe,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> iframe) iframe,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .cm-html-embed) iframe {
-      max-width: var(--map-iframe-width); }
+      max-width: var(--iframe-max-width);
+      width: var(--iframe-width); }
 
 .borders-none {
   --divider-width:0px;
@@ -2653,19 +2654,21 @@ body.minimal-focus-mode.show-view-header .view-content {
   height: 100%; }
 
 /* Full width media  */
-.full-width-media .markdown-source-view .image-embed img:not(.emoji):not([width]),
-.full-width-media .markdown-source-view img:not(.emoji):not([width]),
-.full-width-media .markdown-source-view p:has(.external-embed),
-.full-width-media .markdown-source-view .external-embed,
-.full-width-media .markdown-source-view audio,
-.full-width-media .markdown-source-view video,
-.full-width-media .markdown-preview-view .image-embed img:not(.emoji):not([width]),
-.full-width-media .markdown-preview-view img:not(.emoji):not([width]),
-.full-width-media .markdown-preview-view p:has(.external-embed),
-.full-width-media .markdown-preview-view .external-embed,
-.full-width-media .markdown-preview-view audio,
-.full-width-media .markdown-preview-view video {
-  width: 100%; }
+.full-width-media {
+  --iframe-width: 100%; }
+  .full-width-media .markdown-source-view .image-embed img:not(.link-favicon):not(.emoji):not([width]),
+  .full-width-media .markdown-source-view img:not(.link-favicon):not(.emoji):not([width]),
+  .full-width-media .markdown-source-view p:has(.external-embed),
+  .full-width-media .markdown-source-view .external-embed,
+  .full-width-media .markdown-source-view audio,
+  .full-width-media .markdown-source-view video,
+  .full-width-media .markdown-preview-view .image-embed img:not(.link-favicon):not(.emoji):not([width]),
+  .full-width-media .markdown-preview-view img:not(.link-favicon):not(.emoji):not([width]),
+  .full-width-media .markdown-preview-view p:has(.external-embed),
+  .full-width-media .markdown-preview-view .external-embed,
+  .full-width-media .markdown-preview-view audio,
+  .full-width-media .markdown-preview-view video {
+    width: 100%; }
 
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */

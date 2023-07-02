@@ -323,7 +323,9 @@ table.dataview {
 		max-width:var(--container-iframe-max-width);
 
 		iframe {
-			max-width:var(--map-iframe-width);
+			max-width:var(--iframe-max-width);
+			width: var(--iframe-width);
 		}
 	}
+
 }
