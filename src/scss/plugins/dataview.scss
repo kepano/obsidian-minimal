@@ -63,7 +63,6 @@ body.row-hover {
 }
 
 body .dataview-error {
-	margin-top:16px;
 	background-color:transparent;
 }
 .markdown-source-view.mod-cm6 .cm-content .dataview.dataview-error,
@@ -88,10 +87,6 @@ body div.dataview-error-box {
 
 .block-language-dataviewjs:has(.dataview-error-box) table.dataview {
 	display: none;
-}
-
-.markdown-source-view div.dataview-error-box {
-	margin-top:15px;
 }
 
 /* Trim columns feature */

@@ -14,6 +14,10 @@ body {
 	margin-inline: auto;
 	width: 100%;
 }
+/* Prevent x overflow when line numbers are on */
+.markdown-source-view.mod-cm6 .cm-sizer {
+	overflow-x: hidden;
+}
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
 	max-width: 100%;
@@ -122,7 +126,7 @@ body {
 }
 
 table.dataview {
-	--table-min-width: var(--line-width);
+	--table-min-width: min(var(--line-width),var(--max-width));
 }
 
 .cards table.dataview {
@@ -266,6 +270,9 @@ table.dataview {
 		> :is(p,h1,h2,h3,h4,h5,h6) {
 			width: var(--line-width);
 		}
+	}
+	.dataview.dataview-error-box {
+		margin-inline: var(--table-margin);
 	}
 
 	/* Images */

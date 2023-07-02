@@ -1582,6 +1582,10 @@ body {
   margin-inline: auto;
   width: 100%; }
 
+/* Prevent x overflow when line numbers are on */
+.markdown-source-view.mod-cm6 .cm-sizer {
+  overflow-x: hidden; }
+
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
   max-width: 100%;
@@ -1672,7 +1676,7 @@ body {
     --container-chart-width: var(--max-width); }
 
 table.dataview {
-  --table-min-width: var(--line-width); }
+  --table-min-width: min(var(--line-width),var(--max-width)); }
 
 .cards table.dataview {
   --table-width: 100%;
@@ -1826,6 +1830,9 @@ table.dataview {
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .block-language-dataviewjs > :is(p,h1,h2,h3,h4,h5,h6),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .block-language-dataviewjs > :is(p,h1,h2,h3,h4,h5,h6) {
     width: var(--line-width); }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .dataview.dataview-error-box,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .dataview.dataview-error-box {
+    margin-inline: var(--table-margin); }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {
     padding-top: 0.25rem;
@@ -2575,34 +2582,6 @@ body:not(.minimal-icons-off) svg.calendar-day {
 
 body:not(.minimal-icons-off) svg.longform {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="black" d="M21 4H7a2 2 0 1 0 0 4h14v13a1 1 0 0 1-1 1H7a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h13a1 1 0 0 1 1 1v1zM5 18a2 2 0 0 0 2 2h12V10H7a3.982 3.982 0 0 1-2-.535V18zM20 7H7a1 1 0 1 1 0-2h13v2z"></path></svg>'); }
-
-/* Fancy cursor */
-.fancy-cursor .CodeMirror-cursor {
-  border: none;
-  border-left: 2px solid var(--text-accent); }
-
-.cm-fat-cursor .CodeMirror-cursor {
-  background-color: var(--text-accent);
-  opacity: 0.5;
-  width: 5px; }
-
-.cm-animate-fat-cursor {
-  background-color: var(--text-accent);
-  opacity: 0.5;
-  width: 5px; }
-
-/* Reset to default for iOS */
-body .markdown-source-view.mod-cm6 .cm-content {
-  caret-color: unset; }
-
-/* Live Preview */
-body.fancy-cursor .markdown-source-view.mod-cm6 .cm-content,
-body.fancy-cursor .mod-cm6 .cm-line {
-  caret-color: var(--text-accent); }
-
-/* Prompt */
-.fancy-cursor input.prompt-input {
-  caret-color: var(--text-accent); }
 
 /* Focus mode */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
@@ -3955,7 +3934,6 @@ body.row-hover .table-view-table > tbody > tr:hover {
   background-color: var(--table-row-background-hover) !important; }
 
 body .dataview-error {
-  margin-top: 16px;
   background-color: transparent; }
 
 .markdown-source-view.mod-cm6 .cm-content .dataview.dataview-error,
@@ -3977,9 +3955,6 @@ body div.dataview-error-box {
 
 .block-language-dataviewjs:has(.dataview-error-box) table.dataview {
   display: none; }
-
-.markdown-source-view div.dataview-error-box {
-  margin-top: 15px; }
 
 /* Trim columns feature */
 .trim-cols .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
