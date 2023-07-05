@@ -15,3 +15,10 @@
 		}
 	}
 }
+
+.markdown-source-view,
+.markdown-rendered {
+	img:not(.emoji) {
+		border-radius: var(--image-radius);
+	}
+}

@@ -28,7 +28,8 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .inline-title,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .embedded-backlinks  {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .embedded-backlinks,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .metadata-container  {
 	max-width: var(--max-width);
 	width: var(--line-width);
 	margin-inline: var(--content-margin) !important;

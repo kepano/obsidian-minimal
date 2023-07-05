@@ -2,7 +2,7 @@
 
 .is-tablet {
 	.workspace-drawer {
-			padding-top: 0px;
+		padding-top: 0px;
 	}
 	.workspace-drawer:not(.is-pinned) {
 		margin: 30px 16px 0;
@@ -14,8 +14,9 @@
 		background-color: var(--background-primary);
 		border-right: 1px solid var(--background-modifier-border);
 	}
-	.workspace-drawer-header {
-		padding-top: var(--size-4-4)
+	.workspace-drawer-header,
+	.workspace-drawer.is-pinned .workspace-drawer-header {
+		padding-top: var(--size-4-4);
 	}
 }
 

@@ -8,6 +8,13 @@
 /* --------------- */
 /* App ribbon moved to the bottom edge */
 
+.is-tablet.hider-ribbon {
+	--ribbon-width: 0px;
+	.side-dock-ribbon {
+		display: none;
+	}
+}
+
 .hider-ribbon .workspace-ribbon {
 	padding: 0;
 }
