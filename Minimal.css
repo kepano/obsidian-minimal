@@ -1582,10 +1582,10 @@ body {
   margin-inline: auto;
   width: 100%; }
 
-/* Prevent x overflow when line numbers are on */
+/* Prevent x overflow when line numbers are on
 .markdown-source-view.mod-cm6 .cm-sizer {
-  overflow-x: hidden; }
-
+	overflow-x: hidden;
+} */
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
   max-width: 100%;
