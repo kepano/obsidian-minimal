@@ -19,11 +19,18 @@
 	padding: 0;
 }
 
-.bottom-ribbon,
-.hider-ribbon.ribbon-bottom-left-hover:not(.is-mobile) {
+:root {
+	--hider-ribbon-display: none;
+}
+
+.ribbon-bottom-left-hover:not(.is-mobile) {
+	--hider-ribbon-display: flex;
+}
+
+.hider-ribbon {
 
 	.workspace-ribbon-collapse-btn {
-		display:none;
+		display: none;
 	}
 	.workspace-ribbon.mod-right {
 		pointer-events:none;
@@ -37,7 +44,7 @@
 		flex-basis: 0;
 		bottom: 0;
 		top: auto;
-		display:flex !important;
+		display: var(--hider-ribbon-display) !important;
 		flex-direction: row;
 		z-index: 17;
 		opacity:0;
@@ -49,9 +56,9 @@
 	.side-dock-actions,
 	.side-dock-settings {
 		flex-direction: row;
-		display:flex;
-		border-top:var(--border-width) solid var(--background-modifier-border);
-		background:var(--background-secondary);
+		display: var(--hider-ribbon-display);
+		border-top: var(--border-width) solid var(--background-modifier-border);
+		background: var(--background-secondary);
 		margin:0;
 		position:relative;
 		gap: var(--size-2-2);
@@ -65,12 +72,12 @@
 		padding: 0 var(--size-2-2);
 	}
 	.workspace-ribbon.mod-left .side-dock-ribbon-action {
-		display: flex;
+		display: var(--hider-ribbon-display);
 		margin: 7px 0px 8px;
 	}
 	.workspace-ribbon.mod-left:hover {
 		opacity: 1;
-		transition:opacity 0.25s ease-in-out;
+		transition: opacity 0.25s ease-in-out;
 	}
 	.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
 		opacity: 0;
@@ -81,5 +88,4 @@
 	.workspace-leaf-content .item-list {
 		padding-bottom: 40px;
 	}
-
 }
