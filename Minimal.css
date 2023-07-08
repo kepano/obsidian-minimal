@@ -682,10 +682,6 @@ body {
 .markdown-source-view {
   color: var(--text-normal); }
 
-.markdown-reading-view > .markdown-preview-view.is-readable-line-width,
-.markdown-source-view.is-readable-line-width .cm-sizer {
-  padding-top: 8px; }
-
 .markdown-source-view.mod-cm6 .cm-sizer {
   display: block; }
 
@@ -693,8 +689,8 @@ body {
   padding-left: 0;
   padding-right: 0; }
 
-.markdown-source-view .cm-contentContainer {
-  margin-top: var(--p-spacing); }
+.markdown-rendered .mod-header + div > * {
+  margin-block-start: 0; }
 
 /* Gutters */
 body :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutters {
@@ -1611,7 +1607,7 @@ body {
 
 /* File margins ------------------------------------ */
 .is-readable-line-width {
-  --file-margins: 0; }
+  --file-margins: 1rem 0 0 0; }
 
 .is-mobile .markdown-preview-view {
   --folding-offset: 0; }
