@@ -55,9 +55,9 @@ body {
 	&.is-rtl {
 			--file-margins: var(--size-4-8) 48px var(--size-4-8) var(--size-4-8);}
 	.is-readable-line-width {
-		--file-margins: 0 0 0 var(--folding-offset);
+		--file-margins: 1rem 0 0 var(--folding-offset);
 		&.is-rtl {
-			--file-margins: 0 var(--folding-offset) 0 0;}
+			--file-margins: 1rem var(--folding-offset) 0 0;}
 	}
 }
 
@@ -270,6 +270,10 @@ table.dataview {
 	.block-language-dataviewjs {
 		> :is(p,h1,h2,h3,h4,h5,h6) {
 			width: var(--line-width);
+		}
+		> .dataview-error {
+			margin: 0 auto;
+			width: var(--content-line-width);
 		}
 	}
 	.dataview.dataview-error-box {
