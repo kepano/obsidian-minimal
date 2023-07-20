@@ -9,7 +9,8 @@
 	border-width:2px;
 }
 .mod-cm6 .cm-editor .cm-line {
-	padding:0;
+	padding-left: 0;
+	padding-right: 0;
 }
 .cm-editor .cm-content {
 	padding-top:0.5em;
@@ -24,6 +25,10 @@
 .markdown-source-view.mod-cm6 .cm-scroller {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.cm-s-obsidian .cm-line.HyperMD-header {
+	padding-top: calc(var(--p-spacing) / 2);
 }
 
 .markdown-rendered .mod-header + div > * { 

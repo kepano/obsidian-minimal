@@ -44,10 +44,7 @@ SOFTWARE.
 @charset "UTF-8";
 /* Variables */
 body {
-  --font-text-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
   --font-editor-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
-  --font-monospace-theme:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
-  --font-interface-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
   --font-editor:var(--font-editor-override), var(--font-text-override), var(--font-editor-theme); }
 
 body {
@@ -114,8 +111,8 @@ body {
   --image-muted:0.7;
   --image-radius: 0;
   /* Spacing */
-  --heading-spacing: 2.25rem;
-  --p-spacing: 1.5em;
+  --heading-spacing: 2em;
+  --p-spacing: 1.75rem;
   --border-width: 1px;
   --table-border-width: var(--border-width);
   /* Readable line length off */
@@ -674,7 +671,8 @@ body {
   border-width: 2px; }
 
 .mod-cm6 .cm-editor .cm-line {
-  padding: 0; }
+  padding-left: 0;
+  padding-right: 0; }
 
 .cm-editor .cm-content {
   padding-top: 0.5em; }
@@ -688,6 +686,9 @@ body {
 .markdown-source-view.mod-cm6 .cm-scroller {
   padding-left: 0;
   padding-right: 0; }
+
+.cm-s-obsidian .cm-line.HyperMD-header {
+  padding-top: calc(var(--p-spacing) / 2); }
 
 .markdown-rendered .mod-header + div > * {
   margin-block-start: 0; }
@@ -7898,13 +7899,13 @@ settings:
 		title: Paragraph spacing
 		description: Space between paragraphs in reading mode (Obsidian 1.3.7+)
 		type: variable-text
-		default: 1.5em
+		default: 1.75rem
 	-
 		id: heading-spacing
 		title: Heading spacing
 		description: Space between paragraphs and headings in reading mode (Obsidian 1.3.7+)
 		type: variable-text
-		default: 2.25rem
+		default: 2em
 	-
 		id: titles
 		title: Titles
