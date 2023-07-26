@@ -13,6 +13,30 @@
 }
 */
 
-.metadata-properties-heading {
-	display: none;;
+.metadata-container {
+  --input-height: 2rem;
+}
+
+body:not(.metadata-heading-on) {
+	.metadata-properties-heading {
+		display: none;
+	}
+}
+.metadata-dividers {
+	--metadata-divider-width: 1px;
+	--metadata-gap: 0px;
+}
+
+.metadata-icons-off {
+	.workspace-leaf-content[data-type="all-properties"] {
+		.tree-item-inner {
+			margin-left: -16px;
+		}
+		.tree-item-icon {
+			display: none;
+		}
+	}
+	.metadata-property-icon {
+		display: none;
+	}
 }

@@ -5,11 +5,11 @@ id: minimal-style
 settings:
 	-
 		id: instructions
-		title: Welcome 👋
+		title: Documentation
 		type: heading
 		level: 2
 		collapsed: true
-		description: Use the Minimal Theme Settings plugin to access hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization. Visit minimal.guide for documentation.
+		description: Use the Minimal Theme Settings plugin to set hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization. Go to https://minimal.guide for documentation.
 	-
 		id: interface
 		title: Interface colors
@@ -1337,6 +1337,40 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: properties
+		title: Properties
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: metadata-heading-on
+		title: Properties heading
+		description: Display "Properties" heading above file properties
+		type: class-toggle
+		default: false
+	-
+		id: metadata-dividers
+		title: Property row lines
+		description: Display borders between properties
+		type: class-toggle
+		default: false
+	-
+		id: metadata-icons-off
+		title: Hide property icons
+		description: Hide icons next to property names
+		type: class-toggle
+		default: false
+	-
+		id: metadata-label-width
+		title: Property name width
+		description: Width for the name of the property
+		type: variable-number-slider
+		format: rem
+		default: 8
+		min: 4
+		max: 12
+		step: 0.25
+	-
 		id: sidebars
 		title: Sidebars
 		type: heading
@@ -1344,7 +1378,7 @@ settings:
 		collapsed: true
 	-
 		id: sidebar-lines-off
-		title: Disable sidebar relationship lines
+		title: Hide sidebar relationship lines
 		description: Turns off lines in file navigation
 		type: class-toggle
 	-

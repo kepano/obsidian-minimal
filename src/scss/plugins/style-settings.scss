@@ -8,6 +8,18 @@
 }
 
 .workspace-leaf-content[data-type="style-settings"] {
+
+	div[data-id="instructions"] {
+		.setting-item-name {
+			display: none;
+		}
+		.setting-item-description {
+			color: var(--text-normal);
+			font-size: var(--font-adaptive-smaller);
+			padding-bottom: 0.5em;
+		}
+	}
+
 	.view-content {
 		padding: var(--size-4-4) 0;
 	}

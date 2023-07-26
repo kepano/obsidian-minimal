@@ -60,6 +60,9 @@ body {
   --list-spacing: 0.075em;
   --input-height: 32px;
   --header-height: 40px;
+  /* Metadata */
+  --metadata-label-font-size: var(--font-adaptive-small);
+  --metadata-input-font-size: var(--font-adaptive-small);
   /* Mobile sidebars */
   --mobile-left-sidebar-width: 280pt;
   --mobile-right-sidebar-width: 240pt;
@@ -745,7 +748,21 @@ body {
 	}
 }
 */
-.metadata-properties-heading {
+.metadata-container {
+  --input-height: 2rem; }
+
+body:not(.metadata-heading-on) .metadata-properties-heading {
+  display: none; }
+
+.metadata-dividers {
+  --metadata-divider-width: 1px;
+  --metadata-gap: 0px; }
+
+.metadata-icons-off .workspace-leaf-content[data-type="all-properties"] .tree-item-inner {
+  margin-left: -16px; }
+.metadata-icons-off .workspace-leaf-content[data-type="all-properties"] .tree-item-icon {
+  display: none; }
+.metadata-icons-off .metadata-property-icon {
   display: none; }
 
 /* Preview mode  */
@@ -4937,6 +4954,12 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   padding: 10px 20px;
   margin: 2px 0 2px -20px; }
 
+.workspace-leaf-content[data-type="style-settings"] div[data-id="instructions"] .setting-item-name {
+  display: none; }
+.workspace-leaf-content[data-type="style-settings"] div[data-id="instructions"] .setting-item-description {
+  color: var(--text-normal);
+  font-size: var(--font-adaptive-smaller);
+  padding-bottom: 0.5em; }
 .workspace-leaf-content[data-type="style-settings"] .view-content {
   padding: var(--size-4-4) 0; }
 .workspace-leaf-content[data-type="style-settings"] .view-content > div {
