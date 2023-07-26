@@ -1562,6 +1562,8 @@ body,
 
 /* Minimal features */
 /* Active line highlight */
+.active-line-on .cm-content {
+  overflow-x: hidden; }
 .active-line-on .cm-line.cm-active,
 .active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
   background-color: var(--active-line-bg); }
