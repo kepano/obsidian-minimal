@@ -1,6 +1,6 @@
 /* Active line highlight */
 .active-line-on {
-	.cm-content {
+	.cm-editor > .cm-scroller {
 		overflow-x: hidden;
 	}
 	.cm-line.cm-active,
