@@ -1,7 +1,7 @@
 /* Desktop font sizes */
 body {
 	--font-adaptive-normal:var(--font-text-size,var(--editor-font-size));
-	--font-adaptive-small: var(--font-ui-medium);
+	--font-adaptive-small: calc(var(--font-ui-small) * 1.07);
 	--font-adaptive-smaller: var(--font-ui-small);
 	--font-adaptive-smallest: var(--font-ui-smaller);
 	--line-width-wide:calc(var(--line-width) + 12.5%);
