@@ -301,7 +301,8 @@ table.dataview {
 		margin-inline-start: var(--img-margin-start) !important;
 	}
 
-	/* Maps */
+	/* Charts */
+	div:has(>.block-language-dataviewjs canvas), 
 	div:has(>.block-language-chart) {
 		width: var(--container-chart-width);
 		max-width:var(--container-chart-max-width);

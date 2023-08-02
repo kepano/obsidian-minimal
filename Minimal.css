@@ -1829,7 +1829,7 @@ table.dataview {
   /* Tables */
   /* Images */
   /* External images */
-  /* Maps */
+  /* Charts */
   /* Maps */
   /* Iframes */ }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
@@ -1877,11 +1877,15 @@ table.dataview {
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > img {
     max-width: var(--img-line-width);
     margin-inline-start: var(--img-margin-start) !important; }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-dataviewjs canvas),
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart),
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-dataviewjs canvas),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-chart) {
     width: var(--container-chart-width);
     max-width: var(--container-chart-max-width); }
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-dataviewjs canvas) canvas,
     .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-chart) canvas,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-dataviewjs canvas) canvas,
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-chart) canvas {
       max-width: var(--map-chart-width); }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet),
