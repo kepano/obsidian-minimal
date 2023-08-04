@@ -1,30 +1,8 @@
 /* Active line highlight */
 .active-line-on {
-	.cm-editor > .cm-scroller {
-		overflow-x: hidden;
-	}
 	.cm-line.cm-active,
 	.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
 		background-color:var(--active-line-bg);
-		&:before {
-			top: 0;
-			left: -50vw;
-			position: absolute;
-			display: block;
-			content:'';
-			width: 50vw;
-			height: 100%;
-			background-color: var(--active-line-bg);
-		}
-		&:after {
-			top: 0;
-			right: -50vw;
-			position: absolute;
-			display: block;
-			content:'';
-			width: 50vw;
-			height: 100%;
-			background-color: var(--active-line-bg);
-		}
+		box-shadow:-25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg);
 	}
 }
