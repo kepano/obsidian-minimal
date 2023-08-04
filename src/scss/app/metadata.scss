@@ -22,6 +22,11 @@ body:not(.metadata-heading-on) {
 		display: none;
 	}
 }
+.metadata-add-property-off {
+	.mod-root .metadata-add-button {
+		display: none;
+	}
+}
 .metadata-dividers {
 	--metadata-divider-width: 1px;
 	--metadata-gap: 0px;

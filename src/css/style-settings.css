@@ -1344,20 +1344,26 @@ settings:
 		collapsed: true
 	-
 		id: metadata-heading-on
-		title: Properties heading
-		description: Display "Properties" heading above file properties
+		title: Show properties heading
+		description: Display "Properties" heading above properties
 		type: class-toggle
 		default: false
 	-
-		id: metadata-dividers
-		title: Property row lines
-		description: Display borders between properties
+		id: metadata-add-property-off
+		title: Hide "Add property" button
+		description: Hide "Add property" button below properties
 		type: class-toggle
 		default: false
 	-
 		id: metadata-icons-off
 		title: Hide property icons
 		description: Hide icons next to property names
+		type: class-toggle
+		default: false
+	-
+		id: metadata-dividers
+		title: Property row lines
+		description: Display borders between properties
 		type: class-toggle
 		default: false
 	-
