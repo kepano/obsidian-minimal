@@ -794,6 +794,9 @@ body {
 .metadata-container {
   --input-height: 2rem; }
 
+.markdown-source-view .metadata-container {
+  transform: translateX(-4px); }
+
 body:not(.metadata-heading-on) .metadata-properties-heading {
   display: none; }
 
@@ -5531,6 +5534,119 @@ https://github.com/dracula/dracula-theme
 
 .theme-dark.minimal-dracula-dark.minimal-dark-black {
   --ui1:#282a36; }
+
+/* Eink */
+.theme-light.minimal-eink-light,
+.theme-dark.minimal-eink-dark {
+  --collapse-icon-color: var(--text-normal);
+  --icon-color-active: var(--bg1);
+  --icon-color-focused: var(--bg1);
+  --icon-opacity: 1;
+  --indentation-guide-color: var(--tx1);
+  --indentation-guide-color-active: var(--tx1);
+  --indentation-guide-width-active: 3px;
+  --link-unresolved-opacity: 1;
+  --link-unresolved-decoration-style: dashed;
+  --link-unresolved-decoration-color: var(--tx1);
+  --modal-border-color: var(--tx1);
+  --modal-border-width: 3px;
+  --nav-item-color-hover: var(--bg1);
+  --nav-item-color-active: var(--bg1);
+  --prompt-border-color: var(--tx1);
+  --prompt-border-width: 3px;
+  --tag-border-width: 1.25px;
+  --tag-background: transparent;
+  --tag-background-hover: transparent;
+  --tag-border-color: var(--tx1);
+  --tag-border-color-hover: var(--tx1);
+  --text-on-accent-inverted: var(--bg1); }
+  .theme-light.minimal-eink-light .suggestion-container,
+  .theme-dark.minimal-eink-dark .suggestion-container {
+    border-width: 3px; }
+  .theme-light.minimal-eink-light .markdown-rendered code,
+  .theme-light.minimal-eink-light .cm-s-obsidian span.cm-inline-code,
+  .theme-dark.minimal-eink-dark .markdown-rendered code,
+  .theme-dark.minimal-eink-dark .cm-s-obsidian span.cm-inline-code {
+    font-weight: 600; }
+  .theme-light.minimal-eink-light .cm-s-obsidian span.cm-formatting-highlight,
+  .theme-light.minimal-eink-light .cm-s-obsidian span.cm-highlight,
+  .theme-light.minimal-eink-light .markdown-rendered mark,
+  .theme-light.minimal-eink-light .suggestion-item.is-selected,
+  .theme-light.minimal-eink-light .horizontal-tab-nav-item:hover,
+  .theme-light.minimal-eink-light .vertical-tab-nav-item:hover,
+  .theme-dark.minimal-eink-dark .cm-s-obsidian span.cm-formatting-highlight,
+  .theme-dark.minimal-eink-dark .cm-s-obsidian span.cm-highlight,
+  .theme-dark.minimal-eink-dark .markdown-rendered mark,
+  .theme-dark.minimal-eink-dark .suggestion-item.is-selected,
+  .theme-dark.minimal-eink-dark .horizontal-tab-nav-item:hover,
+  .theme-dark.minimal-eink-dark .vertical-tab-nav-item:hover {
+    color: var(--bg1); }
+  .theme-light.minimal-eink-light:not(.colorful-active) .horizontal-tab-nav-item.is-active, .theme-light.minimal-eink-light:not(.colorful-active) .vertical-tab-nav-item.is-active,
+  .theme-dark.minimal-eink-dark:not(.colorful-active) .horizontal-tab-nav-item.is-active,
+  .theme-dark.minimal-eink-dark:not(.colorful-active) .vertical-tab-nav-item.is-active {
+    color: var(--bg1); }
+  .theme-light.minimal-eink-light button, .theme-light.minimal-eink-light select, .theme-light.minimal-eink-light .dropdown,
+  .theme-dark.minimal-eink-dark button,
+  .theme-dark.minimal-eink-dark select,
+  .theme-dark.minimal-eink-dark .dropdown {
+    color: var(--bg1); }
+
+.theme-light.minimal-eink-light {
+  --base-h:0;
+  --base-s:0%;
+  --base-l:100%;
+  --accent-h:0;
+  --accent-s:0%;
+  --accent-l:0%;
+  --bg1:#fff;
+  --bg2:#fff;
+  --bg3:#000;
+  --ui1:#000;
+  --ui2:#000;
+  --ui3:#000;
+  --tx1:#000;
+  --tx2:#000;
+  --tx3:#000;
+  --hl1:#000;
+  --hl2:#000;
+  --sp1:#fff;
+  --text-on-accent:#fff; }
+
+.theme-light.minimal-eink-light.minimal-light-tonal {
+  --bg3:hsla(0,0%,0%,0.2);
+  --ui1:hsla(0,0%,0%,0.2); }
+
+.theme-light.minimal-eink-light.minimal-light-white {
+  --bg3:#fff; }
+
+.theme-light.minimal-eink-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-eink-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-eink-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-eink-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-eink-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-dark.minimal-eink-dark {
+  --base-h:0;
+  --base-s:0%;
+  --base-l:0%;
+  --accent-h:0;
+  --accent-s:0%;
+  --accent-l:100%;
+  --bg1:#000;
+  --bg2:#000;
+  --bg3:#fff;
+  --ui1:#fff;
+  --ui2:#fff;
+  --ui3:#fff;
+  --tx1:#fff;
+  --tx2:#fff;
+  --tx3:#fff;
+  --hl1:#fff;
+  --hl2:#fff;
+  --sp1:#000; }
+
+.theme-dark.minimal-eink-dark.minimal-dark-tonal {
+  --bg3:hsla(0,0%,100%,0.3);
+  --ui1:hsla(0,0%,100%,0.3); }
 
 /*
 Everforest

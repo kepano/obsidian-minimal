@@ -17,6 +17,10 @@
   --input-height: 2rem;
 }
 
+.markdown-source-view .metadata-container {
+	transform: translateX(-4px);
+}
+
 body:not(.metadata-heading-on) {
 	.metadata-properties-heading {
 		display: none;
