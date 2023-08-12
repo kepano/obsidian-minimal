@@ -5500,6 +5500,7 @@ https://github.com/dracula/dracula-theme
 .theme-dark.minimal-eink-dark {
   --collapse-icon-color: var(--text-normal);
   --icon-color-active: var(--bg1);
+  --icon-color-hover: var(--bg1);
   --icon-color-focused: var(--bg1);
   --icon-opacity: 1;
   --indentation-guide-color: var(--tx1);
@@ -5509,16 +5510,18 @@ https://github.com/dracula/dracula-theme
   --link-unresolved-decoration-style: dashed;
   --link-unresolved-decoration-color: var(--tx1);
   --modal-border-color: var(--tx1);
-  --modal-border-width: 3px;
+  --modal-border-width: 2px;
   --nav-item-color-hover: var(--bg1);
   --nav-item-color-active: var(--bg1);
   --prompt-border-color: var(--tx1);
-  --prompt-border-width: 3px;
+  --prompt-border-width: 2px;
+  --tab-text-color-focused-active-current: red;
   --tag-border-width: 1.25px;
   --tag-background: transparent;
   --tag-background-hover: transparent;
   --tag-border-color: var(--tx1);
   --tag-border-color-hover: var(--tx1);
+  --text-on-accent: var(--bg1);
   --text-on-accent-inverted: var(--bg1); }
   .theme-light.minimal-eink-light .suggestion-container,
   .theme-dark.minimal-eink-dark .suggestion-container {
@@ -5528,24 +5531,28 @@ https://github.com/dracula/dracula-theme
   .theme-dark.minimal-eink-dark .markdown-rendered code,
   .theme-dark.minimal-eink-dark .cm-s-obsidian span.cm-inline-code {
     font-weight: 600; }
+  .theme-light.minimal-eink-light .metadata-property-icon,
+  .theme-dark.minimal-eink-dark .metadata-property-icon {
+    --icon-color-focused: var(--tx1); }
+  .theme-light.minimal-eink-light .text-icon-button:hover,
+  .theme-light.minimal-eink-light .community-item .suggestion-highlight,
   .theme-light.minimal-eink-light .cm-s-obsidian span.cm-formatting-highlight,
   .theme-light.minimal-eink-light .cm-s-obsidian span.cm-highlight,
   .theme-light.minimal-eink-light .markdown-rendered mark,
   .theme-light.minimal-eink-light .suggestion-item.is-selected,
   .theme-light.minimal-eink-light .horizontal-tab-nav-item:hover,
-  .theme-light.minimal-eink-light .vertical-tab-nav-item:hover,
+  .theme-light.minimal-eink-light .vertical-tab-nav-item:hover, .theme-light.minimal-eink-light:not(.colorful-active) .horizontal-tab-nav-item.is-active, .theme-light.minimal-eink-light:not(.colorful-active) .vertical-tab-nav-item.is-active,
+  .theme-light.minimal-eink-light button, .theme-light.minimal-eink-light select, .theme-light.minimal-eink-light .dropdown,
+  .theme-dark.minimal-eink-dark .text-icon-button:hover,
+  .theme-dark.minimal-eink-dark .community-item .suggestion-highlight,
   .theme-dark.minimal-eink-dark .cm-s-obsidian span.cm-formatting-highlight,
   .theme-dark.minimal-eink-dark .cm-s-obsidian span.cm-highlight,
   .theme-dark.minimal-eink-dark .markdown-rendered mark,
   .theme-dark.minimal-eink-dark .suggestion-item.is-selected,
   .theme-dark.minimal-eink-dark .horizontal-tab-nav-item:hover,
-  .theme-dark.minimal-eink-dark .vertical-tab-nav-item:hover {
-    color: var(--bg1); }
-  .theme-light.minimal-eink-light:not(.colorful-active) .horizontal-tab-nav-item.is-active, .theme-light.minimal-eink-light:not(.colorful-active) .vertical-tab-nav-item.is-active,
+  .theme-dark.minimal-eink-dark .vertical-tab-nav-item:hover,
   .theme-dark.minimal-eink-dark:not(.colorful-active) .horizontal-tab-nav-item.is-active,
-  .theme-dark.minimal-eink-dark:not(.colorful-active) .vertical-tab-nav-item.is-active {
-    color: var(--bg1); }
-  .theme-light.minimal-eink-light button, .theme-light.minimal-eink-light select, .theme-light.minimal-eink-light .dropdown,
+  .theme-dark.minimal-eink-dark:not(.colorful-active) .vertical-tab-nav-item.is-active,
   .theme-dark.minimal-eink-dark button,
   .theme-dark.minimal-eink-dark select,
   .theme-dark.minimal-eink-dark .dropdown {
@@ -5558,6 +5565,7 @@ https://github.com/dracula/dracula-theme
   --accent-h:0;
   --accent-s:0%;
   --accent-l:0%;
+  --ax3:#000;
   --bg1:#fff;
   --bg2:#fff;
   --bg3:#000;
@@ -5570,11 +5578,8 @@ https://github.com/dracula/dracula-theme
   --hl1:#000;
   --hl2:#000;
   --sp1:#fff;
-  --text-on-accent:#fff; }
-
-.theme-light.minimal-eink-light.minimal-light-tonal {
-  --bg3:hsla(0,0%,0%,0.2);
-  --ui1:hsla(0,0%,0%,0.2); }
+  --text-on-accent:#fff;
+  --background-modifier-cover: rgba(235,235,235,1); }
 
 .theme-light.minimal-eink-light.minimal-light-white {
   --bg3:#fff; }
@@ -5591,6 +5596,7 @@ https://github.com/dracula/dracula-theme
   --accent-h:0;
   --accent-s:0%;
   --accent-l:100%;
+  --ax3:#fff;
   --bg1:#000;
   --bg2:#000;
   --bg3:#fff;
@@ -5602,11 +5608,20 @@ https://github.com/dracula/dracula-theme
   --tx3:#fff;
   --hl1:#fff;
   --hl2:#fff;
-  --sp1:#000; }
+  --sp1:#000;
+  --background-modifier-cover: rgba(20,20,20,1); }
+
+.theme-light.minimal-eink-light.minimal-light-tonal {
+  --bg3:#bbb;
+  --ui1:#bbb;
+  --modal-border-color: var(--ui1);
+  --prompt-border-color: var(--ui1); }
 
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
-  --bg3:hsla(0,0%,100%,0.3);
-  --ui1:hsla(0,0%,100%,0.3); }
+  --bg3:#444;
+  --ui1:#444;
+  --modal-border-color: var(--ui1);
+  --prompt-border-color: var(--ui1); }
 
 /*
 Everforest
