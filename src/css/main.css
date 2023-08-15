@@ -81,6 +81,11 @@ body {
 .mod-macos {
   --top-left-padding-y:24px; }
 
+.is-phone {
+  /* Metadata */
+  --metadata-label-font-size: var(--font-adaptive-smaller);
+  --metadata-input-font-size: var(--font-adaptive-smaller); }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   .is-phone {
     --border-width: 0.75px; } }
@@ -2684,7 +2689,9 @@ body.minimal-focus-mode.show-view-header .view-content {
   .full-width-media .markdown-preview-view video {
     width: 100%; }
 
+.markdown-source-view video,
 .markdown-source-view img:not(.emoji),
+.markdown-rendered video,
 .markdown-rendered img:not(.emoji) {
   border-radius: var(--image-radius); }
 
@@ -5515,7 +5522,6 @@ https://github.com/dracula/dracula-theme
   --nav-item-color-active: var(--bg1);
   --prompt-border-color: var(--tx1);
   --prompt-border-width: 2px;
-  --tab-text-color-focused-active-current: red;
   --tag-border-width: 1.25px;
   --tag-background: transparent;
   --tag-background-hover: transparent;
