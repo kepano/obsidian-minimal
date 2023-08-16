@@ -1870,7 +1870,7 @@ Support my work:
 https://github.com/sponsors/kepano
 
 */
-:root {
+body {
   --cards-min-width: 180px;
   --cards-max-width: 1fr;
   --cards-mobile-width: 120px;
@@ -1883,7 +1883,7 @@ https://github.com/sponsors/kepano
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width))); }
 
 @media (max-width: 400pt) {
-  :root {
+  body {
     --cards-min-width:var(--cards-mobile-width); } }
 .cards.table-100 table.dataview tbody,
 .table-100 .cards table.dataview tbody {
