@@ -260,15 +260,15 @@ https://github.com/sponsors/kepano
 	}
 }
 
-
+/* ------------------- */
 /* Card lists */
 
 .list-cards.markdown-preview-view {
 	.list-bullet,
-	.list-collapse-indicator {
-		display: none;
+	.list-collapse-indicator,
+	&.markdown-rendered.show-indentation-guide li > ul::before {
+		display:none;
 	}
-
 	div > ul {
 		--link-decoration: none;
 		--link-external-decoration: none;
@@ -276,11 +276,8 @@ https://github.com/sponsors/kepano
 		gap: 0.75rem;
 		grid-template-columns: var(--cards-columns);
 		padding:0;
-	}
-	&.markdown-rendered.show-indentation-guide li > ul::before {
-		display:none;
-	}
-	div > ul {
+		line-height: var(--line-height-tight);
+
 		> li {
 			background-color: var(--cards-background);
 			padding: calc(var(--cards-padding)/2);
@@ -310,7 +307,7 @@ https://github.com/sponsors/kepano
 		padding: calc(var(--cards-padding)/3) 0;
 		margin-top: calc(var(--cards-padding)/-3);
 		~ ul {
-			margin-top: calc(var(--cards-padding)/-1);
+			margin: calc(var(--cards-padding)/-1) 0 calc(var(--cards-padding)/-2);
 		}
 	}
 	div ul > li:hover {
@@ -321,8 +318,7 @@ https://github.com/sponsors/kepano
 		width: 100%;
 		color: var(--text-muted);
 		font-size: var(--font-smallest);
-		line-height: var(--line-height-tight);
-		margin-top: calc(var(--cards-padding)/-4);
+		margin: calc(var(--cards-padding)/-4) 0;
 		padding: calc(var(--cards-padding)/2) 0;
 
 		ul {
@@ -337,6 +333,7 @@ https://github.com/sponsors/kepano
 
 /* ------------------- */
 /* Helper classes */
+
 .cards {
 	&.cards-16-9 {
 		--cards-aspect-ratio: 16/9;
