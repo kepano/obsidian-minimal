@@ -9,12 +9,17 @@
 	margin:0 auto;
 	padding:0;
 }
+body {
+	--calendar-dot-active: var(--text-faint);
+	--calendar-dot-today: var(--text-accent);
+}
 #calendar-container {
 	padding:0 var(--size-4-4) var(--size-4-1);
 	--color-background-day-empty:var(--background-secondary-alt);
 	--color-background-day-active:var(--background-modifier-hover);
 	--color-background-day-hover:var(--background-modifier-hover);
 	--color-dot:var(--text-faint);
+	--calendar-text-active: inherit;
 	--color-text-title:var(--text-normal);
 	--color-text-heading:var(--text-muted);
 	--color-text-day:var(--text-normal);
@@ -92,7 +97,7 @@
 	}
 	.today.active .dot,
 	.today .dot {
-		fill:var(--text-accent);
+		fill:var(--calendar-dot-today);
 	}
 	.active .task {
 		stroke:var(--text-faint);
@@ -135,9 +140,10 @@
 	.week-num:hover,
 	.day:hover {
 		background-color:var(--color-background-day-active);
+		color: var(--calendar-text-active);
 	}
 	.active .dot {
-		fill:var(--text-faint);
+		fill: var(--calendar-dot-active);
 	}
 	.active .task {
 		stroke:var(--text-faint);
