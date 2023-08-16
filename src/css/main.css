@@ -2073,8 +2073,6 @@ https://github.com/sponsors/kepano
 .list-cards.markdown-preview-view .list-collapse-indicator, .list-cards.markdown-preview-view.markdown-rendered.show-indentation-guide li > ul::before {
   display: none; }
 .list-cards.markdown-preview-view div > ul {
-  --link-decoration: none;
-  --link-external-decoration: none;
   display: grid;
   gap: 0.75rem;
   grid-template-columns: var(--cards-columns);
@@ -2083,26 +2081,24 @@ https://github.com/sponsors/kepano
   .list-cards.markdown-preview-view div > ul > li {
     background-color: var(--cards-background);
     padding: calc(var(--cards-padding)/2);
-    display: flex;
     border-radius: var(--radius-s);
     border: var(--cards-border-width) solid var(--background-modifier-border);
     overflow: hidden; }
-    .list-cards.markdown-preview-view div > ul > li:has(ul) {
-      flex-direction: column;
-      gap: 0.25rem; }
-    .list-cards.markdown-preview-view div > ul > li:has(ul) a {
-      flex-grow: 0; }
   .list-cards.markdown-preview-view div > ul .image-embed {
     padding: 0;
-    display: block; }
+    display: block;
+    background-color: var(--background-secondary);
+    border-radius: var(--image-radius); }
+    .list-cards.markdown-preview-view div > ul .image-embed img {
+      aspect-ratio: var(--cards-aspect-ratio);
+      object-fit: var(--cards-image-fit);
+      max-height: var(--cards-image-height);
+      background-color: var(--background-secondary);
+      vertical-align: bottom; }
 .list-cards.markdown-preview-view div > ul > li > a {
-  font-weight: var(--bold-weight);
-  flex-grow: 1;
-  background: none;
-  padding: calc(var(--cards-padding)/3) 0;
-  margin-top: calc(var(--cards-padding)/-3); }
-  .list-cards.markdown-preview-view div > ul > li > a ~ ul {
-    margin: calc(var(--cards-padding)/-1) 0 calc(var(--cards-padding)/-2); }
+  --link-decoration: none;
+  --link-external-decoration: none;
+  font-weight: var(--bold-weight); }
 .list-cards.markdown-preview-view div ul > li:hover {
   border-color: var(--background-modifier-border-hover); }
 .list-cards.markdown-preview-view div ul ul {
@@ -2119,21 +2115,29 @@ https://github.com/sponsors/kepano
 
 /* ------------------- */
 /* Helper classes */
-.cards.cards-16-9 {
+.cards.cards-16-9,
+.list-cards.cards-16-9 {
   --cards-aspect-ratio: 16/9; }
-.cards.cards-1-1 {
+.cards.cards-1-1,
+.list-cards.cards-1-1 {
   --cards-aspect-ratio: 1/1; }
-.cards.cards-2-1 {
+.cards.cards-2-1,
+.list-cards.cards-2-1 {
   --cards-aspect-ratio: 2/1; }
-.cards.cards-2-3 {
+.cards.cards-2-3,
+.list-cards.cards-2-3 {
   --cards-aspect-ratio: 2/3; }
-.cards.cards-cols-1 {
+.cards.cards-cols-1,
+.list-cards.cards-cols-1 {
   --cards-columns: repeat(1, minmax(0, 1fr)); }
-.cards.cards-cols-2 {
+.cards.cards-cols-2,
+.list-cards.cards-cols-2 {
   --cards-columns: repeat(2, minmax(0, 1fr)); }
-.cards.cards-cover table.dataview tbody > tr > td img {
-  object-fit: cover; }
-.cards.cards-align-bottom table.dataview tbody > tr > td:last-child {
+.cards.cards-cover,
+.list-cards.cards-cover {
+  --cards-image-fit: cover; }
+.cards.cards-align-bottom table.dataview tbody > tr > td:last-child,
+.list-cards.cards-align-bottom table.dataview tbody > tr > td:last-child {
   align-items: flex-end;
   flex-grow: 1; }
 

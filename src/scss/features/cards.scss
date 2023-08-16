@@ -270,8 +270,6 @@ https://github.com/sponsors/kepano
 		display:none;
 	}
 	div > ul {
-		--link-decoration: none;
-		--link-external-decoration: none;
 		display: grid;
 		gap: 0.75rem;
 		grid-template-columns: var(--cards-columns);
@@ -281,34 +279,29 @@ https://github.com/sponsors/kepano
 		> li {
 			background-color: var(--cards-background);
 			padding: calc(var(--cards-padding)/2);
-			display: flex;
 			border-radius: var(--radius-s);
 			border: var(--cards-border-width) solid var(--background-modifier-border);
 			overflow: hidden;
 
-			&:has(ul) {
-				flex-direction: column;
-				gap: 0.25rem;
-			}
-			&:has(ul) a {
-				flex-grow: 0;
-			}
 		}
 		.image-embed {
 			padding: 0;
 			display: block;
+			background-color: var(--background-secondary);
+			border-radius: var(--image-radius);
+			img {
+				aspect-ratio: var(--cards-aspect-ratio);
+				object-fit: var(--cards-image-fit);
+				max-height: var(--cards-image-height);
+				background-color: var(--background-secondary);
+				vertical-align: bottom;
+			}
 		}
-
 	}
 	div > ul > li > a {
+		--link-decoration: none;
+		--link-external-decoration: none;
 		font-weight: var(--bold-weight);
-		flex-grow: 1;
-		background: none;
-		padding: calc(var(--cards-padding)/3) 0;
-		margin-top: calc(var(--cards-padding)/-3);
-		~ ul {
-			margin: calc(var(--cards-padding)/-1) 0 calc(var(--cards-padding)/-2);
-		}
 	}
 	div ul > li:hover {
 		border-color: var(--background-modifier-border-hover);
@@ -334,7 +327,8 @@ https://github.com/sponsors/kepano
 /* ------------------- */
 /* Helper classes */
 
-.cards {
+.cards,
+.list-cards {
 	&.cards-16-9 {
 		--cards-aspect-ratio: 16/9;
 	}
@@ -353,8 +347,8 @@ https://github.com/sponsors/kepano
 	&.cards-cols-2 {
 		--cards-columns: repeat(2, minmax(0, 1fr));
 	}
-	&.cards-cover table.dataview tbody > tr > td img {
-		object-fit: cover;
+	&.cards-cover {
+		--cards-image-fit: cover;
 	}
 	&.cards-align-bottom table.dataview tbody > tr > td:last-child {
 		align-items: flex-end;
