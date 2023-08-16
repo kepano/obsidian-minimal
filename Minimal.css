@@ -1907,7 +1907,7 @@ table.dataview {
 Cards snippet for Obsidian
 
 author: @kepano
-version: 2.0.0
+version: 3.0.0
 
 Support my work:
 https://github.com/sponsors/kepano
@@ -2109,6 +2109,57 @@ https://github.com/sponsors/kepano
 .cards table.dataview thead > tr > th:hover {
   color: var(--text-normal);
   background-color: var(--background-modifier-hover); }
+
+/* Card lists */
+.list-cards.markdown-preview-view .list-bullet,
+.list-cards.markdown-preview-view .list-collapse-indicator {
+  display: none; }
+.list-cards.markdown-preview-view div > ul {
+  --link-decoration: none;
+  --link-external-decoration: none;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: var(--cards-columns);
+  padding: 0; }
+.list-cards.markdown-preview-view.markdown-rendered.show-indentation-guide li > ul::before {
+  display: none; }
+.list-cards.markdown-preview-view div > ul > li {
+  background-color: var(--cards-background);
+  padding: calc(var(--cards-padding)/2);
+  display: flex;
+  border-radius: var(--radius-s);
+  border: var(--cards-border-width) solid var(--background-modifier-border);
+  overflow: hidden; }
+  .list-cards.markdown-preview-view div > ul > li:has(ul) {
+    flex-direction: column;
+    gap: 0.25rem; }
+  .list-cards.markdown-preview-view div > ul > li:has(ul) a {
+    flex-grow: 0; }
+.list-cards.markdown-preview-view div > ul .image-embed {
+  padding: 0;
+  display: block; }
+.list-cards.markdown-preview-view div > ul > li > a {
+  font-weight: var(--bold-weight);
+  flex-grow: 1;
+  background: none;
+  padding: calc(var(--cards-padding)/3) 0;
+  margin-top: calc(var(--cards-padding)/-3); }
+  .list-cards.markdown-preview-view div > ul > li > a ~ ul {
+    margin-top: calc(var(--cards-padding)/-1); }
+.list-cards.markdown-preview-view div ul > li:hover {
+  border-color: var(--background-modifier-border-hover); }
+.list-cards.markdown-preview-view div ul ul {
+  display: block;
+  width: 100%;
+  color: var(--text-muted);
+  font-size: var(--font-smallest);
+  line-height: var(--line-height-tight);
+  margin-top: calc(var(--cards-padding)/-4);
+  padding: calc(var(--cards-padding)/2) 0; }
+  .list-cards.markdown-preview-view div ul ul ul {
+    padding-bottom: calc(var(--cards-padding)/4); }
+  .list-cards.markdown-preview-view div ul ul > li {
+    display: block; }
 
 /* ------------------- */
 /* Helper classes */
