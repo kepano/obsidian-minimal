@@ -1029,7 +1029,7 @@ settings:
 		title: Image radius
 		description: Rounded corners for images
 		type: variable-number-slider
-		default: 0
+		default: 4
 		min: 0
 		max: 16
 		step: 1

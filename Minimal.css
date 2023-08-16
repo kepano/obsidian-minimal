@@ -112,7 +112,7 @@ body {
   --top-left-padding-y:0px;
   /* Image opacity in dark mode */
   --image-muted:0.7;
-  --image-radius: 0;
+  --image-radius: 4px;
   /* Spacing */
   --heading-spacing: 2em;
   --p-spacing: 1.75rem;
@@ -7399,7 +7399,7 @@ settings:
 		title: Image radius
 		description: Rounded corners for images
 		type: variable-number-slider
-		default: 0
+		default: 4
 		min: 0
 		max: 16
 		step: 1
