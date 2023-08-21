@@ -1432,7 +1432,7 @@ settings:
 		title: Hide properties heading
 		description: Hide "Properties" heading above properties
 		type: class-toggle
-		default: true
+		default: false
 	-
 		id: metadata-add-property-off
 		title: Hide "Add property" button
