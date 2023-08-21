@@ -802,7 +802,7 @@ body {
 .markdown-source-view .metadata-container {
   transform: translateX(-4px); }
 
-body:not(.metadata-heading-on) .metadata-properties-heading {
+body.metadata-heading-off .metadata-properties-heading {
   display: none; }
 
 .metadata-add-property-off .mod-root .metadata-add-button {
@@ -7746,11 +7746,11 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: metadata-heading-on
-		title: Show properties heading
-		description: Display "Properties" heading above properties
+		id: metadata-heading-off
+		title: Hide properties heading
+		description: Hide "Properties" heading above properties
 		type: class-toggle
-		default: false
+		default: true
 	-
 		id: metadata-add-property-off
 		title: Hide "Add property" button

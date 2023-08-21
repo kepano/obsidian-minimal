@@ -759,7 +759,7 @@ body {
 .markdown-source-view .metadata-container {
   transform: translateX(-4px); }
 
-body:not(.metadata-heading-on) .metadata-properties-heading {
+body.metadata-heading-off .metadata-properties-heading {
   display: none; }
 
 .metadata-add-property-off .mod-root .metadata-add-button {

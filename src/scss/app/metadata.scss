@@ -21,7 +21,7 @@
 	transform: translateX(-4px);
 }
 
-body:not(.metadata-heading-on) {
+body.metadata-heading-off {
 	.metadata-properties-heading {
 		display: none;
 	}
