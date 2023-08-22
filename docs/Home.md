@@ -34,10 +34,10 @@ Support development on [Buy me a coffee](https://www.buymeacoffee.com/kepano) an
 1. Go to `Community Plugins` and turn off `Safe mode`
 2. Search for **Minimal Theme Settings** and click `Install`, then `Enable`
 
-### 3. Install Style Settings plugin for even more customization
+### 3. Install optional related plugins
 
-[Open plugin in Obsidian](obsidian://show-plugin?id=obsidian-style-settings) or look for **Style Settings** in Community Plugins. 
-
+- [[Style Settings]] allows you to create custom [[Color schemes]] and tweak Minimal with more fine-grained control.
+- [[Hider]] hides UI elements such as window frame, scrollbars, tooltips, etc.
 # Screenshots
 
 Minimal offers multiple options for [[background contrast]] including a true black option ideal for OLED devices. This feature also supports popular [[color schemes]] such as Solarized, Nord, and Gruvbox.
@@ -55,14 +55,6 @@ Combining [[focus mode]] with [[image grids]] and [[block width]] options allows
 Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, and more.
 
 ![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-plugins.png)
-
-# Recommended plugins
-
-To customize Minimal, install the following plugins:
-
-- [[Minimal Theme Settings]] allows you to customize [[color schemes]], fonts, [[Hotkeys]], and theme features. This plugin is highly recommended for all users of Minimal
-- [[Hider]] hides Obsidian UI elements such as window frame, scrollbars, tooltips, etc.
-- [[Style Settings]] allows you to create custom [[Color schemes]]
 
 # App-level features
 
