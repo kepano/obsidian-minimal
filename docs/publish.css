@@ -1,0 +1,140 @@
+/* ---------------------------------------------------------------------------
+
+Minimal Publish 0.1.0
+Copyright (c) 2020-2022 Stephan Ango (@kepano)
+
+*/
+/* Adjust the following variables */
+
+body {
+  /* Fonts */
+  --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --font-monospace:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
+  --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+  /* Font sizes */
+  --font-normal:16px;
+  --font-small:13px;
+  --font-smaller:11px;
+  --font-smallest:10px;
+  --font-inputs:13px;
+
+  /* Font weights */
+  --normal-weight:400;
+  --bold-weight:600;
+  --link-weight:inherit;
+
+  /* Headings */
+  --title-size:1.1em;
+  --title-weight:600;
+
+  /* Headings */
+  --h1:1.25em;
+  --h2:1.1em;
+  --h3:1.05em;
+  --h4:1em;
+  --h5:0.85em;
+  --h6:0.85em;
+
+  --h1-weight:600;
+  --h2-weight:600;
+  --h3-weight:600;
+  --h4-weight:500;
+  --h5-weight:500;
+  --h6-weight:400;
+
+  --h1-variant:normal;
+  --h2-variant:normal;
+  --h3-variant:normal;
+  --h4-variant:small-caps;
+  --h5-variant:small-caps;
+  --h6-variant:small-caps;
+
+  --h1-style:normal;
+  --h2-style:normal;
+  --h3-style:normal;
+  --h4-style:normal;
+  --h5-style:normal;
+  --h6-style:normal;
+
+  /* Blockquotes */
+  --blockquote-style:normal;
+
+  /* Line widths */
+  --line-width:40rem;    /* Maximum characters per line */
+  --line-height:1.5;
+  --max-width:90%;       /* Amount of padding around the text, use 90% for narrower padding */
+
+  --icon-muted:0.5;
+  --border-width:1px;
+
+  --folding-offset:16px;
+  --nested-padding:30px; /* Quotes and transclusions */
+
+  --list-padding:2em;    /* List padding */
+  --list-spacing:0.075em;  /* Space between list items */
+
+  --radius-s:2px;
+  --radius-m:5px;
+  --radius-l:10px;
+  --radius-xl:16px;
+
+  --input-height:32px;
+  --header-height:51px;
+
+  --mobile-left-sidebar-width:280pt;
+  --mobile-right-sidebar-width:240pt;
+
+}
+/* Color scheme */
+.theme-light,
+.theme-dark {
+  --red:#d04255;
+  --yellow:#e5b567;
+  --green:#a8c373;
+  --orange:#e57e43;
+  --cyan:#73bbb2;
+  --blue:#6c99bb;
+  --purple:#9e86c8;
+  --pink:#b05279;
+}
+
+.theme-light {
+  --bg1:#FFF;
+  --bg2:#F5F5F5;
+  --bg3:#E5E5E5;
+
+  --ui1:#E6E6E6;
+  --ui2:#D6D6D6;
+  --ui3:#C2C2C2;
+
+  --tx1:#0F0F0F;
+  --tx2:#828282;
+  --tx3:#B5B5B5;
+
+  --ax1:#6A8695;
+  --ax2:#556B77;
+  --ax3:#889EAA;
+
+  --hl1:hsla(201,50%,40%,30%);
+}
+.theme-dark {
+  --bg1:#262626;
+  --bg2:#212121;
+  --bg3:hsla(0,0,55%,0.12);
+
+  --ui1:#333333;
+  --ui2:#3B3B3B;
+  --ui3:#595959;
+
+  --tx1:#D1D1D1;
+  --tx2:#999999;
+  --tx3:#595959;
+
+  --ax1:#889EAA;
+  --ax2:#ACBBC3;
+  --ax3:#67808E;
+
+  --hl1:hsla(201,70%,40%,30%);
+}
+.theme-light{--mono100:black;--mono0:white}.theme-dark{--mono100:white;--mono0:black}.theme-dark,.theme-light{--h1-color:var(--text-normal);--h2-color:var(--text-normal);--h3-color:var(--text-normal);--h4-color:var(--text-normal);--h5-color:var(--text-normal);--h6-color:var(--text-muted)}.published-container{--sidebar-left-background:var(--bg2);--outline-heading-color-active:var(--tx1)}.theme-dark,.theme-light{--text-normal:var(--tx1);--text-bold:var(--tx1);--text-italic:var(--tx1);--text-muted:var(--tx2);--text-faint:var(--tx3);--title-color:var(--tx1);--title-color-inactive:var(--tx2);--text-code:var(--tx4);--text-error:var(--red);--text-blockquote:var(--tx2);--text-accent:var(--ax1);--text-accent-hover:var(--ax2);--text-on-accent:white;--text-selection:var(--hl1);--background-primary:var(--bg1);--background-primary-alt:var(--bg2);--background-secondary:var(--bg2);--background-secondary-alt:var(--bg1);--background-tertiary:var(--bg3);--background-table-rows:var(--bg2);--background-modifier-form-field:var(--bg1);--background-modifier-form-field-highlighted:var(--bg1);--interactive-hover:var(--ui1);--interactive-accent:var(--ax3);--interactive-accent-hover:var(--ax3);--background-modifier-accent:var(--ax3);--background-modifier-border:var(--ui1);--background-modifier-border-hover:var(--ui2);--background-modifier-border-focus:var(--ui3);--background-modifier-success:var(--green);--background-divider:var(--ui1);--quote-opening-modifier:var(--ui2);--modal-border:var(--ui2);--icon-color:var(--tx2);--icon-color-hover:var(--tx2);--icon-color-active:var(--tx1);--icon-hex:var(--mono0)}.theme-light{--interactive-normal:var(--bg1);--interactive-accent-rgb:220,220,220;--text-highlight-bg:rgba(255, 225, 0, 0.5);--text-highlight-bg-active:rgba(0, 0, 0, 0.1);--background-modifier-error:rgba(255,0,0,0.14);--background-modifier-error-hover:rgba(255,0,0,0.08);--shadow-color:rgba(0, 0, 0, 0.1);--btn-shadow-color:rgba(0, 0, 0, 0.05)}.theme-dark{--interactive-normal:var(--bg3);--interactive-accent-rgb:66,66,66;--text-highlight-bg:rgba(255, 177, 80, 0.3);--text-highlight-bg-active:rgba(255, 255, 255, 0.1);--background-modifier-error:rgba(255,20,20,0.12);--background-modifier-error-hover:rgba(255,20,20,0.18);--background-modifier-box-shadow:rgba(0, 0, 0, 0.3);--shadow-color:rgba(0, 0, 0, 0.3);--btn-shadow-color:rgba(0, 0, 0, 0.2)}.alt-title .page-header,.hide-title .page-header{display:none}.alt-title.markdown-preview-view div:nth-child(4) h1{font-weight:500!important;font-size:36px!important;letter-spacing:-.02em;margin-top:0;padding-bottom:0;border:none;line-height:1.1}.table-col-1-150.markdown-preview-view td:first-child{width:150px}.table-col-1-200.markdown-preview-view td:first-child{width:200px}.table-full table{width:100%}.h1-borders h1{border-bottom:1px solid var(--ui1);padding-bottom:.5em}img[src$="#outline"],span[src$="#outline"] img{border:1px solid var(--ui1)}img[src$="#interface"],span[src$="#interface"] img{border:1px solid var(--ui1);box-shadow:0 .5px .9px rgba(0,0,0,.021),0 1.3px 2.5px rgba(0,0,0,.03),0 3px 6px rgba(0,0,0,.039),0 10px 20px rgba(0,0,0,.06);margin-top:10px;margin-bottom:15px;border-radius:var(--radius-m)}.theme-dark img[src$="#invert"],.theme-dark span[src$="#invert"] img{filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen}.theme-light img[src$="#invertW"],.theme-light span[src$="#invertW"] img{filter:invert(1) hue-rotate(180deg)}img[src$="#circle"],span[src$="#circle"] img{border-radius:50%;aspect-ratio:1/1}.markdown-preview-view code{color:var(--tx4);font-size:.85em}.theme-light :not(pre)>code[class*=language-],.theme-light pre[class*=language-]{background-color:var(--bg2)}.theme-light code[class*=language-],.theme-light pre[class*=language-]{text-shadow:none}.markdown-preview-view,body,button,input{font-family:var(--text)}h1,h2,h3,h4,h5,strong{font-weight:var(--bold-weight)}h1,h2,h3,h4{letter-spacing:-.02em}.page-header{font-weight:500;letter-spacing:-.02em;line-height:1.1}.publish-article-heading:hover .clickable-icon{display:inline-flex;vertical-align:bottom}iframe,img{border-radius:var(--radius-l)}input[type=email],input[type=number],input[type=password],input[type=search],input[type=text]{border-color:var(--ui1);font-family:var(--font-ui);border-radius:5px}input[type=email]:hover,input[type=number]:hover,input[type=password]:hover,input[type=search]:hover,input[type=text]:hover{border-color:var(--ui2)}input[type=email]:active,input[type=email]:focus,input[type=number]:active,input[type=number]:focus,input[type=password]:active,input[type=password]:focus,input[type=search]:active,input[type=search]:focus,input[type=text]:active,input[type=text]:focus{border-color:var(--ui2);box-shadow:0 0 0 2px var(--ui2)}ol>li::marker,ul>li::marker{color:var(--tx3)}.markdown-preview-view table{margin-block-start:1em}.markdown-preview-view td,.markdown-preview-view th{padding:4px 10px}.markdown-preview-view td{font-size:calc(var(--font-normal) - 1px)}.markdown-preview-view th{font-weight:400;font-size:calc(var(--font-normal) - 1px);color:var(--text-muted);text-align:left;border-top:none}.markdown-preview-view td:last-child,.markdown-preview-view th:last-child{border-right:none}.markdown-preview-view td:first-child,.markdown-preview-view th:first-child{border-left:none;padding-left:0}.markdown-preview-view tr:last-child td{border-bottom:none}.markdown-preview-view .tag:not(.token){background-color:transparent;border:1px solid var(--ui1);color:var(--tx2);font-size:var(--font-small)}.tooltip{display:none}
