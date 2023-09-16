@@ -104,6 +104,7 @@ body {
   --input-height: 32px;
   --header-height: 40px;
   /* Metadata */
+  --metadata-label-width: 9rem;
   --metadata-label-font-size: var(--font-adaptive-small);
   --metadata-input-font-size: var(--font-adaptive-small);
   /* Mobile sidebars */
@@ -2181,8 +2182,7 @@ body {
   --cards-image-fit: cover; }
 .cards.cards-align-bottom table.dataview tbody > tr > td:last-child,
 .list-cards.cards-align-bottom table.dataview tbody > tr > td:last-child {
-  align-items: flex-end;
-  flex-grow: 1; }
+  margin-top: auto; }
 
 @media (max-width: 400pt) {
   .cards table.dataview tbody > tr > td:not(:first-child) {

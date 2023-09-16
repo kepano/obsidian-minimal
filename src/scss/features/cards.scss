@@ -351,8 +351,7 @@ body {
 		--cards-image-fit: cover;
 	}
 	&.cards-align-bottom table.dataview tbody > tr > td:last-child {
-		align-items: flex-end;
-		flex-grow: 1;
+		margin-top: auto;
 	}
 }
 
