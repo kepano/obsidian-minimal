@@ -68,14 +68,6 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 	}
 }
 
-/* Hide tab close buttons except active tab */
-.mod-root .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
-	display: none;
-}
-.mod-root .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
-	display: flex;
-}
-
 /* Safari/Firefox style */
 .tabs-modern {
 
