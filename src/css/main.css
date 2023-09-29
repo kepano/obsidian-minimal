@@ -1590,6 +1590,12 @@ body {
     .minimal-line-nums .workspace-leaf-content[data-type=markdown] .is-readable-line-width.is-rtl {
       --file-margins: 1rem var(--folding-offset) 0 0; }
 
+.minimal-line-nums .mod-right-split .markdown-preview-view,
+.minimal-line-nums .mod-right-split .markdown-source-view.mod-cm6 .cm-scroller,
+.minimal-line-nums .mod-left-split .markdown-preview-view,
+.minimal-line-nums .mod-left-split .markdown-source-view.mod-cm6 .cm-scroller {
+  --file-margins: var(--size-4-5) var(--size-4-5) var(--size-4-5) 48px; }
+
 /* Embeds ------------------------------------ */
 .markdown-preview-view .inline-embed {
   --max-width: 100%; }

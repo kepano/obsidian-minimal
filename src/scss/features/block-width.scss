@@ -53,11 +53,19 @@ body {
 .minimal-line-nums .workspace-leaf-content[data-type=markdown] {
 	--file-margins: var(--size-4-8) var(--size-4-8) var(--size-4-8) 48px;
 	&.is-rtl {
-			--file-margins: var(--size-4-8) 48px var(--size-4-8) var(--size-4-8);}
+		--file-margins: var(--size-4-8) 48px var(--size-4-8) var(--size-4-8);}
 	.is-readable-line-width {
 		--file-margins: 1rem 0 0 var(--folding-offset);
 		&.is-rtl {
 			--file-margins: 1rem var(--folding-offset) 0 0;}
+	}
+}
+
+.minimal-line-nums .mod-right-split,
+.minimal-line-nums .mod-left-split {
+	.markdown-preview-view,
+	.markdown-source-view.mod-cm6 .cm-scroller {
+		--file-margins: var(--size-4-5) var(--size-4-5) var(--size-4-5) 48px;
 	}
 }
 
