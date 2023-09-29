@@ -15,6 +15,8 @@ body:not(.zoom-off) .view-content {
 	}
 	.markdown-preview-view img[referrerpolicy='no-referrer']:active,
 	.image-embed:not(.canvas-node-content):active {
+		--container-img-width: 100%;
+		--container-img-max-width: 100%;
 		aspect-ratio:unset;
 		cursor:zoom-out;
 		display:block;
