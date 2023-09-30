@@ -451,6 +451,10 @@ body .excalidraw {
   --titlebar-text-color-focused: var(--tx1);
   --workspace-background-translucent: hsla(var(--base-h),var(--base-s), var(--base-l), 0.7); }
 
+.theme-dark .view-actions,
+.theme-light .view-actions {
+  --icon-color-active: var(--ax1); }
+
 .theme-light.minimal-light-contrast {
   --workspace-background-translucent: rgba(0,0,0,0.6); }
 
@@ -1595,6 +1599,10 @@ body {
 .minimal-line-nums .mod-left-split .markdown-preview-view,
 .minimal-line-nums .mod-left-split .markdown-source-view.mod-cm6 .cm-scroller {
   --file-margins: var(--size-4-5) var(--size-4-5) var(--size-4-5) 48px; }
+
+.view-content .reader-mode-content.is-readable-line-width .markdown-preview-sizer {
+  max-width: var(--max-width);
+  width: var(--line-width); }
 
 /* Embeds ------------------------------------ */
 .markdown-preview-view .inline-embed {

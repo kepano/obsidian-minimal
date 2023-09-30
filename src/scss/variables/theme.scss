@@ -102,6 +102,13 @@
 	--workspace-background-translucent:  hsla(var(--base-h),var(--base-s), var(--base-l), 0.7);
 }
 
+.theme-dark,
+.theme-light {
+	.view-actions {
+		--icon-color-active:             var(--ax1);	
+	}
+}
+
 .theme-light.minimal-light-contrast {
 	--workspace-background-translucent:  rgba(0,0,0,0.6);
 }

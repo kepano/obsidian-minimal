@@ -69,6 +69,11 @@ body {
 	}
 }
 
+.view-content .reader-mode-content.is-readable-line-width .markdown-preview-sizer {
+	max-width: var(--max-width);
+	width: var(--line-width);
+}
+
 /* Embeds ------------------------------------ */
 .markdown-preview-view .inline-embed {
 	--max-width: 100%;
