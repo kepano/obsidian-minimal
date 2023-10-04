@@ -300,7 +300,7 @@ Minimal is frequently updated to stay current with the latest version of Obsidia
 
 ### Minimal for Obsidian Publish
 
-Minimal for Obsidian Publish is a separate version of Minimal which follows the same design principles but is optimized for web. Licensing Minimal for web-based publishing requires a paid license. Licenses are not yet available, but you can test Minimal for Obsidian Publish on [the Minimal site](https://minimal.guide/Home).
+Minimal for Obsidian Publish is a separate version of Minimal which follows the same design principles but is optimized for web. It is also MIT licensed and available at [minimal.guide](https://minimal.guide/publish/download) or the [obsidian-minimal-publish](https://github.com/kepano/obsidian-minimal-publish) repo.
 
 ## Disclaimer
 

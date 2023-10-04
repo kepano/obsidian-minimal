@@ -1,3 +1,6 @@
+---
+permalink: publish/download
+---
 ## Overview
 
 Minimal Publish is a stripped-down version of Minimal for [Obsidian Publish](https://obsidian.md/publish) . It follows the same design principles but is optimized for web usage. The theme is designed to load fast for all of your visitors. [See GitHub repo.](https://github.com/kepano/obsidian-minimal-publish)
@@ -17,7 +20,7 @@ Minimal Publish is a stripped-down version of Minimal for [Obsidian Publish](htt
 
 ## Downloads
 
-Minimal is available in 13 color schemes. You can download your favorite one optimized for Obsidian Publish using the links below. The files are located in the `/color-schemes` folder of the GitHub repo.
+Minimal Publish is available in 13 color schemes. You can download your favorite one optimized for Obsidian Publish using the links below. The files are located in the `/color-schemes` folder of the GitHub repo.
 
 - [Default](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/publish.css)
 - [Atom](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/atom/publish.css) 
