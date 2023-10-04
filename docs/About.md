@@ -3,13 +3,14 @@ permalink: about
 ---
 ## About me
 
-My name is [Stephan Ango](https://stephanango.com/), you can find me on most platforms as **@kepano**. I am a designer, developer and entrepreneur located in Los Angeles.
+My name is [Steph Ango](https://stephango.com/), you may also know me as *kepano*.
 
-- [Personal site](https://stephanango.com)
+- [Personal site](https://stephango.com)
 - [GitHub](https://github.com/kepano)
 - [Twitter](https://twitter.com/kepano)
+- [Mastodon](https://mastodon.social/@kepano)
 - [Buy me a coffee](https://www.buymeacoffee.com/kepano)
 
 ## About this site
 
-This site is published using [Obsidian Publish](https://obsidian.md/publish) and Minimal theme.
+This site is published using [[Obsidian Publish]] and [[Minimal for Obsidian Publish]].

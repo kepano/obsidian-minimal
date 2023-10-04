@@ -14,15 +14,15 @@ Minimal Publish is a stripped-down version of Minimal for [Obsidian Publish](htt
 
 ## How to install
 
-1. [Download the theme here](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/publish.css) or go to [GitHub repo](https://github.com/kepano/obsidian-minimal-publish)
+1. Download the theme using one of the links below or go to the [GitHub repo](https://github.com/kepano/obsidian-minimal-publish)
 2. Copy the `publish.css` file into the root folder of your vault
 3. Publish the `publish.css` file
 
 ## Downloads
 
-Minimal Publish is available in 13 color schemes. You can download your favorite one optimized for Obsidian Publish using the links below. The files are located in the `/color-schemes` folder of the GitHub repo.
+Minimal Publish is available in 13 color schemes. You can download your favorite one optimized for Obsidian Publish using the links below. The files are located in the `/color-schemes` folder of the [GitHub repo](https://github.com/kepano/obsidian-minimal-publish).
 
-- [Default](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/publish.css)
+- [Default](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/publish.css) (used on this site)
 - [Atom](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/atom/publish.css) 
 - [Ayu](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/ayu/publish.css)
 - [Catppuccin](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/catppuccin/publish.css)

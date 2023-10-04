@@ -13,6 +13,4 @@ Minimal is frequently updated to stay current with the latest version of Obsidia
 
 # Minimal for Obsidian Publish
 
-Minimal for Obsidian Publish is a separate, upcoming version of Minimal which follows the same design principles but is optimized for web.
-
-Using Minimal for Desktop & Mobile on your Obsidian Publish site is strongly discouraged as it is not designed and not supported for that use case.
+[[Minimal for Obsidian Publish]] is a separate version of Minimal which follows the same design principles but is optimized for web. It is also licensed under MIT.
