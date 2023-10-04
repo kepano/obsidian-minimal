@@ -47,4 +47,4 @@ Use [[Helper classes]] to control table styles at the individual note level
 | `col-lines`     | Add borders between table columns                   |
 | `row-alt`       | Add striped background to alternating table rows    |
 | `col-alt`       | Add striped background to alternating table columns |
-| `row-highlight` | Highlight rows on hover                             | 
+| `row-hover` | Highlight rows on hover                             | 

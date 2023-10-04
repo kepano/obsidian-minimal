@@ -1,5 +1,34 @@
-# Overview
+## Overview
 
-Minimal for [Obsidian Publish](https://obsidian.md/publish) is a complete rewrite of the theme, following the same design principles but optimized for web usage. The theme is less than 16KB, designed to load super fast for all of your visitors.
+Minimal Publish is a stripped-down version of Minimal for [Obsidian Publish](https://obsidian.md/publish) . It follows the same design principles but is optimized for web usage. The theme is designed to load fast for all of your visitors. [See GitHub repo.](https://github.com/kepano/obsidian-minimal-publish)
 
-In addition, I have made customizability a priority. You can easily change fonts and colors using the variables at the top of the file.
+## Features
+
+- Adheres to [best practices](https://docs.obsidian.md/Themes/Obsidian+Publish+themes/Best+practices+for+Publish+themes) for Obsidian Publish themes
+- Much smaller file size **~16KB** compared to **~247KB** for app version, making it faster to download
+- Comes in several [[color schemes]]
+- Compatible with [[helper classes]] such as [[cards]], [[image grids]] and [[Tables|table styles]]
+
+## How to install
+
+1. [Download the theme here](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/publish.css) or go to [GitHub repo](https://github.com/kepano/obsidian-minimal-publish)
+2. Copy the `publish.css` file into the root folder of your vault
+3. Publish the `publish.css` file
+
+## Downloads
+
+Minimal is available in 13 color schemes. You can download your favorite one optimized for Obsidian Publish using the links below. The files are located in the `/color-schemes` folder of the GitHub repo.
+
+- [Default](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/publish.css)
+- [Atom](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/atom/publish.css) 
+- [Ayu](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/ayu/publish.css)
+- [Catppuccin](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/catppuccin/publish.css)
+- [Dracula](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/dracula/publish.css)
+- [Everforest](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/everforest/publish.css)
+- [Gruvbox](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/gruvbox/publish.css)
+- [macOS](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/macos/publish.css)
+- [Nord](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/nord/publish.css)
+- [Notion](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/notion/publish.css)
+- [Rosé Pine](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/rose-pine/publish.css)
+- [Solarized](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/solarized/publish.css)
+- [Things](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/things/publish.css)
