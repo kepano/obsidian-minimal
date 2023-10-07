@@ -28,6 +28,7 @@ Minimal Publish is available in 13 color schemes. You can download your favorite
 - [Catppuccin](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/catppuccin/publish.css)
 - [Dracula](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/dracula/publish.css)
 - [Everforest](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/everforest/publish.css)
+- [Flexoki](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/flexoki/publish.css)
 - [Gruvbox](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/gruvbox/publish.css)
 - [macOS](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/macos/publish.css)
 - [Nord](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/nord/publish.css)

@@ -40,7 +40,7 @@ Support development on [Buy me a coffee](https://www.buymeacoffee.com/kepano) an
 - [[Hider]] hides UI elements such as window frame, scrollbars, tooltips, etc.
 # Screenshots
 
-Minimal offers multiple options for [[background contrast]] including a true black option ideal for OLED devices. This feature also supports popular [[color schemes]] such as Solarized, Nord, and Gruvbox.
+Minimal offers multiple options for [[background contrast]] including a true black option ideal for OLED devices. This feature also supports popular [[color schemes]] such as Solarized, Flexoki, Nord, and Gruvbox.
 
 ![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-variants.png)
 
