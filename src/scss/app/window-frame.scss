@@ -8,7 +8,7 @@ body.window-title-off .titlebar-text {
 }
 
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame),
-.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame) {
+.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) {
 	--titlebar-background: var(--bg1);
 
 	&.is-focused {

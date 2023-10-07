@@ -1,0 +1,104 @@
+/*
+Flexoki
+MIT License
+Copyright (c) 2023 Steph Ango
+https://stephango.com/flexoki
+*/
+
+.theme-light.minimal-flexoki-light {
+	--color-red-rgb: 175, 48, 41;
+	--color-orange-rgb: 188, 82, 21;
+	--color-yellow-rgb: 173, 131, 1;
+	--color-green-rgb: 102, 128, 11;
+	--color-cyan-rgb: 36, 131, 123;
+	--color-blue-rgb: 32, 94, 166;
+	--color-purple-rgb: 94, 64, 157;
+	--color-pink-rgb: 160, 47, 111;
+
+	--color-red: #AF3029;
+	--color-orange: #BC5215;
+	--color-yellow: #AD8301;
+	--color-green: #66800B;
+	--color-cyan: #24837B;
+	--color-blue: #205EA6;
+	--color-purple: #5E409D;
+	--color-pink: #A02F6F;
+}
+.theme-dark.minimal-flexoki-dark {
+	--color-red-rgb: 209, 77, 65;
+	--color-orange-rgb: 218, 112, 44;
+	--color-yellow-rgb:208, 162, 21;
+	--color-green-rgb: 135, 154, 57;
+	--color-cyan-rgb: 58, 169, 159;
+	--color-blue-rgb: 67, 133, 190;
+	--color-purple-rgb: 139, 126, 200;
+	--color-pink-rgb: 206, 93, 151;
+
+	--color-red: #D14D41;
+	--color-orange: #DA702C;
+	--color-yellow: #D0A215;
+	--color-green: #879A39;
+	--color-cyan: #3AA99F;
+	--color-blue: #4385BE;
+	--color-purple: #8B7EC8;
+	--color-pink: #CE5D97;
+}
+.theme-light.minimal-flexoki-light {
+	--base-h: 360;
+	--base-s: 3%;
+	--base-l: 6%;
+
+	--accent-h: 175;
+	--accent-s: 57%;
+	--accent-l: 33%;
+
+	--bg1: #FFFCF0;
+	--bg2: #F2F0E5;
+	--bg3: rgba(16,15,15,0.05);
+
+	--ui1: #E6E4D9;
+	--ui2: #DAD8CE;
+	--ui3: #CECDC3;
+
+	--tx1: #100F0F;
+	--tx2: #6F6E69;
+	--tx3: #B7B5AC;
+
+	--hl1: rgba(187,220,206,0.3);
+	--hl2: rgba(247,209,61,0.3);
+}
+.theme-light.minimal-flexoki-light.minimal-light-tonal {
+	--bg2: #FFFCF0;
+}
+.theme-light.minimal-flexoki-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-flexoki-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-flexoki-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-flexoki-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-flexoki-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-dark.minimal-flexoki-dark {
+	--base-h: 360;
+	--base-s: 3%;
+	--base-l: 6%;
+
+	--accent-h: 175;
+	--accent-s: 49%;
+	--accent-l: 45%;
+
+	--bg1: #100F0F;
+	--bg2: #1C1B1A;
+	--bg3: rgba(254,252,240,0.05);
+
+	--ui1: #282726;
+	--ui2: #343331;
+	--ui3: #403E3C;
+
+	--tx1: #CECDC3;
+	--tx2: #878580;
+	--tx3: #575653;
+
+	--hl1: rgba(30,95,91,0.3);
+	--hl2: rgba(213,159,17,0.3);
+}
+.theme-dark.minimal-flexoki-dark.minimal-dark-black {
+	--ui1: #1C1B1A;
+}
