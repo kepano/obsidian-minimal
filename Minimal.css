@@ -1158,7 +1158,6 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 
 .tooltip.mod-left,
 .tooltip.mod-right {
-  transform: none;
   animation: none; }
 
 .tooltip.mod-error {
