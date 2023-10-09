@@ -5865,9 +5865,9 @@ https://stephango.com/flexoki
   --color-pink: #CE5D97; }
 
 .theme-light.minimal-flexoki-light {
-  --base-h: 360;
-  --base-s: 3%;
-  --base-l: 6%;
+  --base-h: 48;
+  --base-s: 100%;
+  --base-l: 97%;
   --accent-h: 175;
   --accent-s: 57%;
   --accent-l: 33%;
