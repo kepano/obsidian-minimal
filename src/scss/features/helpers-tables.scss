@@ -9,11 +9,13 @@
 }
 
 .row-hover {
-	--table-edge-cell-padding-first: 10px;
+	--table-edge-cell-padding-first: 8px;
+	--table-edge-cell-padding-last: 8px;
 }
 .row-alt {
 	--table-row-alt-background: var(--background-table-rows);
-	--table-edge-cell-padding-first: 10px;
+	--table-edge-cell-padding-first: 8px;
+	--table-edge-cell-padding-last: 8px;
 }
 .col-alt .markdown-rendered:not(.cards) {
 	--table-column-alt-background: var(--background-table-rows);
@@ -29,7 +31,9 @@
 	--table-column-first-border-width: var(--border-width);
 	--table-column-last-border-width:var(--border-width);
 	--table-row-last-border-width: var(--border-width);
-	--table-edge-cell-padding: 10px;
+	--table-edge-cell-padding: 8px;
+	--table-edge-cell-padding-first: 8px;
+	--table-edge-cell-padding-last: 8px;
 }
 
 .table-nowrap {
@@ -42,24 +46,30 @@
 }
 
 .table-numbers {
+	--table-numbers-padding-right: 0.5em;
+
 	table:not(.calendar) {
 		counter-reset:section;
 		> thead > tr > th:first-child::before {
-			content:" ";
-			padding-right:0.5em;
-			display:inline-block;
-			min-width:2em;
+			content: " ";
+			padding-right: var(--table-numbers-padding-right);
+			display: inline-block;
+			min-width: 2em;
 		}
-		> tbody > tr > td:first-child::before {
+		&:not(.table-editor) > tbody > tr > td:first-child::before,
+		&.table-editor > tbody > tr > td:first-child .table-cell-wrapper::before {
 			counter-increment: section;
 			content: counter(section) " ";
 			text-align: center;
-			padding-right: 0.5em;
+			padding-right: var(--table-numbers-padding-right);
 			display: inline-block;
 			min-width: 2em;
 			color: var(--text-faint);
 			font-variant-numeric: tabular-nums;
 		}
+	}
+	.table-editor {
+		--table-numbers-padding-right: 0;
 	}
 }
 

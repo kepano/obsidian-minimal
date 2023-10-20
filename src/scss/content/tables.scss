@@ -4,7 +4,7 @@ body {
 	--table-column-last-border-width: 0;
 	--table-row-last-border-width: 0;
 	--table-edge-cell-padding-first: 0;
-	--table-edge-cell-padding-last: 10px;
+	--table-edge-cell-padding-last: 0;
 	--table-cell-padding: 4px 10px;
 	--table-header-size: var(--table-text-size);
 }
@@ -24,9 +24,15 @@ body {
 		padding: var(--table-cell-padding);
 		&:first-child {
 			padding-left: var(--table-edge-cell-padding-first);
+			.table-cell-wrapper {
+				padding-left: 0;
+			}
 		}
 		&:last-child {
 			padding-right: var(--table-edge-cell-padding-last);
+			.table-cell-wrapper {
+				padding-right: 0;
+			}
 		}
 	}
 }
@@ -53,4 +59,12 @@ body {
 .cm-hmd-table-sep-dummy {
 	color: var(--text-faint);
 	font-weight: 400;
+}
+
+.table-cell-wrapper {
+	.cm-active {
+		font-size: var(--table-text-size);
+		line-height: var(--table-line-height);
+	}
+	display: inline-block;
 }

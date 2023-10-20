@@ -1,5 +1,4 @@
-/* Indentation Guides (Obsidian 0.14.0+) */
-
+/* Indentation Guides (Obsidian 0.14.0+)
 body {
   --ig-adjust-reading:-0.95em;
   --ig-adjust-edit: 2px;
@@ -11,7 +10,7 @@ body {
 .markdown-rendered.show-indentation-guide li > ol::before {
   left:var(--ig-adjust-reading);
 }
-/* Live Preview */
+
 .markdown-source-view.mod-cm6 .cm-indent::before {
   transform:translateX(var(--ig-adjust-edit));
 }
@@ -27,3 +26,5 @@ body {
   }
 
 }
+*/
+

@@ -21,10 +21,6 @@ body {
 	--adaptive-list-edit-offset: calc(var(--list-edit-offset)*-1);
 }
 
-/* Live Preview */
-.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line {
-	transform: translateX(var(--adaptive-list-edit-offset));
-}
 
 /* Space between list items */
 .markdown-source-view ol>li,
