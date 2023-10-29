@@ -62,9 +62,8 @@ body {
 }
 
 .table-cell-wrapper {
-	.cm-active {
+	.cm-line {
 		font-size: var(--table-text-size);
 		line-height: var(--table-line-height);
 	}
-	display: inline-block;
 }

@@ -50,22 +50,37 @@
 
 	table:not(.calendar) {
 		counter-reset:section;
-		> thead > tr > th:first-child::before {
-			content: " ";
-			padding-right: var(--table-numbers-padding-right);
-			display: inline-block;
-			min-width: 2em;
+		> thead > tr > th:first-child {
+			white-space: nowrap;
+			&::before {
+				content: " ";
+				padding-right: var(--table-numbers-padding-right);
+				display: inline-block;
+				min-width: 2em;
+			}
+			.table-cell-wrapper,
+			.markdown-source-view.mod-cm6 {
+				display: inline-block;
+				min-width: 10px;
+			}
 		}
-		&:not(.table-editor) > tbody > tr > td:first-child::before,
-		&.table-editor > tbody > tr > td:first-child .table-cell-wrapper::before {
-			counter-increment: section;
-			content: counter(section) " ";
-			text-align: center;
-			padding-right: var(--table-numbers-padding-right);
-			display: inline-block;
-			min-width: 2em;
-			color: var(--text-faint);
-			font-variant-numeric: tabular-nums;
+		&:not(.table-editor) > tbody > tr > td:first-child,
+		&.table-editor > tbody > tr > td:first-child .table-cell-wrapper {
+			white-space: nowrap;
+			&::before {
+				counter-increment: section;
+				content: counter(section) " ";
+				text-align: center;
+				padding-right: var(--table-numbers-padding-right);
+				display: inline-block;
+				min-width: 2em;
+				color: var(--text-faint);
+				font-variant-numeric: tabular-nums;
+			}
+			.markdown-source-view.mod-cm6 {
+				display: inline-block;
+				min-width: 10px;
+			}
 		}
 	}
 	.table-editor {

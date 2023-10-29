@@ -119,6 +119,10 @@ body {
   --p-spacing: 1.75rem;
   --border-width: 1px;
   --table-border-width: var(--border-width);
+  --table-selection: var(--text-selection);
+  --table-selection-border-color: var(--text-selection);
+  --table-selection-border-width: 1px;
+  --table-selection-border-radius: 0px;
   /* Readable line length off */
   --file-margins: var(--size-4-2) var(--size-4-12); }
 
@@ -1530,11 +1534,9 @@ body {
   color: var(--text-faint);
   font-weight: 400; }
 
-.table-cell-wrapper {
-  display: inline-block; }
-  .table-cell-wrapper .cm-active {
-    font-size: var(--table-text-size);
-    line-height: var(--table-line-height); }
+.table-cell-wrapper .cm-line {
+  font-size: var(--table-text-size);
+  line-height: var(--table-line-height); }
 
 /* Tags */
 body.minimal-unstyled-tags {
@@ -2868,20 +2870,31 @@ body.minimal-focus-mode.show-view-header .view-content {
   --table-numbers-padding-right: 0.5em; }
   .table-numbers table:not(.calendar) {
     counter-reset: section; }
-    .table-numbers table:not(.calendar) > thead > tr > th:first-child::before {
-      content: " ";
-      padding-right: var(--table-numbers-padding-right);
-      display: inline-block;
-      min-width: 2em; }
-    .table-numbers table:not(.calendar):not(.table-editor) > tbody > tr > td:first-child::before, .table-numbers table:not(.calendar).table-editor > tbody > tr > td:first-child .table-cell-wrapper::before {
-      counter-increment: section;
-      content: counter(section) " ";
-      text-align: center;
-      padding-right: var(--table-numbers-padding-right);
-      display: inline-block;
-      min-width: 2em;
-      color: var(--text-faint);
-      font-variant-numeric: tabular-nums; }
+    .table-numbers table:not(.calendar) > thead > tr > th:first-child {
+      white-space: nowrap; }
+      .table-numbers table:not(.calendar) > thead > tr > th:first-child::before {
+        content: " ";
+        padding-right: var(--table-numbers-padding-right);
+        display: inline-block;
+        min-width: 2em; }
+      .table-numbers table:not(.calendar) > thead > tr > th:first-child .table-cell-wrapper,
+      .table-numbers table:not(.calendar) > thead > tr > th:first-child .markdown-source-view.mod-cm6 {
+        display: inline-block;
+        min-width: 10px; }
+    .table-numbers table:not(.calendar):not(.table-editor) > tbody > tr > td:first-child, .table-numbers table:not(.calendar).table-editor > tbody > tr > td:first-child .table-cell-wrapper {
+      white-space: nowrap; }
+      .table-numbers table:not(.calendar):not(.table-editor) > tbody > tr > td:first-child::before, .table-numbers table:not(.calendar).table-editor > tbody > tr > td:first-child .table-cell-wrapper::before {
+        counter-increment: section;
+        content: counter(section) " ";
+        text-align: center;
+        padding-right: var(--table-numbers-padding-right);
+        display: inline-block;
+        min-width: 2em;
+        color: var(--text-faint);
+        font-variant-numeric: tabular-nums; }
+      .table-numbers table:not(.calendar):not(.table-editor) > tbody > tr > td:first-child .markdown-source-view.mod-cm6, .table-numbers table:not(.calendar).table-editor > tbody > tr > td:first-child .table-cell-wrapper .markdown-source-view.mod-cm6 {
+        display: inline-block;
+        min-width: 10px; }
   .table-numbers .table-editor {
     --table-numbers-padding-right: 0; }
 
@@ -6301,7 +6314,7 @@ https://github.com/rose-pine/rose-pine-theme
   --tx1: #575279;
   --tx2: #797593;
   --tx3: #9893a5;
-  --hl1: #EAE3E1; }
+  --hl1: rgba(191,180,181,0.35); }
 
 .theme-light.minimal-rose-pine-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-rose-pine-light.minimal-light-contrast.minimal-status-off .status-bar,
@@ -6324,7 +6337,7 @@ https://github.com/rose-pine/rose-pine-theme
   --tx1: #e0def4;
   --tx2: #908caa;
   --tx3: #6e6a86;
-  --hl1: #403d52; }
+  --hl1: rgba(126,121,155,0.35); }
 
 .theme-dark.minimal-rose-pine-dark.minimal-dark-black {
   --ui1: #21202e; }

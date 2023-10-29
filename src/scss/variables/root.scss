@@ -95,6 +95,11 @@ body {
 	--border-width: 1px;
 	--table-border-width: var(--border-width);
 
+	--table-selection: var(--text-selection);
+	--table-selection-border-color: var(--text-selection);
+	--table-selection-border-width: 1px;
+	--table-selection-border-radius: 0px;
+
 	/* Readable line length off */
 	--file-margins: var(--size-4-2) var(--size-4-12);
 }
