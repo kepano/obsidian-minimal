@@ -55,6 +55,7 @@ body {
 	/* Line widths */
 	--line-width: 40rem;
 	--line-height: 1.5;
+	--line-height-normal: var(--line-height);
 	--max-width: 88%;
 	--max-col-width: 18em;
 
@@ -97,7 +98,7 @@ body {
 
 	--table-selection: var(--text-selection);
 	--table-selection-border-color: var(--text-selection);
-	--table-selection-border-width: 1px;
+	--table-selection-border-width: 0px;
 	--table-selection-border-radius: 0px;
 
 	/* Readable line length off */

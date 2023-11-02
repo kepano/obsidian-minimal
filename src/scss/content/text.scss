@@ -20,16 +20,10 @@ body,
 .view-content > .cm-s-obsidian {
 	font-size: var(--font-adaptive-normal);
 	font-weight: var(--normal-weight);
-	line-height: var(--line-height);
 }
 
 .view-content > .markdown-source-view.mod-cm6 .cm-scroller,
 .view-content > .markdown-source-view,
 .view-content > .cm-s-obsidian {
-	line-height: var(--line-height);
 	font-family: var(--font-editor);
-}
-
-.cm-s-obsidian span.cm-formatting-task {
-	line-height:var(--line-height);
 }

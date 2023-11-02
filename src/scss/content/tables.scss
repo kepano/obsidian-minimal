@@ -13,6 +13,9 @@ body {
 .markdown-source-view.mod-cm6 table {
 	border-collapse: collapse; 
 }
+.markdown-rendered th {
+	--table-header-size: var(--table-text-size);
+}
 
 .markdown-source-view.mod-cm6,
 .markdown-preview-view {
@@ -59,11 +62,4 @@ body {
 .cm-hmd-table-sep-dummy {
 	color: var(--text-faint);
 	font-weight: 400;
-}
-
-.table-cell-wrapper {
-	.cm-line {
-		font-size: var(--table-text-size);
-		line-height: var(--table-line-height);
-	}
 }

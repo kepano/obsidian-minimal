@@ -47,6 +47,7 @@ body {
   /* Line widths */
   --line-width: 40rem;
   --line-height: 1.5;
+  --line-height-normal: var(--line-height);
   --max-width: 88%;
   --max-col-width: 18em;
   /* Icons */
@@ -78,7 +79,7 @@ body {
   --table-border-width: var(--border-width);
   --table-selection: var(--text-selection);
   --table-selection-border-color: var(--text-selection);
-  --table-selection-border-width: 1px;
+  --table-selection-border-width: 0px;
   --table-selection-border-radius: 0px;
   /* Readable line length off */
   --file-margins: var(--size-4-2) var(--size-4-12); }
@@ -1205,8 +1206,7 @@ body:not(.minimal-strike-lists) {
   line-height: 0; }
 
 .markdown-preview-view ul > li.task-list-item {
-  text-indent: 0;
-  line-height: var(--line-height); }
+  text-indent: 0; }
 
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
   margin-inline-start: -0.4em; }
@@ -1442,6 +1442,9 @@ body {
 .markdown-source-view.mod-cm6 table {
   border-collapse: collapse; }
 
+.markdown-rendered th {
+  --table-header-size: var(--table-text-size); }
+
 .markdown-source-view.mod-cm6 table,
 .markdown-preview-view table {
   border: var(--border-width) solid var(--border-color);
@@ -1491,10 +1494,6 @@ body {
   color: var(--text-faint);
   font-weight: 400; }
 
-.table-cell-wrapper .cm-line {
-  font-size: var(--table-text-size);
-  line-height: var(--table-line-height); }
-
 /* Tags */
 body.minimal-unstyled-tags {
   --tag-background: transparent;
@@ -1541,17 +1540,12 @@ body,
 .view-content > .markdown-source-view.mod-cm6.is-live-preview > .cm-scroller,
 .view-content > .cm-s-obsidian {
   font-size: var(--font-adaptive-normal);
-  font-weight: var(--normal-weight);
-  line-height: var(--line-height); }
+  font-weight: var(--normal-weight); }
 
 .view-content > .markdown-source-view.mod-cm6 .cm-scroller,
 .view-content > .markdown-source-view,
 .view-content > .cm-s-obsidian {
-  line-height: var(--line-height);
   font-family: var(--font-editor); }
-
-.cm-s-obsidian span.cm-formatting-task {
-  line-height: var(--line-height); }
 
 /* Minimal features */
 /* Active line highlight */
@@ -2835,7 +2829,7 @@ body.minimal-focus-mode.show-view-header .view-content {
         display: inline-block;
         min-width: 2em; }
       .table-numbers table:not(.calendar) > thead > tr > th:first-child .table-cell-wrapper,
-      .table-numbers table:not(.calendar) > thead > tr > th:first-child .markdown-source-view.mod-cm6 {
+      .table-numbers table:not(.calendar) > thead > tr > th:first-child .cm-s-obsidian {
         display: inline-block;
         min-width: 10px; }
     .table-numbers table:not(.calendar):not(.table-editor) > tbody > tr > td:first-child, .table-numbers table:not(.calendar).table-editor > tbody > tr > td:first-child .table-cell-wrapper {
@@ -2849,7 +2843,7 @@ body.minimal-focus-mode.show-view-header .view-content {
         min-width: 2em;
         color: var(--text-faint);
         font-variant-numeric: tabular-nums; }
-      .table-numbers table:not(.calendar):not(.table-editor) > tbody > tr > td:first-child .markdown-source-view.mod-cm6, .table-numbers table:not(.calendar).table-editor > tbody > tr > td:first-child .table-cell-wrapper .markdown-source-view.mod-cm6 {
+      .table-numbers table:not(.calendar):not(.table-editor) > tbody > tr > td:first-child .cm-s-obsidian, .table-numbers table:not(.calendar).table-editor > tbody > tr > td:first-child .table-cell-wrapper .cm-s-obsidian {
         display: inline-block;
         min-width: 10px; }
   .table-numbers .table-editor {
@@ -3067,6 +3061,8 @@ body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active 
   bottom: 0;
   position: absolute;
   opacity: 1; }
+body:not(.zoom-off) .view-content .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false]:has(.image-embed:not(.canvas-node-content):active) {
+  contain: unset !important; }
 
 /* MIT License | Copyright (c) Stephan Ango (@kepano) 
 
