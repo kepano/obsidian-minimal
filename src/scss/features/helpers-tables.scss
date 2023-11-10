@@ -98,8 +98,13 @@
 	}
 }
 
-.row-lines:not(.table-lines) {
+.row-lines:not(.cell-lines) {
 	--table-row-last-border-width: 0px;
+
+	table:not(.calendar) tbody > tr:not(:last-child) > td,
+	.table-view-table > tbody > tr:not(:last-child) > td {
+		border-bottom: var(--table-border-width) solid var(--table-border-color);
+	}
 }
 
 .col-lines {
