@@ -89,6 +89,8 @@
 }
 
 .row-lines-off {
+	--table-row-last-border-width: 0;
+
 	table:not(.calendar) tbody > tr > td,
 	.table-view-table > tbody > tr > td,
 	table:not(.calendar) tbody > tr:last-child > td {
@@ -96,14 +98,8 @@
 	}
 }
 
-.row-lines {
-	table:not(.calendar) tbody > tr > td,
-	.table-view-table > tbody > tr > td {
-		border-bottom: var(--table-border-width) solid var(--table-border-color);
-	}
-	table:not(.calendar) tbody > tr:last-child > td {
-		border-bottom:none;
-	}
+.row-lines:not(.table-lines) {
+	--table-row-last-border-width: 0px;
 }
 
 .col-lines {

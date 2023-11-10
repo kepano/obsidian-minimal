@@ -2892,16 +2892,15 @@ body.minimal-focus-mode.show-view-header .view-content {
   .table-numbers .table-editor {
     --table-numbers-padding-right: 0; }
 
-.row-lines-off table:not(.calendar) tbody > tr > td,
-.row-lines-off .table-view-table > tbody > tr > td,
-.row-lines-off table:not(.calendar) tbody > tr:last-child > td {
-  border-bottom: none; }
+.row-lines-off {
+  --table-row-last-border-width: 0; }
+  .row-lines-off table:not(.calendar) tbody > tr > td,
+  .row-lines-off .table-view-table > tbody > tr > td,
+  .row-lines-off table:not(.calendar) tbody > tr:last-child > td {
+    border-bottom: none; }
 
-.row-lines table:not(.calendar) tbody > tr > td,
-.row-lines .table-view-table > tbody > tr > td {
-  border-bottom: var(--table-border-width) solid var(--table-border-color); }
-.row-lines table:not(.calendar) tbody > tr:last-child > td {
-  border-bottom: none; }
+.row-lines:not(.table-lines) {
+  --table-row-last-border-width: 0px; }
 
 .col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
 .col-lines .table-view-table thead > tr > th:not(:last-child),
