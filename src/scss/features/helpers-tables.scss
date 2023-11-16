@@ -98,7 +98,7 @@
 	}
 }
 
-.row-lines:not(.cell-lines) {
+.row-lines:not(.table-lines) {
 	--table-row-last-border-width: 0px;
 
 	table:not(.calendar) tbody > tr:not(:last-child) > td,

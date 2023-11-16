@@ -90,11 +90,12 @@ body {
 */
 
 body {
-	--container-table-width: var(--line-width);
-	--container-table-max-width: var(--max-width);
+	--container-table-width: calc(var(--line-width) + 32px);
+	--container-table-max-width: calc(var(--max-width) + 32px);
 	--table-max-width: none;
 	--table-width: auto;
 	--table-margin: inherit;
+	--table-drag-padding: 16px 16px 0 16px;
 
 	--container-img-width: var(--line-width);
 	--container-img-max-width: var(--max-width);
@@ -179,10 +180,10 @@ table.dataview {
 	--table-max-width: 100%;
 	--table-width: 100%;}
 .table-wide {
-	--container-table-width: var(--line-width-wide);
+	--container-table-width: calc(var(--line-width-wide) + 32px);
 	--table-edge-cell-padding-first: 0px;}
 .table-max {
-	--container-table-width: var(--max-width);
+	--container-table-width: calc(var(--max-width) + 32px);
 	--table-edge-cell-padding-first: 0px;
 	--table-margin: 0;}
 .table-100 {
@@ -190,6 +191,8 @@ table.dataview {
 	--container-table-max-width: 100%;
 	--table-edge-cell-padding-first: 20px;
 	--table-margin: 0;
+	--table-drag-padding: 16px 0;
+
 	.dataview.list-view-ul {
 		max-width: var(--max-width);
 		width: var(--line-width);

@@ -27,6 +27,10 @@
 	--hider-ribbon-display: flex;
 }
 
+.hider-vault .nav-folder.mod-root > .nav-folder-title {
+	height: 4px;
+}
+
 .hider-ribbon {
 
 	.workspace-ribbon-collapse-btn {

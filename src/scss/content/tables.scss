@@ -40,6 +40,11 @@ body {
 	}
 }
 
+.cm-embed-block.cm-table-widget.markdown-rendered {
+	margin-top: -8px !important;
+	padding: var(--table-drag-padding);
+}
+
 /* Override Sortable plugin */
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,

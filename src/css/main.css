@@ -78,7 +78,7 @@ body {
   --border-width: 1px;
   --table-border-width: var(--border-width);
   --table-selection: var(--text-selection);
-  --table-selection-border-color: var(--text-selection);
+  --table-selection-border-color: var(--text-accent);
   --table-selection-border-width: 0px;
   --table-selection-border-radius: 0px;
   /* Readable line length off */
@@ -1470,6 +1470,10 @@ body {
     .markdown-preview-view th:last-child .table-cell-wrapper {
       padding-right: 0; }
 
+.cm-embed-block.cm-table-widget.markdown-rendered {
+  margin-top: -8px !important;
+  padding: var(--table-drag-padding); }
+
 /* Override Sortable plugin */
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,
@@ -1632,11 +1636,12 @@ body {
    like `.table-100.markdown-source-view...`
 */
 body {
-  --container-table-width: var(--line-width);
-  --container-table-max-width: var(--max-width);
+  --container-table-width: calc(var(--line-width) + 32px);
+  --container-table-max-width: calc(var(--max-width) + 32px);
   --table-max-width: none;
   --table-width: auto;
   --table-margin: inherit;
+  --table-drag-padding: 16px 16px 0 16px;
   --container-img-width: var(--line-width);
   --container-img-max-width: var(--max-width);
   --img-max-width: 100%;
@@ -1706,11 +1711,11 @@ table.dataview {
   --table-width: 100%; }
 
 .table-wide {
-  --container-table-width: var(--line-width-wide);
+  --container-table-width: calc(var(--line-width-wide) + 32px);
   --table-edge-cell-padding-first: 0px; }
 
 .table-max {
-  --container-table-width: var(--max-width);
+  --container-table-width: calc(var(--max-width) + 32px);
   --table-edge-cell-padding-first: 0px;
   --table-margin: 0; }
 
@@ -1718,7 +1723,8 @@ table.dataview {
   --container-table-width: 100%;
   --container-table-max-width: 100%;
   --table-edge-cell-padding-first: 20px;
-  --table-margin: 0; }
+  --table-margin: 0;
+  --table-drag-padding: 16px 0; }
   .table-100 .dataview.list-view-ul {
     max-width: var(--max-width);
     width: var(--line-width);
@@ -2856,10 +2862,10 @@ body.minimal-focus-mode.show-view-header .view-content {
   .row-lines-off table:not(.calendar) tbody > tr:last-child > td {
     border-bottom: none; }
 
-.row-lines:not(.cell-lines) {
+.row-lines:not(.table-lines) {
   --table-row-last-border-width: 0px; }
-  .row-lines:not(.cell-lines) table:not(.calendar) tbody > tr:not(:last-child) > td,
-  .row-lines:not(.cell-lines) .table-view-table > tbody > tr:not(:last-child) > td {
+  .row-lines:not(.table-lines) table:not(.calendar) tbody > tr:not(:last-child) > td,
+  .row-lines:not(.table-lines) .table-view-table > tbody > tr:not(:last-child) > td {
     border-bottom: var(--table-border-width) solid var(--table-border-color); }
 
 .col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
@@ -4301,6 +4307,9 @@ div[data-type="git-view"] .search-input-clear-button {
 
 .ribbon-bottom-left-hover:not(.is-mobile) {
   --hider-ribbon-display: flex; }
+
+.hider-vault .nav-folder.mod-root > .nav-folder-title {
+  height: 4px; }
 
 .hider-ribbon .workspace-ribbon-collapse-btn {
   display: none; }
