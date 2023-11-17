@@ -75,7 +75,7 @@
 		pointer-events:none;
 	}
 	/* Orange — Wide line width*/
-	&.minimal-readable .mod-root .view-header:before {
+	&.minimal-readable .mod-root .view-content:before {
 		display:flex;
 		align-items:flex-end;
 		content:"\00a0wide\00a0";

@@ -90,12 +90,15 @@ body {
 */
 
 body {
-	--container-table-width: calc(var(--line-width) + 32px);
-	--container-table-max-width: calc(var(--max-width) + 32px);
+	--container-table-width: var(--line-width);
+	--container-table-max-width: var(--max-width);
 	--table-max-width: none;
 	--table-width: auto;
 	--table-margin: inherit;
 	--table-drag-padding: 16px 16px 0 16px;
+	--container-table-margin: calc(var(--content-margin-start) - 16px);
+
+	--container-dataview-table-width: var(--line-width);
 
 	--container-img-width: var(--line-width);
 	--container-img-max-width: var(--max-width);
@@ -125,6 +128,7 @@ body {
 	.wide {
 		--line-width: var(--line-width-wide);
 		--container-table-width: var(--line-width-wide);
+		--container-dataview-table-width: var(--line-width-wide);
 		--container-img-width: var(--line-width-wide);
 		--container-iframe-width: var(--line-width-wide);
 		--container-map-width: var(--line-width-wide);
@@ -133,6 +137,7 @@ body {
 	.max {
 		--line-width: var(--max-width);
 		--container-table-width: var(--max-width);
+		--container-dataview-table-width: var(--max-width);
 		--container-img-width: var(--max-width);
 		--container-iframe-width: var(--max-width);
 		--container-map-width: var(--max-width);
@@ -152,9 +157,14 @@ table.dataview {
 .maximize-tables-auto {
 	--container-table-max-width: 100%;
 	--container-table-width: 100%;
+	--container-dataview-table-width: 100%;
+	--container-table-margin: 0;
+	--table-drag-padding: 16px 0 0;
+
 	--table-max-width: 100%;
 	--table-margin: var(--content-margin-start) auto;
 	--table-width: auto;
+
 	.cards {
 		--container-table-max-width: var(--max-width);
 	}
@@ -166,11 +176,15 @@ table.dataview {
 .maximize-tables {
 	--container-table-max-width: 100%;
 	--container-table-width: 100%;
+	--container-table-margin: 0;
+	--table-drag-padding: 16px 0 0;
+
 	--table-min-width: min(var(--line-width), var(--max-width));
 	--table-max-width: 100%;
 	--table-margin: auto;
 	--table-width: auto;
-	--table-edge-cell-padding-first: 10px;
+	--table-edge-cell-padding-first: 8px;
+	--table-edge-cell-padding-last: 8px;
 }
 
 
@@ -181,15 +195,23 @@ table.dataview {
 	--table-width: 100%;}
 .table-wide {
 	--container-table-width: calc(var(--line-width-wide) + 32px);
+	--container-dataview-table-width: var(--line-width-wide);
+	--container-table-margin: auto;
 	--table-edge-cell-padding-first: 0px;}
 .table-max {
 	--container-table-width: calc(var(--max-width) + 32px);
+	--container-table-max-width: calc(var(--max-width) + 32px);
+	--container-dataview-table-width: var(--max-width);
+	--container-table-margin: auto;
 	--table-edge-cell-padding-first: 0px;
 	--table-margin: 0;}
 .table-100 {
 	--container-table-width: 100%;
+	--container-dataview-table-width: 100%;
 	--container-table-max-width: 100%;
-	--table-edge-cell-padding-first: 20px;
+	--container-table-margin: auto;
+	--table-edge-cell-padding-first: 16px;
+	--table-edge-cell-padding-last: 16px;
 	--table-margin: 0;
 	--table-drag-padding: 16px 0;
 
@@ -271,10 +293,14 @@ table.dataview {
 
 	/* Tables */
 	.cm-table-widget,
-	> div:has(>table),
+	> div:has(>table) {
+		width: var(--container-table-width);
+		max-width:var(--container-table-max-width);
+		margin-inline: var(--container-table-margin) !important;
+	}
 	> div:has(>.block-language-dataview>table),
 	> div:has(>.block-language-dataviewjs) {
-		width: var(--container-table-width);
+		width: var(--container-dataview-table-width);
 		max-width:var(--container-table-max-width);
 	}
 	table {

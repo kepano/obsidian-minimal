@@ -100,6 +100,8 @@ body {
 	--table-selection-border-color: var(--text-accent);
 	--table-selection-border-width: 0px;
 	--table-selection-border-radius: 0px;
+	--table-drag-handle-background-active: var(--text-selection);
+	--table-drag-handle-color-active: var(--text-accent);
 
 	/* Readable line length off */
 	--file-margins: var(--size-4-2) var(--size-4-12);
