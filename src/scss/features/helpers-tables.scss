@@ -25,10 +25,6 @@
 	font-variant-numeric: tabular-nums;
 }
 
-.table-100 {
-
-}
-
 .table-lines {
 	--table-border-width: var(--border-width);
 	--table-header-border-width: var(--border-width);
@@ -102,7 +98,7 @@
 	}
 }
 
-.row-lines:not(.table-lines) {
+.row-lines:not(.table-lines) .markdown-source-view:not(.cards) {
 	--table-row-last-border-width: 0px;
 
 	table:not(.calendar) tbody > tr:not(:last-child) > td,

@@ -2019,7 +2019,8 @@ body {
     border-radius: 6px;
     overflow: hidden;
     transition: box-shadow 0.15s linear;
-    max-width: var(--cards-max-width); }
+    max-width: var(--cards-max-width);
+    height: auto; }
   .cards table.dataview > tbody > tr:hover {
     border: var(--cards-border-width) solid var(--background-modifier-border-hover);
     box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
@@ -2079,17 +2080,17 @@ body {
 /*
 .cards,
 .markdown-source-view.mod-cm6.cards {
-	.dataview.table-view-table > tbody > tr > td,
-	table.dataview tbody > tr > td {
-		border-bottom: none;
-		padding: 0!important;
-		line-height: 1.2;
-		width: calc(100% - var(--cards-padding));
-		margin: 0 auto;
-		overflow: visible !important;
-		max-width: 100%;
-		display: flex;
-	}
+.dataview.table-view-table > tbody > tr > td,
+table.dataview tbody > tr > td {
+	border-bottom: none;
+	padding: 0!important;
+	line-height: 1.2;
+	width: calc(100% - var(--cards-padding));
+	margin: 0 auto;
+	overflow: visible !important;
+	max-width: 100%;
+	display: flex;
+}
 }*/
 .links-int-on .cards table {
   --link-decoration: none; }
@@ -2934,10 +2935,10 @@ body.minimal-focus-mode.show-view-header .view-content {
   .row-lines-off table:not(.calendar) tbody > tr:last-child > td {
     border-bottom: none; }
 
-.row-lines:not(.table-lines) {
+.row-lines:not(.table-lines) .markdown-source-view:not(.cards) {
   --table-row-last-border-width: 0px; }
-  .row-lines:not(.table-lines) table:not(.calendar) tbody > tr:not(:last-child) > td,
-  .row-lines:not(.table-lines) .table-view-table > tbody > tr:not(:last-child) > td {
+  .row-lines:not(.table-lines) .markdown-source-view:not(.cards) table:not(.calendar) tbody > tr:not(:last-child) > td,
+  .row-lines:not(.table-lines) .markdown-source-view:not(.cards) .table-view-table > tbody > tr:not(:last-child) > td {
     border-bottom: var(--table-border-width) solid var(--table-border-color); }
 
 .col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
