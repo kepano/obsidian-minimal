@@ -98,7 +98,8 @@
 	}
 }
 
-.row-lines:not(.table-lines) .markdown-source-view:not(.cards) {
+.row-lines:not(.table-lines) .markdown-source-view:not(.cards),
+.row-lines:not(.table-lines) .markdown-preview-view:not(.cards) {
 	--table-row-last-border-width: 0px;
 
 	table:not(.calendar) tbody > tr:not(:last-child) > td,

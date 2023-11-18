@@ -2892,10 +2892,13 @@ body.minimal-focus-mode.show-view-header .view-content {
   .row-lines-off table:not(.calendar) tbody > tr:last-child > td {
     border-bottom: none; }
 
-.row-lines:not(.table-lines) .markdown-source-view:not(.cards) {
+.row-lines:not(.table-lines) .markdown-source-view:not(.cards),
+.row-lines:not(.table-lines) .markdown-preview-view:not(.cards) {
   --table-row-last-border-width: 0px; }
   .row-lines:not(.table-lines) .markdown-source-view:not(.cards) table:not(.calendar) tbody > tr:not(:last-child) > td,
-  .row-lines:not(.table-lines) .markdown-source-view:not(.cards) .table-view-table > tbody > tr:not(:last-child) > td {
+  .row-lines:not(.table-lines) .markdown-source-view:not(.cards) .table-view-table > tbody > tr:not(:last-child) > td,
+  .row-lines:not(.table-lines) .markdown-preview-view:not(.cards) table:not(.calendar) tbody > tr:not(:last-child) > td,
+  .row-lines:not(.table-lines) .markdown-preview-view:not(.cards) .table-view-table > tbody > tr:not(:last-child) > td {
     border-bottom: var(--table-border-width) solid var(--table-border-color); }
 
 .col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
