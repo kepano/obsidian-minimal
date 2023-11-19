@@ -643,7 +643,7 @@ body {
     z-index: 999;
     position: fixed;
     pointer-events: none; }
-  .minimal-dev-block-width.minimal-readable .mod-root .view-content:before {
+  .minimal-dev-block-width.minimal-readable .mod-root .workspace-leaf-content:before {
     display: flex;
     align-items: flex-end;
     content: "\00a0wide\00a0";
@@ -1686,14 +1686,18 @@ body {
    It means we don't have to write long specific selectors
    like `.table-100.markdown-source-view...`
 */
+.markdown-source-view {
+  --table-drag-space: 16px; }
+
 body {
-  --container-table-width: var(--line-width);
   --container-table-max-width: var(--max-width);
   --table-max-width: none;
   --table-width: auto;
   --table-margin: inherit;
-  --table-drag-padding: 16px 16px 0 16px;
-  --container-table-margin: calc(var(--content-margin-start) - 16px);
+  --table-drag-space: 0px;
+  --table-drag-padding: var(--table-drag-space) var(--table-drag-space) 0 var(--table-drag-space);
+  --container-table-margin: calc(var(--content-margin-start) - var(--table-drag-space));
+  --container-table-width: calc(var(--line-width) + var(--table-drag-space)*2);
   --container-dataview-table-width: var(--line-width);
   --container-img-width: var(--line-width);
   --container-img-max-width: var(--max-width);
@@ -1772,13 +1776,13 @@ table.dataview {
   --table-width: 100%; }
 
 .table-wide {
-  --container-table-width: calc(var(--line-width-wide) + 32px);
+  --container-table-width: var(--line-width-wide);
   --container-dataview-table-width: var(--line-width-wide);
   --container-table-margin: auto;
   --table-edge-cell-padding-first: 0px; }
 
 .table-max {
-  --container-table-width: calc(var(--max-width) + 32px);
+  --container-table-width: var(--max-width);
   --container-table-max-width: calc(var(--max-width) + 32px);
   --container-dataview-table-width: var(--max-width);
   --container-table-margin: auto;
