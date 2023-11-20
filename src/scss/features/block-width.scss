@@ -201,7 +201,8 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 .table-max,
 .table-100 {
 	--table-max-width: 100%;
-	--table-width: 100%;}
+	--table-width: 100%;
+}
 .table-wide {
 	--container-table-width: var(--line-width-wide);
 	--container-dataview-table-width: var(--line-width-wide);
@@ -209,7 +210,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 	--table-edge-cell-padding-first: 0px;}
 .table-max {
 	--container-table-width: var(--max-width);
-	--container-table-max-width: calc(var(--max-width) + 32px);
+	--container-table-max-width: calc(var(--max-width) + var(--table-drag-space)*2);
 	--container-dataview-table-width: var(--max-width);
 	--container-table-margin: auto;
 	--table-edge-cell-padding-first: 0px;

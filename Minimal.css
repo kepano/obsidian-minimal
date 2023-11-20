@@ -1523,6 +1523,7 @@ body {
   top: 0;
   left: 0 !important; }
 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
+  top: 0 !important;
   left: 0; }
 
 /* Override Sortable plugin */
@@ -1785,7 +1786,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
 
 .table-max {
   --container-table-width: var(--max-width);
-  --container-table-max-width: calc(var(--max-width) + 32px);
+  --container-table-max-width: calc(var(--max-width) + var(--table-drag-space)*2);
   --container-dataview-table-width: var(--max-width);
   --container-table-margin: auto;
   --table-edge-cell-padding-first: 0px;
