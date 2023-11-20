@@ -1686,18 +1686,11 @@ body {
    It means we don't have to write long specific selectors
    like `.table-100.markdown-source-view...`
 */
-.markdown-source-view {
-  --table-drag-space: 16px; }
-
 body {
   --container-table-max-width: var(--max-width);
   --table-max-width: none;
   --table-width: auto;
   --table-margin: inherit;
-  --table-drag-space: 0px;
-  --table-drag-padding: var(--table-drag-space) var(--table-drag-space) 0 var(--table-drag-space);
-  --container-table-margin: calc(var(--content-margin-start) - var(--table-drag-space));
-  --container-table-width: calc(var(--line-width) + var(--table-drag-space)*2);
   --container-dataview-table-width: var(--line-width);
   --container-img-width: var(--line-width);
   --container-img-max-width: var(--max-width);
@@ -1743,12 +1736,21 @@ table.dataview {
   --table-width: 100%;
   --table-min-width: none; }
 
+body {
+  --table-drag-space: 16px;
+  --container-table-margin: calc(var(--content-margin-start) - var(--table-drag-space));
+  --container-table-width: calc(var(--line-width) + var(--table-drag-space)*2);
+  --table-drag-padding: var(--table-drag-space) var(--table-drag-space) 0 var(--table-drag-space); }
+
+body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
+  --container-table-margin: var(--content-margin-start); }
+
 .maximize-tables-auto {
   --container-table-max-width: 100%;
   --container-table-width: 100%;
   --container-dataview-table-width: 100%;
   --container-table-margin: 0;
-  --table-drag-padding: 16px 0 0;
+  --table-drag-padding: var(--table-drag-space) 0 0;
   --table-max-width: 100%;
   --table-margin: var(--content-margin-start) auto;
   --table-width: auto; }
@@ -1761,7 +1763,7 @@ table.dataview {
   --container-table-max-width: 100%;
   --container-table-width: 100%;
   --container-table-margin: 0;
-  --table-drag-padding: 16px 0 0;
+  --table-drag-padding: var(--table-drag-space) 0 0;
   --table-min-width: min(var(--line-width), var(--max-width));
   --table-max-width: 100%;
   --table-margin: auto;
@@ -1797,7 +1799,7 @@ table.dataview {
   --table-edge-cell-padding-first: 16px;
   --table-edge-cell-padding-last: 16px;
   --table-margin: 0;
-  --table-drag-padding: 16px 0; }
+  --table-drag-padding: var(--table-drag-space) 0; }
   .table-100 .dataview.list-view-ul {
     max-width: var(--max-width);
     width: var(--line-width);
