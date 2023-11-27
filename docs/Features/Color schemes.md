@@ -21,8 +21,8 @@ You can define separate color schemes for light and dark mode using the [[Minima
 - Gruvbox
 - macOS
 - Nord
-- Notion
 - Rosé Pine
+- Sky
 - Solarized
 - Things
 

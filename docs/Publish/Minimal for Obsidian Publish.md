@@ -32,7 +32,7 @@ Minimal Publish is available in 13 color schemes. You can download your favorite
 - [Gruvbox](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/gruvbox/publish.css)
 - [macOS](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/macos/publish.css)
 - [Nord](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/nord/publish.css)
-- [Notion](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/notion/publish.css)
+- [Sky](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/sky/publish.css)
 - [Rosé Pine](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/rose-pine/publish.css)
 - [Solarized](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/solarized/publish.css)
 - [Things](https://raw.githubusercontent.com/kepano/obsidian-minimal-publish/master/color-schemes/things/publish.css)
