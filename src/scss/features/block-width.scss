@@ -155,7 +155,7 @@ body {
 	--table-drag-space: 16px;
 	--container-table-margin: calc(var(--content-margin-start) - var(--table-drag-space));
 	--container-table-width: calc(var(--line-width) + var(--table-drag-space)*2);
-	--table-drag-padding: var(--table-drag-space) var(--table-drag-space) 0 var(--table-drag-space);
+	--table-drag-padding: var(--table-drag-space);
 }
 
 body:not(.table-100):not(.table-max):not(.table-wide) {
@@ -169,7 +169,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 	--container-table-width: 100%;
 	--container-dataview-table-width: 100%;
 	--container-table-margin: 0;
-	--table-drag-padding: var(--table-drag-space) 0 0;
+	--table-drag-padding: var(--table-drag-space) 0;
 
 	--table-max-width: 100%;
 	--table-margin: var(--content-margin-start) auto;
@@ -187,7 +187,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 	--container-table-max-width: 100%;
 	--container-table-width: 100%;
 	--container-table-margin: 0;
-	--table-drag-padding: var(--table-drag-space) 0 0;
+	--table-drag-padding: var(--table-drag-space) 0;
 
 	--table-min-width: min(var(--line-width), var(--max-width));
 	--table-max-width: 100%;

@@ -83,6 +83,7 @@ body {
   --table-selection-border-radius: 0px;
   --table-drag-handle-background-active: var(--text-selection);
   --table-drag-handle-color-active: var(--text-accent);
+  --table-add-button-border-width: 0px;
   /* Readable line length off */
   --file-margins: var(--size-4-2) var(--size-4-12); }
 
@@ -1698,7 +1699,7 @@ body {
   --table-drag-space: 16px;
   --container-table-margin: calc(var(--content-margin-start) - var(--table-drag-space));
   --container-table-width: calc(var(--line-width) + var(--table-drag-space)*2);
-  --table-drag-padding: var(--table-drag-space) var(--table-drag-space) 0 var(--table-drag-space); }
+  --table-drag-padding: var(--table-drag-space); }
 
 body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
   --container-table-margin: var(--content-margin-start); }
@@ -1708,7 +1709,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
   --container-table-width: 100%;
   --container-dataview-table-width: 100%;
   --container-table-margin: 0;
-  --table-drag-padding: var(--table-drag-space) 0 0;
+  --table-drag-padding: var(--table-drag-space) 0;
   --table-max-width: 100%;
   --table-margin: var(--content-margin-start) auto;
   --table-width: auto; }
@@ -1721,7 +1722,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
   --container-table-max-width: 100%;
   --container-table-width: 100%;
   --container-table-margin: 0;
-  --table-drag-padding: var(--table-drag-space) 0 0;
+  --table-drag-padding: var(--table-drag-space) 0;
   --table-min-width: min(var(--line-width), var(--max-width));
   --table-max-width: 100%;
   --table-margin: auto;
@@ -2851,7 +2852,8 @@ body.minimal-focus-mode.show-view-header .view-content {
   --table-row-last-border-width: var(--border-width);
   --table-edge-cell-padding: 8px;
   --table-edge-cell-padding-first: 8px;
-  --table-edge-cell-padding-last: 8px; }
+  --table-edge-cell-padding-last: 8px;
+  --table-add-button-border-width: 1px; }
 
 .table-nowrap {
   --table-white-space: nowrap; }
