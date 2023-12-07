@@ -2,6 +2,7 @@
 permalink: image-grids
 cssclasses:
   - table-col-1-150
+  - img-grid
 ---
 
 #features #blocks
@@ -22,7 +23,13 @@ Image grids are easy to use, and don't rely on any special syntax. All you do is
 
 # Known limitations
 
+### Reading mode only
+
 Image grids are only available in reading view. Image grids are not available in Live Preview or PDF exports. For the best user experience, it is recommended to edit image grids via source mode, rather than Live Preview. 
+
+### Publish support
+
+Image grids are compatible with [[Minimal for Obsidian Publish]], however they use a newer feature of CSS `:has()` which is not available on Firefox and older versions of others browsers.
 
 # Hotkeys
 
