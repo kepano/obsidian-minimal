@@ -7,11 +7,12 @@ cssclasses:
 
 # How to use helper classes
 
-Helper classes are added using the special `cssclasses` property. In source mode it should look like this:
+Helper classes are added using the special `cssclasses` [property](https://help.obsidian.md/Editing+and+formatting/Properties). In source mode it should look like this:
 
 ```
 ---
-cssclasses: img-grid
+cssclasses:
+  - img-grid
 ---
 ```
 
@@ -20,8 +21,8 @@ To use multiple classes use the following syntax:
 ```
 ---
 cssclasses:
-- cards
-- cards-1-1
+  - cards
+  - cards-1-1
 ---
 ```
 

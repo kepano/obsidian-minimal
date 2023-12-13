@@ -1,4 +1,4 @@
-/* Reading Mode Lists	*/
+/* Reading Mode Lists	
 div > ol,
 div > ul {
 	padding-inline-start:1.4em;
@@ -11,7 +11,7 @@ ol > li {
 ol {
 	margin-inline-start:0;
 	list-style:default;
-}
+}*/
 
 body {
 	--adaptive-list-edit-offset: var(--list-edit-offset);
@@ -32,22 +32,19 @@ body {
 	padding-bottom:var(--list-spacing);
 }
 
-
 .is-mobile {
 	ul > li:not(.task-list-item)::marker {
 		font-size:0.8em;
 	}
+	/*
 	.markdown-rendered ul,
 	.markdown-rendered ol {
 		padding-inline-start:var(--list-indent);
 	}
-	/* first level */
 	.markdown-rendered div > ol,
 	.markdown-rendered div > ul {
 		padding-inline-start:2em;
 	}
-	.el-ol > ol,
-	.el-ul > ul {
-		margin-inline-start:0;
-	}
+	*/
+
 }
