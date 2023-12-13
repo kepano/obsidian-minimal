@@ -453,6 +453,7 @@ body .excalidraw {
   --text-normal: var(--tx1);
   --text-on-accent: var(--sp1);
   --text-selection: var(--hl1);
+  --text-formatting: var(--tx3);
   --title-color-inactive: var(--tx2);
   --title-color: var(--tx1);
   --titlebar-background: var(--bg2);
@@ -1559,6 +1560,9 @@ body,
 .view-content > .markdown-source-view,
 .view-content > .cm-s-obsidian {
   font-family: var(--font-editor); }
+
+.cm-formatting:not(.cm-formatting-code-block) {
+  color: var(--text-formatting); }
 
 /* Minimal features */
 /* Active line highlight */

@@ -1750,6 +1750,15 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: text-formatting
+		title: Markdown syntax color
+		description: Markdown formatting syntax text color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: italic-color
 		title: Italic text color
 		type: variable-themed-color

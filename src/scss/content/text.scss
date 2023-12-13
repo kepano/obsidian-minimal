@@ -27,3 +27,7 @@ body,
 .view-content > .cm-s-obsidian {
 	font-family: var(--font-editor);
 }
+
+.cm-formatting:not(.cm-formatting-code-block) {
+	color: var(--text-formatting);
+}
