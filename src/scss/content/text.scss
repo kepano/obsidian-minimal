@@ -28,6 +28,21 @@ body,
 	font-family: var(--font-editor);
 }
 
-.cm-formatting:not(.cm-formatting-code-block) {
+.cm-formatting:not(.cm-formatting-code-block):not(.cm-formatting-hashtag) {
 	color: var(--text-formatting);
+}
+
+.hide-markdown {
+	.cm-formatting {
+		&.cm-formatting-code.cm-inline-code,
+		&.cm-formatting-em,
+		&.cm-formatting-strikethrough,
+		&.cm-formatting-strong,
+		&.cm-formatting-highlight {
+			display: none;
+		}
+	}
+	.cm-formatting:has(+ .cm-header) {
+		display: none;
+	}
 }

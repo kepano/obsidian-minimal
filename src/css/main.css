@@ -1561,8 +1561,13 @@ body,
 .view-content > .cm-s-obsidian {
   font-family: var(--font-editor); }
 
-.cm-formatting:not(.cm-formatting-code-block) {
+.cm-formatting:not(.cm-formatting-code-block):not(.cm-formatting-hashtag) {
   color: var(--text-formatting); }
+
+.hide-markdown .cm-formatting.cm-formatting-code.cm-inline-code, .hide-markdown .cm-formatting.cm-formatting-em, .hide-markdown .cm-formatting.cm-formatting-strikethrough, .hide-markdown .cm-formatting.cm-formatting-strong, .hide-markdown .cm-formatting.cm-formatting-highlight {
+  display: none; }
+.hide-markdown .cm-formatting:has(+ .cm-header) {
+  display: none; }
 
 /* Minimal features */
 /* Active line highlight */
@@ -4046,6 +4051,10 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .dataview-inline-lists .markdown-preview-view .dataview-ul li {
   display: inline-block;
   padding-right: 0.25em; }
+
+.markdown-rendered table.dataview {
+  margin-block-start: 0;
+  margin-block-end: 0; }
 
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {

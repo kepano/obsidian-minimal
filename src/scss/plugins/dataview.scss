@@ -22,6 +22,12 @@
 	}
 }
 
+
+.markdown-rendered table.dataview {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
 body .table-view-table > thead > tr > th,
 .markdown-preview-view .table-view-table > thead > tr > th {
 	font-weight:400;
