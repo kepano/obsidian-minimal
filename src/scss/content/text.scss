@@ -32,7 +32,7 @@ body,
 	color: var(--text-formatting);
 }
 
-.hide-markdown {
+.hide-markdown .is-live-preview {
 	.cm-formatting {
 		&.cm-formatting-code.cm-inline-code,
 		&.cm-formatting-em,

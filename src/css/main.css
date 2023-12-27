@@ -1564,14 +1564,14 @@ body,
 .cm-formatting:not(.cm-formatting-code-block):not(.cm-formatting-hashtag) {
   color: var(--text-formatting); }
 
-.hide-markdown .cm-formatting.cm-formatting-code.cm-inline-code, .hide-markdown .cm-formatting.cm-formatting-em, .hide-markdown .cm-formatting.cm-formatting-link, .hide-markdown .cm-formatting.cm-formatting-strikethrough, .hide-markdown .cm-formatting.cm-formatting-strong, .hide-markdown .cm-formatting.cm-formatting-highlight {
+.hide-markdown .is-live-preview .cm-formatting.cm-formatting-code.cm-inline-code, .hide-markdown .is-live-preview .cm-formatting.cm-formatting-em, .hide-markdown .is-live-preview .cm-formatting.cm-formatting-link, .hide-markdown .is-live-preview .cm-formatting.cm-formatting-strikethrough, .hide-markdown .is-live-preview .cm-formatting.cm-formatting-strong, .hide-markdown .is-live-preview .cm-formatting.cm-formatting-highlight {
   display: none; }
-.hide-markdown .cm-formatting-quote {
+.hide-markdown .is-live-preview .cm-formatting-quote {
   opacity: 0; }
-.hide-markdown .cm-hmd-internal-link.cm-link-has-alias,
-.hide-markdown .cm-link-alias-pipe,
-.hide-markdown .cm-formatting-link,
-.hide-markdown .cm-formatting:has(+ .cm-header) {
+.hide-markdown .is-live-preview .cm-hmd-internal-link.cm-link-has-alias,
+.hide-markdown .is-live-preview .cm-link-alias-pipe,
+.hide-markdown .is-live-preview .cm-formatting-link,
+.hide-markdown .is-live-preview .cm-formatting:has(+ .cm-header) {
   display: none; }
 
 /* Minimal features */
