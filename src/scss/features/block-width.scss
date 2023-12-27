@@ -94,6 +94,7 @@ body {
 	--table-max-width: none;
 	--table-width: auto;
 	--table-margin: inherit;
+	--table-wrapper-width: fit-content;
 
 	--container-dataview-table-width: var(--line-width);
 
@@ -195,6 +196,8 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 	--table-width: auto;
 	--table-edge-cell-padding-first: 8px;
 	--table-edge-cell-padding-last: 8px;
+
+	--table-wrapper-width: auto;
 }
 
 .table-wide,
@@ -307,6 +310,9 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 		width: var(--container-table-width);
 		max-width:var(--container-table-max-width);
 		margin-inline: var(--container-table-margin) !important;
+	}
+	.table-wrapper {
+		width: var(--table-wrapper-width);
 	}
 	> div:has(>.block-language-dataview>table),
 	> div:has(>.block-language-dataviewjs) {

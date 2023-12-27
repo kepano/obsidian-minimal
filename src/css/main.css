@@ -1663,6 +1663,7 @@ body {
   --table-max-width: none;
   --table-width: auto;
   --table-margin: inherit;
+  --table-wrapper-width: fit-content;
   --container-dataview-table-width: var(--line-width);
   --container-img-width: var(--line-width);
   --container-img-max-width: var(--max-width);
@@ -1741,7 +1742,8 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
   --table-margin: auto;
   --table-width: auto;
   --table-edge-cell-padding-first: 8px;
-  --table-edge-cell-padding-last: 8px; }
+  --table-edge-cell-padding-last: 8px;
+  --table-wrapper-width: auto; }
 
 .table-wide,
 .table-max,
@@ -1868,6 +1870,9 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
     width: var(--container-table-width);
     max-width: var(--container-table-max-width);
     margin-inline: var(--container-table-margin) !important; }
+  .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .table-wrapper,
+  .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .table-wrapper {
+    width: var(--table-wrapper-width); }
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview > table),
   .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataviewjs),
   .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview > table),

@@ -1462,6 +1462,11 @@ settings:
 		type: variable-text
 		default: 6ch
 	-
+		id: table-column-max-width
+		title: Maximum column width
+		type: variable-text
+		default: none
+	-
 		id: maximize-tables-off
 		title: Maximize table width 
 		description: Determines how wide tables should behave when they become wider than the line width
