@@ -2025,6 +2025,11 @@ name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
 	-
+		id: hide-markdown
+		title: Hide Markdown syntax
+		description: (EXPERIMENTAL) Warning, this can be confusing because the characters still exist they are just hidden.
+		type: class-toggle
+	-
 		id: styled-scrollbars
 		title: Styled scrollbars
 		description: Use styled scrollbars (replaces native scrollbars)

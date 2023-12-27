@@ -36,12 +36,19 @@ body,
 	.cm-formatting {
 		&.cm-formatting-code.cm-inline-code,
 		&.cm-formatting-em,
+		&.cm-formatting-link,
 		&.cm-formatting-strikethrough,
 		&.cm-formatting-strong,
 		&.cm-formatting-highlight {
 			display: none;
 		}
 	}
+	.cm-formatting-quote {
+		opacity: 0;
+	}
+	.cm-hmd-internal-link.cm-link-has-alias,
+	.cm-link-alias-pipe,
+	.cm-formatting-link,
 	.cm-formatting:has(+ .cm-header) {
 		display: none;
 	}
