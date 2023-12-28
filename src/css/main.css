@@ -1949,7 +1949,7 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
 Cards snippet for Obsidian
 
 author: @kepano
-version: 3.0.0
+version: 3.0.1
 
 Support my work:
 https://github.com/sponsors/kepano
@@ -2075,7 +2075,9 @@ table.dataview tbody > tr > td {
 
 /* Block button */
 .markdown-source-view.mod-cm6.cards .edit-block-button {
-  top: 0px; }
+  top: -1px;
+  right: 28px;
+  opacity: 1; }
 
 /* ------------------- */
 /* Sorting menu */
@@ -2087,9 +2089,6 @@ table.dataview tbody > tr > td {
 .cards.table-100 table.dataview thead:before {
   margin-right: 0.75rem; }
 
-.theme-light .cards table.dataview thead:before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>'); }
-
 .cards table.dataview thead {
   user-select: none;
   width: 180px;
@@ -2099,9 +2098,11 @@ table.dataview tbody > tr > td {
   text-align: right;
   height: 24px;
   padding-bottom: 0px; }
-.cards table.dataview thead:hover:before {
-  opacity: 0.5;
+.cards table.dataview thead:hover:after {
   background-color: var(--background-modifier-hover); }
+.cards table.dataview thead:hover:before {
+  background-color: var(--text-muted); }
+.cards table.dataview thead:after,
 .cards table.dataview thead:before {
   content: '';
   position: absolute;
@@ -2109,18 +2110,19 @@ table.dataview tbody > tr > td {
   top: 0;
   width: 10px;
   height: 16px;
-  background-repeat: no-repeat;
   cursor: var(--cursor);
   text-align: right;
   padding: var(--size-4-1) var(--size-4-2);
   margin-bottom: 2px;
   border-radius: var(--radius-s);
   font-weight: 500;
-  font-size: var(--font-adaptive-small);
-  opacity: 0.25;
-  background-position: center center;
-  background-size: 16px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="white" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>'); }
+  font-size: var(--font-adaptive-small); }
+.cards table.dataview thead:before {
+  background-color: var(--text-faint);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 16px;
+  -webkit-mask-position: center center;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="currentColor" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>'); }
 .cards table.dataview thead > tr {
   top: -1px;
   position: absolute;
@@ -2135,7 +2137,8 @@ table.dataview tbody > tr > td {
   margin: 24px 0 0 0;
   width: 100%; }
 .cards table.dataview thead:hover > tr {
-  display: flex; }
+  display: flex;
+  height: auto; }
 .cards table.dataview thead > tr > th {
   display: block;
   padding: 3px 30px 3px 6px !important;
