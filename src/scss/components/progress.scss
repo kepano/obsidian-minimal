@@ -1,11 +1,6 @@
 /* Progress bars */
-.theme-light {
-	--progress-outline:rgba(0,0,0,0.05);
-}
-.theme-dark {
-	--progress-outline:rgba(255,255,255,0.04);
-}
 body {
+	--progress-outline:  var(--background-modifier-border);
 	--progress-complete: var(--text-accent);
 }
 .markdown-rendered progress,
