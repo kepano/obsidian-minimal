@@ -78,10 +78,6 @@ https://github.com/sponsors/kepano
 		}
 	}
 
-	&:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspace-tab-header-container {
-		-webkit-app-region: no-drag;
-	}
-
 	.mod-left-split .mod-top {
 
 		.workspace-tab-header-spacer {

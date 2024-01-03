@@ -3215,8 +3215,6 @@ https://github.com/sponsors/kepano
     content: " "; }
   .labeled-nav.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) .mod-left-split:not(.is-sidedock-collapsed) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
     padding-left: 0; }
-  .labeled-nav:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspace-tab-header-container {
-    -webkit-app-region: no-drag; }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header-spacer {
     display: none; }
   .labeled-nav .mod-left-split .mod-top .workspace-tab-header-inner-title {
