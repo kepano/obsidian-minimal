@@ -1,5 +1,5 @@
 ---
-description: Minimal is an open source distraction-free theme for Obsidian, by @kepano. Minimal makes it easy to customize the appearance of Obsidian, to create your ideal thought processing environment.
+description: Minimal is an open source distraction-free theme for Obsidian, by @kepano. Minimal makes it easy to customize the appearance of Obsidian, to create your ideal writing interface.
 cssclasses:
   - home-page
   - alt-title
@@ -11,9 +11,9 @@ permalink: home
 
 # Overview
 
-Minimal is an [open source](https://github.com/kepano/obsidian-minimal) distraction-free theme for [Obsidian](https://obsidian.md/), by [@kepano](https://twitter.com/kepano). Minimal makes it easy to customize the appearance of Obsidian, to create your ideal thought processing environment.
+Minimal is an [open source](https://github.com/kepano/obsidian-minimal) distraction-free theme for [Obsidian](https://obsidian.md/), by [@kepano](https://stephango.com/about). Minimal makes it easy to customize the appearance of Obsidian, to create your ideal writing interface.
 
-Support development on [Buy me a coffee](https://www.buymeacoffee.com/kepano) and [Twitter](https://twitter.com/kepano)
+You can learn more about me on [my personal site](https://stephango.com/about) and also find my [related Obsidian projects](https://stephango.com/obsidian).
 
 <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=kepano&button_colour=6a8695&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" width="180px"></a> <a href="https://github.com/kepano/obsidian-minimal"><img src="https://img.shields.io/github/stars/kepano/obsidian-minimal?style=social" style="padding:7px 7px 5px" width="125"></a>
 
