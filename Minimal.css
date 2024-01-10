@@ -2210,6 +2210,8 @@ table.dataview tbody > tr > td {
   grid-template-columns: var(--cards-columns);
   padding: 0;
   line-height: var(--line-height-tight); }
+  .list-cards.markdown-preview-view div > ul .contains-task-list {
+    padding-inline-start: calc(var(--cards-padding)*1.5); }
   .list-cards.markdown-preview-view div > ul > li {
     background-color: var(--cards-background);
     padding: calc(var(--cards-padding)/2);

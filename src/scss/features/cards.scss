@@ -281,6 +281,10 @@ div > ul {
 	padding:0;
 	line-height: var(--line-height-tight);
 
+	.contains-task-list {
+		padding-inline-start: calc(var(--cards-padding)*1.5);
+	}
+
 	> li {
 		background-color: var(--cards-background);
 		padding: calc(var(--cards-padding)/2);
