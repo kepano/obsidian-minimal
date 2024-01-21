@@ -91,7 +91,7 @@ body div.dataview-error-box {
 	}
 }
 
-.block-language-dataviewjs:has(.dataview-error-box) table.dataview {
+table.dataview:has(+ .dataview-error-box) {
 	display: none;
 }
 
