@@ -4157,7 +4157,7 @@ body div.dataview-error-box {
     margin-block-end: 0;
     color: var(--text-faint); }
 
-.block-language-dataviewjs:has(.dataview-error-box) table.dataview {
+table.dataview:has(+ .dataview-error-box) {
   display: none; }
 
 /* Trim columns feature */
