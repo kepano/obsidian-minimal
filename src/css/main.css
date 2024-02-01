@@ -1237,9 +1237,6 @@ body {
   --embed-padding: 0; }
   .embed-strict .markdown-embed-content {
     --folding-offset: 0px; }
-  .embed-strict .el-embed-heading.el-p > p {
-    margin-block-start: 0;
-    margin-block-end: 0; }
   .embed-strict .internal-embed .markdown-embed,
   .embed-strict .markdown-preview-view .markdown-embed, .embed-strict.markdown-preview-view .markdown-embed {
     padding: 0; }
@@ -1494,10 +1491,6 @@ body {
     padding-right: var(--table-edge-cell-padding-last); }
 
 /* Live Preview Tables */
-.is-live-preview .el-table {
-  width: 100%;
-  max-width: 100%; }
-
 .cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep,
 .cm-hmd-table-sep-dummy {
   color: var(--text-faint);
@@ -4712,16 +4705,9 @@ body .cm-heading-marker {
 .leaflet-top {
   transition: top 0.1s linear; }
 
-.mod-macos.minimal-focus-mode .mod-root .map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) .leaflet-top {
-  top: calc(18px + var(--ewt-traffic-light-y));
-  transition: top 0.1s linear; }
-
 body .leaflet-container {
   background-color: var(--background-secondary);
   font-family: var(--font-interface); }
-
-.map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) {
-  margin-top: -16px; }
 
 .leaflet-control-attribution {
   display: none; }

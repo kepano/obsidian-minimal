@@ -14,11 +14,6 @@ body {
 	.markdown-embed-content {
 		--folding-offset: 0px;
 	}
-	.el-embed-heading.el-p > p {
-		margin-block-start: 0;
-		margin-block-end: 0;
-	}
-
 	.internal-embed .markdown-embed,
 	.markdown-preview-view .markdown-embed,
 	&.markdown-preview-view .markdown-embed {

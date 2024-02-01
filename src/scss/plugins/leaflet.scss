@@ -11,19 +11,11 @@
 .leaflet-top {
 	transition:top 0.1s linear;
 }
-.mod-macos.minimal-focus-mode .mod-root .map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) .leaflet-top {
-	top:calc(18px + var(--ewt-traffic-light-y));
-	transition:top 0.1s linear;
-}
-
 body .leaflet-container {
 	background-color:var(--background-secondary);
 	font-family:var(--font-interface);
 }
 
-.map-100 .markdown-preview-sizer.markdown-preview-section .el-lang-leaflet:nth-child(3) {
-	margin-top:-16px
-}
 .leaflet-control-attribution {
 	display:none;
 }
