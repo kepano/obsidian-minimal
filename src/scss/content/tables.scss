@@ -45,14 +45,12 @@ body {
 	padding: var(--table-drag-padding);
 }
 
-.markdown-source-view.mod-cm6 .cm-table-widget {
 
+.markdown-source-view.mod-cm6 .cm-table-widget {
 	.table-col-drag-handle {
 		top: 0;
-		left: 0 !important;
 	}
 	.table-row-drag-handle {
-		top: 0 !important;
 		left: 0;
 	}
 }

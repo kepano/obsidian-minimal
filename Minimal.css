@@ -1513,10 +1513,8 @@ body {
   padding: var(--table-drag-padding); }
 
 .markdown-source-view.mod-cm6 .cm-table-widget .table-col-drag-handle {
-  top: 0;
-  left: 0 !important; }
+  top: 0; }
 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
-  top: 0 !important;
   left: 0; }
 
 /* Override Sortable plugin */
