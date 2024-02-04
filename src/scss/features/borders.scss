@@ -2,3 +2,6 @@
 	--divider-width:0px;
 	--tab-outline-width: 0px;
 }
+body:is(.borders-none) .mod-root .workspace-tab-header-container:is(div, :hover){
+	--tab-outline-width: 0px;
+}

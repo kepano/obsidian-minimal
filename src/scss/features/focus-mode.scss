@@ -74,7 +74,7 @@
 		.workspace-tab-header-new-tab,
 		.workspace-tab-header-tab-list {
 			opacity: 0;
-			transition: opacity 0.1s linear 0.6s;
+			transition: all 0.1s linear 0.6s;
 		}
 
 		.workspace-tab-header-spacer:before {
@@ -88,6 +88,14 @@
 			left: 0;
 		}
 
+		.workspace-tab-header-container-inner {
+			.workspace-tab-header.is-active,
+			.workspace-tab-header.is-active::before, 
+			.workspace-tab-header.is-active::after {
+				transition: all 0.1s linear 0.6s;
+			}
+		}
+
 		&:hover {
 			height: var(--header-height);
 			--tab-outline-width: 1px;
@@ -96,7 +104,14 @@
 			.workspace-tab-header-new-tab,
 			.workspace-tab-header-tab-list {
 				opacity: 1;
-				transition: opacity 0.1s linear 0.05s;
+				transition: all 0.1s linear 0.05s;
+			}
+			.workspace-tab-header-container-inner {
+				.workspace-tab-header.is-active,
+				.workspace-tab-header.is-active::before,
+				.workspace-tab-header.is-active::after {
+					transition: all 0.1s linear 0.05s;
+				}
 			}
 		}
 	}
@@ -140,7 +155,7 @@ body.minimal-focus-mode.show-view-header {
 	.mod-root .workspace-tab-header-container:hover ~ .workspace-tab-container .view-header,
 	.view-header:hover,
 	.view-header:focus-within {
-		.view-header-nav-buttons,,
+		.view-header-nav-buttons,
 		.view-actions,
 		.view-header-title-container {
 			opacity: 1;
