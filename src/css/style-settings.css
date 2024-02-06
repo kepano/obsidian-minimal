@@ -1074,23 +1074,23 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: ig-adjust-reading
+		id: indentation-guide-reading-indent
 		title: Horizontal adjustment in reading mode
 		type: variable-number-slider
-		default: -0.65
-		min: -1.2
-		max: 0
+		default: -0.85
+		min: -1.35
+		max: -0.35
 		step: 0.05
 		format: em
 	-
-		id: ig-adjust-edit
+		id: indentation-guide-editing-indent
 		title: Horizontal adjustment in edit mode
 		type: variable-number-slider
-		default: -1
-		min: -10
-		max: 10
-		step: 1
-		format: px
+		default: 0.85
+		min: 0.35
+		max: 1.35
+		step: 0.05
+		format: em
 	-
 		id: indentation-guide-color
 		title: Indentation guide color

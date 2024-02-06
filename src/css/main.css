@@ -962,50 +962,25 @@ button.mod-warning:hover {
   max-width: var(--max-width);
   width: var(--line-width); }
 
+/*
 .is-mobile span[title="Fold line"]:after,
 .is-mobile .CodeMirror-foldgutter-open:after {
-  transform: translateX(-2px) !important; }
+	transform:translateX(-2px) !important;
+}
 
 body.is-mobile span[title="Unfold line"]:after,
 body.is-mobile .CodeMirror-foldgutter-folded:after {
-  content: "›";
-  font-family: sans-serif;
-  transform: translateY(-2px);
-  transform: rotate(-90deg) translateY(2px) translateX(-0.45em); }
+	content:"›";
+	font-family:sans-serif;
+	transform:translateY(-2px);
+	transform:rotate(-90deg) translateY(2px) translateX(-0.45em);
+}
 
 body.is-mobile span[title="Fold line"]:after,
 body.is-mobile .CodeMirror-foldgutter-open:after {
-  content: "›";
-  font-family: sans-serif;
-  transform: rotate(360deg); }
-
-/* Indentation Guides (Obsidian 0.14.0+)
-body {
-  --ig-adjust-reading:-0.95em;
-  --ig-adjust-edit: 2px;
-}
-
-.markdown-rendered.show-indentation-guide li.task-list-item > ul::before,
-.markdown-rendered.show-indentation-guide li.task-list-item > ol::before,
-.markdown-rendered.show-indentation-guide li > ul::before,
-.markdown-rendered.show-indentation-guide li > ol::before {
-  left:var(--ig-adjust-reading);
-}
-
-.markdown-source-view.mod-cm6 .cm-indent::before {
-  transform:translateX(var(--ig-adjust-edit));
-}
-
-.is-mobile {
-
-  .markdown-rendered.show-indentation-guide li > ul::before,
-  .markdown-rendered.show-indentation-guide li > ol::before {
-    left:calc(0em + var(--ig-adjust-reading));
-  }
-  .markdown-source-view.mod-cm6 .cm-indent::before {
-    transform:translateX(calc(2px + var(--ig-adjust-edit)));
-  }
-
+	content:"›";
+	font-family:sans-serif;
+	transform:rotate(360deg);
 }
 */
 /* Modals */
@@ -1201,17 +1176,10 @@ body:not(.minimal-strike-lists) {
 .markdown-preview-view .task-list-item-checkbox {
   position: relative;
   top: var(--checkbox-top);
-  left: var(--checkbox-left);
-  line-height: 0; }
+  left: var(--checkbox-left); }
 
 .markdown-preview-view ul > li.task-list-item {
   text-indent: 0; }
-
-.is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
-  margin-inline-start: -0.4em; }
-
-.is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox {
-  top: 0.2em; }
 
 .minimal-code-scroll {
   --code-white-space: pre; }
