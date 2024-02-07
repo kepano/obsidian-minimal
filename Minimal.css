@@ -747,9 +747,6 @@ body {
   .cm-editor .cm-lineNumbers .cm-gutterElement {
     padding-inline-end: 4px;
     padding-inline-start: 8px; } }
-.cm-editor .cm-lineNumbers .cm-gutterElement {
-  font-variant-numeric: tabular-nums; }
-
 .cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
 .cm-editor .cm-gutterElement.cm-active .cm-heading-marker {
   color: var(--text-muted); }
@@ -1001,27 +998,6 @@ button.mod-warning:hover {
   max-width: var(--max-width);
   width: var(--line-width); }
 
-/*
-.is-mobile span[title="Fold line"]:after,
-.is-mobile .CodeMirror-foldgutter-open:after {
-	transform:translateX(-2px) !important;
-}
-
-body.is-mobile span[title="Unfold line"]:after,
-body.is-mobile .CodeMirror-foldgutter-folded:after {
-	content:"›";
-	font-family:sans-serif;
-	transform:translateY(-2px);
-	transform:rotate(-90deg) translateY(2px) translateX(-0.45em);
-}
-
-body.is-mobile span[title="Fold line"]:after,
-body.is-mobile .CodeMirror-foldgutter-open:after {
-	content:"›";
-	font-family:sans-serif;
-	transform:rotate(360deg);
-}
-*/
 /* Modals */
 .modal-button-container .mod-checkbox {
   --checkbox-radius: 4px; }
