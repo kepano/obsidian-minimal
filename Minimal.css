@@ -693,10 +693,6 @@ body {
 .markdown-source-view.mod-cm6 hr {
   border-width: 2px; }
 
-.mod-cm6 .cm-editor .cm-line {
-  padding-left: 0;
-  padding-right: 0; }
-
 .cm-editor .cm-content {
   padding-top: 0.5em; }
 
@@ -7642,17 +7638,17 @@ settings:
 		title: Horizontal adjustment in reading mode
 		type: variable-number-slider
 		default: -0.85
-		min: -1.35
-		max: -0.35
+		min: -2.85
+		max: 1.15
 		step: 0.05
 		format: em
 	-
 		id: indentation-guide-editing-indent
 		title: Horizontal adjustment in edit mode
 		type: variable-number-slider
-		default: 0.85
-		min: 0.35
-		max: 1.35
+		default: 0.15
+		min: -1.85
+		max: 2.15
 		step: 0.05
 		format: em
 	-
