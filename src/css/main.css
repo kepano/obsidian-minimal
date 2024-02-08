@@ -1316,13 +1316,6 @@ body {
 .is-mobile .mod-root .workspace-leaf-content[data-type='markdown'] .search-input-container {
   width: calc(100% - 160px); }
 
-.embedded-backlinks .nav-header ~ .search-input-container {
-  width: calc(100% - 140px);
-  margin-top: 12px; }
-.embedded-backlinks .nav-buttons-container {
-  position: absolute;
-  right: 0;
-  top: 14px; }
 .embedded-backlinks .backlink-pane > .tree-item-self:hover,
 .embedded-backlinks .backlink-pane > .tree-item-self {
   text-transform: none;
