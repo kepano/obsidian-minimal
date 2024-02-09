@@ -6,7 +6,7 @@ aliases:
 > [!warning] Beta feature
 > E-ink mode is currently in beta and still under development. Expect to find bugs and unexpected behaviors with this color scheme.
 > 
-> **How you can help:** if you have an e-ink device please send photos (not screenshots) of e-ink mode running, and share any ghosting/other issues you find as a [GitHub issue](https://github.com/kepano/obsidian-minimal/issues).
+> **How you can help:** if you have an e-ink device please send photos (not screenshots) of e-ink mode running, and share any ghosting/other issues you find as a [GitHub issue](https://github.com/kepano/obsidian-minimal/labels/eink).
 
 #features
 
