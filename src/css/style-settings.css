@@ -1074,24 +1074,6 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: indentation-guide-reading-indent
-		title: Horizontal adjustment in reading mode
-		type: variable-number-slider
-		default: -0.85
-		min: -2.85
-		max: 1.15
-		step: 0.05
-		format: em
-	-
-		id: indentation-guide-editing-indent
-		title: Horizontal adjustment in edit mode
-		type: variable-number-slider
-		default: 0.15
-		min: -1.85
-		max: 2.15
-		step: 0.05
-		format: em
-	-
 		id: indentation-guide-color
 		title: Indentation guide color
 		type: variable-themed-color
