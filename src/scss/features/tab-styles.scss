@@ -156,6 +156,28 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 
 /* Sidebar tabs ------------ */
 
+.tab-names-on .workspace-tab-header-container-inner {
+	--sidebar-tab-text-display: static;
+	.workspace-tab-header-inner-title {
+		font-weight: 500;
+	}
+	.workspace-tab-header-inner {
+		gap: var(--size-2-3);
+	}
+}
+
+.tab-names-single .workspace-tab-header-container-inner .workspace-tab-header:only-child {
+	--sidebar-tab-text-display: static;
+	background-color: transparent;
+	.workspace-tab-header-inner-title {
+		font-weight: 500;
+	}
+	.workspace-tab-header-inner {
+		gap: var(--size-2-3);
+	}
+}
+
+
 .tabs-modern.sidebar-tabs-wide .mod-right-split,
 .tabs-modern.sidebar-tabs-default .mod-right-split {
 	--tab-outline-width: 0;
