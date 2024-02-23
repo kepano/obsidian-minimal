@@ -1393,19 +1393,19 @@ settings:
 				value: sidebar-tabs-underline
 	-
 		id: sidebar-tabs-names
-		title: Show sidebar tab names
+		title: Sidebar tab names
 		type: class-select
 		allowEmpty: false
-		default: sidebar-tab-names
+		default: tab-names-off
 		options:
 			-
-				label: Never
+				label: Hidden
 				value: tab-names-off
 			-
-				label: Always
+				label: Visible
 				value: tab-names-on
 			-
-				label: Single only
+				label: Single tab only
 				value: tab-names-single
 	-
 		id: mobile-left-sidebar-width
