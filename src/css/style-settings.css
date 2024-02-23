@@ -1365,11 +1365,6 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: sidebar-lines-off
-		title: Hide sidebar relationship lines
-		description: Turns off lines in file navigation
-		type: class-toggle
-	-
 		id: sidebar-tabs-style
 		title: Sidebar tab style
 		type: class-select
