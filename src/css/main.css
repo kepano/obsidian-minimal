@@ -194,7 +194,7 @@ body .excalidraw {
   hsl(
   	var(--base-h),
   	calc(var(--base-s) - 20%),
-  	calc(var(--base-l) - 45%)
+  	calc(var(--base-l) - 50%)
   	);
   --tx3:
   hsl(
@@ -1531,14 +1531,12 @@ body {
 .theme-dark .pdf-viewer .canvasWrapper {
   opacity: var(--pdf-dark-opacity);
 }
-.theme-dark.pdf-invert-dark .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper,
-.theme-dark.pdf-invert-dark .workspace-leaf-content[data-type=pdf] .pdf-thumbnail-view .thumbnailImage {
+.theme-dark.pdf-invert-dark .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper {
   filter: invert(1) hue-rotate(180deg);
   mix-blend-mode: screen;
 }
 
-.theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper,
-.theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdf-thumbnail-view .thumbnailImage {
+.theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper {
   mix-blend-mode: multiply;
 }
 
@@ -3483,19 +3481,19 @@ body {
 
 /* Image zoom  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
-body:not(.zoom-off) .view-content div:not(.canvas-node-content) img {
+body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content div:not(.canvas-node-content) img {
   max-width: 100%;
   cursor: zoom-in;
 }
-body:not(.zoom-off) .view-content img:active {
+body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content img:active {
   cursor: zoom-out;
 }
-body:not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active {
+body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active {
   background-color: var(--background-primary);
   padding: 10px;
 }
-body:not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active,
-body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active {
+body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active,
+body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active {
   --container-img-width: 100%;
   --container-img-max-width: 100%;
   aspect-ratio: unset;
@@ -3515,7 +3513,7 @@ body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active 
   right: 0;
   bottom: 0;
 }
-body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active:after {
+body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active:after {
   background-color: var(--background-primary);
   opacity: 0.9;
   content: " ";
@@ -3526,7 +3524,7 @@ body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active:
   right: 1px;
   z-index: 0;
 }
-body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active img {
+body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active img {
   aspect-ratio: unset;
   top: 50%;
   z-index: 99;
@@ -3542,7 +3540,7 @@ body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active 
   position: absolute;
   opacity: 1;
 }
-body:not(.zoom-off) .view-content .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false]:has(.image-embed:not(.canvas-node-content):active) {
+body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false]:has(.image-embed:not(.canvas-node-content):active) {
   contain: unset !important;
 }
 
