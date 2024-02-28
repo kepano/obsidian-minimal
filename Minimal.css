@@ -3915,24 +3915,24 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 }
 
 /* Sidebar tabs ------------ */
-.tab-names-on .workspace-tab-header-container-inner {
+.tab-names-on .workspace-split:not(.mod-root) .workspace-tab-header-container-inner {
   --sidebar-tab-text-display: static;
 }
-.tab-names-on .workspace-tab-header-container-inner .workspace-tab-header-inner-title {
+.tab-names-on .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header-inner-title {
   font-weight: 500;
 }
-.tab-names-on .workspace-tab-header-container-inner .workspace-tab-header-inner {
+.tab-names-on .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header-inner {
   gap: var(--size-2-3);
 }
 
-.tab-names-single .workspace-tab-header-container-inner .workspace-tab-header:only-child {
+.tab-names-single .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child {
   --sidebar-tab-text-display: static;
   background-color: transparent;
 }
-.tab-names-single .workspace-tab-header-container-inner .workspace-tab-header:only-child .workspace-tab-header-inner-title {
+.tab-names-single .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child .workspace-tab-header-inner-title {
   font-weight: 500;
 }
-.tab-names-single .workspace-tab-header-container-inner .workspace-tab-header:only-child .workspace-tab-header-inner {
+.tab-names-single .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child .workspace-tab-header-inner {
   gap: var(--size-2-3);
 }
 
