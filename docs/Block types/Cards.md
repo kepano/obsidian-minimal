@@ -7,14 +7,14 @@ cssclasses:
 
 #features #blocks
 
-# Overview
+## Overview
 
 With Minimal you can transform [[Dataview]] tables or bullet lists into cards. To use cards add one of the following [[Helper classes|helper class]] to the `cssclasses` property:
 
 - `cards` to turn all Dataview tables in your note into cards
 - `list-cards` to turn all bullet lists in your note into cards
 
-# Demo
+## Demo
 
 ### Turn Dataview tables into cards
 
@@ -28,20 +28,20 @@ Use `list-cards` to turn all bullet lists in your note into cards
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/OjMdROvNmq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Screenshots
+## Screenshots
 
 These examples show cards being used to [[Create a movie database|create a personal movie database]].
 
 ![](https://user-images.githubusercontent.com/10565871/148671142-ac227bb2-ff54-4c07-99b4-f24c55cab0cf.png)
 ![](https://user-images.githubusercontent.com/10565871/148671516-348f2b48-440c-484b-8dc2-27006879a1a7.png)
 
-# Sorting
+## Sorting
 
 To use the sorting menu, install the [[Sortable]] plugin. This is only compatible with cards that use Dataview tables (not bullet lists).
 
 ![](https://user-images.githubusercontent.com/10565871/148671518-660a5c8c-6c31-4db6-8fa9-d5e9b22b0b6f.gif#interface)
 
-# Helper classes
+## Helper classes
 
 To use Cards, add the `cards` or `list-cards` [[Helper classes|helper class]] on a note. Because Cards use [[Tables]] behind the scenes, they are also compatible with [[Block width]] table options.
 
@@ -62,7 +62,7 @@ The following helper classes are available to further customize cards in a speci
 | `cards-2-3`           | Fit images in cards to 2:3 ratio                 |
 | `cards-cols-1` to `8` | Force a specific number of columns (from 1 to 8) |
 
-# Style Settings
+## Style Settings
 
 With [[Style Settings]] you can additionally tweak the following settings for cards:
 

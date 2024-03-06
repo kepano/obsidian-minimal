@@ -7,7 +7,7 @@ cssclasses:
 
 #features #blocks
 
-# Overview
+## Overview
 
 Image grids are a simple way to arrange [[images]] in columns. This feature is compatible with [[Block width]] options for image widths.
 
@@ -15,13 +15,13 @@ Image grids can be activated globally using [[Minimal Theme Settings]] and [[Hot
 
 ![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-img-grid.png)
 
-# Demo
+## Demo
 
 Image grids are easy to use, and don't rely on any special syntax. All you do is add an extra line break between images to create a row, and columns take care of themselves
 
 ![](https://user-images.githubusercontent.com/10565871/147193674-179f9a12-3ea8-4e6b-8ac4-34e3093846da.gif)
 
-# Known limitations
+## Known limitations
 
 ### Reading mode only
 
@@ -31,12 +31,12 @@ Image grids are only available in reading view. Image grids are not available in
 
 Image grids are compatible with [[Minimal for Obsidian Publish]], however they use a newer feature of CSS `:has()` which is not available on Firefox and older versions of others browsers.
 
-# Hotkeys
+## Hotkeys
 
 - Toggle image grids globally
 - Cycle through image block width options
 
-# Helper classes
+## Helper classes
 
 Use [[Helper classes]] to control image grids on a note
 
@@ -47,7 +47,7 @@ Use [[Helper classes]] to control image grids on a note
 | `img-max`  | Image blocks fill the max line width     |
 | `img-wide` | Image blocks fill the wide line width    |
 
-# Settings
+## Settings
 
 Additional options can be accessed via [[Style Settings]] plugin, under **Images**:
 

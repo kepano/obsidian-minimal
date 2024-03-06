@@ -11,7 +11,7 @@ Using [[Minimal Theme Settings]] you can define the following preferences which 
 
 To use these features, you will need to turn on "Readable line length" in Obsidian's Editor settings.
 
-# Developers
+## Developers
 
 You can visualize line width settings using the command `Dev — Show block widths` in Minimal Theme Settings.
 

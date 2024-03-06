@@ -5,11 +5,11 @@ aliases:
 ---
 #blocks 
 
-# Checkbox styling
+## Checkbox styling
 
 Use [[Style Settings]] to edit the shape and color of checkboxes
 
-# Alternate checkboxes
+## Alternate checkboxes
 
 Minimal supports a wide number of alternate checkbox types. These allow you to call out tasks that are incomplete, canceled, rescheduled, etc.
 
@@ -17,7 +17,7 @@ Minimal supports a wide number of alternate checkbox types. These allow you to c
 
 ![](https://user-images.githubusercontent.com/10565871/157957663-5425edb7-3bee-4214-af63-971b56725cc2.png#interface)
 
-# Checkbox icons
+## Checkbox icons
 
 The following checkbox styles are available
 

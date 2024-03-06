@@ -3,7 +3,7 @@ permalink: localization
 ---
 #contributing
 
-# Translating Style Settings and documentation
+## Translating Style Settings and documentation
 
 Localization can also be added to [[Style Settings]], [see instructions](https://github.com/mgmeyers/obsidian-style-settings#localization-support).
 

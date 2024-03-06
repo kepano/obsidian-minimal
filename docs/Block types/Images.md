@@ -8,7 +8,7 @@ cssclasses:
 
 #blocks
 
-# Image-related features
+## Image-related features
 
 Settings in [[Minimal Theme Settings]]:
 
@@ -20,7 +20,7 @@ Settings in [[Style Settings]]:
 
 - [[Image zoom]] allows you to click and hold an image to zoom in
 
-# Image filters
+## Image filters
 
 Image filters can be added to create the following effects. Use them by adding the filter name at the end of the image link, e.g. `![[image.jpeg#invert]]`
 
@@ -31,14 +31,14 @@ Image filters can be added to create the following effects. Use them by adding t
 | `#circle`  | Crop image to a circle                                                             |
 | `#outline` | Add outline around image                                                           | 
 
-# Hotkeys
+## Hotkeys
 
 Use [[Hotkeys]] to adjust images globally:
 
 - Toggle [[image grids]] globally
 - Cycle through image width options
 
-# Helper classes
+## Helper classes
 
 Use [[Helper classes]] to control image grids on a note
 

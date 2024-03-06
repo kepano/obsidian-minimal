@@ -9,7 +9,7 @@ permalink: home
 
 ![](https://github.com/kepano/obsidian-minimal/raw/master/cover.png)
 
-# Overview
+## Overview
 
 Minimal is an [open source](https://github.com/kepano/obsidian-minimal) distraction-free theme for [Obsidian](https://obsidian.md/), by [@kepano](https://stephango.com/about). Minimal makes it easy to customize the appearance of Obsidian, to create your ideal writing interface.
 
@@ -17,7 +17,7 @@ You can learn more about me on [my personal site](https://stephango.com/about) a
 
 <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=kepano&button_colour=6a8695&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" width="180px"></a> <a href="https://github.com/kepano/obsidian-minimal"><img src="https://img.shields.io/github/stars/kepano/obsidian-minimal?style=social" style="padding:7px 7px 5px" width="125"></a>
 
-# Get started
+## Get started
 
 ### 1. Install Minimal theme
 
@@ -38,7 +38,8 @@ You can learn more about me on [my personal site](https://stephango.com/about) a
 
 - [[Style Settings]] allows you to create custom [[Color schemes]] and tweak Minimal with more fine-grained control.
 - [[Hider]] hides UI elements such as window frame, scrollbars, tooltips, etc.
-# Screenshots
+
+## Screenshots
 
 Minimal offers multiple options for [[background contrast]] including a true black option ideal for OLED devices. This feature also supports popular [[color schemes]] such as Solarized, Flexoki, Nord, and Gruvbox.
 
@@ -56,7 +57,7 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 
 ![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-plugins.png)
 
-# App-level features
+## App-level features
 
 - [[Active line highlighting]]
 - [[Background contrast]]
@@ -72,7 +73,7 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - [[Tab styles]]
 - [[Navigation labels]]
 
-# Block-level features
+## Block-level features
 
 - [[Block width]]
 - [[Helper classes]]
@@ -91,14 +92,13 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - [[Progress bars]]
 - [[Tables]]
 
-# Plugin support
+## Plugin support
 
 - [[Calendar]]
 - Checklist
 - [[Charts plugin]]
 - [[Dataview]]
 - Dictionary
-- Excalidraw
 - Git
 - [[Hider]]
 - Kanban
@@ -110,16 +110,16 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - [[Style Settings]]
 - Zoom
 
-# Guides
+## Guides
 
 - [[Create a movie database]]
 - [[macOS configuration|Make Obsidian feel like a native macOS app]]
 
-# Troubleshooting
+## Troubleshooting
 
 Visit the [[Help|Help page]] for troubleshooting. Have a question? Join the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
 
-# Contributing
+## Contributing
 
 If you would like add [[Plugin support]], or have found a bug you would like to help fix, don't hesitate to open a pull request. Have a question? Join the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
 

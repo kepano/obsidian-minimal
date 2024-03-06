@@ -7,13 +7,13 @@ Iframes allow you to embed web pages and dynamic web content into your notes. Fo
 
 Iframes are compatible with [[Block width]] features.
 
-# Hotkeys
+## Hotkeys
 
 Use [[Hotkeys]] to adjust iframes globally:
 
 - Cycle between iframe width options
 
-# Helper classes
+## Helper classes
 
 Use [[Helper classes]] to control iframe appearance on a specific note:
 

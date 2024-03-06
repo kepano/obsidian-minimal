@@ -3192,6 +3192,10 @@ body.minimal-focus-mode.show-view-header .view-content {
   border-radius: var(--image-radius);
 }
 
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 .table-small table:not(.calendar) {

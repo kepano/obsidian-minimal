@@ -5,20 +5,17 @@ cssclasses:
   - table-full
 description: Style Settings enables you to customize Minimal's colors, font sizes, font styles, and many more details.
 ---
-
 #plugins
 
 [Open plugin in Obsidian](obsidian://show-plugin?id=obsidian-style-settings)
 
-# Overview
+## Overview
 
 Style Settings enables you to customize Minimal's colors, font sizes, font styles, and many more details. While [[Minimal Theme Settings]] plugin is necessary for [[Hotkeys]] and  basic customization, the Style Settings plugin offers much deeper customization for all the nitty gritty details of your Obsidian interface.
 
 To see your changes more easily, open Style Settings in a new pane by using the command palette (`CMD + P` by default).
 
-![](https://camo.githubusercontent.com/c74a58660ee536dd98281800888a656810a0f79f5bd1d327498e9151862fef15/68747470733a2f2f6b65702d6c6f672e73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f6d696e696d616c2d7374796c652d73657474696e67732e676966)
-
-# Importing and exporting your settings
+## Importing and exporting your settings
 
 Style Settings offers the option to share your customizations by using the **Import** and **Export** buttons in the top right corner of the Style Settings pane. 
 
@@ -26,9 +23,9 @@ Note that when using the **Export** functionality, all of your saved Style Setti
 
 You can find and share Minimal color schemes in the [Obsidian forum thread](https://forum.obsidian.md/t/share-your-minimal-theme-screenshots-configuration/8983) or in the the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
 
-# Minimal settings
+## Minimal settings
 
-## Interface colors
+### Interface colors
 
 Background and border colors used throughout the interface
 
@@ -42,7 +39,7 @@ Background and border colors used throughout the interface
 | Highlighted border color | `--ui2`                                  |
 | Active border color      | `--ui3`                                  |
 
-## Accent color
+### Accent color
 
 Used for links, buttons and other interactive elements
 
@@ -53,7 +50,7 @@ Used for links, buttons and other interactive elements
 | Accent color interactive | `--ax3`  |
 | Text on accent           | `--sp1`  | 
 
-## Extended colors
+### Extended colors
 
 Colors used for [[Progress bars]], [[Charts]], [[Checklists]], [[Graphs]], syntax highlighting, colorful headings, and Publish status
 
@@ -68,7 +65,7 @@ Colors used for [[Progress bars]], [[Charts]], [[Checklists]], [[Graphs]], synta
 | Purple  | `--purple` |
 | Pink    | `--pink`   | 
 
-## Active line
+### Active line
 
 Define the [[Active line highlighting]] feature and background color
 
@@ -77,7 +74,7 @@ Define the [[Active line highlighting]] feature and background color
 | Highlight active line  |                    |
 | Active line background | `--active-line-bg` |
 
-## Blockquotes
+### Blockquotes
 
 | Setting                      | Variable                        |
 | ---------------------------- | ------------------------------- |
@@ -88,13 +85,13 @@ Define the [[Active line highlighting]] feature and background color
 | Blockquotes font size        | `--blockquote-size`             |
 | Blockquotes font style       | `--blockquote-font-style`       | 
 
-## Callouts
+### Callouts
 
 | Setting        | Variable               |
 | -------------- | ---------------------- |
 | Color blending | `--callout-blend-mode` | 
 
-## Code blocks
+### Code blocks
 
 For [[Code blocks]]
 
@@ -105,7 +102,7 @@ For [[Code blocks]]
 | Code background color | `--code-background`  |
 | Code text color       | `--code-normal`      |
 
-### Syntax highlighting
+#### Syntax highlighting
 
 | Setting               | Variable             |
 | --------------------- | -------------------- |
@@ -120,7 +117,7 @@ For [[Code blocks]]
 | Syntax: tags          | `--code-tag`         |
 | Syntax: values        | `--code-value`       |
 
-## Dataview
+### Dataview
 
 For [[Dataview]] plugin
 
@@ -129,7 +126,7 @@ For [[Dataview]] plugin
 | Trim Dataview columns         |                   |
 | Dataview maximum column width | `--max-col-width` | 
 
-## Embeds and transclusions
+### Embeds and transclusions
 
 For [[Embeds]]
 
@@ -140,7 +137,7 @@ For [[Embeds]]
 | Embedded text underline style   | `--embed-decoration-style` |
 | Embedded text underline color   | `--embed-decoration-color` | 
 
-## Graphs
+### Graphs
 
 Node colors in [[Graphs]]
 
@@ -152,7 +149,7 @@ Node colors in [[Graphs]]
 | Node color (attachments) | `--graph-node-attachment` |
 | Node color (unresolved)  | `--graph-node-unresolved` |
 
-## Headings
+### Headings
 
 Define the appearance of headings. The following settings are available for each heading type from H1 to H6, adjust variable prefix accordingly from `--h1` to `--h6`
 
@@ -166,7 +163,7 @@ Define the appearance of headings. The following settings are available for each
 | Heading font style   | `--h1-style`   |
 | Heading divider line |                |
 
-## Icons
+### Icons
 
 Define the color and opacity of icons found through the interface on buttons and tabs
 
@@ -177,7 +174,7 @@ Define the color and opacity of icons found through the interface on buttons and
 | Icon color (hover)  | `--icon-color-hover`  | 
 | Icon color (active) | `--icon-color-active` |
 
-## Images
+### Images
 
 Define styles for [[Images]]
 
@@ -186,7 +183,7 @@ Define styles for [[Images]]
 | Image opacity in dark mode | `--images-muted` |
 | Disable image zoom         |                  |
 
-## Indentation Guides
+### Indentation Guides
 
 | Setting                               | Variable                         |
 | ------------------------------------- | -------------------------------- |
@@ -195,7 +192,7 @@ Define styles for [[Images]]
 | Indentation guide color               | `--indentation-guide-color`                                 |
 | Indentation guide color (active)      | `--indentation-guide-color-active` | 
 
-## Links
+### Links
 
 Defines the color of links
 
@@ -209,7 +206,7 @@ Defines the color of links
 | External link color             | `--link-external-color`              |
 | External link color (hover)     | `--link-external-color-hover`        | 
 
-## Lists and checkboxes
+### Lists and checkboxes
 
 Define the style of [[Checklists]]
 
@@ -221,7 +218,7 @@ Define the style of [[Checklists]]
 | List item spacing       | `--list-spacing`   |
 | Nested list indentation | `--list-indent`    |
 
-## Sidebars
+### Sidebars
 
 Define the [[Tab styles]] and other sidebar settings
 
@@ -232,7 +229,7 @@ Define the [[Tab styles]] and other sidebar settings
 | Mobile left sidebar width  | `--mobile-left-sidebar-width`  |
 | Mobile right sidebar width | `--mobile-right-sidebar-width` |
 
-## Tables
+### Tables
 
 Define the appearance of [[Tables]]. These settings can also be defined per-file using the [[Tables|table helper classes]]
 
@@ -251,7 +248,7 @@ Define the appearance of [[Tables]]. These settings can also be defined per-file
 | Highlight active row  |                     |
 | Active row background | `--row-color-hover` |
 
-## Tabs
+### Tabs
 
 Defines [[Tab styles]] in the main window (for sidebar tab styles go to **Sidebars** section)
 
@@ -262,7 +259,7 @@ Defines [[Tab styles]] in the main window (for sidebar tab styles go to **Sideba
 | Tab text color          | `--minimal-tab-text-color`        |
 | Tab text color (active) | `--minimal-tab-text-color-active` | 
 
-## Tab stacks
+### Tab stacks
 
 | Setting                | Variable                     |
 | ---------------------- | ---------------------------- |
@@ -270,7 +267,7 @@ Defines [[Tab styles]] in the main window (for sidebar tab styles go to **Sideba
 | Spine width            | `--tab-stacked-header-width` |
 | Spine text orientation |                              | 
 
-## Tags
+### Tags
 
 | Setting                      | Variable             |
 | ---------------------------- | -------------------- |
@@ -281,7 +278,7 @@ Defines [[Tab styles]] in the main window (for sidebar tab styles go to **Sideba
 | Tag background color         | `--tag-bg`           |
 | Tag background color (hover) | `--tab-bg2`          |
 
-## Text
+### Text
 
 | Setting                     | Variable         | Description                                                              |
 | --------------------------- | ---------------- | ------------------------------------------------------------------------ |
@@ -295,9 +292,9 @@ Defines [[Tab styles]] in the main window (for sidebar tab styles go to **Sideba
 | Bold text weight            | `--bold-weight`  |                                                                          |
 | Paragraph spacing           | `--spacing-p`    | Space between paragraphs in reading mode                                 |
 
-## Titles
+### Titles
 
-### Tab title bar
+#### Tab title bar
 
 Tab title bar must be turned on in Appearance settings
 
@@ -310,7 +307,7 @@ Tab title bar must be turned on in Appearance settings
 | Tab title text color (active)   | `--title-color`             |
 | Tab title text color (inactive) | `--title-color-inactive`    |
 
-### Inline title
+#### Inline title
 
 Inline titles must be turned on in Appearance settings
 
@@ -321,7 +318,7 @@ Inline titles must be turned on in Appearance settings
 | Inline title font weight         | `--inline-title-weight` | 
 | Inline title text color (active) | `--inline-title-color`  |
 
-## Translucency
+### Translucency
 
 For fine-grained translucency preferences
 
@@ -329,7 +326,7 @@ For fine-grained translucency preferences
 | ---------------------------- | ------------------------------------ |
 | Translucent background color | `--workspace-background-translucent` | 
 
-## Window frame
+### Window frame
 
 Settings for [[Colorful frame]]
 
@@ -342,7 +339,7 @@ Settings for [[Colorful frame]]
 | Frame title color (inactive) | `--titlebar-text-color`         |
 | Frame title font weight      | `--titlebar-text-weight`        | 
 
-# Minimal Cards
+## Minimal Cards
 
 For use with [[Cards]]
 
@@ -356,7 +353,7 @@ For use with [[Cards]]
 | Card border width            | `--cards-border-width` | 
 | Card background color        | `--cards-background`   |
 
-# Minimal Advanced Settings
+## Minimal Advanced Settings
 
 | Settings             | Variable          | 
 | -------------------- | ----------------- |

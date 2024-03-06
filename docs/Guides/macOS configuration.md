@@ -7,7 +7,7 @@ description: Recommended settings for a native macOS appearance with Minimal The
 
 ![[minimal-macos-config.png]]
 
-# Recommended settings for native macOS appearance
+## Recommended settings for native macOS appearance
 
 Obsidian Appearance settings:
 
@@ -29,6 +29,6 @@ Obsidian Appearance settings:
 
 - [[Tab styles]] set to Modern
 
-# Also visible in the screenshot above
+## Also visible in the screenshot above
 
 - [[Calendar]] plugin

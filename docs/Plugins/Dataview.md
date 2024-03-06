@@ -9,7 +9,7 @@ Dataview is a powerful plugin that enables you to run complex queries using meta
 
 See [[Tables]] for settings and helper classes related to Dataview tables.
 
-# Related features
+## Related features
 
 - [[Cards]]
 - [[Progress bars]]

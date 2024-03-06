@@ -8,26 +8,26 @@ cssclasses:
 
 Tables can be created using Markdown, or automatically generated with [[Dataview]]. Tables in Minimal follow your [[Block width]] settings.
 
-# Dataview Settings
+## Dataview Settings
 
 Use [[Minimal Theme Settings]] to define the following settings:
 
 - **Trim Dataview columns** disables text wrapping in [[Dataview]] cells, equivalent of globally setting `table-nowrap` for Dataview only
 - **Dataview maximum column width** sets the width before trimming occurs
 
-# Hotkeys
+## Hotkeys
 
 You can use [[Hotkeys]] to adjust tables globally:
 
 - Cycle between global table width options
 
-# Style Settings
+## Style Settings
 
 Use [[Style Settings]] plugin to control table styles at the global level
 
 ![](https://kep-log.s3-us-west-2.amazonaws.com/minimal-table-styles.png#interface)
 
-# Helper classes
+## Helper classes
 
 Use [[Helper classes]] to control table styles at the individual note level
 
