@@ -29,7 +29,7 @@ Image grids are only available in reading view. Image grids are not available in
 
 ### Publish support
 
-Image grids are compatible with [[Minimal for Obsidian Publish]], however they use a newer feature of CSS `:has()` which is not available on Firefox and older versions of others browsers.
+Image grids are compatible with [[Minimal for Obsidian Publish]], however they use a newer feature of CSS `:has()` which is not available on older browsers.
 
 ## Hotkeys
 
