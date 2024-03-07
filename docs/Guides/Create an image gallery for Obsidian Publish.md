@@ -3,6 +3,7 @@ cssclasses:
   - img-grid
   - img-zoom
 permalink: guides/image-gallery
+description: Create an image gallery using Minimal for Obsidian Publish. Images can be placed side by side, and clicked to open a zoomed in version.
 ---
 #guides
 
