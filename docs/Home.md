@@ -3,11 +3,12 @@ description: Minimal is an open source distraction-free theme for Obsidian, by @
 cssclasses:
   - home-page
   - alt-title
+  - img-zoom
 image: /Images/cover.png
 permalink: home
 ---
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/cover.png)
+![[cover.png]]
 
 ## Overview
 
@@ -43,19 +44,19 @@ You can learn more about me on [my personal site](https://stephango.com/about) a
 
 Minimal offers multiple options for [[background contrast]] including a true black option ideal for OLED devices. This feature also supports popular [[color schemes]] such as Solarized, Flexoki, Nord, and Gruvbox.
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-variants.png)
+![[minimal-variants.png]]
 
 [[Helper classes]] for [[tables]] and [[cards]] allow you to create powerful workflows.
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-movies.png)
+![[minimal-movies.png]]
 
 Combining [[focus mode]] with [[image grids]] and [[block width]] options allows you to immerse yourself in visual projects.
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-img-grid.png)
+![[minimal-img-grid.png]]
 
 Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, and more.
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-plugins.png)
+![[minimal-plugins.png]]
 
 ## App-level features
 

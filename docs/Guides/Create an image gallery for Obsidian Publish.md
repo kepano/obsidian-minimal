@@ -16,43 +16,14 @@ This gallery uses [[image grids]] with [[Minimal for Obsidian Publish]]. Images 
 
 ## Requirements
 
-For this guide you will need an [Obsidian Publish](https://obsidian.md/publish) site with the following:
+For this guide you will need an [Obsidian Publish](https://obsidian.md/publish) site with a [custom domain](https://help.obsidian.md/Obsidian+Publish/Set+up+a+custom+domain), which is required to use `publish.js` on Obsidian Publish.
 
-- [[Minimal for Obsidian Publish]] version 1.1 or above
-- A [custom domain](https://help.obsidian.md/Obsidian+Publish/Set+up+a+custom+domain), which is required to use `publish.js` on Obsidian Publish
+## Step 1. Add theme and JS code to your vault
 
-## Step 1. Add the zoom code to your Publish Javascript file
+1. Download [[Minimal for Obsidian Publish]] version 1.1+, and add it to your vault.
+2. Download [publish.js](https://github.com/kepano/obsidian-minimal-publish/blob/master/publish.js) with the image zoom code, and add it to your vault.
 
-Learn how to add a `publish.js` file on the official [Obsidian Help site](https://help.obsidian.md/Obsidian+Publish/Customize+your+site).
-
-In your `publish.js` file, add the following code:
-
-```js
-publish.registerMarkdownPostProcessor(async (el, ctx) => {
-  const images = el.querySelectorAll('.internal-embed');
-  images.forEach(image => {
-    image.addEventListener('click', function() {
-      const lightboxDiv = document.createElement('div');
-      lightboxDiv.classList.add('lightbox');
-      const contentToMove = this.cloneNode(true);
-      lightboxDiv.appendChild(contentToMove);
-      document.body.appendChild(lightboxDiv);
-      const removeLightbox = () => {
-        document.body.removeChild(lightboxDiv);
-        document.removeEventListener('keydown', escapeKeyListener);
-      };
-      lightboxDiv.addEventListener('click', removeLightbox);
-      const escapeKeyListener = (event) => {
-        if (event.key === "Escape") {
-          removeLightbox();
-        }
-      };
-      document.addEventListener('keydown', escapeKeyListener);
-    });
-  });
-});
-
-```
+Learn more about how to use `publish.css` and `publish.js` on the official [Obsidian Help site](https://help.obsidian.md/Obsidian+Publish/Customize+your+site).
 
 ## Step 2. Add helper classes to your note
 
@@ -80,7 +51,4 @@ You’re done! Refresh your site to see the image gallery. Note it may require a
 
 ## Adapting this code to other Publish themes
 
-The resources associated with this feature can be found in the Minimal for Publish [GitHub repo](https://github.com/kepano/obsidian-minimal-publish/tree/master). You can use this to adapt the CSS and JS to other Publish themes.
-
-- [Image zoom CSS](https://github.com/kepano/obsidian-minimal-publish/blob/master/src/scss/publish/images.scss)
-- [Publish.js file](https://github.com/kepano/obsidian-minimal-publish/blob/master/publish.js)
+The resources associated with this feature can be found in the Minimal for Publish [GitHub repo](https://github.com/kepano/obsidian-minimal-publish/tree/master). You can use this to adapt the CSS and JS to other Publish themes. [Image zoom CSS](https://github.com/kepano/obsidian-minimal-publish/blob/master/src/scss/publish/images.scss)
