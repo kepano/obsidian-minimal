@@ -3,8 +3,8 @@ permalink: cards
 cssclasses:
   - table-col-1-150
   - table-100
+  - img-zoom
 ---
-
 #features #blocks
 
 ## Overview
@@ -32,14 +32,14 @@ Use `list-cards` to turn all bullet lists in your note into cards
 
 These examples show cards being used to [[Create a movie database|create a personal movie database]].
 
-![](https://user-images.githubusercontent.com/10565871/148671142-ac227bb2-ff54-4c07-99b4-f24c55cab0cf.png)
-![](https://user-images.githubusercontent.com/10565871/148671516-348f2b48-440c-484b-8dc2-27006879a1a7.png)
+![[movie-gallery.png]]
+![[movie-gallery-alt.png]]
 
 ## Sorting
 
 To use the sorting menu, install the [[Sortable]] plugin. This is only compatible with cards that use Dataview tables (not bullet lists).
 
-![](https://user-images.githubusercontent.com/10565871/148671518-660a5c8c-6c31-4db6-8fa9-d5e9b22b0b6f.gif#interface)
+![[sorting-cards.gif#interface]]
 
 ## Helper classes
 

@@ -17,8 +17,8 @@ This guide will cover the following steps:
 
 The end result will look something like this:
 
-![](https://user-images.githubusercontent.com/10565871/148671142-ac227bb2-ff54-4c07-99b4-f24c55cab0cf.png)
-![](https://user-images.githubusercontent.com/10565871/148671516-348f2b48-440c-484b-8dc2-27006879a1a7.png)
+![[movie-gallery.png]]
+![[movie-gallery-alt.png]]
 
 ## Requirements
 
