@@ -5,7 +5,7 @@ permalink: features/color-schemes
 
 Minimal includes several popular color schemes with [[Minimal Theme Settings]], and the ability to easily create your own with [[Style Settings]].
 
-![](https://user-images.githubusercontent.com/10565871/151719850-704c6e39-7fe9-44ff-803c-43e021aea05b.png)
+![[minimal-color-schemes.png]]
 
 ## Preset color schemes
 
@@ -26,11 +26,15 @@ You can define separate color schemes for light and dark mode using the [[Minima
 - Solarized
 - Things
 
+![[minimal-color-schemes.gif]]
+
 ## Custom color schemes
 
 You can use the [[Style Settings]] plugin to customize your color scheme.
 
 To see your changes more easily, open Style Settings in a new pane by using the command palette (`CMD + P` by default). Using Style Settings you can customize Minimal's colors, font sizes, font styles, and many more details.
+
+![[minimal-style-settings.gif]]
 
 ## Advanced color schemes
 

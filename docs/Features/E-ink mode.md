@@ -2,6 +2,8 @@
 permalink: features/eink
 aliases:
   - Features/Eink mode
+cssclasses:
+  - img-zoom
 ---
 > [!warning] Beta feature
 > E-ink mode is currently in beta and still under development. Expect to find bugs and unexpected behaviors with this color scheme.

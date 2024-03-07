@@ -20,7 +20,7 @@ Block layout also makes it much easier to navigate wide tables on your mobile de
 
 This example shows cycling between table width options using [[Hotkeys]]
 
-![](https://user-images.githubusercontent.com/10565871/147195354-51ed225b-7d25-4fbc-8483-4bb978e2fdf2.gif)
+![[minimal-block-width.gif]]
 
 ## Line width settings
 
@@ -52,4 +52,4 @@ The following [[Helper classes]] can be used to force the width of blocks within
 
 You can visualize the block width settings by using the command palette (`CMD + P`) and turning on the `Minimal Theme Settings: Show block widths` toggle.
 
-![[dev-mode.gif]]
+![[minimal-dev-mode.gif]]
