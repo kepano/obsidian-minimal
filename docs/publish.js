@@ -28,7 +28,7 @@ function updateCurrentPath() {
   currentPath = publish.currentFilepath;
   if (!imagesByPath[currentPath]) {
     imagesByPath[currentPath] = [];
-    preloadAllImages(); // Preload all images when the path is first encountered
+    preloadAllImages();
   }
 }
 
@@ -80,4 +80,3 @@ publish.registerMarkdownPostProcessor(async (el, ctx) => {
     }
   });
 });
-
