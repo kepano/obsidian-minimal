@@ -18,7 +18,7 @@ This gallery uses [[image grids]] with [[Minimal for Obsidian Publish]]. Images 
 
 For this guide you will need an [Obsidian Publish](https://obsidian.md/publish) site with the following:
 
-- Version 1.1. of [[Minimal for Obsidian Publish]] or above
+- [[Minimal for Obsidian Publish]] version 1.1 or above
 - A [custom domain](https://help.obsidian.md/Obsidian+Publish/Set+up+a+custom+domain), which is required to use `publish.js` on Obsidian Publish
 
 ## Step 1. Add the zoom code to your Publish Javascript file
