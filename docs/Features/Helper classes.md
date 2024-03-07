@@ -4,7 +4,6 @@ cssclasses:
   - table-col-1-150
   - table-full
 ---
-
 ## How to use helper classes
 
 Helper classes are added using the special `cssclasses` [property](https://help.obsidian.md/Editing+and+formatting/Properties). In source mode it should look like this:
@@ -59,7 +58,7 @@ Controls the styling of [[embeds]]
 Controls the row and column styling of [[tables]]
 
 | Class           | Description                                         |
-|:--------------- |:--------------------------------------------------- |
+| :-------------- | :-------------------------------------------------- |
 | `table-nowrap`  | Disable line wrapping in table cells                |
 | `table-wrap`    | Force wrapping in table cells                       |
 | `table-numbers` | Add row numbers to tables                           |
@@ -71,16 +70,16 @@ Controls the row and column styling of [[tables]]
 | `col-lines`     | Add borders between table columns                   |
 | `row-alt`       | Add striped background to alternating table rows    |
 | `col-alt`       | Add striped background to alternating table columns |
-| `row-highlight` | Highlight rows on hover                             | 
+| `row-highlight` | Highlight rows on hover                             |
 
 ## Cards
 
 Helper class for [[Cards]] feature
 
 | Class                 | Description                                      |
-|:--------------------- |:------------------------------------------------ |
+| :-------------------- | :----------------------------------------------- |
 | `cards` (required)    | Set all Dataview tables to card layout           |
-| `list-cards`          | Set all bullet lists to card layout           | 
+| `list-cards`          | Set all bullet lists to card layout              |
 | `cards-align-bottom`  | Align the last element of a card to the bottom   |
 | `cards-cover`         | Images are resized to fill the defined space     |
 | `cards-16-9`          | Fit images in cards to 16:9 ratio                |

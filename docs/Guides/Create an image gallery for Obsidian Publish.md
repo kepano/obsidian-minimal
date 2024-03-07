@@ -77,3 +77,10 @@ The final step is to publish all the relevant resources:
 More information can be found on the [Obsidian Help Site](https://help.obsidian.md/Obsidian+Publish/Publish+and+unpublish+notes).
 
 You’re done! Refresh your site to see the image gallery. Note it may require a hard refresh (using `CMD + Shift + R`) or a few minutes to clear the cache.
+
+## Adapting this code to other Publish themes
+
+The resources associated with this feature can be found in the Minimal for Publish [GitHub repo](https://github.com/kepano/obsidian-minimal-publish/tree/master). You can use this to adapt the CSS and JS to other Publish themes.
+
+- [Image zoom CSS](https://github.com/kepano/obsidian-minimal-publish/blob/master/src/scss/publish/images.scss)
+- [Publish.js file](https://github.com/kepano/obsidian-minimal-publish/blob/master/publish.js)
