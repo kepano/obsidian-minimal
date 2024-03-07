@@ -72,7 +72,7 @@ rating:
 
 Below is an example of all the metadata that OMDb provides for the film Pulp Fiction. You can use any of the fields (e.g. "Title", "Year", etc) in your template.
 
-```
+```json
 {
   Title: "Pulp Fiction",
   Year: "1994",
@@ -139,11 +139,15 @@ Let's give your new command a test run!
 
 To see all of the movies you saved in one place, create a new note called something like "Movie Gallery".
 
-At the top of your note copy/paste the following [[Helper classes]], only `cards` is necessary but the other [[Cards]] helpers provide nicer formatting for posters
+At the top of your note add the following [[Helper classes]], only `cards` is necessary but the other [[Cards]] helpers provide nicer formatting for posters
 
 ```
 ---
-cssclasses: cards, cards-cover, cards-2-3, table-max
+cssclasses:
+  - cards
+  - cards-cover
+  - cards-2-3
+  - table-max
 ---
 ```
 

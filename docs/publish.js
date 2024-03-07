@@ -17,9 +17,18 @@ publish.registerMarkdownPostProcessor(async (el, ctx) => {
 
       document.body.appendChild(lightboxDiv);
 
-      lightboxDiv.addEventListener('click', function() {
+      const removeLightbox = () => {
         document.body.removeChild(lightboxDiv);
-      });
+        document.removeEventListener('keydown', escapeKeyListener);
+      };
+
+      lightboxDiv.addEventListener('click', removeLightbox);
+      const escapeKeyListener = (event) => {
+        if (event.key === "Escape") {
+          removeLightbox();
+        }
+      };
+      document.addEventListener('keydown', escapeKeyListener);
     });
   });
 });
