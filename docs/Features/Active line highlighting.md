@@ -1,5 +1,7 @@
 ---
 permalink: features/active-line
+cssclasses:
+  - img-zoom
 ---
 #features 
 
@@ -9,7 +11,7 @@ This feature can be turned on using [[Style Settings]] plugin. You can also cont
 
 Minimal differentiates active line, highlighted text, selected text, and search terms, while allowing all of these visual cues to stack on top of each other. The active line uses light gray in the screenshot below.
 
-![](https://user-images.githubusercontent.com/10565871/167271049-f773048d-6d19-4605-a2db-b8784fe7e868.png)
+![[active-line.png]]
 
 ## Line number position
 
@@ -17,4 +19,4 @@ As of [version 5.2](https://github.com/kepano/obsidian-minimal/releases/tag/5.2.
 
 Turning on active line highlighting can help you see which line is active. 
 
-![Block width and active line](https://user-images.githubusercontent.com/10565871/167271388-f455e2ca-1bed-42d6-90bf-10e5a97ac0c8.gif)
+![[line-number.gif]]

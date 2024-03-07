@@ -20,8 +20,7 @@ Dark mode options:
 - **Low contrast** uses the same background for sidebar and main panel
 - **True black (dark mode only)** uses pure black sidebar and main panel
 
-
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-variants.png)
+![[minimal-variants.png]]
 
 ## Hotkeys
 
