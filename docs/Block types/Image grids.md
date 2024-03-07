@@ -3,6 +3,7 @@ permalink: image-grids
 cssclasses:
   - table-col-1-150
   - img-grid
+  - img-zoom
 ---
 
 #features #blocks
@@ -13,13 +14,13 @@ Image grids are a simple way to arrange [[images]] in columns. This feature is c
 
 Image grids can be activated globally using [[Minimal Theme Settings]] and [[Hotkeys]], or on a per-file basis using the [[Helper classes]].
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-img-grid.png)
+![[minimal-img-grid.png]]
 
 ## Demo
 
 Image grids are easy to use, and don't rely on any special syntax. All you do is add an extra line break between images to create a row, and columns take care of themselves
 
-![](https://user-images.githubusercontent.com/10565871/147193674-179f9a12-3ea8-4e6b-8ac4-34e3093846da.gif)
+![[minimal-img-grid-demo.gif]]
 
 ## Known limitations
 

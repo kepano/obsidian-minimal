@@ -37,13 +37,15 @@ cssclasses:
 ---
 ```
 
+From here you can add images to your note following the instructions in [[Image grids]]. Note that the code for image zoom currently only supports local image embeds (not remote assets).
+
 ## Step 3. Publish your note and resources
 
 The final step is to publish all the relevant resources:
 
 - Your `publish.js` file
 - Your `publish.css` file
-- Your note and relevant attachments
+- Your note and images
 
 More information can be found on the [Obsidian Help Site](https://help.obsidian.md/Obsidian+Publish/Publish+and+unpublish+notes).
 

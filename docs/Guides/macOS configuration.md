@@ -3,6 +3,8 @@ permalink: guides/macos-config
 aliases:
   - Features/macOS configuration
 description: Recommended settings for a native macOS appearance with Minimal Theme.
+cssclasses:
+  - img-zoom
 ---
 
 ![[minimal-macos-config.png]]

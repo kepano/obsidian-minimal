@@ -1,5 +1,7 @@
 ---
 permalink: plugins/charts
+cssclasses:
+  - img-zoom
 ---
 #plugins 
 
