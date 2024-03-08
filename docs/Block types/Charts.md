@@ -1,5 +1,7 @@
 ---
 permalink: charts
+cssclasses:
+  - img-zoom
 ---
 #blocks 
 

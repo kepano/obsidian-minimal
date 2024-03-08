@@ -49,6 +49,25 @@ publish.registerMarkdownPostProcessor(async (el, ctx) => {
         lightboxDiv.appendChild(contentToMove);
         document.body.appendChild(lightboxDiv);
 
+        let startX;
+        lightboxDiv.addEventListener('touchstart', e => {
+          startX = e.touches[0].clientX;
+        });
+
+        lightboxDiv.addEventListener('touchend', e => {
+          const endX = e.changedTouches[0].clientX;
+          if (startX - endX > 50) {
+            // Swipe left
+            currentImageIndex = (currentImageIndex + 1) % imagesByPath[currentPath].length;
+          } else if (startX - endX < -50) {
+            // Swipe right
+            currentImageIndex = (currentImageIndex - 1 + imagesByPath[currentPath].length) % imagesByPath[currentPath].length;
+          }
+          lightboxDiv.innerHTML = '';
+          const newContent = imagesByPath[currentPath][currentImageIndex].cloneNode(true);
+          lightboxDiv.appendChild(newContent);
+        });
+
         const removeLightbox = () => {
           document.body.removeChild(lightboxDiv);
           document.removeEventListener('keydown', keyListener);
@@ -80,3 +99,4 @@ publish.registerMarkdownPostProcessor(async (el, ctx) => {
     }
   });
 });
+

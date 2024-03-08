@@ -71,6 +71,7 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - [[Image zoom]]
 - [[Line width]]
 - [[Match system theme]]
+- [[Minimal for Obsidian Publish|Publish support]]
 - [[Tab styles]]
 - [[Navigation labels]]
 
@@ -114,6 +115,7 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 ## Guides
 
 - [[Create a movie database]]
+- [[Create an image gallery for Obsidian Publish]]
 - [[macOS configuration|Make Obsidian feel like a native macOS app]]
 
 ## Troubleshooting
