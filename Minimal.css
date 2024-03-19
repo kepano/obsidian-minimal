@@ -2183,7 +2183,6 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> iframe) iframe,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .cm-html-embed) iframe {
   max-width: var(--iframe-max-width);
-  width: var(--iframe-width);
 }
 
 .borders-none {
