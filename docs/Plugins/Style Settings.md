@@ -48,7 +48,7 @@ Used for links, buttons and other interactive elements
 | Accent color             | `--ax1`  |
 | Accent color (hover)     | `--ax2`  |
 | Accent color interactive | `--ax3`  |
-| Text on accent           | `--sp1`  | 
+| Text on accent           | `--sp1`  |
 
 ### Extended colors
 
@@ -63,7 +63,7 @@ Colors used for [[Progress bars]], [[Charts]], [[Checklists]], [[Graphs]], synta
 | Cyan    | `--cyan`   |
 | Blue    | `--blue`   |
 | Purple  | `--purple` |
-| Pink    | `--pink`   | 
+| Pink    | `--pink`   |
 
 ### Active line
 
@@ -83,24 +83,24 @@ Define the [[Active line highlighting]] feature and background color
 | Blockquotes border color     | `--blockquote-border-color`     |
 | Blockquotes border thickness | `--blockquote-border-thickness` |
 | Blockquotes font size        | `--blockquote-size`             |
-| Blockquotes font style       | `--blockquote-font-style`       | 
+| Blockquotes font style       | `--blockquote-font-style`       |
 
 ### Callouts
 
 | Setting        | Variable               |
 | -------------- | ---------------------- |
-| Color blending | `--callout-blend-mode` | 
+| Color blending | `--callout-blend-mode` |
 
 ### Code blocks
 
 For [[Code blocks]]
 
-| Setting               | Variable             |
-| --------------------- | -------------------- |
-| Code font size        | `--code-font-size`   | 
-| Scroll long lines     |                      |
-| Code background color | `--code-background`  |
-| Code text color       | `--code-normal`      |
+| Setting               | Variable            |
+| --------------------- | ------------------- |
+| Code font size        | `--code-font-size`  |
+| Scroll long lines     |                     |
+| Code background color | `--code-background` |
+| Code text color       | `--code-normal`     |
 
 #### Syntax highlighting
 
@@ -124,18 +124,21 @@ For [[Dataview]] plugin
 | Setting                       | Variable          |
 | ----------------------------- | ----------------- |
 | Trim Dataview columns         |                   |
-| Dataview maximum column width | `--max-col-width` | 
+| Force table lists inline      |                   |
+| Dataview maximum column width | `--max-col-width` |
 
 ### Embeds and transclusions
 
 For [[Embeds]]
 
-| Setting                         | Variable                  |
-| ------------------------------- | ------------------------- |
-| Use strict embed style globally |                           |
-| Underline embedded text         |                           |
+| Setting                         | Variable                   |
+| ------------------------------- | -------------------------- |
+| Use strict embed style globally |                            |
+| Hide embed titles               |                            |
+| Underline embedded text         |                            |
 | Embedded text underline style   | `--embed-decoration-style` |
-| Embedded text underline color   | `--embed-decoration-color` | 
+| Embedded text underline color   | `--embed-decoration-color` |
+| Embed background                | `--embed-background`       |
 
 ### Graphs
 
@@ -171,7 +174,7 @@ Define the color and opacity of icons found through the interface on buttons and
 | ------------------- | --------------------- |
 | Icon opacity        | `--icon-muted`        |
 | Icon color          | `--icon-color`        |
-| Icon color (hover)  | `--icon-color-hover`  | 
+| Icon color (hover)  | `--icon-color-hover`  |
 | Icon color (active) | `--icon-color-active` |
 
 ### Images
@@ -185,12 +188,12 @@ Define styles for [[Images]]
 
 ### Indentation Guides
 
-| Setting                               | Variable                         |
-| ------------------------------------- | -------------------------------- |
-| Horizontal adjustment in reading mode | `--ig-adjust-reading`            |
-| Horizontal adjustment in editing mode | `--ig-adjust-edit`               |
-| Indentation guide color               | `--indentation-guide-color`                                 |
-| Indentation guide color (active)      | `--indentation-guide-color-active` | 
+| Setting                               | Variable                           |
+| ------------------------------------- | ---------------------------------- |
+| Horizontal adjustment in reading mode | `--ig-adjust-reading`              |
+| Horizontal adjustment in editing mode | `--ig-adjust-edit`                 |
+| Indentation guide color               | `--indentation-guide-color`        |
+| Indentation guide color (active)      | `--indentation-guide-color-active` |
 
 ### Links
 
@@ -204,7 +207,7 @@ Defines the color of links
 | Unresolved link color           | `--link-unresolved-color`            |
 | Unresolved link underline color | `--link-unresolved-decoration-color` |
 | External link color             | `--link-external-color`              |
-| External link color (hover)     | `--link-external-color-hover`        | 
+| External link color (hover)     | `--link-external-color-hover`        |
 
 ### Lists and checkboxes
 
@@ -212,11 +215,31 @@ Define the style of [[Checklists]]
 
 | Setting                 | Variable           |
 | ----------------------- | ------------------ |
-| Checkbox color          | `--checkbox-color` | 
+| Checkbox color          | `--checkbox-color` |
 | Checkbox shape          |                    |
 | Strike completed tasks  |                    |
 | List item spacing       | `--list-spacing`   |
 | Nested list indentation | `--list-indent`    |
+
+### Progress bars
+
+Define the style of [[Progress bars]]
+
+| Setting                      | Variable               |
+| ---------------------------- | ---------------------- |
+| Completed progress bar color | `--progress-completed` |
+
+## Properties
+
+Define the style of properties
+
+| Setting                    | Variable                 |
+| -------------------------- | ------------------------ |
+| Hide properties heading    |                          |
+| Hide "Add property" button |                          |
+| Hide property icons        |                          |
+| Property row lines         |                          |
+| Property name width        | `--metadata-label-width` |
 
 ### Sidebars
 
@@ -224,8 +247,8 @@ Define the [[Tab styles]] and other sidebar settings
 
 | Setting                    | Variable                       |
 | -------------------------- | ------------------------------ |
-| Disable relationship lines |                                |
 | Sidebar tab style          |                                |
+| Sidebar tab names          |                                |
 | Mobile left sidebar width  | `--mobile-left-sidebar-width`  |
 | Mobile right sidebar width | `--mobile-right-sidebar-width` |
 
@@ -257,7 +280,7 @@ Defines [[Tab styles]] in the main window (for sidebar tab styles go to **Sideba
 | Tab bar height          | `--header-height`                 |
 | Tab style               |                                   |
 | Tab text color          | `--minimal-tab-text-color`        |
-| Tab text color (active) | `--minimal-tab-text-color-active` | 
+| Tab text color (active) | `--minimal-tab-text-color-active` |
 
 ### Tab stacks
 
@@ -265,7 +288,7 @@ Defines [[Tab styles]] in the main window (for sidebar tab styles go to **Sideba
 | ---------------------- | ---------------------------- |
 | Stacked width          | `--tab-stacked-pane-width`   |
 | Spine width            | `--tab-stacked-header-width` |
-| Spine text orientation |                              | 
+| Spine text orientation |                              |
 
 ### Tags
 
@@ -301,7 +324,7 @@ Tab title bar must be turned on in Appearance settings
 | Setting                         | Variable                    |
 | ------------------------------- | --------------------------- |
 | Tab title visibility            |                             |
-| Tab title font size             | `--file-header-font-size`   | 
+| Tab title font size             | `--file-header-font-size`   |
 | Title font weight               | `--file-header-font-weight` |
 | Tab title alignment             | `--file-header-justify`     |
 | Tab title text color (active)   | `--title-color`             |
@@ -315,7 +338,7 @@ Inline titles must be turned on in Appearance settings
 | -------------------------------- | ----------------------- |
 | Inline title font                | `--inline-title-font`   |
 | Inline title font size           | `--inline-title-size`   |
-| Inline title font weight         | `--inline-title-weight` | 
+| Inline title font weight         | `--inline-title-weight` |
 | Inline title text color (active) | `--inline-title-color`  |
 
 ### Translucency
@@ -324,7 +347,7 @@ For fine-grained translucency preferences
 
 | Setting                      | Variable                             |
 | ---------------------------- | ------------------------------------ |
-| Translucent background color | `--workspace-background-translucent` | 
+| Translucent background color | `--workspace-background-translucent` |
 
 ### Window frame
 
@@ -337,7 +360,7 @@ Settings for [[Colorful frame]]
 | Frame icon color             | `--frame-icon-color`            |
 | Frame title color (focused)  | `--titlebar-text-color-focused` |
 | Frame title color (inactive) | `--titlebar-text-color`         |
-| Frame title font weight      | `--titlebar-text-weight`        | 
+| Frame title font weight      | `--titlebar-text-weight`        |
 
 ## Minimal Cards
 
@@ -350,12 +373,12 @@ For use with [[Cards]]
 | Card minimum width on mobile | `--cards-mobile-width` |
 | Card padding                 | `--cards-padding`      |
 | Card maximum image height    | `--cards-image-height` |
-| Card border width            | `--cards-border-width` | 
+| Card border width            | `--cards-border-width` |
 | Card background color        | `--cards-background`   |
 
 ## Minimal Advanced Settings
 
-| Settings             | Variable          | 
+| Settings             | Variable          |
 | -------------------- | ----------------- |
 | Display window title |                   |
 | Cursor style         | `--cursor`        |
