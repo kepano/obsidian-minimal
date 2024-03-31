@@ -5534,6 +5534,10 @@ body .cm-heading-marker {
   --leaflet-borders:rgba(255,255,255,0.1);
 }
 
+.leaflet-container {
+  --image-radius:0;
+}
+
 .leaflet-top {
   transition: top 0.1s linear;
 }
