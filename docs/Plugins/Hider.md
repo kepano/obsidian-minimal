@@ -5,7 +5,7 @@ permalink: plugins/hider
 
 [Open plugin in Obsidian](obsidian://show-plugin?id=obsidian-hider)
 
-# Overview
+## Overview
 
 This plugin enables you to hide parts of the Obsidian UI. It can help you create a distraction-free inerface, and configure Obsidian for a more [[macOS configuration|macOS-native appearance]].
 
@@ -18,7 +18,7 @@ This plugin enables you to hide parts of the Obsidian UI. It can help you create
 - Hide search suggestions
 - Hide metadata block in Reading view
 
-# Developers
+## Developers
 
 Hider injects the following classes on the `body` element when features are toggled on. These can be useful when combined with [[CSS snippets]].
 

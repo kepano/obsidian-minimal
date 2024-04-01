@@ -15,12 +15,12 @@ Depending on the level of completion, the color of the progress bar changes, usi
 
 ## Dataview example
 
-Example [[Dataview]] query showing progress bar and percentage number below
+Example [[Dataview]] query showing progress bar and percentage number below:
 
 ```
 = "<progress value='" + (length(filter(this.file.tasks.completed, (t) => t = true)) / length(this.file.tasks)) * 100 + "' max='100'></progress>" + "<br>" + round((length(filter(this.file.tasks.completed, (t) => t = true)) / length(this.file.tasks)) * 100) + "% completed"
 ```
 
-The screenshot below shows the output using the default color scheme
+The screenshot below shows the output using the default color scheme.
 
-![](https://user-images.githubusercontent.com/10565871/150650747-72ad019f-3281-446e-9999-86ef7f4a5e38.png#outline)
+![[minimal-progress-bars.png#interface|500]]

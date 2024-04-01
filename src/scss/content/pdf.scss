@@ -27,8 +27,7 @@ body {
 		opacity: var(--pdf-dark-opacity);
 	}
 	&.pdf-invert-dark .workspace-leaf-content[data-type=pdf] {
-		.pdf-viewer .canvasWrapper,
-		.pdf-thumbnail-view .thumbnailImage {
+		.pdf-viewer .canvasWrapper {
 			filter: invert(1) hue-rotate(180deg);
 			mix-blend-mode: screen;
 		}
@@ -36,8 +35,7 @@ body {
 }
 .theme-light {
 	&.pdf-blend-light .workspace-leaf-content[data-type=pdf] {
-		.pdf-viewer .canvasWrapper,
-		.pdf-thumbnail-view .thumbnailImage {
+		.pdf-viewer .canvasWrapper {
 			mix-blend-mode: multiply;
 		}
 	}

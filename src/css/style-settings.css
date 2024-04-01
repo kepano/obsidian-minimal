@@ -1074,24 +1074,6 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: ig-adjust-reading
-		title: Horizontal adjustment in reading mode
-		type: variable-number-slider
-		default: -0.65
-		min: -1.2
-		max: 0
-		step: 0.05
-		format: em
-	-
-		id: ig-adjust-edit
-		title: Horizontal adjustment in edit mode
-		type: variable-number-slider
-		default: -1
-		min: -10
-		max: 10
-		step: 1
-		format: px
-	-
 		id: indentation-guide-color
 		title: Indentation guide color
 		type: variable-themed-color
@@ -1383,11 +1365,6 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: sidebar-lines-off
-		title: Hide sidebar relationship lines
-		description: Turns off lines in file navigation
-		type: class-toggle
-	-
 		id: sidebar-tabs-style
 		title: Sidebar tab style
 		type: class-select
@@ -1409,7 +1386,22 @@ settings:
 			-
 				label: Underline
 				value: sidebar-tabs-underline
-
+	-
+		id: sidebar-tabs-names
+		title: Sidebar tab names
+		type: class-select
+		allowEmpty: false
+		default: tab-names-off
+		options:
+			-
+				label: Hidden
+				value: tab-names-off
+			-
+				label: Visible
+				value: tab-names-on
+			-
+				label: Single tab only
+				value: tab-names-single
 	-
 		id: mobile-left-sidebar-width
 		title: Mobile left sidebar width

@@ -8,10 +8,7 @@
 .markdown-source-view.mod-cm6 hr {
 	border-width:2px;
 }
-.mod-cm6 .cm-editor .cm-line {
-	padding-left: 0;
-	padding-right: 0;
-}
+
 .cm-editor .cm-content {
 	padding-top:0.5em;
 }
@@ -76,9 +73,6 @@ body {
 		padding-inline-end:4px;
 		padding-inline-start:8px;
 	}
-}
-.cm-editor .cm-lineNumbers .cm-gutterElement {
-	font-variant-numeric:tabular-nums;
 }
 .cm-editor .cm-lineNumbers .cm-gutterElement.cm-active,
 .cm-editor .cm-gutterElement.cm-active .cm-heading-marker {

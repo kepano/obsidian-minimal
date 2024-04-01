@@ -2,7 +2,8 @@
     "name": "minimal",
     "version": "1.0.0",
     "dependencies": {
-        "dotenv": "^10.0.0"
+        "dotenv": "^10.0.0",
+        "sass": "^1.71.1"
     },
     "devDependencies": {
         "grunt": "^1.5.3",

@@ -26,19 +26,19 @@ Minimal is an [Obsidian](https://obsidian.md/) theme for desktop, mobile and tab
 
 **Background styles** include low contrast, high contrast, and a true black option ideal for OLED devices
 
-![](/assets/minimal-variants.png)
+![](/docs/Images/minimal-variants.png)
 
 **Helper classes** for tables and card layouts allow you to create powerful workflows
 
-![](/assets/minimal-movies.png)
+![](/docs/Images/minimal-movies.png)
 
 Combining **focus mode** with **image grid** and **image width** options allows you to immerse yourself in visual projects
 
-![](/assets/minimal-img-grid.png)
+![](/docs/Images/minimal-img-grid.png)
 
 Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, [and more](#plugin-support)
 
-![](/assets/minimal-plugins.png)
+![](/docs/Images/minimal-plugins.png)
 
 ## Installation
 
@@ -95,13 +95,13 @@ Controls images, tables and iframes. These settings can also be enabled on a per
 
 Minimal offers color schemes that can be separately selected for light and dark mode using the [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) plugin. Color schemes include Dracula, Everforest, Gruvbox, macOS, Nord, Notion, Solarized, and Things. 
 
-![Minimal Theme Settings](/assets/minimal-color-schemes.gif)
+![Minimal Theme Settings](/docs/Images/minimal-color-schemes.gif)
 
 ### Custom color schemes
 
 You can use the Style Settings plugin to customize your color scheme. To see your changes more easily, open Style Settings in a new pane by using the command palette (`CMD + P` by default). Using Style Settings you can customize Minimal's colors, font sizes, font styles, and many more details.
 
-![Style Settings](/assets/minimal-style-settings.gif)
+![Style Settings](/docs/Images/minimal-style-settings.gif)
 
 ## Plugin support
 

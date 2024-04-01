@@ -18,8 +18,8 @@ body:not(.minimal-focus-mode) .workspace-ribbon:not(.is-collapsed) ~ .mod-root .
 .workspace-ribbon.mod-left.is-collapsed ~ .mod-root .view-header:hover .view-actions,
 .mod-right.is-collapsed ~ .mod-root .view-header:hover .view-actions,
 .view-action.is-active:hover {
-  opacity:1;
-  transition:opacity 0.25s ease-in-out;
+	opacity:1;
+	transition:opacity 0.25s ease-in-out;
 }
 
 

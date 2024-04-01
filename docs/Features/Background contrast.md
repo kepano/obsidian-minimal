@@ -3,7 +3,7 @@ permalink: features/contrast
 ---
 #features
 
-# Overview
+## Overview
 
 Background contrast can be changed using [[Minimal Theme Settings]] and are compatible with [[Color schemes]]. They can also be toggled via the command palette and [[hotkeys]].
 
@@ -20,10 +20,9 @@ Dark mode options:
 - **Low contrast** uses the same background for sidebar and main panel
 - **True black (dark mode only)** uses pure black sidebar and main panel
 
+![[minimal-variants.png]]
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-variants.png)
-
-# Hotkeys
+## Hotkeys
 
 - Switch between light and dark mode
 - Cycle between light mode background contrast styles

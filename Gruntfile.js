@@ -28,9 +28,6 @@ module.exports = function(grunt) {
         the theme using Sass */ 
         sass: {
             unminified: {
-                options: {
-                    sourcemap: 'none'
-                },
                 files: {
                     'src/css/main.css' : 'src/scss/index.scss'
                 }
@@ -38,7 +35,6 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     style: 'compressed',
-                    sourcemap: 'none'
                 },
                 files: {
                     'src/css/main.min.css' : 'src/scss/index.scss'

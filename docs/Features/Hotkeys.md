@@ -5,31 +5,31 @@ permalink: features/hotkeys
 
 Hotkeys can be defined using the [[Minimal Theme Settings]] plugin. You can also access these commands using the command palette (`CMD + P` by default).
 
-# Typography
+## Typography
 
 - Increase and decrease body font size
 
-# Focus mode
+## Focus mode
 
 - Toggle [[Focus mode]]
 
-# Color scheme
+## Color scheme
 
 - Switch to any of the preset [[Color schemes]]
 - Toggle [[Colorful frame]]
 
-# Background and borders
+## Background and borders
 
 - Switch between light and dark mode
 - Cycle between light mode background contrast styles
 - Cycle between dark mode background contrast styles
 - Toggle sidebar borders
 
-# Image grid
+## Image grid
 
 - Toggle [[Image grids]] globally
 
-# Block widths
+## Block widths
 
 [[Block width]] features at the global level:
 

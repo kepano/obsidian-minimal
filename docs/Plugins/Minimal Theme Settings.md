@@ -7,13 +7,13 @@ description: Minimal Theme Settings is the official plugin that accompanies Mini
 
 [Open plugin in Obsidian](obsidian://show-plugin?id=obsidian-minimal-settings)
 
-# Overview
+## Overview
 
 Minimal Theme Settings is the official plugin that accompanies [[Home|Minimal]]. It allows you to customize Minimal from the Obsidian Settings panel. This plugin is not required, but **highly recommended**.
 
 Minimal Theme Settings is required for [[Hotkeys]] support.
 
-# Installation
+## Installation
 
 Use [this link to open in Obsidian](obsidian://show-plugin?id=obsidian-minimal-settings) or follow the instructions below:
 
@@ -21,16 +21,16 @@ Use [this link to open in Obsidian](obsidian://show-plugin?id=obsidian-minimal-s
 - Go to `Community plugins` and turn off `Safe mode`
 - Under community themes search for "Minimal Theme Settings" and click `Install`, then `Enable`
 
-# Settings
+## Settings
 
-## Color scheme
+### Color scheme
 
 Choose from preset [[Color schemes]] or customize your own with [[Style Settings]]
 
 - Light mode color scheme
 - Dark mode color scheme
 
-### Background contrast options
+#### Background contrast options
 
 Choose [[Background contrast]] options
 
@@ -40,11 +40,11 @@ Choose [[Background contrast]] options
 - **High contrast (light mode only)** uses dark sidebar and light main panel
 - **True black (dark mode only)** uses pure black sidebar and main panel
 
-### Accent color
+#### Accent color
 
 - Control the accent color hue and saturation. This color is used for interactive elements such as links, buttons, text selections, and more.
 
-## Features
+### Features
 
 The following features can be toggled on or off:
 
@@ -61,16 +61,16 @@ The following features can be toggled on or off:
 - **Underline external links** — Show underlines on external links
 - **Maximize media** — Images and videos fill the width of the line
 
-## Typography
+### Typography
 
-### Fonts
+#### Fonts
 
 - Editor font
 - Body font size
 - Sidebar font size
 - Line height
 
-### Line width
+#### Line width
 
 See [[Line width]] for more details
 

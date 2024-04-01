@@ -9,8 +9,9 @@ Minimal Publish is a stripped-down version of Minimal for [Obsidian Publish](htt
 
 - Adheres to [best practices](https://docs.obsidian.md/Themes/Obsidian+Publish+themes/Best+practices+for+Publish+themes) for Obsidian Publish themes
 - Much smaller file size **~16KB** compared to **~247KB** for app version, making it faster to download
-- Comes in several [[color schemes]]
-- Compatible with [[helper classes]] such as [[cards]], [[image grids]] and [[Tables|table styles]]
+- Available in several [[color schemes]]
+- Compatible with [[helper classes]] such as [[cards]], [[image grids]], [[image zoom]], and [[Tables|table styles]]
+- Enables creating [[Create an image gallery for Obsidian Publish|zoomable image galleries]]
 
 ## How to install
 

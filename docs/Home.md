@@ -3,13 +3,14 @@ description: Minimal is an open source distraction-free theme for Obsidian, by @
 cssclasses:
   - home-page
   - alt-title
+  - img-zoom
 image: /Images/cover.png
 permalink: home
 ---
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/cover.png)
+![[cover.png]]
 
-# Overview
+## Overview
 
 Minimal is an [open source](https://github.com/kepano/obsidian-minimal) distraction-free theme for [Obsidian](https://obsidian.md/), by [@kepano](https://stephango.com/about). Minimal makes it easy to customize the appearance of Obsidian, to create your ideal writing interface.
 
@@ -17,7 +18,7 @@ You can learn more about me on [my personal site](https://stephango.com/about) a
 
 <a href="https://www.buymeacoffee.com/kepano"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=kepano&button_colour=6a8695&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" width="180px"></a> <a href="https://github.com/kepano/obsidian-minimal"><img src="https://img.shields.io/github/stars/kepano/obsidian-minimal?style=social" style="padding:7px 7px 5px" width="125"></a>
 
-# Get started
+## Get started
 
 ### 1. Install Minimal theme
 
@@ -38,25 +39,26 @@ You can learn more about me on [my personal site](https://stephango.com/about) a
 
 - [[Style Settings]] allows you to create custom [[Color schemes]] and tweak Minimal with more fine-grained control.
 - [[Hider]] hides UI elements such as window frame, scrollbars, tooltips, etc.
-# Screenshots
+
+## Screenshots
 
 Minimal offers multiple options for [[background contrast]] including a true black option ideal for OLED devices. This feature also supports popular [[color schemes]] such as Solarized, Flexoki, Nord, and Gruvbox.
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-variants.png)
+![[minimal-variants.png]]
 
 [[Helper classes]] for [[tables]] and [[cards]] allow you to create powerful workflows.
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-movies.png)
+![[minimal-movies.png]]
 
 Combining [[focus mode]] with [[image grids]] and [[block width]] options allows you to immerse yourself in visual projects.
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-img-grid.png)
+![[minimal-img-grid.png]]
 
 Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, and more.
 
-![](https://github.com/kepano/obsidian-minimal/raw/master/assets/minimal-plugins.png)
+![[minimal-plugins.png]]
 
-# App-level features
+## App-level features
 
 - [[Active line highlighting]]
 - [[Background contrast]]
@@ -69,10 +71,11 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - [[Image zoom]]
 - [[Line width]]
 - [[Match system theme]]
+- [[Minimal for Obsidian Publish|Publish support]]
 - [[Tab styles]]
 - [[Navigation labels]]
 
-# Block-level features
+## Block-level features
 
 - [[Block width]]
 - [[Helper classes]]
@@ -91,14 +94,13 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - [[Progress bars]]
 - [[Tables]]
 
-# Plugin support
+## Plugin support
 
 - [[Calendar]]
 - Checklist
 - [[Charts plugin]]
 - [[Dataview]]
 - Dictionary
-- Excalidraw
 - Git
 - [[Hider]]
 - Kanban
@@ -110,16 +112,17 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - [[Style Settings]]
 - Zoom
 
-# Guides
+## Guides
 
 - [[Create a movie database]]
+- [[Create an image gallery for Obsidian Publish]]
 - [[macOS configuration|Make Obsidian feel like a native macOS app]]
 
-# Troubleshooting
+## Troubleshooting
 
 Visit the [[Help|Help page]] for troubleshooting. Have a question? Join the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
 
-# Contributing
+## Contributing
 
 If you would like add [[Plugin support]], or have found a bug you would like to help fix, don't hesitate to open a pull request. Have a question? Join the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
 
