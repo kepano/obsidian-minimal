@@ -2147,6 +2147,10 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
   --tab-outline-width: 0px;
 }
 
+body:is(.borders-none) .mod-root .workspace-tab-header-container:is(div, :hover) {
+  --tab-outline-width: 0px;
+}
+
 /* MIT License | Copyright (c) Stephan Ango (@kepano) 
 
 Cards snippet for Obsidian
@@ -3092,7 +3096,7 @@ body:not(.minimal-icons-off) svg.longform {
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-new-tab,
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-tab-list {
   opacity: 0;
-  transition: opacity 0.1s linear 0.6s;
+  transition: all 0.1s linear 0.6s;
 }
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-spacer:before {
   width: 100%;
@@ -3104,6 +3108,11 @@ body:not(.minimal-icons-off) svg.longform {
   top: 0;
   left: 0;
 }
+.minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active,
+.minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active::before,
+.minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active::after {
+  transition: all 0.1s linear 0.6s;
+}
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover {
   height: var(--header-height);
   --tab-outline-width: 1px;
@@ -3113,7 +3122,12 @@ body:not(.minimal-icons-off) svg.longform {
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-new-tab,
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-tab-list {
   opacity: 1;
-  transition: opacity 0.1s linear 0.05s;
+  transition: all 0.1s linear 0.05s;
+}
+.minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner .workspace-tab-header.is-active,
+.minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner .workspace-tab-header.is-active::before,
+.minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner .workspace-tab-header.is-active::after {
+  transition: all 0.1s linear 0.05s;
 }
 .minimal-focus-mode.mod-macos:not(.is-fullscreen) .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
   padding-top: 30px;
