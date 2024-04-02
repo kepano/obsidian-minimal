@@ -14,3 +14,21 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 	padding-top:0;
 	padding-bottom:0;
 }
+
+.MySnippets-statusbar-menu .menu-item .MS-OpenSnippet {
+	height: auto;
+	border: none;
+	background: transparent;
+	box-shadow: none;
+	width: auto;
+	padding: 4px 6px;
+	margin-left: 0;
+
+	svg path {
+		fill: var(--text-muted);
+	}
+	&:hover {
+		background-color:var(--background-modifier-hover);
+	}
+}
+

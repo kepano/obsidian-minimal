@@ -76,6 +76,7 @@ span[src$="#round"] img {
 
 /* Outline */
 img[src$="#outline"],
+div[src$="#outline"] img,
 span[src$="#outline"] img {
 	border:1px solid var(--ui1);
 }

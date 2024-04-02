@@ -3419,6 +3419,7 @@ span[src$="#round"] img {
 
 /* Outline */
 img[src$="#outline"],
+div[src$="#outline"] img,
 span[src$="#outline"] img {
   border: 1px solid var(--ui1);
 }
@@ -4677,6 +4678,22 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .MiniSettings-statusbar-button {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.MySnippets-statusbar-menu .menu-item .MS-OpenSnippet {
+  height: auto;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  width: auto;
+  padding: 4px 6px;
+  margin-left: 0;
+}
+.MySnippets-statusbar-menu .menu-item .MS-OpenSnippet svg path {
+  fill: var(--text-muted);
+}
+.MySnippets-statusbar-menu .menu-item .MS-OpenSnippet:hover {
+  background-color: var(--background-modifier-hover);
 }
 
 /* Dataview plugin */
