@@ -162,7 +162,7 @@ Controls the width of elements by type. [Learn more.](https://github.com/kepano/
 
 ### Cards
 
-Using `cards` transforms Dataview tables into cards that can be sorted using the [Sortable plugin](https://github.com/alexandru-dinu/obsidian-sortable). Compatible with table width classes.  Note that `cards` must be present for the other classes to work. [Learn more.]([url](https://minimal.guide/Block+types/Cards))
+Using `cards` transforms Dataview tables into cards. Compatible with table width classes.  Note that `cards` must be present for the other classes to work. [Learn more.]([url](https://minimal.guide/Block+types/Cards))
 
 | Class                 | Description                                      |
 | :-------------------- | :----------------------------------------------- |
