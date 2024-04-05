@@ -119,7 +119,6 @@ Most plugins work well with Minimal, but the following plugins have received spe
 - [Leaflet](https://github.com/valentine195/obsidian-leaflet-plugin) for maps
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 - [QuickAdd](https://github.com/chhoumann/quickadd)
-- [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) — recommended for cards and tables
 
 ## Helper filters and classes
 

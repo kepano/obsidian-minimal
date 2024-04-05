@@ -35,12 +35,6 @@ These examples show cards being used to [[Create a movie database|create a perso
 ![[movie-gallery.png]]
 ![[movie-gallery-alt.png]]
 
-## Sorting
-
-To use the sorting menu, install the [[Sortable]] plugin. This is only compatible with cards that use Dataview tables (not bullet lists).
-
-![[sorting-cards.gif#interface]]
-
 ## Helper classes
 
 To use Cards, add the `cards` or `list-cards` [[Helper classes|helper class]] on a note. Because Cards use [[Tables]] behind the scenes, they are also compatible with [[Block width]] table options.

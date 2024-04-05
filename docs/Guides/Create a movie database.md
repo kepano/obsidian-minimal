@@ -5,7 +5,7 @@ permalink: guides/movie-database
 
 ## Overview
 
-In this guide we will create a personal database of movies and TV shows in Obsidian with a sortable [[Cards]] gallery of posters. You'll be able to easily save movies to your watchlist, and add ratings to movies you've watched. 
+In this guide we will create a personal database of movies and TV shows in Obsidian with a [[Cards]] gallery of posters. You'll be able to easily save movies to your watchlist, and add ratings to movies you've watched. 
 
 This guide will cover the following steps:
 
@@ -13,7 +13,7 @@ This guide will cover the following steps:
 2. Creating your movie note template
 3. Setting up a [[QuickAdd]] macro to fetch movies
 4. Creating an sample note for a movie
-5. Creating a sortable [[Cards]] view to see all your movies in one place
+5. Creating a [[Cards]] view to see all your movies in one place
 
 The end result will look something like this:
 
@@ -27,7 +27,6 @@ For this guide you will need Minimal theme, along with the following plugins ins
 - [[Minimal Theme Settings]] ([open in Obsidian](obsidian://show-plugin?id=obsidian-minimal-settings))
 - [[Dataview]] ([open in Obsidian](obsidian://show-plugin?id=dataview))
 - [[QuickAdd]] ([open in Obsidian](obsidian://show-plugin?id=quickadd))
-- [[Sortable]] ([open in Obsidian](obsidian://show-plugin?id=obsidian-sortable))
 
 In addition you will need an [OMDb API](http://www.omdbapi.com/) key. [You can request one for free here.](http://www.omdbapi.com/apikey.aspx) OMDb is an open movie database which we will use to automatically fetch movie metadata.
 

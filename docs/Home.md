@@ -108,7 +108,6 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - [[Obsidian Publish]]
 - Outliner
 - [[QuickAdd]]
-- [[Sortable]] — recommended for [[Cards]] and [[Tables]]
 - [[Style Settings]]
 - Zoom
 
