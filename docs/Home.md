@@ -70,7 +70,6 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - [[Hotkeys]]
 - [[Image zoom]]
 - [[Line width]]
-- [[Match system theme]]
 - [[Minimal for Obsidian Publish|Publish support]]
 - [[Tab styles]]
 - [[Navigation labels]]

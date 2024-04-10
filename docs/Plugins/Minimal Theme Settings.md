@@ -48,8 +48,7 @@ Choose [[Background contrast]] options
 
 The following features can be toggled on or off:
 
-- **[[Match system theme]]**: Automatically switch between light/dark mode based on your OS setting
-- **[[Navigation labels]]**: Navigation in left sidebar uses text labels
+- **[[Navigation labels]]**: Primary navigation in the left sidebar uses text labels
 - **[[Colorful frame]]** — Text input cursor uses your accent color
 - **Colorful active states** — Active file and menu items use your accent color
 - **[[Colorful headings]]** — Headings use a different color for each size
