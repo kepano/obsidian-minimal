@@ -50,7 +50,7 @@ To install the theme
 
 To install the companion plugin
 
-- Go to `Community plugins` and turn off `Safe mode`
+- Go to `Community plugins` and turn off `Restricted mode`
 - Under community plugins search for "Minimal Theme Settings" and click `Install`, then `Enable`
 
 Have a question? Join the [Minimal channel](https://discord.com/channels/686053708261228577/931008597557649410) on the official [Obsidian Discord](https://discord.gg/veuWUTm).
