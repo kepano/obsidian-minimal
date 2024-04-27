@@ -8,6 +8,7 @@ body {
 /* Strict embeds (naked) */
 .embed-strict {
 	--embed-background: transparent;
+	--embed-border-start: 0;
 	--embed-border-left: 0;
 	--embed-padding: 0;
 

@@ -20,8 +20,8 @@
 	display: block;
 }
 .markdown-source-view.mod-cm6 .cm-scroller {
-	padding-left: 0;
-	padding-right: 0;
+	padding-inline-end: 0;
+	padding-inline-start: 0;
 }
 
 .cm-s-obsidian .cm-line.HyperMD-header {
@@ -94,11 +94,11 @@ body {
 }
 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
 	width:30px !important;
-	padding-left:7px !important;
+	padding-inline-start:7px !important;
 }
 .is-live-preview:not(.is-readable-line-width) .cm-embed-block > .edit-block-button {
-	padding-left:0px !important;
-	margin-left:0 !important;
+	padding-inline-start:0px !important;
+	margin-inline-start:0 !important;
 	padding:4px
 }
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
