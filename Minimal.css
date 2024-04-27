@@ -3693,7 +3693,7 @@ https://github.com/sponsors/kepano
   right: 0;
 }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
-  padding-top: var(--size-4-2);
+  padding: var(--size-4-2) var(--size-4-3);
   margin-top: var(--labeled-nav-top-margin);
   flex-direction: column !important;
   background-color: var(--background-secondary);
