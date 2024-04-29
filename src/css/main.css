@@ -2817,7 +2817,7 @@ li[data-task=b] > p > input:checked {
 
 body:not(.colorful-active) .horizontal-tab-nav-item.is-active,
 body:not(.colorful-active) .vertical-tab-nav-item.is-active {
-  background-color: var(--background-modifier-hover);
+  background-color: var(--bg3);
   color: var(--text-normal);
 }
 
