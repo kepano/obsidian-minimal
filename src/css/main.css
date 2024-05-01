@@ -3650,7 +3650,7 @@ https://github.com/sponsors/kepano
   right: 0;
 }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
-  padding: var(--size-4-2) var(--size-4-3);
+  padding: var(--size-4-2) var(--size-4-2);
   margin-top: var(--labeled-nav-top-margin);
   flex-direction: column !important;
   background-color: var(--background-secondary);
@@ -3889,7 +3889,7 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
   background-color: var(--tab-background);
 }
 .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-new-tab {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 .tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
   padding: 0 var(--size-4-1) 0 var(--size-4-2);
@@ -4733,7 +4733,8 @@ body #cMenuModalBar button.cMenuCommandItem:hover {
 .dataview-inline-lists .markdown-preview-view .dataview-ul li,
 .dataview-inline-lists .markdown-preview-view .dataview-ul li {
   display: inline-block;
-  padding-right: 0.25em;
+  padding-inline-end: 0.25em;
+  margin-inline-start: 0;
 }
 
 .markdown-rendered table.dataview {
