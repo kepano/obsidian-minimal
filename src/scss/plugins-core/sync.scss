@@ -1,0 +1,21 @@
+.workspace-leaf-content[data-type="sync"] {
+	.tree-item.nav-folder {
+		.nav-folder-title {
+			color: var(--text-muted);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			font-size: var(--font-adaptive-smallest);
+			font-weight: 500;
+			margin-bottom: 4px;
+			&:hover {
+				color: var(--text-normal);
+			}
+		}
+		&.is-collapsed .nav-folder-title {
+			color: var(--text-faint);
+			&:hover {
+				color: var(--text-muted);
+			}
+		}
+	}
+}

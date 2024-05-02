@@ -4301,6 +4301,24 @@ input.prompt-input:focus-visible {
   border-bottom: none;
 }
 
+.workspace-leaf-content[data-type=sync] .tree-item.nav-folder .nav-folder-title {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--font-adaptive-smallest);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.workspace-leaf-content[data-type=sync] .tree-item.nav-folder .nav-folder-title:hover {
+  color: var(--text-normal);
+}
+.workspace-leaf-content[data-type=sync] .tree-item.nav-folder.is-collapsed .nav-folder-title {
+  color: var(--text-faint);
+}
+.workspace-leaf-content[data-type=sync] .tree-item.nav-folder.is-collapsed .nav-folder-title:hover {
+  color: var(--text-muted);
+}
+
 /* Community plugins */
 /* Banner plugin */
 .obsidian-banner.solid {
