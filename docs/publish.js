@@ -31,11 +31,11 @@ function updateCurrentPath() {
     preloadAllImages();
   }
 }
-
 publish.registerMarkdownPostProcessor(async (el, ctx) => {
   updateCurrentPath();
 
-  const blockImages = Array.from(el.querySelectorAll('.internal-embed'));
+  const blockImages = Array.from(el.querySelectorAll('.internal-embed')).filter(span => /\.(jpg|jpeg|png|gif|bmp|svg)$/i.test(span.getAttribute('src')));
+
   blockImages.forEach((span) => {
     if (!span.classList.contains('processed')) {
       span.classList.add('processed');
