@@ -848,6 +848,131 @@ figure {
   padding-top: 16px;
 }
 
+/* Remove ribbon border on Mac when frameless */
+.mod-macos.hider-frameless .workspace-ribbon {
+  border: none;
+}
+
+/* --------------- */
+/* App ribbon moved to the bottom edge */
+.is-tablet.hider-ribbon {
+  --ribbon-width: 0px;
+}
+.is-tablet.hider-ribbon .side-dock-ribbon {
+  display: none;
+}
+
+.hider-ribbon .workspace-ribbon {
+  padding: 0;
+}
+
+:root {
+  --hider-ribbon-display: none;
+}
+
+.ribbon-bottom-left-hover-vertical:not(.is-mobile),
+.ribbon-bottom-left-hover:not(.is-mobile) {
+  --hider-ribbon-display: flex;
+}
+
+.hider-ribbon .workspace-ribbon.mod-left:before,
+.ribbon-bottom-left-hover-vertical .workspace-ribbon.mod-left:before,
+.ribbon-bottom-left-hover .workspace-ribbon.mod-left:before {
+  opacity: 0;
+}
+.hider-ribbon .workspace-ribbon-collapse-btn,
+.ribbon-bottom-left-hover-vertical .workspace-ribbon-collapse-btn,
+.ribbon-bottom-left-hover .workspace-ribbon-collapse-btn {
+  display: none;
+}
+.hider-ribbon .workspace-ribbon.mod-right,
+.ribbon-bottom-left-hover-vertical .workspace-ribbon.mod-right,
+.ribbon-bottom-left-hover .workspace-ribbon.mod-right {
+  pointer-events: none;
+}
+.hider-ribbon .workspace-ribbon.mod-left,
+.ribbon-bottom-left-hover-vertical .workspace-ribbon.mod-left,
+.ribbon-bottom-left-hover .workspace-ribbon.mod-left {
+  overflow: visible;
+  border-top: var(--border-width) solid var(--background-modifier-border) !important;
+  border-right: var(--border-width) solid var(--background-modifier-border) !important;
+  border-top-right-radius: var(--radius-m);
+  padding: 0;
+  position: absolute;
+  border-right: 0px;
+  margin: 0;
+  width: auto;
+  height: 44px;
+  flex-basis: 0;
+  bottom: 0;
+  top: auto;
+  background: var(--background-secondary);
+  display: var(--hider-ribbon-display) !important;
+  flex-direction: row;
+  z-index: 17;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  filter: drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
+  gap: 0;
+}
+.hider-ribbon .side-dock-actions,
+.hider-ribbon .side-dock-settings,
+.ribbon-bottom-left-hover-vertical .side-dock-actions,
+.ribbon-bottom-left-hover-vertical .side-dock-settings,
+.ribbon-bottom-left-hover .side-dock-actions,
+.ribbon-bottom-left-hover .side-dock-settings {
+  flex-direction: row;
+  display: var(--hider-ribbon-display);
+  background: transparent;
+  margin: 0;
+  position: relative;
+  gap: var(--size-2-2);
+}
+.hider-ribbon .side-dock-actions,
+.ribbon-bottom-left-hover-vertical .side-dock-actions,
+.ribbon-bottom-left-hover .side-dock-actions {
+  padding: 6px 6px 6px 8px;
+}
+.hider-ribbon .side-dock-settings:empty,
+.ribbon-bottom-left-hover-vertical .side-dock-settings:empty,
+.ribbon-bottom-left-hover .side-dock-settings:empty {
+  display: none;
+}
+.hider-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action,
+.ribbon-bottom-left-hover-vertical .workspace-ribbon.mod-left .side-dock-ribbon-action,
+.ribbon-bottom-left-hover .workspace-ribbon.mod-left .side-dock-ribbon-action {
+  display: var(--hider-ribbon-display);
+}
+.hider-ribbon .workspace-ribbon.mod-left:hover,
+.ribbon-bottom-left-hover-vertical .workspace-ribbon.mod-left:hover,
+.ribbon-bottom-left-hover .workspace-ribbon.mod-left:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+.hider-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,
+.ribbon-bottom-left-hover-vertical .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,
+.ribbon-bottom-left-hover .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  opacity: 0;
+}
+.hider-ribbon .workspace-split.mod-left-split,
+.ribbon-bottom-left-hover-vertical .workspace-split.mod-left-split,
+.ribbon-bottom-left-hover .workspace-split.mod-left-split {
+  margin: 0;
+}
+.hider-ribbon .workspace-leaf-content .item-list,
+.ribbon-bottom-left-hover-vertical .workspace-leaf-content .item-list,
+.ribbon-bottom-left-hover .workspace-leaf-content .item-list {
+  padding-bottom: 40px;
+}
+
+.ribbon-bottom-left-hover-vertical .workspace-ribbon.mod-left {
+  height: auto;
+}
+.ribbon-bottom-left-hover-vertical .side-dock-actions {
+  flex-direction: column;
+  padding: 8px 6px;
+}
+
 /* Status bar */
 .minimal-status-off .status-bar {
   --status-bar-position: static;
@@ -5104,93 +5229,8 @@ div[data-type=git-view] .search-input-clear-button {
 }
 
 /* Hider plugin */
-/* Remove ribbon border on Mac when frameless */
-.mod-macos.hider-frameless .workspace-ribbon {
-  border: none;
-}
-
-/* --------------- */
-/* App ribbon moved to the bottom edge */
-.is-tablet.hider-ribbon {
-  --ribbon-width: 0px;
-}
-.is-tablet.hider-ribbon .side-dock-ribbon {
-  display: none;
-}
-
-.hider-ribbon .workspace-ribbon {
-  padding: 0;
-}
-
-:root {
-  --hider-ribbon-display: none;
-}
-
-.ribbon-bottom-left-hover:not(.is-mobile) {
-  --hider-ribbon-display: flex;
-}
-
 .hider-vault .nav-folder.mod-root > .nav-folder-title {
   height: 4px;
-}
-
-.hider-ribbon .workspace-ribbon-collapse-btn {
-  display: none;
-}
-.hider-ribbon .workspace-ribbon.mod-right {
-  pointer-events: none;
-}
-.hider-ribbon .workspace-ribbon.mod-left {
-  position: absolute;
-  border-right: 0px;
-  margin: 0;
-  height: var(--header-height);
-  overflow: visible;
-  flex-basis: 0;
-  bottom: 0;
-  top: auto;
-  display: var(--hider-ribbon-display) !important;
-  flex-direction: row;
-  z-index: 17;
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-  filter: drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
-  gap: 0;
-}
-.hider-ribbon .side-dock-actions,
-.hider-ribbon .side-dock-settings {
-  flex-direction: row;
-  display: var(--hider-ribbon-display);
-  border-top: var(--border-width) solid var(--background-modifier-border);
-  background: var(--background-secondary);
-  margin: 0;
-  position: relative;
-  gap: var(--size-2-2);
-}
-.hider-ribbon .side-dock-actions {
-  padding-left: 8px;
-}
-.hider-ribbon .side-dock-settings {
-  border-right: var(--border-width) solid var(--background-modifier-border);
-  border-top-right-radius: var(--radius-m);
-  padding: 0 var(--size-2-2);
-}
-.hider-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action {
-  display: var(--hider-ribbon-display);
-  margin: 7px 0px 8px;
-}
-.hider-ribbon .workspace-ribbon.mod-left:hover {
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
-.hider-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  opacity: 0;
-}
-.hider-ribbon .workspace-split.mod-left-split {
-  margin: 0;
-}
-.hider-ribbon .workspace-leaf-content .item-list {
-  padding-bottom: 40px;
 }
 
 /* Hover Editor */

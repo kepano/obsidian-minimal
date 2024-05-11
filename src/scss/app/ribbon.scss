@@ -1,0 +1,107 @@
+/* Remove ribbon border on Mac when frameless */
+.mod-macos.hider-frameless .workspace-ribbon {
+	border:none;
+}
+
+/* --------------- */
+/* App ribbon moved to the bottom edge */
+
+.is-tablet.hider-ribbon {
+	--ribbon-width: 0px;
+	.side-dock-ribbon {
+		display: none;
+	}
+}
+
+.hider-ribbon .workspace-ribbon {
+	padding: 0;
+}
+
+:root {
+	--hider-ribbon-display: none;
+}
+
+.ribbon-bottom-left-hover-vertical:not(.is-mobile),
+.ribbon-bottom-left-hover:not(.is-mobile) {
+	--hider-ribbon-display: flex;
+}
+
+.hider-ribbon,
+.ribbon-bottom-left-hover-vertical,
+.ribbon-bottom-left-hover {
+
+	.workspace-ribbon.mod-left:before {
+		opacity: 0;
+	}
+	.workspace-ribbon-collapse-btn {
+		display: none;
+	}
+	.workspace-ribbon.mod-right {
+		pointer-events: none;
+	}
+	.workspace-ribbon.mod-left {
+		overflow: visible;
+		border-top: var(--border-width) solid var(--background-modifier-border) !important;
+		border-right: var(--border-width) solid var(--background-modifier-border) !important;
+		border-top-right-radius: var(--radius-m);
+		padding: 0;	
+		position: absolute;
+		border-right: 0px;
+		margin: 0;
+		width: auto;
+		height: 44px;
+		flex-basis: 0;
+		bottom: 0;
+		top: auto;
+		background: var(--background-secondary);
+		display: var(--hider-ribbon-display) !important;
+		flex-direction: row;
+		z-index: 17;
+		opacity: 0;
+		transition:opacity 0.25s ease-in-out;
+		filter: 
+			 drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
+		gap: 0;
+	}
+	.side-dock-actions,
+	.side-dock-settings {
+		flex-direction: row;
+		display: var(--hider-ribbon-display);
+		background: transparent;
+		margin:0;
+		position:relative;
+		gap: var(--size-2-2);
+	}
+	.side-dock-actions {
+		padding: 6px 6px 6px 8px;
+	}
+	.side-dock-settings:empty {
+		display: none;
+	}
+	.workspace-ribbon.mod-left .side-dock-ribbon-action {
+		display: var(--hider-ribbon-display);
+	}
+	.workspace-ribbon.mod-left:hover {
+		opacity: 1;
+		transition: opacity 0.25s ease-in-out;
+	}
+	.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+		opacity: 0;
+	}
+	.workspace-split.mod-left-split {
+		margin: 0;
+	}
+	.workspace-leaf-content .item-list {
+		padding-bottom: 40px;
+	}
+}
+
+.ribbon-bottom-left-hover-vertical {
+	.workspace-ribbon.mod-left {
+		height: auto;
+	}
+	.side-dock-actions {
+		flex-direction: column;
+		padding: 8px 6px;
+	}
+}

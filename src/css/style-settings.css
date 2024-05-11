@@ -1425,7 +1425,7 @@ settings:
 	-
 		id: ribbon-style
 		title: Ribbon style
-		description: Ribbon menu can be hidden using the Hider plugin
+		description: Display options for ribbon menu. Ribbon must be turned on in Obsidian Appearance settings for these options to work.
 		type: class-select
 		allowEmpty: false
 		default: ribbon-hidden
@@ -1434,8 +1434,11 @@ settings:
 				label: Default
 				value: ribbon-hidden
 			-
-				label: Bottom left hover
+				label: Bottom left hover (horizontal)
 				value: ribbon-bottom-left-hover
+			-
+				label: Bottom left hover (vertical)
+				value: ribbon-bottom-left-hover-vertical
 	-
 		id: tables
 		title: Tables
