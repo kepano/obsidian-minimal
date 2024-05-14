@@ -6781,6 +6781,7 @@ https://github.com/dracula/dracula-theme
 .theme-light.minimal-eink-light.tabs-modern,
 .theme-dark.minimal-eink-dark.tabs-modern {
   --minimal-tab-text-color-active: var(--bg1);
+  --tab-text-color-focused: var(--bg1);
   --tab-text-color-focused-active-current: var(--bg1);
 }
 .theme-light.minimal-eink-light .suggestion-container,
@@ -6820,7 +6821,8 @@ https://github.com/dracula/dracula-theme
 .theme-light.minimal-eink-light .horizontal-tab-nav-item:hover,
 .theme-light.minimal-eink-light .search-result-file-matched-text,
 .theme-light.minimal-eink-light .vertical-tab-nav-item:hover,
-.theme-light.minimal-eink-light .mod-root .workspace-tab-header-status-icon, .theme-light.minimal-eink-light:not(.colorful-active) .horizontal-tab-nav-item.is-active, .theme-light.minimal-eink-light:not(.colorful-active) .vertical-tab-nav-item.is-active,
+.theme-light.minimal-eink-light .mod-root .workspace-tab-header-status-icon,
+.theme-light.minimal-eink-light .mod-root .workspace-tab-header:hover, .theme-light.minimal-eink-light:not(.colorful-active) .horizontal-tab-nav-item.is-active, .theme-light.minimal-eink-light:not(.colorful-active) .vertical-tab-nav-item.is-active,
 .theme-light.minimal-eink-light button.mod-cta,
 .theme-light.minimal-eink-light select:hover, .theme-light.minimal-eink-light .dropdown:hover,
 .theme-dark.minimal-eink-dark .status-bar .plugin-sync:hover .sync-status-icon.mod-success,
@@ -6836,6 +6838,7 @@ https://github.com/dracula/dracula-theme
 .theme-dark.minimal-eink-dark .search-result-file-matched-text,
 .theme-dark.minimal-eink-dark .vertical-tab-nav-item:hover,
 .theme-dark.minimal-eink-dark .mod-root .workspace-tab-header-status-icon,
+.theme-dark.minimal-eink-dark .mod-root .workspace-tab-header:hover,
 .theme-dark.minimal-eink-dark:not(.colorful-active) .horizontal-tab-nav-item.is-active,
 .theme-dark.minimal-eink-dark:not(.colorful-active) .vertical-tab-nav-item.is-active,
 .theme-dark.minimal-eink-dark button.mod-cta,

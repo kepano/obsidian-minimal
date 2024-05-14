@@ -41,6 +41,7 @@
 
 	&.tabs-modern {
 		--minimal-tab-text-color-active: var(--bg1);
+		--tab-text-color-focused: var(--bg1);
 		--tab-text-color-focused-active-current: var(--bg1);
 	}
 	.suggestion-container {
@@ -75,6 +76,7 @@
 	.search-result-file-matched-text,
 	.vertical-tab-nav-item:hover,
 	.mod-root .workspace-tab-header-status-icon,
+	.mod-root .workspace-tab-header:hover,
 	&:not(.colorful-active) .horizontal-tab-nav-item.is-active,
 	&:not(.colorful-active) .vertical-tab-nav-item.is-active,
 	button.mod-cta,
