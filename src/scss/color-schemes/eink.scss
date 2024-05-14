@@ -33,6 +33,11 @@
 	--tag-border-color-hover: var(--tx1);
 	--text-on-accent: var(--bg1);
 	--text-on-accent-inverted: var(--bg1);
+	--text-selection: var(--tx1);
+
+	::selection {
+		color: var(--bg1);
+	}
 
 	&.tabs-modern {
 		--minimal-tab-text-color-active: var(--bg1);
@@ -68,9 +73,10 @@
 	.suggestion-item.is-selected,
 	.horizontal-tab-nav-item:hover,
 	.vertical-tab-nav-item:hover,
+	.mod-root .workspace-tab-header-status-icon,
 	&:not(.colorful-active) .horizontal-tab-nav-item.is-active,
 	&:not(.colorful-active) .vertical-tab-nav-item.is-active,
-	button,
+	button.mod-cta,
 	select:hover, .dropdown:hover {
 		color: var(--bg1);
 	}
@@ -149,14 +155,25 @@
 .theme-light.minimal-eink-light.minimal-light-tonal {
 	--bg3:#bbb;
 	--ui1:#bbb;
-
-	--modal-border-color: var(--ui1);
-	--prompt-border-color: var(--ui1);
+	--tx3:#999;
 }
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
 	--bg3:#444;
 	--ui1:#444;
-
+	--tx3:#999;
+}
+.theme-light.minimal-eink-light.minimal-light-tonal,
+.theme-dark.minimal-eink-dark.minimal-dark-tonal {
 	--modal-border-color: var(--ui1);
 	--prompt-border-color: var(--ui1);
+	--tag-border-color: var(--ui1);
+	--text-selection: var(--bg3);
+	--icon-color-active: var(--tx1);
+	--icon-color-focused: var(--tx1);
+	--minimal-tab-text-color-active: var(--tx1);
+	::selection,
+	&:not(.colorful-active) .vertical-tab-nav-item:hover,
+	&:not(.colorful-active) .vertical-tab-nav-item.is-active {
+		color: var(--tx1);
+	}
 }

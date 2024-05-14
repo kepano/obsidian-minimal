@@ -6817,6 +6817,11 @@ https://github.com/dracula/dracula-theme
   --tag-border-color-hover: var(--tx1);
   --text-on-accent: var(--bg1);
   --text-on-accent-inverted: var(--bg1);
+  --text-selection: var(--tx1);
+}
+.theme-light.minimal-eink-light ::selection,
+.theme-dark.minimal-eink-dark ::selection {
+  color: var(--bg1);
 }
 .theme-light.minimal-eink-light.tabs-modern,
 .theme-dark.minimal-eink-dark.tabs-modern {
@@ -6858,8 +6863,9 @@ https://github.com/dracula/dracula-theme
 .theme-light.minimal-eink-light .markdown-rendered mark,
 .theme-light.minimal-eink-light .suggestion-item.is-selected,
 .theme-light.minimal-eink-light .horizontal-tab-nav-item:hover,
-.theme-light.minimal-eink-light .vertical-tab-nav-item:hover, .theme-light.minimal-eink-light:not(.colorful-active) .horizontal-tab-nav-item.is-active, .theme-light.minimal-eink-light:not(.colorful-active) .vertical-tab-nav-item.is-active,
-.theme-light.minimal-eink-light button,
+.theme-light.minimal-eink-light .vertical-tab-nav-item:hover,
+.theme-light.minimal-eink-light .mod-root .workspace-tab-header-status-icon, .theme-light.minimal-eink-light:not(.colorful-active) .horizontal-tab-nav-item.is-active, .theme-light.minimal-eink-light:not(.colorful-active) .vertical-tab-nav-item.is-active,
+.theme-light.minimal-eink-light button.mod-cta,
 .theme-light.minimal-eink-light select:hover, .theme-light.minimal-eink-light .dropdown:hover,
 .theme-dark.minimal-eink-dark .status-bar .plugin-sync:hover .sync-status-icon.mod-success,
 .theme-dark.minimal-eink-dark .status-bar .plugin-sync:hover .sync-status-icon.mod-working,
@@ -6872,9 +6878,10 @@ https://github.com/dracula/dracula-theme
 .theme-dark.minimal-eink-dark .suggestion-item.is-selected,
 .theme-dark.minimal-eink-dark .horizontal-tab-nav-item:hover,
 .theme-dark.minimal-eink-dark .vertical-tab-nav-item:hover,
+.theme-dark.minimal-eink-dark .mod-root .workspace-tab-header-status-icon,
 .theme-dark.minimal-eink-dark:not(.colorful-active) .horizontal-tab-nav-item.is-active,
 .theme-dark.minimal-eink-dark:not(.colorful-active) .vertical-tab-nav-item.is-active,
-.theme-dark.minimal-eink-dark button,
+.theme-dark.minimal-eink-dark button.mod-cta,
 .theme-dark.minimal-eink-dark select:hover,
 .theme-dark.minimal-eink-dark .dropdown:hover {
   color: var(--bg1);
@@ -6939,15 +6946,30 @@ https://github.com/dracula/dracula-theme
 .theme-light.minimal-eink-light.minimal-light-tonal {
   --bg3:#bbb;
   --ui1:#bbb;
-  --modal-border-color: var(--ui1);
-  --prompt-border-color: var(--ui1);
+  --tx3:#999;
 }
 
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
   --bg3:#444;
   --ui1:#444;
+  --tx3:#999;
+}
+
+.theme-light.minimal-eink-light.minimal-light-tonal,
+.theme-dark.minimal-eink-dark.minimal-dark-tonal {
   --modal-border-color: var(--ui1);
   --prompt-border-color: var(--ui1);
+  --tag-border-color: var(--ui1);
+  --text-selection: var(--bg3);
+  --icon-color-active: var(--tx1);
+  --icon-color-focused: var(--tx1);
+  --minimal-tab-text-color-active: var(--tx1);
+}
+.theme-light.minimal-eink-light.minimal-light-tonal ::selection, .theme-light.minimal-eink-light.minimal-light-tonal:not(.colorful-active) .vertical-tab-nav-item:hover, .theme-light.minimal-eink-light.minimal-light-tonal:not(.colorful-active) .vertical-tab-nav-item.is-active,
+.theme-dark.minimal-eink-dark.minimal-dark-tonal ::selection,
+.theme-dark.minimal-eink-dark.minimal-dark-tonal:not(.colorful-active) .vertical-tab-nav-item:hover,
+.theme-dark.minimal-eink-dark.minimal-dark-tonal:not(.colorful-active) .vertical-tab-nav-item.is-active {
+  color: var(--tx1);
 }
 
 /*
