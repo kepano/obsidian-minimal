@@ -129,7 +129,8 @@ body {
 		opacity:1;
 	}
 	.day {
-		padding:2px 4px 4px
+		padding:2px 4px 4px;
+		transition: none;
 	}
 	.day,
 	.week-num {
@@ -141,6 +142,7 @@ body {
 	.day:hover {
 		background-color:var(--color-background-day-active);
 		color: var(--calendar-text-active);
+		transition: none;
 	}
 	.active .dot {
 		fill: var(--calendar-dot-active);

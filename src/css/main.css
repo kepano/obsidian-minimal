@@ -4643,6 +4643,7 @@ body {
 }
 #calendar-container .day {
   padding: 2px 4px 4px;
+  transition: none;
 }
 #calendar-container .day,
 #calendar-container .week-num {
@@ -4654,6 +4655,7 @@ body {
 #calendar-container .day:hover {
   background-color: var(--color-background-day-active);
   color: var(--calendar-text-active);
+  transition: none;
 }
 #calendar-container .active .dot {
   fill: var(--calendar-dot-active);
@@ -6773,6 +6775,7 @@ https://github.com/dracula/dracula-theme
   --text-on-accent: var(--bg1);
   --text-on-accent-inverted: var(--bg1);
   --text-selection: var(--tx1);
+  --vault-profile-color: var(--tx1);
 }
 .theme-light.minimal-eink-light ::selection,
 .theme-dark.minimal-eink-dark ::selection {
@@ -6809,6 +6812,12 @@ https://github.com/dracula/dracula-theme
   background-color: var(--tx1);
   --toggle-thumb-color: var(--bg1);
 }
+.theme-light.minimal-eink-light.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover),
+.theme-dark.minimal-eink-dark.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
+  background-color: var(--tx1);
+}
+.theme-light.minimal-eink-light.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active, .theme-light.minimal-eink-light.labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover, .theme-light.minimal-eink-light.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.theme-light.minimal-eink-light #calendar-container .reset-button:hover,
 .theme-light.minimal-eink-light .status-bar .plugin-sync:hover .sync-status-icon.mod-success,
 .theme-light.minimal-eink-light .status-bar .plugin-sync:hover .sync-status-icon.mod-working,
 .theme-light.minimal-eink-light .status-bar-item.mod-clickable:hover,
@@ -6826,6 +6835,10 @@ https://github.com/dracula/dracula-theme
 .theme-light.minimal-eink-light button.mod-cta,
 .theme-light.minimal-eink-light .search-result-file-match:hover,
 .theme-light.minimal-eink-light select:hover, .theme-light.minimal-eink-light .dropdown:hover,
+.theme-dark.minimal-eink-dark.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active,
+.theme-dark.minimal-eink-dark.labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover,
+.theme-dark.minimal-eink-dark.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.theme-dark.minimal-eink-dark #calendar-container .reset-button:hover,
 .theme-dark.minimal-eink-dark .status-bar .plugin-sync:hover .sync-status-icon.mod-success,
 .theme-dark.minimal-eink-dark .status-bar .plugin-sync:hover .sync-status-icon.mod-working,
 .theme-dark.minimal-eink-dark .status-bar-item.mod-clickable:hover,
@@ -6851,6 +6864,10 @@ https://github.com/dracula/dracula-theme
 .theme-light.minimal-eink-light .is-flashing,
 .theme-dark.minimal-eink-dark .is-flashing {
   --text-highlight-bg: #999 ;
+}
+.theme-light.minimal-eink-light #calendar-container .day:hover,
+.theme-dark.minimal-eink-dark #calendar-container .day:hover {
+  --color-dot: var(--bg1);
 }
 
 .theme-light.minimal-eink-light {
@@ -6879,9 +6896,7 @@ https://github.com/dracula/dracula-theme
 
 .theme-light.minimal-eink-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-eink-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-eink-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-eink-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-eink-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-eink-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-eink-dark {
   --base-h:0;
   --base-s:0%;
@@ -6903,6 +6918,10 @@ https://github.com/dracula/dracula-theme
   --hl2:#fff;
   --sp1:#000;
   --background-modifier-cover: rgba(20,20,20,1);
+  --vault-profile-color: var(--tx1);
+  --vault-profile-color-hover: var(--bg1);
+  --nav-item-color-hover: var(--bg1);
+  --nav-item-color-active: var(--bg1);
 }
 
 .theme-light.minimal-eink-light.minimal-light-tonal {
@@ -6937,8 +6956,10 @@ https://github.com/dracula/dracula-theme
   background-color: var(--bg3);
   color: var(--tx1);
 }
-.theme-light.minimal-eink-light.minimal-light-tonal ::selection, .theme-light.minimal-eink-light.minimal-light-tonal:not(.colorful-active) .vertical-tab-nav-item:hover, .theme-light.minimal-eink-light.minimal-light-tonal:not(.colorful-active) .vertical-tab-nav-item.is-active,
+.theme-light.minimal-eink-light.minimal-light-tonal ::selection,
+.theme-light.minimal-eink-light.minimal-light-tonal #calendar-container .reset-button:hover, .theme-light.minimal-eink-light.minimal-light-tonal:not(.colorful-active) .vertical-tab-nav-item:hover, .theme-light.minimal-eink-light.minimal-light-tonal:not(.colorful-active) .vertical-tab-nav-item.is-active,
 .theme-dark.minimal-eink-dark.minimal-dark-tonal ::selection,
+.theme-dark.minimal-eink-dark.minimal-dark-tonal #calendar-container .reset-button:hover,
 .theme-dark.minimal-eink-dark.minimal-dark-tonal:not(.colorful-active) .vertical-tab-nav-item:hover,
 .theme-dark.minimal-eink-dark.minimal-dark-tonal:not(.colorful-active) .vertical-tab-nav-item.is-active {
   color: var(--tx1);

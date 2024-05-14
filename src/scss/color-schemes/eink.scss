@@ -34,6 +34,7 @@
 	--text-on-accent: var(--bg1);
 	--text-on-accent-inverted: var(--bg1);
 	--text-selection: var(--tx1);
+	--vault-profile-color: var(--tx1);
 
 	::selection {
 		color: var(--bg1);
@@ -63,6 +64,13 @@
 			--toggle-thumb-color: var(--bg1);
 		}
 	}
+	&.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
+		background-color: var(--tx1);
+	}
+	&.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active,
+	&.labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover,
+	&.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+	#calendar-container .reset-button:hover,
 	.status-bar .plugin-sync:hover .sync-status-icon.mod-success,
 	.status-bar .plugin-sync:hover .sync-status-icon.mod-working,
 	.status-bar-item.mod-clickable:hover,
@@ -87,6 +95,10 @@
 
 	.is-flashing {
 		--text-highlight-bg: #999
+	}
+
+	#calendar-container .day:hover {
+		--color-dot: var(--bg1);
 	}
 }
 
@@ -125,9 +137,7 @@
 
 .theme-light.minimal-eink-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-eink-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-eink-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-eink-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-eink-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-eink-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-eink-dark {
 	--base-h:0;
 	--base-s:0%;
@@ -157,6 +167,11 @@
 	--sp1:#000;
 
 	--background-modifier-cover: rgba(20,20,20,1);
+
+	--vault-profile-color: var(--tx1);
+	--vault-profile-color-hover: var(--bg1);
+	--nav-item-color-hover: var(--bg1);
+	--nav-item-color-active: var(--bg1);
 }
 .theme-light.minimal-eink-light.minimal-light-tonal {
 	--bg3:#bbb;
@@ -188,6 +203,7 @@
 		color: var(--tx1);
 	}
 	::selection,
+	#calendar-container .reset-button:hover,
 	&:not(.colorful-active) .vertical-tab-nav-item:hover,
 	&:not(.colorful-active) .vertical-tab-nav-item.is-active {
 		color: var(--tx1);
