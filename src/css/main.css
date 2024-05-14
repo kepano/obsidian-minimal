@@ -6877,10 +6877,6 @@ https://github.com/dracula/dracula-theme
   --background-modifier-cover: rgba(235,235,235,1);
 }
 
-.theme-light.minimal-eink-light.minimal-light-white {
-  --bg3:#fff;
-}
-
 .theme-light.minimal-eink-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-eink-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-eink-light.minimal-light-contrast .workspace-drawer.mod-left,
