@@ -80,6 +80,7 @@
 	&:not(.colorful-active) .horizontal-tab-nav-item.is-active,
 	&:not(.colorful-active) .vertical-tab-nav-item.is-active,
 	button.mod-cta,
+	.search-result-file-match:hover,
 	select:hover, .dropdown:hover {
 		color: var(--bg1);
 	}

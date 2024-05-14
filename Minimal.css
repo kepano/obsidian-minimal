@@ -6864,6 +6864,7 @@ https://github.com/dracula/dracula-theme
 .theme-light.minimal-eink-light .mod-root .workspace-tab-header-status-icon,
 .theme-light.minimal-eink-light .mod-root .workspace-tab-header:hover, .theme-light.minimal-eink-light:not(.colorful-active) .horizontal-tab-nav-item.is-active, .theme-light.minimal-eink-light:not(.colorful-active) .vertical-tab-nav-item.is-active,
 .theme-light.minimal-eink-light button.mod-cta,
+.theme-light.minimal-eink-light .search-result-file-match:hover,
 .theme-light.minimal-eink-light select:hover, .theme-light.minimal-eink-light .dropdown:hover,
 .theme-dark.minimal-eink-dark .status-bar .plugin-sync:hover .sync-status-icon.mod-success,
 .theme-dark.minimal-eink-dark .status-bar .plugin-sync:hover .sync-status-icon.mod-working,
@@ -6882,6 +6883,7 @@ https://github.com/dracula/dracula-theme
 .theme-dark.minimal-eink-dark:not(.colorful-active) .horizontal-tab-nav-item.is-active,
 .theme-dark.minimal-eink-dark:not(.colorful-active) .vertical-tab-nav-item.is-active,
 .theme-dark.minimal-eink-dark button.mod-cta,
+.theme-dark.minimal-eink-dark .search-result-file-match:hover,
 .theme-dark.minimal-eink-dark select:hover,
 .theme-dark.minimal-eink-dark .dropdown:hover {
   color: var(--bg1);
