@@ -72,6 +72,7 @@
 	.markdown-rendered mark,
 	.suggestion-item.is-selected,
 	.horizontal-tab-nav-item:hover,
+	.search-result-file-matched-text,
 	.vertical-tab-nav-item:hover,
 	.mod-root .workspace-tab-header-status-icon,
 	&:not(.colorful-active) .horizontal-tab-nav-item.is-active,
@@ -79,6 +80,10 @@
 	button.mod-cta,
 	select:hover, .dropdown:hover {
 		color: var(--bg1);
+	}
+
+	.is-flashing {
+		--text-highlight-bg: #999
 	}
 }
 
@@ -164,13 +169,23 @@
 }
 .theme-light.minimal-eink-light.minimal-light-tonal,
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
+	--hl2: var(--bg3);
+
 	--modal-border-color: var(--ui1);
 	--prompt-border-color: var(--ui1);
 	--tag-border-color: var(--ui1);
 	--text-selection: var(--bg3);
 	--icon-color-active: var(--tx1);
 	--icon-color-focused: var(--tx1);
+	--nav-item-color-active: var(--tx1);
+	--nav-item-color-hover: var(--tx1);
 	--minimal-tab-text-color-active: var(--tx1);
+
+	.is-flashing,
+	.search-result-file-matched-text {
+		background-color: var(--bg3);
+		color: var(--tx1);
+	}
 	::selection,
 	&:not(.colorful-active) .vertical-tab-nav-item:hover,
 	&:not(.colorful-active) .vertical-tab-nav-item.is-active {

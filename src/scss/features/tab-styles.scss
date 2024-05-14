@@ -1,7 +1,8 @@
 /* Main tabs */
-body {
-	--minimal-tab-text-color: var(--text-muted);
-	--minimal-tab-text-color-active: var(--text-normal);
+.theme-light,
+.theme-dark {
+	--minimal-tab-text-color: var(--tx2);
+	--minimal-tab-text-color-active: var(--tx1);
 }
 .workspace-tabs:not(.mod-stacked) {
 	--tab-text-color: var(--minimal-tab-text-color);

@@ -3894,9 +3894,10 @@ body:not(.sidebar-color) .mod-right-split :not(.mod-top) .workspace-tab-header-c
 }
  */
 /* Main tabs */
-body {
-  --minimal-tab-text-color: var(--text-muted);
-  --minimal-tab-text-color-active: var(--text-normal);
+.theme-light,
+.theme-dark {
+  --minimal-tab-text-color: var(--tx2);
+  --minimal-tab-text-color-active: var(--tx1);
 }
 
 .workspace-tabs:not(.mod-stacked) {
@@ -6464,9 +6465,7 @@ body.theme-light {
 
 .theme-light.minimal-atom-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-atom-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-atom-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-atom-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-atom-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-atom-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-atom-dark {
   --base-h:220;
   --base-s:12%;
@@ -6557,9 +6556,7 @@ https://github.com/ayu-theme/ayu-colors
 
 .theme-light.minimal-ayu-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-ayu-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-ayu-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-ayu-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-ayu-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-ayu-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-ayu-dark {
   --base-h:222;
   --base-s:22%;
@@ -6664,9 +6661,7 @@ https://github.com/catppuccin/catppuccin
 
 .theme-light.minimal-catppuccin-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-catppuccin-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-catppuccin-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-catppuccin-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-catppuccin-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-catppuccin-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-catppuccin-dark {
   --base-h: 229;
   --base-s: 19%;
@@ -6720,7 +6715,7 @@ https://github.com/dracula/dracula-theme
 
 .theme-light.minimal-dracula-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-dracula-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-dracula-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-dracula-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-dracula-dark {
   --base-h: 232;
   --base-s: 16%;
@@ -6823,6 +6818,7 @@ https://github.com/dracula/dracula-theme
 .theme-light.minimal-eink-light .markdown-rendered mark,
 .theme-light.minimal-eink-light .suggestion-item.is-selected,
 .theme-light.minimal-eink-light .horizontal-tab-nav-item:hover,
+.theme-light.minimal-eink-light .search-result-file-matched-text,
 .theme-light.minimal-eink-light .vertical-tab-nav-item:hover,
 .theme-light.minimal-eink-light .mod-root .workspace-tab-header-status-icon, .theme-light.minimal-eink-light:not(.colorful-active) .horizontal-tab-nav-item.is-active, .theme-light.minimal-eink-light:not(.colorful-active) .vertical-tab-nav-item.is-active,
 .theme-light.minimal-eink-light button.mod-cta,
@@ -6837,6 +6833,7 @@ https://github.com/dracula/dracula-theme
 .theme-dark.minimal-eink-dark .markdown-rendered mark,
 .theme-dark.minimal-eink-dark .suggestion-item.is-selected,
 .theme-dark.minimal-eink-dark .horizontal-tab-nav-item:hover,
+.theme-dark.minimal-eink-dark .search-result-file-matched-text,
 .theme-dark.minimal-eink-dark .vertical-tab-nav-item:hover,
 .theme-dark.minimal-eink-dark .mod-root .workspace-tab-header-status-icon,
 .theme-dark.minimal-eink-dark:not(.colorful-active) .horizontal-tab-nav-item.is-active,
@@ -6845,6 +6842,10 @@ https://github.com/dracula/dracula-theme
 .theme-dark.minimal-eink-dark select:hover,
 .theme-dark.minimal-eink-dark .dropdown:hover {
   color: var(--bg1);
+}
+.theme-light.minimal-eink-light .is-flashing,
+.theme-dark.minimal-eink-dark .is-flashing {
+  --text-highlight-bg: #999 ;
 }
 
 .theme-light.minimal-eink-light {
@@ -6917,13 +6918,23 @@ https://github.com/dracula/dracula-theme
 
 .theme-light.minimal-eink-light.minimal-light-tonal,
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
+  --hl2: var(--bg3);
   --modal-border-color: var(--ui1);
   --prompt-border-color: var(--ui1);
   --tag-border-color: var(--ui1);
   --text-selection: var(--bg3);
   --icon-color-active: var(--tx1);
   --icon-color-focused: var(--tx1);
+  --nav-item-color-active: var(--tx1);
+  --nav-item-color-hover: var(--tx1);
   --minimal-tab-text-color-active: var(--tx1);
+}
+.theme-light.minimal-eink-light.minimal-light-tonal .is-flashing,
+.theme-light.minimal-eink-light.minimal-light-tonal .search-result-file-matched-text,
+.theme-dark.minimal-eink-dark.minimal-dark-tonal .is-flashing,
+.theme-dark.minimal-eink-dark.minimal-dark-tonal .search-result-file-matched-text {
+  background-color: var(--bg3);
+  color: var(--tx1);
 }
 .theme-light.minimal-eink-light.minimal-light-tonal ::selection, .theme-light.minimal-eink-light.minimal-light-tonal:not(.colorful-active) .vertical-tab-nav-item:hover, .theme-light.minimal-eink-light.minimal-light-tonal:not(.colorful-active) .vertical-tab-nav-item.is-active,
 .theme-dark.minimal-eink-dark.minimal-dark-tonal ::selection,
@@ -7007,9 +7018,7 @@ https://github.com/sainnhe/everforest
 
 .theme-light.minimal-everforest-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-everforest-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-everforest-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-everforest-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-everforest-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-everforest-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-everforest-dark {
   --base-h:203;
   --base-s:15%;
@@ -7105,9 +7114,7 @@ https://stephango.com/flexoki
 
 .theme-light.minimal-flexoki-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-flexoki-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-flexoki-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-flexoki-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-flexoki-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-flexoki-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-flexoki-dark {
   --base-h: 360;
   --base-s: 3%;
@@ -7188,9 +7195,7 @@ https://github.com/morhetz/gruvbox
 
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-gruvbox-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-gruvbox-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-gruvbox-dark {
   --accent-h:24;
   --accent-s:88%;
@@ -7259,9 +7264,7 @@ https://github.com/morhetz/gruvbox
 
 .theme-light.minimal-macos-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-macos-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-macos-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-macos-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-macos-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-macos-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-macos-dark {
   --base-h:106;
   --base-s:0%;
@@ -7336,9 +7339,7 @@ https://github.com/nordtheme/nord
 
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-nord-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-nord-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-nord-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-nord-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-nord-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-nord-dark {
   --base-h:220;
   --base-s:16%;
@@ -7385,9 +7386,7 @@ https://github.com/nordtheme/nord
 
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-notion-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-notion-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-notion-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
-.theme-light.minimal-notion-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-notion-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-notion-dark {
   --base-h:203;
   --base-s:8%;
@@ -7479,9 +7478,7 @@ https://github.com/rose-pine/rose-pine-theme
 
 .theme-light.minimal-rose-pine-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-rose-pine-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-rose-pine-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-rose-pine-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-rose-pine-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-rose-pine-dark {
   --base-h: 247;
   --base-s: 23%;
@@ -7558,9 +7555,7 @@ https://ethanschoonover.com/solarized/
 
 .theme-light.minimal-solarized-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-solarized-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-solarized-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-solarized-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-solarized-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-solarized-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-solarized-dark {
   --accent-h: 205;
   --accent-s: 70%;
@@ -7642,9 +7637,7 @@ https://ethanschoonover.com/solarized/
 
 .theme-light.minimal-things-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-things-light.minimal-light-contrast.minimal-status-off .status-bar,
-.theme-light.minimal-things-light.minimal-light-contrast .workspace-drawer.mod-left,
-.theme-light.minimal-things-light.minimal-light-contrast .mod-left-split,
-.theme-light.minimal-things-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
+.theme-light.minimal-things-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-things-dark {
   --base-h:218;
   --base-s:9%;
