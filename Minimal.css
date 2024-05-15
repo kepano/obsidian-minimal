@@ -848,10 +848,6 @@ body {
   --input-height: 2rem;
 }
 
-.markdown-source-view .metadata-container {
-  transform: translateX(-4px);
-}
-
 body.metadata-heading-off .metadata-properties-heading {
   display: none;
 }
