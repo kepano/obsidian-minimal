@@ -19,8 +19,6 @@
 	--metadata-input-background-active: var(--bg1);
 	--modal-border-color: var(--tx1);
 	--modal-border-width: 2px;
-	--nav-item-color-hover: var(--bg1);
-	--nav-item-color-active: var(--bg1);
 	--prompt-border-color: var(--tx1);
 	--prompt-border-width: 2px;
 	--calendar-dot-active: var(--bg1);
@@ -35,11 +33,21 @@
 	--text-on-accent-inverted: var(--bg1);
 	--text-selection: var(--tx1);
 	--vault-profile-color: var(--tx1);
+	--nav-item-color-hover: var(--bg1);
 
 	::selection {
 		color: var(--bg1);
 	}
 
+	.nav-files-container {
+		--nav-item-color-active: var(--bg1);
+	}
+	.tree-item-self:hover {
+		--nav-collapse-icon-color: var(--bg1);
+	}
+
+	&.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+	&.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active,
 	&.tabs-modern {
 		--minimal-tab-text-color-active: var(--bg1);
 		--tab-text-color-focused: var(--bg1);
@@ -69,7 +77,7 @@
 	}
 	&.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active,
 	&.labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover,
-	&.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+	&.is-focused.tabs-modern .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 	#calendar-container .reset-button:hover,
 	.status-bar .plugin-sync:hover .sync-status-icon.mod-success,
 	.status-bar .plugin-sync:hover .sync-status-icon.mod-working,
