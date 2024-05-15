@@ -1,3 +1,5 @@
+// this is a fork!
+
 /* Variables */
 @import 'variables/root';
 @import 'variables/dynamic-color';
@@ -43,30 +45,30 @@
 @import 'content/text';
 
 /* Minimal features */
-@import 'features/active-line';
-@import 'features/block-width';
+// @import 'features/active-line';
+// @import 'features/block-width';
 @import 'features/borders';
 @import 'features/cards';
-@import 'features/checklist-icons';
-@import 'features/colorful-active-states';
-@import 'features/colorful-frame';
+// @import 'features/checklist-icons';
+// @import 'features/colorful-active-states';
+// @import 'features/colorful-frame';
 @import 'features/colorful-headings';
-@import 'features/custom-icons';
-@import 'features/focus-mode';
-@import 'features/full-width-media';
-@import 'features/helpers';
+// @import 'features/custom-icons';
+// @import 'features/focus-mode';
+// @import 'features/full-width-media';
+// @import 'features/helpers';
 @import 'features/helpers-tables';
-@import 'features/image-filters';
-@import 'features/image-grid';
-@import 'features/image-zoom';
-@import 'features/labeled-nav';
-@import 'features/link-underline';
-@import 'features/sidebar-background';
-@import 'features/sidebar-notes';
-@import 'features/tab-styles';
-@import 'features/translucent';
+// @import 'features/image-filters';
+// @import 'features/image-grid';
+// @import 'features/image-zoom';
+// @import 'features/labeled-nav';
+// @import 'features/link-underline';
+// @import 'features/sidebar-background';
+// @import 'features/sidebar-notes';
+// @import 'features/tab-styles';
+// @import 'features/translucent';
 @import 'features/trim-file-names';
-@import 'features/underline-headings';
+// @import 'features/underline-headings';
 
 @import 'mobile/mobile';
 
@@ -87,36 +89,36 @@
 @import 'plugins-core/sync';
 
 /* Community plugins */
-@import 'plugins/banner';
-@import 'plugins/buttons';
-@import 'plugins/calendar';
-@import 'plugins/charts';
+// @import 'plugins/banner';
+// @import 'plugins/buttons';
+// @import 'plugins/calendar';
+// @import 'plugins/charts';
 @import 'plugins/checklist';
-@import 'plugins/cmenu';
+// @import 'plugins/cmenu';
 @import 'plugins/dataview';
 @import 'plugins/database-folder';
-@import 'plugins/dictionary';
+// @import 'plugins/dictionary';
 @import 'plugins/excalidraw';
-@import 'plugins/git';
-@import 'plugins/hider';
-@import 'plugins/hover-editor';
-@import 'plugins/kanban';
-@import 'plugins/lapel';
-@import 'plugins/leaflet';
-@import 'plugins/map-view';
-@import 'plugins/metatable';
-@import 'plugins/nl-tables';
-@import 'plugins/outliner';
+// @import 'plugins/git';
+// @import 'plugins/hider';
+// @import 'plugins/hover-editor';
+// @import 'plugins/kanban';
+// @import 'plugins/lapel';
+// @import 'plugins/leaflet';
+// @import 'plugins/map-view';
+// @import 'plugins/metatable';
+// @import 'plugins/nl-tables';
+// @import 'plugins/outliner';
 @import 'plugins/quickadd';
-@import 'plugins/quick-explorer';
-@import 'plugins/recent';
+// @import 'plugins/quick-explorer';
+// @import 'plugins/recent';
 @import 'plugins/reminder';
-@import 'plugins/sortable';
+// @import 'plugins/sortable';
 @import 'plugins/style-settings';
-@import 'plugins/todoist';
-@import 'plugins/tracker';
-@import 'plugins/weaver';
-@import 'plugins/zoom';
+// @import 'plugins/todoist';
+// @import 'plugins/tracker';
+// @import 'plugins/weaver';
+// @import 'plugins/zoom';
 
 /* Color schemes */
 @import 'color-schemes/atom';
