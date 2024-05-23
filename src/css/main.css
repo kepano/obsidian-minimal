@@ -1686,22 +1686,22 @@ body {
 .markdown-source-view.mod-cm6 td:first-child, .markdown-source-view.mod-cm6 th:first-child,
 .markdown-preview-view td:first-child,
 .markdown-preview-view th:first-child {
-  padding-left: var(--table-edge-cell-padding-first);
+  padding-inline-start: var(--table-edge-cell-padding-first);
 }
 .markdown-source-view.mod-cm6 td:first-child .table-cell-wrapper, .markdown-source-view.mod-cm6 th:first-child .table-cell-wrapper,
 .markdown-preview-view td:first-child .table-cell-wrapper,
 .markdown-preview-view th:first-child .table-cell-wrapper {
-  padding-left: 0;
+  padding-inline-start: 0;
 }
 .markdown-source-view.mod-cm6 td:last-child, .markdown-source-view.mod-cm6 th:last-child,
 .markdown-preview-view td:last-child,
 .markdown-preview-view th:last-child {
-  padding-right: var(--table-edge-cell-padding-last);
+  padding-inline-end: var(--table-edge-cell-padding-last);
 }
 .markdown-source-view.mod-cm6 td:last-child .table-cell-wrapper, .markdown-source-view.mod-cm6 th:last-child .table-cell-wrapper,
 .markdown-preview-view td:last-child .table-cell-wrapper,
 .markdown-preview-view th:last-child .table-cell-wrapper {
-  padding-right: 0;
+  padding-inline-end: 0;
 }
 
 .cm-embed-block.cm-table-widget.markdown-rendered {
@@ -1710,10 +1710,10 @@ body {
 }
 
 .markdown-source-view.mod-cm6 .cm-table-widget .table-col-drag-handle {
-  top: 0;
+  left: 0 !important;
 }
 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
-  left: 0;
+  top: 0 !important;
 }
 
 /* Override Sortable plugin */
@@ -1725,12 +1725,12 @@ body {
 .markdown-preview-view th:first-child,
 .table-view-table > thead > tr > th:first-child,
 .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child {
-  padding-left: var(--table-edge-cell-padding-first);
+  padding-inline-start: var(--table-edge-cell-padding-first);
 }
 .markdown-preview-view th:last-child,
 .table-view-table > thead > tr > th:last-child,
 .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:last-child {
-  padding-right: var(--table-edge-cell-padding-last);
+  padding-inline-end: var(--table-edge-cell-padding-last);
 }
 
 /* Live Preview Tables */

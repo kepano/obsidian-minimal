@@ -26,15 +26,15 @@ body {
 	td, th {
 		padding: var(--table-cell-padding);
 		&:first-child {
-			padding-left: var(--table-edge-cell-padding-first);
+			padding-inline-start: var(--table-edge-cell-padding-first);
 			.table-cell-wrapper {
-				padding-left: 0;
+				padding-inline-start: 0;
 			}
 		}
 		&:last-child {
-			padding-right: var(--table-edge-cell-padding-last);
+			padding-inline-end: var(--table-edge-cell-padding-last);
 			.table-cell-wrapper {
-				padding-right: 0;
+				padding-inline-end: 0;
 			}
 		}
 	}
@@ -48,10 +48,10 @@ body {
 
 .markdown-source-view.mod-cm6 .cm-table-widget {
 	.table-col-drag-handle {
-		top: 0;
+		left: 0 !important;
 	}
 	.table-row-drag-handle {
-		left: 0;
+		top: 0 !important;
 	}
 }
 
@@ -61,10 +61,10 @@ body {
 .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
 	padding: var(--table-cell-padding);
 	&:first-child {
-		padding-left: var(--table-edge-cell-padding-first);
+		padding-inline-start: var(--table-edge-cell-padding-first);
 	}
 	&:last-child {
-		padding-right: var(--table-edge-cell-padding-last);
+		padding-inline-end: var(--table-edge-cell-padding-last);
 	}
 }
 
