@@ -72,6 +72,7 @@
 			--toggle-thumb-color: var(--bg1);
 		}
 	}
+	&.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active,
 	&.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
 		background-color: var(--tx1);
 	}

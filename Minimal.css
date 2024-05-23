@@ -1752,13 +1752,6 @@ body {
   padding: var(--table-drag-padding);
 }
 
-.markdown-source-view.mod-cm6 .cm-table-widget .table-col-drag-handle {
-  left: 0 !important;
-}
-.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
-  top: 0 !important;
-}
-
 /* Override Sortable plugin */
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,
@@ -6857,7 +6850,8 @@ https://github.com/dracula/dracula-theme
   background-color: var(--tx1);
   --toggle-thumb-color: var(--bg1);
 }
-.theme-light.minimal-eink-light.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover),
+.theme-light.minimal-eink-light.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active, .theme-light.minimal-eink-light.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover),
+.theme-dark.minimal-eink-dark.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active,
 .theme-dark.minimal-eink-dark.labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active:not(:hover) {
   background-color: var(--tx1);
 }

@@ -45,16 +45,6 @@ body {
 	padding: var(--table-drag-padding);
 }
 
-
-.markdown-source-view.mod-cm6 .cm-table-widget {
-	.table-col-drag-handle {
-		left: 0 !important;
-	}
-	.table-row-drag-handle {
-		top: 0 !important;
-	}
-}
-
 /* Override Sortable plugin */
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,
