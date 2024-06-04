@@ -159,12 +159,6 @@ body {
 	--table-drag-padding: var(--table-drag-space);
 }
 
-body:not(.table-100):not(.table-max):not(.table-wide) {
-	.markdown-preview-view {
-		--container-table-margin: var(--content-margin-start);
-	}
-}
-
 .maximize-tables-auto {
 	--container-table-max-width: 100%;
 	--container-table-width: 100%;
@@ -222,11 +216,12 @@ body:not(.table-100):not(.table-max):not(.table-wide) {
 	--container-table-width: 100%;
 	--container-dataview-table-width: 100%;
 	--container-table-max-width: 100%;
-	--container-table-margin: auto;
+	--container-table-margin: 0;
 	--table-edge-cell-padding-first: 16px;
 	--table-edge-cell-padding-last: 16px;
 	--table-margin: 0;
 	--table-drag-padding: var(--table-drag-space) 0;
+	--table-wrapper-width: 100%;
 
 	.dataview.list-view-ul {
 		max-width: var(--max-width);

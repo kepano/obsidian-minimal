@@ -298,7 +298,7 @@ settings:
 		title: Code font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: 13px
+		default: 0.8em
 	-
 		id: minimal-code-scroll
 		title: Scroll long lines

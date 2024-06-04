@@ -430,7 +430,6 @@ body .excalidraw {
   --interactive-accent: var(--ax3);
   --interactive-hover: var(--ui1);
   --list-marker-color: var(--tx3);
-  --modal-border-color: var(--ui2);
   --nav-item-background-active: var(--bg3);
   --nav-item-background-hover: var(--bg3);
   --nav-item-color: var(--tx2);
@@ -487,15 +486,15 @@ body .excalidraw {
 .theme-light {
   --interactive-normal: var(--bg1);
   --interactive-accent-rgb:220, 220, 220;
-  --active-line-bg:rgba(0,0,0,0.035);
+  --active-line-bg: rgba(0,0,0,0.035);
   --background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 70%),calc(var(--base-l) - 20%),0.5);
-  --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
+  --text-highlight-bg-active: rgba(0, 0, 0, 0.1);
   /* Errors */
-  --background-modifier-error:rgba(255,0,0,0.14);
-  --background-modifier-error-hover:rgba(255,0,0,0.08);
+  --background-modifier-error: rgba(255,0,0,0.14);
+  --background-modifier-error-hover: rgba(255,0,0,0.08);
   /* Shadows */
-  --shadow-color:rgba(0, 0, 0, 0.1);
-  --btn-shadow-color:rgba(0, 0, 0, 0.05);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --btn-shadow-color: rgba(0, 0, 0, 0.05);
 }
 
 .theme-dark {
@@ -503,14 +502,15 @@ body .excalidraw {
   --interactive-accent-rgb: 66, 66, 66;
   --active-line-bg: rgba(255,255,255,0.04);
   --background-modifier-cover: hsla(var(--base-h),var(--base-s), calc(var(--base-l) - 12%), 0.5);
-  --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
+  --text-highlight-bg-active: rgba(255, 255, 255, 0.1);
   /* Errors */
-  --background-modifier-error:rgba(255,20,20,0.12);
-  --background-modifier-error-hover:rgba(255,20,20,0.18);
+  --background-modifier-error: rgba(255,20,20,0.12);
+  --background-modifier-error-hover: rgba(255,20,20,0.18);
   /* Shadows */
-  --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
-  --shadow-color:rgba(0, 0, 0, 0.3);
-  --btn-shadow-color:rgba(0, 0, 0, 0.2);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --btn-shadow-color: rgba(0, 0, 0, 0.2);
+  --modal-border-color: var(--ui2);
 }
 
 .theme-light.minimal-light-white {
@@ -533,10 +533,10 @@ body .excalidraw {
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
   --modal-border: var(--ui2);
-  --active-line-bg:rgba(255,255,255,0.085);
+  --active-line-bg: rgba(255,255,255,0.085);
   --background-modifier-form-field: var(--bg3);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
-  --background-modifier-box-shadow:rgba(0, 0, 0, 1);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 1);
 }
 
 /* Desktop font sizes */
@@ -1975,10 +1975,6 @@ body {
   --table-drag-padding: var(--table-drag-space);
 }
 
-body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
-  --container-table-margin: var(--content-margin-start);
-}
-
 .maximize-tables-auto {
   --container-table-max-width: 100%;
   --container-table-width: 100%;
@@ -2037,11 +2033,12 @@ body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view {
   --container-table-width: 100%;
   --container-dataview-table-width: 100%;
   --container-table-max-width: 100%;
-  --container-table-margin: auto;
+  --container-table-margin: 0;
   --table-edge-cell-padding-first: 16px;
   --table-edge-cell-padding-last: 16px;
   --table-margin: 0;
   --table-drag-padding: var(--table-drag-space) 0;
+  --table-wrapper-width: 100%;
 }
 .table-100 .dataview.list-view-ul {
   max-width: var(--max-width);
@@ -4248,10 +4245,14 @@ body:not(.full-file-names) .tree-item-inner {
 .is-tablet .workspace-drawer.is-pinned .workspace-drawer-header {
   padding-top: var(--size-4-4);
 }
+.is-tablet .workspace-drawer-header-icon {
+  margin-inline-start: 0;
+}
 
 .is-mobile {
   --font-bold: 600;
   --font-ui-medium: var(--font-adaptive-small);
+  --interactive-normal: var(--background-modifier-hover);
   --background-modifier-form-field: var(--background-secondary);
   --background-modifier-form-field-highlighted: var(--background-secondary);
 }

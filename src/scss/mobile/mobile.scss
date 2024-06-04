@@ -18,11 +18,16 @@
 	.workspace-drawer.is-pinned .workspace-drawer-header {
 		padding-top: var(--size-4-4);
 	}
+	.workspace-drawer-header-icon {
+		margin-inline-start:0;
+	}
 }
 
 .is-mobile {
 	--font-bold: 600;
 	--font-ui-medium: var(--font-adaptive-small);
+
+	--interactive-normal: var(--background-modifier-hover);
 	--background-modifier-form-field: var(--background-secondary);
 	--background-modifier-form-field-highlighted: var(--background-secondary);
 
