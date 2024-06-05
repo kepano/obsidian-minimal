@@ -338,55 +338,55 @@ div ul ul {
 
 .cards,
 .list-cards {
-&.cards-16-9 {
-	--cards-aspect-ratio: 16/9;
-}
-&.cards-1-1 {
-	--cards-aspect-ratio: 1/1;
-}
-&.cards-2-1 {
-	--cards-aspect-ratio: 2/1;
-}
-&.cards-2-3 {
-	--cards-aspect-ratio: 2/3;
-}
-&.cards-cols-1 {
-	--cards-columns: repeat(1, minmax(0, 1fr));
-}
-&.cards-cols-2 {
-	--cards-columns: repeat(2, minmax(0, 1fr));
-}
-&.cards-cover {
-	--cards-image-fit: cover;
-}
-&.cards-align-bottom table.dataview tbody > tr > td:last-child {
-	margin-top: auto;
-}
+	&.cards-16-9 {
+		--cards-aspect-ratio: 16/9;
+	}
+	&.cards-1-1 {
+		--cards-aspect-ratio: 1/1;
+	}
+	&.cards-2-1 {
+		--cards-aspect-ratio: 2/1;
+	}
+	&.cards-2-3 {
+		--cards-aspect-ratio: 2/3;
+	}
+	&.cards-cols-1 {
+		--cards-columns: repeat(1, minmax(0, 1fr));
+	}
+	&.cards-cols-2 {
+		--cards-columns: repeat(2, minmax(0, 1fr));
+	}
+	&.cards-cover {
+		--cards-image-fit: cover;
+	}
+	&.cards-align-bottom table.dataview tbody > tr > td:last-child {
+		margin-top: auto;
+	}
 }
 
 @media (max-width:400pt) {
-.cards table.dataview tbody > tr > td:not(:first-child) {
-	font-size: 80%;
-}
+	.cards table.dataview tbody > tr > td:not(:first-child) {
+		font-size: 80%;
+	}
 }
 
 @media (min-width:400pt) {
-.cards-cols-3 {
-	--cards-columns: repeat(3, minmax(0, 1fr));
-}
-.cards-cols-4 {
-	--cards-columns: repeat(4, minmax(0, 1fr));
-}
-.cards-cols-5 {
-	--cards-columns: repeat(5, minmax(0, 1fr));
-}
-.cards-cols-6 {
-	--cards-columns: repeat(6, minmax(0, 1fr));
-}
-.cards-cols-7 {
-	--cards-columns: repeat(7, minmax(0, 1fr));
-}
-.cards-cols-8 {
-	--cards-columns: repeat(8, minmax(0, 1fr));
-}
+	.cards-cols-3 {
+		--cards-columns: repeat(3, minmax(0, 1fr));
+	}
+	.cards-cols-4 {
+		--cards-columns: repeat(4, minmax(0, 1fr));
+	}
+	.cards-cols-5 {
+		--cards-columns: repeat(5, minmax(0, 1fr));
+	}
+	.cards-cols-6 {
+		--cards-columns: repeat(6, minmax(0, 1fr));
+	}
+	.cards-cols-7 {
+		--cards-columns: repeat(7, minmax(0, 1fr));
+	}
+	.cards-cols-8 {
+		--cards-columns: repeat(8, minmax(0, 1fr));
+	}
 }
