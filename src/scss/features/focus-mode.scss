@@ -42,8 +42,9 @@
 	}
 
 	/* Hide right sidebar button */
-	.mod-top-right-space .sidebar-toggle-button.mod-right {
+	.mod-root .sidebar-toggle-button.mod-right {
 		opacity: 0;
+		transition: opacity 0.2s ease-in-out 0.5s;
 	}
 
 	/* Hide status bar */
@@ -100,6 +101,8 @@
 			height: var(--header-height);
 			--tab-outline-width: 1px;
 			transition: all 0.1s linear 0.05s;
+
+			.sidebar-toggle-button.mod-right,
 			.workspace-tab-header-container-inner,
 			.workspace-tab-header-new-tab,
 			.workspace-tab-header-tab-list {

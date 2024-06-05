@@ -3216,8 +3216,9 @@ body:not(.minimal-icons-off) svg.longform {
 .minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
   border-right: none;
 }
-.minimal-focus-mode .mod-top-right-space .sidebar-toggle-button.mod-right {
+.minimal-focus-mode .mod-root .sidebar-toggle-button.mod-right {
   opacity: 0;
+  transition: opacity 0.2s ease-in-out 0.5s;
 }
 .minimal-focus-mode:not(.minimal-status-off) .status-bar {
   opacity: 0;
@@ -3264,6 +3265,7 @@ body:not(.minimal-icons-off) svg.longform {
   --tab-outline-width: 1px;
   transition: all 0.1s linear 0.05s;
 }
+.minimal-focus-mode .mod-root .workspace-tab-header-container:hover .sidebar-toggle-button.mod-right,
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner,
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-new-tab,
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-tab-list {
