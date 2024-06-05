@@ -38,11 +38,11 @@
 
 .is-mobile {
 	.workspace-drawer.mod-left.is-pinned {
-		max-width:var(--mobile-left-sidebar-width);
+		width:var(--mobile-left-sidebar-width);
 		min-width:150pt;
   }
 	.workspace-drawer.mod-right.is-pinned {
-		max-width:var(--mobile-right-sidebar-width);
+		width:var(--mobile-right-sidebar-width);
 		min-width:150pt;
   }
 }

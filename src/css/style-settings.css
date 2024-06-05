@@ -2010,17 +2010,6 @@ settings:
 */
 
 /* @settings
-name: Minimal Mobile
-id: minimal-mobile
-settings:
-	-
-		id: mobile-toolbar-off
-		title: Disable toolbar
-		description: Turns off mobile toolbar
-		type: class-toggle
-*/
-
-/* @settings
 name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
@@ -2064,5 +2053,10 @@ settings:
 		type: variable-number
 		default: 11
 		format: px
+	- 
+		id: mobile-toolbar-off
+		title: Disable mobile toolbar
+		description: Turns off toolbar in editor on mobile
+		type: class-toggle
 
 */

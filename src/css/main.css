@@ -4261,11 +4261,11 @@ body:not(.full-file-names) .tree-item-inner {
 }
 
 .is-mobile .workspace-drawer.mod-left.is-pinned {
-  max-width: var(--mobile-left-sidebar-width);
+  width: var(--mobile-left-sidebar-width);
   min-width: 150pt;
 }
 .is-mobile .workspace-drawer.mod-right.is-pinned {
-  max-width: var(--mobile-right-sidebar-width);
+  width: var(--mobile-right-sidebar-width);
   min-width: 150pt;
 }
 

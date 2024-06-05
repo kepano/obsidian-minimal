@@ -4304,11 +4304,11 @@ body:not(.full-file-names) .tree-item-inner {
 }
 
 .is-mobile .workspace-drawer.mod-left.is-pinned {
-  max-width: var(--mobile-left-sidebar-width);
+  width: var(--mobile-left-sidebar-width);
   min-width: 150pt;
 }
 .is-mobile .workspace-drawer.mod-right.is-pinned {
-  max-width: var(--mobile-right-sidebar-width);
+  width: var(--mobile-right-sidebar-width);
   min-width: 150pt;
 }
 
@@ -9786,17 +9786,6 @@ settings:
 */
 
 /* @settings
-name: Minimal Mobile
-id: minimal-mobile
-settings:
-	-
-		id: mobile-toolbar-off
-		title: Disable toolbar
-		description: Turns off mobile toolbar
-		type: class-toggle
-*/
-
-/* @settings
 name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
@@ -9840,5 +9829,10 @@ settings:
 		type: variable-number
 		default: 11
 		format: px
+	- 
+		id: mobile-toolbar-off
+		title: Disable mobile toolbar
+		description: Turns off toolbar in editor on mobile
+		type: class-toggle
 
 */
