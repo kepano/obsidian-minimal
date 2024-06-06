@@ -2524,6 +2524,7 @@ table.dataview tbody > tr > td {
   border-radius: var(--radius-s);
   border: var(--cards-border-width) solid var(--background-modifier-border);
   overflow: hidden;
+  margin-inline-start: 0;
 }
 .list-cards.markdown-preview-view div > ul .image-embed {
   padding: 0;
@@ -2559,6 +2560,7 @@ table.dataview tbody > tr > td {
 }
 .list-cards.markdown-preview-view div ul ul > li {
   display: block;
+  margin-inline-start: 0;
 }
 
 /* ------------------- */
