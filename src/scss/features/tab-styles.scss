@@ -167,7 +167,7 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 	}
 }
 
-.tab-names-single .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child {
+.tab-names-single .workspace > .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child {
 	--sidebar-tab-text-display: static;
 	background-color: transparent;
 	.workspace-tab-header-inner-title {

@@ -1,3 +1,11 @@
 .mod-root .workspace-tab-header-status-icon {
 	color: var(--text-muted);
 }
+
+body:not(.is-mobile).hide-help .workspace-split.mod-left-split {
+	.workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
+		.clickable-icon:first-child {
+			display: none;
+		}
+	}
+}

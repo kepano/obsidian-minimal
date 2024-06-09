@@ -450,6 +450,7 @@ body .excalidraw {
   --background-modifier-border-focus: var(--ui3);
   --background-modifier-border-hover: var(--ui2);
   --background-modifier-border: var(--ui1);
+  --mobile-sidebar-background: var(--bg1);
   --background-modifier-form-field-highlighted: var(--bg1);
   --background-modifier-form-field: var(--bg1);
   --background-modifier-success: var(--color-green);
@@ -1172,6 +1173,10 @@ body.is-focused {
 
 .mod-root .workspace-tab-header-status-icon {
   color: var(--text-muted);
+}
+
+body:not(.is-mobile).hide-help .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon:first-child {
+  display: none;
 }
 
 /* Components */
@@ -4073,14 +4078,14 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
   gap: var(--size-2-3);
 }
 
-.tab-names-single .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child {
+.tab-names-single .workspace > .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child {
   --sidebar-tab-text-display: static;
   background-color: transparent;
 }
-.tab-names-single .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child .workspace-tab-header-inner-title {
+.tab-names-single .workspace > .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child .workspace-tab-header-inner-title {
   font-weight: 500;
 }
-.tab-names-single .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child .workspace-tab-header-inner {
+.tab-names-single .workspace > .workspace-split:not(.mod-root) .workspace-tab-header-container-inner .workspace-tab-header:only-child .workspace-tab-header-inner {
   gap: var(--size-2-3);
 }
 
@@ -6501,6 +6506,9 @@ body.theme-light {
 
 .theme-light.minimal-atom-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-atom-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-atom-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-atom-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-atom-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-atom-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-atom-dark {
   --base-h:220;
@@ -6592,6 +6600,9 @@ https://github.com/ayu-theme/ayu-colors
 
 .theme-light.minimal-ayu-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-ayu-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-ayu-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-ayu-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-ayu-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-ayu-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-ayu-dark {
   --base-h:222;
@@ -6697,6 +6708,9 @@ https://github.com/catppuccin/catppuccin
 
 .theme-light.minimal-catppuccin-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-catppuccin-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-catppuccin-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-catppuccin-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-catppuccin-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-catppuccin-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-catppuccin-dark {
   --base-h: 229;
@@ -6751,6 +6765,9 @@ https://github.com/dracula/dracula-theme
 
 .theme-light.minimal-dracula-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-dracula-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-dracula-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-dracula-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-dracula-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-dracula-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-dracula-dark {
   --base-h: 232;
@@ -6940,6 +6957,9 @@ https://github.com/dracula/dracula-theme
 
 .theme-light.minimal-eink-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-eink-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-eink-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-eink-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-eink-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-eink-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-eink-dark {
   --base-h:0;
@@ -7084,6 +7104,9 @@ https://github.com/sainnhe/everforest
 
 .theme-light.minimal-everforest-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-everforest-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-everforest-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-everforest-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-everforest-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-everforest-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-everforest-dark {
   --base-h:203;
@@ -7180,6 +7203,9 @@ https://stephango.com/flexoki
 
 .theme-light.minimal-flexoki-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-flexoki-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-flexoki-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-flexoki-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-flexoki-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-flexoki-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-flexoki-dark {
   --base-h: 360;
@@ -7261,6 +7287,9 @@ https://github.com/morhetz/gruvbox
 
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-gruvbox-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-gruvbox-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-gruvbox-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-gruvbox-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-gruvbox-dark {
   --accent-h:24;
@@ -7330,6 +7359,9 @@ https://github.com/morhetz/gruvbox
 
 .theme-light.minimal-macos-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-macos-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-macos-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-macos-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-macos-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-macos-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-macos-dark {
   --base-h:106;
@@ -7405,6 +7437,9 @@ https://github.com/nordtheme/nord
 
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-nord-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-nord-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-nord-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-nord-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-nord-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-nord-dark {
   --base-h:220;
@@ -7452,6 +7487,9 @@ https://github.com/nordtheme/nord
 
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-notion-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-notion-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-notion-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-notion-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-notion-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-notion-dark {
   --base-h:203;
@@ -7544,6 +7582,9 @@ https://github.com/rose-pine/rose-pine-theme
 
 .theme-light.minimal-rose-pine-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-rose-pine-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-rose-pine-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-rose-pine-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-rose-pine-dark {
   --base-h: 247;
@@ -7621,6 +7662,9 @@ https://ethanschoonover.com/solarized/
 
 .theme-light.minimal-solarized-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-solarized-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-solarized-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-solarized-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-solarized-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-solarized-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-solarized-dark {
   --accent-h: 205;
@@ -7703,6 +7747,9 @@ https://ethanschoonover.com/solarized/
 
 .theme-light.minimal-things-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-things-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-things-light.minimal-light-contrast .workspace-drawer.mod-left,
+.theme-light.minimal-things-light.minimal-light-contrast .mod-left-split,
+.theme-light.minimal-things-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),
 .theme-light.minimal-things-light.minimal-light-contrast .theme-dark,
 .theme-dark.minimal-things-dark {
   --base-h:218;
