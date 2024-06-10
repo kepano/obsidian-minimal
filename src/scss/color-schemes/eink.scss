@@ -53,6 +53,10 @@
 		--tab-text-color-focused: var(--bg1);
 		--tab-text-color-focused-active-current: var(--bg1);
 	}
+	.setting-hotkey {
+		background-color: transparent;
+		border: 1px solid var(--tx1);
+	}
 	.suggestion-container {
 		border-width: 3px;
 	}
