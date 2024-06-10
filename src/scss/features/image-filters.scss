@@ -67,9 +67,9 @@ div[src$="#invert"] {
 }
 
 /* Circle */
-img[src$="#circle"],
-span[src$="#circle"] img,
-span[src$="#round"] img {
+img[src$="#circle"]:not(.emoji),
+span[src$="#circle"] img:not(.emoji),
+span[src$="#round"] img:not(.emoji) {
 	border-radius:50%;
 	aspect-ratio:1/1;
 }
