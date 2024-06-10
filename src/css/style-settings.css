@@ -1403,6 +1403,31 @@ settings:
 				label: Single tab only
 				value: tab-names-single
 	-
+		id: vault-profile-display
+		title: Vault profile position
+		type: class-select
+		allowEmpty: false
+		default: vault-profile-default
+		options:
+			-
+				label: Bottom
+				value: vault-profile-default
+			-
+				label: Top
+				value: vault-profile-top
+	-
+		id: hide-help
+		title: Hide help button
+		description: 
+		type: class-toggle
+		default: false
+	-
+		id: hide-settings
+		title: Hide settings button
+		description: 
+		type: class-toggle
+		default: false
+	-
 		id: mobile-left-sidebar-width
 		title: Mobile left sidebar width
 		description: Maximum width for pinned left sidebar on mobile

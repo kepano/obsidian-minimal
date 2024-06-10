@@ -17,8 +17,6 @@ body {
   --font-ui-smaller: 11px;
   /* Font weights */
   --normal-weight: 400;
-  --bold-weight: 600;
-  --link-weight: inherit;
   /* Headings */
   --inline-title-margin-bottom: 1rem;
   --h1-size: 1.125em;
@@ -1132,8 +1130,66 @@ body.is-focused {
   color: var(--text-muted);
 }
 
-body:not(.is-mobile).hide-help .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon:first-child {
+.is-collapsed .workspace-sidedock-vault-profile {
+  opacity: 0;
+}
+
+body:not(.is-mobile).hide-help .workspace-drawer-vault-actions .clickable-icon:first-child {
   display: none;
+}
+
+body:not(.is-mobile).hide-settings .workspace-drawer-vault-actions .clickable-icon:last-child {
+  display: none;
+}
+
+body:not(.is-mobile).hide-help.hide-settings .workspace-drawer-vault-actions {
+  display: none !important;
+}
+
+body:not(.is-grabbing):not(.is-fullscreen).labeled-nav.is-hidden-frameless.vault-profile-top .mod-left-split .mod-top .workspace-tab-header-container {
+  -webkit-app-region: no-drag;
+}
+body:not(.is-grabbing):not(.is-fullscreen).labeled-nav.is-hidden-frameless.vault-profile-top .mod-left-split .mod-top .workspace-tab-header-container:before {
+  position: absolute;
+  top: 0;
+  content: "";
+  height: var(--header-height);
+  width: 100%;
+  -webkit-app-region: drag;
+}
+
+body:not(.is-mobile):not(.labeled-nav).vault-profile-top .workspace-split.mod-left-split .mod-top .workspace-tab-container {
+  margin-top: calc(var(--header-height) + 8px);
+}
+body:not(.is-mobile):not(.labeled-nav).vault-profile-top .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  -webkit-app-region: no-drag;
+  position: absolute;
+  top: var(--header-height);
+  z-index: 6;
+  width: 100%;
+  border-top: 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+body:not(.is-mobile):not(.labeled-nav).vault-profile-top .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+  padding-left: var(--size-4-2);
+}
+
+body:not(.is-mobile).labeled-nav.vault-profile-top .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  -webkit-app-region: no-drag;
+  position: absolute;
+  top: var(--labeled-nav-top-margin);
+  z-index: 6;
+  width: 100%;
+  background-color: transparent;
+  border-top: 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+body:not(.is-mobile).labeled-nav.vault-profile-top .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+  padding-left: var(--size-4-2);
+}
+
+.vault-profile-top .workspace-tab-header-container-inner {
+  --labeled-nav-top-margin: 84px;
 }
 
 /* Components */
@@ -3633,19 +3689,19 @@ body {
 
 /* Image zoom  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
-body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content div:not(.canvas-node-content) img {
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content div:not(.canvas-node-content) img {
   max-width: 100%;
   cursor: zoom-in;
 }
-body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content img:active {
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content img:active {
   cursor: zoom-out;
 }
-body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active {
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active {
   background-color: var(--background-primary);
   padding: 10px;
 }
-body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active,
-body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active {
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active,
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active {
   --container-img-width: 100%;
   --container-img-max-width: 100%;
   aspect-ratio: unset;
@@ -3665,7 +3721,7 @@ body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .i
   right: 0;
   bottom: 0;
 }
-body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active:after {
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active:after {
   background-color: var(--background-primary);
   opacity: 0.9;
   content: " ";
@@ -3676,7 +3732,7 @@ body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .i
   right: 1px;
   z-index: 0;
 }
-body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active img {
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active img {
   aspect-ratio: unset;
   top: 50%;
   z-index: 99;
@@ -3692,7 +3748,7 @@ body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .i
   position: absolute;
   opacity: 1;
 }
-body:not(.zoom-off) .workspace-leaf-content[data-type=markdown] .view-content .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false]:has(.image-embed:not(.canvas-node-content):active) {
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false]:has(.image-embed:not(.canvas-node-content):active) {
   contain: unset !important;
 }
 
@@ -7447,7 +7503,6 @@ https://github.com/nordtheme/nord
   --tx2:#72706c;
   --tx3:#aaa9a5;
   --hl1:rgba(131,201,229,0.3);
-  --link-weight:500;
 }
 
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
@@ -7473,7 +7528,6 @@ https://github.com/nordtheme/nord
   --tx2:#909295;
   --tx3:#585d5f;
   --hl1:rgba(57,134,164,0.3);
-  --link-weight:500;
 }
 
 .theme-dark.minimal-notion-dark.minimal-dark-black {

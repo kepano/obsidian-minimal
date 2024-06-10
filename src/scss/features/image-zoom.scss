@@ -1,7 +1,7 @@
 /* Image zoom  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
-body:not(.zoom-off) .workspace-leaf-content[data-type="markdown"] .view-content {
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-content {
 	div:not(.canvas-node-content) img {
 		max-width:100%;
 		cursor:zoom-in;
