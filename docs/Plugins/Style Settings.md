@@ -312,7 +312,7 @@ Defines [[Tab styles]] in the main window (for sidebar tab styles go to **Sideba
 | Faint text color            | `--tx3`          | For tertiary text such as input placeholders, disabled statuses          |
 | Italic text color           | `--italic-color` |                                                                          |
 | Bold text color             | `--bold-color`   |                                                                          |
-| Bold text weight            | `--bold-weight`  |                                                                          |
+| Bold text weight            | `--bold-modifier` |                                                                          |
 | Paragraph spacing           | `--spacing-p`    | Space between paragraphs in reading mode                                 |
 
 ### Titles
