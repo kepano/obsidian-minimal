@@ -3565,9 +3565,9 @@ div[src$="#invert"] {
 }
 
 /* Circle */
-img[src$="#circle"],
-span[src$="#circle"] img,
-span[src$="#round"] img {
+img[src$="#circle"]:not(.emoji),
+span[src$="#circle"] img:not(.emoji),
+span[src$="#round"] img:not(.emoji) {
   border-radius: 50%;
   aspect-ratio: 1/1;
 }
@@ -6847,6 +6847,11 @@ https://github.com/dracula/dracula-theme
   --tab-text-color-focused: var(--bg1);
   --tab-text-color-focused-active-current: var(--bg1);
 }
+.theme-light.minimal-eink-light .setting-hotkey,
+.theme-dark.minimal-eink-dark .setting-hotkey {
+  background-color: transparent;
+  border: 1px solid var(--tx1);
+}
 .theme-light.minimal-eink-light .suggestion-container,
 .theme-dark.minimal-eink-dark .suggestion-container {
   border-width: 3px;
@@ -9600,12 +9605,12 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: bold-weight
+		id: bold-modifier
 		title: Bold text weight
 		type: variable-number-slider
-		default: 600
+		default: 200
 		min: 100
-		max: 900
+		max: 500
 		step: 100
 	-
 		id: p-spacing
