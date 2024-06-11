@@ -43,6 +43,10 @@ body {
 .cm-embed-block.cm-table-widget.markdown-rendered {
 	margin-top: -8px !important;
 	padding: var(--table-drag-padding);
+	overscroll-behavior-x: none;
+	.is-mobile & {
+		padding-bottom: 40px;
+	}
 }
 
 /* Override Sortable plugin */

@@ -158,6 +158,10 @@ body {
 	--container-table-width: calc(var(--line-width) + var(--table-drag-space)*2);
 	--table-drag-padding: var(--table-drag-space);
 }
+.is-mobile {
+	--table-drag-space: 16px;
+	--container-table-max-width: calc(100% - var(--container-table-margin));
+}
 
 .maximize-tables-auto {
 	--container-table-max-width: 100%;
@@ -221,12 +225,15 @@ body {
 	--table-edge-cell-padding-last: 16px;
 	--table-margin: 0;
 	--table-drag-padding: var(--table-drag-space) 0;
-	--table-wrapper-width: 100%;
+	--table-wrapper-width: min(fit-content, 100%);
 
 	.dataview.list-view-ul {
 		max-width: var(--max-width);
 		width: var(--line-width);
 		margin-inline: auto;
+	}
+	.table-col-btn {
+		display: none !important;
 	}
 }
 
