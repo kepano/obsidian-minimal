@@ -4,6 +4,11 @@
 	.nav-files-container {
 		--nav-item-background-active: var(--interactive-accent);
 		--nav-item-color-active: var(--text-on-accent);
+
+		.is-active .nav-file-tag {
+			color: var(--text-on-accent);
+			opacity: 0.6;
+		}
 	}
 
 	#calendar-container {

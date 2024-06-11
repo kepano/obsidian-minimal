@@ -3031,6 +3031,10 @@ li[data-task=b] > p > input:checked {
   --nav-item-background-active: var(--interactive-accent);
   --nav-item-color-active: var(--text-on-accent);
 }
+.colorful-active .nav-files-container .is-active .nav-file-tag {
+  color: var(--text-on-accent);
+  opacity: 0.6;
+}
 .colorful-active #calendar-container .active,
 .colorful-active #calendar-container .active.today,
 .colorful-active #calendar-container .active:hover,
