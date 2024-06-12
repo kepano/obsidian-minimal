@@ -874,37 +874,52 @@ body.ribbon-vertical-expand:not(.is-mobile) {
   --ribbon-width: 0px;
 }
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left {
-  box-shadow: 0 -1px var(--background-modifier-border);
-  width: 0;
-  flex-basis: 0;
-  padding: 0;
-  margin-top: 0;
-  transition: all 0.2s linear 0.6s;
-}
-body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-actions {
-  padding: var(--ribbon-padding);
+  width: 10px;
+  flex-basis: 10px;
   opacity: 0;
-  z-index: 99;
-  content: "";
   position: fixed;
-  width: 44px;
   height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
-  transition: opacity 0.1s linear 0.6s;
+  z-index: 10;
+  transition: all 0.1s linear 0.6s;
+}
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-actions {
+  transition: opacity 0.1s linear 0.3s;
 }
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover {
-  width: 44px !important;
+  width: 44px;
   opacity: 1;
-  flex-basis: 44px !important;
-  transition: all 0.1s linear;
-  border-right: var(--divider-width) solid var(--background-modifier-border);
+  flex-basis: 44px;
+  transition: opacity 0.1s linear 0.1s;
 }
-body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover .side-dock-actions:hover,
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover .side-dock-actions {
   opacity: 1;
-  transition: opacity 0.1s linear;
+  transition: opacity 0.2s linear 0.2s;
+}
+body.ribbon-vertical-expand:not(.is-mobile).labeled-nav .workspace-ribbon.mod-left ~ .mod-left-split .workspace-tab-header-container {
+  margin-left: 0;
+  transition: all 0.1s linear 0.6s;
+}
+body.ribbon-vertical-expand:not(.is-mobile).labeled-nav .workspace-ribbon.mod-left:hover ~ .mod-left-split .workspace-tab-header-container {
+  margin-left: 44px;
+  transition: all 0.1s linear;
+}
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left ~ .mod-left-split .workspace-tab-container {
+  padding-left: 0px;
+  transition: all 0.1s linear 0.6s;
+}
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left ~ .mod-left-split .workspace-sidedock-vault-profile {
+  transition: all 0.1s linear 0.6s;
+}
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .mod-left-split .workspace-tab-container {
+  padding-left: 44px;
+  transition: all 0.1s linear;
+}
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .mod-left-split .workspace-sidedock-vault-profile {
+  padding-left: 52px;
+  transition: all 0.1s linear;
 }
 
 .hider-ribbon .workspace-ribbon.mod-left:before,
@@ -4435,7 +4450,7 @@ body {
 }
 
 /* File browser */
-.hider-file-nav-header .nav-files-container {
+.hider-file-nav-header:not(.labeled-nav) .nav-files-container {
   padding-top: var(--size-4-3);
 }
 

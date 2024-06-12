@@ -1,7 +1,7 @@
 /* File browser */
 
 
-.hider-file-nav-header {
+.hider-file-nav-header:not(.labeled-nav) {
 	.nav-files-container {
 		padding-top: var(--size-4-3);
 	}
