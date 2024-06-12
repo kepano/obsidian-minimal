@@ -20,7 +20,7 @@ https://github.com/kepano/obsidian-minimal
 
 MIT License
 
-Copyright (c) 2020-2023 Stephan Ango (@kepano)
+Copyright (c) 2020-2024 Steph Ango (@kepano)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -911,6 +911,43 @@ figure {
 .ribbon-bottom-left-hover-vertical:not(.is-mobile),
 .ribbon-bottom-left-hover:not(.is-mobile) {
   --hider-ribbon-display: flex;
+}
+
+body.ribbon-vertical-expand:not(.is-mobile) {
+  --ribbon-width: 0px;
+}
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left {
+  box-shadow: 0 -1px var(--background-modifier-border);
+  width: 0;
+  flex-basis: 0;
+  padding: 0;
+  margin-top: 0;
+  transition: all 0.2s linear 0.6s;
+}
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-actions {
+  padding: var(--ribbon-padding);
+  opacity: 0;
+  z-index: 99;
+  content: "";
+  position: fixed;
+  width: 44px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.1s linear 0.6s;
+}
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover {
+  width: 44px !important;
+  opacity: 1;
+  flex-basis: 44px !important;
+  transition: all 0.1s linear;
+  border-right: var(--divider-width) solid var(--background-modifier-border);
+}
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover .side-dock-actions:hover,
+body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover .side-dock-actions {
+  opacity: 1;
+  transition: opacity 0.1s linear;
 }
 
 .hider-ribbon .workspace-ribbon.mod-left:before,
@@ -4438,6 +4475,10 @@ body {
 }
 
 /* File browser */
+.hider-file-nav-header .nav-files-container {
+  padding-top: var(--size-4-3);
+}
+
 .is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
   display: none;
 }
@@ -9361,11 +9402,14 @@ settings:
 				label: Default
 				value: ribbon-hidden
 			-
-				label: Bottom left hover (horizontal)
-				value: ribbon-bottom-left-hover
+				label: Expand (vertical)
+				value: ribbon-vertical-expand
 			-
-				label: Bottom left hover (vertical)
+				label: Hover (vertical)
 				value: ribbon-bottom-left-hover-vertical
+			-
+				label: Hover (horizontal)
+				value: ribbon-bottom-left-hover	
 	-
 		id: tables
 		title: Tables

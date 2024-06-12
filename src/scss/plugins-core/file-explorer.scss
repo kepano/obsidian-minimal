@@ -1,5 +1,12 @@
 /* File browser */
 
+
+.hider-file-nav-header {
+	.nav-files-container {
+		padding-top: var(--size-4-3);
+	}
+}
+
 .is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
 	display:none;
 }

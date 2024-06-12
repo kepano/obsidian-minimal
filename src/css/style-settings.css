@@ -1459,11 +1459,14 @@ settings:
 				label: Default
 				value: ribbon-hidden
 			-
-				label: Bottom left hover (horizontal)
-				value: ribbon-bottom-left-hover
+				label: Expand (vertical)
+				value: ribbon-vertical-expand
 			-
-				label: Bottom left hover (vertical)
+				label: Hover (vertical)
 				value: ribbon-bottom-left-hover-vertical
+			-
+				label: Hover (horizontal)
+				value: ribbon-bottom-left-hover	
 	-
 		id: tables
 		title: Tables
