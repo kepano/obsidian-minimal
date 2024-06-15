@@ -33,8 +33,10 @@
 	--text-on-accent-inverted: var(--bg1);
 	--text-selection: var(--tx1);
 	--vault-profile-color: var(--tx1);
+	--nav-item-color-active: var(--bg1);
 	--nav-item-color-hover: var(--bg1);
 
+	button:hover,
 	::selection {
 		color: var(--bg1);
 	}
@@ -63,6 +65,10 @@
 	.markdown-rendered code,
 	.cm-s-obsidian span.cm-inline-code {
 		font-weight: 600;
+	}
+	.tree-item-self:hover,
+	.tree-item-self.is-active {
+		--icon-color: var(--bg1);
 	}
 	.metadata-property-icon {
 		--icon-color-focused: var(--tx1);

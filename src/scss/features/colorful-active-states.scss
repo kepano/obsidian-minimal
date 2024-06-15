@@ -10,6 +10,9 @@
 			opacity: 0.6;
 		}
 	}
+	.tree-item-self.is-being-renamed:focus-within {
+		--nav-item-color-active: var(--text-normal);
+	}
 
 	#calendar-container {
 		.active,

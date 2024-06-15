@@ -3044,6 +3044,9 @@ li[data-task=b] > p > input:checked {
   color: var(--text-on-accent);
   opacity: 0.6;
 }
+.colorful-active .tree-item-self.is-being-renamed:focus-within {
+  --nav-item-color-active: var(--text-normal);
+}
 .colorful-active #calendar-container .active,
 .colorful-active #calendar-container .active.today,
 .colorful-active #calendar-container .active:hover,
@@ -6913,9 +6916,12 @@ https://github.com/dracula/dracula-theme
   --text-on-accent-inverted: var(--bg1);
   --text-selection: var(--tx1);
   --vault-profile-color: var(--tx1);
+  --nav-item-color-active: var(--bg1);
   --nav-item-color-hover: var(--bg1);
 }
+.theme-light.minimal-eink-light button:hover,
 .theme-light.minimal-eink-light ::selection,
+.theme-dark.minimal-eink-dark button:hover,
 .theme-dark.minimal-eink-dark ::selection {
   color: var(--bg1);
 }
@@ -6949,6 +6955,12 @@ https://github.com/dracula/dracula-theme
 .theme-dark.minimal-eink-dark .markdown-rendered code,
 .theme-dark.minimal-eink-dark .cm-s-obsidian span.cm-inline-code {
   font-weight: 600;
+}
+.theme-light.minimal-eink-light .tree-item-self:hover,
+.theme-light.minimal-eink-light .tree-item-self.is-active,
+.theme-dark.minimal-eink-dark .tree-item-self:hover,
+.theme-dark.minimal-eink-dark .tree-item-self.is-active {
+  --icon-color: var(--bg1);
 }
 .theme-light.minimal-eink-light .metadata-property-icon,
 .theme-dark.minimal-eink-dark .metadata-property-icon {
