@@ -1,25 +1,25 @@
 .mobile-toolbar-off {
-  .mobile-toolbar {
-    display:none;
-  }
+	.mobile-toolbar {
+		display:none;
+	}
 }
 
 .mobile-toolbar {
-  width:100%;
-  display:flex;
-  overflow:scroll;
-  background-color:var(--background-primary);
-  border-top:1px solid var(--background-modifier-border);
+	width:100%;
+	display:flex;
+	overflow:scroll;
+	background-color:var(--background-primary);
+	border-top:1px solid var(--background-modifier-border);
 }
 
 @media (min-width:400pt) {
 
-  .mobile-toolbar-option {
-    border-radius:8px;
-    margin:6px 0;
-  }
-  .mobile-toolbar-option:hover {
-    background-color:var(--background-modifier-hover);
-  }
+	.mobile-toolbar-option {
+		border-radius:8px;
+		margin:6px 0;
+	}
+	.mobile-toolbar-option:hover {
+		background-color:var(--background-modifier-hover);
+	}
 
 }

@@ -1,58 +1,58 @@
 /* iOS style modals */
 
 :root {
-  --ios-radius:10px;
-  --ios-input-radius:8px;
-  --ios-shadow:0 5px 100px rgba(0,0,0,0.15);
-  --ios-muted:#8e8e93;
+	--ios-radius:10px;
+	--ios-input-radius:8px;
+	--ios-shadow:0 5px 100px rgba(0,0,0,0.15);
+	--ios-muted:#8e8e93;
 }
 
 .theme-light {
-  --ios-blue:#007aff;
-  --ios-red:#ff3c2f;
-  --ios-bg-translucent:rgba(255,255,255,0.85);
-  --ios-bg:white;
-  --ios-border:rgba(0,0,0,0.1);
+	--ios-blue:#007aff;
+	--ios-red:#ff3c2f;
+	--ios-bg-translucent:rgba(255,255,255,0.85);
+	--ios-bg:white;
+	--ios-border:rgba(0,0,0,0.1);
 }
 .theme-dark {
-  --ios-blue:#0b84ff;
-  --ios-red:#ff453a;
-  --ios-bg-translucent:rgba(44,44,46,0.85);
-  --ios-bg:#2c2c2e;
-  --ios-border:rgba(255,255,255,0.15);
+	--ios-blue:#0b84ff;
+	--ios-red:#ff453a;
+	--ios-bg-translucent:rgba(44,44,46,0.85);
+	--ios-bg:#2c2c2e;
+	--ios-border:rgba(255,255,255,0.15);
 }
 
 .is-ios {
-  --text-error:#ff453a;
+	--text-error:#ff453a;
 
-  .search-input-container input,
-  .workspace-leaf-content[data-type='search'] .search-input-container input,
-  .document-search-container input[type='text'] {
-    border-radius:var(--ios-input-radius);
-    border:0px;
-    background-color:var(--background-modifier-hover);
-    &:active, &:hover, &:focus {
-      border-radius:var(--ios-input-radius);
-      border:0px;
-      background-color:var(--background-modifier-hover);
-    }
-    &::placeholder {
-      color:var(--text-muted);
-    }
-  }
+	.search-input-container input,
+	.workspace-leaf-content[data-type='search'] .search-input-container input,
+	.document-search-container input[type='text'] {
+		border-radius:var(--ios-input-radius);
+		border:0px;
+		background-color:var(--background-modifier-hover);
+		&:active, &:hover, &:focus {
+			border-radius:var(--ios-input-radius);
+			border:0px;
+			background-color:var(--background-modifier-hover);
+		}
+		&::placeholder {
+			color:var(--text-muted);
+		}
+	}
 
 }
 
 /* iPad tablet */
 @media (min-width:400pt) {
-.is-ios {  
-  .mobile-toolbar {
-    height:70px;
-  }
-  .mobile-toolbar-options-container {
-    margin:0 auto;
-    display:inline-flex;
-    width:auto;
-  }
-}
+	.is-ios {
+		.mobile-toolbar {
+			height:70px;
+		}
+		.mobile-toolbar-options-container {
+			margin:0 auto;
+			display:inline-flex;
+			width:auto;
+		}
+	}
 }
