@@ -130,6 +130,9 @@ body.show-view-header  .app-container .workspace-split.mod-root > .workspace-lea
 	transition: height 0.1s linear 0.1s;
 }
 body.minimal-focus-mode.show-view-header {
+	.mod-top-left-space .view-header {
+		padding-left: var(--frame-left-space);
+	}
 	.mod-root .workspace-leaf .view-header {
 		height: 0em;
 		transition: all 0.1s linear 0.5s;

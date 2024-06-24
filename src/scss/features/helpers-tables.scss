@@ -40,6 +40,14 @@
 .table-nowrap {
 	--table-white-space: nowrap;
 }
+.table-nowrap-first {
+	table {
+		thead > tr > th:first-child,
+		tbody > tr > td:first-child {
+			--table-white-space: nowrap;
+		}
+	}
+}
 
 .trim-cols,
 .table-nowrap .table-wrap {

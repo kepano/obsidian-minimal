@@ -3420,6 +3420,9 @@ body.show-view-header .app-container .workspace-split.mod-root > .workspace-leaf
   transition: height 0.1s linear 0.1s;
 }
 
+body.minimal-focus-mode.show-view-header .mod-top-left-space .view-header {
+  padding-left: var(--frame-left-space);
+}
 body.minimal-focus-mode.show-view-header .mod-root .workspace-leaf .view-header {
   height: 0em;
   transition: all 0.1s linear 0.5s;
@@ -3533,6 +3536,11 @@ body.minimal-focus-mode.show-view-header .view-content {
 }
 
 .table-nowrap {
+  --table-white-space: nowrap;
+}
+
+.table-nowrap-first table thead > tr > th:first-child,
+.table-nowrap-first table tbody > tr > td:first-child {
   --table-white-space: nowrap;
 }
 
