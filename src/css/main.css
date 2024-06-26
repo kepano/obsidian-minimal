@@ -3469,6 +3469,7 @@ body.minimal-focus-mode.show-view-header .view-content {
 
 .row-alt {
   --table-row-alt-background: var(--background-table-rows);
+  --table-row-alt-background-hover: var(--background-table-rows);
   --table-edge-cell-padding-first: 8px;
   --table-edge-cell-padding-last: 8px;
 }
@@ -3576,24 +3577,8 @@ body.minimal-focus-mode.show-view-header .view-content {
 
 /* Highlight rows on hover */
 .row-hover {
-  --table-row-background-hover:
-  hsla(
-  	var(--accent-h),
-  	50%,
-  	80%,
-  	20%
-  	);
-}
-
-.theme-dark.row-hover,
-.theme-dark .row-hover {
-  --table-row-background-hover:
-  	hsla(
-  		var(--accent-h),
-  		30%,
-  		40%,
-  		20%
-  		);
+  --table-row-background-hover: var(--hl1);
+  --table-row-alt-background-hover: var(--hl1);
 }
 
 /* Dark mode images  */
