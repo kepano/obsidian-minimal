@@ -19,6 +19,7 @@
 
 :root {
 	--hider-ribbon-display: none;
+	--ribbon-animation-duration: 0.1s;
 }
 
 .ribbon-bottom-left-hover-vertical:not(.is-mobile),
@@ -38,49 +39,49 @@ body.ribbon-vertical-expand:not(.is-mobile) {
 		bottom: 0;
 		left: 0;
 		z-index: 10;
-		transition: all 0.1s linear 0.6s;
+		transition: all var(--ribbon-animation-duration) linear 0.6s;
 		.side-dock-actions {
-			transition: opacity 0.1s linear 0.3s;
+			transition: opacity var(--ribbon-animation-duration) linear 0.3s;
 		}
 	}
 	.workspace-ribbon.mod-left:hover {
 		width: 44px;
 		opacity: 1;
 		flex-basis: 44px;
-		transition: opacity 0.1s linear 0.1s;
+		transition: opacity var(--ribbon-animation-duration) linear 0.1s;
 		.side-dock-actions {
 			opacity: 1;
-			transition: opacity 0.2s linear 0.2s;
+			transition: opacity calc(var(--ribbon-animation-duration)*2) linear 0.2s;
 		}
 
 	}
 	&.labeled-nav {
 		.workspace-ribbon.mod-left ~ .mod-left-split .workspace-tab-header-container {
 			margin-left: 0;
-			transition: all 0.1s linear 0.6s;
+			transition: all var(--ribbon-animation-duration) linear 0.6s;
 		}
 		.workspace-ribbon.mod-left:hover ~ .mod-left-split .workspace-tab-header-container {
 			margin-left: 44px;
-			transition: all 0.1s linear;
+			transition: all var(--ribbon-animation-duration) linear;
 		}
 	}
 	.workspace-ribbon.mod-left ~ .mod-left-split {
 		.workspace-tab-container {
 			padding-left: 0px;
-			transition: all 0.1s linear 0.6s;
+			transition: all var(--ribbon-animation-duration) linear 0.6s;
 		}
 		.workspace-sidedock-vault-profile {
-			transition: all 0.1s linear 0.6s;
+			transition: all var(--ribbon-animation-duration) linear 0.6s;
 		}
 	}
 	.workspace-ribbon.mod-left:hover ~ .mod-left-split {
 		.workspace-tab-container {
 			padding-left: 44px;
-			transition: all 0.1s linear;
+			transition: all var(--ribbon-animation-duration) linear;
 		}
 		.workspace-sidedock-vault-profile {
 			padding-left: 52px;
-			transition: all 0.1s linear;
+			transition: all var(--ribbon-animation-duration) linear;
 		}
 	}
 }
@@ -117,7 +118,7 @@ body.ribbon-vertical-expand:not(.is-mobile) {
 		flex-direction: row;
 		z-index: 17;
 		opacity: 0;
-		transition:opacity 0.25s ease-in-out;
+		transition:opacity calc(var(--ribbon-animation-duration)*2) ease-in-out;
 		filter: 
 			 drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
 		gap: 0;

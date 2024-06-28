@@ -2052,6 +2052,22 @@ settings:
 		description: Use styled scrollbars (replaces native scrollbars)
 		type: class-toggle
 	-
+		id: animations
+		title: Animation speed
+		description: Animation
+		type: class-select
+		default: default
+		options:
+			-
+				label: Normal
+				value: default
+			-
+				label: Disabled
+				value: disable-animations
+			-
+				label: Fast
+				value: fast-animations
+	-
 		id: cursor
 		title: Cursor style
 		description: The cursor style for UI elements

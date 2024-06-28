@@ -1,0 +1,14 @@
+.disable-animations {
+	--ribbon-animation-duration: 0ms;
+	--focus-animation-duration: 0ms;
+	.mod-sidedock {
+		transition-duration: 0ms !important;
+	}
+}
+.fast-animations {
+	--ribbon-animation-duration: 0.05s;
+	--focus-animation-duration: 0.05s;
+	.mod-sidedock {
+		transition-duration: 70ms !important;
+	}
+}

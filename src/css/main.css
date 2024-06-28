@@ -864,6 +864,7 @@ figure {
 
 :root {
   --hider-ribbon-display: none;
+  --ribbon-animation-duration: 0.1s;
 }
 
 .ribbon-bottom-left-hover-vertical:not(.is-mobile),
@@ -884,43 +885,43 @@ body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left {
   bottom: 0;
   left: 0;
   z-index: 10;
-  transition: all 0.1s linear 0.6s;
+  transition: all var(--ribbon-animation-duration) linear 0.6s;
 }
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left .side-dock-actions {
-  transition: opacity 0.1s linear 0.3s;
+  transition: opacity var(--ribbon-animation-duration) linear 0.3s;
 }
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover {
   width: 44px;
   opacity: 1;
   flex-basis: 44px;
-  transition: opacity 0.1s linear 0.1s;
+  transition: opacity var(--ribbon-animation-duration) linear 0.1s;
 }
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover .side-dock-actions {
   opacity: 1;
-  transition: opacity 0.2s linear 0.2s;
+  transition: opacity calc(var(--ribbon-animation-duration) * 2) linear 0.2s;
 }
 body.ribbon-vertical-expand:not(.is-mobile).labeled-nav .workspace-ribbon.mod-left ~ .mod-left-split .workspace-tab-header-container {
   margin-left: 0;
-  transition: all 0.1s linear 0.6s;
+  transition: all var(--ribbon-animation-duration) linear 0.6s;
 }
 body.ribbon-vertical-expand:not(.is-mobile).labeled-nav .workspace-ribbon.mod-left:hover ~ .mod-left-split .workspace-tab-header-container {
   margin-left: 44px;
-  transition: all 0.1s linear;
+  transition: all var(--ribbon-animation-duration) linear;
 }
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left ~ .mod-left-split .workspace-tab-container {
   padding-left: 0px;
-  transition: all 0.1s linear 0.6s;
+  transition: all var(--ribbon-animation-duration) linear 0.6s;
 }
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left ~ .mod-left-split .workspace-sidedock-vault-profile {
-  transition: all 0.1s linear 0.6s;
+  transition: all var(--ribbon-animation-duration) linear 0.6s;
 }
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .mod-left-split .workspace-tab-container {
   padding-left: 44px;
-  transition: all 0.1s linear;
+  transition: all var(--ribbon-animation-duration) linear;
 }
 body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .mod-left-split .workspace-sidedock-vault-profile {
   padding-left: 52px;
-  transition: all 0.1s linear;
+  transition: all var(--ribbon-animation-duration) linear;
 }
 
 .hider-ribbon .workspace-ribbon.mod-left:before,
@@ -959,7 +960,7 @@ body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .
   flex-direction: row;
   z-index: 17;
   opacity: 0;
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity calc(var(--ribbon-animation-duration) * 2) ease-in-out;
   filter: drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.2));
   gap: 0;
 }
@@ -1937,6 +1938,22 @@ body,
 .active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
   background-color: var(--active-line-bg);
   box-shadow: -25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg);
+}
+
+.disable-animations {
+  --ribbon-animation-duration: 0ms;
+  --focus-animation-duration: 0ms;
+}
+.disable-animations .mod-sidedock {
+  transition-duration: 0ms !important;
+}
+
+.fast-animations {
+  --ribbon-animation-duration: 0.05s;
+  --focus-animation-duration: 0.05s;
+}
+.fast-animations .mod-sidedock {
+  transition-duration: 70ms !important;
 }
 
 body {
@@ -3276,6 +3293,10 @@ body:not(.minimal-icons-off) svg.longform {
   transition: none;
 }
 
+:root {
+  --focus-animation-duration: 0.1s;
+}
+
 .minimal-focus-mode {
   /* Hide ribbon */
   /* Hide right sidebar button */
@@ -3298,27 +3319,27 @@ body:not(.minimal-icons-off) svg.longform {
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed .side-dock-actions,
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed .side-dock-settings {
   opacity: 0;
-  transition: opacity 0.1s ease-in-out 0.1s;
+  transition: opacity var(--focus-animation-duration) ease-in-out 0.1s;
 }
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-actions,
 .minimal-focus-mode .workspace-ribbon.mod-left.is-collapsed:hover .side-dock-settings {
   opacity: 1;
-  transition: opacity 0.1s ease-in-out 0.1s;
+  transition: opacity var(--focus-animation-duration) ease-in-out 0.1s;
 }
 .minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
   border-right: none;
 }
 .minimal-focus-mode .mod-root .sidebar-toggle-button.mod-right {
   opacity: 0;
-  transition: opacity 0.2s ease-in-out 0.5s;
+  transition: opacity var(--focus-animation-duration) ease-in-out 0.5s;
 }
 .minimal-focus-mode:not(.minimal-status-off) .status-bar {
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity var(--focus-animation-duration) ease-in-out;
 }
 .minimal-focus-mode .status-bar:hover {
   opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity var(--focus-animation-duration) ease-in-out;
 }
 .minimal-focus-mode .mod-root .workspace-tabs {
   position: relative;
@@ -3328,14 +3349,14 @@ body:not(.minimal-icons-off) svg.longform {
 }
 .minimal-focus-mode .mod-root .workspace-tab-header-container {
   height: 0px;
-  transition: all 0.1s linear 0.6s;
+  transition: all var(--focus-animation-duration) linear 0.6s;
   --tab-outline-width: 0px;
 }
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner,
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-new-tab,
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-tab-list {
   opacity: 0;
-  transition: all 0.1s linear 0.6s;
+  transition: all var(--focus-animation-duration) linear 0.6s;
 }
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-spacer:before {
   width: 100%;
@@ -3350,24 +3371,24 @@ body:not(.minimal-icons-off) svg.longform {
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active,
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active::before,
 .minimal-focus-mode .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header.is-active::after {
-  transition: all 0.1s linear 0.6s;
+  transition: all var(--focus-animation-duration) linear 0.6s;
 }
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover {
   height: var(--header-height);
   --tab-outline-width: 1px;
-  transition: all 0.1s linear 0.05s;
+  transition: all var(--focus-animation-duration) linear 0.05s;
 }
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .sidebar-toggle-button.mod-right,
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner,
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-new-tab,
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-tab-list {
   opacity: 1;
-  transition: all 0.1s linear 0.05s;
+  transition: all var(--focus-animation-duration) linear 0.05s;
 }
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner .workspace-tab-header.is-active,
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner .workspace-tab-header.is-active::before,
 .minimal-focus-mode .mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner .workspace-tab-header.is-active::after {
-  transition: all 0.1s linear 0.05s;
+  transition: all var(--focus-animation-duration) linear 0.05s;
 }
 .minimal-focus-mode.mod-macos:not(.is-fullscreen) .workspace:not(.is-left-sidedock-open) .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
   padding-top: 30px;
@@ -3375,7 +3396,7 @@ body:not(.minimal-icons-off) svg.longform {
 
 /* Collapse pane header */
 body.show-view-header .app-container .workspace-split.mod-root > .workspace-leaf .view-header {
-  transition: height 0.1s linear 0.1s;
+  transition: height var(--focus-animation-duration) linear 0.1s;
 }
 
 body.minimal-focus-mode.show-view-header .mod-top-left-space .view-header {
@@ -3383,7 +3404,7 @@ body.minimal-focus-mode.show-view-header .mod-top-left-space .view-header {
 }
 body.minimal-focus-mode.show-view-header .mod-root .workspace-leaf .view-header {
   height: 0em;
-  transition: all 0.1s linear 0.5s;
+  transition: all var(--focus-animation-duration) linear 0.5s;
 }
 body.minimal-focus-mode.show-view-header .view-header::after {
   width: 100%;
@@ -3398,13 +3419,13 @@ body.minimal-focus-mode.show-view-header .view-header-nav-buttons,
 body.minimal-focus-mode.show-view-header .view-header-title-container,
 body.minimal-focus-mode.show-view-header .view-actions {
   opacity: 0;
-  transition: all 0.1s linear 0.5s;
+  transition: all var(--focus-animation-duration) linear 0.5s;
 }
 body.minimal-focus-mode.show-view-header .mod-root .workspace-tab-header-container:hover ~ .workspace-tab-container .view-header,
 body.minimal-focus-mode.show-view-header .mod-root .workspace-leaf .view-header:hover,
 body.minimal-focus-mode.show-view-header .mod-root .workspace-leaf .view-header:focus-within {
   height: calc(var(--header-height) + 2px);
-  transition: all 0.1s linear 0.1s;
+  transition: all var(--focus-animation-duration) linear 0.1s;
 }
 body.minimal-focus-mode.show-view-header .mod-root .workspace-tab-header-container:hover ~ .workspace-tab-container .view-header .view-header-nav-buttons,
 body.minimal-focus-mode.show-view-header .mod-root .workspace-tab-header-container:hover ~ .workspace-tab-container .view-header .view-actions,
@@ -3416,7 +3437,7 @@ body.minimal-focus-mode.show-view-header .view-header:focus-within .view-header-
 body.minimal-focus-mode.show-view-header .view-header:focus-within .view-actions,
 body.minimal-focus-mode.show-view-header .view-header:focus-within .view-header-title-container {
   opacity: 1;
-  transition: all 0.1s linear 0.1s;
+  transition: all var(--focus-animation-duration) linear 0.1s;
 }
 body.minimal-focus-mode.show-view-header .view-content {
   height: 100%;
