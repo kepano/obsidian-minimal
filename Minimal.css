@@ -2459,6 +2459,7 @@ body {
   --cards-padding: 1.2em;
   --cards-image-fit: contain;
   --cards-background: transparent;
+  --cards-background-hover: transparent;
   --cards-border-width: 1px;
   --cards-aspect-ratio: auto;
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
@@ -2503,6 +2504,7 @@ body {
   height: auto;
 }
 .cards table.dataview > tbody > tr:hover {
+  background-color: var(--cards-background-hover) !important;
   border: var(--cards-border-width) solid var(--background-modifier-border-hover);
   box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
   transition: box-shadow 0.15s linear;
@@ -3529,6 +3531,8 @@ body.minimal-focus-mode.show-view-header .view-content {
 .row-hover {
   --table-edge-cell-padding-first: 8px;
   --table-edge-cell-padding-last: 8px;
+  --table-row-background-hover: var(--hl1);
+  --table-row-alt-background-hover: var(--hl1);
 }
 
 .row-alt {
@@ -3637,12 +3641,6 @@ body.minimal-focus-mode.show-view-header .view-content {
 .col-lines .table-view-table thead > tr > th:not(:last-child),
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {
   border-right: var(--table-border-width) solid var(--background-modifier-border);
-}
-
-/* Highlight rows on hover */
-.row-hover {
-  --table-row-background-hover: var(--hl1);
-  --table-row-alt-background-hover: var(--hl1);
 }
 
 /* Dark mode images  */
@@ -4094,6 +4092,7 @@ body:not(.sidebar-color) .mod-right-split :not(.mod-top) .workspace-tab-header-c
   --tab-radius-active: 0;
 }
 .tabs-plain-square .mod-root .workspace-tab-header-container {
+  padding-left: 0;
   padding-right: 0;
 }
 .tabs-plain-square .mod-root .workspace-tab-header-container-inner {
@@ -4287,6 +4286,37 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 .sidebar-tabs-square .mod-left-split,
 .sidebar-tabs-square .mod-right-split {
   --tab-radius: 0px;
+}
+
+.sidebar-tabs-plain-square .mod-left-split,
+.sidebar-tabs-plain-square .mod-right-split {
+  --tab-radius: 0px;
+}
+.sidebar-tabs-plain-square:not(.labeled-nav) .mod-left-split, .sidebar-tabs-plain-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) {
+  --tab-background-active: var(--background-secondary);
+}
+.sidebar-tabs-plain-square:not(.labeled-nav) .mod-left-split .workspace-tab-header-container, .sidebar-tabs-plain-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+.sidebar-tabs-plain-square .mod-right-split .workspace-tab-header-container {
+  padding-left: 0;
+}
+.sidebar-tabs-plain-square:not(.labeled-nav) .mod-left-split .workspace-tab-header-container-inner, .sidebar-tabs-plain-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner,
+.sidebar-tabs-plain-square .mod-right-split .workspace-tab-header-container-inner {
+  padding: 0;
+  margin: 0 0 calc(var(--tab-outline-width) * -1);
+  flex-grow: 1;
+  gap: 0;
+}
+.sidebar-tabs-plain-square:not(.labeled-nav) .mod-left-split .workspace-tab-header, .sidebar-tabs-plain-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header,
+.sidebar-tabs-plain-square .mod-right-split .workspace-tab-header {
+  flex-grow: 1;
+  max-width: 100px;
+  border-radius: var(--tab-radius) var(--tab-radius) 0 0;
+}
+.sidebar-tabs-plain-square:not(.labeled-nav) .mod-left-split .workspace-tab-header.is-active, .sidebar-tabs-plain-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active,
+.sidebar-tabs-plain-square .mod-right-split .workspace-tab-header.is-active {
+  box-shadow: 0 0 0 var(--tab-outline-width) var(--tab-outline-color);
+  color: var(--tab-text-color-active);
+  background-color: var(--tab-background-active);
 }
 
 .sidebar-tabs-square:not(.labeled-nav) .mod-left-split, .sidebar-tabs-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top),
@@ -5112,7 +5142,7 @@ body:not(.row-hover) .table-view-table > tbody > tr:hover {
 body.row-hover .dataview.task-list-item:hover,
 body.row-hover .dataview.task-list-basic-item:hover,
 body.row-hover .table-view-table > tbody > tr:hover {
-  background-color: var(--table-row-background-hover) !important;
+  background-color: var(--table-row-background-hover);
 }
 
 body .dataview-error {
@@ -9372,6 +9402,9 @@ settings:
 				label: Modern wide
 				value: sidebar-tabs-wide
 			-
+				label: Square
+				value: sidebar-tabs-plain-square
+			-
 				label: Underline
 				value: sidebar-tabs-underline
 	-
@@ -10017,6 +10050,13 @@ settings:
 		default: 1px
 	- 
 		id: cards-background
+		title: Card background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: cards-background-hover (hover)
 		title: Card background color
 		type: variable-themed-color
 		format: hex

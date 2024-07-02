@@ -68,7 +68,7 @@ body.row-hover {
 	.dataview.task-list-item:hover,
 	.dataview.task-list-basic-item:hover,
 	.table-view-table > tbody > tr:hover {
-		background-color: var(--table-row-background-hover) !important;
+		background-color: var(--table-row-background-hover);
 	}
 }
 

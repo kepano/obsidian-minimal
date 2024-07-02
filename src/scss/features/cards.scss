@@ -18,6 +18,7 @@ body {
 --cards-padding: 1.2em;
 --cards-image-fit: contain;
 --cards-background: transparent;
+--cards-background-hover: transparent;
 --cards-border-width: 1px;
 --cards-aspect-ratio: auto;
 --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
@@ -64,6 +65,7 @@ table.dataview {
 		height: auto;
 	}
 	> tbody > tr:hover {
+		background-color: var(--cards-background-hover) !important;
 		border: var(--cards-border-width) solid var(--background-modifier-border-hover);
 		box-shadow:
 			0 4px 6px 0px rgba(0,0,0,0.05),

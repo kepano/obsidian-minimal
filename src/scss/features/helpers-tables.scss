@@ -11,7 +11,10 @@
 .row-hover {
 	--table-edge-cell-padding-first: 8px;
 	--table-edge-cell-padding-last: 8px;
+	--table-row-background-hover: var(--hl1);
+	--table-row-alt-background-hover: var(--hl1);
 }
+
 .row-alt {
 	--table-row-alt-background: var(--background-table-rows);
 	--table-row-alt-background-hover: var(--background-table-rows);
@@ -125,10 +128,3 @@
 		border-right: var(--table-border-width) solid var(--background-modifier-border);
 	}
 }
-
-/* Highlight rows on hover */
-.row-hover {
-	--table-row-background-hover: var(--hl1);
-	--table-row-alt-background-hover: var(--hl1);
-}
-

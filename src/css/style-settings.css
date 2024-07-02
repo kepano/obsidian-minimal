@@ -1384,6 +1384,9 @@ settings:
 				label: Modern wide
 				value: sidebar-tabs-wide
 			-
+				label: Square
+				value: sidebar-tabs-plain-square
+			-
 				label: Underline
 				value: sidebar-tabs-underline
 	-
@@ -2029,6 +2032,13 @@ settings:
 		default: 1px
 	- 
 		id: cards-background
+		title: Card background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: cards-background-hover (hover)
 		title: Card background color
 		type: variable-themed-color
 		format: hex
