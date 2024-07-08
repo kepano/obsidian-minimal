@@ -3,21 +3,23 @@
 
 body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-content {
 	div:not(.canvas-node-content) img {
-		max-width:100%;
-		cursor:zoom-in;
+		cursor: zoom-in;
 	}
 	img:active {
-		cursor:zoom-out;
+		cursor: zoom-out;
+		max-width: 100%;
+		z-index: 900;
 	}
+	.markdown-source-view.mod-cm6 .cm-content > img[contenteditable=false]:active,
 	.markdown-preview-view img[referrerpolicy='no-referrer']:active {
-		background-color:var(--background-primary);
-		padding:10px;
+		background-color: var(--background-primary);
 	}
+	.markdown-source-view.mod-cm6 .cm-content > img[contenteditable=false]:active,
 	.markdown-preview-view img[referrerpolicy='no-referrer']:active,
 	.image-embed:not(.canvas-node-content):active {
 		--container-img-width: 100%;
 		--container-img-max-width: 100%;
-		aspect-ratio:unset;
+		aspect-ratio: unset;
 		cursor:zoom-out;
 		display:block;
 		z-index:200;
@@ -61,7 +63,6 @@ body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type="markdown"
 		position:absolute;
 		opacity:1;
 	}
-
 	.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false]:has(.image-embed:not(.canvas-node-content):active) {
 		contain: unset !important;
 	}
