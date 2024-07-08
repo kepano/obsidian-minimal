@@ -1,5 +1,5 @@
 /* Active line highlight */
-.active-line-on {
+.active-line-on .workspace-leaf-content[data-type=markdown] {
 	.cm-line.cm-active,
 	.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
 		background-color:var(--active-line-bg);

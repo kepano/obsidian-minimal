@@ -1977,8 +1977,8 @@ body,
 
 /* Minimal features */
 /* Active line highlight */
-.active-line-on .cm-line.cm-active,
-.active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
+.active-line-on .workspace-leaf-content[data-type=markdown] .cm-line.cm-active,
+.active-line-on .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
   background-color: var(--active-line-bg);
   box-shadow: -25vw 0px var(--active-line-bg), 25vw 0 var(--active-line-bg);
 }
