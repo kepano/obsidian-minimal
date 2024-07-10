@@ -2346,9 +2346,9 @@ body {
   width: var(--table-wrapper-width);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataview > table),
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataviewjs),
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> .block-language-dataviewjs > table),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataview > table),
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataviewjs) {
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> .block-language-dataviewjs > table) {
   width: var(--container-dataview-table-width);
   max-width: var(--container-table-max-width);
 }
@@ -2362,6 +2362,7 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .block-language-dataviewjs > :is(p, h1, h2, h3, h4, h5, h6),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .block-language-dataviewjs > :is(p, h1, h2, h3, h4, h5, h6) {
   width: var(--line-width);
+  margin-inline: var(--content-margin);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .block-language-dataviewjs > .dataview-error,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .block-language-dataviewjs > .dataview-error {

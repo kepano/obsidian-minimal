@@ -317,7 +317,7 @@ body {
 		width: var(--table-wrapper-width);
 	}
 	> div:has(>.block-language-dataview>table),
-	> div:has(>.block-language-dataviewjs) {
+	> div:has(>.block-language-dataviewjs>table) {
 		width: var(--container-dataview-table-width);
 		max-width:var(--container-table-max-width);
 	}
@@ -330,6 +330,7 @@ body {
 	.block-language-dataviewjs {
 		> :is(p,h1,h2,h3,h4,h5,h6) {
 			width: var(--line-width);
+			margin-inline: var(--content-margin);
 		}
 		> .dataview-error {
 			margin: 0 auto;
