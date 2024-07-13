@@ -40,6 +40,16 @@ body {
 	}
 }
 
+.markdown-source-view.mod-cm6 {
+	.cm-table-widget .table-cell-wrapper {
+		padding: var(--table-cell-padding);
+	}
+}
+
+.markdown-reading-view table {
+	--p-spacing: 0.5rem;
+}
+
 .cm-embed-block.cm-table-widget.markdown-rendered {
 	margin-top: -8px !important;
 	padding: var(--table-drag-padding);

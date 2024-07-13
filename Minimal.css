@@ -1862,6 +1862,14 @@ body {
   padding-inline-end: 0;
 }
 
+.markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper {
+  padding: var(--table-cell-padding);
+}
+
+.markdown-reading-view table {
+  --p-spacing: 0.5rem;
+}
+
 .cm-embed-block.cm-table-widget.markdown-rendered {
   margin-top: -8px !important;
   padding: var(--table-drag-padding);
@@ -2340,6 +2348,7 @@ body {
   width: var(--container-table-width);
   max-width: var(--container-table-max-width);
   margin-inline: var(--container-table-margin) !important;
+  padding-inline-start: var(--table-drag-padding);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .table-wrapper,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .table-wrapper {

@@ -312,6 +312,7 @@ body {
 		width: var(--container-table-width);
 		max-width:var(--container-table-max-width);
 		margin-inline: var(--container-table-margin) !important;
+		padding-inline-start: var(--table-drag-padding);
 	}
 	.table-wrapper {
 		width: var(--table-wrapper-width);
