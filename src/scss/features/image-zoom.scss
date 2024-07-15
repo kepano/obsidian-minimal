@@ -49,9 +49,7 @@ body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type="markdown"
 	}
 	.image-embed:not(.canvas-node-content):active img {
 		aspect-ratio:unset;
-		top:50%;
 		z-index:99;
-		transform:translateY(-50%);
 		padding:0;
 		margin:0 auto;
 		width:calc(100% - 20px);

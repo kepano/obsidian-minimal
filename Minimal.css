@@ -1871,7 +1871,6 @@ body {
 }
 
 .cm-embed-block.cm-table-widget.markdown-rendered {
-  margin-top: -8px !important;
   padding: var(--table-drag-padding);
   overscroll-behavior-x: none;
 }
@@ -3873,9 +3872,7 @@ body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] 
 }
 body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active img {
   aspect-ratio: unset;
-  top: 50%;
   z-index: 99;
-  transform: translateY(-50%);
   padding: 0;
   margin: 0 auto;
   width: calc(100% - 20px);
