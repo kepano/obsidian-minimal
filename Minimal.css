@@ -1471,7 +1471,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 /* Content */
 /* Blockquotes */
 .markdown-preview-view blockquote {
-  padding: 0 0 0 var(--nested-padding);
+  padding-inline-start: var(--nested-padding);
   font-size: var(--blockquote-size);
 }
 
