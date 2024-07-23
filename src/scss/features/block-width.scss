@@ -317,8 +317,8 @@ body {
 	.table-wrapper {
 		width: var(--table-wrapper-width);
 	}
-	> div:has(>.block-language-dataview>table),
-	> div:has(>.block-language-dataviewjs>table) {
+	> div:has(>.block-language-dataview table),
+	> div:has(>.block-language-dataviewjs table) {
 		width: var(--container-dataview-table-width);
 		max-width:var(--container-table-max-width);
 	}
