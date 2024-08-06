@@ -38,6 +38,7 @@ Use [[Helper classes]] to control table styles at the individual note level
 | `table-wide`    | Table block fills the wide line width               |
 | `table-nowrap`  | Disable line wrapping in table cells                |
 | `table-wrap`    | Force line wrapping in table cells                  |
+| `table-center`  | Center small tables narrower than line width        |
 | `table-numbers` | Add row numbers to tables                           |
 | `table-tabular` | Use tabular figures in tables                       |
 | `table-small`   | Use small font size in tables                       |
@@ -47,4 +48,4 @@ Use [[Helper classes]] to control table styles at the individual note level
 | `col-lines`     | Add borders between table columns                   |
 | `row-alt`       | Add striped background to alternating table rows    |
 | `col-alt`       | Add striped background to alternating table columns |
-| `row-hover` | Highlight rows on hover                             | 
+| `row-hover`     | Highlight rows on hover                             | 

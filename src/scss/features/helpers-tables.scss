@@ -29,6 +29,15 @@
 	font-variant-numeric: tabular-nums;
 }
 
+.table-center {
+	.markdown-preview-view .markdown-preview-sizer table,
+	&.markdown-preview-view .markdown-preview-sizer table,
+	.markdown-source-view.mod-cm6 .table-wrapper,
+	&.markdown-source-view.mod-cm6 .table-wrapper {
+		margin: 0 auto;
+	}
+}
+
 .table-lines {
 	--table-border-width: var(--border-width);
 	--table-header-border-width: var(--border-width);

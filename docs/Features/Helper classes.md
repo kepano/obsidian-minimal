@@ -61,6 +61,7 @@ Controls the row and column styling of [[tables]]
 | :-------------- | :-------------------------------------------------- |
 | `table-nowrap`  | Disable line wrapping in table cells                |
 | `table-wrap`    | Force wrapping in table cells                       |
+| `table-center`  | Center small tables narrower than line width        |
 | `table-numbers` | Add row numbers to tables                           |
 | `table-tabular` | Use tabular figures in tables                       |
 | `table-small`   | Use small font size in tables                       |

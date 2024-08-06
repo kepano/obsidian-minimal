@@ -1552,6 +1552,12 @@ settings:
 		type: class-toggle
 		default: false
 	-
+		id: table-center
+		title: Center small tables
+		description: Make small tables centered
+		type: class-toggle
+		default: false
+	-
 		id: table-nowrap
 		title: Disable line wrap
 		description: Turn off line wrapping in table cells globally

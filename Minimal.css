@@ -3559,6 +3559,11 @@ body.minimal-focus-mode.show-view-header .view-content {
   font-variant-numeric: tabular-nums;
 }
 
+.table-center .markdown-preview-view .markdown-preview-sizer table, .table-center.markdown-preview-view .markdown-preview-sizer table,
+.table-center .markdown-source-view.mod-cm6 .table-wrapper, .table-center.markdown-source-view.mod-cm6 .table-wrapper {
+  margin: 0 auto;
+}
+
 .table-lines {
   --table-border-width: var(--border-width);
   --table-header-border-width: var(--border-width);
@@ -9576,6 +9581,12 @@ settings:
 		id: table-numbers
 		title: Row numbers
 		description: Display row numbers in tables globally
+		type: class-toggle
+		default: false
+	-
+		id: table-center
+		title: Center small tables
+		description: Make small tables centered
 		type: class-toggle
 		default: false
 	-
