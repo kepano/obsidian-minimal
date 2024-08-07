@@ -509,6 +509,8 @@ body .excalidraw {
   --titlebar-background: var(--bg2);
   --titlebar-background-focused: var(--bg2);
   --titlebar-text-color-focused: var(--tx1);
+  --vault-profile-color: var(--tx1);
+  --vault-profile-color-hover: var(--tx1);
   --workspace-background-translucent: hsla(var(--base-h),var(--base-s), var(--base-l), 0.7);
 }
 
