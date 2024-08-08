@@ -1293,6 +1293,10 @@ button.mod-warning:hover {
   min-width: 0;
 }
 
+.popover {
+  --file-margins: var(--size-4-4) var(--size-4-6) var(--size-4-6);
+}
+
 /* Progress bars */
 body {
   --progress-outline: var(--background-modifier-border);
@@ -2782,7 +2786,6 @@ table.dataview tbody > tr > td {
 /* Checklist icons */
 .cm-formatting.cm-formatting-task.cm-property {
   font-family: var(--font-monospace);
-  font-size: 90%;
 }
 
 input[data-task=">"]:checked,
