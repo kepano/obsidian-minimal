@@ -1,3 +1,11 @@
 .popover {
-	--file-margins: var(--size-4-4) var(--size-4-6) var(--size-4-6);
+	--file-margins: var(--size-4-6) var(--size-4-6) var(--size-4-6);
+}
+.minimal-line-nums { 
+	.popover .markdown-source-view {
+		--file-margins: var(--size-4-4) var(--size-4-6) var(--size-4-6) var(--size-4-12);
+	}
+	.popover .markdown-source-view.is-rtl {
+		--file-margins: var(--size-4-4) var(--size-4-12) var(--size-4-6) var(--size-4-6);
+	}
 }

@@ -711,6 +711,16 @@ body :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutters {
   z-index: 0;
   margin-inline-end: 0;
 }
+body :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutters .cm-gutter:before {
+  content: "";
+  height: 100%;
+  top: -100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--gutter-background);
+  min-width: var(--folding-offset);
+}
 
 body :not(.canvas-node) .markdown-source-view.mod-cm6.is-rtl .cm-gutters {
   right: 0;
@@ -1294,7 +1304,14 @@ button.mod-warning:hover {
 }
 
 .popover {
-  --file-margins: var(--size-4-4) var(--size-4-6) var(--size-4-6);
+  --file-margins: var(--size-4-6) var(--size-4-6) var(--size-4-6);
+}
+
+.minimal-line-nums .popover .markdown-source-view {
+  --file-margins: var(--size-4-4) var(--size-4-6) var(--size-4-6) var(--size-4-12);
+}
+.minimal-line-nums .popover .markdown-source-view.is-rtl {
+  --file-margins: var(--size-4-4) var(--size-4-12) var(--size-4-6) var(--size-4-6);
 }
 
 /* Progress bars */

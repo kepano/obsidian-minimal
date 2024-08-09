@@ -37,7 +37,16 @@ body :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutters {
 	position:absolute !important;
 	z-index:0;
 	margin-inline-end: 0;
-
+	.cm-gutter:before {
+		content: "";
+		height: 100%;
+		top: -100%;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		background-color: var(--gutter-background);
+		min-width: var(--folding-offset);
+	}
 }
 body :not(.canvas-node) .markdown-source-view.mod-cm6.is-rtl .cm-gutters {
 	right: 0;
