@@ -3749,8 +3749,14 @@ body {
   --image-grid-fit: contain;
 }
 
+.img-grid-ratio {
+  --image-grid-fit: contain;
+}
+
 .img-grid .image-embed.is-loaded {
   line-height: 0;
+  display: flex;
+  align-items: stretch;
 }
 .img-grid .image-embed.is-loaded img {
   background-color: var(--image-grid-background);
@@ -3792,7 +3798,6 @@ body {
 .img-grid .markdown-preview-section p:has(> img ~ .image-embed) > .internal-embed img,
 .img-grid .markdown-preview-section p:has(> img ~ img) > .internal-embed img {
   object-fit: var(--image-grid-fit);
-  height: 100%;
   align-self: center;
 }
 .img-grid .markdown-preview-section > div:has(img) > p {
