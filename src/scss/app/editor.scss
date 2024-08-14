@@ -57,6 +57,10 @@ body {
 	--line-number-color-active: var(--text-muted);
 }
 
+.empty-state-title {
+	display: none;
+}
+
 .markdown-source-view.mod-cm6 .cm-gutters {
 	color: var(--line-number-color) !important;
 }
