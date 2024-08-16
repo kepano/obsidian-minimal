@@ -4666,19 +4666,6 @@ input.prompt-input:focus-visible {
 }
 
 /* Community plugins */
-/* Banner plugin */
-.obsidian-banner.solid {
-  border-bottom: var(--divider-width) solid var(--divider-color);
-}
-
-.contextual-typography .markdown-preview-view div.has-banner-icon.obsidian-banner-wrapper {
-  overflow: visible;
-}
-
-.theme-dark .markdown-preview-view img.emoji {
-  opacity: 1;
-}
-
 /* Buttons plugin */
 body.theme-dark .button-default,
 body.theme-light .button-default {
@@ -5966,39 +5953,6 @@ body .block-language-leaflet .leaflet-marker-link-popup > .leaflet-popup-content
 .leaflet-marker-icon svg path {
   stroke: var(--background-primary);
   stroke-width: 18px;
-}
-
-/* Map View plugin */
-.map-view-marker-name {
-  font-weight: 400;
-}
-
-.workspace-leaf-content[data-type=map] .graph-controls {
-  background-color: var(--background-primary);
-}
-
-/* Full bleed */
-body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-split.mod-root .workspace-leaf-content[data-type=map] .view-header {
-  position: fixed;
-  background: transparent !important;
-  width: 100%;
-  z-index: 99;
-}
-
-body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=map] .view-header-title {
-  display: none;
-}
-
-body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=map] .view-actions {
-  background: transparent;
-}
-
-body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=map] .view-content {
-  height: 100%;
-}
-
-body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=map] .leaflet-top.leaflet-right {
-  top: var(--header-height);
 }
 
 /* Metatable */
