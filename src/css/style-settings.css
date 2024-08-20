@@ -2061,7 +2061,12 @@ settings:
 	-
 		id: hide-markdown
 		title: Hide Markdown syntax
-		description: (EXPERIMENTAL) Warning, this can be confusing because the characters still exist they are just hidden.
+		description: WARNING — This may be confusing because the characters still exist they are just hidden.
+		type: class-toggle
+	-
+		id: hide-settings-desc
+		title: Hide setting descriptions
+		description: Press and hold setting names to see their description.
 		type: class-toggle
 	-
 		id: styled-scrollbars
@@ -2071,7 +2076,6 @@ settings:
 	-
 		id: animations
 		title: Animation speed
-		description: Animation
 		type: class-select
 		default: default
 		options:

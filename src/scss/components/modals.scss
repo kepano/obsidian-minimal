@@ -6,10 +6,36 @@
 
 /* Confirm delete */
 .modal-container.mod-confirmation {
-
 	.modal {
 		width:480px;
 		min-width:0;
 	}
+}
 
+/* Hide settings descriptions */
+.hide-settings-desc {
+	&.is-phone {
+		.setting-item {
+		padding: 0.65em 0;
+		}
+		.setting-item-name {
+			font-weight: 400;
+			font-size: 16px;
+		}
+	}
+	.setting-item-name {
+		transition: max-height 200ms ease-in-out, padding-top 200ms ease-in-out;
+		&:active + .setting-item-description {
+			opacity: 1;
+			max-height: 500px;
+			padding-top: 4px;
+			transition: opacity 100ms ease-out, max-height 200ms ease-out, padding-top 200ms ease-in-out;
+		}
+	}
+	.setting-item-description {
+		opacity: 0;
+		max-height: 0;
+		padding-top: 0;
+		transition: max-height 200ms ease-in-out, padding-top 200ms ease-in-out;
+	}
 }
