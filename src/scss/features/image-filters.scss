@@ -34,7 +34,7 @@
 /* Invert  */
 
 // Necessary to set background for screen/multiply to work
-div[src$="#multiply"],
+div[src$="#blend"],
 div[src$="#invert"] {
 	background-color: var(--background-primary);
 }
@@ -46,23 +46,29 @@ div[src$="#invert"] {
 		filter: invert(1) hue-rotate(180deg);
 		mix-blend-mode: screen;
 	}
-	img[src$="#multiply"],
-	div[src$="#multiply"] img,
-	span[src$="#multiply"] img {
+	img[src$="#blend"],
+	div[src$="#blend"] img,
+	span[src$="#blend"] img {
+		mix-blend-mode: screen;
+	}
+	.img-blend {
 		mix-blend-mode: screen;
 	}
 }
 
 .theme-light {
-	img[src$="#multiply"],
-	div[src$="#multiply"] img,
-	span[src$="#multiply"] img {
+	img[src$="#blend"],
+	div[src$="#blend"] img,
+	span[src$="#blend"] img {
 		mix-blend-mode: multiply;
 	}
 	img[src$="#invertW"],
 	div[src$="#invertW"] img,
 	span[src$="invertW"] img {
 		filter: invert(1) hue-rotate(180deg);
+	}
+	.img-blend {
+		mix-blend-mode: multiply;
 	}
 }
 
