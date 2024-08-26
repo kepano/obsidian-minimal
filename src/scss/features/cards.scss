@@ -287,6 +287,10 @@ table.dataview {
 			padding-inline-start: calc(var(--cards-padding)*1.5);
 		}
 
+		> li.task-list-item > .task-list-item-checkbox {
+			margin-inline-start: 3px;
+		}
+
 		> li {
 			background-color: var(--cards-background);
 			padding: calc(var(--cards-padding)/2);

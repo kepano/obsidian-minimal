@@ -15,3 +15,7 @@
 .tab-stack-bottom-flipped {
 	--tab-stacked-text-align: right;
 }
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+	flex-direction: var(--tab-stacked-spine-order);
+}

@@ -1032,6 +1032,9 @@ body:not(.minimal-status-off) .status-bar {
 .tab-stack-bottom-flipped {
   --tab-stacked-text-align: right; }
 
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+  flex-direction: var(--tab-stacked-spine-order); }
+
 /* Title Bar */
 .view-header-title-parent,
 .view-header-title {
@@ -2385,6 +2388,8 @@ table.dataview tbody > tr > td {
   line-height: var(--line-height-tight); }
   .list-cards.markdown-preview-view div > ul .contains-task-list {
     padding-inline-start: calc(var(--cards-padding)*1.5); }
+  .list-cards.markdown-preview-view div > ul > li.task-list-item > .task-list-item-checkbox {
+    margin-inline-start: 3px; }
   .list-cards.markdown-preview-view div > ul > li {
     background-color: var(--cards-background);
     padding: calc(var(--cards-padding)/2);
@@ -8555,6 +8560,18 @@ settings:
 			-
 				label: Center flipped
 				value: tab-stack-center-flipped
+	-
+		id: tab-stacked-spine-order
+		title: Spine element order
+		type: variable-select
+		default: row
+		options:
+			-
+				label: Default
+				value: row
+			-
+				label: Reversed
+				value: row-reverse
 	-
 		id: tags
 		title: Tags

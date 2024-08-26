@@ -1673,6 +1673,18 @@ settings:
 				label: Center flipped
 				value: tab-stack-center-flipped
 	-
+		id: tab-stacked-spine-order
+		title: Spine element order
+		type: variable-select
+		default: row
+		options:
+			-
+				label: Default
+				value: row
+			-
+				label: Reversed
+				value: row-reverse
+	-
 		id: tags
 		title: Tags
 		type: heading
