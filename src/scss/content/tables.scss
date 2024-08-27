@@ -61,6 +61,7 @@ body {
 /* Place drag handles inside the cell when width is 100% */
 .table-100 .markdown-source-view.mod-cm6,
 .table-100.markdown-source-view.mod-cm6 {
+	--table-drag-handle-background-active: transparent;
 	.cm-table-widget .table-row-drag-handle {
 		inset-inline-end: calc(100% - var(--table-drag-handle-size)) !important;
 	}
