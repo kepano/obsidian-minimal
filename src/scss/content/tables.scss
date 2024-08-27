@@ -58,6 +58,14 @@ body {
 	}
 }
 
+/* Place drag handles inside the cell when width is 100% */
+.table-100 .markdown-source-view.mod-cm6,
+.table-100.markdown-source-view.mod-cm6 {
+	.cm-table-widget .table-row-drag-handle {
+		inset-inline-end: calc(100% - var(--table-drag-handle-size)) !important;
+	}
+}
+
 /* Override Sortable plugin */
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,
