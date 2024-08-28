@@ -805,7 +805,7 @@ body {
   border: 0; }
 
 .metadata-container {
-  --input-height: 2rem; }
+  --input-height: calc(var(--font-adaptive-small) * 2.2); }
 
 body.metadata-heading-off .metadata-properties-heading {
   display: none; }
