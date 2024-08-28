@@ -1638,14 +1638,6 @@ body {
   .is-mobile .cm-embed-block.cm-table-widget.markdown-rendered {
     padding-bottom: 40px; }
 
-/* Place drag handles inside the cell when width is 100% */
-.table-100 .markdown-source-view.mod-cm6,
-.table-100.markdown-source-view.mod-cm6 {
-  --table-drag-handle-background-active: transparent; }
-  .table-100 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle,
-  .table-100.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
-    inset-inline-end: calc(100% - var(--table-drag-handle-size)) !important; }
-
 /* Override Sortable plugin */
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,
@@ -1945,13 +1937,17 @@ body {
   --table-edge-cell-padding-last: 16px;
   --table-margin: 0;
   --table-drag-padding: var(--table-drag-space) 0;
-  --table-wrapper-width: min(fit-content, 100%); }
-  .table-100 .dataview.list-view-ul {
-    max-width: var(--max-width);
-    width: var(--line-width);
-    margin-inline: auto; }
+  --table-wrapper-width: min(fit-content, 100%);
+  /* Place drag handles inside the cell when width is 100% */ }
   .table-100 .table-col-btn {
-    display: none !important; }
+    cursor: default !important;
+    margin-top: 8px;
+    height: var(--table-header-size);
+    inset-inline-start: calc(100% - var(--table-drag-handle-size) - 4px) !important; }
+  .table-100 .markdown-source-view.mod-cm6, .table-100.markdown-source-view.mod-cm6 {
+    --table-drag-handle-background-active: transparent; }
+    .table-100 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle, .table-100.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
+      inset-inline-end: calc(100% - var(--table-drag-handle-size)) !important; }
 
 .img-wide,
 .img-max,

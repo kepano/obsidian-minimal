@@ -227,13 +227,20 @@ body {
 	--table-drag-padding: var(--table-drag-space) 0;
 	--table-wrapper-width: min(fit-content, 100%);
 
-	.dataview.list-view-ul {
-		max-width: var(--max-width);
-		width: var(--line-width);
-		margin-inline: auto;
-	}
 	.table-col-btn {
-		display: none !important;
+		cursor: default !important;
+		margin-top: 8px;
+		height: var(--table-header-size);
+		inset-inline-start: calc(100% - var(--table-drag-handle-size) - 4px) !important;
+	}
+
+	/* Place drag handles inside the cell when width is 100% */
+	.markdown-source-view.mod-cm6,
+	&.markdown-source-view.mod-cm6 {
+		--table-drag-handle-background-active: transparent;
+		.cm-table-widget .table-row-drag-handle {
+			inset-inline-end: calc(100% - var(--table-drag-handle-size)) !important;
+		}
 	}
 }
 
