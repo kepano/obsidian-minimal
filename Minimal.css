@@ -103,7 +103,8 @@ body {
   --input-height: 32px;
   --header-height: 40px;
   /* Metadata */
-  --metadata-label-width: 9rem;
+  --metadata-label-width-multiplier: 9;
+  --metadata-label-width: calc(var(--font-adaptive-small) * var(--metadata-label-width-multiplier));
   --metadata-label-font-size: var(--font-adaptive-small);
   --metadata-input-font-size: var(--font-adaptive-small);
   /* Mobile sidebars */
@@ -8246,12 +8247,11 @@ settings:
 		type: class-toggle
 		default: false
 	-
-		id: metadata-label-width
+		id: metadata-label-width-multiplier
 		title: Property name width
 		description: Width for the name of the property
 		type: variable-number-slider
-		format: rem
-		default: 8
+		default: 9
 		min: 4
 		max: 12
 		step: 0.25

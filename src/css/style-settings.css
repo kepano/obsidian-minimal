@@ -1350,12 +1350,11 @@ settings:
 		type: class-toggle
 		default: false
 	-
-		id: metadata-label-width
+		id: metadata-label-width-multiplier
 		title: Property name width
 		description: Width for the name of the property
 		type: variable-number-slider
-		format: rem
-		default: 8
+		default: 9
 		min: 4
 		max: 12
 		step: 0.25
