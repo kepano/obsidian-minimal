@@ -1218,6 +1218,12 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: enable-alternative-checkboxes
+		title: Enable Alternative Checkboxes
+		description: Disable this if you are using your own implementation via a CSS Snippet.
+		default: true
+		type: class-toggle
+	-
 		id: checkbox-color
 		title: Checkbox color
 		description: Background color for completed tasks
