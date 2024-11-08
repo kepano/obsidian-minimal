@@ -47,6 +47,6 @@ Use [[Helper classes]] to control image grids on a note
 | ----------- | ---------------------------------------- |
 | `img-blend` | Sets all images to blend with background |
 | `img-grid`  | Sets image layout to grid mode           |
-| `img-100`.  | Image blocks fill 100% of the pane width |
+| `img-100`   | Image blocks fill 100% of the pane width |
 | `img-max`   | Image blocks fill the max line width     |
 | `img-wide`  | Image blocks fill the wide line width    | 
