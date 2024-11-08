@@ -1626,6 +1626,8 @@ body {
     .markdown-preview-view th:last-child .table-cell-wrapper {
       padding-inline-end: 0; }
 
+.markdown-source-view.mod-cm6 .cm-table-widget table {
+  margin-top: 0; }
 .markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper {
   padding: var(--table-cell-padding); }
 
