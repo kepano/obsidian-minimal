@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "dependencies": {
         "dotenv": "^10.0.0",
-        "sass": "^1.71.1"
+        "sass": "^1.83.0"
     },
     "devDependencies": {
         "grunt": "^1.5.3",
