@@ -3923,7 +3923,7 @@ body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] 
   position: absolute;
   opacity: 1;
 }
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false]:has(.image-embed:not(.canvas-node-content):active) {
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-source-view.mod-cm6 .cm-content > .cm-callout[contenteditable=false]:active {
   contain: unset !important;
 }
 
