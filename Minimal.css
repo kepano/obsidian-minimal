@@ -1838,7 +1838,9 @@ body {
   --pdf-thumbnail-shadow: none;
 }
 .theme-light:not(.pdf-shadows-on) .pdf-viewer .page,
-.theme-dark:not(.pdf-shadows-on) .pdf-viewer .page {
+.theme-light:not(.pdf-shadows-on) .pdfViewer .page,
+.theme-dark:not(.pdf-shadows-on) .pdf-viewer .page,
+.theme-dark:not(.pdf-shadows-on) .pdfViewer .page {
   border: 0;
 }
 .theme-light:not(.pdf-shadows-on) .pdf-sidebar-container .thumbnailSelectionRing,
@@ -1855,15 +1857,18 @@ body {
   --pdf-thumbnail-shadow: 0 0 1px 0 rgba(0,0,0,0.6);
   --pdf-shadow: 0 0 1px 0 rgba(0,0,0,0.6);
 }
-.theme-dark .pdf-viewer .canvasWrapper {
+.theme-dark .pdf-viewer .canvasWrapper,
+.theme-dark .pdfViewer .canvasWrapper {
   opacity: var(--pdf-dark-opacity);
 }
-.theme-dark.pdf-invert-dark .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper {
+.theme-dark.pdf-invert-dark .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper,
+.theme-dark.pdf-invert-dark .workspace-leaf-content[data-type=pdf] .pdfViewer .canvasWrapper {
   filter: invert(1) hue-rotate(180deg);
   mix-blend-mode: screen;
 }
 
-.theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper {
+.theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdf-viewer .canvasWrapper,
+.theme-light.pdf-blend-light .workspace-leaf-content[data-type=pdf] .pdfViewer .canvasWrapper {
   mix-blend-mode: multiply;
 }
 
@@ -6863,7 +6868,6 @@ https://github.com/dracula/dracula-theme
   --text-on-accent-inverted: var(--bg1);
   --text-selection: var(--tx1);
   --vault-profile-color: var(--tx1);
-  --nav-item-color-active: var(--bg1);
   --nav-item-color-hover: var(--bg1);
 }
 .theme-light.minimal-eink-light button:hover,

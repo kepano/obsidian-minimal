@@ -7,6 +7,7 @@ body {
 	--pdf-shadow: none;
 	--pdf-thumbnail-shadow: none;
 
+	.pdf-viewer .page,
 	.pdfViewer .page {
 		border: 0;
 	}
@@ -23,10 +24,12 @@ body {
 	--pdf-thumbnail-shadow: 0 0 1px 0 rgba(0,0,0,0.6);
 	--pdf-shadow: 0 0 1px 0 rgba(0,0,0,0.6);
 
+	.pdf-viewer .canvasWrapper,
 	.pdfViewer .canvasWrapper {
 		opacity: var(--pdf-dark-opacity);
 	}
 	&.pdf-invert-dark .workspace-leaf-content[data-type=pdf] {
+		.pdf-viewer	.canvasWrapper,
 		.pdfViewer .canvasWrapper {
 			filter: invert(1) hue-rotate(180deg);
 			mix-blend-mode: screen;
@@ -35,6 +38,7 @@ body {
 }
 .theme-light {
 	&.pdf-blend-light .workspace-leaf-content[data-type=pdf] {
+		.pdf-viewer .canvasWrapper,
 		.pdfViewer .canvasWrapper {
 			mix-blend-mode: multiply;
 		}
