@@ -118,7 +118,7 @@
 		.setting-item-name {
 			font-size: var(--font-adaptive-small);
 		}
-		.setting-item-info:has(.search-input-container) {
+		.view-content > .setting-item > .setting-item-info:first-child {
 			width: 100%;
 			margin-right: 0;
 		}

@@ -121,15 +121,6 @@ table.dataview {
 			padding: 0.25em 0 !important;
 			margin: 0 auto !important;
 		}
-
-		/* Images */
-		&:has(img) {
-			padding: 0 !important;
-			background-color: var(--background-secondary);
-			display: block;
-			margin: 0;
-			width: 100%;
-		}
 		img {
 			aspect-ratio: var(--cards-aspect-ratio);
 			width: 100%;
@@ -148,22 +139,6 @@ table.dataview {
 .trim-cols .cards table.dataview tbody > tr > td {
 white-space: normal;
 }
-
-/*
-.cards,
-.markdown-source-view.mod-cm6.cards {
-.dataview.table-view-table > tbody > tr > td,
-table.dataview tbody > tr > td {
-	border-bottom: none;
-	padding: 0!important;
-	line-height: 1.2;
-	width: calc(100% - var(--cards-padding));
-	margin: 0 auto;
-	overflow: visible !important;
-	max-width: 100%;
-	display: flex;
-}
-}*/
 
 .links-int-on .cards table {
 --link-decoration: none;
@@ -366,6 +341,17 @@ table.dataview {
 	}
 	&.cards-cover {
 		--cards-image-fit: cover;
+		/* Images */
+		tbody > tr > td:first-child {
+			padding: 0 !important;
+			background-color: var(--background-secondary);
+			display: block;
+			margin: 0;
+			width: 100%;
+			img {
+				border-radius: 0;
+			}
+		}
 	}
 	&.cards-align-bottom table.dataview tbody > tr > td:last-child {
 		margin-top: auto;
