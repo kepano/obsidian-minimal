@@ -2080,11 +2080,6 @@ settings:
 		description: Press and hold setting names to see their description.
 		type: class-toggle
 	-
-		id: styled-scrollbars
-		title: Styled scrollbars
-		description: Use styled scrollbars (replaces native scrollbars)
-		type: class-toggle
-	-
 		id: animations
 		title: Animation speed
 		type: class-select
