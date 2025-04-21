@@ -42,14 +42,14 @@
 
 /* Minimal features */
 @use 'features/active-line';
-// @use 'features/animations';
+@use 'features/animations';
 @use 'features/block-width';
 @use 'features/borders';
 @use 'features/cards';
-// @use 'features/checklist-icons';
-// @use 'features/colorful-active-states';
-// @use 'features/colorful-frame';
-// @use 'features/colorful-headings';
+@use 'features/checklist-icons';
+@use 'features/colorful-active-states';
+@use 'features/colorful-frame';
+@use 'features/colorful-headings';
 // @use 'features/custom-icons';
 @use 'features/focus-mode';
 @use 'features/full-width-media';
@@ -63,17 +63,10 @@
 @use 'features/sidebar-background';
 @use 'features/sidebar-notes';
 @use 'features/tab-styles';
-// @use 'features/translucent';
 @use 'features/trim-file-names';
 @use 'features/underline-headings';
 
 @use 'mobile/mobile';
-
-/* Mobile
-@import 'mobile/mobile';
-@import 'mobile/ios';
-@import 'mobile/toolbar';
-*/
 
 /* Core plugins */
 @use 'plugins-core/backlinks-outlinks';
@@ -86,30 +79,18 @@
 @use 'plugins-core/sync';
 
 /* Community plugins */
-// @use 'plugins/buttons' as buttons2;
 @use 'plugins/calendar';
 @use 'plugins/charts';
-// @use 'plugins/checklist';
 @use 'plugins/cmenu';
 @use 'plugins/dataview';
-// @use 'plugins/dictionary';
-// @use 'plugins/excalidraw';
 @use 'plugins/git';
 @use 'plugins/hider';
-// @use 'plugins/hover-editor';
 @use 'plugins/kanban';
 @use 'plugins/lapel';
 @use 'plugins/leaflet';
-// @use 'plugins/metatable';
 @use 'plugins/outliner';
-// @use 'plugins/quickadd';
-// @use 'plugins/quick-explorer';
-// @use 'plugins/recent';
-// @use 'plugins/reminder';
 @use 'plugins/sortable';
 @use 'plugins/style-settings';
-// @use 'plugins/todoist';
-// @use 'plugins/tracker';
 @use 'plugins/zoom';
 
 /* Color schemes */
