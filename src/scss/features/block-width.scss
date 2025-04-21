@@ -316,6 +316,7 @@ body {
 	/* Tables */
 	.cm-table-widget,
 	.bases-embed,
+	> div:has(.bases-embed),
 	> div:has(table) {
 		width: var(--container-table-width);
 		max-width:var(--container-table-max-width);
