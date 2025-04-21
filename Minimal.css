@@ -3348,10 +3348,16 @@ body.minimal-focus-mode.show-view-header .view-content {
 
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
+.table-small {
+  --bases-table-text-size: 85%;
+}
 .table-small table:not(.calendar) {
   --table-text-size: 85%;
 }
 
+.table-tiny {
+  --bases-table-text-size: 75%;
+}
 .table-tiny table:not(.calendar) {
   --table-text-size: 75%;
 }
