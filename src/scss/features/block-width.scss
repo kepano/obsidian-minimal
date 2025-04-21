@@ -315,20 +315,19 @@ body {
 
 	/* Tables */
 	.cm-table-widget,
-	> :has(>table) {
+	> div:has(.bases-table),
+	> div:has(table) {
 		width: var(--container-table-width);
 		max-width:var(--container-table-max-width);
+	}
+	.el-table {
 		margin-inline: var(--container-table-margin) !important;
 		padding-inline-start: var(--table-drag-padding);
 	}
 	.table-wrapper {
 		width: var(--table-wrapper-width);
 	}
-	> :has(>.block-language-dataview table),
-	> :has(>.block-language-dataviewjs table) {
-		width: var(--container-dataview-table-width);
-		max-width:var(--container-table-max-width);
-	}
+
 	table {
 		width: var(--table-width);
 		max-width:var(--table-max-width);
@@ -355,7 +354,7 @@ body {
 		padding-bottom: 0.25rem;
 	}
 	> .image-embed,
-	> :has(.image-embed) {
+	> div:has(.image-embed) {
 		width: var(--container-img-width);
 		max-width:var(--container-img-max-width);
 
@@ -371,18 +370,17 @@ body {
 	}
 
 	/* Charts */
-	:has(>.block-language-dataviewjs canvas), 
-	:has(>.block-language-chart) {
+	div:has(>.block-language-dataviewjs canvas, >.block-language-chart) {
 		width: var(--container-chart-width);
 		max-width:var(--container-chart-max-width);
 
 		canvas {
-			max-width:var(--map-chart-width);
+			max-width:var(--chart-max-width);
 		}
 	}
 
 	/* Maps */
-	:has(>.block-language-leaflet) {
+	div:has(>.block-language-leaflet) {
 		width: var(--container-map-width);
 		max-width:var(--container-map-max-width);
 
@@ -392,8 +390,8 @@ body {
 	}
 
 	/* Iframes */
-	> :has(>iframe),
-	:has(>.cm-html-embed) {
+	> div:has(>iframe),
+	div:has(>.cm-html-embed) {
 		width: var(--container-iframe-width);
 		max-width:var(--container-iframe-max-width);
 
