@@ -116,6 +116,7 @@
 		counter-reset:section;
 		.bases-tr > .bases-td:first-child {
 			white-space: nowrap;
+			.bases-table-header-label,
 			.bases-table-header-name {
 				padding-inline-start: 0;
 			}
