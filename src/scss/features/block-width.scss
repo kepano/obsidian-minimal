@@ -319,8 +319,6 @@ body {
 
 	/* Tables */
 	.cm-table-widget,
-	> .bases-embed,
-	> div:has(.bases-embed),
 	> div:has(table) {
 		width: var(--container-table-width);
 		max-width:var(--container-table-max-width);
@@ -331,6 +329,13 @@ body {
 	}
 	.table-wrapper {
 		width: var(--table-wrapper-width);
+	}
+	> .bases-embed,
+	> div:has(.bases-embed),
+	> :has(>.block-language-dataview table),
+	> :has(>.block-language-dataviewjs table) {
+		width: var(--container-dataview-table-width);
+		max-width:var(--container-table-max-width);
 	}
 
 	table {
