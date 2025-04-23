@@ -2184,11 +2184,9 @@ body {
   /* Iframes */
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .bases-embed,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.bases-embed),
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(table),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer .bases-embed,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.bases-embed),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(table) {
   width: var(--container-table-width);
