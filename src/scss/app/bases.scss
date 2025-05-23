@@ -6,7 +6,8 @@
         height: auto;
         min-height: 0;
         .query-toolbar {
-            opacity: 0.35;
+            padding-bottom: 2px;
+            opacity: var(--bases-toolbar-opacity);
             transition: 0.15s 0.15s opacity;
             &:hover {
                 opacity: 1;
@@ -16,5 +17,5 @@
     }
 }
 .bases-table-header-icon {
-    display: none;
+    display: var(--bases-table-header-icon-display);
 }

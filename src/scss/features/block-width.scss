@@ -226,6 +226,7 @@ body {
 	--table-margin: 0;
 	--table-drag-padding: var(--table-drag-space) 0;
 	--table-wrapper-width: min(fit-content, 100%);
+	--bases-embed-border: none;
 
 	.table-col-btn {
 		cursor: default !important;

@@ -6,7 +6,6 @@ body {
   /* Bases */
   --bases-table-column-border-width: 0px;
   --bases-header-border-width: 0;
-  --bases-embed-border: none;
   /* Blockquotes */
   --blockquote-style:normal;
   --blockquote-color: var(--text-muted);
@@ -566,7 +565,8 @@ body {
   min-height: 0;
 }
 .bases-embed .bases-header .query-toolbar {
-  opacity: 0.35;
+  padding-bottom: 2px;
+  opacity: var(--bases-toolbar-opacity);
   transition: 0.15s 0.15s opacity;
 }
 .bases-embed .bases-header .query-toolbar:hover {
@@ -575,7 +575,7 @@ body {
 }
 
 .bases-table-header-icon {
-  display: none;
+  display: var(--bases-table-header-icon-display);
 }
 
 /* Editor mode (CodeMirror 6 Live Preview) */
@@ -2087,6 +2087,7 @@ body {
   --table-margin: 0;
   --table-drag-padding: var(--table-drag-space) 0;
   --table-wrapper-width: min(fit-content, 100%);
+  --bases-embed-border: none;
   --bases-header-padding-end: var(--size-4-2);
   --bases-header-padding-start: var(--size-4-2);
   /* Place drag handles inside the cell when width is 100% */

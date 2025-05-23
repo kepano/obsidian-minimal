@@ -186,6 +186,33 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: bases
+		title: Bases
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: bases-toolbar-opacity
+		title: Toolbar opacity
+		type: variable-number-slider
+		default: 1
+		min: 0
+		max: 1
+		step: 0.05
+	-
+		id: bases-table-header-icon-display
+		title: Table header icons
+		type: variable-select
+		allowEmpty: false
+		default: none
+		options:
+			-
+				label: Hidden
+				value: none
+			-
+				label: Visible
+				value: flex
+	-
 		id: blockquotes
 		title: Blockquotes
 		type: heading
