@@ -234,9 +234,8 @@ body {
 		inset-inline-start: calc(100% - var(--table-drag-handle-size) - 4px) !important;
 	}
 
-	.bases-header {
-		padding: 0 var(--size-4-2);	
-	}
+	--bases-header-padding-end: var(--size-4-2);
+	--bases-header-padding-start: var(--size-4-2);
 
 	/* Place drag handles inside the cell when width is 100% */
 	.markdown-source-view.mod-cm6,

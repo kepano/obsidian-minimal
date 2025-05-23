@@ -1,9 +1,12 @@
 body {
 	--font-editor-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
 	--font-editor:var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
-}
 
-body {
+	/* Bases */
+	--bases-table-column-border-width: 0px;
+    --bases-header-border-width: 0;
+    --bases-embed-border: none;
+
 	/* Blockquotes */
 	--blockquote-style:normal;
 	--blockquote-color: var(--text-muted);

@@ -31,7 +31,7 @@ body {
 }
 
 .embed-underline {
-	.internal-embed:not(.pdf-embed) {
+	.internal-embed:not(.pdf-embed,.bases-embed) {
 		text-decoration-line: underline;
 		text-decoration-style: var(--embed-decoration-style);
 		text-decoration-color: var(--embed-decoration-color);

@@ -43,9 +43,10 @@ SOFTWARE.
 body {
   --font-editor-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
   --font-editor:var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
-}
-
-body {
+  /* Bases */
+  --bases-table-column-border-width: 0px;
+  --bases-header-border-width: 0;
+  --bases-embed-border: none;
   /* Blockquotes */
   --blockquote-style:normal;
   --blockquote-color: var(--text-muted);
@@ -591,10 +592,32 @@ body {
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
   --table-text-size:calc(var(--font-adaptive-normal) * 0.875);
+  --bases-table-text-size:calc(var(--font-adaptive-normal) * 0.875);
 }
 
 /* Obsidian */
 /* Obsidian app */
+.bases-view {
+  --bases-table-text-size: var(--table-text-size);
+}
+
+.bases-embed .bases-header {
+  height: auto;
+  min-height: 0;
+}
+.bases-embed .bases-header .query-toolbar {
+  opacity: 0.35;
+  transition: 0.15s 0.15s opacity;
+}
+.bases-embed .bases-header .query-toolbar:hover {
+  opacity: 1;
+  transition: 0s opacity;
+}
+
+.bases-table-header-icon {
+  display: none;
+}
+
 /* Editor mode (CodeMirror 6 Live Preview) */
 /* Fix strange Obsidian ghost textearea bug on right click */
 .CodeMirror-wrap > div > textarea {
@@ -1497,7 +1520,7 @@ body {
   opacity: 0;
 }
 
-.embed-underline .internal-embed:not(.pdf-embed) {
+.embed-underline .internal-embed:not(.pdf-embed, .bases-embed) {
   text-decoration-line: underline;
   text-decoration-style: var(--embed-decoration-style);
   text-decoration-color: var(--embed-decoration-color);
@@ -2104,6 +2127,8 @@ body {
   --table-margin: 0;
   --table-drag-padding: var(--table-drag-space) 0;
   --table-wrapper-width: min(fit-content, 100%);
+  --bases-header-padding-end: var(--size-4-2);
+  --bases-header-padding-start: var(--size-4-2);
   /* Place drag handles inside the cell when width is 100% */
 }
 .table-100 .table-col-btn {
@@ -2111,9 +2136,6 @@ body {
   margin-top: 8px;
   height: var(--table-header-size);
   inset-inline-start: calc(100% - var(--table-drag-handle-size) - 4px) !important;
-}
-.table-100 .bases-header {
-  padding: 0 var(--size-4-2);
 }
 .table-100 .markdown-source-view.mod-cm6, .table-100.markdown-source-view.mod-cm6 {
   --table-drag-handle-background-active: transparent;
@@ -3360,14 +3382,14 @@ body.minimal-focus-mode.show-view-header .view-content {
 
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
-.table-small {
+.table-small .bases-view {
   --bases-table-text-size: 85%;
 }
 .table-small table:not(.calendar) {
   --table-text-size: 85%;
 }
 
-.table-tiny {
+.table-tiny .bases-view {
   --bases-table-text-size: 75%;
 }
 .table-tiny table:not(.calendar) {
@@ -3494,6 +3516,7 @@ body.minimal-focus-mode.show-view-header .view-content {
 
 .row-lines-off {
   --table-row-last-border-width: 0;
+  --bases-table-row-border-width: 0;
 }
 .row-lines-off table:not(.calendar) tbody > tr > td,
 .row-lines-off .table-view-table > tbody > tr > td,
@@ -3503,7 +3526,7 @@ body.minimal-focus-mode.show-view-header .view-content {
 
 .row-lines:not(.table-lines) .markdown-source-view:not(.cards),
 .row-lines:not(.table-lines) .markdown-preview-view:not(.cards) {
-  --table-row-last-border-width: 0px;
+  --table-row-last-border-width: 0;
 }
 .row-lines:not(.table-lines) .markdown-source-view:not(.cards) table:not(.calendar) tbody > tr:not(:last-child) > td,
 .row-lines:not(.table-lines) .markdown-source-view:not(.cards) .table-view-table > tbody > tr:not(:last-child) > td,
@@ -3512,6 +3535,9 @@ body.minimal-focus-mode.show-view-header .view-content {
   border-bottom: var(--table-border-width) solid var(--table-border-color);
 }
 
+.col-lines {
+  --bases-table-column-border-width: var(--table-border-width);
+}
 .col-lines table:not(.calendar) tbody > tr > td:not(:last-child),
 .col-lines .table-view-table thead > tr > th:not(:last-child),
 .col-lines .table-view-table > tbody > tr > td:not(:last-child) {

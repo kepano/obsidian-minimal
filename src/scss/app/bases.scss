@@ -1,0 +1,20 @@
+.bases-view {
+    --bases-table-text-size: var(--table-text-size);
+}
+.bases-embed {
+    .bases-header {
+        height: auto;
+        min-height: 0;
+        .query-toolbar {
+            opacity: 0.35;
+            transition: 0.15s 0.15s opacity;
+            &:hover {
+                opacity: 1;
+                transition: 0s opacity;
+            }
+        }
+    }
+}
+.bases-table-header-icon {
+    display: none;
+}
