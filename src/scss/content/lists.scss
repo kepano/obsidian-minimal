@@ -1,18 +1,3 @@
-/* Reading Mode Lists	
-div > ol,
-div > ul {
-	padding-inline-start:1.4em;
-}
-ul > li {
-	min-height:1.4em;
-}
-ol > li {
-	margin-inline-start:0em;}
-ol {
-	margin-inline-start:0;
-	list-style:default;
-}*/
-
 body {
 	--adaptive-list-edit-offset: var(--list-edit-offset);
 }
@@ -36,15 +21,4 @@ body {
 	ul > li:not(.task-list-item)::marker {
 		font-size:0.8em;
 	}
-	/*
-	.markdown-rendered ul,
-	.markdown-rendered ol {
-		padding-inline-start:var(--list-indent);
-	}
-	.markdown-rendered div > ol,
-	.markdown-rendered div > ul {
-		padding-inline-start:2em;
-	}
-	*/
-
 }

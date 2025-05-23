@@ -1,11 +1,21 @@
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 
-.table-small table:not(.calendar) {
-	--table-text-size: 85%;
+.table-small {
+	.bases-view {
+		--bases-table-text-size: 85%;
+	}
+	table:not(.calendar) {
+		--table-text-size: 85%;
+	}
 }
-.table-tiny table:not(.calendar) {
-	--table-text-size: 75%;
+.table-tiny {
+	.bases-view {
+		--bases-table-text-size: 75%;
+	}
+	table:not(.calendar) {
+		--table-text-size: 75%;
+	}
 }
 
 .row-hover {
@@ -105,6 +115,33 @@
 			}
 		}
 	}
+	
+	.bases-table {
+		counter-reset:section;
+		.bases-tr > .bases-td:first-child {
+			white-space: nowrap;
+			.bases-table-header-label,
+			.bases-table-header-name {
+				padding-inline-start: 0;
+			}
+			&::before {
+				content: " ";
+				padding-right: var(--table-numbers-padding-right);
+				display: inline-block;
+				min-width: 2em;
+			}
+		}
+		.bases-tbody .bases-tr > .bases-td:first-child {
+			&::before {
+				counter-increment: section;
+				content: counter(section) " ";
+				text-align: center;
+				color: var(--text-faint);
+				font-variant-numeric: tabular-nums;
+				font-size: var(--bases-table-text-size);
+			}
+		}
+	}
 	.table-editor {
 		--table-numbers-padding-right: 0;
 	}
@@ -112,17 +149,18 @@
 
 .row-lines-off {
 	--table-row-last-border-width: 0;
+	--bases-table-row-border-width: 0;
 
 	table:not(.calendar) tbody > tr > td,
 	.table-view-table > tbody > tr > td,
 	table:not(.calendar) tbody > tr:last-child > td {
-		border-bottom:none;
+		border-bottom: none;
 	}
 }
 
 .row-lines:not(.table-lines) .markdown-source-view:not(.cards),
 .row-lines:not(.table-lines) .markdown-preview-view:not(.cards) {
-	--table-row-last-border-width: 0px;
+	--table-row-last-border-width: 0;
 
 	table:not(.calendar) tbody > tr:not(:last-child) > td,
 	.table-view-table > tbody > tr:not(:last-child) > td {
@@ -131,6 +169,7 @@
 }
 
 .col-lines {
+	--bases-table-column-border-width:  var(--table-border-width);
 	table:not(.calendar) tbody > tr > td:not(:last-child),
 	.table-view-table thead > tr > th:not(:last-child),
 	.table-view-table > tbody > tr > td:not(:last-child) {

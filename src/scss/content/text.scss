@@ -49,7 +49,7 @@ body,
 	.cm-hmd-internal-link.cm-link-has-alias,
 	.cm-link-alias-pipe,
 	.cm-formatting-link,
-	.cm-formatting:has(+ .cm-header) {
+	.cm-formatting-header {
 		display: none;
 	}
 }

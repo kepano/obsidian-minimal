@@ -95,10 +95,6 @@ body div.dataview-error-box {
 	}
 }
 
-table.dataview:has(+ .dataview-error-box) {
-	display: none;
-}
-
 /* Trim columns feature */
 .trim-cols .markdown-source-view.mod-cm6 .table-view-table > tbody > tr > td,
 .trim-cols .markdown-preview-view .table-view-table > tbody > tr > td,
