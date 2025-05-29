@@ -213,6 +213,12 @@ settings:
 				label: Visible
 				value: flex
 	-
+		id: bases-table-row-height
+		title: Table row height
+		type: variable-number
+		default: 30
+		format: px
+	-
 		id: blockquotes
 		title: Blockquotes
 		type: heading
