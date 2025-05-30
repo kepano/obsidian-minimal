@@ -322,6 +322,8 @@ body {
 	> div:has(table) {
 		width: var(--container-table-width);
 		max-width:var(--container-table-max-width);
+		margin-inline: var(--container-table-margin) !important;
+		padding-inline-start: var(--table-drag-padding);
 	}
 	.el-table {
 		margin-inline: var(--container-table-margin) !important;

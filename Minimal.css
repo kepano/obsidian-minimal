@@ -2252,6 +2252,8 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(table) {
   width: var(--container-table-width);
   max-width: var(--container-table-max-width);
+  margin-inline: var(--container-table-margin) !important;
+  padding-inline-start: var(--table-drag-padding);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .el-table,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .el-table {
