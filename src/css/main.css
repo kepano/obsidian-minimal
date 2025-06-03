@@ -560,10 +560,6 @@ body {
   --bases-table-text-size: var(--table-text-size);
 }
 
-.bases-embed .bases-header {
-  height: auto;
-  min-height: 0;
-}
 .bases-embed .bases-header .query-toolbar {
   padding-bottom: 2px;
   opacity: var(--bases-toolbar-opacity);
