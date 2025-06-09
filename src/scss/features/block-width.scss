@@ -333,6 +333,7 @@ body {
 		width: var(--table-wrapper-width);
 	}
 	> .bases-embed,
+	> div:has(.block-language-base),
 	> div:has(.bases-embed),
 	> :has(>.block-language-dataview table),
 	> :has(>.block-language-dataviewjs table) {

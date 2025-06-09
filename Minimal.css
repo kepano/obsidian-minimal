@@ -2261,10 +2261,12 @@ body {
   width: var(--table-wrapper-width);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .bases-embed,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.block-language-base),
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.bases-embed),
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > :has(> .block-language-dataview table),
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > :has(> .block-language-dataviewjs table),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .bases-embed,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.block-language-base),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.bases-embed),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > :has(> .block-language-dataview table),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > :has(> .block-language-dataviewjs table) {
