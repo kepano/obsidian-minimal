@@ -1,9 +1,9 @@
 .bases-view {
     --bases-table-text-size: var(--table-text-size);
 }
+.block-language-base,
 .bases-embed {
     .bases-header {
-
         .query-toolbar {
             padding-bottom: 2px;
             opacity: var(--bases-toolbar-opacity);
@@ -15,6 +15,12 @@
         }
     }
 }
+.base-plain {
+    .bases-header {
+        display: none;
+    }
+}
+
 .bases-table-header-icon {
     display: var(--bases-table-header-icon-display);
 }

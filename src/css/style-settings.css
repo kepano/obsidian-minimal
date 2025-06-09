@@ -204,14 +204,14 @@ settings:
 		title: Table header icons
 		type: variable-select
 		allowEmpty: false
-		default: none
+		default: flex
 		options:
-			-
-				label: Hidden
-				value: none
 			-
 				label: Visible
 				value: flex
+			-
+				label: Hidden
+				value: none
 	-
 		id: bases-table-row-height
 		title: Table row height

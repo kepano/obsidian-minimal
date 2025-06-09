@@ -560,14 +560,20 @@ body {
   --bases-table-text-size: var(--table-text-size);
 }
 
+.block-language-base .bases-header .query-toolbar,
 .bases-embed .bases-header .query-toolbar {
   padding-bottom: 2px;
   opacity: var(--bases-toolbar-opacity);
   transition: 0.15s 0.15s opacity;
 }
+.block-language-base .bases-header .query-toolbar:hover,
 .bases-embed .bases-header .query-toolbar:hover {
   opacity: 1;
   transition: 0s opacity;
+}
+
+.base-plain .bases-header {
+  display: none;
 }
 
 .bases-table-header-icon {
