@@ -2129,7 +2129,7 @@ body {
   --table-margin: 0;
   --table-drag-padding: var(--table-drag-space) 0;
   --table-wrapper-width: min(fit-content, 100%);
-  --bases-embed-border: none;
+  --bases-embed-border-width: 0;
   --bases-header-padding-end: var(--size-4-2);
   --bases-header-padding-start: var(--size-4-2);
   /* Place drag handles inside the cell when width is 100% */
