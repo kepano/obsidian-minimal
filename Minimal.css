@@ -2096,6 +2096,14 @@ body {
   --table-wrapper-width: auto;
 }
 
+.bases-view[data-view-type=table] {
+  --bases-embed-border-width: var(--bases-table-embed-border-width);
+}
+
+.bases-view[data-view-type=cards] {
+  padding: var(--bases-cards-embed-padding);
+}
+
 .table-wide,
 .table-max,
 .table-100 {
@@ -2130,6 +2138,8 @@ body {
   --table-drag-padding: var(--table-drag-space) 0;
   --table-wrapper-width: min(fit-content, 100%);
   --bases-embed-border-width: 0;
+  --bases-table-embed-border-width: 0;
+  --bases-cards-embed-padding: 0 128px;
   --bases-header-padding-end: var(--size-4-2);
   --bases-header-padding-start: var(--size-4-2);
   /* Place drag handles inside the cell when width is 100% */
