@@ -226,9 +226,11 @@ body {
 	--table-margin: 0;
 	--table-drag-padding: var(--table-drag-space) 0;
 	--table-wrapper-width: min(fit-content, 100%);
-	--bases-table-embed-border-width: 0;
-	--bases-table-embed-border-width: 0;
 	--bases-cards-embed-padding: 0 12px;
+
+	.bases-view[data-view-type="table"] {
+		--bases-embed-border-width: 0;
+	}
 
 	.table-col-btn {
 		cursor: default !important;
