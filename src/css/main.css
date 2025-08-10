@@ -518,12 +518,15 @@ body .excalidraw {
 
 .theme-light.minimal-light-white {
   --background-table-rows: var(--bg2);
+  --interactive-normal: var(--bg3);
 }
 
 .theme-light.minimal-light-tonal {
-  --background-primary: var(--bg2);
+  --background-secondary: var(--bg1);
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
+  --interactive-normal: var(--bg3);
+  --background-modifier-form-field: var(--bg3);
 }
 
 .theme-dark.minimal-dark-tonal {
@@ -4354,6 +4357,7 @@ body:not(.full-file-names) .tree-item-inner {
 .is-mobile {
   --font-bold: 600;
   --font-ui-medium: var(--font-adaptive-small);
+  --interactive-normal: var(--background-secondary);
   --background-modifier-form-field: var(--background-secondary);
   --background-modifier-form-field-highlighted: var(--background-secondary);
 }
