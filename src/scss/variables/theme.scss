@@ -171,8 +171,10 @@
 	--background-secondary:      var(--bg1);
 	--background-primary-alt:    var(--bg3);
 	--background-table-rows:     var(--bg3);
-	--interactive-normal:        var(--bg3);
-	--background-modifier-form-field: var(--bg3);
+	&.is-mobile {
+		--background-modifier-form-field: var(--bg3);
+		--interactive-normal:             var(--bg3);
+	}
 }
 
 .theme-dark.minimal-dark-tonal {

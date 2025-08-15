@@ -1,26 +1,32 @@
 .bases-view {
-    --bases-table-text-size: var(--table-text-size);
+	--bases-table-text-size: var(--table-text-size);
+}
+
+.query-toolbar-menu {
+	.combobox-button {
+		background-color: transparent;
+	}
 }
 .block-language-base,
 .bases-embed {
-    .bases-header {
-        .query-toolbar {
-            padding-bottom: 2px;
-            opacity: var(--bases-toolbar-opacity);
-            transition: 0.15s 0.15s opacity;
-            &:hover {
-                opacity: 1;
-                transition: 0s opacity;
-            }
-        }
-    }
+	.bases-header {
+		.query-toolbar {
+			padding-bottom: 2px;
+			opacity: var(--bases-toolbar-opacity);
+			transition: 0.15s 0.15s opacity;
+			&:hover {
+				opacity: 1;
+				transition: 0s opacity;
+			}
+		}
+	}
 }
 .base-plain {
-    .bases-header {
-        display: none;
-    }
+	.bases-header {
+		display: none;
+	}
 }
 
 .bases-table-header-icon {
-    display: var(--bases-table-header-icon-display);
+	display: var(--bases-table-header-icon-display);
 }

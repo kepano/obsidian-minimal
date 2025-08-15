@@ -379,6 +379,7 @@ body .excalidraw {
   --background-secondary-alt: white;
   --ribbon-background: white;
   --titlebar-background: white;
+  --mobile-sidebar-background: white;
   --bg1: white;
 }
 
@@ -565,8 +566,10 @@ body .excalidraw {
   --background-secondary: var(--bg1);
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
-  --interactive-normal: var(--bg3);
+}
+.theme-light.minimal-light-tonal.is-mobile {
   --background-modifier-form-field: var(--bg3);
+  --interactive-normal: var(--bg3);
 }
 
 .theme-dark.minimal-dark-tonal {
@@ -601,6 +604,10 @@ body {
 /* Obsidian app */
 .bases-view {
   --bases-table-text-size: var(--table-text-size);
+}
+
+.query-toolbar-menu .combobox-button {
+  background-color: transparent;
 }
 
 .block-language-base .bases-header .query-toolbar,
@@ -4403,6 +4410,9 @@ body:not(.full-file-names) .tree-item-inner {
 }
 .is-mobile .markdown-source-view.mod-cm6 .cm-gutters {
   margin-left: 0;
+}
+.is-mobile.theme-light .menu {
+  --interactive-normal: var(--background-modifier-hover);
 }
 
 .is-mobile .workspace-drawer.mod-left.is-pinned {
