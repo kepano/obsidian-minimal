@@ -1209,6 +1209,10 @@ button.mod-warning:hover {
   transition: background-color 0.2s ease-out;
 }
 
+.is-mobile button.mod-warning {
+  border: none;
+}
+
 .document-search, .document-replace {
   max-width: 100%;
   padding: 0;
