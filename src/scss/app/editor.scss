@@ -132,3 +132,10 @@ body {
 .markdown-source-view.mod-cm6 .cm-embed-block:hover {
 	border:0;
 }
+
+/* Dim inactive editor */
+body.dim-inactive-editor .workspace-leaf:not(.mod-active) .cm-editor {
+  background-color: color-mix(in srgb, var(--bg3) 90%, var(--bg1) 10%);
+  --active-line-bg: rgba(0, 0, 0, 0);
+  transition: background-color 0.1s;
+}
