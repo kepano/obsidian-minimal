@@ -4,7 +4,7 @@ Find detailed documentation at [minimal.guide](https://minimal.guide)
 
 Minimal is an [Obsidian](https://obsidian.md/) theme for desktop, mobile and tablet. Customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider). Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217) ✨ 
 
-**Support development:** [follow me](https://stephango.com/subscribe) or [buy me a coffee](https://www.buymeacoffee.com/kepano)
+**Support development:** [follow me](https://stephango.com/subscribe)
 
 ## About Minimal
 
@@ -304,3 +304,4 @@ Minimal for Obsidian Publish is a separate version of Minimal which follows the 
 This theme is provided as is, and is designed for my personal use of Obsidian on macOS. As such it is not thoroughly tested across all operating systems and use cases. 
 
 This theme modifies significant parts of the Obsidian interface, so it may break with future updates. It may also be incompatible with other bits of custom CSS you have.
+
