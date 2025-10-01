@@ -557,13 +557,13 @@ body {
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
   --table-text-size:calc(var(--font-adaptive-normal) * 0.875);
-  --bases-table-text-size:calc(var(--font-adaptive-normal) * 0.875);
+  --bases-table-font-size:calc(var(--font-adaptive-normal) * 0.875);
 }
 
 /* Obsidian */
 /* Obsidian app */
 .bases-view {
-  --bases-table-text-size: var(--table-text-size);
+  --bases-table-font-size: var(--table-text-size);
 }
 
 .query-toolbar-menu .combobox-button {
@@ -3367,14 +3367,14 @@ body.minimal-focus-mode.show-view-header .view-content {
 /* Table helper classes for alternate styles */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
 .table-small .bases-view {
-  --bases-table-text-size: 85%;
+  --bases-table-font-size: 85%;
 }
 .table-small table:not(.calendar) {
   --table-text-size: 85%;
 }
 
 .table-tiny .bases-view {
-  --bases-table-text-size: 75%;
+  --bases-table-font-size: 75%;
 }
 .table-tiny table:not(.calendar) {
   --table-text-size: 75%;
@@ -3492,7 +3492,7 @@ body.minimal-focus-mode.show-view-header .view-content {
   text-align: center;
   color: var(--text-faint);
   font-variant-numeric: tabular-nums;
-  font-size: var(--bases-table-text-size);
+  font-size: var(--bases-table-font-size);
 }
 .table-numbers .table-editor {
   --table-numbers-padding-right: 0;

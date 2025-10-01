@@ -3,7 +3,7 @@
 
 .table-small {
 	.bases-view {
-		--bases-table-text-size: 85%;
+		--bases-table-font-size: 85%;
 	}
 	table:not(.calendar) {
 		--table-text-size: 85%;
@@ -11,7 +11,7 @@
 }
 .table-tiny {
 	.bases-view {
-		--bases-table-text-size: 75%;
+		--bases-table-font-size: 75%;
 	}
 	table:not(.calendar) {
 		--table-text-size: 75%;
@@ -138,7 +138,7 @@
 				text-align: center;
 				color: var(--text-faint);
 				font-variant-numeric: tabular-nums;
-				font-size: var(--bases-table-text-size);
+				font-size: var(--bases-table-font-size);
 			}
 		}
 	}
