@@ -20,13 +20,13 @@ With Minimal you can transform [[Dataview]] tables or bullet lists into cards. T
 
 Use `cards` to turn all Dataview tables in your note into cards
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/NZrj4NaJtkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/NZrj4NaJtkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation allow-popups-to-escape-sandbox" allowfullscreen></iframe>
 
 ### Turn bullet lists into cards
 
 Use `list-cards` to turn all bullet lists in your note into cards
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/OjMdROvNmq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/OjMdROvNmq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation allow-popups-to-escape-sandbox" allowfullscreen></iframe>
 
 ## Screenshots
 
