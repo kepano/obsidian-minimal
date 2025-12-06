@@ -19,8 +19,8 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 	font-size: var(--font-adaptive-smallest);
 }
 
-.nav-buttons-container {
-	justify-content:flex-start;
+body:not(.is-mobile) .nav-buttons-container {
+	justify-content: flex-start;
 }
 
 .nav-file-tag {

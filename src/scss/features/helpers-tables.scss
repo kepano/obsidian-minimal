@@ -115,33 +115,7 @@
 			}
 		}
 	}
-	
-	.bases-table {
-		counter-reset:section;
-		.bases-tr > .bases-td:first-child {
-			white-space: nowrap;
-			.bases-table-header-label,
-			.bases-table-header-name {
-				padding-inline-start: 0;
-			}
-			&::before {
-				content: " ";
-				padding-right: var(--table-numbers-padding-right);
-				display: inline-block;
-				min-width: 2em;
-			}
-		}
-		.bases-tbody .bases-tr > .bases-td:first-child {
-			&::before {
-				counter-increment: section;
-				content: counter(section) " ";
-				text-align: center;
-				color: var(--text-faint);
-				font-variant-numeric: tabular-nums;
-				font-size: var(--bases-table-font-size);
-			}
-		}
-	}
+
 	.table-editor {
 		--table-numbers-padding-right: 0;
 	}

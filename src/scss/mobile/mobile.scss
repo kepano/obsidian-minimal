@@ -37,9 +37,7 @@
 	&.theme-light .menu {
 		--interactive-normal: var(--background-modifier-hover);
 	}
-}
 
-.is-mobile {
 	.workspace-drawer.mod-left.is-pinned {
 		width:var(--mobile-left-sidebar-width);
 		min-width:150pt;
@@ -48,4 +46,9 @@
 		width:var(--mobile-right-sidebar-width);
 		min-width:150pt;
 	}
+}
+
+.is-phone {
+	--bases-embed-width: 100%;
+	--bases-embed-transform: none;
 }

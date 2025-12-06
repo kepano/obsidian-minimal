@@ -520,12 +520,14 @@ body .excalidraw {
 .theme-light.minimal-light-white {
   --background-table-rows: var(--bg2);
   --interactive-normal: var(--bg3);
+  --setting-items-background: var(--bg3);
 }
 
 .theme-light.minimal-light-tonal {
   --background-secondary: var(--bg1);
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
+  --setting-items-background: var(--bg3);
 }
 .theme-light.minimal-light-tonal.is-mobile {
   --background-modifier-form-field: var(--bg3);
@@ -536,15 +538,17 @@ body .excalidraw {
   --ribbon-background: var(--bg1);
   --background-secondary: var(--bg1);
   --background-table-rows: var(--bg3);
+  --setting-items-background: var(--bg3);
 }
 
 .theme-dark.minimal-dark-black {
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
+  --setting-items-background: var(--bg3);
   --modal-border: var(--ui2);
   --active-line-bg: rgba(255,255,255,0.085);
   --background-modifier-form-field: var(--bg3);
-  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
+  --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.7);
   --background-modifier-box-shadow: rgba(0, 0, 0, 1);
 }
 
@@ -594,10 +598,6 @@ body {
 /* Fix strange Obsidian ghost textearea bug on right click */
 .CodeMirror-wrap > div > textarea {
   opacity: 0;
-}
-
-.markdown-source-view.mod-cm6 hr {
-  border-width: 2px;
 }
 
 .cm-editor .cm-content {
@@ -1187,32 +1187,6 @@ body:not(.is-mobile).labeled-nav.vault-profile-top .workspace-split.mod-left-spl
 }
 
 /* Components */
-/* Buttons */
-.modal.mod-settings button:not(.mod-cta):not(.mod-warning),
-.modal button:not(.mod-warning),
-.modal.mod-settings button:not(.mod-warning) {
-  white-space: nowrap;
-  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
-}
-
-button.mod-warning {
-  border: 1px solid var(--background-modifier-error);
-  color: var(--text-error);
-  box-shadow: 0 1px 1px 0px var(--btn-shadow-color);
-  transition: background-color 0.2s ease-out;
-}
-
-button.mod-warning:hover {
-  border: 1px solid var(--background-modifier-error);
-  color: var(--text-error);
-  box-shadow: 0 2px 3px 0px var(--btn-shadow-color);
-  transition: background-color 0.2s ease-out;
-}
-
-.is-mobile button.mod-warning {
-  border: none;
-}
-
 .document-search, .document-replace {
   max-width: 100%;
   padding: 0;
@@ -1886,6 +1860,7 @@ body {
   	calc(50% - var(--line-width)/2),
   	calc(50% - var(--max-width)/2) );
   --content-line-width: min(var(--line-width), var(--max-width));
+  --map-header-padding: 2px;
 }
 
 /* Line widths ------------------------------------ */
@@ -2110,6 +2085,7 @@ body {
 }
 .table-100 .bases-view[data-view-type=table] {
   --bases-embed-border-width: 0;
+  --bases-embed-border-radius: 0;
 }
 .table-100 .table-col-btn {
   cursor: default !important;
@@ -2168,6 +2144,10 @@ body {
 .map-100 {
   --container-map-width: 100%;
   --container-map-max-width: 100%;
+  --map-header-padding: var(--size-4-2);
+}
+.map-100 .bases-view[data-view-type=map] {
+  --bases-embed-border-radius: 0;
 }
 
 .chart-wide,
@@ -2309,12 +2289,18 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-dataviewjs canvas, > .block-language-chart) canvas {
   max-width: var(--chart-max-width);
 }
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(.bases-view[data-view-type=map]),
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet),
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(.bases-view[data-view-type=map]),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) {
   width: var(--container-map-width);
   max-width: var(--container-map-max-width);
+  --bases-header-padding-end: var(--map-header-padding);
+  --bases-header-padding-start: var(--map-header-padding);
 }
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(.bases-view[data-view-type=map]) iframe,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet) iframe,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(.bases-view[data-view-type=map]) iframe,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) iframe {
   max-width: var(--map-max-width);
 }
@@ -3470,30 +3456,6 @@ body.minimal-focus-mode.show-view-header .view-content {
   display: inline-block;
   min-width: 10px;
 }
-.table-numbers .bases-table {
-  counter-reset: section;
-}
-.table-numbers .bases-table .bases-tr > .bases-td:first-child {
-  white-space: nowrap;
-}
-.table-numbers .bases-table .bases-tr > .bases-td:first-child .bases-table-header-label,
-.table-numbers .bases-table .bases-tr > .bases-td:first-child .bases-table-header-name {
-  padding-inline-start: 0;
-}
-.table-numbers .bases-table .bases-tr > .bases-td:first-child::before {
-  content: " ";
-  padding-right: var(--table-numbers-padding-right);
-  display: inline-block;
-  min-width: 2em;
-}
-.table-numbers .bases-table .bases-tbody .bases-tr > .bases-td:first-child::before {
-  counter-increment: section;
-  content: counter(section) " ";
-  text-align: center;
-  color: var(--text-faint);
-  font-variant-numeric: tabular-nums;
-  font-size: var(--bases-table-font-size);
-}
 .table-numbers .table-editor {
   --table-numbers-padding-right: 0;
 }
@@ -4378,7 +4340,6 @@ body:not(.full-file-names) .tree-item-inner {
 .is-mobile.theme-light .menu {
   --interactive-normal: var(--background-modifier-hover);
 }
-
 .is-mobile .workspace-drawer.mod-left.is-pinned {
   width: var(--mobile-left-sidebar-width);
   min-width: 150pt;
@@ -4386,6 +4347,11 @@ body:not(.full-file-names) .tree-item-inner {
 .is-mobile .workspace-drawer.mod-right.is-pinned {
   width: var(--mobile-right-sidebar-width);
   min-width: 150pt;
+}
+
+.is-phone {
+  --bases-embed-width: 100%;
+  --bases-embed-transform: none;
 }
 
 /* Core plugins */
@@ -4447,7 +4413,7 @@ body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-
   font-size: var(--font-adaptive-smallest);
 }
 
-.nav-buttons-container {
+body:not(.is-mobile) .nav-buttons-container {
   justify-content: flex-start;
 }
 
@@ -5489,6 +5455,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   border: 0;
   padding: 10px 0 5px;
   margin-bottom: 0;
+  border-radius: 0;
 }
 .setting-item .style-settings-import,
 .setting-item .style-settings-export {

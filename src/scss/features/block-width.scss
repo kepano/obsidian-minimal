@@ -4,6 +4,7 @@ body {
 		calc(50% - var(--line-width)/2),
 		calc(50% - var(--max-width)/2) );
 	--content-line-width: min(var(--line-width), var(--max-width));
+	--map-header-padding: 2px;	
 }
 
 /* Line widths ------------------------------------ */
@@ -230,6 +231,7 @@ body {
 
 	.bases-view[data-view-type="table"] {
 		--bases-embed-border-width: 0;
+		--bases-embed-border-radius: 0;
 	}
 
 	.table-col-btn {
@@ -282,7 +284,12 @@ body {
 	--container-map-width: var(--max-width);}
 .map-100 {
 	--container-map-width: 100%;
-	--container-map-max-width: 100%;}
+	--container-map-max-width: 100%;
+	--map-header-padding: var(--size-4-2);
+	.bases-view[data-view-type="map"] {
+		--bases-embed-border-radius: 0;
+	}
+}
 
 .chart-wide,
 .chart-max,
@@ -397,9 +404,12 @@ body {
 	}
 
 	/* Maps */
+	div:has(.bases-view[data-view-type="map"]),
 	div:has(>.block-language-leaflet) {
 		width: var(--container-map-width);
 		max-width:var(--container-map-max-width);
+		--bases-header-padding-end: var(--map-header-padding);
+		--bases-header-padding-start: var(--map-header-padding);
 
 		iframe {
 			max-width:var(--map-max-width);
