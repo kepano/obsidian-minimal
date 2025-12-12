@@ -53,6 +53,11 @@
 	height:24px;
 	width:24px;
 }
+.style-settings-container {
+	.setting-item {
+		background-color: transparent;
+	}
+}
 .setting-item {
 	.pickr .pcr-button:after,
 	.pickr .pcr-button:before {

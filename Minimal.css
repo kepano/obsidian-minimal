@@ -5482,6 +5482,10 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   width: 24px;
 }
 
+.style-settings-container .setting-item {
+  background-color: transparent;
+}
+
 .setting-item .pickr .pcr-button:after,
 .setting-item .pickr .pcr-button:before {
   border-radius: 40px;
