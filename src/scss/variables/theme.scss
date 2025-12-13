@@ -69,7 +69,6 @@
 	--prompt-border-color:               var(--ui3);
 	--quote-opening-modifier:            var(--ui2);
 
-	--raised-background:                 var(--ui1);
 	--ribbon-background:                 var(--bg2);
 
 	--scrollbar-active-thumb-bg:         var(--ui3);
@@ -108,6 +107,12 @@
 	--vault-profile-color-hover:         var(--tx1);
 
 	--workspace-background-translucent:  hsla(var(--base-h),var(--base-s), var(--base-l), 0.7);
+}
+
+.theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left {
+	--raised-background:                 var(--ui1);
+	--raised-shadow: none;
+	--raised-mask-border-width: 0px;
 }
 
 .theme-dark,
