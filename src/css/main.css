@@ -4347,6 +4347,9 @@ body:not(.full-file-names) .tree-item-inner {
 .is-mobile.theme-light .menu {
   --interactive-normal: var(--background-modifier-hover);
 }
+.is-mobile.theme-light.minimal-light-tonal .workspace-drawer-tab-options {
+  --interactive-normal: rgb(from color-mix(in srgb, var(--bg2), var(--bg3))r g b / 1);
+}
 .is-mobile .workspace-drawer.mod-left.is-pinned {
   width: var(--mobile-left-sidebar-width);
   min-width: 150pt;
