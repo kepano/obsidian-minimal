@@ -13,6 +13,9 @@
 			width: 100%;
 		}
 	}
+	.image-embed:not([width]) .image-wrapper {
+		width: 100%;
+	}
 }
 
 .markdown-source-view,
@@ -21,4 +24,8 @@
 	img:not(.emoji) {
 		border-radius: var(--image-radius);
 	}
+}
+
+body:not(.is-mobile) div.image-embed:focus-within .image-wrapper::after {
+	border-radius: var(--image-radius);
 }

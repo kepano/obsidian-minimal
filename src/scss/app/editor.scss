@@ -90,13 +90,11 @@ body {
 
 /* Code execution blocks, e.g. Dataview */
 .markdown-source-view.mod-cm6 .edit-block-button {
-	cursor:var(--cursor);
 	color:var(--text-faint);
 	background-color:var(--background-primary);
-	top:0;
+	top:4px;
 	opacity:0;
 	transition:opacity 200ms;
-	padding:4px 4px 4px 9px;
 	svg {
 		margin:0 !important;
 	}
