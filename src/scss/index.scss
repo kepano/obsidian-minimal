@@ -61,7 +61,6 @@
 @use 'features/labeled-nav';
 @use 'features/link-underline';
 @use 'features/sidebar-background';
-@use 'features/sidebar-notes';
 @use 'features/tab-styles';
 @use 'features/trim-file-names';
 @use 'features/underline-headings';
@@ -87,7 +86,6 @@
 @use 'plugins/hider';
 @use 'plugins/kanban';
 @use 'plugins/lapel';
-@use 'plugins/leaflet';
 @use 'plugins/outliner';
 @use 'plugins/sortable';
 @use 'plugins/style-settings';

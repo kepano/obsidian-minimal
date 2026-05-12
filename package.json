@@ -1,12 +1,12 @@
 {
-    "name": "minimal",
-    "version": "1.0.0",
-    "scripts": {
-        "build": "node build.js",
-        "dev": "node build.js --watch"
-    },
-    "dependencies": {
-        "chokidar": "^3.6.0",
-        "sass": "^1.83.0"
-    }
+	"name": "minimal",
+	"version": "8.2.0",
+	"scripts": {
+		"build": "node build.js",
+		"dev": "node build.js --watch"
+	},
+	"dependencies": {
+		"chokidar": "^3.6.0",
+		"sass": "^1.83.0"
+	}
 }

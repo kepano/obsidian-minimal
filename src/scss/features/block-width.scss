@@ -401,7 +401,7 @@ body {
 	}
 
 	// Maps
-	div:has(.bases-view[data-view-type="map"], > .block-language-leaflet) {
+	div:has(.bases-view[data-view-type="map"]) {
 		width: var(--container-map-width);
 		max-width:var(--container-map-max-width);
 		--bases-header-padding-end: var(--map-header-padding);

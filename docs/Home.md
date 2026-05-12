@@ -103,7 +103,6 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 - Git
 - [[Hider]]
 - Kanban
-- [[Leaflet]]
 - [[Obsidian Publish]]
 - Outliner
 - [[QuickAdd]]

@@ -114,7 +114,6 @@ Most plugins work well with Minimal, but the following plugins have received spe
 - [Git](https://github.com/denolehov/obsidian-git)
 - [Hider](https://github.com/kepano/obsidian-hider)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
-- [Leaflet](https://github.com/valentine195/obsidian-leaflet-plugin) for maps
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 - [QuickAdd](https://github.com/chhoumann/quickadd)
 
