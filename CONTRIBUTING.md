@@ -14,11 +14,11 @@ Before opening an issue, please search [existing issues](https://github.com/kepa
 ## Submitting pull requests
 
 1. Fork the repo and create a branch from `master`.
-2. Make your changes in `src/scss` — never edit `obsidian.css` or `Minimal.css` directly, as these are generated.
+2. Make your changes in `src/scss`. Never edit `obsidian.css` or `Minimal.css` directly, as these are generated.
 3. Build locally and test in Obsidian (see [build instructions](README.md#build-instructions)).
 4. Open a pull request with a short description of what changed and why.
 
-Keep PRs focused — one fix or feature per PR makes review easier.
+Keep PRs focused. One fix or feature per PR makes review easier.
 
 ## Adding plugin support
 
@@ -26,7 +26,7 @@ Plugin styles live in [`src/scss/plugins`](src/scss/plugins). Use existing files
 
 ## Improving the documentation
 
-The documentation site at [minimal.guide](https://minimal.guide) is also open to contributions. If you spot something out of date, missing, or unclear, edits and additions are welcome.
+The documentation site at [minimal.guide](https://minimal.guide) is published from the [`docs`](docs) folder in this repo. If you spot something out of date, missing, or unclear, edits and additions are welcome. Just open a PR against the relevant files in `docs`.
 
 ## Questions
 

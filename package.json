@@ -1,17 +1,12 @@
 {
     "name": "minimal",
     "version": "1.0.0",
-    "dependencies": {
-        "dotenv": "^10.0.0",
-        "sass": "^1.83.0"
+    "scripts": {
+        "build": "node build.js",
+        "dev": "node build.js --watch"
     },
-    "devDependencies": {
-        "grunt": "^1.5.3",
-        "grunt-concat-css": "~0.3.2",
-        "grunt-contrib-copy": "~1.0.0",
-        "grunt-contrib-cssmin": "^4.0.0",
-        "grunt-contrib-sass": "~2.0.0",
-        "grunt-contrib-watch": "~1.1.0",
-        "grunt-env": "~1.0.1"
+    "dependencies": {
+        "chokidar": "^3.6.0",
+        "sass": "^1.83.0"
     }
 }
