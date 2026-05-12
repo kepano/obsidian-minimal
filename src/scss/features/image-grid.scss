@@ -48,12 +48,7 @@ body {
         display:none;
       }
     }
-    div:has(>.image-embed ~ .image-embed),
-    p:has(>.image-embed ~ .image-embed),
-    div:has(>img ~ img),
-    p:has(>.image-embed ~ img),
-    p:has(>img ~ .image-embed),
-    p:has(>img ~ img) {
+    :is(div, p):has(> :is(.image-embed, img) ~ :is(.image-embed, img)) {
       display: grid;
       margin-block-start: var(--img-grid-gap);
       margin-block-end: var(--img-grid-gap);

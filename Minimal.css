@@ -2257,15 +2257,11 @@ body {
   width: var(--table-wrapper-width);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .bases-embed,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.block-language-base),
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.bases-embed),
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > :has(> .block-language-dataview table),
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > :has(> .block-language-dataviewjs table),
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(:is(.block-language-base, .bases-embed)),
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > :has(> :is(.block-language-dataview, .block-language-dataviewjs) table),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .bases-embed,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.block-language-base),
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.bases-embed),
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > :has(> .block-language-dataview table),
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > :has(> .block-language-dataviewjs table) {
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(:is(.block-language-base, .bases-embed)),
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > :has(> :is(.block-language-dataview, .block-language-dataviewjs) table) {
   width: var(--container-dataview-table-width);
   max-width: var(--container-table-max-width);
 }
@@ -2322,32 +2318,24 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-dataviewjs canvas, > .block-language-chart) canvas {
   max-width: var(--chart-max-width);
 }
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(.bases-view[data-view-type=map]),
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet),
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(.bases-view[data-view-type=map]),
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(.bases-view[data-view-type=map], > .block-language-leaflet),
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(.bases-view[data-view-type=map], > .block-language-leaflet) {
   width: var(--container-map-width);
   max-width: var(--container-map-max-width);
   --bases-header-padding-end: var(--map-header-padding);
   --bases-header-padding-start: var(--map-header-padding);
 }
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(.bases-view[data-view-type=map]) iframe,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet) iframe,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(.bases-view[data-view-type=map]) iframe,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) iframe {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(.bases-view[data-view-type=map], > .block-language-leaflet) iframe,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(.bases-view[data-view-type=map], > .block-language-leaflet) iframe {
   max-width: var(--map-max-width);
 }
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe),
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed),
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> iframe),
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .cm-html-embed) {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> :is(iframe, .cm-html-embed)),
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> :is(iframe, .cm-html-embed)) {
   width: var(--container-iframe-width);
   max-width: var(--container-iframe-max-width);
 }
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe) iframe,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed) iframe,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> iframe) iframe,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .cm-html-embed) iframe {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> :is(iframe, .cm-html-embed)) iframe,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(> :is(iframe, .cm-html-embed)) iframe {
   max-width: var(--iframe-max-width);
 }
 
@@ -3653,12 +3641,7 @@ body {
 .img-grid .markdown-preview-section > div:has(img) .image-embed ~ br {
   display: none;
 }
-.img-grid .markdown-preview-section div:has(> .image-embed ~ .image-embed),
-.img-grid .markdown-preview-section p:has(> .image-embed ~ .image-embed),
-.img-grid .markdown-preview-section div:has(> img ~ img),
-.img-grid .markdown-preview-section p:has(> .image-embed ~ img),
-.img-grid .markdown-preview-section p:has(> img ~ .image-embed),
-.img-grid .markdown-preview-section p:has(> img ~ img) {
+.img-grid .markdown-preview-section :is(div, p):has(> :is(.image-embed, img) ~ :is(.image-embed, img)) {
   display: grid;
   margin-block-start: var(--img-grid-gap);
   margin-block-end: var(--img-grid-gap);
@@ -3666,21 +3649,11 @@ body {
   grid-row-gap: 0;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
-.img-grid .markdown-preview-section div:has(> .image-embed ~ .image-embed) > img,
-.img-grid .markdown-preview-section p:has(> .image-embed ~ .image-embed) > img,
-.img-grid .markdown-preview-section div:has(> img ~ img) > img,
-.img-grid .markdown-preview-section p:has(> .image-embed ~ img) > img,
-.img-grid .markdown-preview-section p:has(> img ~ .image-embed) > img,
-.img-grid .markdown-preview-section p:has(> img ~ img) > img {
+.img-grid .markdown-preview-section :is(div, p):has(> :is(.image-embed, img) ~ :is(.image-embed, img)) > img {
   object-fit: var(--image-grid-fit);
   align-self: stretch;
 }
-.img-grid .markdown-preview-section div:has(> .image-embed ~ .image-embed) > .internal-embed img,
-.img-grid .markdown-preview-section p:has(> .image-embed ~ .image-embed) > .internal-embed img,
-.img-grid .markdown-preview-section div:has(> img ~ img) > .internal-embed img,
-.img-grid .markdown-preview-section p:has(> .image-embed ~ img) > .internal-embed img,
-.img-grid .markdown-preview-section p:has(> img ~ .image-embed) > .internal-embed img,
-.img-grid .markdown-preview-section p:has(> img ~ img) > .internal-embed img {
+.img-grid .markdown-preview-section :is(div, p):has(> :is(.image-embed, img) ~ :is(.image-embed, img)) > .internal-embed img {
   object-fit: var(--image-grid-fit);
   align-self: center;
 }
