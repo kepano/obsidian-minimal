@@ -57,7 +57,7 @@ table.dataview {
 		display: flex;
 		flex-direction: column;
 		margin: 0;
-		padding: 0 0 calc(var(--cards-padding)/3) 0;
+		padding: 0 0 calc(var(--cards-padding)/3);
 		border-radius: 6px;
 		overflow: hidden;
 		transition: box-shadow 0.15s linear;
@@ -213,7 +213,7 @@ table.dataview {
 		padding: 6px;
 		border-radius: var(--radius-m);
 		flex-direction: column;
-		margin: 24px 0 0 0;
+		margin: 24px 0 0;
 		width: 100%;
 	}
 	thead:hover > tr {

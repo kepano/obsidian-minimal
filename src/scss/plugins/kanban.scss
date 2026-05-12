@@ -183,7 +183,7 @@ body {
 			border-top-right-radius: 8px;
 			border-top: 1px solid var(--background-modifier-border);
 			border-bottom-width: 0;
-			padding: 4px 4px 0px 4px;
+			padding: 4px 4px 0;
 		}
 		&.will-prepend {
 			.kanban-plugin__lane-items {
@@ -213,7 +213,7 @@ body {
 				border-radius: 0 0 8px 8px;
 			}
 			.kanban-plugin__item-button-wrapper {
-				padding: 0 4px 4px 4px;
+				padding: 0 4px 4px;
 				border-bottom-width: 1px;
 			}
 			.kanban-plugin__lane-items {

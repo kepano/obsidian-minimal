@@ -38,6 +38,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 */
+
 @charset "UTF-8";
 /* Variables */
 body {
@@ -1482,7 +1483,7 @@ body:not(.minimal-strike-lists) {
 
 @media print {
   .print {
-    --code-background: #eee !important;
+    --code-background: #eeeeee !important;
   }
 }
 /* Transcluded notes and embeds */
@@ -2124,9 +2125,6 @@ body {
   --table-drag-padding: var(--table-drag-space) 0;
   --table-wrapper-width: min(fit-content, 100%);
   --bases-cards-embed-padding: 0 12px;
-  --bases-header-padding-end: var(--size-4-2);
-  --bases-header-padding-start: var(--size-4-2);
-  /* Place drag handles inside the cell when width is 100% */
 }
 .table-100 .bases-view[data-view-type=table] {
   --bases-embed-border-width: 0;
@@ -2137,6 +2135,11 @@ body {
   margin-top: 8px;
   height: var(--table-header-size);
   inset-inline-start: calc(100% - var(--table-drag-handle-size) - 4px) !important;
+}
+.table-100 {
+  --bases-header-padding-end: var(--size-4-2);
+  --bases-header-padding-start: var(--size-4-2);
+  /* Place drag handles inside the cell when width is 100% */
 }
 .table-100 .markdown-source-view.mod-cm6, .table-100.markdown-source-view.mod-cm6 {
   --table-drag-handle-background-active: transparent;
@@ -2244,11 +2247,6 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   /* Tables */
-  /* Images */
-  /* External images */
-  /* Charts */
-  /* Maps */
-  /* Iframes */
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(table),
@@ -2302,6 +2300,10 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .dataview.dataview-error-box {
   margin-inline: var(--table-margin);
 }
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  /* Images */
+}
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {
   padding-top: 0.25rem;
@@ -2320,10 +2322,18 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) img {
   max-width: var(--img-max-width);
 }
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  /* External images */
+}
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > img,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > img {
   max-width: var(--img-line-width);
   margin-inline-start: var(--img-margin-start) !important;
+}
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  /* Charts */
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-dataviewjs canvas, > .block-language-chart),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-dataviewjs canvas, > .block-language-chart) {
@@ -2333,6 +2343,10 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-dataviewjs canvas, > .block-language-chart) canvas,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-dataviewjs canvas, > .block-language-chart) canvas {
   max-width: var(--chart-max-width);
+}
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  /* Maps */
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(.bases-view[data-view-type=map]),
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet),
@@ -2348,6 +2362,10 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(.bases-view[data-view-type=map]) iframe,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) iframe {
   max-width: var(--map-max-width);
+}
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  /* Iframes */
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe),
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed),
@@ -2428,7 +2446,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0 0 calc(var(--cards-padding) / 3) 0;
+  padding: 0 0 calc(var(--cards-padding) / 3);
   border-radius: 6px;
   overflow: hidden;
   transition: box-shadow 0.15s linear;
@@ -2440,12 +2458,6 @@ body {
   border: var(--cards-border-width) solid var(--background-modifier-border-hover);
   box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
   transition: box-shadow 0.15s linear;
-}
-.cards table.dataview tbody > tr > td {
-  /* Paragraphs */
-  /* Links */
-  /* Buttons */
-  /* Lists */
 }
 .cards table.dataview tbody > tr > td:first-child {
   font-weight: var(--bold-weight);
@@ -2461,6 +2473,9 @@ body {
   font-size: calc(var(--table-text-size) * 0.9);
   color: var(--text-muted);
 }
+.cards table.dataview tbody > tr > td {
+  /* Paragraphs */
+}
 .cards table.dataview tbody > tr > td > * {
   padding: calc(var(--cards-padding) / 3) 0;
 }
@@ -2470,8 +2485,14 @@ body {
   width: calc(100% - var(--cards-padding));
   margin: 0 calc(var(--cards-padding) / 2);
 }
+.cards table.dataview tbody > tr > td {
+  /* Links */
+}
 .cards table.dataview tbody > tr > td a {
   text-decoration: none;
+}
+.cards table.dataview tbody > tr > td {
+  /* Buttons */
 }
 .cards table.dataview tbody > tr > td > button {
   width: 100%;
@@ -2479,6 +2500,9 @@ body {
 }
 .cards table.dataview tbody > tr > td:last-child > button {
   margin-bottom: calc(var(--cards-padding) / 6);
+}
+.cards table.dataview tbody > tr > td {
+  /* Lists */
 }
 .cards table.dataview tbody > tr > td > ul {
   width: 100%;
@@ -2572,7 +2596,7 @@ body {
   padding: 6px;
   border-radius: var(--radius-m);
   flex-direction: column;
-  margin: 24px 0 0 0;
+  margin: 24px 0 0;
   width: 100%;
 }
 .cards table.dataview thead:hover > tr {
@@ -3221,13 +3245,11 @@ body.colorful-headings .modal {
   --focus-animation-duration: 0.1s;
 }
 
-.minimal-focus-mode {
-  /* Hide ribbon */
-  /* Hide right sidebar button */
-  /* Hide status bar */
-}
 .minimal-focus-mode.is-translucent .workspace-ribbon.mod-left.is-collapsed, .minimal-focus-mode.is-translucent .workspace-ribbon.mod-left.is-collapsed:before {
   background-color: var(--background-primary) !important;
+}
+.minimal-focus-mode {
+  /* Hide ribbon */
 }
 .minimal-focus-mode .workspace-ribbon.mod-left {
   transition: background-color 0s linear 0s;
@@ -3253,9 +3275,15 @@ body.colorful-headings .modal {
 .minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
   border-right: none;
 }
+.minimal-focus-mode {
+  /* Hide right sidebar button */
+}
 .minimal-focus-mode .mod-root .sidebar-toggle-button.mod-right {
   opacity: 0;
   transition: opacity var(--focus-animation-duration) ease-in-out 0.5s;
+}
+.minimal-focus-mode {
+  /* Hide status bar */
 }
 .minimal-focus-mode:not(.minimal-status-off) .status-bar {
   opacity: 0;
@@ -3742,14 +3770,16 @@ https://github.com/sponsors/kepano
 
 .labeled-nav {
   --labeled-nav-top-margin: var(--header-height);
-  /* refactor this using a new variable for border above labeled nav 
-  in different conditions e.g. OSes and colorful frame */
 }
 .labeled-nav.is-translucent .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
   background-color: transparent;
 }
 .labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
   padding-left: 0;
+}
+.labeled-nav {
+  /* refactor this using a new variable for border above labeled nav 
+  in different conditions e.g. OSes and colorful frame */
 }
 .labeled-nav.mod-macos .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
   -webkit-app-region: drag;
@@ -4203,7 +4233,7 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
   flex-grow: 1;
   border: 1px solid var(--tab-outline-color);
   padding: 3px;
-  margin: 6px 8px 6px;
+  margin: 6px 8px;
   border-radius: 4px;
 }
 .sidebar-tabs-wide:not(.labeled-nav) .mod-left-split .workspace-tab-header, .sidebar-tabs-wide.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header,
@@ -4427,11 +4457,10 @@ input.prompt-input:focus-visible {
 
 .is-mobile {
   /* Mobile publish */
-  /* Phone */
 }
 .is-mobile .mod-publish .modal-content {
   display: unset;
-  padding: 10px 10px 10px;
+  padding: 10px;
   margin-bottom: 120px;
   overflow-x: hidden;
 }
@@ -4453,6 +4482,9 @@ input.prompt-input:focus-visible {
 .is-mobile .modal.mod-publish .modal-content .publish-sections-container {
   margin-right: 0;
   padding-right: 0;
+}
+.is-mobile {
+  /* Phone */
 }
 @media (max-width: 400pt) {
   .is-mobile .publish-section-header,
@@ -4512,7 +4544,7 @@ input.prompt-input:focus-visible {
 /* Community plugins */
 /* Calendar plugin */
 .workspace-leaf-content[data-type=calendar] .view-content {
-  padding: 5px 0 0 0;
+  padding: 5px 0 0;
 }
 
 .mod-root #calendar-container {
@@ -4580,7 +4612,7 @@ body {
   padding-left: 0 !important;
 }
 #calendar-container tr td {
-  padding: 2px 0 0 0;
+  padding: 2px 0 0;
   border-radius: var(--radius-m);
   cursor: var(--cursor);
   border: 1px solid transparent;
@@ -5144,7 +5176,7 @@ body .kanban-plugin__lane .kanban-plugin__item-button-wrapper {
   border-top-right-radius: 8px;
   border-top: 1px solid var(--background-modifier-border);
   border-bottom-width: 0;
-  padding: 4px 4px 0px 4px;
+  padding: 4px 4px 0;
 }
 body .kanban-plugin__lane.will-prepend .kanban-plugin__lane-items {
   border-radius: 8px;
@@ -5169,7 +5201,7 @@ body .kanban-plugin__lane:not(.will-prepend) .kanban-plugin__item-button-wrapper
   border-radius: 0 0 8px 8px;
 }
 body .kanban-plugin__lane:not(.will-prepend) .kanban-plugin__item-button-wrapper {
-  padding: 0 4px 4px 4px;
+  padding: 0 4px 4px;
   border-bottom-width: 1px;
 }
 body .kanban-plugin__lane:not(.will-prepend) .kanban-plugin__lane-items {
@@ -5609,7 +5641,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   --tx3:#5d6370;
   --hl1:rgba(114,123,141,0.3);
   --hl2:rgba(209,154,102,0.3);
-  --sp1:#fff;
+  --sp1:#ffffff;
 }
 
 .theme-dark.minimal-atom-dark.minimal-dark-black {
@@ -5670,7 +5702,7 @@ https://github.com/ayu-theme/ayu-colors
   --accent-h:36;
   --accent-s:100%;
   --accent-l:50%;
-  --bg1:#fff;
+  --bg1:#ffffff;
   --bg2:#f8f9fa;
   --bg3:rgba(209,218,224,0.5);
   --ui1:#E6EAED;
@@ -6019,7 +6051,7 @@ https://github.com/dracula/dracula-theme
 }
 .theme-light.minimal-eink-light .is-flashing,
 .theme-dark.minimal-eink-dark .is-flashing {
-  --text-highlight-bg: #999 ;
+  --text-highlight-bg: #999999 ;
 }
 .theme-light.minimal-eink-light #calendar-container .day:hover,
 .theme-dark.minimal-eink-dark #calendar-container .day:hover {
@@ -6033,20 +6065,20 @@ https://github.com/dracula/dracula-theme
   --accent-h:0;
   --accent-s:0%;
   --accent-l:0%;
-  --ax3:#000;
-  --bg1:#fff;
-  --bg2:#fff;
-  --bg3:#000;
-  --ui1:#000;
-  --ui2:#000;
-  --ui3:#000;
-  --tx1:#000;
-  --tx2:#000;
-  --tx3:#000;
-  --hl1:#000;
-  --hl2:#000;
-  --sp1:#fff;
-  --text-on-accent:#fff;
+  --ax3:#000000;
+  --bg1:#ffffff;
+  --bg2:#ffffff;
+  --bg3:#000000;
+  --ui1:#000000;
+  --ui2:#000000;
+  --ui3:#000000;
+  --tx1:#000000;
+  --tx2:#000000;
+  --tx3:#000000;
+  --hl1:#000000;
+  --hl2:#000000;
+  --sp1:#ffffff;
+  --text-on-accent:#ffffff;
   --background-modifier-cover: rgba(235,235,235,1);
 }
 
@@ -6063,19 +6095,19 @@ https://github.com/dracula/dracula-theme
   --accent-h:0;
   --accent-s:0%;
   --accent-l:100%;
-  --ax3:#fff;
-  --bg1:#000;
-  --bg2:#000;
-  --bg3:#fff;
-  --ui1:#fff;
-  --ui2:#fff;
-  --ui3:#fff;
-  --tx1:#fff;
-  --tx2:#fff;
-  --tx3:#fff;
-  --hl1:#fff;
-  --hl2:#fff;
-  --sp1:#000;
+  --ax3:#ffffff;
+  --bg1:#000000;
+  --bg2:#000000;
+  --bg3:#ffffff;
+  --ui1:#ffffff;
+  --ui2:#ffffff;
+  --ui3:#ffffff;
+  --tx1:#ffffff;
+  --tx2:#ffffff;
+  --tx3:#ffffff;
+  --hl1:#ffffff;
+  --hl2:#ffffff;
+  --sp1:#000000;
   --background-modifier-cover: rgba(20,20,20,1);
   --vault-profile-color: var(--tx1);
   --vault-profile-color-hover: var(--bg1);
@@ -6084,15 +6116,15 @@ https://github.com/dracula/dracula-theme
 }
 
 .theme-light.minimal-eink-light.minimal-light-tonal {
-  --bg3:#bbb;
-  --ui1:#bbb;
-  --tx3:#999;
+  --bg3:#bbbbbb;
+  --ui1:#bbbbbb;
+  --tx3:#999999;
 }
 
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
-  --bg3:#444;
-  --ui1:#444;
-  --tx3:#999;
+  --bg3:#444444;
+  --ui1:#444444;
+  --tx3:#999999;
 }
 
 .theme-light.minimal-eink-light.minimal-light-tonal,
@@ -6437,7 +6469,7 @@ https://github.com/morhetz/gruvbox
   --accent-h:212;
   --accent-s:100%;
   --accent-l:50%;
-  --bg1:#fff;
+  --bg1:#ffffff;
   --bg2:#f0f0f0;
   --bg3:rgba(0,0,0,.1);
   --ui1:#e7e7e7;
@@ -6468,8 +6500,8 @@ https://github.com/morhetz/gruvbox
   --bg1:#1e1e1e;
   --bg2:#282828;
   --bg3:rgba(255,255,255,0.11);
-  --divider-color:#000;
-  --tab-outline-color:#000;
+  --divider-color:#000000;
+  --tab-outline-color:#000000;
   --ui1:#373737;
   --ui2:#515151;
   --ui3:#595959;
@@ -6477,7 +6509,7 @@ https://github.com/morhetz/gruvbox
   --tx2:#8c8c8c;
   --tx3:#686868;
   --hl1:rgba(98,169,252,0.5);
-  --sp1:#fff;
+  --sp1:#ffffff;
 }
 
 .theme-dark.minimal-macos-dark.minimal-dark-black {
@@ -6518,7 +6550,7 @@ https://github.com/nordtheme/nord
   --accent-h:213;
   --accent-s:32%;
   --accent-l:52%;
-  --bg1:#fff;
+  --bg1:#ffffff;
   --bg2:#eceff4;
   --bg3:rgba(157,174,206,0.25);
   --ui1:#d8dee9;
@@ -6863,7 +6895,7 @@ https://ethanschoonover.com/solarized/
   --tx2:#CBCCCD;
   --tx3:#6c6e70;
   --hl1:rgba(40,119,236,0.35);
-  --sp1:#fff;
+  --sp1:#ffffff;
 }
 
 .theme-dark.minimal-things-dark.minimal-dark-black {
@@ -6872,8 +6904,6 @@ https://ethanschoonover.com/solarized/
   --divider-color:#24262a;
   --tab-outline-color:#24262a;
 }
-
-/*# sourceMappingURL=main.css.map */
 /* Plugin compatibility */
 
 /* @plugins
@@ -6918,6 +6948,7 @@ community:
 - sliding-panes-obsidian
 - todoist-sync-plugin
 */
+
 /* @settings
 
 name: Minimal

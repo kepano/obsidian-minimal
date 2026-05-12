@@ -112,7 +112,7 @@
 	}
 
 	.is-flashing {
-		--text-highlight-bg: #999
+		--text-highlight-bg: #999999
 	}
 
 	#calendar-container .day:hover {
@@ -129,26 +129,26 @@
 	--accent-s:0%;
 	--accent-l:0%;
 
-	--ax3:#000;
+	--ax3:#000000;
 
-	--bg1:#fff;
-	--bg2:#fff;
-	--bg3:#000;
+	--bg1:#ffffff;
+	--bg2:#ffffff;
+	--bg3:#000000;
 
-	--ui1:#000;
-	--ui2:#000;
-	--ui3:#000;
+	--ui1:#000000;
+	--ui2:#000000;
+	--ui3:#000000;
 
-	--tx1:#000;
-	--tx2:#000;
-	--tx3:#000;
+	--tx1:#000000;
+	--tx2:#000000;
+	--tx3:#000000;
 
-	--hl1:#000;
-	--hl2:#000;
+	--hl1:#000000;
+	--hl2:#000000;
 
-	--sp1:#fff;
+	--sp1:#ffffff;
 
-	--text-on-accent:#fff;
+	--text-on-accent:#ffffff;
 
 	--background-modifier-cover: rgba(235,235,235,1);
 }
@@ -168,24 +168,24 @@
 	--accent-s:0%;
 	--accent-l:100%;
 
-	--ax3:#fff;
+	--ax3:#ffffff;
 
-	--bg1:#000;
-	--bg2:#000;
-	--bg3:#fff;
+	--bg1:#000000;
+	--bg2:#000000;
+	--bg3:#ffffff;
 
-	--ui1:#fff;
-	--ui2:#fff;
-	--ui3:#fff;
+	--ui1:#ffffff;
+	--ui2:#ffffff;
+	--ui3:#ffffff;
 
-	--tx1:#fff;
-	--tx2:#fff;
-	--tx3:#fff;
+	--tx1:#ffffff;
+	--tx2:#ffffff;
+	--tx3:#ffffff;
 
-	--hl1:#fff;
-	--hl2:#fff;
+	--hl1:#ffffff;
+	--hl2:#ffffff;
 
-	--sp1:#000;
+	--sp1:#000000;
 
 	--background-modifier-cover: rgba(20,20,20,1);
 
@@ -195,14 +195,14 @@
 	--nav-item-color-active: var(--bg1);
 }
 .theme-light.minimal-eink-light.minimal-light-tonal {
-	--bg3:#bbb;
-	--ui1:#bbb;
-	--tx3:#999;
+	--bg3:#bbbbbb;
+	--ui1:#bbbbbb;
+	--tx3:#999999;
 }
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
-	--bg3:#444;
-	--ui1:#444;
-	--tx3:#999;
+	--bg3:#444444;
+	--ui1:#444444;
+	--tx3:#999999;
 }
 .theme-light.minimal-eink-light.minimal-light-tonal,
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
