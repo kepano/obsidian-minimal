@@ -158,7 +158,6 @@ body {
 	}
 	.kanban-plugin.something-is-dragging {
 		cursor:grabbing;
-		cursor:-webkit-grabbing;
 	}
 	.kanban-plugin__item.is-dragging {
 		box-shadow:0 5px 30px rgba(0,0,0,0.15),

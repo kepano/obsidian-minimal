@@ -23,29 +23,7 @@ https://github.com/rose-pine/rose-pine-theme
 	--color-blue: #56949f;
 	--color-purple: #907aa9;
 	--color-pink: #907aa9;
-}
 
-.theme-dark.minimal-rose-pine-dark {
-	--color-red-rgb: 234,111,146;
-	--color-orange-rgb: 233,155,151;
-	--color-yellow-rgb: 246,193,119;
-	--color-green-rgb: 47,116,143;
-	--color-cyan-rgb: 157,207,215;
-	--color-blue-rgb: 157,207,215;
-	--color-purple-rgb: 196,167,231;
-	--color-pink-rgb: 196,167,231;
-
-	--color-red: #eb6f92;
-	--color-orange: #ea9a97;
-	--color-yellow: #f6c177;
-	--color-green: #31748f;
-	--color-cyan: #9ccfd8;
-	--color-blue: #9ccfd8;
-	--color-purple: #c4a7e7;
-	--color-pink: #c4a7e7;
-}
-
-.theme-light.minimal-rose-pine-light {
 	--base-h: 32;
 	--base-s: 57%;
 	--base-l: 95%;
@@ -68,6 +46,27 @@ https://github.com/rose-pine/rose-pine-theme
 
 	--hl1: rgba(191,180,181,0.35);
 }
+
+.theme-dark.minimal-rose-pine-dark {
+	--color-red-rgb: 234,111,146;
+	--color-orange-rgb: 233,155,151;
+	--color-yellow-rgb: 246,193,119;
+	--color-green-rgb: 47,116,143;
+	--color-cyan-rgb: 157,207,215;
+	--color-blue-rgb: 157,207,215;
+	--color-purple-rgb: 196,167,231;
+	--color-pink-rgb: 196,167,231;
+
+	--color-red: #eb6f92;
+	--color-orange: #ea9a97;
+	--color-yellow: #f6c177;
+	--color-green: #31748f;
+	--color-cyan: #9ccfd8;
+	--color-blue: #9ccfd8;
+	--color-purple: #c4a7e7;
+	--color-pink: #c4a7e7;
+}
+
 .theme-light.minimal-rose-pine-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-rose-pine-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-rose-pine-light.minimal-light-contrast .workspace-drawer.mod-left,

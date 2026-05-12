@@ -745,9 +745,6 @@ body {
   opacity: 0;
   transition: opacity 200ms;
 }
-.markdown-source-view.mod-cm6 .edit-block-button svg {
-  margin: 0 !important;
-}
 
 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block > .edit-block-button {
   width: 30px !important;
@@ -766,6 +763,7 @@ body {
 }
 
 .markdown-source-view.mod-cm6 .edit-block-button svg {
+  margin: 0 !important;
   opacity: 1;
 }
 
@@ -930,7 +928,6 @@ body.ribbon-vertical-expand:not(.is-mobile) .workspace-ribbon.mod-left:hover ~ .
   border-top-right-radius: var(--radius-m);
   padding: 0;
   position: absolute;
-  border-right: 0px;
   margin: 0;
   width: auto;
   height: 44px;
@@ -2125,6 +2122,8 @@ body {
   --table-drag-padding: var(--table-drag-space) 0;
   --table-wrapper-width: min(fit-content, 100%);
   --bases-cards-embed-padding: 0 12px;
+  --bases-header-padding-end: var(--size-4-2);
+  --bases-header-padding-start: var(--size-4-2);
 }
 .table-100 .bases-view[data-view-type=table] {
   --bases-embed-border-width: 0;
@@ -2135,11 +2134,6 @@ body {
   margin-top: 8px;
   height: var(--table-header-size);
   inset-inline-start: calc(100% - var(--table-drag-handle-size) - 4px) !important;
-}
-.table-100 {
-  --bases-header-padding-end: var(--size-4-2);
-  --bases-header-padding-start: var(--size-4-2);
-  /* Place drag handles inside the cell when width is 100% */
 }
 .table-100 .markdown-source-view.mod-cm6, .table-100.markdown-source-view.mod-cm6 {
   --table-drag-handle-background-active: transparent;
@@ -2244,10 +2238,6 @@ body {
    Obsidian installer 1.1.9 or above. However it means the
    code no longer requires Contextual Typography plugin.
 */
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  /* Tables */
-}
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(table),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .cm-table-widget,
@@ -2300,10 +2290,6 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .dataview.dataview-error-box {
   margin-inline: var(--table-margin);
 }
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  /* Images */
-}
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {
   padding-top: 0.25rem;
@@ -2322,18 +2308,10 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) img {
   max-width: var(--img-max-width);
 }
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  /* External images */
-}
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > img,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > img {
   max-width: var(--img-line-width);
   margin-inline-start: var(--img-margin-start) !important;
-}
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  /* Charts */
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-dataviewjs canvas, > .block-language-chart),
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-dataviewjs canvas, > .block-language-chart) {
@@ -2343,10 +2321,6 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-dataviewjs canvas, > .block-language-chart) canvas,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-dataviewjs canvas, > .block-language-chart) canvas {
   max-width: var(--chart-max-width);
-}
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  /* Maps */
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(.bases-view[data-view-type=map]),
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .block-language-leaflet),
@@ -2362,10 +2336,6 @@ body {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(.bases-view[data-view-type=map]) iframe,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer div:has(> .block-language-leaflet) iframe {
   max-width: var(--map-max-width);
-}
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  /* Iframes */
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(> iframe),
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content div:has(> .cm-html-embed),
@@ -2473,9 +2443,6 @@ body {
   font-size: calc(var(--table-text-size) * 0.9);
   color: var(--text-muted);
 }
-.cards table.dataview tbody > tr > td {
-  /* Paragraphs */
-}
 .cards table.dataview tbody > tr > td > * {
   padding: calc(var(--cards-padding) / 3) 0;
 }
@@ -2485,14 +2452,8 @@ body {
   width: calc(100% - var(--cards-padding));
   margin: 0 calc(var(--cards-padding) / 2);
 }
-.cards table.dataview tbody > tr > td {
-  /* Links */
-}
 .cards table.dataview tbody > tr > td a {
   text-decoration: none;
-}
-.cards table.dataview tbody > tr > td {
-  /* Buttons */
 }
 .cards table.dataview tbody > tr > td > button {
   width: 100%;
@@ -2500,9 +2461,6 @@ body {
 }
 .cards table.dataview tbody > tr > td:last-child > button {
   margin-bottom: calc(var(--cards-padding) / 6);
-}
-.cards table.dataview tbody > tr > td {
-  /* Lists */
 }
 .cards table.dataview tbody > tr > td > ul {
   width: 100%;
@@ -2834,7 +2792,6 @@ input[data-task="<"]:checked,
 li[data-task="<"] > input:checked,
 li[data-task="<"] > p > input:checked {
   color: var(--text-faint);
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z' clip-rule='evenodd' /%3E%3C/svg%3E");
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z' clip-rule='evenodd' /%3E%3C/svg%3E");
 }
 
@@ -3248,9 +3205,6 @@ body.colorful-headings .modal {
 .minimal-focus-mode.is-translucent .workspace-ribbon.mod-left.is-collapsed, .minimal-focus-mode.is-translucent .workspace-ribbon.mod-left.is-collapsed:before {
   background-color: var(--background-primary) !important;
 }
-.minimal-focus-mode {
-  /* Hide ribbon */
-}
 .minimal-focus-mode .workspace-ribbon.mod-left {
   transition: background-color 0s linear 0s;
 }
@@ -3275,15 +3229,9 @@ body.colorful-headings .modal {
 .minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed {
   border-right: none;
 }
-.minimal-focus-mode {
-  /* Hide right sidebar button */
-}
 .minimal-focus-mode .mod-root .sidebar-toggle-button.mod-right {
   opacity: 0;
   transition: opacity var(--focus-animation-duration) ease-in-out 0.5s;
-}
-.minimal-focus-mode {
-  /* Hide status bar */
 }
 .minimal-focus-mode:not(.minimal-status-off) .status-bar {
   opacity: 0;
@@ -3689,10 +3637,6 @@ body {
   --image-grid-fit: contain;
 }
 
-.img-grid-ratio {
-  --image-grid-fit: contain;
-}
-
 .img-grid .image-embed.is-loaded {
   line-height: 0;
   display: flex;
@@ -3776,10 +3720,6 @@ https://github.com/sponsors/kepano
 }
 .labeled-nav.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
   padding-left: 0;
-}
-.labeled-nav {
-  /* refactor this using a new variable for border above labeled nav 
-  in different conditions e.g. OSes and colorful frame */
 }
 .labeled-nav.mod-macos .mod-left-split .mod-top .workspace-tab-header-container:before, .labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before {
   -webkit-app-region: drag;
@@ -4692,9 +4632,6 @@ body {
 #calendar-container .active .dot {
   fill: var(--calendar-dot-active);
 }
-#calendar-container .active .task {
-  stroke: var(--text-faint);
-}
 
 /* Charts */
 .block-language-chart canvas,
@@ -5151,7 +5088,6 @@ body .kanban-plugin__lane-setting-wrapper > div:last-child {
 }
 body .kanban-plugin.something-is-dragging {
   cursor: grabbing;
-  cursor: -webkit-grabbing;
 }
 body .kanban-plugin__item.is-dragging {
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15), 0 0 0 2px var(--text-selection);
@@ -5593,9 +5529,6 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   --color-blue:#62afef;
   --color-purple:#a626a4;
   --color-pink:#e45749;
-}
-
-.theme-light.minimal-atom-light {
   --base-h:106;
   --base-s:0%;
   --base-l:98%;
@@ -5674,6 +5607,20 @@ https://github.com/ayu-theme/ayu-colors
   --color-blue:#399ee6;
   --color-purple:#a37acc;
   --color-pink:#ff7383;
+  --base-h:210;
+  --base-s:17%;
+  --base-l:98%;
+  --accent-h:36;
+  --accent-s:100%;
+  --accent-l:50%;
+  --bg1:#ffffff;
+  --bg2:#f8f9fa;
+  --bg3:rgba(209,218,224,0.5);
+  --ui1:#E6EAED;
+  --tx1:#5C6165;
+  --tx2:#8A9199;
+  --tx3:#AAAEB0;
+  --hl1:rgba(3,91,214,0.15);
 }
 
 .theme-dark.minimal-ayu-dark {
@@ -5693,23 +5640,6 @@ https://github.com/ayu-theme/ayu-colors
   --color-blue:#73d0ff;
   --color-purple:#dfbfff;
   --color-pink:#f27983;
-}
-
-.theme-light.minimal-ayu-light {
-  --base-h:210;
-  --base-s:17%;
-  --base-l:98%;
-  --accent-h:36;
-  --accent-s:100%;
-  --accent-l:50%;
-  --bg1:#ffffff;
-  --bg2:#f8f9fa;
-  --bg3:rgba(209,218,224,0.5);
-  --ui1:#E6EAED;
-  --tx1:#5C6165;
-  --tx2:#8A9199;
-  --tx3:#AAAEB0;
-  --hl1:rgba(3,91,214,0.15);
 }
 
 .theme-light.minimal-ayu-light.minimal-light-contrast .titlebar,
@@ -5770,6 +5700,23 @@ https://github.com/catppuccin/catppuccin
   --color-blue: #2166F6;
   --color-purple: #8938EF;
   --color-pink: #EA77CB;
+  --base-h: 228;
+  --base-s: 20%;
+  --base-l: 95%;
+  --accent-h: 11;
+  --accent-s: 59%;
+  --accent-l: 67%;
+  --bg1: #F0F1F5;
+  --bg2: #DCE0E8;
+  --bg3: hsla(228,11%,65%,.25);
+  --ui1: #CCD0DA;
+  --ui2: #BCC0CC;
+  --ui3: #ACB0BE;
+  --tx1: #4D4F69;
+  --tx2: #5D5F77;
+  --tx3: #8D8FA2;
+  --hl1: rgba(172,176,190,.3);
+  --hl2: rgba(223,142,29,.3);
 }
 
 .theme-dark.minimal-catppuccin-dark {
@@ -5789,26 +5736,6 @@ https://github.com/catppuccin/catppuccin
   --color-blue: #8CAAEE;
   --color-purple: #CA9EE6;
   --color-pink: #F4B9E5;
-}
-
-.theme-light.minimal-catppuccin-light {
-  --base-h: 228;
-  --base-s: 20%;
-  --base-l: 95%;
-  --accent-h: 11;
-  --accent-s: 59%;
-  --accent-l: 67%;
-  --bg1: #F0F1F5;
-  --bg2: #DCE0E8;
-  --bg3: hsla(228,11%,65%,.25);
-  --ui1: #CCD0DA;
-  --ui2: #BCC0CC;
-  --ui3: #ACB0BE;
-  --tx1: #4D4F69;
-  --tx2: #5D5F77;
-  --tx3: #8D8FA2;
-  --hl1: rgba(172,176,190,.3);
-  --hl2: rgba(223,142,29,.3);
 }
 
 .theme-light.minimal-catppuccin-light.minimal-light-tonal {
@@ -6179,6 +6106,23 @@ https://github.com/sainnhe/everforest
   --color-blue:#3795C5;
   --color-purple:#df69ba;
   --color-pink:#df69ba;
+  --base-h:44;
+  --base-s:87%;
+  --base-l:94%;
+  --accent-h:83;
+  --accent-s:36%;
+  --accent-l:53%;
+  --bg1:#fdf6e3;
+  --bg2:#efebd4;
+  --bg3:rgba(226,222,198,.5);
+  --ui1:#e0dcc7;
+  --ui2:#bec5b2;
+  --ui3:#bec5b2;
+  --tx1:#5C6A72;
+  --tx2:#829181;
+  --tx3:#a6b0a0;
+  --hl1:rgba(198,214,152,.4);
+  --hl2:rgba(222,179,51,.3);
 }
 
 .theme-dark.minimal-everforest-dark {
@@ -6198,26 +6142,6 @@ https://github.com/sainnhe/everforest
   --color-blue:#7fbbb3;
   --color-purple:#d699b6;
   --color-pink:#d699b6;
-}
-
-.theme-light.minimal-everforest-light {
-  --base-h:44;
-  --base-s:87%;
-  --base-l:94%;
-  --accent-h:83;
-  --accent-s:36%;
-  --accent-l:53%;
-  --bg1:#fdf6e3;
-  --bg2:#efebd4;
-  --bg3:rgba(226,222,198,.5);
-  --ui1:#e0dcc7;
-  --ui2:#bec5b2;
-  --ui3:#bec5b2;
-  --tx1:#5C6A72;
-  --tx2:#829181;
-  --tx3:#a6b0a0;
-  --hl1:rgba(198,214,152,.4);
-  --hl2:rgba(222,179,51,.3);
 }
 
 .theme-light.minimal-everforest-light.minimal-light-tonal {
@@ -6283,6 +6207,23 @@ https://stephango.com/flexoki
   --color-blue: #205EA6;
   --color-purple: #5E409D;
   --color-pink: #A02F6F;
+  --base-h: 48;
+  --base-s: 100%;
+  --base-l: 97%;
+  --accent-h: 175;
+  --accent-s: 57%;
+  --accent-l: 33%;
+  --bg1: #FFFCF0;
+  --bg2: #F2F0E5;
+  --bg3: rgba(16,15,15,0.05);
+  --ui1: #E6E4D9;
+  --ui2: #DAD8CE;
+  --ui3: #CECDC3;
+  --tx1: #100F0F;
+  --tx2: #6F6E69;
+  --tx3: #B7B5AC;
+  --hl1: rgba(187,220,206,0.3);
+  --hl2: rgba(247,209,61,0.3);
 }
 
 .theme-dark.minimal-flexoki-dark {
@@ -6302,26 +6243,6 @@ https://stephango.com/flexoki
   --color-blue: #4385BE;
   --color-purple: #8B7EC8;
   --color-pink: #CE5D97;
-}
-
-.theme-light.minimal-flexoki-light {
-  --base-h: 48;
-  --base-s: 100%;
-  --base-l: 97%;
-  --accent-h: 175;
-  --accent-s: 57%;
-  --accent-l: 33%;
-  --bg1: #FFFCF0;
-  --bg2: #F2F0E5;
-  --bg3: rgba(16,15,15,0.05);
-  --ui1: #E6E4D9;
-  --ui2: #DAD8CE;
-  --ui3: #CECDC3;
-  --tx1: #100F0F;
-  --tx2: #6F6E69;
-  --tx3: #B7B5AC;
-  --hl1: rgba(187,220,206,0.3);
-  --hl2: rgba(247,209,61,0.3);
 }
 
 .theme-light.minimal-flexoki-light.minimal-light-tonal {
@@ -6665,6 +6586,22 @@ https://github.com/rose-pine/rose-pine-theme
   --color-blue: #56949f;
   --color-purple: #907aa9;
   --color-pink: #907aa9;
+  --base-h: 32;
+  --base-s: 57%;
+  --base-l: 95%;
+  --accent-h: 3;
+  --accent-s: 53%;
+  --accent-l: 67%;
+  --bg1: #fffaf3;
+  --bg2: #faf4ed;
+  --bg3: rgba(233,223,218,0.5);
+  --ui1: #EAE3E1;
+  --ui2: #dfdad9;
+  --ui3: #cecacd;
+  --tx1: #575279;
+  --tx2: #797593;
+  --tx3: #9893a5;
+  --hl1: rgba(191,180,181,0.35);
 }
 
 .theme-dark.minimal-rose-pine-dark {
@@ -6684,25 +6621,6 @@ https://github.com/rose-pine/rose-pine-theme
   --color-blue: #9ccfd8;
   --color-purple: #c4a7e7;
   --color-pink: #c4a7e7;
-}
-
-.theme-light.minimal-rose-pine-light {
-  --base-h: 32;
-  --base-s: 57%;
-  --base-l: 95%;
-  --accent-h: 3;
-  --accent-s: 53%;
-  --accent-l: 67%;
-  --bg1: #fffaf3;
-  --bg2: #faf4ed;
-  --bg3: rgba(233,223,218,0.5);
-  --ui1: #EAE3E1;
-  --ui2: #dfdad9;
-  --ui3: #cecacd;
-  --tx1: #575279;
-  --tx2: #797593;
-  --tx3: #9893a5;
-  --hl1: rgba(191,180,181,0.35);
 }
 
 .theme-light.minimal-rose-pine-light.minimal-light-contrast .titlebar,
@@ -6839,14 +6757,6 @@ https://ethanschoonover.com/solarized/
 .theme-light.minimal-things-light {
   --color-blue-rgb: 27,97,194;
   --color-blue:#1b61c2;
-}
-
-.theme-dark.minimal-things-dark {
-  --color-blue-rgb: 77,149,247;
-  --color-blue:#4d95f7;
-}
-
-.theme-light.minimal-things-light {
   --accent-h:215;
   --accent-s:76%;
   --accent-l:43%;
@@ -6860,6 +6770,11 @@ https://ethanschoonover.com/solarized/
   --tx2:#7D7F84;
   --tx3:#a9abb0;
   --hl1:#cae2ff;
+}
+
+.theme-dark.minimal-things-dark {
+  --color-blue-rgb: 77,149,247;
+  --color-blue:#4d95f7;
 }
 
 .theme-light.minimal-things-light.minimal-light-tonal {

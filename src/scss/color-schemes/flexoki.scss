@@ -23,27 +23,7 @@ https://stephango.com/flexoki
 	--color-blue: #205EA6;
 	--color-purple: #5E409D;
 	--color-pink: #A02F6F;
-}
-.theme-dark.minimal-flexoki-dark {
-	--color-red-rgb: 209, 77, 65;
-	--color-orange-rgb: 218, 112, 44;
-	--color-yellow-rgb:208, 162, 21;
-	--color-green-rgb: 135, 154, 57;
-	--color-cyan-rgb: 58, 169, 159;
-	--color-blue-rgb: 67, 133, 190;
-	--color-purple-rgb: 139, 126, 200;
-	--color-pink-rgb: 206, 93, 151;
 
-	--color-red: #D14D41;
-	--color-orange: #DA702C;
-	--color-yellow: #D0A215;
-	--color-green: #879A39;
-	--color-cyan: #3AA99F;
-	--color-blue: #4385BE;
-	--color-purple: #8B7EC8;
-	--color-pink: #CE5D97;
-}
-.theme-light.minimal-flexoki-light {
 	--base-h: 48;
 	--base-s: 100%;
 	--base-l: 97%;
@@ -66,6 +46,25 @@ https://stephango.com/flexoki
 
 	--hl1: rgba(187,220,206,0.3);
 	--hl2: rgba(247,209,61,0.3);
+}
+.theme-dark.minimal-flexoki-dark {
+	--color-red-rgb: 209, 77, 65;
+	--color-orange-rgb: 218, 112, 44;
+	--color-yellow-rgb:208, 162, 21;
+	--color-green-rgb: 135, 154, 57;
+	--color-cyan-rgb: 58, 169, 159;
+	--color-blue-rgb: 67, 133, 190;
+	--color-purple-rgb: 139, 126, 200;
+	--color-pink-rgb: 206, 93, 151;
+
+	--color-red: #D14D41;
+	--color-orange: #DA702C;
+	--color-yellow: #D0A215;
+	--color-green: #879A39;
+	--color-cyan: #3AA99F;
+	--color-blue: #4385BE;
+	--color-purple: #8B7EC8;
+	--color-pink: #CE5D97;
 }
 .theme-light.minimal-flexoki-light.minimal-light-tonal {
 	--bg2: #FFFCF0;

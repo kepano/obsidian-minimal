@@ -23,6 +23,26 @@ https://github.com/ayu-theme/ayu-colors
 	--color-blue:#399ee6;
 	--color-purple:#a37acc;
 	--color-pink:#ff7383;
+
+	--base-h:210;
+	--base-s:17%;
+	--base-l:98%;
+
+	--accent-h:36;
+	--accent-s:100%;
+	--accent-l:50%;
+
+	--bg1:#ffffff;
+	--bg2:#f8f9fa;
+	--bg3:rgba(209,218,224,0.5);
+
+	--ui1:#E6EAED;
+
+	--tx1:#5C6165;
+	--tx2:#8A9199;
+	--tx3:#AAAEB0;
+
+	--hl1:rgba(3,91,214,0.15);
 }
 
 .theme-dark.minimal-ayu-dark {
@@ -45,27 +65,6 @@ https://github.com/ayu-theme/ayu-colors
 	--color-pink:#f27983;
 }
 
-.theme-light.minimal-ayu-light {
-	--base-h:210;
-	--base-s:17%;
-	--base-l:98%;
-
-	--accent-h:36;
-	--accent-s:100%;
-	--accent-l:50%;
-
-	--bg1:#ffffff;
-	--bg2:#f8f9fa;
-	--bg3:rgba(209,218,224,0.5);
-
-	--ui1:#E6EAED;
-
-	--tx1:#5C6165;
-	--tx2:#8A9199;
-	--tx3:#AAAEB0;
-
-	--hl1:rgba(3,91,214,0.15);
-}
 .theme-light.minimal-ayu-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-ayu-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-ayu-light.minimal-light-contrast .workspace-drawer.mod-left,

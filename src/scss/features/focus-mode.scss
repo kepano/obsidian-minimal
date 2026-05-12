@@ -16,7 +16,7 @@
 		background-color: var(--background-primary) !important;
 	}
 
-	/* Hide ribbon */
+	// Hide ribbon
 	.workspace-ribbon.mod-left {
 		transition: background-color 0s linear 0s;
 	}
@@ -44,13 +44,13 @@
 		border-right:none;
 	}
 
-	/* Hide right sidebar button */
+	// Hide right sidebar button
 	.mod-root .sidebar-toggle-button.mod-right {
 		opacity: 0;
 		transition: opacity var(--focus-animation-duration) ease-in-out 0.5s;
 	}
 
-	/* Hide status bar */
+	// Hide status bar
 	&:not(.minimal-status-off) .status-bar {
 		opacity: 0;
 		transition: opacity var(--focus-animation-duration) ease-in-out;

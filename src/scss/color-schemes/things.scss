@@ -22,13 +22,7 @@
 .theme-light.minimal-things-light {
 	--color-blue-rgb: 27,97,194;
 	--color-blue:#1b61c2;
-}
-.theme-dark.minimal-things-dark {
-	--color-blue-rgb: 77,149,247;
-	--color-blue:#4d95f7;
-}
 
-.theme-light.minimal-things-light {
 	--accent-h:215;
 	--accent-s:76%;
 	--accent-l:43%;
@@ -46,6 +40,10 @@
 	--tx3:#a9abb0;
 
 	--hl1:#cae2ff;
+}
+.theme-dark.minimal-things-dark {
+	--color-blue-rgb: 77,149,247;
+	--color-blue:#4d95f7;
 }
 .theme-light.minimal-things-light.minimal-light-tonal {
 	--ui1:#e6e8ec;

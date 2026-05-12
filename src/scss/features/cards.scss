@@ -90,7 +90,7 @@ table.dataview {
 			color: var(--text-muted);
 		}
 
-		/* Paragraphs */
+		// Paragraphs
 		> * {
 			padding: calc(var(--cards-padding)/3) 0;
 		}
@@ -101,12 +101,12 @@ table.dataview {
 			margin: 0 calc(var(--cards-padding)/2);
 		}
 
-		/* Links */
+		// Links
 		a {
 			text-decoration:none;
 		}
 
-		/* Buttons */
+		// Buttons
 		> button {
 			width: 100%;
 			margin: calc(var(--cards-padding)/2) 0;
@@ -115,7 +115,7 @@ table.dataview {
 			margin-bottom: calc(var(--cards-padding)/6);
 		}
 
-		/* Lists */
+		// Lists
 		> ul {
 			width: 100%;
 			padding: 0.25em 0 !important;

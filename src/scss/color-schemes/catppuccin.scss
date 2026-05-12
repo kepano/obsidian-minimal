@@ -23,28 +23,7 @@ https://github.com/catppuccin/catppuccin
 	--color-blue: #2166F6;
 	--color-purple: #8938EF;
 	--color-pink: #EA77CB;
-}
-.theme-dark.minimal-catppuccin-dark {
-	--color-red-rgb: 235,153,156;
-	--color-orange-rgb: 239,160,118;
-	--color-yellow-rgb: 229,200,144;
-	--color-green-rgb: 166,209,138;
-	--color-cyan-rgb: 129,200,190;
-	--color-blue-rgb: 140,170,238;
-	--color-purple-rgb: 202,158,230;
-	--color-pink-rgb: 244,185,229;
 
-	--color-red: #EB999C;
-	--color-orange: #EFA076;
-	--color-yellow: #E5C890;
-	--color-green: #A6D18A;
-	--color-cyan: #81C8BE;
-	--color-blue: #8CAAEE;
-	--color-purple: #CA9EE6;
-	--color-pink: #F4B9E5;
-}
-
-.theme-light.minimal-catppuccin-light {
 	--base-h: 228;
 	--base-s: 20%;
 	--base-l: 95%;
@@ -67,6 +46,25 @@ https://github.com/catppuccin/catppuccin
 
 	--hl1: rgba(172,176,190,.3);
 	--hl2: rgba(223,142,29,.3);
+}
+.theme-dark.minimal-catppuccin-dark {
+	--color-red-rgb: 235,153,156;
+	--color-orange-rgb: 239,160,118;
+	--color-yellow-rgb: 229,200,144;
+	--color-green-rgb: 166,209,138;
+	--color-cyan-rgb: 129,200,190;
+	--color-blue-rgb: 140,170,238;
+	--color-purple-rgb: 202,158,230;
+	--color-pink-rgb: 244,185,229;
+
+	--color-red: #EB999C;
+	--color-orange: #EFA076;
+	--color-yellow: #E5C890;
+	--color-green: #A6D18A;
+	--color-cyan: #81C8BE;
+	--color-blue: #8CAAEE;
+	--color-purple: #CA9EE6;
+	--color-pink: #F4B9E5;
 }
 
 .theme-light.minimal-catppuccin-light.minimal-light-tonal {
