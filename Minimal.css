@@ -536,14 +536,10 @@ body .excalidraw {
 }
 
 .theme-light {
-  --interactive-normal: var(--bg1);
   --interactive-accent-rgb:220, 220, 220;
   --active-line-bg: rgba(0,0,0,0.035);
   --background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 70%),calc(var(--base-l) - 20%),0.5);
   --text-highlight-bg-active: rgba(0, 0, 0, 0.1);
-  /* Errors */
-  --background-modifier-error: rgba(255,0,0,0.14);
-  --background-modifier-error-hover: rgba(255,0,0,0.08);
   /* Shadows */
   --shadow-color: rgba(0, 0, 0, 0.1);
   --btn-shadow-color: rgba(0, 0, 0, 0.05);
@@ -555,9 +551,6 @@ body .excalidraw {
   --active-line-bg: rgba(255,255,255,0.04);
   --background-modifier-cover: hsla(var(--base-h),var(--base-s), calc(var(--base-l) - 12%), 0.5);
   --text-highlight-bg-active: rgba(255, 255, 255, 0.1);
-  /* Errors */
-  --background-modifier-error: rgba(255,20,20,0.12);
-  --background-modifier-error-hover: rgba(255,20,20,0.18);
   /* Shadows */
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --shadow-color: rgba(0, 0, 0, 0.3);
@@ -567,15 +560,17 @@ body .excalidraw {
 
 .theme-light.minimal-light-white {
   --background-table-rows: var(--bg2);
-  --interactive-normal: var(--bg3);
-  --setting-items-background: var(--bg3);
+  --interactive-normal: var(--ui1);
+  --setting-items-background: transparent;
+  --setting-items-border-width: 1px;
 }
 
 .theme-light.minimal-light-tonal {
   --background-secondary: var(--bg1);
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
-  --setting-items-background: var(--bg3);
+  --setting-items-background: var(--bg1);
+  --setting-items-border-width: 1px;
 }
 .theme-light.minimal-light-tonal.is-mobile {
   --background-modifier-form-field: var(--bg3);
@@ -586,13 +581,15 @@ body .excalidraw {
   --ribbon-background: var(--bg1);
   --background-secondary: var(--bg1);
   --background-table-rows: var(--bg3);
-  --setting-items-background: var(--bg3);
+  --setting-items-background: var(--bg1);
+  --setting-items-border-width: 1px;
 }
 
 .theme-dark.minimal-dark-black {
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
-  --setting-items-background: var(--bg3);
+  --setting-items-background: black;
+  --setting-items-border-width: 1px;
   --modal-border: var(--ui2);
   --active-line-bg: rgba(255,255,255,0.085);
   --background-modifier-form-field: var(--bg3);
@@ -622,14 +619,14 @@ body {
   background-color: transparent;
 }
 
-.block-language-base .bases-header .query-toolbar,
-.bases-embed .bases-header .query-toolbar {
+.block-language-base .bases-header .bases-toolbar,
+.bases-embed .bases-header .bases-toolbar {
   padding-bottom: 2px;
   opacity: var(--bases-toolbar-opacity);
   transition: 0.15s 0.15s opacity;
 }
-.block-language-base .bases-header .query-toolbar:hover,
-.bases-embed .bases-header .query-toolbar:hover {
+.block-language-base .bases-header .bases-toolbar:hover,
+.bases-embed .bases-header .bases-toolbar:hover {
   opacity: 1;
   transition: 0s opacity;
 }
@@ -2235,8 +2232,7 @@ body {
 /* Block widths ------------------------------------
 
    Because we are using :has() this method requires
-   Obsidian installer 1.1.9 or above. However it means the
-   code no longer requires Contextual Typography plugin.
+   Obsidian installer 1.1.9 or above.
 */
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .cm-table-widget,
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(table),
@@ -5148,6 +5144,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 .workspace-leaf-content[data-type=style-settings] .setting-item {
   max-width: 100%;
   margin: 0 auto;
+  border: none;
 }
 .workspace-leaf-content[data-type=style-settings] .setting-item-name {
   position: relative;

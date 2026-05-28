@@ -132,17 +132,12 @@
 }
 
 .theme-light {
-	--interactive-normal:         var(--bg1);
 	--interactive-accent-rgb:220, 220, 220;
 
 	--active-line-bg: rgba(0,0,0,0.035);
 	--background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 70%),calc(var(--base-l) - 20%),0.5);
 
 	--text-highlight-bg-active: rgba(0, 0, 0, 0.1);
-
-	/* Errors */
-	--background-modifier-error: rgba(255,0,0,0.14);
-	--background-modifier-error-hover: rgba(255,0,0,0.08);
 
 	/* Shadows */
 	--shadow-color: rgba(0, 0, 0, 0.1);
@@ -158,10 +153,6 @@
 
 	--text-highlight-bg-active: rgba(255, 255, 255, 0.1);
 
-	/* Errors */
-	--background-modifier-error: rgba(255,20,20,0.12);
-	--background-modifier-error-hover: rgba(255,20,20,0.18);
-
 	/* Shadows */
 	--background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
 	--shadow-color: rgba(0, 0, 0, 0.3);
@@ -171,15 +162,17 @@
 
 .theme-light.minimal-light-white {
 	--background-table-rows:     var(--bg2);
-	--interactive-normal:        var(--bg3);
-	--setting-items-background:  var(--bg3);
+	--interactive-normal:        var(--ui1);
+	--setting-items-background:  transparent;
+	--setting-items-border-width: 1px;
 }
 
 .theme-light.minimal-light-tonal {
 	--background-secondary:      var(--bg1);
 	--background-primary-alt:    var(--bg3);
 	--background-table-rows:     var(--bg3);
-	--setting-items-background:  var(--bg3);
+	--setting-items-background:  var(--bg1);
+	--setting-items-border-width: 1px;
 	&.is-mobile {
 		--background-modifier-form-field: var(--bg3);
 		--interactive-normal:             var(--bg3);
@@ -190,13 +183,15 @@
 	--ribbon-background:         var(--bg1);
 	--background-secondary:      var(--bg1);
 	--background-table-rows:     var(--bg3);
-	--setting-items-background:  var(--bg3);
+	--setting-items-background:  var(--bg1);
+	--setting-items-border-width: 1px;
 }
 
 .theme-dark.minimal-dark-black {
 	--background-primary-alt:    var(--bg3);
 	--background-table-rows:     var(--bg3);
-	--setting-items-background:  var(--bg3);
+	--setting-items-background:  black;
+	--setting-items-border-width: 1px;
 	--modal-border:              var(--ui2);
 
 	--active-line-bg: rgba(255,255,255,0.085);
