@@ -4,6 +4,11 @@
 	--checkbox-radius: 4px;
 }
 
+.is-phone .modal.mod-settings .vertical-tab-header-group-items, 
+.is-phone .modal.mod-settings .setting-search-result-group {
+	border: var(--setting-items-border-width) solid var(--background-modifier-border);
+}
+
 /* Confirm delete */
 .modal-container.mod-confirmation {
 	.modal {

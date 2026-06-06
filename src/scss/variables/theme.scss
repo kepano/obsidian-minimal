@@ -71,10 +71,6 @@
 
 	--ribbon-background:                 var(--bg2);
 
-	--scrollbar-active-thumb-bg:         var(--ui3);
-	--scrollbar-bg:                      transparent;
-	--scrollbar-thumb-bg:                var(--ui1);
-
 	--search-result-background:           var(--bg1);
 
 	--tab-text-color-focused-active:     var(--tx1);
@@ -164,7 +160,9 @@
 	--background-table-rows:     var(--bg2);
 	--interactive-normal:        var(--ui1);
 	--setting-items-background:  transparent;
-	--setting-items-border-width: 1px;
+	.mod-settings {
+		--setting-items-border-width: 1px;
+	}
 }
 
 .theme-light.minimal-light-tonal {
@@ -172,7 +170,9 @@
 	--background-primary-alt:    var(--bg3);
 	--background-table-rows:     var(--bg3);
 	--setting-items-background:  var(--bg1);
-	--setting-items-border-width: 1px;
+	.mod-settings {
+		--setting-items-border-width: 1px;
+	}
 	&.is-mobile {
 		--background-modifier-form-field: var(--bg3);
 		--interactive-normal:             var(--bg3);
@@ -184,19 +184,29 @@
 	--background-secondary:      var(--bg1);
 	--background-table-rows:     var(--bg3);
 	--setting-items-background:  var(--bg1);
-	--setting-items-border-width: 1px;
+	.mod-settings {
+		--setting-items-border-width: 1px;
+	}
 }
 
 .theme-dark.minimal-dark-black {
 	--background-primary-alt:    var(--bg3);
 	--background-table-rows:     var(--bg3);
 	--setting-items-background:  black;
-	--setting-items-border-width: 1px;
-	--modal-border:              var(--ui2);
+	--setting-items-border-width: 1px	--modal-border:              var(--ui2);
 
 	--active-line-bg: rgba(255,255,255,0.085);
 
 	--background-modifier-form-field: var(--bg3);
 	--background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.7);
 	--background-modifier-box-shadow: rgba(0, 0, 0, 1);
+	.mod-settings {
+		--setting-items-border-width: 1px;
+	}
+}
+
+body.styled-scrollbar {
+	--scrollbar-active-thumb-bg:         var(--ui3);
+	--scrollbar-bg:                      transparent;
+	--scrollbar-thumb-bg:                var(--ui1);
 }

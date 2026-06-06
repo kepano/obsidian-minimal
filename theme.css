@@ -485,9 +485,6 @@ body .excalidraw {
   --prompt-border-color: var(--ui3);
   --quote-opening-modifier: var(--ui2);
   --ribbon-background: var(--bg2);
-  --scrollbar-active-thumb-bg: var(--ui3);
-  --scrollbar-bg: transparent;
-  --scrollbar-thumb-bg: var(--ui1);
   --search-result-background: var(--bg1);
   --tab-text-color-focused-active: var(--tx1);
   --tab-outline-color: var(--ui1);
@@ -562,6 +559,8 @@ body .excalidraw {
   --background-table-rows: var(--bg2);
   --interactive-normal: var(--ui1);
   --setting-items-background: transparent;
+}
+.theme-light.minimal-light-white .mod-settings {
   --setting-items-border-width: 1px;
 }
 
@@ -570,6 +569,8 @@ body .excalidraw {
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
   --setting-items-background: var(--bg1);
+}
+.theme-light.minimal-light-tonal .mod-settings {
   --setting-items-border-width: 1px;
 }
 .theme-light.minimal-light-tonal.is-mobile {
@@ -582,6 +583,8 @@ body .excalidraw {
   --background-secondary: var(--bg1);
   --background-table-rows: var(--bg3);
   --setting-items-background: var(--bg1);
+}
+.theme-dark.minimal-dark-tonal .mod-settings {
   --setting-items-border-width: 1px;
 }
 
@@ -589,12 +592,20 @@ body .excalidraw {
   --background-primary-alt: var(--bg3);
   --background-table-rows: var(--bg3);
   --setting-items-background: black;
-  --setting-items-border-width: 1px;
-  --modal-border: var(--ui2);
+  --setting-items-border-width: 1px	--modal-border: var(--ui2);
   --active-line-bg: rgba(255,255,255,0.085);
   --background-modifier-form-field: var(--bg3);
   --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.7);
   --background-modifier-box-shadow: rgba(0, 0, 0, 1);
+}
+.theme-dark.minimal-dark-black .mod-settings {
+  --setting-items-border-width: 1px;
+}
+
+body.styled-scrollbar {
+  --scrollbar-active-thumb-bg: var(--ui3);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--ui1);
 }
 
 /* Desktop font sizes */
@@ -1241,6 +1252,11 @@ body:not(.is-mobile).labeled-nav.vault-profile-top .workspace-split.mod-left-spl
 /* Modals */
 .modal-button-container .mod-checkbox {
   --checkbox-radius: 4px;
+}
+
+.is-phone .modal.mod-settings .vertical-tab-header-group-items,
+.is-phone .modal.mod-settings .setting-search-result-group {
+  border: var(--setting-items-border-width) solid var(--background-modifier-border);
 }
 
 /* Confirm delete */
