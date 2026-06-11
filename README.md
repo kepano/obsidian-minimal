@@ -2,7 +2,7 @@
 
 Find detailed documentation at [minimal.guide](https://minimal.guide)
 
-Minimal is an [Obsidian](https://obsidian.md/) theme for desktop, mobile and tablet. Customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) and [Hider](https://github.com/kepano/obsidian-hider). Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217) ✨ 
+Minimal is an [Obsidian](https://obsidian.md/) theme for desktop, mobile and tablet. Customize colors, fonts and more with the companion plugins [Minimal Theme Settings](https://community.obsidian.md/plugins/obsidian-minimal-settings) and [Hider](https://community.obsidian.md/plugins/obsidian-hider). Winner of Obsidian's official [Best Theme award](https://forum.obsidian.md/t/best-of-2020-awards-results/11217) ✨ 
 
 ## About Minimal
 
