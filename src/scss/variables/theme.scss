@@ -14,6 +14,8 @@
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark,
 .theme-light {
+	--bases-table-group-background:  transparent;
+
 	--background-modifier-accent:        var(--ax3);  
 	--background-modifier-border-focus:  var(--ui3);
 	--background-modifier-border-hover:  var(--ui2);
@@ -170,6 +172,7 @@
 	--background-primary-alt:    var(--bg3);
 	--background-table-rows:     var(--bg3);
 	--setting-items-background:  var(--bg1);
+
 	.mod-settings {
 		--setting-items-border-width: 1px;
 	}
@@ -184,6 +187,7 @@
 	--background-secondary:      var(--bg1);
 	--background-table-rows:     var(--bg3);
 	--setting-items-background:  var(--bg1);
+
 	.mod-settings {
 		--setting-items-border-width: 1px;
 	}

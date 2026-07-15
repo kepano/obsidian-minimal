@@ -444,6 +444,7 @@ body .excalidraw {
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark,
 .theme-light {
+  --bases-table-group-background: transparent;
   --background-modifier-accent: var(--ax3);
   --background-modifier-border-focus: var(--ui3);
   --background-modifier-border-hover: var(--ui2);
@@ -3639,7 +3640,7 @@ body {
 
 .img-grid .image-embed.is-loaded {
   line-height: 0;
-  display: flex;
+  display: inline-flex;
   align-items: stretch;
 }
 .img-grid .image-embed.is-loaded img {
