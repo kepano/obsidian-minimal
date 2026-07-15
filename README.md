@@ -34,7 +34,7 @@ Combining **focus mode** with **image grid** and **image width** options allows 
 
 ![](/docs/Images/minimal-img-grid.png)
 
-Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, [and more](#plugin-support)
+Minimal includes support for popular plugins like **Calendar**, **Dataview**, **Kanban**, **Outliner**, [and more](#plugin-support)
 
 ![](/docs/Images/minimal-plugins.png)
 

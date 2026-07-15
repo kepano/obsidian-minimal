@@ -54,7 +54,7 @@ Combining [[focus mode]] with [[image grids]] and [[block width]] options allows
 
 ![[minimal-img-grid.png]]
 
-Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, **Excalidraw**, and more.
+Minimal includes support for dozens of popular plugins like **Calendar**, **Kanban**, **Dataview**, **Outliner**, and more.
 
 ![[minimal-plugins.png]]
 
@@ -96,16 +96,13 @@ Minimal includes support for dozens of popular plugins like **Calendar**, **Kanb
 ## Plugin support
 
 - [[Calendar]]
-- Checklist
 - [[Charts plugin]]
 - [[Dataview]]
-- Dictionary
 - Git
 - [[Hider]]
 - Kanban
 - [[Obsidian Publish]]
 - Outliner
-- [[QuickAdd]]
 - [[Style Settings]]
 - Zoom
 
