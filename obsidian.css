@@ -24,7 +24,7 @@ https://github.com/kepano/obsidian-minimal
 
 MIT License
 
-Copyright (c) 2020-2022 Stephan Ango (@kepano)
+Copyright (c) 2020-2022 Steph Ango (@kepano)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -4480,7 +4480,7 @@ body.borders-title .workspace-ribbon.mod-left.is-collapsed {
 body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header-container {
   border: none; }
 
-/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+/* MIT License | Copyright (c) Steph Ango (@kepano) 
 
 Cards snippet for Obsidian
 
@@ -5888,7 +5888,7 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
   margin-left: 12px; }
 
 /* Focus mode */
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Steph Ango (@kepano) */
 /* Hide app ribbon */
 .workspace-ribbon.mod-left {
   border-left: 0;
@@ -5995,7 +5995,7 @@ body.minimal-focus-mode .view-header:focus-within .view-header-title {
   width: 100%; }
 
 /* Table helper classes for alternate styles */
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Steph Ango (@kepano) */
 .table-small table:not(.calendar) {
   --table-font-size:85%; }
 
@@ -6114,7 +6114,7 @@ table:not(.calendar) tbody > tr > td,
   background-color: var(--row-color-hover); }
 
 /* Dark mode images  */
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Steph Ango (@kepano) */
 .theme-dark .markdown-source-view img,
 .theme-dark .markdown-preview-view img {
   opacity: var(--image-muted);
@@ -6162,7 +6162,7 @@ span[src$="#interface"] img {
   margin-bottom: 15px;
   border-radius: var(--radius-m); }
 
-/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+/* MIT License | Copyright (c) Steph Ango (@kepano) 
 
 Image Grid snippet for Obsidian
 
@@ -6218,7 +6218,7 @@ div:not(.el-embed-image) + .el-embed-image {
   .img-grid .markdown-preview-section > .el-embed-image > p {
     grid-column-gap: 0.25rem; } }
 /* Image zoom  */
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Steph Ango (@kepano) */
 body:not(.zoom-off) .view-content img {
   max-width: 100%;
   cursor: zoom-in; }
@@ -6276,7 +6276,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
   position: absolute;
   opacity: 1; }
 
-/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+/* MIT License | Copyright (c) Steph Ango (@kepano) 
 
 Labeled Nav snippet for Obsidian
 
@@ -6361,7 +6361,7 @@ https://github.com/sponsors/kepano
 .labeled-nav .mod-left-split > .workspace-tabs:nth-child(3) .workspace-tab-header[data-type="tag"] .workspace-tab-header-inner-icon:after {
   content: "Tags"; }
 
-/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+/* MIT License | Copyright (c) Steph Ango (@kepano) 
 
 Layout Control snippet for Obsidian
 
@@ -7159,7 +7159,7 @@ Needs some work
 
 /* Mobile */
 /* Mobile styling
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Steph Ango (@kepano) */
 /* Needs cleanup
 -------------------------------------------------------------------------------- */
 .is-mobile {

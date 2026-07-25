@@ -2332,7 +2332,7 @@ body:is(.borders-none) .mod-root .workspace-tab-header-container:is(div, :hover)
   --tab-outline-width: 0px;
 }
 
-/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+/* MIT License | Copyright (c) Steph Ango (@kepano) 
 
 Cards snippet for Obsidian
 
@@ -3170,7 +3170,7 @@ body.colorful-headings .modal {
 }
 
 /* Focus mode */
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Steph Ango (@kepano) */
 /* Hide app ribbon */
 .workspace-ribbon.mod-left {
   border-left: 0;
@@ -3363,7 +3363,7 @@ body:not(.is-mobile) div.image-embed:focus-within .image-wrapper::after {
 }
 
 /* Table helper classes for alternate styles */
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Steph Ango (@kepano) */
 .table-small .bases-view {
   --bases-table-font-size: 85%;
 }
@@ -3503,7 +3503,7 @@ body:not(.is-mobile) div.image-embed:focus-within .image-wrapper::after {
 }
 
 /* Dark mode images  */
-/* MIT License | Copyright (c) Stephan Ango (@kepano) */
+/* MIT License | Copyright (c) Steph Ango (@kepano) */
 :root {
   --image-mix: normal ;
 }
@@ -3594,7 +3594,7 @@ span[src$="#interface"] img {
   border-radius: var(--radius-m);
 }
 
-/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+/* MIT License | Copyright (c) Steph Ango (@kepano) 
 
 Image Grid snippet for Obsidian
 
@@ -3684,7 +3684,7 @@ body {
   display: none;
 }
 
-/* MIT License | Copyright (c) Stephan Ango (@kepano) 
+/* MIT License | Copyright (c) Steph Ango (@kepano) 
 
 Labeled Nav snippet for Obsidian
 
