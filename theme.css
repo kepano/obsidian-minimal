@@ -1308,10 +1308,6 @@ body {
   animation: none;
 }
 
-.tooltip.mod-error {
-  color: var(--text-error);
-}
-
 /* Content */
 /* Blockquotes */
 .markdown-preview-view blockquote {
