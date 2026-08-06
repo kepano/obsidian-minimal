@@ -29,7 +29,7 @@
 }
 
 /* Gutters */
-body :not(.canvas-node) .markdown-source-view.mod-cm6 .cm-gutters {
+body :not(.canvas-node) .markdown-source-view.mod-cm6:not(.git-split-diff-view) .cm-gutters {
 	position:absolute !important;
 	z-index:0;
 	margin-inline-end: 0;
