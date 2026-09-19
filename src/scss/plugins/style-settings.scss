@@ -15,7 +15,7 @@
 		}
 		.setting-item-description {
 			color: var(--text-normal);
-			font-size: var(--font-adaptive-smaller);
+			font-size: var(--font-ui-small);
 			padding-bottom: 0.5em;
 		}
 	}
@@ -101,7 +101,7 @@
 	padding:0.5em 0;
 }
 .workspace-split:not(.mod-root) .workspace-leaf-content[data-type="style-settings"] .setting-item-name {
-	font-size:var(--font-adaptive-smaller);
+	font-size:var(--font-ui-small);
 }
 
 .themed-color-wrapper > div + div {

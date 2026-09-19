@@ -60,7 +60,7 @@ body {
 		padding: 2px 0 4px;
 		font-weight:500;
 		letter-spacing:0.1em;
-		font-size:var(--font-adaptive-smallest);
+		font-size:var(--font-ui-smaller);
 		&:first-child {
 			padding-left: 0 !important;
 		}
@@ -108,7 +108,7 @@ body {
 	.reset-button {
 		text-transform:none;
 		letter-spacing:0;
-		font-size:var(--font-adaptive-smaller);
+		font-size:var(--font-ui-small);
 		font-weight:500;
 		color:var(--text-muted);
 		border-radius:4px;
@@ -134,7 +134,7 @@ body {
 	}
 	.day,
 	.week-num {
-		font-size: calc(var(--font-adaptive-smaller) + 5%);
+		font-size: calc(var(--font-ui-small) + 5%);
 	}
 	.active,
 	.active.today,

@@ -115,8 +115,8 @@ body {
 
 .is-phone {
 	/* Metadata */
-	--metadata-label-font-size: var(--font-adaptive-smaller);
-	--metadata-input-font-size: var(--font-adaptive-smaller);
+	--metadata-label-font-size: var(--font-ui-small);
+	--metadata-input-font-size: var(--font-ui-small);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {

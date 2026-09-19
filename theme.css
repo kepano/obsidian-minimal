@@ -100,8 +100,8 @@ body {
 
 .is-phone {
   /* Metadata */
-  --metadata-label-font-size: var(--font-adaptive-smaller);
-  --metadata-input-font-size: var(--font-adaptive-smaller);
+  --metadata-label-font-size: var(--font-ui-small);
+  --metadata-input-font-size: var(--font-ui-small);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
@@ -576,8 +576,6 @@ body.styled-scrollbar {
 body {
   --font-adaptive-normal:var(--font-text-size,var(--editor-font-size));
   --font-adaptive-small: calc(var(--font-ui-small) * 1.07);
-  --font-adaptive-smaller: var(--font-ui-small);
-  --font-adaptive-smallest: var(--font-ui-smaller);
   --line-width-wide:calc(var(--line-width) + 12.5%);
   --font-code:calc(var(--font-adaptive-normal) * 0.9);
   --table-text-size:calc(var(--font-adaptive-normal) * 0.875);
@@ -946,7 +944,7 @@ body:not(.minimal-status-off) .status-bar {
 .status-bar {
   transition: color 200ms linear;
   color: var(--text-faint);
-  font-size: var(--font-adaptive-smallest);
+  font-size: var(--font-ui-smaller);
 }
 .status-bar .sync-status-icon.mod-working,
 .status-bar .sync-status-icon.mod-success {
@@ -3646,7 +3644,7 @@ https://github.com/sponsors/kepano
 .labeled-nav .mod-primary-split .mod-top .workspace-tab-header-inner-title {
   display: inline-block;
   font-weight: 500;
-  font-size: var(--font-adaptive-smaller);
+  font-size: var(--font-ui-small);
 }
 .labeled-nav .mod-primary-split .mod-top .workspace-tab-header-container {
   position: relative;
@@ -4168,7 +4166,7 @@ body:not(.full-file-names) .tree-item-inner {
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: var(--font-adaptive-smallest);
+  font-size: var(--font-ui-smaller);
   font-weight: 500;
 }
 
@@ -4215,7 +4213,7 @@ body:not(.is-mobile) .nav-folder.mod-root > .nav-folder-title .nav-folder-title-
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
-  font-size: var(--font-adaptive-smallest);
+  font-size: var(--font-ui-smaller);
 }
 
 body:not(.is-mobile) .nav-buttons-container {
@@ -4312,7 +4310,7 @@ input.prompt-input:focus-visible {
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: var(--font-adaptive-smallest);
+  font-size: var(--font-ui-smaller);
   font-weight: 500;
   margin-bottom: 4px;
 }
@@ -4391,7 +4389,7 @@ body {
   padding: 2px 0 4px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  font-size: var(--font-adaptive-smallest);
+  font-size: var(--font-ui-smaller);
 }
 #calendar-container tr th:first-child {
   padding-left: 0 !important;
@@ -4438,7 +4436,7 @@ body {
 #calendar-container .reset-button {
   text-transform: none;
   letter-spacing: 0;
-  font-size: var(--font-adaptive-smaller);
+  font-size: var(--font-ui-small);
   font-weight: 500;
   color: var(--text-muted);
   border-radius: 4px;
@@ -4464,7 +4462,7 @@ body {
 }
 #calendar-container .day,
 #calendar-container .week-num {
-  font-size: calc(var(--font-adaptive-smaller) + 5%);
+  font-size: calc(var(--font-ui-small) + 5%);
 }
 #calendar-container .active,
 #calendar-container .active.today,
@@ -4691,7 +4689,7 @@ body .dataview.inline-field-value {
 .git-view-body .opener {
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: var(--font-adaptive-smallest);
+  font-size: var(--font-ui-smaller);
   font-weight: 500;
   padding: 5px 7px 5px 10px;
   margin-bottom: 6px;
@@ -4700,7 +4698,7 @@ body .dataview.inline-field-value {
 .git-view-body .file-view .opener {
   text-transform: none;
   letter-spacing: normal;
-  font-size: var(--font-adaptive-smallest);
+  font-size: var(--font-ui-smaller);
   font-weight: normal;
   padding: initial;
   margin-bottom: 0px;
@@ -5052,7 +5050,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 }
 .workspace-leaf-content[data-type=style-settings] div[data-id=instructions] .setting-item-description {
   color: var(--text-normal);
-  font-size: var(--font-adaptive-smaller);
+  font-size: var(--font-ui-small);
   padding-bottom: 0.5em;
 }
 .workspace-leaf-content[data-type=style-settings] .view-content {
@@ -5135,7 +5133,7 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
 }
 
 .workspace-split:not(.mod-root) .workspace-leaf-content[data-type=style-settings] .setting-item-name {
-  font-size: var(--font-adaptive-smaller);
+  font-size: var(--font-ui-small);
 }
 
 .themed-color-wrapper > div + div {

@@ -14,7 +14,7 @@ body:not(.minimal-status-off) .status-bar {
 .status-bar {
 	transition: color 200ms linear;
 	color: var(--text-faint);
-	font-size: var(--font-adaptive-smallest);
+	font-size: var(--font-ui-smaller);
 
 	.sync-status-icon.mod-working,
 	.sync-status-icon.mod-success {
