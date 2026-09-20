@@ -1,9 +1,14 @@
 /* Desktop font sizes */
 body {
-	--font-adaptive-normal:var(--font-text-size,var(--editor-font-size));
-	--font-adaptive-small: calc(var(--font-ui-small) * 1.07);
 	--line-width-wide:calc(var(--line-width) + 12.5%);
-	--font-code:calc(var(--font-adaptive-normal) * 0.9);
-	--table-text-size:calc(var(--font-adaptive-normal) * 0.875);
-	--bases-table-font-size:calc(var(--font-adaptive-normal) * 0.875);
+	--font-code:calc(var(--font-preferred-size) * 0.9);
+	--table-text-size:calc(var(--font-preferred-size) * 0.875);
+	--bases-table-font-size:calc(var(--font-preferred-size) * 0.875);
+
+}
+
+body:not(.is-mobile) {
+	--font-adaptive-small: calc(var(--font-preferred-size) * var(--minimal-small-scale,0.81));
+	--font-ui-small: calc(var(--font-preferred-size) * var(--minimal-small-scale,0.81));
+	--font-ui-smaller: calc(var(--font-preferred-size) * var(--minimal-small-scale,0.81) * 0.846);
 }

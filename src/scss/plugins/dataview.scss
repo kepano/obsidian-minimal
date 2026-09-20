@@ -119,7 +119,7 @@ body .dataview.inline-field-key,
 body .dataview.inline-field-value,
 body .dataview .inline-field-standalone-value {
 	font-family:var(--font-text);
-	font-size:calc(var(--font-adaptive-normal) - 2px);
+	font-size:calc(var(--font-preferred-size) - 2px);
 	background:transparent;
 	color:var(--text-muted);
 }
@@ -143,7 +143,4 @@ body .dataview.inline-field-value {
 	border:none;
 	cursor:default;
 	background-image:none;
-}
-.markdown-preview-view .block-language-dataview table.calendar .day {
-	font-size:var(--font-adaptive-small);
 }
