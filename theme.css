@@ -1925,6 +1925,8 @@ body {
   --table-margin: inherit;
   --table-wrapper-width: fit-content;
   --container-dataview-table-width: var(--line-width);
+  --container-code-width: var(--line-width);
+  --container-code-max-width: var(--max-width);
   --container-img-width: var(--line-width);
   --container-img-max-width: var(--max-width);
   --img-max-width: 100%;
@@ -1950,6 +1952,7 @@ body .wide {
   --line-width: var(--line-width-wide);
   --container-table-width: var(--line-width-wide);
   --container-dataview-table-width: var(--line-width-wide);
+  --container-code-width: var(--line-width-wide);
   --container-img-width: var(--line-width-wide);
   --container-iframe-width: var(--line-width-wide);
   --container-map-width: var(--line-width-wide);
@@ -1959,6 +1962,7 @@ body .max {
   --line-width: var(--max-width);
   --container-table-width: var(--max-width);
   --container-dataview-table-width: var(--max-width);
+  --container-code-width: var(--max-width);
   --container-img-width: var(--max-width);
   --container-iframe-width: var(--max-width);
   --container-map-width: var(--max-width);
@@ -2069,6 +2073,19 @@ body {
 }
 .table-100 .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle, .table-100.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle {
   inset-inline-end: calc(100% - var(--table-drag-handle-size)) !important;
+}
+
+.code-wide {
+  --container-code-width: var(--line-width-wide);
+}
+
+.code-max {
+  --container-code-width: var(--max-width);
+}
+
+.code-100 {
+  --container-code-width: 100%;
+  --container-code-max-width: 100%;
 }
 
 .img-wide,
@@ -2213,6 +2230,11 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content .dataview.dataview-error-box,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer .dataview.dataview-error-box {
   margin-inline: var(--table-margin);
+}
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > :is(.HyperMD-codeblock, .el-pre),
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > :is(.HyperMD-codeblock, .el-pre) {
+  width: var(--container-code-width);
+  max-width: var(--container-code-max-width);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed {
