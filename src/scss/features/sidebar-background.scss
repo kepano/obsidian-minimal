@@ -1,6 +1,7 @@
 body:not(.sidebar-color) {
 	.mod-secondary-split {
 		--background-secondary: var(--background-primary);
+		--sidebar-tab-container-background: var(--background-primary);
 
 		:not(.mod-top) .workspace-tab-header-container {
 			--tab-container-background: var(--background-primary);

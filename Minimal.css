@@ -1089,6 +1089,7 @@ body.is-focused {
 
 .is-hidden-frameless:not(.colorful-frame) .mod-primary-split .mod-top .workspace-tab-header-container {
   --tab-container-background: var(--background-secondary);
+  --sidebar-tab-container-background: var(--background-secondary);
 }
 
 .mod-root .workspace-tab-header-status-icon {
@@ -3726,6 +3727,7 @@ body:not(.links-ext-on) {
 
 body:not(.sidebar-color) .mod-secondary-split {
   --background-secondary: var(--background-primary);
+  --sidebar-tab-container-background: var(--background-primary);
 }
 body:not(.sidebar-color) .mod-secondary-split :not(.mod-top) .workspace-tab-header-container {
   --tab-container-background: var(--background-primary);
