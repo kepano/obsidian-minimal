@@ -1,5 +1,18 @@
 /* Eink */
 
+// Recolor everything inside a row that sits on an inverted highlight.
+@mixin highlighted-row($color, $checkbox-marker) {
+	color: $color;
+	--text-normal: #{$color};
+	--text-accent: #{$color};
+	--text-muted: #{$color};
+	--text-faint: #{$color};
+	--icon-color: #{$color};
+	--checkbox-color: #{$color};
+	--checkbox-border-color: #{$color};
+	--checkbox-marker-color: #{$checkbox-marker};
+}
+
 .theme-light.minimal-eink-light,
 .theme-dark.minimal-eink-dark {
 	--collapse-icon-color: var(--text-normal);
@@ -7,11 +20,14 @@
 	--icon-color-hover: var(--bg1);
 	--icon-color-focused: var(--bg1);
 	--icon-opacity: 1;
+	--eink-highlight-color: var(--bg1);
 	--indentation-guide-color: var(--tx1);
 	--indentation-guide-color-active: var(--tx1);
 	--indentation-guide-width-active: 3px;
 	--interactive-normal: var(--bg1);
+	--interactive-hover: var(--ui1);
 	--input-shadow: 0 0 0 1px var(--tx1);
+	--input-shadow-hover: var(--input-shadow);
 	--link-unresolved-opacity: 1;
 	--link-unresolved-decoration-style: dashed;
 	--link-unresolved-decoration-color: var(--tx1);
@@ -33,18 +49,86 @@
 	--text-on-accent-inverted: var(--bg1);
 	--text-selection: var(--tx1);
 	--vault-profile-color: var(--tx1);
-	--nav-item-color-hover: var(--bg1);
+	--nav-item-color-hover: var(--eink-highlight-color);
+	--nav-item-color-active: var(--eink-highlight-color);
 
-	button:hover,
 	::selection {
 		color: var(--bg1);
+	}
+
+	// Obsidian only draws these hover backgrounds on devices that can hover.
+	@media (hover: hover) {
+		button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover,
+		select:not(:disabled):not(.mod-disabled):hover,
+		.dropdown:not(:disabled):not(.mod-disabled):hover {
+			color: var(--eink-highlight-color);
+		}
+		.setting-item.mod-action:not(.is-disabled):hover {
+			@include highlighted-row(var(--eink-highlight-color), var(--background-modifier-hover));
+		}
+		.horizontal-tab-nav-item:hover,
+		.vertical-tab-nav-item:hover {
+			background-color: var(--bg3);
+			color: var(--eink-highlight-color);
+		}
+		.tree-item-self:not(.is-active):hover {
+			--nav-collapse-icon-color: var(--nav-item-color-hover);
+			--icon-color: var(--nav-item-color-hover);
+			--text-muted: var(--nav-item-color-hover);
+			--text-faint: var(--nav-item-color-hover);
+		}
+	}
+
+	button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive).mobile-tap,
+	select.mobile-tap:not(.mod-disabled),
+	.dropdown.mobile-tap:not(.mod-disabled) {
+		color: var(--eink-highlight-color);
+	}
+	select option {
+		color: var(--text-normal);
+		background-color: var(--background-primary);
+	}
+	// Draw the chevron as the inverse of the background, so it survives hover and tap.
+	.dropdown {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m7 15 5 5 5-5'/%3E%3Cpath d='m7 9 5-5 5 5'/%3E%3C/svg%3E"), radial-gradient(ellipse, var(--dropdown-icon-background) 48%, transparent 50%);
+		background-blend-mode: difference, normal;
+	}
+	.menu {
+		--background-modifier-hover: var(--bg3);
+	}
+	.menu-item:not(.is-label):not(.is-disabled):is(.selected, .mobile-tap),
+	.suggestion-item:is(.is-selected, .mobile-tap),
+	.setting-item.mod-navigable.mobile-tap,
+	.setting-item.mod-action.mobile-tap:not(.is-disabled) {
+		@include highlighted-row(var(--eink-highlight-color), var(--background-modifier-hover));
+	}
+
+	.horizontal-tab-nav-item:is(.mobile-tap, .is-active),
+	.vertical-tab-nav-item:is(.mobile-tap, .is-active) {
+		background-color: var(--bg3);
+		color: var(--eink-highlight-color);
+	}
+	.vertical-tab-nav-item:is(:hover, .mobile-tap, .is-active) :is(.vertical-tab-nav-item-icon, .vertical-tab-nav-item-chevron) {
+		color: inherit;
 	}
 
 	.nav-files-container {
 		--nav-item-color-active: var(--bg1);
 	}
-	.tree-item-self:hover {
-		--nav-collapse-icon-color: var(--bg1);
+	// These use the active color without the active background.
+	.tree-item-self.is-being-renamed:not(.is-active):focus-within,
+	.search-result:not(.is-collapsed) .search-result-file-title:not(.mobile-tap) {
+		--nav-item-color-active: var(--text-normal);
+	}
+	// Colorful active states resets this for active rows too, which keep their dark background.
+	.tree-item-self.is-active.is-being-renamed:focus-within {
+		--nav-item-color-active: inherit;
+	}
+	.tree-item-self.mobile-tap {
+		--nav-collapse-icon-color: var(--nav-item-color-hover);
+		--icon-color: var(--nav-item-color-hover);
+		--text-muted: var(--nav-item-color-hover);
+		--text-faint: var(--nav-item-color-hover);
 	}
 
 	&.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
@@ -65,9 +149,11 @@
 	.cm-s-obsidian span.cm-inline-code {
 		font-weight: 600;
 	}
-	.tree-item-self:hover,
 	.tree-item-self.is-active {
-		--icon-color: var(--bg1);
+		--nav-collapse-icon-color: var(--nav-item-color-active);
+		--icon-color: var(--nav-item-color-active);
+		--text-muted: var(--nav-item-color-active);
+		--text-faint: var(--nav-item-color-active);
 	}
 	.metadata-property-icon {
 		--icon-color-focused: var(--tx1);
@@ -97,17 +183,11 @@
 	.cm-s-obsidian span.cm-formatting-highlight,
 	.cm-s-obsidian span.cm-highlight,
 	.markdown-rendered mark,
-	.suggestion-item.is-selected,
-	.horizontal-tab-nav-item:hover,
 	.search-result-file-matched-text,
-	.vertical-tab-nav-item:hover,
 	.mod-root .workspace-tab-header-status-icon,
 	.mod-root .workspace-tab-header:hover,
-	&:not(.colorful-active) .horizontal-tab-nav-item.is-active,
-	&:not(.colorful-active) .vertical-tab-nav-item.is-active,
 	button.mod-cta,
-	.search-result-file-match:hover,
-	select:hover, .dropdown:hover {
+	.search-result-file-match:hover {
 		color: var(--bg1);
 	}
 
@@ -151,6 +231,12 @@
 	--text-on-accent:#ffffff;
 
 	--background-modifier-cover: rgba(235,235,235,1);
+
+	&.is-mobile {
+		.menu {
+			--interactive-normal: var(--background-primary);
+		}
+	}
 }
 
 .theme-light.minimal-eink-light.minimal-light-contrast .titlebar,
@@ -191,8 +277,11 @@
 
 	--vault-profile-color: var(--tx1);
 	--vault-profile-color-hover: var(--bg1);
-	--nav-item-color-hover: var(--bg1);
-	--nav-item-color-active: var(--bg1);
+
+	// Resolve the highlight colors against the local high-contrast palette.
+	--eink-highlight-color: var(--bg1);
+	--nav-item-color-hover: var(--eink-highlight-color);
+	--nav-item-color-active: var(--eink-highlight-color);
 }
 .theme-light.minimal-eink-light.minimal-light-tonal {
 	--bg3:#bbbbbb;
@@ -207,6 +296,7 @@
 .theme-light.minimal-eink-light.minimal-light-tonal,
 .theme-dark.minimal-eink-dark.minimal-dark-tonal {
 	--hl2: var(--bg3);
+	--eink-highlight-color: var(--tx1);
 
 	--modal-border-color: var(--ui1);
 	--prompt-border-color: var(--ui1);
@@ -214,8 +304,6 @@
 	--text-selection: var(--bg3);
 	--icon-color-active: var(--tx1);
 	--icon-color-focused: var(--tx1);
-	--nav-item-color-active: var(--tx1);
-	--nav-item-color-hover: var(--tx1);
 	--minimal-tab-text-color-active: var(--tx1);
 
 	.is-flashing,
@@ -224,9 +312,7 @@
 		color: var(--tx1);
 	}
 	::selection,
-	#calendar-container .reset-button:hover,
-	&:not(.colorful-active) .vertical-tab-nav-item:hover,
-	&:not(.colorful-active) .vertical-tab-nav-item.is-active {
+	#calendar-container .reset-button:hover {
 		color: var(--tx1);
 	}
 }
