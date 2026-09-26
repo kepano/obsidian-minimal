@@ -50,6 +50,7 @@
 	--text-on-accent-inverted: var(--bg1);
 	--text-selection: var(--tx1);
 	--vault-profile-color: var(--tx1);
+	--vault-profile-color-hover: var(--eink-highlight-color);
 	--nav-item-color-hover: var(--eink-highlight-color);
 	--nav-item-color-active: var(--eink-highlight-color);
 
@@ -67,11 +68,17 @@
 		button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover,
 		select:not(:disabled):not(.mod-disabled):hover,
 		.combobox-button:not(:disabled):not(.mod-disabled):hover,
-		.dropdown:not(:disabled):not(.mod-disabled):hover {
+		.dropdown:not(:disabled):not(.mod-disabled):hover,
+		.view-header-title-parent .view-header-breadcrumb:hover,
+		.titlebar-button:not(.mod-close):hover {
 			color: var(--eink-highlight-color);
 		}
 		.text-icon-button:not(.is-active):is(:hover, .has-active-menu) {
 			color: var(--bg1);
+		}
+		.workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button,
+		.workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
+			color: var(--icon-color-hover);
 		}
 		// Bases headers inside callouts get a light hover background instead.
 		.setting-item.mod-action:not(.is-disabled):hover,
@@ -96,7 +103,8 @@
 	button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive).mobile-tap,
 	select.mobile-tap:not(.mod-disabled),
 	.combobox-button.mobile-tap:not(.mod-disabled),
-	.dropdown.mobile-tap:not(.mod-disabled) {
+	.dropdown.mobile-tap:not(.mod-disabled),
+	.view-header-title-parent .view-header-breadcrumb.has-active-menu {
 		color: var(--eink-highlight-color);
 	}
 	.combobox-button:is(:hover, .mobile-tap) :is(.combobox-button-icon, .combobox-clear-button),
@@ -175,6 +183,12 @@
 		--text-muted: var(--nav-item-color-hover);
 		--text-faint: var(--nav-item-color-hover);
 	}
+	.workspace-drawer-vault-switcher:is(:hover, .has-active-menu) {
+		--text-muted: var(--vault-profile-color-hover);
+	}
+	.workspace-drawer-vault-switcher.has-active-menu {
+		--vault-profile-color: var(--vault-profile-color-hover);
+	}
 	.workspace-drawer-tab-options {
 		.workspace-tab-header:is(.is-swiping, .mobile-tap) .workspace-tab-header-inner,
 		&:not(.has-swipe) .workspace-tab-header.is-active .workspace-tab-header-inner:not(.has-active-menu) {
@@ -198,6 +212,14 @@
 	.mobile-tab-switcher-menubar,
 	.bases-toolbar-item.bases-toolbar-views-menu .text-icon-button {
 		--icon-color-hover: inherit;
+	}
+
+	// Stacked tab headers get no hover background; only their icon does.
+	.workspace-tabs.mod-stacked .workspace-tab-header:hover {
+		color: inherit;
+		.workspace-tab-header-inner-icon:not(:hover) {
+			color: inherit;
+		}
 	}
 
 	&.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
@@ -344,10 +366,10 @@
 	--background-modifier-cover: rgba(20,20,20,1);
 
 	--vault-profile-color: var(--tx1);
-	--vault-profile-color-hover: var(--bg1);
 
 	// Resolve the highlight colors against the local high-contrast palette.
 	--eink-highlight-color: var(--bg1);
+	--vault-profile-color-hover: var(--eink-highlight-color);
 	--nav-item-color-hover: var(--eink-highlight-color);
 	--nav-item-color-active: var(--eink-highlight-color);
 }
