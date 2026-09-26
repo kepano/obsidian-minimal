@@ -53,6 +53,11 @@
 	--nav-item-color-hover: var(--eink-highlight-color);
 	--nav-item-color-active: var(--eink-highlight-color);
 
+	// On mobile, Obsidian gives hovered inputs --interactive-hover, which is black here.
+	&.is-mobile {
+		--background-modifier-form-field-hover: var(--background-modifier-form-field);
+	}
+
 	::selection {
 		color: var(--bg1);
 	}
@@ -137,7 +142,8 @@
 	.bases-thead .bases-td.has-active-menu:not(.callout *) {
 		@include highlighted-row(var(--eink-highlight-color), var(--background-modifier-hover));
 	}
-	// Obsidian drops the selected background in unfocused comboboxes.
+	// Obsidian drops the selected background in phone menus and unfocused comboboxes.
+	&.is-phone .menu .suggestion-group .suggestion-item.is-selected:not(.mobile-tap),
 	.combobox:not(.has-input-focus) .suggestion-item.is-selected {
 		@include highlighted-row(inherit, inherit);
 	}
@@ -169,7 +175,27 @@
 		--text-muted: var(--nav-item-color-hover);
 		--text-faint: var(--nav-item-color-hover);
 	}
-	// Obsidian resets this for a light hover background.
+	.workspace-drawer-tab-options {
+		.workspace-tab-header:is(.is-swiping, .mobile-tap) .workspace-tab-header-inner,
+		&:not(.has-swipe) .workspace-tab-header.is-active .workspace-tab-header-inner:not(.has-active-menu) {
+			--icon-color: var(--eink-highlight-color);
+			color: var(--eink-highlight-color);
+		}
+		// Hovering adds no background here.
+		.workspace-tab-header-inner:hover .workspace-tab-header-inner-icon {
+			color: inherit;
+		}
+	}
+	// The mobile drawer drops the background these states have on desktop.
+	.workspace-drawer .nav-buttons-container .nav-action-button:is(.is-active, .has-active-menu, .mobile-tap, :active) {
+		color: var(--eink-highlight-color);
+		background-color: var(--background-modifier-hover);
+	}
+	// Obsidian resets these for a light hover background, which only raised buttons on phones keep.
+	&.is-mobile :is(.modal-header-button, .modal-close-button, .modal-setting-back-button, .view-header-nav-buttons, .view-header .view-action):not(.is-phone .mod-raised),
+	&.is-tablet .sidebar-toggle-button,
+	.mobile-navbar-actions,
+	.mobile-tab-switcher-menubar,
 	.bases-toolbar-item.bases-toolbar-views-menu .text-icon-button {
 		--icon-color-hover: inherit;
 	}
