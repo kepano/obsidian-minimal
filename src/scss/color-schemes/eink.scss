@@ -7,6 +7,7 @@
 	--text-accent: #{$color};
 	--text-muted: #{$color};
 	--text-faint: #{$color};
+	--bases-table-header-color: #{$color};
 	--icon-color: #{$color};
 	--checkbox-color: #{$color};
 	--checkbox-border-color: #{$color};
@@ -60,10 +61,18 @@
 	@media (hover: hover) {
 		button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive):hover,
 		select:not(:disabled):not(.mod-disabled):hover,
+		.combobox-button:not(:disabled):not(.mod-disabled):hover,
 		.dropdown:not(:disabled):not(.mod-disabled):hover {
 			color: var(--eink-highlight-color);
 		}
-		.setting-item.mod-action:not(.is-disabled):hover {
+		.text-icon-button:not(.is-active):is(:hover, .has-active-menu) {
+			color: var(--bg1);
+		}
+		// Bases headers inside callouts get a light hover background instead.
+		.setting-item.mod-action:not(.is-disabled):hover,
+		.bases-thead .bases-td:not(.callout *):hover,
+		.bases-toolbar-menu-item:not(.suggestion-item):hover,
+		.bases-toolbar-menu-container-header .back-button:hover {
 			@include highlighted-row(var(--eink-highlight-color), var(--background-modifier-hover));
 		}
 		.horizontal-tab-nav-item:hover,
@@ -81,8 +90,24 @@
 
 	button:not(.clickable-icon, .mod-cta, .mod-warning, .mod-destructive).mobile-tap,
 	select.mobile-tap:not(.mod-disabled),
+	.combobox-button.mobile-tap:not(.mod-disabled),
 	.dropdown.mobile-tap:not(.mod-disabled) {
 		color: var(--eink-highlight-color);
+	}
+	.combobox-button:is(:hover, .mobile-tap) :is(.combobox-button-icon, .combobox-clear-button),
+	.combobox-button:is(:hover, .mobile-tap) .combobox-button-label:empty::before {
+		color: inherit;
+	}
+	// E-ink has no accent color, so mark active buttons by inverting them.
+	.text-icon-button.is-active {
+		background-color: var(--background-modifier-active-hover);
+		&.mobile-tap {
+			color: var(--icon-color-active);
+		}
+	}
+	// Tapping adds no background, so keep the icon with the label.
+	.text-icon-button.mobile-tap .text-button-icon {
+		color: inherit;
 	}
 	select option {
 		color: var(--text-normal);
@@ -93,14 +118,28 @@
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m7 15 5 5 5-5'/%3E%3Cpath d='m7 9 5-5 5 5'/%3E%3C/svg%3E"), radial-gradient(ellipse, var(--dropdown-icon-background) 48%, transparent 50%);
 		background-blend-mode: difference, normal;
 	}
+	// Transparent at rest, leaving the chevron nothing to invert, and hovered on every device.
+	.bases-query-container .filter-group .filter-group-header .conjunction.dropdown {
+		&:not(:hover) {
+			background-color: var(--dropdown-background);
+		}
+		&:hover {
+			color: var(--eink-highlight-color);
+		}
+	}
 	.menu {
 		--background-modifier-hover: var(--bg3);
 	}
 	.menu-item:not(.is-label):not(.is-disabled):is(.selected, .mobile-tap),
 	.suggestion-item:is(.is-selected, .mobile-tap),
 	.setting-item.mod-navigable.mobile-tap,
-	.setting-item.mod-action.mobile-tap:not(.is-disabled) {
+	.setting-item.mod-action.mobile-tap:not(.is-disabled),
+	.bases-thead .bases-td.has-active-menu:not(.callout *) {
 		@include highlighted-row(var(--eink-highlight-color), var(--background-modifier-hover));
+	}
+	// Obsidian drops the selected background in unfocused comboboxes.
+	.combobox:not(.has-input-focus) .suggestion-item.is-selected {
+		@include highlighted-row(inherit, inherit);
 	}
 
 	.horizontal-tab-nav-item:is(.mobile-tap, .is-active),
@@ -129,6 +168,10 @@
 		--icon-color: var(--nav-item-color-hover);
 		--text-muted: var(--nav-item-color-hover);
 		--text-faint: var(--nav-item-color-hover);
+	}
+	// Obsidian resets this for a light hover background.
+	.bases-toolbar-item.bases-toolbar-views-menu .text-icon-button {
+		--icon-color-hover: inherit;
 	}
 
 	&.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
@@ -178,7 +221,6 @@
 	.status-bar .plugin-sync:hover .sync-status-icon.mod-success,
 	.status-bar .plugin-sync:hover .sync-status-icon.mod-working,
 	.status-bar-item.mod-clickable:hover,
-	.text-icon-button:hover,
 	.community-item .suggestion-highlight,
 	.cm-s-obsidian span.cm-formatting-highlight,
 	.cm-s-obsidian span.cm-highlight,
