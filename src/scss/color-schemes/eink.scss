@@ -77,23 +77,30 @@
 			color: var(--bg1);
 		}
 		.workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button,
-		.workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
+		.workspace-tab-header.is-active :is(.workspace-tab-header-inner-close-button, .workspace-tab-header-status-icon):hover,
+		.mod-community-modal .modal-sidebar button.clickable-icon:is(:hover, .has-active-menu) {
 			color: var(--icon-color-hover);
 		}
 		// Bases headers inside callouts get a light hover background instead.
 		.setting-item.mod-action:not(.is-disabled):hover,
 		.bases-thead .bases-td:not(.callout *):hover,
 		.bases-toolbar-menu-item:not(.suggestion-item):hover,
-		.bases-toolbar-menu-container-header .back-button:hover {
+		.bases-toolbar-menu-container-header .back-button:hover,
+		.list-item.mod-selectable:hover {
 			@include highlighted-row(var(--eink-highlight-color), var(--background-modifier-hover));
+		}
+		// The current tab gets no hover background, so its icon keeps the tab's color.
+		.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover .workspace-tab-header-inner-icon {
+			color: inherit;
 		}
 		.horizontal-tab-nav-item:hover,
 		.vertical-tab-nav-item:hover {
 			background-color: var(--bg3);
 			color: var(--eink-highlight-color);
 		}
-		.tree-item-self:not(.is-active):hover {
+		&:not(.is-grabbing) .tree-item-self.is-clickable:not(.is-active):hover {
 			--nav-collapse-icon-color: var(--nav-item-color-hover);
+			--nav-heading-color-collapsed-hover: var(--nav-item-color-hover);
 			--icon-color: var(--nav-item-color-hover);
 			--text-muted: var(--nav-item-color-hover);
 			--text-faint: var(--nav-item-color-hover);
@@ -122,6 +129,10 @@
 	.text-icon-button.mobile-tap .text-button-icon {
 		color: inherit;
 	}
+	// Obsidian drops the active background for buttons inside inputs, like Match case.
+	.input-right-decorator.clickable-icon.is-active {
+		background-color: var(--background-modifier-active-hover);
+	}
 	select option {
 		color: var(--text-normal);
 		background-color: var(--background-primary);
@@ -147,7 +158,8 @@
 	.suggestion-item:is(.is-selected, .mobile-tap),
 	.setting-item.mod-navigable.mobile-tap,
 	.setting-item.mod-action.mobile-tap:not(.is-disabled),
-	.bases-thead .bases-td.has-active-menu:not(.callout *) {
+	.bases-thead .bases-td.has-active-menu:not(.callout *),
+	.list-item.mod-selectable.mobile-tap {
 		@include highlighted-row(var(--eink-highlight-color), var(--background-modifier-hover));
 	}
 	// Obsidian drops the selected background in phone menus and unfocused comboboxes.
@@ -179,6 +191,7 @@
 	}
 	.tree-item-self.mobile-tap {
 		--nav-collapse-icon-color: var(--nav-item-color-hover);
+		--nav-heading-color-collapsed: var(--nav-item-color-hover);
 		--icon-color: var(--nav-item-color-hover);
 		--text-muted: var(--nav-item-color-hover);
 		--text-faint: var(--nav-item-color-hover);
@@ -214,6 +227,10 @@
 		--icon-color-hover: inherit;
 	}
 
+	// Linked and pinned icons in tabs follow the tab's own text color.
+	.mod-root .workspace-tab-header-status-icon {
+		color: inherit;
+	}
 	// Stacked tab headers get no hover background; only their icon does.
 	.workspace-tabs.mod-stacked .workspace-tab-header:hover {
 		color: inherit;
@@ -274,8 +291,7 @@
 	.cm-s-obsidian span.cm-highlight,
 	.markdown-rendered mark,
 	.search-result-file-matched-text,
-	.mod-root .workspace-tab-header-status-icon,
-	.mod-root .workspace-tab-header:hover,
+	.mod-root .workspace-tab-header:not(.is-active):hover,
 	button.mod-cta,
 	.search-result-file-match:hover {
 		color: var(--bg1);
