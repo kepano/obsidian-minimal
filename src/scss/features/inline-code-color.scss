@@ -1,3 +1,13 @@
 body.minimal-inline-code-colored {
 	--text-code: var(--interactive-accent);
+
+	// reading view - inline only, not code blocks
+	.markdown-rendered :not(pre) > code {
+		color: var(--interactive-accent);
+	}
+
+	// live preview / editor
+	.cm-s-obsidian .cm-inline-code {
+		color: var(--interactive-accent);
+	}
 }
