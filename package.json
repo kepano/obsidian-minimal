@@ -1,6 +1,6 @@
 {
 	"name": "minimal",
-	"version": "8.2.1",
+	"version": "9.1.1",
 	"scripts": {
 		"build": "node build.js",
 		"dev": "node build.js --watch"
