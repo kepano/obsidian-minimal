@@ -32,7 +32,7 @@ You can learn more about me on [my personal site](https://stephango.com/about) a
 
 [Open in Obsidian](obsidian://show-plugin?id=obsidian-minimal-settings) or follow the steps below:
 
-1. Go to `Community Plugins` and turn off `Safe mode`
+1. Go to `Community Plugins` and turn off `Restricted mode`
 2. Search for **Minimal Theme Settings** and click `Install`, then `Enable`
 
 ### 3. Install optional related plugins
