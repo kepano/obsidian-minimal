@@ -9,8 +9,9 @@
 	--accent-s:71%;
 	--accent-l:52%;
 
+	--bg1:#fff;
 	--bg2:#f7f6f4;
-	--bg3:#e8e7e4;
+	--bg3:#e9e8e4;
 
 	--ui1:#ededec;
 	--ui2:#dbdbda;
@@ -21,6 +22,10 @@
 	--tx3:#aaa9a5;
 
 	--hl1:rgba(131,201,229,0.3);
+}
+.theme-light.minimal-notion-light.minimal-light-tonal {
+	--bg1:#f7f6f4;
+	--bg2: #f7f6f4;
 }
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-notion-light.minimal-light-contrast.minimal-status-off .status-bar,

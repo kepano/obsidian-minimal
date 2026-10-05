@@ -1064,6 +1064,10 @@ body.window-title-off .titlebar-text {
 .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) {
   --titlebar-background: var(--bg1);
 }
+.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame) .workspace-ribbon.mod-primary:not(.is-collapsed),
+.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-primary:not(.is-collapsed) {
+  --titlebar-background: var(--bg2);
+}
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-secondary,
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-ribbon.mod-primary.is-collapsed,
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-tabs.mod-top,
@@ -5240,6 +5244,10 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   --hl2:rgba(209,154,102,0.35);
 }
 
+.theme-light.minimal-atom-light.minimal-light-tonal {
+  --bg2:#fafafa;
+}
+
 .theme-light.minimal-atom-light.minimal-light-white {
   --bg3:#eaeaeb;
 }
@@ -5333,6 +5341,11 @@ https://github.com/ayu-theme/ayu-colors
   --color-blue:#73d0ff;
   --color-purple:#dfbfff;
   --color-pink:#f27983;
+}
+
+.theme-light.minimal-ayu-light.minimal-light-tonal {
+  --bg1:#f8f9fa;
+  --bg2:#f8f9fa;
 }
 
 .theme-light.minimal-ayu-light.minimal-light-contrast .titlebar,
@@ -5432,7 +5445,7 @@ https://github.com/catppuccin/catppuccin
 }
 
 .theme-light.minimal-catppuccin-light.minimal-light-tonal {
-  --bg2: #DCE0E8;
+  --bg2: #F0F1F5;
 }
 
 .theme-light.minimal-catppuccin-light.minimal-light-white {
@@ -6176,6 +6189,10 @@ https://github.com/nordtheme/nord
   --hl2:rgba(208, 135, 112, 0.35);
 }
 
+.theme-light.minimal-nord-light.minimal-light-tonal {
+  --bg1:#eceff4;
+}
+
 .theme-light.minimal-nord-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-nord-light.minimal-light-contrast.minimal-status-off .status-bar,
 .theme-light.minimal-nord-light.minimal-light-contrast .workspace-drawer.mod-primary,
@@ -6214,8 +6231,9 @@ https://github.com/nordtheme/nord
   --accent-h:197;
   --accent-s:71%;
   --accent-l:52%;
+  --bg1:#fff;
   --bg2:#f7f6f4;
-  --bg3:#e8e7e4;
+  --bg3:#e9e8e4;
   --ui1:#ededec;
   --ui2:#dbdbda;
   --ui3:#aaa9a5;
@@ -6223,6 +6241,11 @@ https://github.com/nordtheme/nord
   --tx2:#72706c;
   --tx3:#aaa9a5;
   --hl1:rgba(131,201,229,0.3);
+}
+
+.theme-light.minimal-notion-light.minimal-light-tonal {
+  --bg1:#f7f6f4;
+  --bg2: #f7f6f4;
 }
 
 .theme-light.minimal-notion-light.minimal-light-contrast .titlebar,
@@ -6314,6 +6337,10 @@ https://github.com/rose-pine/rose-pine-theme
   --color-blue: #9ccfd8;
   --color-purple: #c4a7e7;
   --color-pink: #c4a7e7;
+}
+
+.theme-light.minimal-rose-pine-light.minimal-light-tonal {
+  --bg2:#fffaf3;
 }
 
 .theme-light.minimal-rose-pine-light.minimal-light-contrast .titlebar,
@@ -6471,6 +6498,7 @@ https://ethanschoonover.com/solarized/
 }
 
 .theme-light.minimal-things-light.minimal-light-tonal {
+  --bg1:#f5f6f8;
   --ui1:#e6e8ec;
 }
 
