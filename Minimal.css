@@ -472,6 +472,7 @@ body .excalidraw {
   --title-color: var(--tx1);
   --titlebar-background: var(--bg2);
   --titlebar-background-focused: var(--bg2);
+  --titlebar-text-color: var(--tx2);
   --titlebar-text-color-focused: var(--tx1);
   --vault-profile-color: var(--tx1);
   --vault-profile-color-hover: var(--tx1);
@@ -1057,7 +1058,7 @@ body.window-title-off .titlebar-text {
   display: none;
 }
 
-.titlebar-button-container.mod-secondary {
+.titlebar-button-container.mod-right {
   background-color: transparent !important;
 }
 
@@ -1084,8 +1085,23 @@ body.window-title-off .titlebar-text {
   padding-right: var(--size-4-2);
 }
 
+body {
+  --minimal-titlebar-text-color: var(--titlebar-text-color);
+  --minimal-titlebar-text-color-focused: var(--titlebar-text-color-focused);
+}
 body.is-focused {
   --titlebar-background-focused: var(--background-secondary);
+}
+body.is-focused .titlebar,
+body.is-focused .workspace-ribbon.mod-primary,
+body.is-focused .sidebar-toggle-button,
+body.is-focused .workspace-tabs.mod-top {
+  --titlebar-background: var(--titlebar-background-focused);
+}
+
+.is-hidden-frameless:not(.in-progress, .starter, .is-popout-modal) .titlebar {
+  --titlebar-text-color: var(--minimal-titlebar-text-color);
+  --titlebar-text-color-focused: var(--minimal-titlebar-text-color-focused);
 }
 
 .is-hidden-frameless:not(.colorful-frame) .mod-primary-split .mod-top .workspace-tab-header-container {

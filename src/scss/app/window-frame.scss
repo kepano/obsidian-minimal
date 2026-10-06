@@ -3,7 +3,7 @@ body.window-title-off .titlebar-text {
   display:none;
 }
 
-.titlebar-button-container.mod-secondary {
+.titlebar-button-container.mod-right {
 	background-color: transparent !important;
 }
 
@@ -35,9 +35,25 @@ body.window-title-off .titlebar-text {
 }
 
 body {
+	// Resolve floating control colors before high-contrast titlebar overrides.
+	--minimal-titlebar-text-color: var(--titlebar-text-color);
+	--minimal-titlebar-text-color-focused: var(--titlebar-text-color-focused);
+
 	&.is-focused {
 		--titlebar-background-focused: var(--background-secondary);
+
+		.titlebar,
+		.workspace-ribbon.mod-primary,
+		.sidebar-toggle-button,
+		.workspace-tabs.mod-top {
+			--titlebar-background: var(--titlebar-background-focused);
+		}
 	}
+}
+
+.is-hidden-frameless:not(.in-progress, .starter, .is-popout-modal) .titlebar {
+	--titlebar-text-color: var(--minimal-titlebar-text-color);
+	--titlebar-text-color-focused: var(--minimal-titlebar-text-color-focused);
 }
 
 .is-hidden-frameless:not(.colorful-frame) {
