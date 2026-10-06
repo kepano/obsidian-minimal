@@ -495,6 +495,7 @@ body .excalidraw {
 
 .theme-light.minimal-light-contrast .theme-dark {
   --tab-container-background: var(--bg2);
+  --sidebar-tab-container-background: var(--bg2);
   --ribbon-background-collapsed: var(--bg2);
 }
 
