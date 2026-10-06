@@ -1065,10 +1065,6 @@ body.window-title-off .titlebar-text {
 .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) {
   --titlebar-background: var(--bg1);
 }
-.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame) .workspace-ribbon.mod-primary:not(.is-collapsed),
-.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-primary:not(.is-collapsed) {
-  --titlebar-background: var(--bg2);
-}
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-secondary,
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-ribbon.mod-primary.is-collapsed,
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-tabs.mod-top,

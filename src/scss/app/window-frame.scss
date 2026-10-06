@@ -11,10 +11,6 @@ body.window-title-off .titlebar-text {
 .is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) {
 	--titlebar-background: var(--bg1);
 
-	.workspace-ribbon.mod-primary:not(.is-collapsed) {
-		--titlebar-background: var(--bg2);
-	}
-
 	&.is-focused {
 		.sidebar-toggle-button.mod-secondary,
 		.workspace-ribbon.mod-primary.is-collapsed,
