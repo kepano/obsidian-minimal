@@ -3100,13 +3100,13 @@ body.colorful-headings .modal {
 }
 
 body.minimal-inline-code-colored {
-  --text-code: var(--interactive-accent);
+  --text-code: var(--color-red);
 }
 body.minimal-inline-code-colored .markdown-rendered :not(pre) > code {
-  color: var(--interactive-accent);
+  color: var(--color-red);
 }
 body.minimal-inline-code-colored .cm-s-obsidian .cm-inline-code {
-  color: var(--interactive-accent);
+  color: var(--color-red);
 }
 
 /* Focus mode */
