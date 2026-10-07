@@ -1,0 +1,13 @@
+body.minimal-inline-code-colored {
+	--text-code: var(--color-red);
+
+	// reading view - inline only, not code blocks
+	.markdown-rendered :not(pre) > code {
+		color: var(--color-red);
+	}
+
+	// live preview / editor
+	.cm-s-obsidian .cm-inline-code {
+		color: var(--color-red);
+	}
+}
