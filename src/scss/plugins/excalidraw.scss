@@ -1,0 +1,12 @@
+// src/scss/plugins/excalidraw.scss
+.excalidraw input[type="checkbox"] {
+	border: 1.5px solid var(--ui2);
+	border-radius: 3px;
+	background-color: var(--bg1);
+}
+
+.excalidraw input[type="checkbox"]:checked {
+	background-color: var(--accent);
+	border-color: var(--accent);
+	color: var(--bg1);
+}
