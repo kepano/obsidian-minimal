@@ -3697,6 +3697,7 @@ https://github.com/sponsors/kepano
   padding: 0;
   margin-bottom: 2px;
   border: none;
+  box-shadow: none;
   height: auto;
 }
 .labeled-nav .mod-primary-split .mod-top .workspace-tab-header.is-active:not(:hover) {
