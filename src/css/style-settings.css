@@ -355,6 +355,12 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: minimal-inline-code-colored
+		title: Colored inline code
+		description: Use the accent color for inline code text in reading view
+		type: class-toggle
+		default: true
+	-
 		id: syntax-highlighting
 		title: Syntax highlighting
 		type: heading
