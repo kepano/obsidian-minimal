@@ -3484,14 +3484,20 @@ div[src$="#invert"] {
 }
 
 .theme-dark img[src$="#invert"],
+.theme-dark img[alt$=invert],
 .theme-dark div[src$="#invert"] img,
-.theme-dark span[src$="#invert"] img {
+.theme-dark div[alt$=invert] img,
+.theme-dark span[src$="#invert"] img,
+.theme-dark span[alt$=invert] img {
   filter: invert(1) hue-rotate(180deg);
   mix-blend-mode: screen;
 }
 .theme-dark img[src$="#blend"],
+.theme-dark img[alt$=blend],
 .theme-dark div[src$="#blend"] img,
-.theme-dark span[src$="#blend"] img {
+.theme-dark div[alt$=blend] img,
+.theme-dark span[src$="#blend"] img,
+.theme-dark span[alt$=blend] img {
   mix-blend-mode: screen;
 }
 .theme-dark .img-blend {
@@ -3499,13 +3505,19 @@ div[src$="#invert"] {
 }
 
 .theme-light img[src$="#blend"],
+.theme-light img[alt$=blend],
 .theme-light div[src$="#blend"] img,
-.theme-light span[src$="#blend"] img {
+.theme-light div[alt$=blend] img,
+.theme-light span[src$="#blend"] img,
+.theme-light span[alt$=blend] img {
   mix-blend-mode: multiply;
 }
 .theme-light img[src$="#invertW"],
+.theme-light img[alt$=invertW],
 .theme-light div[src$="#invertW"] img,
-.theme-light span[src$=invertW] img {
+.theme-light div[alt$=invertW] img,
+.theme-light span[src$="#invertW"] img,
+.theme-light span[alt$=invertW] img {
   filter: invert(1) hue-rotate(180deg);
 }
 .theme-light .img-blend {
@@ -3514,22 +3526,30 @@ div[src$="#invert"] {
 
 /* Circle */
 img[src$="#circle"]:not(.emoji),
+img[alt$=circle]:not(.emoji),
 span[src$="#circle"] img:not(.emoji),
-span[src$="#round"] img:not(.emoji) {
+span[alt$=circle] img:not(.emoji),
+span[src$="#round"] img:not(.emoji),
+span[alt$=round] img:not(.emoji) {
   border-radius: 50%;
   aspect-ratio: 1/1;
 }
 
 /* Outline */
 img[src$="#outline"],
+img[alt$=outline],
 div[src$="#outline"] img,
-span[src$="#outline"] img {
+div[alt$=outline] img,
+span[src$="#outline"] img,
+span[alt$=outline] img {
   border: 1px solid var(--ui1);
 }
 
 /* Interface */
 img[src$="#interface"],
-span[src$="#interface"] img {
+img[alt$=interface],
+span[src$="#interface"] img,
+span[alt$=interface] img {
   border: 1px solid var(--ui1);
   box-shadow: 0px 0.5px 0.9px rgba(0, 0, 0, 0.021), 0px 1.3px 2.5px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.039), 0px 10px 20px rgba(0, 0, 0, 0.06);
   margin-top: 10px;

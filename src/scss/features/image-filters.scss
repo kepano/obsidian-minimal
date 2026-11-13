@@ -41,14 +41,20 @@ div[src$="#invert"] {
 
 .theme-dark {
 	img[src$="#invert"],
+	img[alt$="invert"],
 	div[src$="#invert"] img,
-	span[src$="#invert"] img {
+	div[alt$="invert"] img,
+	span[src$="#invert"] img,
+	span[alt$="invert"] img {
 		filter: invert(1) hue-rotate(180deg);
 		mix-blend-mode: screen;
 	}
 	img[src$="#blend"],
+	img[alt$="blend"],
 	div[src$="#blend"] img,
-	span[src$="#blend"] img {
+	div[alt$="blend"] img,
+	span[src$="#blend"] img,
+	span[alt$="blend"] img {
 		mix-blend-mode: screen;
 	}
 	.img-blend {
@@ -58,13 +64,19 @@ div[src$="#invert"] {
 
 .theme-light {
 	img[src$="#blend"],
+	img[alt$="blend"],
 	div[src$="#blend"] img,
-	span[src$="#blend"] img {
+	div[alt$="blend"] img,
+	span[src$="#blend"] img,
+	span[alt$="blend"] img {
 		mix-blend-mode: multiply;
 	}
 	img[src$="#invertW"],
+	img[alt$="invertW"],
 	div[src$="#invertW"] img,
-	span[src$="invertW"] img {
+	div[alt$="invertW"] img,
+	span[src$="#invertW"] img,
+	span[alt$="invertW"] img {
 		filter: invert(1) hue-rotate(180deg);
 	}
 	.img-blend {
@@ -74,22 +86,30 @@ div[src$="#invert"] {
 
 /* Circle */
 img[src$="#circle"]:not(.emoji),
+img[alt$="circle"]:not(.emoji),
 span[src$="#circle"] img:not(.emoji),
-span[src$="#round"] img:not(.emoji) {
+span[alt$="circle"] img:not(.emoji),
+span[src$="#round"] img:not(.emoji),
+span[alt$="round"] img:not(.emoji) {
 	border-radius:50%;
 	aspect-ratio:1/1;
 }
 
 /* Outline */
 img[src$="#outline"],
+img[alt$="outline"],
 div[src$="#outline"] img,
-span[src$="#outline"] img {
+div[alt$="outline"] img,
+span[src$="#outline"] img,
+span[alt$="outline"] img {
 	border:1px solid var(--ui1);
 }
 
 /* Interface */
 img[src$="#interface"],
-span[src$="#interface"] img {
+img[alt$="interface"],
+span[src$="#interface"] img,
+span[alt$="interface"] img {
 	border:1px solid var(--ui1);
 	box-shadow:
 	0px 0.5px 0.9px rgba(0, 0, 0, 0.021),
