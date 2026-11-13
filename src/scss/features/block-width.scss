@@ -99,6 +99,9 @@ body {
 
 	--container-dataview-table-width: var(--line-width);
 
+	--container-code-width: var(--line-width);
+	--container-code-max-width: var(--max-width);
+
 	--container-img-width: var(--line-width);
 	--container-img-max-width: var(--max-width);
 	--img-max-width: 100%;
@@ -128,6 +131,7 @@ body {
 		--line-width: var(--line-width-wide);
 		--container-table-width: var(--line-width-wide);
 		--container-dataview-table-width: var(--line-width-wide);
+		--container-code-width: var(--line-width-wide);
 		--container-img-width: var(--line-width-wide);
 		--container-iframe-width: var(--line-width-wide);
 		--container-map-width: var(--line-width-wide);
@@ -137,6 +141,7 @@ body {
 		--line-width: var(--max-width);
 		--container-table-width: var(--max-width);
 		--container-dataview-table-width: var(--max-width);
+		--container-code-width: var(--max-width);
 		--container-img-width: var(--max-width);
 		--container-iframe-width: var(--max-width);
 		--container-map-width: var(--max-width);
@@ -253,6 +258,14 @@ body {
 	}
 }
 
+.code-wide {
+	--container-code-width: var(--line-width-wide);}
+.code-max {
+	--container-code-width: var(--max-width);}
+.code-100 {
+	--container-code-width: 100%;
+	--container-code-max-width: 100%;}
+
 .img-wide,
 .img-max,
 .img-100 {
@@ -366,6 +379,12 @@ body {
 	}
 	.dataview.dataview-error-box {
 		margin-inline: var(--table-margin);
+	}
+
+	// Code blocks
+	> :is(.HyperMD-codeblock, .el-pre) {
+		width: var(--container-code-width);
+		max-width: var(--container-code-max-width);
 	}
 
 	// Images

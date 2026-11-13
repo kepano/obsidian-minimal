@@ -4,6 +4,7 @@ cssclasses:
   - table-col-1-150
   - table-full
 ---
+
 ## How to use helper classes
 
 Helper classes are added using the special `cssclasses` [property](https://help.obsidian.md/Editing+and+formatting/Properties). In source mode it should look like this:
@@ -35,15 +36,15 @@ Helper class for [[Image grids]] feature
 
 ## Block widths
 
-Enable [[Block width]] features on per-file basis, for [[Tables]], [[Image grids]] and [[Iframes]]
+Enable [[Block width]] features on a per-file basis for [[Tables]], [[Code blocks]], [[Image grids]], [[Charts]], [[Maps]], and [[Iframes]].
 
-| Class                                   | Description                            |
-| --------------------------------------- | -------------------------------------- |
-| `wide`                                  | Entire note uses wide line width       |
-| `max`                                   | Entire note uses max line width        |
-| `table-wide`, `img-wide`, `iframe-wide` | Block type uses wide line width        |
-| `table-max`, `img-max`, `iframe-max`    | Block type uses max line width         |
-| `table-100`, `img-100`, `iframe-100`    | Block type uses 100% of the pane width |
+| Class                                                                          | Description                            |
+| ------------------------------------------------------------------------------ | -------------------------------------- |
+| `wide`                                                                         | Entire note uses wide line width       |
+| `max`                                                                          | Entire note uses max line width        |
+| `table-wide`, `code-wide`, `img-wide`, `chart-wide`, `map-wide`, `iframe-wide` | Block type uses wide line width        |
+| `table-max`, `code-max`, `img-max`, `chart-max`, `map-max`, `iframe-max`       | Block type uses max line width         |
+| `table-100`, `code-100`, `img-100`, `chart-100`, `map-100`, `iframe-100`       | Block type uses 100% of the pane width |
 
 ## Embeds and transclusions
 

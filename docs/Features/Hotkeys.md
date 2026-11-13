@@ -33,7 +33,10 @@ Hotkeys can be defined using the [[Minimal Theme Settings]] plugin. You can also
 
 [[Block width]] features at the global level:
 
-- Cycle between image width options
 - Cycle between table width options
+- Cycle between code block width options
+- Cycle between image width options
+- Cycle between chart width options
+- Cycle between map width options
 - Cycle between iframe width options
 
