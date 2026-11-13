@@ -55,14 +55,17 @@ body {
       grid-column-gap: var(--img-grid-gap);
       grid-row-gap: 0;
       grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-      > img {
-        object-fit: var(--image-grid-fit);
-        align-self: stretch;
-      }
-      > .internal-embed img {
-        object-fit: var(--image-grid-fit);
-        align-self: center;
-      }
+    }
+    // :has() outside the subject is re-evaluated for every img on each edit,
+    // so match grid images through siblings or with :has() on the img itself
+    :is(div, p) > :is(.image-embed, img) ~ img,
+    :is(div, p) > img:has(~ :is(.image-embed, img)) {
+      object-fit: var(--image-grid-fit);
+      align-self: stretch;
+    }
+    :is(div, p) > .image-embed img {
+      object-fit: var(--image-grid-fit);
+      align-self: center;
     }
     > div:has(img) > p {
       display: grid;

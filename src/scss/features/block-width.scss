@@ -377,10 +377,12 @@ body {
 	> div:has(.image-embed) {
 		width: var(--container-img-width);
 		max-width:var(--container-img-max-width);
+	}
 
-		img {
-			max-width:var(--img-max-width);
-		}
+	// Plain descendants: :has() outside the subject restyles every line on each edit
+	> .image-embed img,
+	> div .image-embed img {
+		max-width:var(--img-max-width);
 	}
 
 	// External images

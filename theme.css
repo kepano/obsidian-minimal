@@ -2245,9 +2245,9 @@ body {
   max-width: var(--container-img-max-width);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > .image-embed img,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div:has(.image-embed) img,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > div .image-embed img,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer > .image-embed img,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div:has(.image-embed) img {
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer > div .image-embed img {
   max-width: var(--img-max-width);
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer > .cm-content > img,
@@ -3588,11 +3588,12 @@ body {
   grid-row-gap: 0;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
-.img-grid .markdown-preview-section :is(div, p):has(> :is(.image-embed, img) ~ :is(.image-embed, img)) > img {
+.img-grid .markdown-preview-section :is(div, p) > :is(.image-embed, img) ~ img,
+.img-grid .markdown-preview-section :is(div, p) > img:has(~ :is(.image-embed, img)) {
   object-fit: var(--image-grid-fit);
   align-self: stretch;
 }
-.img-grid .markdown-preview-section :is(div, p):has(> :is(.image-embed, img) ~ :is(.image-embed, img)) > .internal-embed img {
+.img-grid .markdown-preview-section :is(div, p) > .image-embed img {
   object-fit: var(--image-grid-fit);
   align-self: center;
 }
